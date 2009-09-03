@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <schema id="root" xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://www.w3.org/XML/1998/namespace"></import>
+    <element name="root" NS2:IsDataSet="true" xmlns:NS2="urn:schemas-microsoft-com:xml-msdata">
+      <complexType>
+        <choice maxOccurs="unbounded">
+          <element name="metadata">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0"></element>
+              </sequence>
+              <attribute name="name" use="required" type="xsd:string"></attribute>
+              <attribute name="type" type="xsd:string"></attribute>
+              <attribute name="mimetype" type="xsd:string"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="assembly">
+            <complexType>
+              <attribute name="alias" type="xsd:string"></attribute>
+              <attribute name="name" type="xsd:string"></attribute>
+            </complexType>
+          </element>
+          <element name="data">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+                <element name="comment" type="xsd:string" minOccurs="0" NS2:Ordinal="2"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required" NS2:Ordinal="1"></attribute>
+              <attribute name="type" type="xsd:string" NS2:Ordinal="3"></attribute>
+              <attribute name="mimetype" type="xsd:string" NS2:Ordinal="4"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="resheader">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required"></attribute>
+            </complexType>
+          </element>
+        </choice>
+      </complexType>
+    </element>
+  </schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EnableProxyCombo.Items">
+    <value>自動</value>
+  </data>
+  <data name="checkBox2.Text">
+    <value>上傳提示</value>
+  </data>
+  <data name="sambaShareEnabledCheckBox.Text">
+    <value>下載目錄 (網路共用): </value>
+  </data>
+  <data name="tabPage6.Text">
+    <value>Misc</value>
+  </data>
+  <data name="label1.Text">
+    <value>主機:</value>
+  </data>
+  <data name="label2.Text">
+    <value>埠:</value>
+  </data>
+  <data name="SaveButton.Text">
+    <value>保存</value>
+  </data>
+  <data name="CloseDialogButton.Text">
+    <value>取消</value>
+  </data>
+  <data name="AutoConnectCheckBox.Text">
+    <value>自動連接</value>
+  </data>
+  <data name="label3.Text">
+    <value>刷新速率:</value>
+  </data>
+  <data name="UseSSLCheckBox.Text">
+    <value>安全 (SSL)</value>
+  </data>
+  <data name="label10.Text">
+    <value>重試上限:</value>
+  </data>
+  <data name="MinToTrayCheckBox.Text">
+    <value>啟用任務欄圖示</value>
+  </data>
+  <data name="ProxyAuthEnableCheckBox.Text">
+    <value>驗證</value>
+  </data>
+  <data name="EnableProxyCombo.Items1">
+    <value>啟用</value>
+  </data>
+  <data name="EnableProxyCombo.Items2">
+    <value>禁用</value>
+  </data>
+  <data name="label7.Text">
+    <value>埠:</value>
+  </data>
+  <data name="label9.Text">
+    <value>密碼:</value>
+  </data>
+  <data name="label8.Text">
+    <value>用戶:</value>
+  </data>
+  <data name="label6.Text">
+    <value>主機:</value>
+  </data>
+  <data name="StartPausedCheckBox.Text">
+    <value>開始時暫停任務</value>
+  </data>
+  <data name="tabPage1.Text">
+    <value>伺服器</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Text">
+    <value>關閉時最小化</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Text">
+    <value>添加任務時通知</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Text">
+    <value>完成任務時通知</value>
+  </data>
+  <data name="tabPage4.Text">
+    <value>常規</value>
+  </data>
+  <data name="label5.Text">
+    <value>密碼:</value>
+  </data>
+  <data name="EnableAuthCheckBox.Text">
+    <value>啟用驗證</value>
+  </data>
+  <data name="label4.Text">
+    <value>用戶:</value>
+  </data>
+  <data name="tabPage2.Text">
+    <value>驗證</value>
+  </data>
+  <data name="tabPage3.Text">
+    <value>代理</value>
+  </data>
+  <data name="label15.Text">
+    <value>説明: </value>
+  </data>
+  <data name="linkLabel1.Text">
+    <value>http://code.google.com/p/transmission-remote-dotnet/wiki/SSH</value>
+  </data>
+  <data name="label13.Text">
+    <value>命令: </value>
+  </data>
+  <data name="checkBox1.Text">
+    <value>顯示遠端命令按鈕</value>
+  </data>
+  <data name="label12.Text">
+    <value>plink.exe:</value>
+  </data>
+  <data name="button2.Text">
+    <value>流覽</value>
+  </data>
+  <data name="tabPage5.Text">
+    <value>SSH</value>
+  </data>
+  <data name="button1.Text">
+    <value>保存後連接</value>
+  </data>
+  <data name="groupBox5.Text">
+    <value>當前配置檔</value>
+  </data>
+  <data name="groupBox6.Text">
+    <value>新的配置檔</value>
+  </data>
+  <data name="$this.Text">
+    <value>本地設置</value>
+  </data>
+  <data name="label16.Text">
+    <value>上傳上限菜單項:</value>
+  </data>
+  <data name="label17.Text">
+    <value>下載上限菜單項:</value>
+  </data>
+</root>

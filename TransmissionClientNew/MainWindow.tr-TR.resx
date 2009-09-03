@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="percentageLabel.Text" xml:space="preserve">
+    <value>This is selectable text</value>
+  </data>
+  <data name="speedResComboBox.Items" xml:space="preserve">
+    <value>5 sec</value>
+  </data>
+  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Start torrent(s)</value>
+  </data>
+  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Recheck torrent(s)</value>
+  </data>
+  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Set torrent(s) properties</value>
+  </data>
+  <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add torrent with options</value>
+  </data>
+  <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Info object to clipboard</value>
+  </data>
+  <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>CSV info to clipboard</value>
+  </data>
+  <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move torrent data</value>
+  </data>
+  <data name="columnHeader32.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reannounce</value>
+  </data>
+  <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open on Network Share</value>
+  </data>
+  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Category filter panel</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Torrent İsmi</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Boyut</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>Tamamlanan</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>Gönderen</value>
+  </data>
+  <data name="columnHeader11.Text" xml:space="preserve">
+    <value>İndiren</value>
+  </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>İndirme Hızı</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Gönderme Hızı</value>
+  </data>
+  <data name="columnHeader14.Text" xml:space="preserve">
+    <value>Kalan Süre</value>
+  </data>
+  <data name="columnHeader15.Text" xml:space="preserve">
+    <value>Gönderilmiş</value>
+  </data>
+  <data name="columnHeader16.Text" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="columnHeader18.Text" xml:space="preserve">
+    <value>Eklenme Tarihi</value>
+  </data>
+  <data name="columnHeader19.Text" xml:space="preserve">
+    <value>Tamamlanma Tarihi</value>
+  </data>
+  <data name="columnHeader30.Text" xml:space="preserve">
+    <value>İzleyici</value>
+  </data>
+  <data name="downloadProgressLabel.Text" xml:space="preserve">
+    <value>İndirilmiş :</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Oluştucu :</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Oluşturulma :</value>
+  </data>
+  <data name="labelForErrorLabel.Text" xml:space="preserve">
+    <value>Hata :</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Yorum :</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Ratio:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>İndiren :</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Gönder :</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Gönderme Limiti:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Gönderme Oranı :</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Gönderildi :</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Kalan Süre :</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Durum :</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>İndirme Limiti :</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>İndirme Oranı :</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>İndirildi :</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Başlatma :</value>
+  </data>
+  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
+    <value>Geçen Süre :</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>Genel</value>
+  </data>
+  <data name="columnHeader22.Text" xml:space="preserve">
+    <value>Tier</value>
+  </data>
+  <data name="columnHeader20.Text" xml:space="preserve">
+    <value>Anons Adresi</value>
+  </data>
+  <data name="columnHeader21.Text" xml:space="preserve">
+    <value>Çekme Adresi</value>
+  </data>
+  <data name="trackersTabPage.Text" xml:space="preserve">
+    <value>İzleyiciler</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Konum</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Boyut</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Tamamlanan</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="columnHeader17.Text" xml:space="preserve">
+    <value>Atla</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Öncelik</value>
+  </data>
+  <data name="filesTabPage.Text" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="columnHeader23.Text" xml:space="preserve">
+    <value>IP Adresi</value>
+  </data>
+  <data name="columnHeader24.Text" xml:space="preserve">
+    <value>Sunucu Adı</value>
+  </data>
+  <data name="columnHeader25.Text" xml:space="preserve">
+    <value>Ülke</value>
+  </data>
+  <data name="columnHeader31.Text" xml:space="preserve">
+    <value>Bayraklar</value>
+  </data>
+  <data name="columnHeader26.Text" xml:space="preserve">
+    <value>İstemci</value>
+  </data>
+  <data name="columnHeader27.Text" xml:space="preserve">
+    <value>İşlemler</value>
+  </data>
+  <data name="columnHeader28.Text" xml:space="preserve">
+    <value>İndirme Oranı</value>
+  </data>
+  <data name="columnHeader29.Text" xml:space="preserve">
+    <value>Gönderme Oranı</value>
+  </data>
+  <data name="peersTabPage.Text" xml:space="preserve">
+    <value>Eşler</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Hassasiyet :</value>
+  </data>
+  <data name="speedResComboBox.Items1" xml:space="preserve">
+    <value>10 sec</value>
+  </data>
+  <data name="speedResComboBox.Items2" xml:space="preserve">
+    <value>30 sec</value>
+  </data>
+  <data name="speedResComboBox.Items3" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>İndirme</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Gönderme</value>
+  </data>
+  <data name="speedGraph.Text" xml:space="preserve">
+    <value>c2DPushGraph1</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Overall bandwidth utilisation</value>
+  </data>
+  <data name="speedTabPage.Text" xml:space="preserve">
+    <value>Hız</value>
+  </data>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="toolStripContainer1.Text" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="connectButton.Text" xml:space="preserve">
+    <value>Bağlan</value>
+  </data>
+  <data name="disconnectButton.Text" xml:space="preserve">
+    <value>Bağlantıyı Kes</value>
+  </data>
+  <data name="addTorrentButton.Text" xml:space="preserve">
+    <value>Torrent Ekle</value>
+  </data>
+  <data name="addWebTorrentButton.Text" xml:space="preserve">
+    <value>Adresten torrent ekle</value>
+  </data>
+  <data name="startTorrentButton.Text" xml:space="preserve">
+    <value>Torrentı başlat</value>
+  </data>
+  <data name="pauseTorrentButton.Text" xml:space="preserve">
+    <value>Torrentı durdur</value>
+  </data>
+  <data name="recheckTorrentButton.Text" xml:space="preserve">
+    <value>Torrentı Onayla</value>
+  </data>
+  <data name="configureTorrentButton.Text" xml:space="preserve">
+    <value>Torrent Özellikleri</value>
+  </data>
+  <data name="removeTorrentButton.Text" xml:space="preserve">
+    <value>Torrentı sil</value>
+  </data>
+  <data name="removeAndDeleteButton.Text" xml:space="preserve">
+    <value>Torrentı sil ve kaldır</value>
+  </data>
+  <data name="allToolStripMenuItem.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Geçmiş aktiviteler</value>
+  </data>
+  <data name="reannounceButton.Text" xml:space="preserve">
+    <value>Tekrar Anonsla</value>
+  </data>
+  <data name="openNetworkShareButton.Text" xml:space="preserve">
+    <value>Ağ payaşımını aç</value>
+  </data>
+  <data name="localConfigureButton.Text" xml:space="preserve">
+    <value>İstemci ayarları</value>
+  </data>
+  <data name="remoteConfigureButton.Text" xml:space="preserve">
+    <value>Sunucu Ayarları</value>
+  </data>
+  <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>İstatistikleri Göster</value>
+  </data>
+  <data name="connectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bağlan</value>
+  </data>
+  <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bağlantıyı Kes</value>
+  </data>
+  <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Torrent Ekle</value>
+  </data>
+  <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
+    <value>Adresten Torrent Ekle</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dosya</value>
+  </data>
+  <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>İstemci Ayarları</value>
+  </data>
+  <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sunucu Ayarları</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="startToolStripMenuItem.Text" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Özellikler</value>
+  </data>
+  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kaldır ve Sil</value>
+  </data>
+  <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tümünü Başlat</value>
+  </data>
+  <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tümünü Durdur</value>
+  </data>
+  <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Torrent</value>
+  </data>
+  <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Detay Ekranı</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Göster</value>
+  </data>
+  <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hata kaydını göster</value>
+  </data>
+  <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Proje Sitesi</value>
+  </data>
+  <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Yeni version kontrolü</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Transmission Remote Hakkında</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Yardım</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="notifyIcon.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+</root>

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+   config)
+        cat <<'EOM'
+graph_title Transmission up/down rate
+graph_vlabel Rate (KB/s)
+graph_category Transmission
+downRate.label Download rate
+upRate.label Upload rate
+EOM
+        exit 0;;
+esac
+
+echo '{"method":"torrent-get","tag":1,"arguments":{"fields":["rateUpload","rateDownload"]}}' | lynx -dump -post_data -auth=USERNAME:PASSWORD http://localhost:9091/transmission/rpc | php /etc/munin/plugins/transmission-parser.php

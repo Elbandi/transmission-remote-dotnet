@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <schema id="root" xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://www.w3.org/XML/1998/namespace"></import>
+    <element name="root" NS2:IsDataSet="true" xmlns:NS2="urn:schemas-microsoft-com:xml-msdata">
+      <complexType>
+        <choice maxOccurs="unbounded">
+          <element name="metadata">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0"></element>
+              </sequence>
+              <attribute name="name" use="required" type="xsd:string"></attribute>
+              <attribute name="type" type="xsd:string"></attribute>
+              <attribute name="mimetype" type="xsd:string"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="assembly">
+            <complexType>
+              <attribute name="alias" type="xsd:string"></attribute>
+              <attribute name="name" type="xsd:string"></attribute>
+            </complexType>
+          </element>
+          <element name="data">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+                <element name="comment" type="xsd:string" minOccurs="0" NS2:Ordinal="2"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required" NS2:Ordinal="1"></attribute>
+              <attribute name="type" type="xsd:string" NS2:Ordinal="3"></attribute>
+              <attribute name="mimetype" type="xsd:string" NS2:Ordinal="4"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="resheader">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required"></attribute>
+            </complexType>
+          </element>
+        </choice>
+      </complexType>
+    </element>
+  </schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="encryptionCombobox.Items">
+    <value>允許</value>
+  </data>
+  <data name="limitUploadCheckBox.Text">
+    <value>限制上傳</value>
+  </data>
+  <data name="limitDownloadCheckBox.Text">
+    <value>限制下載</value>
+  </data>
+  <data name="portForwardCheckBox.Text">
+    <value>啟用 UPnP</value>
+  </data>
+  <data name="encryptionCombobox.Items1">
+    <value>優先</value>
+  </data>
+  <data name="encryptionCombobox.Items2">
+    <value>必須</value>
+  </data>
+  <data name="dhtEnabled.Text">
+    <value>啟用分散式哈希表 (DHT)</value>
+  </data>
+  <data name="CloseFormButton.Text">
+    <value>關閉</value>
+  </data>
+  <data name="blocklistEnabledCheckBox.Text">
+    <value>啟用 阻止列表</value>
+  </data>
+  <data name="altTimeConstraintEnabled.Text">
+    <value>約束時間</value>
+  </data>
+  <data name="altSpeedLimitEnable.Text">
+    <value>啟用時段限速</value>
+  </data>
+  <data name="$this.Text">
+    <value>遠程設置</value>
+  </data>
+  <data name="label1.Text">
+    <value>下載到:</value>
+  </data>
+  <data name="label10.Text">
+    <value>KB/s</value>
+  </data>
+  <data name="label11.Text">
+    <value>下載:</value>
+  </data>
+  <data name="label12.Text">
+    <value>上傳:</value>
+  </data>
+  <data name="label13.Text">
+    <value>:</value>
+  </data>
+  <data name="label14.Text">
+    <value>:</value>
+  </data>
+  <data name="label2.Text">
+    <value>傳入埠:</value>
+  </data>
+  <data name="label3.Text">
+    <value>加密:</value>
+  </data>
+  <data name="label4.Text">
+    <value>用戶上限</value>
+  </data>
+  <data name="label5.Text">
+    <value>KB/s</value>
+  </data>
+  <data name="label6.Text">
+    <value>KB/s</value>
+  </data>
+  <data name="label7.Text">
+    <value>注意: 部分選項可能需要升級 transmission-daemon 才能使用.</value>
+  </data>
+  <data name="label8.Text">
+    <value>到</value>
+  </data>
+  <data name="label9.Text">
+    <value>KB/s</value>
+  </data>
+  <data name="PEXcheckBox.Text">
+    <value>啟用 用戶交換</value>
+  </data>
+  <data name="SaveButton.Text">
+    <value>保存</value>
+  </data>
+  <data name="seedRatioEnabledCheckBox.Text">
+    <value>限制分享率</value>
+  </data>
+  <data name="tabPage1.Text">
+    <value>常規</value>
+  </data>
+  <data name="tabPage2.Text">
+    <value>限速</value>
+  </data>
+  <data name="tabPage3.Text">
+    <value>時段限速</value>
+  </data>
+  <data name="testPortButton.Text">
+    <value>測試埠</value>
+  </data>
+  <data name="updateBlocklistButton.Text">
+    <value>更新阻止列表</value>
+  </data>
+</root>

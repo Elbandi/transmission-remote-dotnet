@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <schema id="root" xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://www.w3.org/XML/1998/namespace"></import>
+    <element name="root" NS2:IsDataSet="true" xmlns:NS2="urn:schemas-microsoft-com:xml-msdata">
+      <complexType>
+        <choice maxOccurs="unbounded">
+          <element name="metadata">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0"></element>
+              </sequence>
+              <attribute name="name" use="required" type="xsd:string"></attribute>
+              <attribute name="type" type="xsd:string"></attribute>
+              <attribute name="mimetype" type="xsd:string"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="assembly">
+            <complexType>
+              <attribute name="alias" type="xsd:string"></attribute>
+              <attribute name="name" type="xsd:string"></attribute>
+            </complexType>
+          </element>
+          <element name="data">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+                <element name="comment" type="xsd:string" minOccurs="0" NS2:Ordinal="2"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required" NS2:Ordinal="1"></attribute>
+              <attribute name="type" type="xsd:string" NS2:Ordinal="3"></attribute>
+              <attribute name="mimetype" type="xsd:string" NS2:Ordinal="4"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="resheader">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required"></attribute>
+            </complexType>
+          </element>
+        </choice>
+      </complexType>
+    </element>
+  </schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"></assembly>
+  <data name="downloadedBytesLabel2.Text">
+    <value>已下載位元組:</value>
+  </data>
+  <data name="uploadedBytesLabel2.Text">
+    <value>已上傳位元組:</value>
+  </data>
+  <data name="CloseFormButton.Text">
+    <value>關閉</value>
+  </data>
+  <data name="secondsActiveValue2.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="sessionCountValue2.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="filesAddedValue2.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="uploadedBytesValue2.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="downloadedBytesValue2.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="secondsActiveLabel2.Text">
+    <value>活動時間:</value>
+  </data>
+  <data name="sessionCountLabel2.Text">
+    <value>會話次數:</value>
+  </data>
+  <data name="filesAddedLabel2.Text">
+    <value>已添加文件:</value>
+  </data>
+  <data name="groupBox1.Text">
+    <value>累計</value>
+  </data>
+  <data name="secondsActiveValue1.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="sessionCountValue1.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="filesAddedValue1.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="uploadedBytesValue1.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="downloadedBytesValue1.Text">
+    <value>正在查詢...</value>
+  </data>
+  <data name="secondsActiveLabel1.Text">
+    <value>活動時間:</value>
+  </data>
+  <data name="sessionCountLabel1.Text">
+    <value>會話次數:</value>
+  </data>
+  <data name="filesAddedLabel1.Text">
+    <value>已添加文件:</value>
+  </data>
+  <data name="downloadedBytesLabel1.Text">
+    <value>已下載位元組:</value>
+  </data>
+  <data name="uploadedBytesLabel1.Text">
+    <value>已上傳位元組:</value>
+  </data>
+  <data name="groupBox2.Text">
+    <value>當前會話統計</value>
+  </data>
+  <data name="$this.Text">
+    <value>Transmission Daemon 統計</value>
+  </data>
+</root>

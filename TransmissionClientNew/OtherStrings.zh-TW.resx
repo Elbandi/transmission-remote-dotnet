@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <schema id="root" xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://www.w3.org/XML/1998/namespace"></import>
+    <element name="root" NS2:IsDataSet="true" xmlns:NS2="urn:schemas-microsoft-com:xml-msdata">
+      <complexType>
+        <choice maxOccurs="unbounded">
+          <element name="metadata">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0"></element>
+              </sequence>
+              <attribute name="name" use="required" type="xsd:string"></attribute>
+              <attribute name="type" type="xsd:string"></attribute>
+              <attribute name="mimetype" type="xsd:string"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="assembly">
+            <complexType>
+              <attribute name="alias" type="xsd:string"></attribute>
+              <attribute name="name" type="xsd:string"></attribute>
+            </complexType>
+          </element>
+          <element name="data">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+                <element name="comment" type="xsd:string" minOccurs="0" NS2:Ordinal="2"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required" NS2:Ordinal="1"></attribute>
+              <attribute name="type" type="xsd:string" NS2:Ordinal="3"></attribute>
+              <attribute name="mimetype" type="xsd:string" NS2:Ordinal="4"></attribute>
+              <attribute ref="xml:space"></attribute>
+            </complexType>
+          </element>
+          <element name="resheader">
+            <complexType>
+              <sequence>
+                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
+              </sequence>
+              <attribute name="name" type="xsd:string" use="required"></attribute>
+            </complexType>
+          </element>
+        </choice>
+      </complexType>
+    </element>
+  </schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoadingFile">
+    <value>載入中 {0}...</value>
+  </data>
+  <data name="InfoObjectToClipboard">
+    <value>複製物件資訊到剪貼板</value>
+  </data>
+  <data name="MoveMultipleTorrents">
+    <value>移動 (多選)</value>
+  </data>
+  <data name="MoveTorrentData">
+    <value>更改下載目錄</value>
+  </data>
+  <data name="MoveX">
+    <value>移動 {0}</value>
+  </data>
+  <data name="Exit">
+    <value>退出</value>
+  </data>
+  <data name="NewTorrentIs">
+    <value>New torrent {0}.</value>
+  </data>
+  <data name="Pieces">
+    <value>區塊</value>
+  </data>
+  <data name="Progress">
+    <value>進度</value>
+  </data>
+  <data name="Reannounce">
+    <value>重新通告</value>
+  </data>
+  <data name="OpenNetworkShare">
+    <value>在網路共用目錄中打開</value>
+  </data>
+  <data name="All">
+    <value>全部</value>
+  </data>
+  <data name="Author">
+    <value>作者</value>
+  </data>
+  <data name="Broken">
+    <value>已損毀</value>
+  </data>
+  <data name="Build">
+    <value>Build</value>
+  </data>
+  <data name="Checking">
+    <value>校驗</value>
+  </data>
+  <data name="Complete">
+    <value>完成</value>
+  </data>
+  <data name="Confirm">
+    <value>確認</value>
+  </data>
+  <data name="ConfirmMultipleRemove">
+    <value>您選擇移除 {0} 個任務. 是否確定?</value>
+  </data>
+  <data name="ConfirmMultipleRemoveAndDelete">
+    <value>您選擇移除 {0} 個任務. 是否確定?{1}所有屬於此任務的資料將會被刪除."</value>
+  </data>
+  <data name="ConfirmSingleRemove">
+    <value>您確定要移除 {0} 嗎?</value>
+  </data>
+  <data name="ConfirmSingleRemoveAndDelete">
+    <value>您確定要移除 {0} 嗎?{1}所有屬於此任務的資料將會被刪除."</value>
+  </data>
+  <data name="Connect">
+    <value>連接</value>
+  </data>
+  <data name="ConnectedGettingInfo">
+    <value>已連接. 正在獲取torrent資訊...</value>
+  </data>
+  <data name="ConnectedTo">
+    <value>連接到</value>
+  </data>
+  <data name="Connecting">
+    <value>正在連接</value>
+  </data>
+  <data name="CopyAsCSV">
+    <value>複製為CSV</value>
+  </data>
+  <data name="Disconnect">
+    <value>斷開</value>
+  </data>
+  <data name="Disconnected">
+    <value>已斷開</value>
+  </data>
+  <data name="DisconnectedExceeded">
+    <value>已斷開. 已達到最大錯誤請求數.</value>
+  </data>
+  <data name="DisplayStatistics">
+    <value>顯示統計</value>
+  </data>
+  <data name="Down">
+    <value>下載</value>
+  </data>
+  <data name="Download">
+    <value>下載</value>
+  </data>
+  <data name="DownloadedValid">
+    <value>{0} ({1} 有效)</value>
+  </data>
+  <data name="Downloading">
+    <value>正在下載</value>
+  </data>
+  <data name="Error">
+    <value>錯誤</value>
+  </data>
+  <data name="FailedRequest">
+    <value>錯誤的請求</value>
+  </data>
+  <data name="High">
+    <value>高</value>
+  </data>
+  <data name="HighPriority">
+    <value>高優先順序</value>
+  </data>
+  <data name="Host">
+    <value>主機</value>
+  </data>
+  <data name="Info">
+    <value>信息</value>
+  </data>
+  <data name="InputAccepted">
+    <value>已接受輸入</value>
+  </data>
+  <data name="LatestVersion">
+    <value>您正在使用最新版本 ({0}.{1}).</value>
+  </data>
+  <data name="LatestVersionCheckFailed">
+    <value>最新版本檢查失敗</value>
+  </data>
+  <data name="Low">
+    <value>低</value>
+  </data>
+  <data name="LowPriority">
+    <value>低優先順序</value>
+  </data>
+  <data name="MustBeConnected">
+    <value>您必須連接才能添加任務. 您希望現在就連接嗎?</value>
+  </data>
+  <data name="NewerVersion">
+    <value>有新版本 ({0}.{1}) 可用. 您希望訪問下載頁面嗎?</value>
+  </data>
+  <data name="No">
+    <value>No</value>
+  </data>
+  <data name="Normal">
+    <value>普通</value>
+  </data>
+  <data name="NormalPriority">
+    <value>普通優先順序</value>
+  </data>
+  <data name="NotConnected">
+    <value>未連接</value>
+  </data>
+  <data name="NoUpgradeAvailable">
+    <value>無可用更新</value>
+  </data>
+  <data name="OpenFileFilter">
+    <value>BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*</value>
+  </data>
+  <data name="Pause">
+    <value>暫停</value>
+  </data>
+  <data name="PauseAll">
+    <value>暫停所有</value>
+  </data>
+  <data name="Paused">
+    <value>已暫停</value>
+  </data>
+  <data name="Properties">
+    <value>屬性</value>
+  </data>
+  <data name="Recheck">
+    <value>校驗</value>
+  </data>
+  <data name="Remove">
+    <value>移除</value>
+  </data>
+  <data name="RemoveAndDelete">
+    <value>移除並刪除資料</value>
+  </data>
+  <data name="Revision">
+    <value>修訂</value>
+  </data>
+  <data name="RpcVersion">
+    <value>RpcVersion</value>
+  </data>
+  <data name="RpcVersionMinimum">
+    <value>RpcVersionMinimum</value>
+  </data>
+  <data name="Seeding">
+    <value>正在做種</value>
+  </data>
+  <data name="SelectAll">
+    <value>選擇所有</value>
+  </data>
+  <data name="Skip">
+    <value>忽略</value>
+  </data>
+  <data name="Start">
+    <value>開始</value>
+  </data>
+  <data name="StartAll">
+    <value>開始所有</value>
+  </data>
+  <data name="TheTorrentHasFinishedDownloading">
+    <value>此任務已完成下載</value>
+  </data>
+  <data name="Torrents">
+    <value>任務</value>
+  </data>
+  <data name="UnableToParse">
+    <value>無法解析伺服器回應</value>
+  </data>
+  <data name="UnknownNegativeResult">
+    <value>未知 (負)</value>
+  </data>
+  <data name="UnsuccessfulRequest">
+    <value>失敗的請求</value>
+  </data>
+  <data name="Up">
+    <value>上傳</value>
+  </data>
+  <data name="UpgradeAvailable">
+    <value>更新可用</value>
+  </data>
+  <data name="Version">
+    <value>版本</value>
+  </data>
+  <data name="WaitingForInput">
+    <value>正在等待輸入</value>
+  </data>
+  <data name="WaitingToCheck">
+    <value>正在等待校驗</value>
+  </data>
+  <data name="XOfYConnected">
+    <value>{1}個中的{0}個 已連接</value>
+  </data>
+  <data name="Yes">
+    <value>Yes</value>
+  </data>
+  <data name="Incomplete">
+    <value>未完成</value>
+  </data>
+  <data name="LanguageUpdated">
+    <value>已更新語言</value>
+  </data>
+  <data name="LanguageUpdateDetail">
+    <value>已更新您選擇的語言, 重啟應用程式才能完全生效.</value>
+  </data>
+  <data name="Byte">
+    <value>Byte</value>
+  </data>
+  <data name="Day">
+    <value>Day</value>
+  </data>
+  <data name="Gigabyte">
+    <value>Gigabyte</value>
+  </data>
+  <data name="GigabyteShort">
+    <value>GB</value>
+  </data>
+  <data name="Hour">
+    <value>Hour</value>
+  </data>
+  <data name="Kilobyte">
+    <value>Kilobyte</value>
+    <comment>b</comment>
+  </data>
+  <data name="KilobyteShort">
+    <value>KB</value>
+  </data>
+  <data name="Megabyte">
+    <value>Megabyte</value>
+  </data>
+  <data name="MegabyteShort">
+    <value>MB</value>
+  </data>
+  <data name="Minute">
+    <value>Minute</value>
+  </data>
+  <data name="Second">
+    <value>Second</value>
+  </data>
+  <data name="PortIsClosed">
+    <value>您的 daemon 埠已關閉.</value>
+  </data>
+  <data name="PortIsOpen">
+    <value>您的 daemon 埠已打開.</value>
+  </data>
+  <data name="PortTestResult">
+    <value>埠測試結果</value>
+  </data>
+  <data name="DownloadLimit">
+    <value>下載上限</value>
+  </data>
+  <data name="Unlimited">
+    <value>無限制</value>
+  </data>
+  <data name="UploadLimit">
+    <value>上傳上限</value>
+  </data>
+  <data name="Querying">
+    <value>正在查詢...</value>
+  </data>
+  <data name="Updating">
+    <value>正在上傳...</value>
+  </data>
+  <data name="XInBlocklist">
+    <value>{0}個在阻止列表.</value>
+  </data>
+</root>

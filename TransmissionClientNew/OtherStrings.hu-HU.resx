@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BandwidthAllocation" xml:space="preserve">
+    <value>Sávszélesség kiosztás</value>
+  </data>
+  <data name="LoadingFile" xml:space="preserve">
+    <value>{0} betöltése...</value>
+  </data>
+  <data name="InfoObjectToClipboard" xml:space="preserve">
+    <value>Info object to clipboard</value>
+  </data>
+  <data name="MoveMultipleTorrents" xml:space="preserve">
+    <value>Több torrent adat áthelyezése</value>
+  </data>
+  <data name="MoveTorrentData" xml:space="preserve">
+    <value>Torrent adat áthelyezése</value>
+  </data>
+  <data name="MoveX" xml:space="preserve">
+    <value>{0} adat áthelyezése</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="NewTorrentIs" xml:space="preserve">
+    <value>Új torrent: {0}</value>
+  </data>
+  <data name="DownloadLimit" xml:space="preserve">
+    <value>Letöltési korlát</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Korlátlan</value>
+  </data>
+  <data name="UploadLimit" xml:space="preserve">
+    <value>Feltöltési korlát</value>
+  </data>
+  <data name="Querying" xml:space="preserve">
+    <value>Lekérdezés...</value>
+  </data>
+  <data name="Updating" xml:space="preserve">
+    <value>Frissítés...</value>
+  </data>
+  <data name="XInBlocklist" xml:space="preserve">
+    <value>{0} elem a tiltólistán.</value>
+  </data>
+  <data name="Pieces" xml:space="preserve">
+    <value>Szeletek</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Reannounce" xml:space="preserve">
+    <value>Újrahirdet</value>
+  </data>
+  <data name="OpenNetworkShare" xml:space="preserve">
+    <value>Hálózati megosztás megnyitása</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Minden</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Szerző</value>
+  </data>
+  <data name="Broken" xml:space="preserve">
+    <value>Törött</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Ellenőrzés</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Befejezve</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Megerősít</value>
+  </data>
+  <data name="ConfirmMultipleRemove" xml:space="preserve">
+    <value>Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet?</value>
+  </data>
+  <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
+    <value>Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet és az összes csatlakozó adatot?</value>
+  </data>
+  <data name="ConfirmSingleRemove" xml:space="preserve">
+    <value>Biztos benne, hogy eltávolítja a kiválasztott torrenteket?</value>
+  </data>
+  <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
+    <value>Biztos benne, hogy eltávolítja a kiválasztott torrenteket és az összes csatlakozó adatot?</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Csatlakozás</value>
+  </data>
+  <data name="ConnectedGettingInfo" xml:space="preserve">
+    <value>Csatlakozva. Torrent információk megszerzése...</value>
+  </data>
+  <data name="ConnectedTo" xml:space="preserve">
+    <value>Csatlakozva</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Csatlakozás</value>
+  </data>
+  <data name="CopyAsCSV" xml:space="preserve">
+    <value>Másolás mint CSV</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Szétkapcsolás</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Szétkapcsolva</value>
+  </data>
+  <data name="DisconnectedExceeded" xml:space="preserve">
+    <value>Szétkapcsolva. Elérte a maximális hibás kérések számát.</value>
+  </data>
+  <data name="DisplayStatistics" xml:space="preserve">
+    <value>Statisztikák</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Le</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Letölt</value>
+  </data>
+  <data name="DownloadedValid" xml:space="preserve">
+    <value>{0} ({1} érvényes)</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Letöltés</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="FailedRequest" xml:space="preserve">
+    <value>Hibás kérés</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Magas</value>
+  </data>
+  <data name="HighPriority" xml:space="preserve">
+    <value>Magas prioritás</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="InputAccepted" xml:space="preserve">
+    <value>Bemenet elfogadva</value>
+  </data>
+  <data name="LatestVersion" xml:space="preserve">
+    <value>A legfrissebb verziót használja ({0}.{1}).</value>
+  </data>
+  <data name="LatestVersionCheckFailed" xml:space="preserve">
+    <value>Hiba a frissítés keresése közben</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Alacsony</value>
+  </data>
+  <data name="LowPriority" xml:space="preserve">
+    <value>Alacsony prioritás</value>
+  </data>
+  <data name="MustBeConnected" xml:space="preserve">
+    <value>Kapcsolódnia kell ahhoz, hogy torrenteket adhasson hozzá. Kíván most kapcsolódni?</value>
+  </data>
+  <data name="NewerVersion" xml:space="preserve">
+    <value>Elérhető újabb verzió ({0}.{1}). Megakarja látogatni a letöltési oldalt?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normál</value>
+  </data>
+  <data name="NormalPriority" xml:space="preserve">
+    <value>Normál prioritás</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Nincs csatlakozva</value>
+  </data>
+  <data name="NoUpgradeAvailable" xml:space="preserve">
+    <value>Nincs elérhető frissítés</value>
+  </data>
+  <data name="OpenFileFilter" xml:space="preserve">
+    <value>BitTorrent Metafile (*.torrent)|*.torrent|Minden fájl (*.*)|*.*</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Szünet</value>
+  </data>
+  <data name="PauseAll" xml:space="preserve">
+    <value>Mind szüneteltetése</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Szüneteltetve</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Tulajdonságok</value>
+  </data>
+  <data name="Recheck" xml:space="preserve">
+    <value>Újraellenőrzés</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Eltávolítás</value>
+  </data>
+  <data name="RemoveAndDelete" xml:space="preserve">
+    <value>Eltávolítás és törlés</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="RpcVersion" xml:space="preserve">
+    <value>RpcVersion</value>
+  </data>
+  <data name="RpcVersionMinimum" xml:space="preserve">
+    <value>RpcVersionMinimum</value>
+  </data>
+  <data name="Seeding" xml:space="preserve">
+    <value>Feltöltés</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Mind kijelöl</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Kihagyás</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StartAll" xml:space="preserve">
+    <value>Mind indítása</value>
+  </data>
+  <data name="TheTorrentHasFinishedDownloading" xml:space="preserve">
+    <value>Ez a torrent befejezte a letöltést.</value>
+  </data>
+  <data name="Torrents" xml:space="preserve">
+    <value>Torrentek</value>
+  </data>
+  <data name="UnableToParse" xml:space="preserve">
+    <value>Hiba a kiszolgáló válasz feldolgozásakor</value>
+  </data>
+  <data name="UnknownNegativeResult" xml:space="preserve">
+    <value>Ismeretlen (negatív)</value>
+  </data>
+  <data name="UnsuccessfulRequest" xml:space="preserve">
+    <value>Unsuccessful request</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Fel</value>
+  </data>
+  <data name="UpgradeAvailable" xml:space="preserve">
+    <value>Frissítés elérhető</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Verzió</value>
+  </data>
+  <data name="WaitingForInput" xml:space="preserve">
+    <value>Várakozás</value>
+  </data>
+  <data name="WaitingToCheck" xml:space="preserve">
+    <value>Várakozás az ellenőrzésre</value>
+  </data>
+  <data name="XOfYConnected" xml:space="preserve">
+    <value>Csatlakozva: {0} Összes: {1}</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Befejezetlen</value>
+  </data>
+  <data name="LanguageUpdated" xml:space="preserve">
+    <value>Nyelv frissítve</value>
+  </data>
+  <data name="LanguageUpdateDetail" xml:space="preserve">
+    <value>Választott nyelv frissítve. Az alkalmazás újraindítása szükséges a változtatások életbe léptetéséhez.</value>
+  </data>
+  <data name="Byte" xml:space="preserve">
+    <value>Bájt</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Nap</value>
+  </data>
+  <data name="Gigabyte" xml:space="preserve">
+    <value>Gigabájt</value>
+  </data>
+  <data name="GigabyteShort" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Óra</value>
+  </data>
+  <data name="Kilobyte" xml:space="preserve">
+    <value>Kilobájt</value>
+  </data>
+  <data name="KilobyteShort" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="Megabyte" xml:space="preserve">
+    <value>Megabájt</value>
+  </data>
+  <data name="MegabyteShort" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Perc</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Másodperc</value>
+  </data>
+  <data name="PortIsClosed" xml:space="preserve">
+    <value>A daemon bejövő kapcsolat portja ZÁRVA.</value>
+  </data>
+  <data name="PortIsOpen" xml:space="preserve">
+    <value>A daemon bejövő kapcsolat portja NYITVA.</value>
+  </data>
+  <data name="PortTestResult" xml:space="preserve">
+    <value>Bejövő kapcsolat port tesztelés eredménye</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Ismeretlen</value>
+  </data>
+</root>
