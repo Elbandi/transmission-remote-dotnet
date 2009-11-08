@@ -79,6 +79,7 @@ namespace TransmissionRemoteDotnet
         {
             this.updateSerial = Program.DaemonDescriptor.UpdateSerial;
             this.info = info;
+            Console.WriteLine(this.Trackers);
             item = new ListViewItem(this.Name);
             UpdateIcon();
             if (this.HasError)
