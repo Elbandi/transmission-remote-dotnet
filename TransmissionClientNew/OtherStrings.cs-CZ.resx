@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="All" xml:space="preserve">
+    <value>Vše</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="BandwidthAllocation" xml:space="preserve">
+    <value>Šířka pásma</value>
+  </data>
+  <data name="Broken" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Byte" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Ověřování</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Dokončeno</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Potvrdit</value>
+  </data>
+  <data name="ConfirmMultipleRemove" xml:space="preserve">
+    <value>Vybral jste {0} torrentů k odstranění. Chcete pokračovat?</value>
+  </data>
+  <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
+    <value>Vybral jste {0} torrentů k odstranění. Chcete pokračovat? {1}Všechna stažená data budou smazána</value>
+  </data>
+  <data name="ConfirmSingleRemove" xml:space="preserve">
+    <value>Opravdu chcete odstranit {0}?</value>
+  </data>
+  <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
+    <value>Opravdu chcete odstranit {0}? {1}Všechna stažená data budou smazána</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Připojit</value>
+  </data>
+  <data name="ConnectedGettingInfo" xml:space="preserve">
+    <value>Připojeno. Získávám informace o torrentech...</value>
+  </data>
+  <data name="ConnectedTo" xml:space="preserve">
+    <value>Připojen k</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Připojuji</value>
+  </data>
+  <data name="CopyAsCSV" xml:space="preserve">
+    <value>CSV info do schránky</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Den</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Odpojit</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Odpojen</value>
+  </data>
+  <data name="DisconnectedExceeded" xml:space="preserve">
+    <value>Odpojen. Překročet limit opakování při chybných požadavcích.</value>
+  </data>
+  <data name="DisplayStatistics" xml:space="preserve">
+    <value>Zobrazit statistiky</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DownloadedValid" xml:space="preserve">
+    <value>{0} ({1} valid)</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Stahuji</value>
+  </data>
+  <data name="DownloadLimit" xml:space="preserve">
+    <value>Download limit</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Ukončit</value>
+  </data>
+  <data name="FailedRequest" xml:space="preserve">
+    <value>Chybný požadavek</value>
+  </data>
+  <data name="Gigabyte" xml:space="preserve">
+    <value>Gigabyte</value>
+  </data>
+  <data name="GigabyteShort" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Vysoký</value>
+  </data>
+  <data name="HighPriority" xml:space="preserve">
+    <value>Vysoká priorita</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hodina</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Nedokočeno</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="InfoObjectToClipboard" xml:space="preserve">
+    <value>Info objektu do schránky</value>
+  </data>
+  <data name="InputAccepted" xml:space="preserve">
+    <value>Vstup přijat</value>
+  </data>
+  <data name="Kilobyte" xml:space="preserve">
+    <value>Kilobyte</value>
+    <comment>b</comment>
+  </data>
+  <data name="KilobyteShort" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="LanguageUpdated" xml:space="preserve">
+    <value>Jazyk aktualizován</value>
+  </data>
+  <data name="LanguageUpdateDetail" xml:space="preserve">
+    <value>Vybraný jazyk byl aktualizován. Je vyžadován restart programu pro použití změn.</value>
+  </data>
+  <data name="LatestVersion" xml:space="preserve">
+    <value>Používáte poslední verzi ({0}.{1}).</value>
+  </data>
+  <data name="LatestVersionCheckFailed" xml:space="preserve">
+    <value>Ověření verze selhalo</value>
+  </data>
+  <data name="LoadingFile" xml:space="preserve">
+    <value>Načítám {0}...</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Nízký</value>
+  </data>
+  <data name="LowPriority" xml:space="preserve">
+    <value>Nízká priorita</value>
+  </data>
+  <data name="Megabyte" xml:space="preserve">
+    <value>Megabyte</value>
+  </data>
+  <data name="MegabyteShort" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minuta</value>
+  </data>
+  <data name="MoveMultipleTorrents" xml:space="preserve">
+    <value>Přesunout data torrentů</value>
+  </data>
+  <data name="MoveTorrentData" xml:space="preserve">
+    <value>Přesunout data torrentu</value>
+  </data>
+  <data name="MoveX" xml:space="preserve">
+    <value>Přesunout {0}</value>
+  </data>
+  <data name="MultipleTorrentProperties" xml:space="preserve">
+    <value>Vlastnosti torrentů</value>
+  </data>
+  <data name="MustBeConnected" xml:space="preserve">
+    <value>Musíte být připojený pro přidávání torrentů. Chcete se nyní připojit?</value>
+  </data>
+  <data name="NewerVersion" xml:space="preserve">
+    <value>Je k dispozici novější verze ({0}.{1}). Chcete navštívit stránku ke stažení?</value>
+  </data>
+  <data name="NewTorrentIs" xml:space="preserve">
+    <value>Nový torrent {0}.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normalní</value>
+  </data>
+  <data name="NormalPriority" xml:space="preserve">
+    <value>Normální priorita</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Nepřipojen</value>
+  </data>
+  <data name="NoUpgradeAvailable" xml:space="preserve">
+    <value>Není k dispozici žádná aktualizace</value>
+  </data>
+  <data name="OpenFileFilter" xml:space="preserve">
+    <value>BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*</value>
+  </data>
+  <data name="OpenNetworkShare" xml:space="preserve">
+    <value>Otevřít sdílenou složku</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Zastavit</value>
+  </data>
+  <data name="PauseAll" xml:space="preserve">
+    <value>Zastavit vše</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Zastaveno</value>
+  </data>
+  <data name="Pieces" xml:space="preserve">
+    <value>Části</value>
+  </data>
+  <data name="PortIsClosed" xml:space="preserve">
+    <value>Příchozí port deamona je ZAVŘENÝ</value>
+  </data>
+  <data name="PortIsOpen" xml:space="preserve">
+    <value>Příchozí port deamona je OTEVŘENÝ</value>
+  </data>
+  <data name="PortTestResult" xml:space="preserve">
+    <value>Výsledek testu portu</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Průběh</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Vlastnosti</value>
+  </data>
+  <data name="Querying" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="Reannounce" xml:space="preserve">
+    <value>Aktualizovat tracker</value>
+  </data>
+  <data name="Recheck" xml:space="preserve">
+    <value>Ověřit soubory</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Odstranit</value>
+  </data>
+  <data name="RemoveAndDelete" xml:space="preserve">
+    <value>Odstranit a smazat</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revize</value>
+  </data>
+  <data name="RpcVersion" xml:space="preserve">
+    <value>RpcVersion</value>
+  </data>
+  <data name="RpcVersionMinimum" xml:space="preserve">
+    <value>RpcVersionMinimum</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Sekund</value>
+  </data>
+  <data name="Seeding" xml:space="preserve">
+    <value>Seeduji</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Vybrat vše</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Přeskočit</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="StartAll" xml:space="preserve">
+    <value>Spustit vše</value>
+  </data>
+  <data name="TheTorrentHasFinishedDownloading" xml:space="preserve">
+    <value>Úloha dokončena</value>
+  </data>
+  <data name="Torrents" xml:space="preserve">
+    <value>Torrentů</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Nelze otevřít</value>
+  </data>
+  <data name="UnableToParse" xml:space="preserve">
+    <value>Nelze zpracovat odpověď serveru</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Neznámý</value>
+  </data>
+  <data name="UnknownNegativeResult" xml:space="preserve">
+    <value>Neznámý (negative)</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Neomezeno</value>
+  </data>
+  <data name="UnsuccessfulRequest" xml:space="preserve">
+    <value>Neúspěšný požadavek</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="Updating" xml:space="preserve">
+    <value>Aktualizuji...</value>
+  </data>
+  <data name="UpgradeAvailable" xml:space="preserve">
+    <value>Dostupná aktualizace</value>
+  </data>
+  <data name="UploadLimit" xml:space="preserve">
+    <value>Upload limit</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Verze</value>
+  </data>
+  <data name="WaitingForInput" xml:space="preserve">
+    <value>Čekám na vstup</value>
+  </data>
+  <data name="WaitingToCheck" xml:space="preserve">
+    <value>Čekám na ověření</value>
+  </data>
+  <data name="XInBlocklist" xml:space="preserve">
+    <value>{0} v blokaci</value>
+  </data>
+  <data name="XOfYConnected" xml:space="preserve">
+    <value>{0} připojeno</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+</root>

@@ -1,51 +1,110 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <schema id="root" xmlns="http://www.w3.org/2001/XMLSchema">
-    <import namespace="http://www.w3.org/XML/1998/namespace"></import>
-    <element name="root" NS2:IsDataSet="true" xmlns:NS2="urn:schemas-microsoft-com:xml-msdata">
-      <complexType>
-        <choice maxOccurs="unbounded">
-          <element name="metadata">
-            <complexType>
-              <sequence>
-                <element name="value" type="xsd:string" minOccurs="0"></element>
-              </sequence>
-              <attribute name="name" use="required" type="xsd:string"></attribute>
-              <attribute name="type" type="xsd:string"></attribute>
-              <attribute name="mimetype" type="xsd:string"></attribute>
-              <attribute ref="xml:space"></attribute>
-            </complexType>
-          </element>
-          <element name="assembly">
-            <complexType>
-              <attribute name="alias" type="xsd:string"></attribute>
-              <attribute name="name" type="xsd:string"></attribute>
-            </complexType>
-          </element>
-          <element name="data">
-            <complexType>
-              <sequence>
-                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
-                <element name="comment" type="xsd:string" minOccurs="0" NS2:Ordinal="2"></element>
-              </sequence>
-              <attribute name="name" type="xsd:string" use="required" NS2:Ordinal="1"></attribute>
-              <attribute name="type" type="xsd:string" NS2:Ordinal="3"></attribute>
-              <attribute name="mimetype" type="xsd:string" NS2:Ordinal="4"></attribute>
-              <attribute ref="xml:space"></attribute>
-            </complexType>
-          </element>
-          <element name="resheader">
-            <complexType>
-              <sequence>
-                <element name="value" type="xsd:string" minOccurs="0" NS2:Ordinal="1"></element>
-              </sequence>
-              <attribute name="name" type="xsd:string" use="required"></attribute>
-            </complexType>
-          </element>
-        </choice>
-      </complexType>
-    </element>
-  </schema>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -58,317 +117,329 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LoadingFile">
+  <data name="BandwidthAllocation" xml:space="preserve">
+    <value>Bandwidth allocation</value>
+  </data>
+  <data name="MultipleTorrentProperties" xml:space="preserve">
+    <value>Multiple Torrent Properties</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Unable to open</value>
+  </data>
+  <data name="LoadingFile" xml:space="preserve">
     <value>載入中 {0}...</value>
   </data>
-  <data name="InfoObjectToClipboard">
+  <data name="InfoObjectToClipboard" xml:space="preserve">
     <value>複製物件資訊到剪貼板</value>
   </data>
-  <data name="MoveMultipleTorrents">
+  <data name="MoveMultipleTorrents" xml:space="preserve">
     <value>移動 (多選)</value>
   </data>
-  <data name="MoveTorrentData">
+  <data name="MoveTorrentData" xml:space="preserve">
     <value>更改下載目錄</value>
   </data>
-  <data name="MoveX">
+  <data name="MoveX" xml:space="preserve">
     <value>移動 {0}</value>
   </data>
-  <data name="Exit">
+  <data name="Exit" xml:space="preserve">
     <value>退出</value>
   </data>
-  <data name="NewTorrentIs">
+  <data name="NewTorrentIs" xml:space="preserve">
     <value>New torrent {0}.</value>
   </data>
-  <data name="Pieces">
+  <data name="Pieces" xml:space="preserve">
     <value>區塊</value>
   </data>
-  <data name="Progress">
+  <data name="Progress" xml:space="preserve">
     <value>進度</value>
   </data>
-  <data name="Reannounce">
+  <data name="Reannounce" xml:space="preserve">
     <value>重新通告</value>
   </data>
-  <data name="OpenNetworkShare">
+  <data name="OpenNetworkShare" xml:space="preserve">
     <value>在網路共用目錄中打開</value>
   </data>
-  <data name="All">
+  <data name="All" xml:space="preserve">
     <value>全部</value>
   </data>
-  <data name="Author">
+  <data name="Author" xml:space="preserve">
     <value>作者</value>
   </data>
-  <data name="Broken">
+  <data name="Broken" xml:space="preserve">
     <value>已損毀</value>
   </data>
-  <data name="Build">
+  <data name="Build" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="Checking">
+  <data name="Checking" xml:space="preserve">
     <value>校驗</value>
   </data>
-  <data name="Complete">
+  <data name="Complete" xml:space="preserve">
     <value>完成</value>
   </data>
-  <data name="Confirm">
+  <data name="Confirm" xml:space="preserve">
     <value>確認</value>
   </data>
-  <data name="ConfirmMultipleRemove">
+  <data name="ConfirmMultipleRemove" xml:space="preserve">
     <value>您選擇移除 {0} 個任務. 是否確定?</value>
   </data>
-  <data name="ConfirmMultipleRemoveAndDelete">
+  <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
     <value>您選擇移除 {0} 個任務. 是否確定?{1}所有屬於此任務的資料將會被刪除."</value>
   </data>
-  <data name="ConfirmSingleRemove">
+  <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>您確定要移除 {0} 嗎?</value>
   </data>
-  <data name="ConfirmSingleRemoveAndDelete">
+  <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
     <value>您確定要移除 {0} 嗎?{1}所有屬於此任務的資料將會被刪除."</value>
   </data>
-  <data name="Connect">
+  <data name="Connect" xml:space="preserve">
     <value>連接</value>
   </data>
-  <data name="ConnectedGettingInfo">
+  <data name="ConnectedGettingInfo" xml:space="preserve">
     <value>已連接. 正在獲取torrent資訊...</value>
   </data>
-  <data name="ConnectedTo">
+  <data name="ConnectedTo" xml:space="preserve">
     <value>連接到</value>
   </data>
-  <data name="Connecting">
+  <data name="Connecting" xml:space="preserve">
     <value>正在連接</value>
   </data>
-  <data name="CopyAsCSV">
+  <data name="CopyAsCSV" xml:space="preserve">
     <value>複製為CSV</value>
   </data>
-  <data name="Disconnect">
+  <data name="Disconnect" xml:space="preserve">
     <value>斷開</value>
   </data>
-  <data name="Disconnected">
+  <data name="Disconnected" xml:space="preserve">
     <value>已斷開</value>
   </data>
-  <data name="DisconnectedExceeded">
+  <data name="DisconnectedExceeded" xml:space="preserve">
     <value>已斷開. 已達到最大錯誤請求數.</value>
   </data>
-  <data name="DisplayStatistics">
+  <data name="DisplayStatistics" xml:space="preserve">
     <value>顯示統計</value>
   </data>
-  <data name="Down">
+  <data name="Down" xml:space="preserve">
     <value>下載</value>
   </data>
-  <data name="Download">
+  <data name="Download" xml:space="preserve">
     <value>下載</value>
   </data>
-  <data name="DownloadedValid">
+  <data name="DownloadedValid" xml:space="preserve">
     <value>{0} ({1} 有效)</value>
   </data>
-  <data name="Downloading">
+  <data name="Downloading" xml:space="preserve">
     <value>正在下載</value>
   </data>
-  <data name="Error">
+  <data name="Error" xml:space="preserve">
     <value>錯誤</value>
   </data>
-  <data name="FailedRequest">
+  <data name="FailedRequest" xml:space="preserve">
     <value>錯誤的請求</value>
   </data>
-  <data name="High">
+  <data name="High" xml:space="preserve">
     <value>高</value>
   </data>
-  <data name="HighPriority">
+  <data name="HighPriority" xml:space="preserve">
     <value>高優先順序</value>
   </data>
-  <data name="Host">
+  <data name="Host" xml:space="preserve">
     <value>主機</value>
   </data>
-  <data name="Info">
+  <data name="Info" xml:space="preserve">
     <value>信息</value>
   </data>
-  <data name="InputAccepted">
+  <data name="InputAccepted" xml:space="preserve">
     <value>已接受輸入</value>
   </data>
-  <data name="LatestVersion">
+  <data name="LatestVersion" xml:space="preserve">
     <value>您正在使用最新版本 ({0}.{1}).</value>
   </data>
-  <data name="LatestVersionCheckFailed">
+  <data name="LatestVersionCheckFailed" xml:space="preserve">
     <value>最新版本檢查失敗</value>
   </data>
-  <data name="Low">
+  <data name="Low" xml:space="preserve">
     <value>低</value>
   </data>
-  <data name="LowPriority">
+  <data name="LowPriority" xml:space="preserve">
     <value>低優先順序</value>
   </data>
-  <data name="MustBeConnected">
+  <data name="MustBeConnected" xml:space="preserve">
     <value>您必須連接才能添加任務. 您希望現在就連接嗎?</value>
   </data>
-  <data name="NewerVersion">
+  <data name="NewerVersion" xml:space="preserve">
     <value>有新版本 ({0}.{1}) 可用. 您希望訪問下載頁面嗎?</value>
   </data>
-  <data name="No">
+  <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
-  <data name="Normal">
+  <data name="Normal" xml:space="preserve">
     <value>普通</value>
   </data>
-  <data name="NormalPriority">
+  <data name="NormalPriority" xml:space="preserve">
     <value>普通優先順序</value>
   </data>
-  <data name="NotConnected">
+  <data name="NotConnected" xml:space="preserve">
     <value>未連接</value>
   </data>
-  <data name="NoUpgradeAvailable">
+  <data name="NoUpgradeAvailable" xml:space="preserve">
     <value>無可用更新</value>
   </data>
-  <data name="OpenFileFilter">
+  <data name="OpenFileFilter" xml:space="preserve">
     <value>BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*</value>
   </data>
-  <data name="Pause">
+  <data name="Pause" xml:space="preserve">
     <value>暫停</value>
   </data>
-  <data name="PauseAll">
+  <data name="PauseAll" xml:space="preserve">
     <value>暫停所有</value>
   </data>
-  <data name="Paused">
+  <data name="Paused" xml:space="preserve">
     <value>已暫停</value>
   </data>
-  <data name="Properties">
+  <data name="Properties" xml:space="preserve">
     <value>屬性</value>
   </data>
-  <data name="Recheck">
+  <data name="Recheck" xml:space="preserve">
     <value>校驗</value>
   </data>
-  <data name="Remove">
+  <data name="Remove" xml:space="preserve">
     <value>移除</value>
   </data>
-  <data name="RemoveAndDelete">
+  <data name="RemoveAndDelete" xml:space="preserve">
     <value>移除並刪除資料</value>
   </data>
-  <data name="Revision">
+  <data name="Revision" xml:space="preserve">
     <value>修訂</value>
   </data>
-  <data name="RpcVersion">
+  <data name="RpcVersion" xml:space="preserve">
     <value>RpcVersion</value>
   </data>
-  <data name="RpcVersionMinimum">
+  <data name="RpcVersionMinimum" xml:space="preserve">
     <value>RpcVersionMinimum</value>
   </data>
-  <data name="Seeding">
+  <data name="Seeding" xml:space="preserve">
     <value>正在做種</value>
   </data>
-  <data name="SelectAll">
+  <data name="SelectAll" xml:space="preserve">
     <value>選擇所有</value>
   </data>
-  <data name="Skip">
+  <data name="Skip" xml:space="preserve">
     <value>忽略</value>
   </data>
-  <data name="Start">
+  <data name="Start" xml:space="preserve">
     <value>開始</value>
   </data>
-  <data name="StartAll">
+  <data name="StartAll" xml:space="preserve">
     <value>開始所有</value>
   </data>
-  <data name="TheTorrentHasFinishedDownloading">
+  <data name="TheTorrentHasFinishedDownloading" xml:space="preserve">
     <value>此任務已完成下載</value>
   </data>
-  <data name="Torrents">
+  <data name="Torrents" xml:space="preserve">
     <value>任務</value>
   </data>
-  <data name="UnableToParse">
+  <data name="UnableToParse" xml:space="preserve">
     <value>無法解析伺服器回應</value>
   </data>
-  <data name="UnknownNegativeResult">
+  <data name="UnknownNegativeResult" xml:space="preserve">
     <value>未知 (負)</value>
   </data>
-  <data name="UnsuccessfulRequest">
+  <data name="UnsuccessfulRequest" xml:space="preserve">
     <value>失敗的請求</value>
   </data>
-  <data name="Up">
+  <data name="Up" xml:space="preserve">
     <value>上傳</value>
   </data>
-  <data name="UpgradeAvailable">
+  <data name="UpgradeAvailable" xml:space="preserve">
     <value>更新可用</value>
   </data>
-  <data name="Version">
+  <data name="Version" xml:space="preserve">
     <value>版本</value>
   </data>
-  <data name="WaitingForInput">
+  <data name="WaitingForInput" xml:space="preserve">
     <value>正在等待輸入</value>
   </data>
-  <data name="WaitingToCheck">
+  <data name="WaitingToCheck" xml:space="preserve">
     <value>正在等待校驗</value>
   </data>
-  <data name="XOfYConnected">
-    <value>{1}個中的{0}個 已連接</value>
+  <data name="XOfYConnected" xml:space="preserve">
+    <value>{0}個 已連接</value>
   </data>
-  <data name="Yes">
+  <data name="Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
-  <data name="Incomplete">
+  <data name="Incomplete" xml:space="preserve">
     <value>未完成</value>
   </data>
-  <data name="LanguageUpdated">
+  <data name="LanguageUpdated" xml:space="preserve">
     <value>已更新語言</value>
   </data>
-  <data name="LanguageUpdateDetail">
+  <data name="LanguageUpdateDetail" xml:space="preserve">
     <value>已更新您選擇的語言, 重啟應用程式才能完全生效.</value>
   </data>
-  <data name="Byte">
+  <data name="Byte" xml:space="preserve">
     <value>Byte</value>
   </data>
-  <data name="Day">
+  <data name="Day" xml:space="preserve">
     <value>Day</value>
   </data>
-  <data name="Gigabyte">
+  <data name="Gigabyte" xml:space="preserve">
     <value>Gigabyte</value>
   </data>
-  <data name="GigabyteShort">
+  <data name="GigabyteShort" xml:space="preserve">
     <value>GB</value>
   </data>
-  <data name="Hour">
+  <data name="Hour" xml:space="preserve">
     <value>Hour</value>
   </data>
-  <data name="Kilobyte">
+  <data name="Kilobyte" xml:space="preserve">
     <value>Kilobyte</value>
     <comment>b</comment>
   </data>
-  <data name="KilobyteShort">
+  <data name="KilobyteShort" xml:space="preserve">
     <value>KB</value>
   </data>
-  <data name="Megabyte">
+  <data name="Megabyte" xml:space="preserve">
     <value>Megabyte</value>
   </data>
-  <data name="MegabyteShort">
+  <data name="MegabyteShort" xml:space="preserve">
     <value>MB</value>
   </data>
-  <data name="Minute">
+  <data name="Minute" xml:space="preserve">
     <value>Minute</value>
   </data>
-  <data name="Second">
+  <data name="Second" xml:space="preserve">
     <value>Second</value>
   </data>
-  <data name="PortIsClosed">
+  <data name="PortIsClosed" xml:space="preserve">
     <value>您的 daemon 埠已關閉.</value>
   </data>
-  <data name="PortIsOpen">
+  <data name="PortIsOpen" xml:space="preserve">
     <value>您的 daemon 埠已打開.</value>
   </data>
-  <data name="PortTestResult">
+  <data name="PortTestResult" xml:space="preserve">
     <value>埠測試結果</value>
   </data>
-  <data name="DownloadLimit">
+  <data name="DownloadLimit" xml:space="preserve">
     <value>下載上限</value>
   </data>
-  <data name="Unlimited">
+  <data name="Unlimited" xml:space="preserve">
     <value>無限制</value>
   </data>
-  <data name="UploadLimit">
+  <data name="UploadLimit" xml:space="preserve">
     <value>上傳上限</value>
   </data>
-  <data name="Querying">
+  <data name="Querying" xml:space="preserve">
     <value>正在查詢...</value>
   </data>
-  <data name="Updating">
+  <data name="Updating" xml:space="preserve">
     <value>正在上傳...</value>
   </data>
-  <data name="XInBlocklist">
+  <data name="XInBlocklist" xml:space="preserve">
     <value>{0}個在阻止列表.</value>
   </data>
 </root>

@@ -322,7 +322,7 @@
     <value>Waiting to check</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0} of {1} connected</value>
+    <value>{0} connected</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>

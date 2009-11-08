@@ -425,7 +425,7 @@
     <value>{0}개의 차단목록</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0}/{1} 접속됨</value>
+    <value>{0} 접속됨</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>예</value>

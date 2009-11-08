@@ -111,6 +111,24 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label11.Text" xml:space="preserve">
+    <value>UNIX path prefix:</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Samba share:</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>New mapping:</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Samba</value>
+  </data>
   <data name="EnableProxyCombo.Items" xml:space="preserve">
     <value>Auto</value>
   </data>
@@ -221,9 +239,6 @@
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Explorar</value>
-  </data>
-  <data name="sambaShareEnabledCheckBox.Text" xml:space="preserve">
-    <value>Compartir descargas en red:</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>Valores de límite de descarga:</value>

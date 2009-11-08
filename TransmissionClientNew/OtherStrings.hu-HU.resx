@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MultipleTorrentProperties" xml:space="preserve">
+    <value>Multiple Torrent Properties</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Unable to open</value>
+  </data>
   <data name="BandwidthAllocation" xml:space="preserve">
     <value>Sávszélesség kiosztás</value>
   </data>
@@ -376,7 +382,7 @@
     <value>Várakozás az ellenőrzésre</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>Csatlakozva: {0} Összes: {1}</value>
+    <value>Csatlakozva: {0}</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Igen</value>

@@ -837,3 +837,16 @@ C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Relea
 C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\tr-TR\Transmission Remote.resources.dll
 C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\zh-CN\Transmission Remote.resources.dll
 C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\zh-TW\Transmission Remote.resources.dll
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.AboutDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.ErrorLogWindow.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.LocalSettingsDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.MainWindow.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.MoveDataPrompt.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.OtherStrings.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.RemoteSettingsDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.StatsDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.TorrentLoadDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.TorrentPropertiesDialog.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\TransmissionRemoteDotnet.UriPromptWindow.cs-CZ.resources
+C:\Users\Alan\Desktop\transmission-remote-dotnet\TransmissionClientNew\obj\Release\cs-CZ\Transmission Remote.resources.dll
