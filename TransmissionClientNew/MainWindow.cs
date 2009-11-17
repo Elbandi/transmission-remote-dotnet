@@ -1640,7 +1640,8 @@ namespace TransmissionRemoteDotnet
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
             }
-            remainingLabel.Text = t.GetLongETA();
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate!=null ? t.DoneDate.ToString() : "?") : t.GetLongETA();
+            label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRate;
