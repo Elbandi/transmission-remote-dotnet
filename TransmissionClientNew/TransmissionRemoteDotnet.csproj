@@ -212,6 +212,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="PromiscuousCertificatePolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutDialog.cs-CZ.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutDialog.da-DK.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -258,6 +262,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AboutDialog.zh-TW.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorLogWindow.cs-CZ.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ErrorLogWindow.da-DK.resx">
@@ -308,6 +316,10 @@
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalSettingsDialog.cs-CZ.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalSettingsDialog.da-DK.resx">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -356,6 +368,10 @@
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.cs-CZ.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.da-DK.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -400,6 +416,10 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.cs-CZ.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.es-ES.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -422,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.zh-TW.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherStrings.cs-CZ.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.da-DK.resx">
@@ -486,6 +509,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemoteSettingsDialog.cs-CZ.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoteSettingsDialog.da-DK.resx">
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -532,6 +559,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemoteSettingsDialog.zh-TW.resx">
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsDialog.cs-CZ.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StatsDialog.da-DK.resx">
@@ -582,6 +613,10 @@
       <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.cs-CZ.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.es-ES.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -608,6 +643,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.zh-TW.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentPropertiesDialog.cs-CZ.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentPropertiesDialog.da-DK.resx">
@@ -656,6 +695,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentPropertiesDialog.zh-TW.resx">
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UriPromptWindow.cs-CZ.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UriPromptWindow.da-DK.resx">

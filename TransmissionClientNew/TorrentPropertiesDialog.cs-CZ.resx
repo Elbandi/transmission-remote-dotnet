@@ -108,18 +108,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.Text" xml:space="preserve">
+    <value>Priorita:</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <data name="honorsSessionLimits.Text" xml:space="preserve">
+    <value>Respektovat limity session</value>
+  </data>
+  <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
+    <value>Limit seed ratio</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Maximum Peerů</value>
+  </data>
+  <data name="uploadLimitEnableField.Text" xml:space="preserve">
+    <value>Upload limit</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="downloadLimitEnableField.Text" xml:space="preserve">
+    <value>Download limit</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Zrušit</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
+    <value>OK</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Zpřístupnění některých možností možná vyžaduje aktualizaci daemona</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>Vlastnosti torrentu</value>
   </data>
 </root>

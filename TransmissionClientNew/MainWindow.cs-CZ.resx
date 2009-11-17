@@ -111,373 +111,373 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="percentageLabel.Text" xml:space="preserve">
-    <value>This is selectable text</value>
-  </data>
   <data name="speedResComboBox.Items" xml:space="preserve">
     <value>5 sec</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Transmission Remote</value>
+  <data name="speedResComboBox.Items1" xml:space="preserve">
+    <value>10 sec</value>
   </data>
-  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Transmission Remote 정보</value>
+  <data name="speedResComboBox.Items2" xml:space="preserve">
+    <value>30 sec</value>
   </data>
-  <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>토런트 추가</value>
-  </data>
-  <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
-    <value>URL로 토런트 추가...</value>
-  </data>
-  <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
-    <value>빠른 토런트 추가...</value>
-  </data>
-  <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 추가...</value>
-  </data>
-  <data name="addWebTorrentButton.Text" xml:space="preserve">
-    <value>URL로 토런트 추가</value>
-  </data>
-  <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>전체 트랙커 업데이트</value>
-  </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>카테고리 보기</value>
-  </data>
-  <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
-    <value>업데이트 확인</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>경로</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>배포</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>리쳐</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>다운속도</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>업속도</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>예상 시간</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>비율</value>
-  </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>건너뛰기</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>추가 시간</value>
-  </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
-    <value>완료 시간</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>크기</value>
-  </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
-    <value>Announce 주소</value>
-  </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Scrape 주소</value>
-  </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
-    <value>순서</value>
-  </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
-    <value>IP 주소</value>
-  </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
-    <value>호스트명</value>
-  </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
-    <value>국가</value>
-  </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
-    <value>클라이언트</value>
-  </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
-    <value>완료</value>
-  </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
-    <value>다운속도</value>
-  </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
-    <value>업속도</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>완료</value>
-  </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
-    <value>트랙커</value>
-  </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
-    <value>상태</value>
-  </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
-    <value>종류</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>%</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>우선권</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>이름</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>크기</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>완료</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>상태</value>
-  </data>
-  <data name="configureTorrentButton.Text" xml:space="preserve">
-    <value>토런트 등록 정보</value>
-  </data>
-  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>토런트 등록 정보</value>
-  </data>
-  <data name="connectButton.Text" xml:space="preserve">
-    <value>연결</value>
-  </data>
-  <data name="connectToolStripMenuItem.Text" xml:space="preserve">
-    <value>연결</value>
-  </data>
-  <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>클립보드로 등록 정보 객체 복사</value>
-  </data>
-  <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>클립보드로 CSV 정보 복사</value>
-  </data>
-  <data name="disconnectButton.Text" xml:space="preserve">
-    <value>연결 끊기</value>
-  </data>
-  <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>연결 끊기</value>
-  </data>
-  <data name="downloadProgressLabel.Text" xml:space="preserve">
-    <value>조각:</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>종료</value>
-  </data>
-  <data name="filesTabPage.Text" xml:space="preserve">
-    <value>파일</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>파일</value>
-  </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>일반</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>대역폭 사용 내역</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>도움말</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>배포:</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>상태:</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>업속도 제한:</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>리쳐:</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>비율:</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>설명:</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>생성 시간:</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>생성 프로그램:</value>
-  </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>해상도:</value>
-  </data>
-  <data name="label19.Text" xml:space="preserve">
-    <value>업</value>
-  </data>
-  <data name="label20.Text" xml:space="preserve">
-    <value>다운</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>시작 시간:</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>남은 시간:</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>업로드:</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>다운로드:</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>다운속도:</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>업속도:</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>다운속도 제한:</value>
-  </data>
-  <data name="labelForErrorLabel.Text" xml:space="preserve">
-    <value>오류:</value>
-  </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>언어</value>
-  </data>
-  <data name="localConfigureButton.Text" xml:space="preserve">
-    <value>트랜스미션 리모트 설정</value>
-  </data>
-  <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>트랜스미션 리모트 설정...</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 데이타 이동...</value>
-  </data>
-  <data name="notifyIcon.Text" xml:space="preserve">
-    <value>트랜스미션 리모트</value>
-  </data>
-  <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>네트워크 공유 위치 열기</value>
-  </data>
-  <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>네트워크 공유 위치 열기</value>
-  </data>
-  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>설정</value>
-  </data>
-  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>일시정지</value>
-  </data>
-  <data name="pauseTorrentButton.Text" xml:space="preserve">
-    <value>토런트 일시정지</value>
-  </data>
-  <data name="peersTabPage.Text" xml:space="preserve">
-    <value>연결</value>
-  </data>
-  <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>프로젝트 웹페이지</value>
-  </data>
-  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 등록 정보...</value>
-  </data>
-  <data name="reannounceButton.Text" xml:space="preserve">
-    <value>트랙커 업데이트</value>
-  </data>
-  <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>트랙커 업데이트</value>
-  </data>
-  <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>최근 활성화된 것만</value>
-  </data>
-  <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>재검사</value>
-  </data>
-  <data name="recheckTorrentButton.Text" xml:space="preserve">
-    <value>토런트 재검사</value>
-  </data>
-  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>토런트 재검사</value>
-  </data>
-  <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>트랜스미션 데몬 설정</value>
-  </data>
-  <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>트랜스미션 데몬 설정...</value>
-  </data>
-  <data name="removeAndDeleteButton.Text" xml:space="preserve">
-    <value>토런트 파일 및 데이타 삭제</value>
-  </data>
-  <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 파일 및 데이타 삭제</value>
-  </data>
-  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 파일 삭제</value>
-  </data>
-  <data name="removeTorrentButton.Text" xml:space="preserve">
-    <value>토런트 파일 삭제</value>
-  </data>
-  <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>통계 표시</value>
-  </data>
-  <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>상세 정보 보기</value>
-  </data>
-  <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>오류 기록 보기</value>
+  <data name="speedResComboBox.Items3" xml:space="preserve">
+    <value>5 min</value>
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 초</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 초</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 분</value>
-  </data>
-  <data name="speedTabPage.Text" xml:space="preserve">
-    <value>속도</value>
-  </data>
-  <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>모두 시작</value>
-  </data>
-  <data name="startToolStripMenuItem.Text" xml:space="preserve">
-    <value>시작</value>
-  </data>
-  <data name="startTorrentButton.Text" xml:space="preserve">
-    <value>토런트 시작</value>
-  </data>
-  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>토런트 시작</value>
-  </data>
   <data name="statusStrip.Text" xml:space="preserve">
     <value>statusStrip1</value>
-  </data>
-  <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>모두 일시정지</value>
-  </data>
-  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
-    <value>경과 시간:</value>
   </data>
   <data name="toolStripContainer1.Text" xml:space="preserve">
     <value>toolStripContainer1</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트</value>
+    <value>Torrent</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>O aplikaci Transmission Remote</value>
+  </data>
+  <data name="addTorrentButton.Text" xml:space="preserve">
+    <value>Přidat torrent</value>
+  </data>
+  <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
+    <value>Přidat torrent z URL</value>
+  </data>
+  <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Přidat torrent</value>
+  </data>
+  <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Přidat torrent se změnou nastavení</value>
+  </data>
+  <data name="addWebTorrentButton.Text" xml:space="preserve">
+    <value>Přidat torrent z URL</value>
+  </data>
+  <data name="allToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vše</value>
+  </data>
+  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filtrování</value>
+  </data>
+  <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zjistit novější verzi</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Cesta</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>Seedů</value>
+  </data>
+  <data name="columnHeader11.Text" xml:space="preserve">
+    <value>Peerů</value>
+  </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>Rychlost Down</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Rychlost Up</value>
+  </data>
+  <data name="columnHeader14.Text" xml:space="preserve">
+    <value>Zbývá</value>
+  </data>
+  <data name="columnHeader15.Text" xml:space="preserve">
+    <value>Odesláno</value>
+  </data>
+  <data name="columnHeader16.Text" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="columnHeader17.Text" xml:space="preserve">
+    <value>Přeskočit</value>
+  </data>
+  <data name="columnHeader18.Text" xml:space="preserve">
+    <value>Přidáno</value>
+  </data>
+  <data name="columnHeader19.Text" xml:space="preserve">
+    <value>Dokočeno</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="columnHeader20.Text" xml:space="preserve">
+    <value>Announce URL</value>
+  </data>
+  <data name="columnHeader21.Text" xml:space="preserve">
+    <value>Scrape URL</value>
+  </data>
+  <data name="columnHeader22.Text" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="columnHeader23.Text" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="columnHeader24.Text" xml:space="preserve">
+    <value>Hostname</value>
+  </data>
+  <data name="columnHeader25.Text" xml:space="preserve">
+    <value>Země</value>
+  </data>
+  <data name="columnHeader26.Text" xml:space="preserve">
+    <value>Klient</value>
+  </data>
+  <data name="columnHeader27.Text" xml:space="preserve">
+    <value>Procent</value>
+  </data>
+  <data name="columnHeader28.Text" xml:space="preserve">
+    <value>Rychlost Down</value>
+  </data>
+  <data name="columnHeader29.Text" xml:space="preserve">
+    <value>Rychlost Up</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Dokočeno</value>
+  </data>
+  <data name="columnHeader30.Text" xml:space="preserve">
+    <value>Tracker</value>
+  </data>
+  <data name="columnHeader31.Text" xml:space="preserve">
+    <value>Příznak</value>
+  </data>
+  <data name="columnHeader32.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Priorita</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>Procent</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="configureTorrentButton.Text" xml:space="preserve">
+    <value>Nastavit vlastnosti torrent(ů)</value>
+  </data>
+  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Nastavit vlastnosti torrent(ů)</value>
+  </data>
+  <data name="connectButton.Text" xml:space="preserve">
+    <value>Připojit</value>
+  </data>
+  <data name="connectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Připojit</value>
+  </data>
+  <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Info objektu do schránky</value>
+  </data>
+  <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>CSV info do schránky</value>
+  </data>
+  <data name="disconnectButton.Text" xml:space="preserve">
+    <value>Odpojit</value>
+  </data>
+  <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Odpojit</value>
+  </data>
+  <data name="downloadProgressLabel.Text" xml:space="preserve">
+    <value>Části:</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ukončit</value>
+  </data>
+  <data name="filesTabPage.Text" xml:space="preserve">
+    <value>Soubory</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Soubor</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>Hlavní</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Průměrené rychlost</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Nápověda</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Seedů:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Stav:</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Upload limit:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Peerů:</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Ratio:</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Komentář:</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Vytvořeno:</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Vytvořil:</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Rozlišení:</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Spuštěno:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Zbývá:</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Odesláno:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Staženo:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Rychlost Down:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Rychlost Up:</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Download limit:</value>
+  </data>
+  <data name="labelForErrorLabel.Text" xml:space="preserve">
+    <value>Chyba:</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="localConfigureButton.Text" xml:space="preserve">
+    <value>Místní nastavení</value>
+  </data>
+  <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Místní nastavení</value>
+  </data>
+  <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
+    <value>Přesunout data</value>
+  </data>
+  <data name="notifyIcon.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+  <data name="openNetworkShareButton.Text" xml:space="preserve">
+    <value>Otevřít ve sdílené složce</value>
+  </data>
+  <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
+    <value>Otevřít ve sdílené složce</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zastavit</value>
+  </data>
+  <data name="pauseTorrentButton.Text" xml:space="preserve">
+    <value>Zastavit</value>
+  </data>
+  <data name="peersTabPage.Text" xml:space="preserve">
+    <value>Uživatelé</value>
+  </data>
+  <data name="percentageLabel.Text" xml:space="preserve">
+    <value>Tento text je možné vybrat</value>
+  </data>
+  <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stránka projektu</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vlastnosti</value>
+  </data>
+  <data name="reannounceButton.Text" xml:space="preserve">
+    <value>Aktualizovat tracker</value>
+  </data>
+  <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aktualizovat tracker</value>
+  </data>
+  <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Poslední aktivita</value>
+  </data>
+  <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ověřit soubory</value>
+  </data>
+  <data name="recheckTorrentButton.Text" xml:space="preserve">
+    <value>Ověřit soubory</value>
+  </data>
+  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Ověřit soubory</value>
+  </data>
+  <data name="remoteConfigureButton.Text" xml:space="preserve">
+    <value>Vzdálené nastavení</value>
+  </data>
+  <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vzdálené nastavení</value>
+  </data>
+  <data name="removeAndDeleteButton.Text" xml:space="preserve">
+    <value>Odstranit a smazat torrent(y)</value>
+  </data>
+  <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Odstranit a smazat</value>
+  </data>
+  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="removeTorrentButton.Text" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>Zobrazit statistiku</value>
+  </data>
+  <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Panel s detaily</value>
+  </data>
+  <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zobrazit chybový log</value>
+  </data>
+  <data name="speedTabPage.Text" xml:space="preserve">
+    <value>Rychlost</value>
+  </data>
+  <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Spustit vše</value>
+  </data>
+  <data name="startToolStripMenuItem.Text" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="startTorrentButton.Text" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zastavit vše</value>
+  </data>
+  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
+    <value>Uplynulý čas:</value>
   </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
-    <value>트랙커</value>
+    <value>Trackery</value>
   </data>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>보기</value>
+    <value>Zobrazit</value>
   </data>
 </root>

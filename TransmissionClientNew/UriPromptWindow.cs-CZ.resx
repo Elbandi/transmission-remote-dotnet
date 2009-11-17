@@ -108,18 +108,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
+    <value>OK</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>Čekám na URL...</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>Přidat torrent z URL</value>
   </data>
 </root>

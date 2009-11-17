@@ -727,7 +727,7 @@ namespace TransmissionRemoteDotnet
         public void AddSambaMapping(string unixPrefix, string sambaPrefix)
         {
             JsonObject mappings = this.SambaShareMappings;
-            mappings[unixPrefix] = sambaPrefix;
+            mappings[unixPrefix] = sambaPrefix.EndsWith(@"\") ? sambaPrefix.Substring(0, sambaPrefix.Length - 1) : sambaPrefix;
             this.SambaShareMappings = mappings;
         }
     }

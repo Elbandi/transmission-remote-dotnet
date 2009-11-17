@@ -110,16 +110,76 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>Transmission Daemon Statistiky</value>
+  </data>
+  <data name="CloseFormButton.Text" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="downloadedBytesLabel1.Text" xml:space="preserve">
+    <value>Celkem staženo (byte):</value>
+  </data>
+  <data name="downloadedBytesLabel2.Text" xml:space="preserve">
+    <value>Celkem staženo (byte):</value>
+  </data>
+  <data name="downloadedBytesValue1.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="downloadedBytesValue2.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="filesAddedLabel1.Text" xml:space="preserve">
+    <value>Přidáno úloh:</value>
+  </data>
+  <data name="filesAddedLabel2.Text" xml:space="preserve">
+    <value>Přidáno úloh:</value>
+  </data>
+  <data name="filesAddedValue1.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="filesAddedValue2.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Celkové statistiky</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Statistiky relace</value>
+  </data>
+  <data name="secondsActiveLabel1.Text" xml:space="preserve">
+    <value>Aktivní (sec)</value>
+  </data>
+  <data name="secondsActiveLabel2.Text" xml:space="preserve">
+    <value>Aktivní (sec)</value>
+  </data>
+  <data name="secondsActiveValue1.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="secondsActiveValue2.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="sessionCountLabel1.Text" xml:space="preserve">
+    <value>Počet relací</value>
+  </data>
+  <data name="sessionCountLabel2.Text" xml:space="preserve">
+    <value>Počet relací</value>
+  </data>
+  <data name="sessionCountValue1.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="sessionCountValue2.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="uploadedBytesLabel1.Text" xml:space="preserve">
+    <value>Celkem odesláno:</value>
+  </data>
+  <data name="uploadedBytesLabel2.Text" xml:space="preserve">
+    <value>Celkem odesláno:</value>
+  </data>
+  <data name="uploadedBytesValue1.Text" xml:space="preserve">
+    <value>Získávám...</value>
+  </data>
+  <data name="uploadedBytesValue2.Text" xml:space="preserve">
+    <value>Získávám...</value>
   </data>
 </root>

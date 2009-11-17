@@ -109,17 +109,153 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
+  <data name="EnableProxyCombo.Items" xml:space="preserve">
+    <value>Auto</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Dotaz při přidávání úlohy</value>
+  </data>
+  <data name="CloseDialogButton.Text" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="AutoConnectCheckBox.Text" xml:space="preserve">
+    <value>Automaticky připojit po startu</value>
+  </data>
+  <data name="EnableProxyCombo.Items1" xml:space="preserve">
+    <value>Zapnuto</value>
+  </data>
+  <data name="EnableProxyCombo.Items2" xml:space="preserve">
+    <value>Vypnuto</value>
+  </data>
+  <data name="EnableAuthCheckBox.Text" xml:space="preserve">
+    <value>Zapnout autentizace</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Zobrazit tlačítko vzdáleného přístupu</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Procházet</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
+    <value>Uložit a připojit</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Aktuální profil</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Nový profil</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>Místní nastavení</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Odstranit</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Nové mapování:</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Host:</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Počet pokusů o připojení:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>UNIX prefix cesty:</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>plink.exe:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Příkaz: </value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Samba - sdílená složka:</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Nápověda: </value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Rychlosti upload limitu:</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Rychlosti download limitu:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Aktualizace (sec):</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Jméno:</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Heslo:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Host:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Jméno:</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Heslo:</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>http://code.google.com/p/transmission-remote-dotnet/wiki/SSH</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
+    <value>Minimalizovat při zavření</value>
+  </data>
+  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
+    <value>Zobrazovat tray ikonu</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
+    <value>Upozornit po přidání úlohy</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
+    <value>Upozornit po dokončení úlohy</value>
+  </data>
+  <data name="ProxyAuthEnableCheckBox.Text" xml:space="preserve">
+    <value>Autentizace</value>
+  </data>
+  <data name="SaveButton.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="StartPausedCheckBox.Text" xml:space="preserve">
+    <value>Nespouštět pro přidání</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Autentizace</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Hlavní</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>SSH</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>Jiné</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Samba</value>
+  </data>
+  <data name="UseSSLCheckBox.Text" xml:space="preserve">
+    <value>Zabezpečení (SSL)</value>
   </data>
 </root>

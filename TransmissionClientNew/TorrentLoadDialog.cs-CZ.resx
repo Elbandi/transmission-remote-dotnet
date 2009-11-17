@@ -108,18 +108,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Cesta</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Přeskočit</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Priorita</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Alternativní peer limit</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Alternativní cílová složka:</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Zrušit</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
+    <value>OK</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>TorrentLoadDialog</value>
   </data>
 </root>

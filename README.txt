@@ -33,6 +33,7 @@ CREDITS AND ACKNOWLEDGEMENTS
     * huexxx for the Spanish translation.
     * twohertz for the Korean translation.
     * zeal.tsai for the Taiwanese translation.
+    * ikeblaster for the Czech translation.
 	
 ABOUT
 ----------------------------

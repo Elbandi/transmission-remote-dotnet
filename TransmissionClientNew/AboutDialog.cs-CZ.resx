@@ -110,16 +110,16 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>O aplikaci Transmission Remote</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
+    <value>Prosím zasílejte informace o nalezených chybách pomocí této stránky</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>http://code.google.com/p/transmission-remote-dotnet/</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
   </data>
 </root>

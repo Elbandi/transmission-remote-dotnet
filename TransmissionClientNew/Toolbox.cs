@@ -78,7 +78,11 @@ namespace TransmissionRemoteDotnet
 
         public static int ToInt(object o)
         {
-            return ((JsonNumber)o).ToInt32();
+            if (o != null) {
+                return ((JsonNumber)o).ToInt32();
+            } else {
+                return 0;
+            }
         }
 
         public static decimal ToDecimal(object o)

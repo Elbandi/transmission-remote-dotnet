@@ -110,16 +110,107 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Text" xml:space="preserve">
-    <value>關於 Transmission Remote</value>
+    <value>Vzdálené nastavení</value>
+  </data>
+  <data name="altSpeedLimitEnable.Text" xml:space="preserve">
+    <value>Zapnout alternativní limity</value>
+  </data>
+  <data name="altTimeConstraintEnabled.Text" xml:space="preserve">
+    <value>Časové omezení</value>
+  </data>
+  <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
+    <value>Zapnout blocklist</value>
+  </data>
+  <data name="CloseFormButton.Text" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="dhtEnabled.Text" xml:space="preserve">
+    <value>Zapnout Distributed Hash Table (DHT)</value>
+  </data>
+  <data name="encryptionCombobox.Items" xml:space="preserve">
+    <value>Tolerováno</value>
+  </data>
+  <data name="encryptionCombobox.Items1" xml:space="preserve">
+    <value>Povoleno</value>
+  </data>
+  <data name="encryptionCombobox.Items2" xml:space="preserve">
+    <value>Vynuceno</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Cílová složka:</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Down:</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Up:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Příchozí port:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Šifrování:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Limit peerů</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Zpřístupnění některých možností možná vyžaduje aktualizaci daemona</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="limitDownloadCheckBox.Text" xml:space="preserve">
+    <value>Download limit</value>
+  </data>
+  <data name="limitUploadCheckBox.Text" xml:space="preserve">
+    <value>Upload limit</value>
+  </data>
+  <data name="PEXcheckBox.Text" xml:space="preserve">
+    <value>Zapnout Peer Exchange</value>
+  </data>
+  <data name="portForwardCheckBox.Text" xml:space="preserve">
+    <value>Zapnout UPnP</value>
+  </data>
+  <data name="SaveButton.Text" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
+    <value>Seed Ratio Limit</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Hlavní</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Limity</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Alternativní limity</value>
+  </data>
+  <data name="testPortButton.Text" xml:space="preserve">
+    <value>Otestovat port</value>
+  </data>
+  <data name="updateBlocklistButton.Text" xml:space="preserve">
+    <value>Aktualizovat blocklist</value>
   </data>
 </root>

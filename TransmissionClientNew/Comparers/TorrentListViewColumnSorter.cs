@@ -74,10 +74,10 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewItemDecimalComparer(value);
                         break;
                     case 4:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_SEEDERS);
+                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_PEERSSENDINGTOUS);
                         break;
                     case 5:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_LEECHERS);
+                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_PEERSGETTINGFROMUS);
                         break;
                     case 6:
                         objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_RATEDOWNLOAD);
