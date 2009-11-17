@@ -71,6 +71,7 @@ namespace TransmissionRemoteDotnet
                         break;
                     }
                 }
+                compressedStream.Close();
                 decompressedStream.Seek(0, SeekOrigin.Begin);
                 return decompressedStream;
             }
