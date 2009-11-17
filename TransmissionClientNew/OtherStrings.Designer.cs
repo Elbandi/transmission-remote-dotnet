@@ -313,6 +313,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empty file.
+        /// </summary>
+        internal static string EmptyFile {
+            get {
+                return ResourceManager.GetString("EmptyFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Error {
@@ -336,6 +345,15 @@ namespace TransmissionRemoteDotnet {
         internal static string FailedRequest {
             get {
                 return ResourceManager.GetString("FailedRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GeoIP init error ({0}).
+        /// </summary>
+        internal static string GeoipInitError {
+            get {
+                return ResourceManager.GetString("GeoipInitError", resourceCulture);
             }
         }
         
@@ -921,6 +939,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnknownNegativeResult {
             get {
                 return ResourceManager.GetString("UnknownNegativeResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown response tag.
+        /// </summary>
+        internal static string UnknownResponseTag {
+            get {
+                return ResourceManager.GetString("UnknownResponseTag", resourceCulture);
             }
         }
         

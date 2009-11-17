@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>Üres fájl</value>
+  </data>
+  <data name="UnknownResponseTag" xml:space="preserve">
+    <value>Ismeretlen válasz</value>
+  </data>
+  <data name="GeoipInitError" xml:space="preserve">
+    <value>GeoIP betöltési hiba ({0})</value>
+  </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
-    <value>Multiple Torrent Properties</value>
+    <value>Több torrent tulajdonsága</value>
   </data>
   <data name="UnableToOpen" xml:space="preserve">
-    <value>Unable to open</value>
+    <value>Megnyítás sikertelen</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
     <value>Sávszélesség kiosztás</value>
@@ -130,7 +139,7 @@
     <value>{0} betöltése...</value>
   </data>
   <data name="InfoObjectToClipboard" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Info object vágólapra másolása</value>
   </data>
   <data name="MoveMultipleTorrents" xml:space="preserve">
     <value>Több torrent adat áthelyezése</value>

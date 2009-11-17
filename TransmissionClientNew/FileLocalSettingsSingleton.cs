@@ -93,7 +93,7 @@ namespace TransmissionRemoteDotnet
                 byte[] binaryData = new Byte[inFile.Length];
                 if (inFile.Read(binaryData, 0, (int)inFile.Length) < 1)
                 {
-                    throw new Exception("Empty file");
+                    throw new Exception(OtherStrings.EmptyFile);
                 }
                 this.jsonRoot = (JsonObject)JsonConvert.Import(UTF8Encoding.UTF8.GetString(binaryData));
             }
