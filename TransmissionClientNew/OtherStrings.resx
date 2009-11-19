@@ -442,4 +442,13 @@
   <data name="UnableToOpen" xml:space="preserve">
     <value>Unable to open</value>
   </data>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>Empty file</value>
+  </data>
+  <data name="GeoipInitError" xml:space="preserve">
+    <value>GeoIP init error ({0})</value>
+  </data>
+  <data name="UnknownResponseTag" xml:space="preserve">
+    <value>Unknown response tag</value>
+  </data>
 </root>

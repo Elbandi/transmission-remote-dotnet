@@ -339,7 +339,7 @@ namespace TransmissionRemoteDotnet
             }
             catch (Exception ex)
             {
-                Program.Log("GeoIP init error (" + ex.GetType().ToString() + ")", ex.Message);
+                Program.Log(String.Format(OtherStrings.GeoipInitError, ex.GetType()), ex.Message);
             }
         }
 

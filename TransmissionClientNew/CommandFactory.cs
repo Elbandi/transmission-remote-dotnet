@@ -157,7 +157,7 @@ namespace TransmissionRemoteDotnet
             {
                 return new ErrorCommand(ex, false);
             }
-            return new ErrorCommand("Unknown response tag", str_response != null ? str_response : "null", false);
+            return new ErrorCommand(OtherStrings.UnknownResponseTag, str_response != null ? str_response : "null", false);
         }
     }
 }
