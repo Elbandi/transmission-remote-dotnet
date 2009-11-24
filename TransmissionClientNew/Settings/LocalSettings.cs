@@ -57,6 +57,7 @@ namespace TransmissionRemoteDotnet.Settings
             jo.Put(SettingsKey.REGKEY_MINONCLOSE, Toolbox.ToInt(MinOnClose));
             jo.Put(SettingsKey.REGKEY_MINTOTRAY, Toolbox.ToInt(MinToTray));
             jo.Put(SettingsKey.REGKEY_STARTEDBALLOON, Toolbox.ToInt(StartedBalloon));
+            jo.Put(SettingsKey.REGKEY_AUTOCHECKUPDATE, Toolbox.ToInt(AutoCheckupdate));
             jo.Put(SettingsKey.REGKEY_LOCALE, Locale);
             jo.Put(SettingsKey.REGKEY_PLINKPATH, PlinkPath);
             jo.Put(SettingsKey.REGKEY_UPLOADPROMPT, Toolbox.ToInt(UploadPrompt));
@@ -82,6 +83,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.SetData(ref MinOnClose, o[SettingsKey.REGKEY_MINONCLOSE]);
             Toolbox.SetData(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
             Toolbox.SetData(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
+            Toolbox.SetData(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.SetData(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.SetData(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.SetData(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
@@ -166,6 +168,7 @@ namespace TransmissionRemoteDotnet.Settings
                 newsettings.PlinkPath = oldsettings.PlinkPath;
                 newsettings.StartedBalloon = oldsettings.StartedBalloon;
                 newsettings.UploadPrompt = oldsettings.UploadPrompt;
+                newsettings.AutoCheckupdate = oldsettings.AutoCheckupdate;
                 string origcurrentprofile = oldsettings.CurrentProfile;
                 foreach (string p in oldsettings.Profiles)
                 {
@@ -414,6 +417,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_PORT = "port",
             REGKEY_USESSL = "usessl",
             REGKEY_AUTOCONNECT = "autoConnect",
+            REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
             REGKEY_USER = "user",
             REGKEY_PASS = "pass",
             REGKEY_AUTHENABLED = "authEnabled",

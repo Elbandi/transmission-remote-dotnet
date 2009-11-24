@@ -406,7 +406,7 @@
     <value>148, 17</value>
   </data>
   <data name="notificationOnCompletionCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
     <value>Notification on completion</value>
@@ -466,7 +466,7 @@
     <value>109, 17</value>
   </data>
   <data name="minimizeOnCloseCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
     <value>Minimize on close</value>
@@ -483,6 +483,36 @@
   <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 65</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 17</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
+    <value>Check for update at startup</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Name" xml:space="preserve">
+    <value>AutoCheckUpdateCheckBox</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="UploadPromptCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -496,7 +526,7 @@
     <value>95, 17</value>
   </data>
   <data name="UploadPromptCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>
@@ -511,7 +541,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;UploadPromptCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -541,7 +571,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="groupBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>

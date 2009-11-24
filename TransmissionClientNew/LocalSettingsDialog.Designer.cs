@@ -58,17 +58,19 @@ namespace TransmissionRemoteDotnet
             this.groupCurrentProfile = new System.Windows.Forms.GroupBox();
             this.CurrentProfileComboBox = new System.Windows.Forms.ComboBox();
             this.groupPlinkPath = new System.Windows.Forms.GroupBox();
-            this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.PlinkPathButton = new System.Windows.Forms.Button();
+            this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
             this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
             this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
             this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
+            this.AutoCheckUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.UploadPromptCheckBox = new System.Windows.Forms.CheckBox();
             this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.tabServersSettings = new System.Windows.Forms.TabPage();
             this.tabServerSettings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
             this.SaveServerButton = new System.Windows.Forms.Button();
             this.UseSSLCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -123,7 +125,6 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -236,13 +237,6 @@ namespace TransmissionRemoteDotnet
             this.groupPlinkPath.Name = "groupPlinkPath";
             this.groupPlinkPath.TabStop = false;
             // 
-            // PlinkPathTextBox
-            // 
-            resources.ApplyResources(this.PlinkPathTextBox, "PlinkPathTextBox");
-            this.PlinkPathTextBox.Name = "PlinkPathTextBox";
-            this.PlinkPathTextBox.ReadOnly = true;
-            this.PlinkPathTextBox.TextChanged += new System.EventHandler(this.PlinkPathTextBox_TextChanged);
-            // 
             // PlinkPathButton
             // 
             resources.ApplyResources(this.PlinkPathButton, "PlinkPathButton");
@@ -250,11 +244,19 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton.UseVisualStyleBackColor = true;
             this.PlinkPathButton.Click += new System.EventHandler(this.PlinkPathButton_Click);
             // 
+            // PlinkPathTextBox
+            // 
+            resources.ApplyResources(this.PlinkPathTextBox, "PlinkPathTextBox");
+            this.PlinkPathTextBox.Name = "PlinkPathTextBox";
+            this.PlinkPathTextBox.ReadOnly = true;
+            this.PlinkPathTextBox.TextChanged += new System.EventHandler(this.PlinkPathTextBox_TextChanged);
+            // 
             // groupBehavior
             // 
             this.groupBehavior.Controls.Add(this.notificationOnCompletionCheckBox);
             this.groupBehavior.Controls.Add(this.notificationOnAdditionCheckBox);
             this.groupBehavior.Controls.Add(this.minimizeOnCloseCheckBox);
+            this.groupBehavior.Controls.Add(this.AutoCheckUpdateCheckBox);
             this.groupBehavior.Controls.Add(this.UploadPromptCheckBox);
             this.groupBehavior.Controls.Add(this.MinToTrayCheckBox);
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
@@ -278,6 +280,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.minimizeOnCloseCheckBox, "minimizeOnCloseCheckBox");
             this.minimizeOnCloseCheckBox.Name = "minimizeOnCloseCheckBox";
             this.minimizeOnCloseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AutoCheckUpdateCheckBox
+            // 
+            resources.ApplyResources(this.AutoCheckUpdateCheckBox, "AutoCheckUpdateCheckBox");
+            this.AutoCheckUpdateCheckBox.Name = "AutoCheckUpdateCheckBox";
+            this.AutoCheckUpdateCheckBox.UseVisualStyleBackColor = true;
             // 
             // UploadPromptCheckBox
             // 
@@ -328,6 +336,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // StartPausedCheckBox
+            // 
+            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
+            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
+            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
             // 
             // SaveServerButton
             // 
@@ -734,12 +748,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
-            // StartPausedCheckBox
-            // 
-            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
-            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
-            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
-            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -865,5 +873,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem addServerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeServerToolStripMenuItem;
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
+        private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
     }
 }

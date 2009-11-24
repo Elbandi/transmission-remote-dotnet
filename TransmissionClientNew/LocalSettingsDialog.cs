@@ -73,6 +73,7 @@ namespace TransmissionRemoteDotnet
             notificationOnCompletionCheckBox.Checked = sett.CompletedBaloon;
             minimizeOnCloseCheckBox.Checked = sett.MinOnClose;
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
+            AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
             PlinkPathTextBox.Text = sett.PlinkPath;
             /*
             LocalSettingsSingleton settings = null;
@@ -128,6 +129,7 @@ namespace TransmissionRemoteDotnet
             sett.CompletedBaloon = notificationOnCompletionCheckBox.Checked;
             sett.MinOnClose = minimizeOnCloseCheckBox.Checked;
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
+            sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
             sett.PlinkPath = PlinkPathTextBox.Text;
             sett.Servers.Clear();
             foreach (ListViewItem lvi in listServers.Items)
