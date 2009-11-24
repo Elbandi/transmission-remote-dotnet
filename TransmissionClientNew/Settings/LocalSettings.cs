@@ -211,7 +211,7 @@ namespace TransmissionRemoteDotnet.Settings
                         newsettings.Misc[s] = oldsettings.GetObject(s, true);
                 }
                 // move old stuff to backup!
-                oldsettings.BackupSettings();
+                //oldsettings.BackupSettings();
                 if (!newsettings.DefaultLocalStore.Save(newsettings.SaveToJson()))
                     MessageBox.Show("Failed to save settings");
             }
