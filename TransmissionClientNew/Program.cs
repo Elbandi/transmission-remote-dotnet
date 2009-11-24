@@ -21,6 +21,7 @@ using System.Windows.Forms;
 using Jayrock.Json;
 using System.Net;
 using TransmissionRemoteDotnet.Commands;
+using TransmissionRemoteDotnet.Settings;
 using System.Threading;
 
 namespace TransmissionRemoteDotnet
@@ -40,6 +41,13 @@ namespace TransmissionRemoteDotnet
         public static MainWindow Form
         {
             get { return Program.form; }
+        }
+
+        private static LocalSettings settings = new LocalSettings();
+        public static LocalSettings Settings
+        {
+            get { return Program.settings; }
+            set { Program.settings = value; }
         }
 
         private static Dictionary<string, Torrent> torrentIndex = new Dictionary<string, Torrent>();
@@ -72,7 +80,9 @@ namespace TransmissionRemoteDotnet
         [STAThread]
         static void Main(string[] args)
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LocalSettingsSingleton.Instance.Locale);
+            
+            settings = LocalSettings.TryLoad();
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(settings.Locale);
 #if DOTNET35
             using (NamedPipeSingleInstance singleInstance = new TCPSingleInstance(TCP_SINGLE_INSTANCE_PORT))
 #else
@@ -94,8 +104,9 @@ namespace TransmissionRemoteDotnet
 #endif
                     }
                     ServicePointManager.Expect100Continue = false;
+
                     /* Store a list of torrents to upload after connect? */
-                    if (LocalSettingsSingleton.Instance.AutoConnect && args.Length > 0)
+                    if (!settings.AutoConnect.Equals("") && args.Length > 0)
                     {
                         Program.uploadArgs = args;
                     }

@@ -89,7 +89,7 @@ namespace TransmissionRemoteDotnet
             string str_response = null;
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(LocalSettingsSingleton.Instance.RpcUrl);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Program.Settings.Current.RpcUrl);
                 TransmissionWebClient.SetupWebRequest(request, true);
                 request.Method = "POST";
                 request.ContentType = "application/json";

@@ -34,7 +34,7 @@ namespace TransmissionRemoteDotnet
         Disabled = 2
     }
 
-    public sealed class LocalSettingsSingleton
+    class LocalSettingsSingleton
     {
         /* Some unconfigurable variables. */
         private const string REGISTRY_KEY_ROOT = @"Software\TransmissionRemote";
@@ -80,24 +80,22 @@ namespace TransmissionRemoteDotnet
             REGKEY_UPLOADPROMPT = "uploadPrompt",
             REGKEY_DESTINATION_PATH_HISTORY = "destPathHistory";
 
-        private static LocalSettingsSingleton instance = null;
-        private static readonly object padlock = new object();
-
-        public static LocalSettingsSingleton Instance
+        public static LocalSettingsSingleton OneInstance()
         {
-            get
+            return new LocalSettingsSingleton();
+        }
+        public void BackupSettings()
+        {
+            int last = REGISTRY_KEY_ROOT.LastIndexOf(@"\");
+            string trname = REGISTRY_KEY_ROOT.Substring(last + 1);
+            string parentname = REGISTRY_KEY_ROOT.Substring(0, last);
+            RegistryKey root = GetRootKey(parentname, true);
+            if (Array.Exists<string>(root.GetSubKeyNames(), delegate(string s) { return trname.Equals(s); }))
             {
-                lock (padlock)
-                {
-                    if (instance == null)
-                    {
-                        instance = new LocalSettingsSingleton();
-                    }
-                    return instance;
-                }
+                Toolbox.RenameSubKey(root, trname, trname + ".backup");
+                MessageBox.Show("Atraktuk");
             }
         }
-
         private LocalSettingsSingleton()
         {
             RegistryKey key = GetRootKey(false);
@@ -132,6 +130,24 @@ namespace TransmissionRemoteDotnet
             {
                 return profileConfMap.ContainsKey(key) ? profileConfMap[key] : null;
             }
+        }
+
+
+        public string[] ListObject(bool root)
+        {
+            string[] keys;
+            if (root)
+            {
+                keys = new string[rootConfMap.Keys.Count];
+                rootConfMap.Keys.CopyTo(keys, 0);
+
+            }
+            else
+            {
+                keys = new string[profileConfMap.Keys.Count];
+                profileConfMap.Keys.CopyTo(keys, 0);
+            }
+            return keys;
         }
 
         public bool ContainsKey(string key, bool root)
@@ -277,9 +293,14 @@ namespace TransmissionRemoteDotnet
 
         private RegistryKey GetRootKey(bool writeable)
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_ROOT, writeable);
+            return GetRootKey(REGISTRY_KEY_ROOT, writeable);
+        }
+
+        private RegistryKey GetRootKey(string keyroot, bool writeable)
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(keyroot, writeable);
             if (key == null)
-                key = Registry.CurrentUser.CreateSubKey(REGISTRY_KEY_ROOT);
+                key = Registry.CurrentUser.CreateSubKey(keyroot);
             return key;
         }
 

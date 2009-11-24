@@ -779,6 +779,12 @@
     <Compile Include="SelectableLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Settings\FileLocalSettings.cs" />
+    <Compile Include="Settings\ILocalSettingsStore.cs" />
+    <Compile Include="Settings\RegistryJsonLocalSettings.cs" />
+    <Compile Include="Settings\RegistryLocalSettings.cs" />
+    <Compile Include="Settings\LocalSettings.cs" />
+    <Compile Include="Settings\SambaShareMappings.cs" />
     <Compile Include="SplitContainerFix.cs">
       <SubType>Component</SubType>
     </Compile>

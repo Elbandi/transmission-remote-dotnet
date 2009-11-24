@@ -1026,6 +1026,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.connectButton, "connectButton");
             this.connectButton.Name = "connectButton";
             this.connectButton.ButtonClick += new System.EventHandler(this.connectButton_Click);
+            this.connectButton.DropDownOpening += new System.EventHandler(this.connectButton_DropDownOpening);
             // 
             // disconnectButton
             // 

@@ -36,7 +36,7 @@ namespace TransmissionRemoteDotnet.Commmands
 
         public UpdateFilesCommand(JsonObject response)
         {
-            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(LocalSettingsSingleton.Instance.Locale);
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(Program.Settings.Locale);
             Program.DaemonDescriptor.ResetFailCount();
             MainWindow form = Program.Form;
             JsonObject arguments = (JsonObject)response[ProtocolConstants.KEY_ARGUMENTS];
