@@ -1208,6 +1208,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.connectToolStripMenuItem, "connectToolStripMenuItem");
             this.connectToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.connect_creating;
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
+            this.connectToolStripMenuItem.DropDownOpening += new System.EventHandler(this.connectButton_DropDownOpening);
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectButton_Click);
             // 
             // disconnectToolStripMenuItem

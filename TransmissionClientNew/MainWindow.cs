@@ -106,21 +106,25 @@ namespace TransmissionRemoteDotnet
             InitStateListBox();
             speedResComboBox.SelectedIndex = 2;
             RestoreFormProperties();
-            foreach(KeyValuePair<string, TransmissionServer> s in Program.Settings.Servers)
-            {
-                ToolStripMenuItem profile = CreateProfileMenuItem(s.Key);
-                if (s.Key.Equals(Program.Settings.CurrentProfile))
-                {
-                    profile.Checked = true;
-                }
-            }
+            CreateProfileMenu();
             OpenGeoipDatabase();
             PopulateLanguagesMenu();
         }
 
         public ToolStripMenuItem CreateProfileMenuItem(string name)
         {
-            return connectButton.DropDownItems.Add(name, null, new EventHandler(this.connectButtonprofile_SelectedIndexChanged)) as ToolStripMenuItem;
+            return new ToolStripMenuItem(name, null, new EventHandler(this.connectButtonprofile_SelectedIndexChanged));
+        }
+
+        public void CreateProfileMenu()
+        {
+            foreach (KeyValuePair<string, TransmissionServer> s in Program.Settings.Servers)
+            {
+                connectButton.DropDownItems.Add(CreateProfileMenuItem(s.Key));
+                ToolStripMenuItem profile = CreateProfileMenuItem(s.Key);
+                profile.Click += delegate(object sender, EventArgs e) { connectToolStripMenuItem.PerformClick(); };
+                connectToolStripMenuItem.DropDownItems.Add(profile);
+            }
         }
 
         private void InitStateListBox()
@@ -1012,7 +1016,12 @@ namespace TransmissionRemoteDotnet
 
         private void localConfigureButton_Click(object sender, EventArgs e)
         {
-            (new LocalSettingsDialog()).ShowDialog();
+            if ((new LocalSettingsDialog()).ShowDialog() == DialogResult.OK)
+            {
+                connectButton.DropDownItems.Clear();
+                connectToolStripMenuItem.DropDownItems.Clear();
+                CreateProfileMenu();
+            }
         }
 
         private void remoteConfigureButton_Click(object sender, EventArgs e)
@@ -2167,7 +2176,11 @@ namespace TransmissionRemoteDotnet
 
         private void connectButton_DropDownOpening(object sender, EventArgs e)
         {
-            foreach (ToolStripMenuItem item in Program.Form.connectButton.DropDownItems)
+            foreach (ToolStripMenuItem item in connectButton.DropDownItems)
+            {
+                item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
+            }
+            foreach (ToolStripMenuItem item in connectToolStripMenuItem.DropDownItems)
             {
                 item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
             }
