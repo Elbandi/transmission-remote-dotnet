@@ -32,6 +32,7 @@ namespace TransmissionRemoteDotnet
             this.findButton = new System.Windows.Forms.Button();
             this.findTextbox = new System.Windows.Forms.TextBox();
             this.findLabel = new System.Windows.Forms.Label();
+            this.CaseSensitiveCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // findButton
@@ -51,11 +52,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.findLabel, "findLabel");
             this.findLabel.Name = "findLabel";
             // 
+            // CaseSensitiveCheckBox
+            // 
+            resources.ApplyResources(this.CaseSensitiveCheckBox, "CaseSensitiveCheckBox");
+            this.CaseSensitiveCheckBox.Name = "CaseSensitiveCheckBox";
+            this.CaseSensitiveCheckBox.UseVisualStyleBackColor = true;
+            // 
             // FindDialog
             // 
             this.AcceptButton = this.findButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CaseSensitiveCheckBox);
             this.Controls.Add(this.findLabel);
             this.Controls.Add(this.findTextbox);
             this.Controls.Add(this.findButton);
@@ -77,5 +85,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button findButton;
         private System.Windows.Forms.TextBox findTextbox;
         private System.Windows.Forms.Label findLabel;
+        private System.Windows.Forms.CheckBox CaseSensitiveCheckBox;
     }
 }
