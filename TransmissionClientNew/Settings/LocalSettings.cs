@@ -53,41 +53,41 @@ namespace TransmissionRemoteDotnet.Settings
         public JsonObject SaveToJson()
         {
             JsonObject jo = new JsonObject();
-            jo.Put(SettingsKey.REGKEY_COMPLETEDBALLOON, Toolbox.ToInt(CompletedBaloon));
-            jo.Put(SettingsKey.REGKEY_MINONCLOSE, Toolbox.ToInt(MinOnClose));
-            jo.Put(SettingsKey.REGKEY_MINTOTRAY, Toolbox.ToInt(MinToTray));
-            jo.Put(SettingsKey.REGKEY_STARTEDBALLOON, Toolbox.ToInt(StartedBalloon));
-            jo.Put(SettingsKey.REGKEY_AUTOCHECKUPDATE, Toolbox.ToInt(AutoCheckupdate));
-            jo.Put(SettingsKey.REGKEY_LOCALE, Locale);
-            jo.Put(SettingsKey.REGKEY_PLINKPATH, PlinkPath);
-            jo.Put(SettingsKey.REGKEY_UPLOADPROMPT, Toolbox.ToInt(UploadPrompt));
-            jo.Put(SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
-            jo.Put(SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_COMPLETEDBALLOON, CompletedBaloon);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINONCLOSE, MinOnClose);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINTOTRAY, MinToTray);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTEDBALLOON, StartedBalloon);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_LOCALE, Locale);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKPATH, PlinkPath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPLOADPROMPT, UploadPrompt);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
             JsonObject ja = new JsonObject();
             foreach (KeyValuePair<string, TransmissionServer> s in Servers)
             {
                 ja.Put(s.Key, s.Value.SaveToJson());
             }
-            jo.Put(SettingsKey.REGKEY_PROFILES, ja);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PROFILES, ja);
             ja = new JsonObject();
             foreach (KeyValuePair<string, object> s in Misc)
             {
                 ja.Put(s.Key, s.Value);
             }
-            jo.Put(SettingsKey.REGKEY_MISC, ja);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_MISC, ja);
             return jo;
         }
         public void LoadFromJson(JsonObject o)
         {
-            Toolbox.SetData(ref CompletedBaloon, o[SettingsKey.REGKEY_COMPLETEDBALLOON]);
-            Toolbox.SetData(ref MinOnClose, o[SettingsKey.REGKEY_MINONCLOSE]);
-            Toolbox.SetData(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
-            Toolbox.SetData(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
-            Toolbox.SetData(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
-            Toolbox.SetData(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
-            Toolbox.SetData(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
-            Toolbox.SetData(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
-            Toolbox.SetData(ref AutoConnect, o[SettingsKey.REGKEY_AUTOCONNECT]);
+            Toolbox.JsonGet(ref CompletedBaloon, o[SettingsKey.REGKEY_COMPLETEDBALLOON]);
+            Toolbox.JsonGet(ref MinOnClose, o[SettingsKey.REGKEY_MINONCLOSE]);
+            Toolbox.JsonGet(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
+            Toolbox.JsonGet(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
+            Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
+            Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
+            Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
+            Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
+            Toolbox.JsonGet(ref AutoConnect, o[SettingsKey.REGKEY_AUTOCONNECT]);
             JsonObject ja = (JsonObject)o[SettingsKey.REGKEY_PROFILES];
             if (ja != null)
             {
@@ -96,7 +96,7 @@ namespace TransmissionRemoteDotnet.Settings
                     Servers.Add(n, new TransmissionServer(ja[n] as JsonObject));
                 }
             }
-            Toolbox.SetData(ref currentprofile, o[SettingsKey.REGKEY_CURRENTPROFILE]);
+            Toolbox.JsonGet(ref currentprofile, o[SettingsKey.REGKEY_CURRENTPROFILE]);
             if (!Servers.ContainsKey(currentprofile))
                 currentprofile = "";
             ja = (JsonObject)o[SettingsKey.REGKEY_MISC];
@@ -227,18 +227,18 @@ namespace TransmissionRemoteDotnet.Settings
 
         public virtual void LoadFromJson(JsonObject o)
         {
-            Toolbox.SetData(ref Host, o[SettingsKey.REGKEY_HOST]);
-            Toolbox.SetData(ref Port, o[SettingsKey.REGKEY_PORT]);
-            Toolbox.SetData(ref Username, o[SettingsKey.REGKEY_USER]);
-            Toolbox.SetData(ref Password, o[SettingsKey.REGKEY_PASS]);
+            Toolbox.JsonGet(ref Host, o[SettingsKey.REGKEY_HOST]);
+            Toolbox.JsonGet(ref Port, o[SettingsKey.REGKEY_PORT]);
+            Toolbox.JsonGet(ref Username, o[SettingsKey.REGKEY_USER]);
+            Toolbox.JsonGet(ref Password, o[SettingsKey.REGKEY_PASS]);
         }
         public virtual JsonObject SaveToJson()
         {
             JsonObject jo = new JsonObject();
-            jo.Put(SettingsKey.REGKEY_HOST, Host);
-            jo.Put(SettingsKey.REGKEY_PORT, Port);
-            jo.Put(SettingsKey.REGKEY_USER, Username);
-            jo.Put(SettingsKey.REGKEY_PASS, Password);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_HOST, Host);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PORT, Port);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_USER, Username);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PASS, Password);
             return jo;
         }
         public Server()
@@ -267,38 +267,38 @@ namespace TransmissionRemoteDotnet.Settings
         public override JsonObject SaveToJson()
         {
             JsonObject jo = base.SaveToJson();
-            jo.Put(SettingsKey.REGKEY_USESSL, Toolbox.ToInt(UseSSL));
-            jo.Put(SettingsKey.REGKEY_REFRESHRATE, RefreshRate);
-            jo.Put(SettingsKey.REGKEY_CUSTOMPATH, CustomPath);
-            jo.Put(SettingsKey.REGKEY_RETRYLIMIT, RetryLimit);
-            jo.Put(SettingsKey.REGKEY_DOWNLIMIT, DownLimit);
-            jo.Put(SettingsKey.REGKEY_UPLIMIT, UpLimit);
-            jo.Put(SettingsKey.REGKEY_STARTPAUSED, Toolbox.ToInt(StartPaused));
-            jo.Put(SettingsKey.REGKEY_PLINKENABLE, Toolbox.ToInt(PlinkEnable));
-            jo.Put(SettingsKey.REGKEY_PLINKCMD, PlinkCmd);
-            jo.Put(SettingsKey.REGKEY_PROXY, Proxy.SaveToJson());
-            jo.Put(SettingsKey.REGKEY_DESTINATION_PATH_HISTORY, new JsonArray(destpathhistory));
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_USESSL, UseSSL);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_REFRESHRATE, RefreshRate);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_CUSTOMPATH, CustomPath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_RETRYLIMIT, RetryLimit);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_DOWNLIMIT, DownLimit);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPLIMIT, UpLimit);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTPAUSED, StartPaused);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKENABLE, PlinkEnable);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKCMD, PlinkCmd);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PROXY, Proxy.SaveToJson());
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_DESTINATION_PATH_HISTORY, new JsonArray(destpathhistory));
             JsonObject ja = new JsonObject();
             foreach (KeyValuePair<string, string> s in SambaShareMappings)
             {
                 ja.Put(s.Key, s.Value);
             }
-            jo.Put(SettingsKey.REGKEY_SAMBASHAREMAPPINGS, ja);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_SAMBASHAREMAPPINGS, ja);
             return jo;
         }
 
         public override void LoadFromJson(JsonObject o)
         {
             base.LoadFromJson(o);
-            Toolbox.SetData(ref UseSSL, o[SettingsKey.REGKEY_USESSL]);
-            Toolbox.SetData(ref RefreshRate, o[SettingsKey.REGKEY_REFRESHRATE]);
-            Toolbox.SetData(ref CustomPath, o[SettingsKey.REGKEY_CUSTOMPATH]);
-            Toolbox.SetData(ref RetryLimit, o[SettingsKey.REGKEY_RETRYLIMIT]);
-            Toolbox.SetData(ref DownLimit, o[SettingsKey.REGKEY_DOWNLIMIT]);
-            Toolbox.SetData(ref UpLimit, o[SettingsKey.REGKEY_UPLIMIT]);
-            Toolbox.SetData(ref StartPaused, o[SettingsKey.REGKEY_STARTPAUSED]);
-            Toolbox.SetData(ref PlinkEnable, o[SettingsKey.REGKEY_PLINKENABLE]);
-            Toolbox.SetData(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
+            Toolbox.JsonGet(ref UseSSL, o[SettingsKey.REGKEY_USESSL]);
+            Toolbox.JsonGet(ref RefreshRate, o[SettingsKey.REGKEY_REFRESHRATE]);
+            Toolbox.JsonGet(ref CustomPath, o[SettingsKey.REGKEY_CUSTOMPATH]);
+            Toolbox.JsonGet(ref RetryLimit, o[SettingsKey.REGKEY_RETRYLIMIT]);
+            Toolbox.JsonGet(ref DownLimit, o[SettingsKey.REGKEY_DOWNLIMIT]);
+            Toolbox.JsonGet(ref UpLimit, o[SettingsKey.REGKEY_UPLIMIT]);
+            Toolbox.JsonGet(ref StartPaused, o[SettingsKey.REGKEY_STARTPAUSED]);
+            Toolbox.JsonGet(ref PlinkEnable, o[SettingsKey.REGKEY_PLINKENABLE]);
+            Toolbox.JsonGet(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
 
             JsonArray ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
             destpathhistory.AddRange((string[])ja.ToArray(typeof(string)));
@@ -378,7 +378,7 @@ namespace TransmissionRemoteDotnet.Settings
         public override JsonObject SaveToJson()
         {
             JsonObject jo = base.SaveToJson();
-            jo.Put(SettingsKey.REGKEY_PROXYENABLED, (int)ProxyMode);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PROXYENABLED, (int)ProxyMode);
             return jo;
         }
 

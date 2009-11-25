@@ -223,17 +223,29 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public static void SetData(ref bool d, object o)
+        public static void JsonGet(ref bool d, object o)
         {
             if (o != null) d = Toolbox.ToBool(o, d);
         }
-        public static void SetData(ref int d, object o)
+
+        public static void JsonGet(ref int d, object o)
         {
             if (o != null) d = Toolbox.ToInt(o, d);
         }
-        public static void SetData(ref string d, object o)
+
+        public static void JsonGet(ref string d, object o)
         {
             if (o != null) d = o as string;
+        }
+
+        public static void JsonPut(JsonObject dest, string key, bool value)
+        {
+            JsonPut(dest, key, Toolbox.ToInt(value));
+        }
+
+        public static void JsonPut(JsonObject dest, string key, object value)
+        {
+            dest.Put(key, value);
         }
 
         public static short ToShort(object o)
