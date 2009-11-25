@@ -1314,6 +1314,7 @@ namespace TransmissionRemoteDotnet
             // 
             // findToolStripMenuItem
             // 
+            this.findToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag16;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);

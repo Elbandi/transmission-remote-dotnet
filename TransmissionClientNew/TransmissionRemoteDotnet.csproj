@@ -900,6 +900,7 @@
     <Content Include="Jayrock.Json\Debug\Jayrock.Json.dll" />
     <Content Include="Jayrock.Json\Release\Jayrock.dll" />
     <Content Include="Jayrock.Json\Release\Jayrock.Json.dll" />
+    <None Include="Resources\xmag16.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
