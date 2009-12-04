@@ -521,16 +521,16 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
-            connectButton.Visible = connectToolStripMenuItem.Visible
+            connectButton.Visible = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
-            disconnectButton.Visible = addTorrentToolStripMenuItem.Visible
+            disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
                 = removeTorrentButton.Visible = toolStripSeparator4.Visible
-                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Visible
-                = configureTorrentButton.Visible = torrentToolStripMenuItem.Visible
-                = remoteSettingsToolStripMenuItem.Visible = fileMenuItemSeperator1.Visible
-                = addTorrentFromUrlToolStripMenuItem.Visible = startTorrentButton.Visible
+                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Enabled
+                = configureTorrentButton.Visible = torrentToolStripMenuItem.Enabled
+                = remoteSettingsToolStripMenuItem.Enabled
+                = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolStripSeparator2.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
@@ -539,8 +539,7 @@ namespace TransmissionRemoteDotnet
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
             sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
-            moveTorrentDataToolStripMenuItem.Visible = connected && dd.Revision >= 8385;
-            addTorrentWithOptionsToolStripMenuItem.Visible = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
+            addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
         }
 
         public void SetRemoteCmdButtonVisible(bool connected)
@@ -548,7 +547,7 @@ namespace TransmissionRemoteDotnet
             LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
             remoteCmdButton.Visible = connected && settings.PlinkEnable && settings.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
             //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
-            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Visible = connected && LocalSettingsSingleton.Instance.SambaShareMappings.Count > 0;
+            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && LocalSettingsSingleton.Instance.SambaShareMappings.Count > 0;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
         }
@@ -1034,6 +1033,7 @@ namespace TransmissionRemoteDotnet
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
                 = moveTorrentDataToolStripMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled
                 = oneOrMore;
+            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
             pauseTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_pause : global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all;
             startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
         }

@@ -2805,6 +2805,9 @@
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Connect</value>
   </data>
+  <data name="disconnectToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="disconnectToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+D</value>
   </data>
@@ -2814,11 +2817,11 @@
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
     <value>Disconnect</value>
   </data>
-  <data name="disconnectToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 6</value>
+  </data>
+  <data name="addTorrentToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="addTorrentToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+N</value>
@@ -2829,7 +2832,7 @@
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Quick add torrent</value>
   </data>
-  <data name="addTorrentToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+  <data name="addTorrentWithOptionsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -2841,7 +2844,7 @@
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
   </data>
-  <data name="addTorrentWithOptionsToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+  <data name="addTorrentFromUrlToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="addTorrentFromUrlToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -2853,14 +2856,8 @@
   <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent from URL</value>
   </data>
-  <data name="addTorrentFromUrlToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="fileMenuItemSeperator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 6</value>
-  </data>
-  <data name="fileMenuItemSeperator1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 22</value>
@@ -2883,6 +2880,9 @@
   <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Local settings</value>
   </data>
+  <data name="remoteSettingsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="remoteSettingsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+O</value>
   </data>
@@ -2891,9 +2891,6 @@
   </data>
   <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Remote settings</value>
-  </data>
-  <data name="remoteSettingsToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 6</value>
@@ -3063,14 +3060,14 @@
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Pause all</value>
   </data>
+  <data name="torrentToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="torrentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 20</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>
-  </data>
-  <data name="torrentToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="showDetailsPanelToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F5</value>
