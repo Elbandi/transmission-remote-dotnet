@@ -59,6 +59,7 @@ namespace TransmissionRemoteDotnet
             RefreshRateValue.Value = settings.RefreshRate;
             UseSSLCheckBox.Checked = settings.UseSSL;
             AutoConnectCheckBox.Checked = settings.AutoConnect;
+            AutoCheckUpdateCheckBox.Checked = settings.AutoCheckupdate;
             PassField.Enabled = UserField.Enabled = EnableAuthCheckBox.Checked = settings.AuthEnabled;
             UserField.Text = settings.User;
             PassField.Text = settings.Pass;
@@ -104,6 +105,7 @@ namespace TransmissionRemoteDotnet
             settings.Port = (int)PortField.Value;
             settings.UseSSL = UseSSLCheckBox.Checked;
             settings.AutoConnect = AutoConnectCheckBox.Checked;
+            settings.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
             settings.RefreshRate = (int)RefreshRateValue.Value;
             Program.Form.refreshTimer.Interval = (int)RefreshRateValue.Value * 1000;
             settings.AuthEnabled = EnableAuthCheckBox.Checked;

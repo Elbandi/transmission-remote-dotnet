@@ -792,6 +792,39 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="AutoCheckUpdateCheckBox.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 41</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 17</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
+    <value>Check for update at startup</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Name" xml:space="preserve">
+    <value>AutoCheckUpdateCheckBox</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
     <value>checkBox2</value>
   </data>
