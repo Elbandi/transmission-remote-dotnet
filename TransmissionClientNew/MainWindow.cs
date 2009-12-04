@@ -210,7 +210,7 @@ namespace TransmissionRemoteDotnet
             downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeDownLimit).Tag = -1;
             downLimitMenuItem.MenuItems.Add("-");
             Settings.TransmissionServer settings = Program.Settings.Current;
-            foreach(string limit in settings.DownLimit.Split(','))
+            foreach (string limit in settings.DownLimit.Split(','))
             {
                 try
                 {
@@ -535,7 +535,7 @@ namespace TransmissionRemoteDotnet
                 = remoteSettingsToolStripMenuItem.Enabled
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
-                = speedGraph.Enabled = toolStripSeparator2.Visible 
+                = speedGraph.Enabled = toolStripSeparator2.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
@@ -551,8 +551,8 @@ namespace TransmissionRemoteDotnet
             remoteCmdButton.Visible = connected && settings.Current.PlinkEnable && settings.Current.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
             //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
             openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && settings.Current.SambaShareMappings.Count > 0;
-	        if (openNetworkShareMenuItem != null)
-		        openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
+            if (openNetworkShareMenuItem != null)
+                openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
         }
 
         public void TorrentsToClipboardHandler(object sender, EventArgs e)
@@ -711,7 +711,7 @@ namespace TransmissionRemoteDotnet
                     try
                     {
                         CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper());
-                        ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName +" / " + cInfo.EnglishName);
+                        ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName + " / " + cInfo.EnglishName);
                         item.Tag = cInfo;
                         item.Click += new EventHandler(this.ChangeUICulture);
                         item.Checked = Program.Settings.Locale.Equals(cInfo.Name);
@@ -1032,7 +1032,7 @@ namespace TransmissionRemoteDotnet
 
         private void OneOrMoreTorrentsSelected(bool oneOrMore)
         {
-                removeTorrentButton.Enabled = recheckTorrentButton.Enabled
+            removeTorrentButton.Enabled = recheckTorrentButton.Enabled
                 = removeAndDeleteButton.Enabled = configureTorrentButton.Enabled
                 = startToolStripMenuItem.Enabled = pauseToolStripMenuItem.Enabled
                 = copyInfoObjectToClipboardToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled
@@ -1437,7 +1437,7 @@ namespace TransmissionRemoteDotnet
             int broken = 0;
             Dictionary<string, int> trackers = new Dictionary<string, int>();
             Dictionary<string, Torrent> torrents = Program.TorrentIndex;
-            lock(torrents)
+            lock (torrents)
             {
                 all = torrents.Count;
                 foreach (KeyValuePair<string, Torrent> pair in torrents)
@@ -1652,7 +1652,7 @@ namespace TransmissionRemoteDotnet
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
             }
-            remainingLabel.Text = t.IsFinished ? (t.DoneDate!=null ? t.DoneDate.ToString() : "?") : t.GetLongETA();
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.GetLongETA();
             label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
