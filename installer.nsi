@@ -88,7 +88,7 @@ SectionEnd
 Section /o "Czech translation"
   CreateDirectory "$INSTDIR\cs-CZ"
   SetOutPath "$INSTDIR\cs-CZ"
-  File "cs-CZ\Transmission Remote.resources.dll"
+  File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
 SectionEnd
 
 Section /o "Danish translation"
