@@ -104,8 +104,6 @@ namespace TransmissionRemoteDotnet
             peersListView.ListViewItemSorter = peersLvwColumnSorter = new PeersListViewItemSorter();
             InitStaticContextMenus();
             InitStateListBox();
-            speedGraph.AddLine("Download", Color.Green);
-            speedGraph.AddLine("Upload", Color.Yellow);
             speedResComboBox.SelectedIndex = 2;
             RestoreFormProperties();
             List<string> profiles = settings.Profiles;
@@ -402,8 +400,9 @@ namespace TransmissionRemoteDotnet
                 CreateTorrentSelectionContextMenu();
                 this.toolStripStatusLabel.Text = OtherStrings.ConnectedGettingInfo;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + LocalSettingsSingleton.Instance.Host;
-                speedGraph.GetLineHandle("Download").Clear();
-                speedGraph.GetLineHandle("Upload").Clear();
+                speedGraph.MaxPeekMagnitude = 100;
+                speedGraph.AddLine("Download", Color.Green);
+                speedGraph.AddLine("Upload", Color.Yellow);
                 speedGraph.Push(0, "Download");
                 speedGraph.Push(0, "Upload");
             }
@@ -421,6 +420,8 @@ namespace TransmissionRemoteDotnet
                 OneTorrentsSelected(false, null);
                 this.toolStripStatusLabel.Text = OtherStrings.Disconnected;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE;
+                speedGraph.RemoveLine("Download");
+                speedGraph.RemoveLine("Upload");
                 lock (this.stateListBox)
                 {
                     for (int i = 0; i < 8; i++)
