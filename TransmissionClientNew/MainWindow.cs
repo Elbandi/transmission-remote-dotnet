@@ -367,6 +367,57 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void ChangeSessionDownLimit(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            int limit = (int)((MenuItem)sender).Tag;
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED, limit != -1);
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITDOWN, limit);
+            BackgroundWorker bw = CreateActionWorker();
+            bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(SessionWorker_RunWorkerCompleted);
+            bw.RunWorkerAsync(request);
+        }
+
+        private void ChangeSessionUpLimit(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            int limit = (int)((MenuItem)sender).Tag;
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITUPENABLED, limit != -1);
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITUP, limit);
+            BackgroundWorker bw = CreateActionWorker();
+            bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(SessionWorker_RunWorkerCompleted);
+            bw.RunWorkerAsync(request);
+        }
+
+        private void SessionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            CreateActionWorker().RunWorkerAsync(Requests.SessionGet());
+        }
+
+        private void traydownlimit_Opening(object sender, EventArgs e)
+        {
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            int limit = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED]) ? Toolbox.ToInt(session[ProtocolConstants.FIELD_SPEEDLIMITDOWN]) : -1;
+            foreach (MenuItem menuItem in ((MenuItem)sender).MenuItems)
+            {
+                if (menuItem.Tag != null)
+                    menuItem.Checked = (int)menuItem.Tag == limit;
+            }
+        }
+
+        private void trayuplimit_Opening(object sender, EventArgs e)
+        {
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            int limit = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITUPENABLED]) ? Toolbox.ToInt(session[ProtocolConstants.FIELD_SPEEDLIMITUP]) : -1;
+            foreach (MenuItem menuItem in ((MenuItem)sender).MenuItems)
+            {
+                if (menuItem.Tag != null)
+                    menuItem.Checked = (int)menuItem.Tag == limit;
+            }
+        }
+
         private void CreateTrayContextMenu()
         {
             ContextMenu trayMenu = new ContextMenu();
@@ -374,6 +425,39 @@ namespace TransmissionRemoteDotnet
             {
                 trayMenu.MenuItems.Add(startAllToolStripMenuItem.Text, new EventHandler(this.startAllMenuItem_Click));
                 trayMenu.MenuItems.Add(stopAllToolStripMenuItem.Text, new EventHandler(this.stopAllMenuItem_Click));
+                trayMenu.MenuItems.Add("-");
+
+                MenuItem downLimitMenuItem = new MenuItem(OtherStrings.DownloadLimit);
+                downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionDownLimit).Tag = -1;
+                downLimitMenuItem.MenuItems.Add("-");
+                LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+                foreach (string limit in settings.DownLimit.Split(','))
+                {
+                    try
+                    {
+                        int l = int.Parse(limit);
+                        downLimitMenuItem.MenuItems.Add(Toolbox.KbpsString(l), ChangeSessionDownLimit).Tag = l;
+                    }
+                    catch { }
+                }
+                downLimitMenuItem.Popup += new EventHandler(this.traydownlimit_Opening);
+                trayMenu.MenuItems.Add(downLimitMenuItem);
+
+                MenuItem upLimitMenuItem = new MenuItem(OtherStrings.UploadLimit);
+                upLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionUpLimit).Tag = -1;
+                upLimitMenuItem.MenuItems.Add("-");
+                foreach (string limit in settings.UpLimit.Split(','))
+                {
+                    try
+                    {
+                        int l = int.Parse(limit);
+                        upLimitMenuItem.MenuItems.Add(Toolbox.KbpsString(l), ChangeSessionUpLimit).Tag = l;
+                    }
+                    catch { }
+                }
+                upLimitMenuItem.Popup += new EventHandler(this.trayuplimit_Opening);
+                trayMenu.MenuItems.Add(upLimitMenuItem);
+
                 trayMenu.MenuItems.Add("-");
                 if (Program.DaemonDescriptor.RpcVersion >= 4)
                 {
