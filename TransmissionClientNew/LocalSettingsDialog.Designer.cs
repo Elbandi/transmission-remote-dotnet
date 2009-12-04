@@ -73,6 +73,7 @@ namespace TransmissionRemoteDotnet
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.AutoCheckUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
@@ -353,6 +354,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.AutoCheckUpdateCheckBox);
             this.tabPage4.Controls.Add(this.checkBox2);
             this.tabPage4.Controls.Add(this.minimizeOnCloseCheckBox);
             this.tabPage4.Controls.Add(this.notificationOnAdditionCheckBox);
@@ -362,6 +364,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // AutoCheckUpdateCheckBox
+            // 
+            resources.ApplyResources(this.AutoCheckUpdateCheckBox, "AutoCheckUpdateCheckBox");
+            this.AutoCheckUpdateCheckBox.Name = "AutoCheckUpdateCheckBox";
+            this.AutoCheckUpdateCheckBox.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
@@ -757,6 +765,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox1;

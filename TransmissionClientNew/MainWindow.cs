@@ -682,6 +682,10 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
+            if (settings.AutoCheckupdate)
+            {
+                DoCheckVersion(false);
+            }
             if (settings.AutoConnect)
             {
                 Connect();
@@ -1963,55 +1967,59 @@ namespace TransmissionRemoteDotnet
 
         private void checkForNewVersionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BackgroundWorker checkVersionWorker = new BackgroundWorker();
-            checkVersionWorker.DoWork += new DoWorkEventHandler(checkVersionWorker_DoWork);
-            checkVersionWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(checkVersionWorker_RunWorkerCompleted);
-            checkVersionWorker.RunWorkerAsync();
+            DoCheckVersion(true);
         }
 
-        private void checkVersionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void DoCheckVersion(bool alwaysnotify)
         {
-            if (e.Result.GetType() == typeof(Exception))
+            BackgroundWorker checkVersionWorker = new BackgroundWorker();
+            checkVersionWorker.DoWork += new DoWorkEventHandler(checkVersionWorker_DoWork);
+            checkVersionWorker.RunWorkerCompleted += delegate(object sender, RunWorkerCompletedEventArgs e)
             {
-                Exception ex = (Exception)e.Result;
-                MessageBox.Show(ex.Message, OtherStrings.LatestVersionCheckFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (e.Result.GetType() == typeof(Version))
+                checkVersionWorker_RunWorkerCompleted(sender, e, alwaysnotify);
+            };
+            checkVersionWorker.RunWorkerAsync(alwaysnotify);
+        }
+
+        private void checkVersionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e, bool alwaysnotify)
+        {
+            if (!e.Cancelled)
             {
-                Version latestVersion = (Version)e.Result;
-                Version thisVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
-                if (latestVersion > thisVersion)
+                if (e.Error != null)
                 {
-                    if (MessageBox.Show(String.Format(OtherStrings.NewerVersion, latestVersion.Major, latestVersion.Minor), OtherStrings.UpgradeAvailable, MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-                        == DialogResult.Yes)
-                    {
-                        Process.Start(DOWNLOADS_PAGE);
-                    }
+                    MessageBox.Show(e.Error.Message, OtherStrings.LatestVersionCheckFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else if (e.Result.GetType() == typeof(Version))
                 {
-                    MessageBox.Show(String.Format(OtherStrings.LatestVersion, thisVersion.Major, thisVersion.Minor), OtherStrings.NoUpgradeAvailable, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Version latestVersion = (Version)e.Result;
+                    Version thisVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
+                    if (latestVersion > thisVersion)
+                    {
+                        if (MessageBox.Show(String.Format(OtherStrings.NewerVersion, latestVersion.Major, latestVersion.Minor), OtherStrings.UpgradeAvailable, MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                            == DialogResult.Yes)
+                        {
+                            Process.Start(DOWNLOADS_PAGE);
+                        }
+                    }
+                    else
+                    {
+                        if (alwaysnotify)
+                            MessageBox.Show(String.Format(OtherStrings.LatestVersion, thisVersion.Major, thisVersion.Minor), OtherStrings.NoUpgradeAvailable, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
 
         private void checkVersionWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                TransmissionWebClient client = new TransmissionWebClient(false);
-                string response = client.DownloadString(LATEST_VERSION);
-                if (!response.StartsWith("#LATESTVERSION#"))
-                    throw new FormatException("Response didn't contain the identification prefix.");
-                string[] latestVersion = response.Remove(0, 15).Split('.');
-                if (latestVersion.Length != 4)
-                    throw new FormatException("Incorrect number format");
-                e.Result = new Version(Int32.Parse(latestVersion[0]), Int32.Parse(latestVersion[1]), Int32.Parse(latestVersion[2]), Int32.Parse(latestVersion[3]));
-            }
-            catch (Exception ex)
-            {
-                e.Result = ex;
-            }
+            TransmissionWebClient client = new TransmissionWebClient(false);
+            string response = client.DownloadString(LATEST_VERSION);
+            if (!response.StartsWith("#LATESTVERSION#"))
+                throw new FormatException("Response didn't contain the identification prefix.");
+            string[] latestVersion = response.Remove(0, 15).Split('.');
+            if (latestVersion.Length != 4)
+                throw new FormatException("Incorrect number format");
+            e.Result = new Version(Int32.Parse(latestVersion[0]), Int32.Parse(latestVersion[1]), Int32.Parse(latestVersion[2]), Int32.Parse(latestVersion[3]));
         }
 
         private void showDetailsPanelToolStripMenuItem_Click(object sender, EventArgs e)

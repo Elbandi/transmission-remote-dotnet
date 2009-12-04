@@ -49,6 +49,7 @@ namespace TransmissionRemoteDotnet
             REGKEY_PORT = "port",
             REGKEY_USESSL = "usessl",
             REGKEY_AUTOCONNECT = "autoConnect",
+            REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
             REGKEY_USER = "user",
             REGKEY_PASS = "pass",
             REGKEY_AUTHENABLED = "authEnabled",
@@ -408,6 +409,18 @@ namespace TransmissionRemoteDotnet
             set
             {
                 profileConfMap[REGKEY_AUTOCONNECT] = ToInt(value);
+            }
+        }
+
+        public bool AutoCheckupdate
+        {
+            get
+            {
+                return profileConfMap.ContainsKey(REGKEY_AUTOCHECKUPDATE) ? ToBool(profileConfMap[REGKEY_AUTOCHECKUPDATE]) : false;
+            }
+            set
+            {
+                profileConfMap[REGKEY_AUTOCHECKUPDATE] = ToInt(value);
             }
         }
 
