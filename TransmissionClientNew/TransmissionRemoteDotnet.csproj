@@ -918,4 +918,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(SolutionDir)\GeoIP.dat $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -76,7 +76,7 @@ Section /o "Desktop Shortcut"
 SectionEnd
   
 Section "GeoIP Database"
-  File "GeoIP.dat"
+  File "..\..\..\GeoIP.dat"
 SectionEnd
 
 Section /o "Chinese translation"
