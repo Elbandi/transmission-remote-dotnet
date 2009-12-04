@@ -52,8 +52,16 @@
     <NoStdLib>false</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Jayrock, Version=0.9.8316.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Jayrock.Json, Version=0.9.8316.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Jayrock, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Jayrock\$(Configuration)\Jayrock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jayrock.Json, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Jayrock\$(Configuration)\Jayrock.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -876,6 +884,10 @@
     <None Include="Resources\player_pause_all.png" />
     <None Include="Resources\player_play_all.png" />
     <None Include="Resources\error16.png" />
+    <Content Include="Jayrock\Debug\Jayrock.dll" />
+    <Content Include="Jayrock\Debug\Jayrock.Json.dll" />
+    <Content Include="Jayrock\Release\Jayrock.dll" />
+    <Content Include="Jayrock\Release\Jayrock.Json.dll" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -919,6 +931,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy $(SolutionDir)\GeoIP.dat $(TargetDir)</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(SolutionDir)\GeoIP.dat $(TargetDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>
