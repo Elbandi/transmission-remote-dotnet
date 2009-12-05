@@ -153,6 +153,7 @@
     <Compile Include="MoveDataPrompt.designer.cs">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassSingleton.cs" />
     <Compile Include="OtherStrings.da-DK.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
