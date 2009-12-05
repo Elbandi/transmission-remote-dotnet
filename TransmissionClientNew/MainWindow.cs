@@ -118,6 +118,7 @@ namespace TransmissionRemoteDotnet
             }
             OpenGeoipDatabase();
             PopulateLanguagesMenu();
+            OneTorrentsSelected(false, null);
         }
 
         public ToolStripMenuItem CreateProfileMenuItem(string name)
@@ -738,6 +739,16 @@ namespace TransmissionRemoteDotnet
                 settings.Locale = culture.Name;
                 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = culture;
                 Program.CultureChanger.ApplyCulture(culture);
+                InitStaticContextMenus();
+                torrentListView_SelectedIndexChanged(null, null);
+                string[] statestrings = new string[] { OtherStrings.All, OtherStrings.Downloading, OtherStrings.Paused, OtherStrings.Checking, OtherStrings.Complete, OtherStrings.Incomplete, OtherStrings.Seeding, OtherStrings.Broken };
+                for (int i = 0; i < statestrings.Length; i++)
+                {
+                    (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
+                }
+                CreateTrayContextMenu();
+                filesListView_SelectedIndexChanged(null, null);
+                Program_onTorrentsUpdated(null, null);
                 this.Refresh();
             }
             catch (Exception ex)
@@ -1629,6 +1640,7 @@ namespace TransmissionRemoteDotnet
                 createdByLabel.Text = t.Creator;
                 commentLabel.Text = t.Comment;
                 trackersListView.SuspendLayout();
+                trackersListView.Items.Clear();
                 foreach (JsonObject tracker in t.Trackers)
                 {
                     int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);

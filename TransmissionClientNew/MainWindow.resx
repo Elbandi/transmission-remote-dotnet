@@ -1662,9 +1662,6 @@
   <data name="trackersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="trackersListView.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="trackersListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
@@ -1775,9 +1772,6 @@
   </data>
   <data name="filesListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="filesListView.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="filesListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
@@ -1898,9 +1892,6 @@
   </data>
   <data name="peersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="peersListView.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="peersListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
