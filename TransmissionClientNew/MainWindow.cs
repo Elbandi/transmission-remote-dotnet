@@ -1082,6 +1082,7 @@ namespace TransmissionRemoteDotnet
                     = uploadLimitLabel.Text = startedAtLabel.Text = seedersLabel.Text
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
+                    = hashLabel.Text = piecesInfoLabel.Text
                     = generalTorrentNameGroupBox.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
@@ -1638,6 +1639,7 @@ namespace TransmissionRemoteDotnet
                 startedAtLabel.Text = t.Added.ToString();
                 createdAtLabel.Text = t.Created;
                 createdByLabel.Text = t.Creator;
+                hashLabel.Text = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
                 commentLabel.Text = t.Comment;
                 trackersListView.SuspendLayout();
                 trackersListView.Items.Clear();
@@ -1671,6 +1673,7 @@ namespace TransmissionRemoteDotnet
             {
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
             }
+            piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.IsFinished)
             {

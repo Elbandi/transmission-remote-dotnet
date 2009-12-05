@@ -293,6 +293,22 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public int PieceSize
+        {
+            get
+            {
+                return Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECESIZE]);
+            }
+        }
+
+        public int HavePieces
+        {
+            get
+            {
+                return Toolbox.BitCount(this.Pieces);
+                //return Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECECOMPLETE]);
+            }
+        }
         public double SeedRatioLimit
         {
             get

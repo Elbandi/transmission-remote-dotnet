@@ -448,4 +448,7 @@
   <data name="XConnected" xml:space="preserve">
     <value>{0} connected</value>
   </data>
+  <data name="PiecesInfo" xml:space="preserve">
+    <value>{0} x {1} (have {2})</value>
+  </data>
 </root>

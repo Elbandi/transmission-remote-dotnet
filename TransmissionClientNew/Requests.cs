@@ -246,6 +246,8 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_PEERSSENDINGTOUS,
                 ProtocolConstants.FIELD_PIECECOUNT,
                 ProtocolConstants.FIELD_PIECES,
+                ProtocolConstants.FIELD_PIECESIZE,
+//                ProtocolConstants.FIELD_PIECECOMPLETE,
                 ProtocolConstants.FIELD_MAXCONNECTEDPEERS,
                 ProtocolConstants.FIELD_COMMENT,
                 ProtocolConstants.FIELD_SWARMSPEED,

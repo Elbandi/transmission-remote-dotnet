@@ -60,6 +60,8 @@ namespace TransmissionRemoteDotnet
             FIELD_MOVE = "move",
             FIELD_PIECES = "pieces",
             FIELD_PIECECOUNT = "pieceCount",
+            FIELD_PIECESIZE = "pieceSize",
+//            FIELD_PIECECOMPLETE = "pieceComplete",
             FIELD_PEERSSENDINGTOUS = "peersSendingToUs",
             FIELD_PEERSGETTINGFROMUS = "peersGettingFromUs",
             FIELD_FLAGSTR = "flagStr",

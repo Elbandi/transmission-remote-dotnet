@@ -700,6 +700,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} x {1} (have {2}).
+        /// </summary>
+        internal static string PiecesInfo {
+            get {
+                return ResourceManager.GetString("PiecesInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The incoming port on your daemon is CLOSED..
         /// </summary>
         internal static string PortIsClosed {
