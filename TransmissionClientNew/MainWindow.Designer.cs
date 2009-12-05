@@ -59,7 +59,7 @@ namespace TransmissionRemoteDotnet
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.generalTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.timeElapsedLabel = new System.Windows.Forms.Label();
+            this.timeElapsedLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.startedAtLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.uploadLimitLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.uploadRateLabel = new TransmissionRemoteDotnet.SelectableLabel();
@@ -512,8 +512,10 @@ namespace TransmissionRemoteDotnet
             // 
             // timeElapsedLabel
             // 
+            this.timeElapsedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.timeElapsedLabel, "timeElapsedLabel");
             this.timeElapsedLabel.Name = "timeElapsedLabel";
+            this.timeElapsedLabel.ReadOnly = true;
             // 
             // startedAtLabel
             // 
@@ -1758,7 +1760,7 @@ namespace TransmissionRemoteDotnet
         private SelectableLabel uploadLimitLabel;
         private SelectableLabel uploadRateLabel;
         private System.Windows.Forms.Label downloadProgressLabel;
-        private System.Windows.Forms.Label timeElapsedLabel;
+        private SelectableLabel timeElapsedLabel;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
     }
