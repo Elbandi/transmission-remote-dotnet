@@ -159,12 +159,6 @@
   <data name="NewTorrentIs" xml:space="preserve">
     <value>New torrent {0}.</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Language updated</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Your language choice has been updated. A restart of the application is required for it to take full effect.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>
   </data>

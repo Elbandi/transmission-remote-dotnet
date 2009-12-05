@@ -351,12 +351,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Niedokończone</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Język programu uaktualniony</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Zmieniono domyślny język programu. Zrestartuj aplikację aby dokończyć zmiany.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Bajt</value>
   </data>

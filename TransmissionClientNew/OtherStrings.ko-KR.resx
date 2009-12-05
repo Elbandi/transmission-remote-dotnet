@@ -253,12 +253,6 @@
   <data name="KilobyteShort" xml:space="preserve">
     <value>KB</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>언어 설정 변경 완료</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>언어 설정이 변경 되었습니다. 모든 변경을 반영하기 위해선 프로그램을 재시작 하십시오.</value>
-  </data>
   <data name="LatestVersion" xml:space="preserve">
     <value>최신 버전을 사용중입니다. ({0}.{1})</value>
   </data>

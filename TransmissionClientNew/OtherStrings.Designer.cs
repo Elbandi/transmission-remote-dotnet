@@ -466,24 +466,6 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language updated.
-        /// </summary>
-        internal static string LanguageUpdated {
-            get {
-                return ResourceManager.GetString("LanguageUpdated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your language choice has been updated. A restart of the application is required for it to take full effect..
-        /// </summary>
-        internal static string LanguageUpdateDetail {
-            get {
-                return ResourceManager.GetString("LanguageUpdateDetail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You are using the latest version ({0}.{1})..
         /// </summary>
         internal static string LatestVersion {

@@ -351,12 +351,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Incompletos</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Idioma actualizado</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Tu elección de idioma ha sido actualizada. Reinicia la aplicación para que surta efecto completamente.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>
   </data>

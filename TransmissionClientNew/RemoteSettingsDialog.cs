@@ -26,7 +26,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class RemoteSettingsDialog : Form
+    public partial class RemoteSettingsDialog : CultureForm
     {
         public static void CloseIfOpen()
         {
