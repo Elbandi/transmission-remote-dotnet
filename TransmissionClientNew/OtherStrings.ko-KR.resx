@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="XConnected" xml:space="preserve">
+    <value>{0} 접속됨</value>
+  </data>
   <data name="EmptyFile" xml:space="preserve">
     <value>Empty file</value>
   </data>
@@ -428,7 +431,7 @@
     <value>{0}개의 차단목록</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0} 접속됨</value>
+    <value>{0}/{1} 접속됨</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>예</value>

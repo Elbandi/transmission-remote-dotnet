@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="XConnected" xml:space="preserve">
+    <value>{0} connected</value>
+  </data>
   <data name="EmptyFile" xml:space="preserve">
     <value>Empty file</value>
   </data>
@@ -376,7 +379,7 @@
     <value>正在等待校驗</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0}個 已連接</value>
+    <value>{1}個中的{0}個 已連接</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>

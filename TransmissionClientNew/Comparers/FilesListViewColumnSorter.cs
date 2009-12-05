@@ -31,9 +31,8 @@ namespace TransmissionRemoteDotnet.Comparers
 
         public FilesListViewItemSorter()
         {
-            columnToSort = 0;
+            SortColumn = 0;
             orderOfSort = SortOrder.None;
-            objectCompare = new ListViewTextComparer(0, true);
         }
 
         public int Compare(object x, object y)

@@ -28,6 +28,8 @@ namespace TransmissionRemoteDotnet
 {
     public class Torrent
     {
+        private string SeedersColumnFormat = "{1}";
+
         private ListViewItem item;
 
         public ListViewItem Item
@@ -86,6 +88,7 @@ namespace TransmissionRemoteDotnet
             {
                 item.ForeColor = Color.Red;
             }
+            SeedersColumnFormat = Program.DaemonDescriptor.RpcVersion > 6 ? "{1}" : "{0} ({1})";
             item.ToolTipText = item.Name;
             item.Tag = this;
             item.SubItems.Add(Toolbox.GetFileSize(this.SizeWhenDone));
@@ -93,8 +96,8 @@ namespace TransmissionRemoteDotnet
             item.SubItems.Add(percentage.ToString() + "%");
             item.SubItems[2].Tag = percentage;
             item.SubItems.Add(this.Status);
-            item.SubItems.Add(this.PeersSendingToUs.ToString());
-            item.SubItems.Add(this.PeersGettingFromUs.ToString());
+            item.SubItems.Add(string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs));
+            item.SubItems.Add(string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs));
             item.SubItems.Add(this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING && this.Percentage <= 100 ? this.DownloadRate : "");
             item.SubItems.Add(this.StatusCode == ProtocolConstants.STATUS_SEEDING || this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? this.UploadRate : "");
             item.SubItems.Add(this.GetShortETA());
@@ -165,7 +168,7 @@ namespace TransmissionRemoteDotnet
                     {
                         foreach (ListViewItem item in logItems)
                         {
-                            if (item.Tag != null && this.updateSerial-(long)item.Tag < 2 && item.SubItems[1].Text.Equals(this.Name) && item.SubItems[2].Text.Equals(this.ErrorString))
+                            if (item.Tag != null && this.updateSerial - (long)item.Tag < 2 && item.SubItems[1].Text.Equals(this.Name) && item.SubItems[2].Text.Equals(this.ErrorString))
                             {
                                 item.Tag = this.updateSerial;
                                 return;
@@ -260,8 +263,8 @@ namespace TransmissionRemoteDotnet
                 item.SubItems[2].Tag = percentage;
                 item.SubItems[2].Text = percentage.ToString() + "%";
                 item.SubItems[3].Text = this.Status;
-                item.SubItems[4].Text = this.PeersSendingToUs.ToString();
-                item.SubItems[5].Text = this.PeersGettingFromUs.ToString();
+                item.SubItems[4].Text = string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs);
+                item.SubItems[5].Text = string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs);
                 item.SubItems[6].Text = this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING && this.Percentage <= 100 ? this.DownloadRate : "";
                 item.SubItems[7].Text = this.StatusCode == ProtocolConstants.STATUS_SEEDING || this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? this.UploadRate : "";
                 item.SubItems[8].Text = this.GetShortETA();
@@ -423,7 +426,7 @@ namespace TransmissionRemoteDotnet
                 foreach (string key in mappings.Names)
                 {
                     if (downloadDir.StartsWith(key))
-                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length+1).Replace(@"/", @"\") + @"\" : null, this.Name);
+                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.Name);
                 }
                 return null;
             }
@@ -528,11 +531,27 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public int Seeders
+        {
+            get
+            {
+                return Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDERS]);
+            }
+        }
+
         public long SizeWhenDone
         {
             get
             {
                 return Toolbox.ToLong(info[ProtocolConstants.FIELD_SIZEWHENDONE]);
+            }
+        }
+
+        public int Leechers
+        {
+            get
+            {
+                return Toolbox.ToInt(info[ProtocolConstants.FIELD_LEECHERS]);
             }
         }
 

@@ -86,6 +86,8 @@ namespace TransmissionRemoteDotnet
             FIELD_TOTALSIZE = "totalSize",
             FIELD_HAVEVALID = "haveValid",
             FIELD_UPLOADEDEVER = "uploadedEver",
+            FIELD_LEECHERS = "leechers",
+            FIELD_SEEDERS = "seeders",
             FIELD_ADDEDDATE = "addedDate",
             FIELD_ID = "id",
             FIELD_FILES = "files",

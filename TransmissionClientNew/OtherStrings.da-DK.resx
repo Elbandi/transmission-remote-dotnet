@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="XConnected" xml:space="preserve">
+    <value>{0} forbundet</value>
+  </data>
   <data name="EmptyFile" xml:space="preserve">
     <value>Empty file</value>
   </data>
@@ -400,7 +403,7 @@
     <value>Venter på kontrol</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0} forbundet</value>
+    <value>{0} af {1} forbundet</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
