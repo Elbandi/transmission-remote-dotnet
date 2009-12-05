@@ -381,12 +381,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Неполный</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Язык обновлён</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Выбран новый язык. Для полного переключения требуется рестарт программы.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Байт</value>
   </data>

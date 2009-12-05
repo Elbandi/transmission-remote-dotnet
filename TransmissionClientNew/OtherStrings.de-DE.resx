@@ -411,12 +411,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Nicht komplett</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Sprache geändert</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Sprache geändert. Bitte starten Sie das Programm neu, damit die Änderung übernommen wird.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>
   </data>

@@ -399,12 +399,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Befejezetlen</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Nyelv frissítve</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Választott nyelv frissítve. Az alkalmazás újraindítása szükséges a változtatások életbe léptetéséhez.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Bájt</value>
   </data>

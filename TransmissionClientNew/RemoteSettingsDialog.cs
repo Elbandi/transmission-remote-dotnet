@@ -26,7 +26,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class RemoteSettingsDialog : Form
+    public partial class RemoteSettingsDialog : CultureForm
     {
         private static RemoteSettingsDialog instance = null;
         private static readonly object padlock = new object();

@@ -26,7 +26,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class StatsDialog : Form
+    public partial class StatsDialog : CultureForm
     {
         private static StatsDialog instance = null;
         private static readonly object padlock = new object();

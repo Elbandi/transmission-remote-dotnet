@@ -26,7 +26,7 @@ using TransmissionRemoteDotnet.Commmands;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class ErrorLogWindow : Form
+    public partial class ErrorLogWindow : CultureForm
     {
         private ErrorsListViewColumnSorter lvwColumnSorter;
 

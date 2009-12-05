@@ -26,7 +26,7 @@ using System.Reflection;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class AboutDialog : Form
+    public partial class AboutDialog : CultureForm
     {
         public AboutDialog()
         {

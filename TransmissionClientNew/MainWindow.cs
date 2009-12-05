@@ -37,7 +37,7 @@ using Jayrock.Json.Conversion;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : CultureForm
     {
         private const string
             DEFAULT_WINDOW_TITLE = "Transmission Remote",
@@ -736,8 +736,8 @@ namespace TransmissionRemoteDotnet
                 senderMI.Checked = true;
                 settings.Locale = culture.Name;
                 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = culture;
+                Program.CultureChanger.ApplyCulture(culture);
                 this.Refresh();
-                MessageBox.Show(OtherStrings.LanguageUpdateDetail, OtherStrings.LanguageUpdated, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

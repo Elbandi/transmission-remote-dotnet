@@ -256,12 +256,6 @@
   <data name="KilobyteShort" xml:space="preserve">
     <value>KB</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Jazyk aktualizován</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Vybraný jazyk byl aktualizován. Je vyžadován restart programu pro použití změn.</value>
-  </data>
   <data name="LatestVersion" xml:space="preserve">
     <value>Používáte poslední verzi ({0}.{1}).</value>
   </data>

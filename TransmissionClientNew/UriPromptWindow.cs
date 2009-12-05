@@ -28,7 +28,7 @@ using TransmissionRemoteDotnet.Commmands;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class UriPromptWindow : Form
+    public partial class UriPromptWindow : CultureForm
     {
         private Uri currentUri;
 

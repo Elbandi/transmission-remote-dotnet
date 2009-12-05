@@ -22,6 +22,7 @@ using Jayrock.Json;
 using System.Net;
 using TransmissionRemoteDotnet.Commands;
 using System.Threading;
+using Troschuetz;
 
 namespace TransmissionRemoteDotnet
 {
@@ -35,6 +36,12 @@ namespace TransmissionRemoteDotnet
         public static event EventHandler OnError;
 
         private static Boolean connected = false;
+
+        private static UICultureChanger culturechanger = new UICultureChanger();
+        public static UICultureChanger CultureChanger
+        {
+            get { return Program.culturechanger; }
+        }
 
         private static MainWindow form;
         public static MainWindow Form
@@ -72,6 +79,8 @@ namespace TransmissionRemoteDotnet
         [STAThread]
         static void Main(string[] args)
         {
+            culturechanger.ApplyHelp = culturechanger.ApplyLocation = culturechanger.ApplySize =
+                culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LocalSettingsSingleton.Instance.Locale);
 #if DOTNET35
             using (NamedPipeSingleInstance singleInstance = new TCPSingleInstance(TCP_SINGLE_INSTANCE_PORT))

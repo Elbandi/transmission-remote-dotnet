@@ -408,12 +408,6 @@
   <data name="Incomplete" xml:space="preserve">
     <value>Ufuldstændig</value>
   </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Sprog opdateret</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Dit valg af sprog er blevet opdateret. En genstart af programmet er krævet for fuldføre opdateringen.</value>
-  </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>
   </data>
