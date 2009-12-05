@@ -68,6 +68,7 @@ namespace TransmissionRemoteDotnet
         private BackgroundWorker connectWorker;
         private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
+        private FindDialog FindDialog;
 
         public List<ListViewItem> FileItems
         {
@@ -2164,6 +2165,22 @@ namespace TransmissionRemoteDotnet
                     BackgroundProcessStart(new ProcessStartInfo((bool)filesListView.SelectedItems[0].SubItems[0].Tag ? sambaShare + @"\" + filesListView.SelectedItems[0].SubItems[0].Text.Replace(@"/", @"\") : sambaShare));
                 }
             }
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.Connected)
+                if (FindDialog == null)
+                {
+                    FindDialog = new FindDialog();
+                    FindDialog.Torrentlistview = torrentListView;
+                    FindDialog.FormClosed += delegate(object s, FormClosedEventArgs ee) { FindDialog = null; };
+                    FindDialog.Show();
+                }
+                else
+                {
+                    FindDialog.Focus();
+                }
         }
     }
 }

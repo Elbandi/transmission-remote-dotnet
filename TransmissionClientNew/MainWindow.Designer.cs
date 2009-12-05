@@ -170,6 +170,8 @@ namespace TransmissionRemoteDotnet
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1290,6 +1292,8 @@ namespace TransmissionRemoteDotnet
             // torrentToolStripMenuItem
             // 
             this.torrentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.findToolStripMenuItem,
+            this.toolStripSeparator10,
             this.startToolStripMenuItem,
             this.pauseToolStripMenuItem,
             this.recheckToolStripMenuItem,
@@ -1307,6 +1311,18 @@ namespace TransmissionRemoteDotnet
             this.torrentToolStripMenuItem.Name = "torrentToolStripMenuItem";
             resources.ApplyResources(this.torrentToolStripMenuItem, "torrentToolStripMenuItem");
             this.torrentToolStripMenuItem.Click += new System.EventHandler(this.reannounceButton_ButtonClick);
+            // 
+            // findToolStripMenuItem
+            // 
+            this.findToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag16;
+            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
+            resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
+            this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
             // 
             // startToolStripMenuItem
             // 
@@ -1743,5 +1759,7 @@ namespace TransmissionRemoteDotnet
         private SelectableLabel uploadRateLabel;
         private System.Windows.Forms.Label downloadProgressLabel;
         private System.Windows.Forms.Label timeElapsedLabel;
+        private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
     }
 }
