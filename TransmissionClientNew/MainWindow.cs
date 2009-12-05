@@ -68,7 +68,7 @@ namespace TransmissionRemoteDotnet
         private BackgroundWorker connectWorker;
         private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
-        private FindDialog FindDialog;
+        private static FindDialog FindDialog;
 
         public List<ListViewItem> FileItems
         {
