@@ -163,57 +163,11 @@
     <Compile Include="MoveDataPrompt.designer.cs">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </Compile>
-    <Compile Include="OtherStrings.da-DK.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.da-DK.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.de-DE.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.de-DE.resx</DependentUpon>
-    </Compile>
     <Compile Include="OtherStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OtherStrings.resx</DependentUpon>
     </Compile>
-    <Compile Include="OtherStrings.fr-FR.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.fr-FR.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.hu-HU.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.hu-HU.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.pl-PL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.pl-PL.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.ru-RU.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.ru-RU.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.ru-RU1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.ru-RU.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.tr-TR.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.tr-TR.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.zh-CN.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OtherStrings.zh-CN.resx</DependentUpon>
-    </Compile>
-    <Compile Include="OtherStrings.zh-TW.Designer.cs" />
     <Compile Include="RegistryLocalSettingsSingleton.cs" />
     <Compile Include="Comparers\PeersListViewColumnSorter.cs" />
     <Compile Include="PiecesGraph.cs">
@@ -465,34 +419,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.da-DK.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.da-DK.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.de-DE.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.de-DE.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.es-ES.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.fr-FR.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.fr-FR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.hu-HU.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.hu-HU.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.ko-KR.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.pl-PL.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.pl-PL.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -501,18 +445,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.ru-RU.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.ru-RU1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.tr-TR.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.tr-TR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.zh-CN.resx">
       <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OtherStrings.zh-CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherStrings.zh-TW.resx">
       <SubType>Designer</SubType>
