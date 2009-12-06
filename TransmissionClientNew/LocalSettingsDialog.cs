@@ -28,7 +28,7 @@ using System.IO;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class LocalSettingsDialog : Form
+    public partial class LocalSettingsDialog : CultureForm
     {
         private static int counter = 0;
 

@@ -26,6 +26,8 @@ using System.IO;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
+using System.Security.Cryptography;
+using System.Linq;
 using Microsoft.Win32;
 
 namespace TransmissionRemoteDotnet
@@ -34,6 +36,25 @@ namespace TransmissionRemoteDotnet
     {
         private const int STRIPE_OFFSET = 15;
         public static readonly IFormatProvider NUMBER_FORMAT = (new CultureInfo("en-GB")).NumberFormat;
+        static byte[] trueBitCount = new byte[] {
+            0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
+            /*
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
+            2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+            3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
+            3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
+            4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8, 5, 6, 6, 7, 6, 7, 7, 8, 6, 7, 7, 8, 7, 8, 8, 9*/
+        };
 
         public static decimal ToProgress(object o)
         {
@@ -190,7 +211,7 @@ namespace TransmissionRemoteDotnet
                     for (int i = 0; i < item.SubItems.Count; i++)
                     {
                         ListViewItem.ListViewSubItem si = item.SubItems[i];
-                        sb.Append(si.Text.Contains(",") ? "\""+si.Text+"\"" : si.Text);
+                        sb.Append(si.Text.Contains(",") ? "\"" + si.Text + "\"" : si.Text);
                         if (i != item.SubItems.Count - 1)
                         {
                             sb.Append(',');
@@ -317,10 +338,27 @@ namespace TransmissionRemoteDotnet
         {
             return String.Format("{0} {1}/{2}", rate, OtherStrings.KilobyteShort, OtherStrings.Second.ToLower()[0]);
         }
-        
+
         public static string FormatTimespanLong(TimeSpan span)
         {
             return String.Format("{0}{1} {2}{3} {4}{5} {6}{7}", new object[] { span.Days, OtherStrings.Day.ToLower()[0], span.Hours, OtherStrings.Hour.ToLower()[0], span.Minutes, OtherStrings.Minute.ToLower()[0], span.Seconds, OtherStrings.Second.ToLower()[0] });
+        }
+
+        public static string FormatPriority(JsonNumber n)
+        {
+            short s = n.ToInt16();
+            if (s < 0)
+            {
+                return OtherStrings.Low;
+            }
+            else if (s > 0)
+            {
+                return OtherStrings.High;
+            }
+            else
+            {
+                return OtherStrings.Normal;
+            }
         }
 
         public static string GetSpeed(long bytes)
@@ -364,6 +402,21 @@ namespace TransmissionRemoteDotnet
         public static string SupportFilePath(string file)
         {
             return Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), file);
+        }
+
+        public static string[] Split(string str, int chunkSize)
+        {
+            return Enumerable.ToArray<string>(Enumerable.Range(0, str.Length / chunkSize).Select(i => str.Substring(i * chunkSize, chunkSize)));
+        }
+
+        public static int BitCount(byte[] bitmap)
+        {
+            int bits = 0;
+            foreach (byte szam in bitmap)
+            {
+                bits += trueBitCount[szam];
+            }
+            return bits;
         }
 
         public static void SelectAll(ListView lv)
@@ -442,6 +495,57 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
+        }
+
+        static byte[] bytes = ASCIIEncoding.ASCII.GetBytes("TransmissionCool");
+
+        /// <summary>
+        /// Encrypt a string.
+        /// </summary>
+        /// <param name="originalString">The original string.</param>
+        /// <returns>The encrypted string.</returns>
+        /// <exception cref="ArgumentNullException">This exception will be 
+        /// thrown when the original string is null or empty.</exception>
+        public static string Encrypt(string originalString)
+        {
+            if (String.IsNullOrEmpty(originalString))
+            {
+                throw new ArgumentNullException
+                       ("The string which needs to be encrypted can not be null.");
+            }
+            TripleDESCryptoServiceProvider cryptoProvider = new TripleDESCryptoServiceProvider();
+            MemoryStream memoryStream = new MemoryStream();
+            CryptoStream cryptoStream = new CryptoStream(memoryStream,
+                cryptoProvider.CreateEncryptor(bytes, bytes), CryptoStreamMode.Write);
+            StreamWriter writer = new StreamWriter(cryptoStream);
+            writer.Write(originalString);
+            writer.Flush();
+            cryptoStream.FlushFinalBlock();
+            writer.Flush();
+            return Convert.ToBase64String(memoryStream.GetBuffer(), 0, (int)memoryStream.Length);
+        }
+
+        /// <summary>
+        /// Decrypt a crypted string.
+        /// </summary>
+        /// <param name="cryptedString">The crypted string.</param>
+        /// <returns>The decrypted string.</returns>
+        /// <exception cref="ArgumentNullException">This exception will be thrown 
+        /// when the crypted string is null or empty.</exception>
+        public static string Decrypt(string cryptedString)
+        {
+            if (String.IsNullOrEmpty(cryptedString))
+            {
+                throw new ArgumentNullException
+                   ("The string which needs to be decrypted can not be null.");
+            }
+            TripleDESCryptoServiceProvider cryptoProvider = new TripleDESCryptoServiceProvider();
+            MemoryStream memoryStream = new MemoryStream
+                    (Convert.FromBase64String(cryptedString));
+            CryptoStream cryptoStream = new CryptoStream(memoryStream,
+                cryptoProvider.CreateDecryptor(bytes, bytes), CryptoStreamMode.Read);
+            StreamReader reader = new StreamReader(cryptoStream);
+            return reader.ReadToEnd();
         }
     }
 }

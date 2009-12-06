@@ -23,6 +23,7 @@ using System.Net;
 using TransmissionRemoteDotnet.Commands;
 using TransmissionRemoteDotnet.Settings;
 using System.Threading;
+using Troschuetz;
 
 namespace TransmissionRemoteDotnet
 {
@@ -36,6 +37,12 @@ namespace TransmissionRemoteDotnet
         public static event EventHandler OnError;
 
         private static Boolean connected = false;
+
+        private static UICultureChanger culturechanger = new UICultureChanger();
+        public static UICultureChanger CultureChanger
+        {
+            get { return Program.culturechanger; }
+        }
 
         private static MainWindow form;
         public static MainWindow Form
@@ -80,7 +87,8 @@ namespace TransmissionRemoteDotnet
         [STAThread]
         static void Main(string[] args)
         {
-            
+            culturechanger.ApplyHelp = culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
+            culturechanger.ApplyLocation = culturechanger.ApplySize = false;
             settings = LocalSettings.TryLoad();
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(settings.Locale);
 #if DOTNET35

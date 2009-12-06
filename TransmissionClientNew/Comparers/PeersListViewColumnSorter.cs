@@ -31,9 +31,8 @@ namespace TransmissionRemoteDotnet.Comparers
 
         public PeersListViewItemSorter()
         {
-            columnToSort = 0;
+            SortColumn = 0;
             orderOfSort = SortOrder.None;
-            objectCompare = new ListViewItemIPComparer();
         }
 
         public int Compare(object x, object y)
