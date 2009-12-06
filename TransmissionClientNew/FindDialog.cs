@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class FindDialog : Form
+    public partial class FindDialog : CultureForm
     {
         ListView torrentlistview;
 

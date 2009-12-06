@@ -12,7 +12,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class TorrentLoadDialog : Form
+    public partial class TorrentLoadDialog : CultureForm
     {
         private string path;
         private MonoTorrent.Common.Torrent torrent;
