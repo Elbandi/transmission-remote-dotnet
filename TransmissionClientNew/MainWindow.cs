@@ -1375,60 +1375,43 @@ namespace TransmissionRemoteDotnet
             ((ICommand)e.Result).Execute();
         }
 
-        private void SetHighPriorityHandler(object sender, EventArgs e)
+        private void SetFilesItemState(int column, string data)
         {
             lock (filesListView)
             {
                 filesListView.SuspendLayout();
                 foreach (ListViewItem item in filesListView.SelectedItems)
                 {
-                    item.SubItems[6].Text = OtherStrings.High;
+                    item.SubItems[column].Text = data;
                 }
                 filesListView.ResumeLayout();
             }
             DispatchFilesUpdate();
+        }
+
+        private void SetHighPriorityHandler(object sender, EventArgs e)
+        {
+            SetFilesItemState(6, OtherStrings.High);
         }
 
         private void SetLowPriorityHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[6].Text = OtherStrings.Low;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(6, OtherStrings.Low);
         }
 
         private void SetNormalPriorityHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[6].Text = OtherStrings.Normal;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(6, OtherStrings.Normal);
         }
 
         private void SetUnwantedHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[5].Text = OtherStrings.Yes;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(5, OtherStrings.Yes);
+        }
+
+        private void SetWantedHandler(object sender, EventArgs e)
+        {
+            SetFilesItemState(5, OtherStrings.No);
         }
 
         public void SetAllStateCounters()
@@ -1508,20 +1491,6 @@ namespace TransmissionRemoteDotnet
         private void SetStateCounter(int index, int count)
         {
             ((GListBoxItem)stateListBox.Items[index]).Counter = count;
-        }
-
-        private void SetWantedHandler(object sender, EventArgs e)
-        {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[5].Text = OtherStrings.No;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
         }
 
         private void filesListView_SelectedIndexChanged(object sender, EventArgs e)
