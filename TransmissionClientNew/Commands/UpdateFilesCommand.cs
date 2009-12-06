@@ -101,7 +101,7 @@ namespace TransmissionRemoteDotnet.Commmands
                     lock (form.FileItems)
                     {
                         if (i < form.FileItems.Count)
-                            uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], bytesCompleted));
+                            uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted));
                     }
                 }
             }

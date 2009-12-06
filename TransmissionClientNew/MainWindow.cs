@@ -747,6 +747,11 @@ namespace TransmissionRemoteDotnet
                     (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
                 }
                 CreateTrayContextMenu();
+                foreach (ListViewItem item in filesListView.Items)
+                {
+                    item.SubItems[5].Text = (bool)item.SubItems[5].Tag ? OtherStrings.No : OtherStrings.Yes;
+                    item.SubItems[6].Text = Toolbox.FormatPriority((JsonNumber)item.SubItems[6].Tag);
+                }
                 filesListView_SelectedIndexChanged(null, null);
                 Program_onTorrentsUpdated(null, null);
                 this.Refresh();

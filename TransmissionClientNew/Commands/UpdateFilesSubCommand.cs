@@ -35,13 +35,18 @@ namespace TransmissionRemoteDotnet.Commands
         private long bytesCompleted;
         private string bytesCompletedStr;
         private decimal progress;
+        private bool wanted;
+        private JsonNumber priority;
 
-        public UpdateFilesUpdateSubCommand(ListViewItem item, long bytesCompleted)
+        public UpdateFilesUpdateSubCommand(ListViewItem item, bool wanted,
+            JsonNumber priority, long bytesCompleted)
         {
             this.item = item;
             this.bytesCompleted = bytesCompleted;
             this.bytesCompletedStr = Toolbox.GetFileSize(bytesCompleted);
             this.progress = Toolbox.CalcPercentage(bytesCompleted, (long)item.SubItems[2].Tag);
+            this.wanted = wanted;
+            this.priority = priority;
         }
 
         public void Execute()
@@ -50,6 +55,10 @@ namespace TransmissionRemoteDotnet.Commands
             item.SubItems[3].Text = bytesCompletedStr;
             item.SubItems[4].Tag = progress;
             item.SubItems[4].Text = progress + "%";
+            item.SubItems[5].Text = wanted ? OtherStrings.No : OtherStrings.Yes;
+            item.SubItems[5].Tag = wanted;
+            item.SubItems[6].Text = Toolbox.FormatPriority(priority);
+            item.SubItems[6].Tag = priority;
         }
     }
 
@@ -90,7 +99,9 @@ namespace TransmissionRemoteDotnet.Commands
             item.SubItems.Add(progress + "%");
             item.SubItems[4].Tag = progress;
             item.SubItems.Add(wanted ? OtherStrings.No : OtherStrings.Yes);
-            item.SubItems.Add(FormatPriority(priority));
+            item.SubItems[5].Tag = wanted;
+            item.SubItems.Add(Toolbox.FormatPriority(priority));
+            item.SubItems[6].Tag = priority;
             lock (Program.Form.FileItems)
             {
                 Program.Form.FileItems.Add(item);
@@ -104,23 +115,6 @@ namespace TransmissionRemoteDotnet.Commands
                 item.ImageKey = extension;
 #endif
             Program.Form.filesListView.Items.Add(item);
-        }
-
-        private string FormatPriority(JsonNumber n)
-        {
-            short s = n.ToInt16();
-            if (s < 0)
-            {
-                return OtherStrings.Low;
-            }
-            else if (s > 0)
-            {
-                return OtherStrings.High;
-            }
-            else
-            {
-                return OtherStrings.Normal;
-            }
         }
     }
 }
