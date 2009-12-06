@@ -59,7 +59,11 @@ namespace TransmissionRemoteDotnet
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.generalTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.timeElapsedLabel = new System.Windows.Forms.Label();
+            this.piecesInfoLabel = new TransmissionRemoteDotnet.SelectableLabel();
+            this.piecesInfoLabelLabel = new System.Windows.Forms.Label();
+            this.hashLabel = new TransmissionRemoteDotnet.SelectableLabel();
+            this.hashLabelLabel = new System.Windows.Forms.Label();
+            this.timeElapsedLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.startedAtLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.uploadLimitLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.uploadRateLabel = new TransmissionRemoteDotnet.SelectableLabel();
@@ -170,6 +174,8 @@ namespace TransmissionRemoteDotnet
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -471,6 +477,10 @@ namespace TransmissionRemoteDotnet
             // generalTorrentNameGroupBox
             // 
             resources.ApplyResources(this.generalTorrentNameGroupBox, "generalTorrentNameGroupBox");
+            this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabel);
+            this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabelLabel);
+            this.generalTorrentNameGroupBox.Controls.Add(this.hashLabel);
+            this.generalTorrentNameGroupBox.Controls.Add(this.hashLabelLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.timeElapsedLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.startedAtLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.uploadLimitLabel);
@@ -508,10 +518,36 @@ namespace TransmissionRemoteDotnet
             this.generalTorrentNameGroupBox.Name = "generalTorrentNameGroupBox";
             this.generalTorrentNameGroupBox.TabStop = false;
             // 
+            // piecesInfoLabel
+            // 
+            this.piecesInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.piecesInfoLabel, "piecesInfoLabel");
+            this.piecesInfoLabel.Name = "piecesInfoLabel";
+            this.piecesInfoLabel.ReadOnly = true;
+            // 
+            // piecesInfoLabelLabel
+            // 
+            resources.ApplyResources(this.piecesInfoLabelLabel, "piecesInfoLabelLabel");
+            this.piecesInfoLabelLabel.Name = "piecesInfoLabelLabel";
+            // 
+            // hashLabel
+            // 
+            this.hashLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.hashLabel, "hashLabel");
+            this.hashLabel.Name = "hashLabel";
+            this.hashLabel.ReadOnly = true;
+            // 
+            // hashLabelLabel
+            // 
+            resources.ApplyResources(this.hashLabelLabel, "hashLabelLabel");
+            this.hashLabelLabel.Name = "hashLabelLabel";
+            // 
             // timeElapsedLabel
             // 
+            this.timeElapsedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.timeElapsedLabel, "timeElapsedLabel");
             this.timeElapsedLabel.Name = "timeElapsedLabel";
+            this.timeElapsedLabel.ReadOnly = true;
             // 
             // startedAtLabel
             // 
@@ -1290,6 +1326,8 @@ namespace TransmissionRemoteDotnet
             // torrentToolStripMenuItem
             // 
             this.torrentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.findToolStripMenuItem,
+            this.toolStripSeparator10,
             this.startToolStripMenuItem,
             this.pauseToolStripMenuItem,
             this.recheckToolStripMenuItem,
@@ -1307,6 +1345,18 @@ namespace TransmissionRemoteDotnet
             this.torrentToolStripMenuItem.Name = "torrentToolStripMenuItem";
             resources.ApplyResources(this.torrentToolStripMenuItem, "torrentToolStripMenuItem");
             this.torrentToolStripMenuItem.Click += new System.EventHandler(this.reannounceButton_ButtonClick);
+            // 
+            // findToolStripMenuItem
+            // 
+            this.findToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag16;
+            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
+            resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
+            this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
             // 
             // startToolStripMenuItem
             // 
@@ -1742,6 +1792,12 @@ namespace TransmissionRemoteDotnet
         private SelectableLabel uploadLimitLabel;
         private SelectableLabel uploadRateLabel;
         private System.Windows.Forms.Label downloadProgressLabel;
-        private System.Windows.Forms.Label timeElapsedLabel;
+        private SelectableLabel timeElapsedLabel;
+        private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private SelectableLabel hashLabel;
+        private System.Windows.Forms.Label hashLabelLabel;
+        private SelectableLabel piecesInfoLabel;
+        private System.Windows.Forms.Label piecesInfoLabelLabel;
     }
 }

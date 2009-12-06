@@ -79,8 +79,8 @@ namespace TransmissionRemoteDotnet
         [STAThread]
         static void Main(string[] args)
         {
-            culturechanger.ApplyHelp = culturechanger.ApplyLocation = culturechanger.ApplySize =
-                culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
+            culturechanger.ApplyHelp = culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
+            culturechanger.ApplyLocation = culturechanger.ApplySize = false;
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LocalSettingsSingleton.Instance.Locale);
 #if DOTNET35
             using (NamedPipeSingleInstance singleInstance = new TCPSingleInstance(TCP_SINGLE_INSTANCE_PORT))
