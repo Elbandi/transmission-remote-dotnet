@@ -5,13 +5,17 @@
 ;
 ; It will install example2.nsi into a directory that the user selects,
 
+
+!system 'GetVersion.exe "TransmissionClientNew\bin\Release\Transmission Remote.exe" > verinclude.nsh' = 0
+!define /file VERSION verinclude.nsh
+
 ;--------------------------------
 
 ; The name of the installer
 Name "Transmission Remote"
 
 ; The file to write
-OutFile "transmission-remote-dotnet-3.12-installer.exe"
+OutFile "transmission-remote-dotnet-${VERSION}-installer.exe"
 
 ; The default installation directory
 InstallDir "$PROGRAMFILES\Transmission Remote"
@@ -88,7 +92,7 @@ SectionEnd
 Section /o "Czech translation"
   CreateDirectory "$INSTDIR\cs-CZ"
   SetOutPath "$INSTDIR\cs-CZ"
-  File "cs-CZ\Transmission Remote.resources.dll"
+  File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
 SectionEnd
 
 Section /o "Danish translation"

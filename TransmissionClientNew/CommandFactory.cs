@@ -109,7 +109,7 @@ namespace TransmissionRemoteDotnet
                                     cmd = new NoCommand();
                                     break;
                                 default:
-                                    cmd = new ErrorCommand("Unknown response tag", e.Result != null ? e.Result : "null", false);
+                                    cmd = new ErrorCommand(OtherStrings.UnknownResponseTag, e.Result != null ? e.Result : "null", false);
                                     break;
                             }
                         }

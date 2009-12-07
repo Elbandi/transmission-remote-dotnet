@@ -132,7 +132,7 @@ namespace TransmissionRemoteDotnet
             byte[] binaryData = new Byte[inFile.Length];
             if (inFile.Read(binaryData, 0, (int)inFile.Length) < 1)
             {
-                throw new Exception("Empty file");
+                throw new Exception(OtherStrings.EmptyFile);
             }
             inFile.Close();
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTADD);

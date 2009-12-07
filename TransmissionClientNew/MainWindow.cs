@@ -1,4 +1,4 @@
-// transmission-remote-dotnet
+﻿// transmission-remote-dotnet
 // http://code.google.com/p/transmission-remote-dotnet/
 // Copyright (C) 2009 Alan F
 //
@@ -107,8 +107,6 @@ namespace TransmissionRemoteDotnet
             peersListView.ListViewItemSorter = peersLvwColumnSorter = new PeersListViewItemSorter();
             InitStaticContextMenus();
             InitStateListBox();
-            speedGraph.AddLine("Download", Color.Green);
-            speedGraph.AddLine("Upload", Color.Yellow);
             speedResComboBox.SelectedIndex = 2;
             RestoreFormProperties();
             List<string> profiles = settings.Profiles;
@@ -212,7 +210,7 @@ namespace TransmissionRemoteDotnet
             downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeDownLimit).Tag = -1;
             downLimitMenuItem.MenuItems.Add("-");
             LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
-            foreach(string limit in settings.DownLimit.Split(','))
+            foreach (string limit in settings.DownLimit.Split(','))
             {
                 try
                 {
@@ -342,7 +340,7 @@ namespace TransmissionRemoteDotnet
             }
             catch (Exception ex)
             {
-                Program.Log("GeoIP init error (" + ex.GetType().ToString() + ")", ex.Message);
+                Program.Log(String.Format(OtherStrings.GeoipInitError, ex.GetType()), ex.Message);
             }
         }
 
@@ -372,6 +370,48 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void ChangeSessionDownLimit(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            int limit = (int)((MenuItem)sender).Tag;
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED, limit != -1);
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITDOWN, limit);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
+        }
+
+        private void ChangeSessionUpLimit(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            int limit = (int)((MenuItem)sender).Tag;
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITUPENABLED, limit != -1);
+            arguments.Put(ProtocolConstants.FIELD_SPEEDLIMITUP, limit);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
+        }
+
+        private void traydownlimit_Opening(object sender, EventArgs e)
+        {
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            int limit = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED]) ? Toolbox.ToInt(session[ProtocolConstants.FIELD_SPEEDLIMITDOWN]) : -1;
+            foreach (MenuItem menuItem in ((MenuItem)sender).MenuItems)
+            {
+                if (menuItem.Tag != null)
+                    menuItem.Checked = (int)menuItem.Tag == limit;
+            }
+        }
+
+        private void trayuplimit_Opening(object sender, EventArgs e)
+        {
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            int limit = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITUPENABLED]) ? Toolbox.ToInt(session[ProtocolConstants.FIELD_SPEEDLIMITUP]) : -1;
+            foreach (MenuItem menuItem in ((MenuItem)sender).MenuItems)
+            {
+                if (menuItem.Tag != null)
+                    menuItem.Checked = (int)menuItem.Tag == limit;
+            }
+        }
+
         private void CreateTrayContextMenu()
         {
             ContextMenu trayMenu = new ContextMenu();
@@ -379,6 +419,39 @@ namespace TransmissionRemoteDotnet
             {
                 trayMenu.MenuItems.Add(startAllToolStripMenuItem.Text, new EventHandler(this.startAllMenuItem_Click));
                 trayMenu.MenuItems.Add(stopAllToolStripMenuItem.Text, new EventHandler(this.stopAllMenuItem_Click));
+                trayMenu.MenuItems.Add("-");
+
+                MenuItem downLimitMenuItem = new MenuItem(OtherStrings.DownloadLimit);
+                downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionDownLimit).Tag = -1;
+                downLimitMenuItem.MenuItems.Add("-");
+                LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+                foreach (string limit in settings.DownLimit.Split(','))
+                {
+                    try
+                    {
+                        int l = int.Parse(limit);
+                        downLimitMenuItem.MenuItems.Add(Toolbox.KbpsString(l), ChangeSessionDownLimit).Tag = l;
+                    }
+                    catch { }
+                }
+                downLimitMenuItem.Popup += new EventHandler(this.traydownlimit_Opening);
+                trayMenu.MenuItems.Add(downLimitMenuItem);
+
+                MenuItem upLimitMenuItem = new MenuItem(OtherStrings.UploadLimit);
+                upLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionUpLimit).Tag = -1;
+                upLimitMenuItem.MenuItems.Add("-");
+                foreach (string limit in settings.UpLimit.Split(','))
+                {
+                    try
+                    {
+                        int l = int.Parse(limit);
+                        upLimitMenuItem.MenuItems.Add(Toolbox.KbpsString(l), ChangeSessionUpLimit).Tag = l;
+                    }
+                    catch { }
+                }
+                upLimitMenuItem.Popup += new EventHandler(this.trayuplimit_Opening);
+                trayMenu.MenuItems.Add(upLimitMenuItem);
+
                 trayMenu.MenuItems.Add("-");
                 if (Program.DaemonDescriptor.RpcVersion >= 4)
                 {
@@ -405,8 +478,9 @@ namespace TransmissionRemoteDotnet
                 CreateTorrentSelectionContextMenu();
                 this.toolStripStatusLabel.Text = OtherStrings.ConnectedGettingInfo;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + LocalSettingsSingleton.Instance.Host;
-                speedGraph.GetLineHandle("Download").Clear();
-                speedGraph.GetLineHandle("Upload").Clear();
+                speedGraph.MaxPeekMagnitude = 100;
+                speedGraph.AddLine("Download", Color.Green);
+                speedGraph.AddLine("Upload", Color.Yellow);
                 speedGraph.Push(0, "Download");
                 speedGraph.Push(0, "Upload");
             }
@@ -424,6 +498,8 @@ namespace TransmissionRemoteDotnet
                 OneTorrentsSelected(false, null);
                 this.toolStripStatusLabel.Text = OtherStrings.Disconnected;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE;
+                speedGraph.RemoveLine("Download");
+                speedGraph.RemoveLine("Upload");
                 lock (this.stateListBox)
                 {
                     for (int i = 0; i < 8; i++)
@@ -439,26 +515,25 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
-            connectButton.Visible = connectToolStripMenuItem.Visible
+            connectButton.Visible = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
-            disconnectButton.Visible = addTorrentToolStripMenuItem.Visible
+            disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
                 = removeTorrentButton.Visible = toolStripSeparator4.Visible
-                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Visible
-                = configureTorrentButton.Visible = torrentToolStripMenuItem.Visible
-                = remoteSettingsToolStripMenuItem.Visible = fileMenuItemSeperator1.Visible
-                = addTorrentFromUrlToolStripMenuItem.Visible = startTorrentButton.Visible
+                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Enabled
+                = configureTorrentButton.Visible = torrentToolStripMenuItem.Enabled
+                = remoteSettingsToolStripMenuItem.Enabled
+                = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
-                = speedGraph.Enabled = toolStripSeparator2.Visible 
+                = speedGraph.Enabled = toolStripSeparator2.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
             sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
-            moveTorrentDataToolStripMenuItem.Visible = connected && dd.Revision >= 8385;
-            addTorrentWithOptionsToolStripMenuItem.Visible = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
+            addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
         }
 
         public void SetRemoteCmdButtonVisible(bool connected)
@@ -466,9 +541,9 @@ namespace TransmissionRemoteDotnet
             LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
             remoteCmdButton.Visible = connected && settings.PlinkEnable && settings.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
             //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
-            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Visible = connected && LocalSettingsSingleton.Instance.SambaShareMappings.Count > 0;
-	        if (openNetworkShareMenuItem != null)
-		        openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
+            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && LocalSettingsSingleton.Instance.SambaShareMappings.Count > 0;
+            if (openNetworkShareMenuItem != null)
+                openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
         }
 
         public void TorrentsToClipboardHandler(object sender, EventArgs e)
@@ -600,6 +675,10 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
+            if (settings.AutoCheckupdate)
+            {
+                DoCheckVersion(false);
+            }
             if (settings.AutoConnect)
             {
                 Connect();
@@ -623,7 +702,7 @@ namespace TransmissionRemoteDotnet
                     try
                     {
                         CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper());
-                        ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName +" / " + cInfo.EnglishName);
+                        ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName + " / " + cInfo.EnglishName);
                         item.Tag = cInfo;
                         item.Click += new EventHandler(this.ChangeUICulture);
                         item.Checked = LocalSettingsSingleton.Instance.Locale.Equals(cInfo.Name);
@@ -863,7 +942,7 @@ namespace TransmissionRemoteDotnet
 
         private void OneOrMoreTorrentsSelected(bool oneOrMore)
         {
-                removeTorrentButton.Enabled = recheckTorrentButton.Enabled
+            removeTorrentButton.Enabled = recheckTorrentButton.Enabled
                 = removeAndDeleteButton.Enabled = configureTorrentButton.Enabled
                 = startToolStripMenuItem.Enabled = pauseToolStripMenuItem.Enabled
                 = copyInfoObjectToClipboardToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled
@@ -872,6 +951,7 @@ namespace TransmissionRemoteDotnet
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
                 = moveTorrentDataToolStripMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled
                 = oneOrMore;
+            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
             pauseTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_pause : global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all;
             startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
         }
@@ -1266,7 +1346,7 @@ namespace TransmissionRemoteDotnet
             int broken = 0;
             Dictionary<string, int> trackers = new Dictionary<string, int>();
             Dictionary<string, Torrent> torrents = Program.TorrentIndex;
-            lock(torrents)
+            lock (torrents)
             {
                 all = torrents.Count;
                 foreach (KeyValuePair<string, Torrent> pair in torrents)
@@ -1481,7 +1561,8 @@ namespace TransmissionRemoteDotnet
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
             }
-            remainingLabel.Text = t.GetLongETA();
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.GetLongETA();
+            label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRate;
@@ -1798,55 +1879,59 @@ namespace TransmissionRemoteDotnet
 
         private void checkForNewVersionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BackgroundWorker checkVersionWorker = new BackgroundWorker();
-            checkVersionWorker.DoWork += new DoWorkEventHandler(checkVersionWorker_DoWork);
-            checkVersionWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(checkVersionWorker_RunWorkerCompleted);
-            checkVersionWorker.RunWorkerAsync();
+            DoCheckVersion(true);
         }
 
-        private void checkVersionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void DoCheckVersion(bool alwaysnotify)
         {
-            if (e.Result.GetType() == typeof(Exception))
+            BackgroundWorker checkVersionWorker = new BackgroundWorker();
+            checkVersionWorker.DoWork += new DoWorkEventHandler(checkVersionWorker_DoWork);
+            checkVersionWorker.RunWorkerCompleted += delegate(object sender, RunWorkerCompletedEventArgs e)
             {
-                Exception ex = (Exception)e.Result;
-                MessageBox.Show(ex.Message, OtherStrings.LatestVersionCheckFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (e.Result.GetType() == typeof(Version))
+                checkVersionWorker_RunWorkerCompleted(sender, e, alwaysnotify);
+            };
+            checkVersionWorker.RunWorkerAsync(alwaysnotify);
+        }
+
+        private void checkVersionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e, bool alwaysnotify)
+        {
+            if (!e.Cancelled)
             {
-                Version latestVersion = (Version)e.Result;
-                Version thisVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
-                if (latestVersion > thisVersion)
+                if (e.Error != null)
                 {
-                    if (MessageBox.Show(String.Format(OtherStrings.NewerVersion, latestVersion.Major, latestVersion.Minor), OtherStrings.UpgradeAvailable, MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-                        == DialogResult.Yes)
-                    {
-                        Process.Start(DOWNLOADS_PAGE);
-                    }
+                    MessageBox.Show(e.Error.Message, OtherStrings.LatestVersionCheckFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else if (e.Result.GetType() == typeof(Version))
                 {
-                    MessageBox.Show(String.Format(OtherStrings.LatestVersion, thisVersion.Major, thisVersion.Minor), OtherStrings.NoUpgradeAvailable, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Version latestVersion = (Version)e.Result;
+                    Version thisVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
+                    if (latestVersion > thisVersion)
+                    {
+                        if (MessageBox.Show(String.Format(OtherStrings.NewerVersion, latestVersion.Major, latestVersion.Minor), OtherStrings.UpgradeAvailable, MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                            == DialogResult.Yes)
+                        {
+                            Process.Start(DOWNLOADS_PAGE);
+                        }
+                    }
+                    else
+                    {
+                        if (alwaysnotify)
+                            MessageBox.Show(String.Format(OtherStrings.LatestVersion, thisVersion.Major, thisVersion.Minor), OtherStrings.NoUpgradeAvailable, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
 
         private void checkVersionWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                TransmissionWebClient client = new TransmissionWebClient(false);
-                string response = client.DownloadString(LATEST_VERSION);
-                if (!response.StartsWith("#LATESTVERSION#"))
-                    throw new FormatException("Response didn't contain the identification prefix.");
-                string[] latestVersion = response.Remove(0, 15).Split('.');
-                if (latestVersion.Length != 4)
-                    throw new FormatException("Incorrect number format");
-                e.Result = new Version(Int32.Parse(latestVersion[0]), Int32.Parse(latestVersion[1]), Int32.Parse(latestVersion[2]), Int32.Parse(latestVersion[3]));
-            }
-            catch (Exception ex)
-            {
-                e.Result = ex;
-            }
+            TransmissionWebClient client = new TransmissionWebClient(false);
+            string response = client.DownloadString(LATEST_VERSION);
+            if (!response.StartsWith("#LATESTVERSION#"))
+                throw new FormatException("Response didn't contain the identification prefix.");
+            string[] latestVersion = response.Remove(0, 15).Split('.');
+            if (latestVersion.Length != 4)
+                throw new FormatException("Incorrect number format");
+            e.Result = new Version(Int32.Parse(latestVersion[0]), Int32.Parse(latestVersion[1]), Int32.Parse(latestVersion[2]), Int32.Parse(latestVersion[3]));
         }
 
         private void showDetailsPanelToolStripMenuItem_Click(object sender, EventArgs e)
