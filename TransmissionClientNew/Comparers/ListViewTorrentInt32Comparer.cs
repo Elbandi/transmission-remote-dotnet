@@ -40,10 +40,20 @@ namespace TransmissionRemoteDotnet.Comparers
             Torrent tx = (Torrent)lx.Tag;
             Torrent ty = (Torrent)ly.Tag;
 
-            int nx = Toolbox.ToInt(tx.Info[jsonKey]);
-            int ny = Toolbox.ToInt(ty.Info[jsonKey]);
-
-            return nx.CompareTo(ny);
+            if (jsonKey.Equals(ProtocolConstants.FIELD_LEECHERS))
+            {
+                return tx.Leechers.CompareTo(ty.Leechers);
+            }
+            else if (jsonKey.Equals(ProtocolConstants.FIELD_SEEDERS))
+            {
+                return tx.Seeders.CompareTo(ty.Seeders);
+            }
+            else
+            {
+                int nx = Toolbox.ToInt(tx.Info[jsonKey]);
+                int ny = Toolbox.ToInt(ty.Info[jsonKey]);
+                return nx.CompareTo(ny);
+            }
         }
     }
 }
