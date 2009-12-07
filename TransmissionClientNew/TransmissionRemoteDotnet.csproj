@@ -874,10 +874,6 @@
     <None Include="Resources\player_pause_all.png" />
     <None Include="Resources\player_play_all.png" />
     <None Include="Resources\error16.png" />
-    <Content Include="Jayrock\Debug\Jayrock.dll" />
-    <Content Include="Jayrock\Debug\Jayrock.Json.dll" />
-    <Content Include="Jayrock\Release\Jayrock.dll" />
-    <Content Include="Jayrock\Release\Jayrock.Json.dll" />
     <None Include="Resources\xmag16.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
