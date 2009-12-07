@@ -27,6 +27,7 @@ namespace TransmissionRemoteDotnet.Comparers
     {
         int column;
         bool caseSensitive;
+        static CaseInsensitiveComparer casecomparer = new CaseInsensitiveComparer();
 
         public ListViewTextComparer(int column, bool caseSensitive)
         {
@@ -44,7 +45,7 @@ namespace TransmissionRemoteDotnet.Comparers
             }
             else
             {
-                return ((new CaseInsensitiveComparer()).Compare(lx.SubItems[column].Text, ly.SubItems[column].Text));
+                return casecomparer.Compare(lx.SubItems[column].Text, ly.SubItems[column].Text);
             }
         }
     }
