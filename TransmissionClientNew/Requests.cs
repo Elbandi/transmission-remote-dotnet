@@ -254,6 +254,7 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_DATECREATED,
                 ProtocolConstants.FIELD_CREATOR,
                 ProtocolConstants.FIELD_TRACKERS,
+                ProtocolConstants.FIELD_TRACKERSTATS,
                 ProtocolConstants.FIELD_HASHSTRING,
                 ProtocolConstants.FIELD_DOWNLOADDIR,
                 ProtocolConstants.FIELD_SEEDRATIOLIMIT,

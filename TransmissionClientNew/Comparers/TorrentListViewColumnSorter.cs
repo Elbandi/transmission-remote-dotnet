@@ -30,9 +30,6 @@ namespace TransmissionRemoteDotnet.Comparers
         private SortOrder orderOfSort;
         private IComparer objectCompare;
 
-        private string column4sorter = ProtocolConstants.FIELD_SEEDERS;
-        private string column5sorter = ProtocolConstants.FIELD_LEECHERS;
-
         public ListViewItemSorter()
         {
             SortColumn = 0;
@@ -59,16 +56,6 @@ namespace TransmissionRemoteDotnet.Comparers
 
         public void SetupColumn(int RpcVersion)
         {
-            if (RpcVersion > 6)
-            { // http://trac.transmissionbt.com/changeset/9179
-                column4sorter = ProtocolConstants.FIELD_PEERSSENDINGTOUS;
-                column5sorter = ProtocolConstants.FIELD_PEERSGETTINGFROMUS;
-            }
-            else
-            {
-                column4sorter = ProtocolConstants.FIELD_SEEDERS;
-                column5sorter = ProtocolConstants.FIELD_LEECHERS;
-            }
         }
 
         /* Set the column and choose the best IComparer implementation */
@@ -90,10 +77,10 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewItemDecimalComparer(value);
                         break;
                     case 4:
-                        objectCompare = new ListViewTorrentInt32Comparer(column4sorter);
+                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_SEEDERS);
                         break;
                     case 5:
-                        objectCompare = new ListViewTorrentInt32Comparer(column5sorter);
+                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_LEECHERS);
                         break;
                     case 6:
                         objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_RATEDOWNLOAD);

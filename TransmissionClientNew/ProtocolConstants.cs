@@ -96,6 +96,7 @@ namespace TransmissionRemoteDotnet
             FIELD_PRIORITIES = "priorities",
             FIELD_WANTED = "wanted",
             FIELD_TRACKERS = "trackers",
+            FIELD_TRACKERSTATS = "trackerStats",
             FIELD_PEERS = "peers",
             FIELD_SIZEWHENDONE = "sizeWhenDone",
             FIELD_PEERLIMIT = "peer-limit",
@@ -125,6 +126,9 @@ namespace TransmissionRemoteDotnet
             FIELD_UPLOADLIMIT = "uploadLimit",
             FIELD_DOWNLOADLIMIT = "downloadLimit",
             FIELD_PORT_IS_OPEN = "port-is-open",
+            // tracker stats
+            TRACKERSTAT_SEEDERCOUNT = "seederCount",
+            TRACKERSTAT_LEECHERCOUNT = "leecherCount",
             // settings
             FIELD_PORTFORWARDINGENABLED = "port-forwarding-enabled",
             FIELD_ENCRYPTION = "encryption",

@@ -1584,8 +1584,8 @@ namespace TransmissionRemoteDotnet
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRate;
-            seedersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
-            leechersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
+            seedersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
+            leechersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             ratioLabel.Text = t.LocalRatioString;
             progressBar.Value = (int)t.Percentage;
             if (t.Pieces != null)
