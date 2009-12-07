@@ -322,19 +322,13 @@
     <value>Waiting to check</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>{0} connected</value>
+    <value>{0} of {1} connected</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
   <data name="Incomplete" xml:space="preserve">
     <value>Incomplete</value>
-  </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Language updated</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Your language choice has been updated. A restart of the application is required for it to take full effect.</value>
   </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>
@@ -450,5 +444,11 @@
   </data>
   <data name="UnknownResponseTag" xml:space="preserve">
     <value>Unknown response tag</value>
+  </data>
+  <data name="XConnected" xml:space="preserve">
+    <value>{0} connected</value>
+  </data>
+  <data name="PiecesInfo" xml:space="preserve">
+    <value>{0} x {1} (have {2})</value>
   </data>
 </root>

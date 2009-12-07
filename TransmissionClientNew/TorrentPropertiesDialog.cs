@@ -26,7 +26,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class TorrentPropertiesDialog : Form
+    public partial class TorrentPropertiesDialog : CultureForm
     {
         private ListView.SelectedListViewItemCollection selections;
 

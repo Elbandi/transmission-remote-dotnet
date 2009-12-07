@@ -26,7 +26,7 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class LocalSettingsDialog : Form
+    public partial class LocalSettingsDialog : CultureForm
     {
         private string originalHost;
         private int originalPort;

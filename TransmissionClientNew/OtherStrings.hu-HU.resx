@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PiecesInfo" xml:space="preserve">
+    <value>{0} x {1} ({2} van)</value>
+  </data>
+  <data name="XConnected" xml:space="preserve">
+    <value>Csatlakozva: {0}</value>
+  </data>
   <data name="EmptyFile" xml:space="preserve">
     <value>Üres fájl</value>
   </data>
@@ -391,19 +397,13 @@
     <value>Várakozás az ellenőrzésre</value>
   </data>
   <data name="XOfYConnected" xml:space="preserve">
-    <value>Csatlakozva: {0}</value>
+    <value>Csatlakozva: {0} Összes: {1}</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Igen</value>
   </data>
   <data name="Incomplete" xml:space="preserve">
     <value>Befejezetlen</value>
-  </data>
-  <data name="LanguageUpdated" xml:space="preserve">
-    <value>Nyelv frissítve</value>
-  </data>
-  <data name="LanguageUpdateDetail" xml:space="preserve">
-    <value>Választott nyelv frissítve. Az alkalmazás újraindítása szükséges a változtatások életbe léptetéséhez.</value>
   </data>
   <data name="Byte" xml:space="preserve">
     <value>Bájt</value>

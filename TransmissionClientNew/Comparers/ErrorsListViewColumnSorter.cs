@@ -32,9 +32,8 @@ namespace TransmissionRemoteDotnet
 
         public ErrorsListViewColumnSorter()
         {
-            columnToSort = 0;
+            SortColumn = 0;
             orderOfSort = SortOrder.Descending;
-            objectCompare = new ListViewTextComparer(0, false);
         }
 
         public int Compare(object x, object y)

@@ -27,26 +27,9 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class StatsDialog : Form
+    public partial class StatsDialog : CultureForm
     {
-        private static StatsDialog instance = null;
-        private static readonly object padlock = new object();
         private static WebClient wc;
-
-        public static StatsDialog Instance
-        {
-            get
-            {
-                lock (padlock)
-                {
-                    if (!IsActive())
-                    {
-                        instance = new StatsDialog();
-                    }
-                }
-                return instance;
-            }
-        }
 
         private StatsDialog()
         {
@@ -66,22 +49,17 @@ namespace TransmissionRemoteDotnet
 
         public static void CloseIfOpen()
         {
-            if (IsActive())
+            if (ClassSingleton<StatsDialog>.IsActive())
             {
-                instance.CloseAndDispose();
+                ClassSingleton<StatsDialog>.Instance.CloseAndDispose();
             }
-        }
-
-        private static bool IsActive()
-        {
-            return instance != null && !instance.IsDisposed;
         }
 
         public static void StaticUpdateStats(JsonObject stats)
         {
-            if (IsActive())
+            if (ClassSingleton<StatsDialog>.IsActive())
             {
-                instance.UpdateStats(stats);
+                ClassSingleton<StatsDialog>.Instance.UpdateStats(stats);
             }
         }
 

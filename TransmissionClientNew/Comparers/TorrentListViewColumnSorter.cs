@@ -29,12 +29,14 @@ namespace TransmissionRemoteDotnet.Comparers
         private int columnToSort;
         private SortOrder orderOfSort;
         private IComparer objectCompare;
-        
+
+        private string column4sorter = ProtocolConstants.FIELD_SEEDERS;
+        private string column5sorter = ProtocolConstants.FIELD_LEECHERS;
+
         public ListViewItemSorter()
         {
-            columnToSort = 0;
+            SortColumn = 0;
             orderOfSort = SortOrder.None;
-            objectCompare = new ListViewTextComparer(0, false);
         }
 
         public int Compare(object x, object y)
@@ -52,6 +54,20 @@ namespace TransmissionRemoteDotnet.Comparers
             else
             {
                 return 0;
+            }
+        }
+
+        public void SetupColumn(int RpcVersion)
+        {
+            if (RpcVersion > 6)
+            { // http://trac.transmissionbt.com/changeset/9179
+                column4sorter = ProtocolConstants.FIELD_PEERSSENDINGTOUS;
+                column5sorter = ProtocolConstants.FIELD_PEERSGETTINGFROMUS;
+            }
+            else
+            {
+                column4sorter = ProtocolConstants.FIELD_SEEDERS;
+                column5sorter = ProtocolConstants.FIELD_LEECHERS;
             }
         }
 
@@ -74,10 +90,10 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewItemDecimalComparer(value);
                         break;
                     case 4:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_PEERSSENDINGTOUS);
+                        objectCompare = new ListViewTorrentInt32Comparer(column4sorter);
                         break;
                     case 5:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_PEERSGETTINGFROMUS);
+                        objectCompare = new ListViewTorrentInt32Comparer(column5sorter);
                         break;
                     case 6:
                         objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_RATEDOWNLOAD);

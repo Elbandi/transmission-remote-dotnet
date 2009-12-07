@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class MoveDataPrompt : Form
+    public partial class MoveDataPrompt : CultureForm
     {
         private ListView.SelectedListViewItemCollection selections;
 

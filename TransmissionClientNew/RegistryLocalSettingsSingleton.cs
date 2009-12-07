@@ -440,11 +440,31 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return profileConfMap.ContainsKey(REGKEY_PASS) ? (string)profileConfMap[REGKEY_PASS] : "";
+                if (!profileConfMap.ContainsKey(REGKEY_PASS))
+                    return "";
+                string pass = (string)profileConfMap[REGKEY_PASS];
+                try
+                {
+                    if (pass.StartsWith(Convert.ToChar(1).ToString()))
+                        pass = Toolbox.Decrypt(pass.Substring(1));
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, e.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pass = "";
+                }
+                return pass;
             }
             set
             {
-                profileConfMap[REGKEY_PASS] = value;
+                try
+                {
+                    profileConfMap[REGKEY_PASS] = value.Length > 0 ? Convert.ToChar(1) + Toolbox.Encrypt(value) : "";
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, e.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -589,11 +609,31 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return profileConfMap.ContainsKey(REGKEY_PROXYPASS) ? (string)profileConfMap[REGKEY_PROXYPASS] : "";
+                if (!profileConfMap.ContainsKey(REGKEY_PROXYPASS))
+                    return "";
+                string pass = (string)profileConfMap[REGKEY_PROXYPASS];
+                try
+                {
+                    if (pass.StartsWith(Convert.ToChar(1).ToString()))
+                        pass = Toolbox.Decrypt(pass.Substring(1));
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, e.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pass = "";
+                }
+                return pass;
             }
             set
             {
-                profileConfMap[REGKEY_PROXYPASS] = value;
+                try
+                {
+                    profileConfMap[REGKEY_PROXYPASS] = value.Length > 0 ? Convert.ToChar(1) + Toolbox.Encrypt(value) : "";
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, e.Source, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

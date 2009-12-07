@@ -1,4 +1,4 @@
-﻿// transmission-remote-dotnet
+// transmission-remote-dotnet
 // http://code.google.com/p/transmission-remote-dotnet/
 // Copyright (C) 2009 Alan F
 //
@@ -37,7 +37,7 @@ using Jayrock.Json.Conversion;
 
 namespace TransmissionRemoteDotnet
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : CultureForm
     {
         private const string
             DEFAULT_WINDOW_TITLE = "Transmission Remote",
@@ -71,6 +71,7 @@ namespace TransmissionRemoteDotnet
         private WebClient filesWebClient = new WebClient();
         private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
+        private static FindDialog FindDialog;
 
         public List<ListViewItem> FileItems
         {
@@ -120,6 +121,7 @@ namespace TransmissionRemoteDotnet
             }
             OpenGeoipDatabase();
             PopulateLanguagesMenu();
+            OneTorrentsSelected(false, null);
         }
 
         public ToolStripMenuItem CreateProfileMenuItem(string name)
@@ -477,6 +479,7 @@ namespace TransmissionRemoteDotnet
             {
                 CreateTorrentSelectionContextMenu();
                 this.toolStripStatusLabel.Text = OtherStrings.ConnectedGettingInfo;
+                lvwColumnSorter.SetupColumn(Program.DaemonDescriptor.RpcVersion);
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + LocalSettingsSingleton.Instance.Host;
                 speedGraph.MaxPeekMagnitude = 100;
                 speedGraph.AddLine("Download", Color.Green);
@@ -729,8 +732,23 @@ namespace TransmissionRemoteDotnet
                 senderMI.Checked = true;
                 settings.Locale = culture.Name;
                 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = culture;
+                Program.CultureChanger.ApplyCulture(culture);
+                InitStaticContextMenus();
+                torrentListView_SelectedIndexChanged(null, null);
+                string[] statestrings = new string[] { OtherStrings.All, OtherStrings.Downloading, OtherStrings.Paused, OtherStrings.Checking, OtherStrings.Complete, OtherStrings.Incomplete, OtherStrings.Seeding, OtherStrings.Broken };
+                for (int i = 0; i < statestrings.Length; i++)
+                {
+                    (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
+                }
+                CreateTrayContextMenu();
+                foreach (ListViewItem item in filesListView.Items)
+                {
+                    item.SubItems[5].Text = (bool)item.SubItems[5].Tag ? OtherStrings.No : OtherStrings.Yes;
+                    item.SubItems[6].Text = Toolbox.FormatPriority((JsonNumber)item.SubItems[6].Tag);
+                }
+                filesListView_SelectedIndexChanged(null, null);
+                Program_onTorrentsUpdated(null, null);
                 this.Refresh();
-                MessageBox.Show(OtherStrings.LanguageUpdateDetail, OtherStrings.LanguageUpdated, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -937,7 +955,7 @@ namespace TransmissionRemoteDotnet
         private void remoteConfigureButton_Click(object sender, EventArgs e)
         {
             if (Program.Connected)
-                RemoteSettingsDialog.Instance.ShowDialog();
+                ClassSingleton<RemoteSettingsDialog>.Instance.ShowDialog();
         }
 
         private void OneOrMoreTorrentsSelected(bool oneOrMore)
@@ -987,6 +1005,7 @@ namespace TransmissionRemoteDotnet
                     = uploadLimitLabel.Text = startedAtLabel.Text = seedersLabel.Text
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
+                    = hashLabel.Text = piecesInfoLabel.Text
                     = generalTorrentNameGroupBox.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
@@ -1278,60 +1297,43 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void SetHighPriorityHandler(object sender, EventArgs e)
+        private void SetFilesItemState(int column, string data)
         {
             lock (filesListView)
             {
                 filesListView.SuspendLayout();
                 foreach (ListViewItem item in filesListView.SelectedItems)
                 {
-                    item.SubItems[6].Text = OtherStrings.High;
+                    item.SubItems[column].Text = data;
                 }
                 filesListView.ResumeLayout();
             }
             DispatchFilesUpdate();
+        }
+
+        private void SetHighPriorityHandler(object sender, EventArgs e)
+        {
+            SetFilesItemState(6, OtherStrings.High);
         }
 
         private void SetLowPriorityHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[6].Text = OtherStrings.Low;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(6, OtherStrings.Low);
         }
 
         private void SetNormalPriorityHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[6].Text = OtherStrings.Normal;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(6, OtherStrings.Normal);
         }
 
         private void SetUnwantedHandler(object sender, EventArgs e)
         {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[5].Text = OtherStrings.Yes;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
+            SetFilesItemState(5, OtherStrings.Yes);
+        }
+
+        private void SetWantedHandler(object sender, EventArgs e)
+        {
+            SetFilesItemState(5, OtherStrings.No);
         }
 
         public void SetAllStateCounters()
@@ -1411,20 +1413,6 @@ namespace TransmissionRemoteDotnet
         private void SetStateCounter(int index, int count)
         {
             ((GListBoxItem)stateListBox.Items[index]).Counter = count;
-        }
-
-        private void SetWantedHandler(object sender, EventArgs e)
-        {
-            lock (filesListView)
-            {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
-                {
-                    item.SubItems[5].Text = OtherStrings.No;
-                }
-                filesListView.ResumeLayout();
-            }
-            DispatchFilesUpdate();
         }
 
         private void filesListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -1542,8 +1530,10 @@ namespace TransmissionRemoteDotnet
                 startedAtLabel.Text = t.Added.ToString();
                 createdAtLabel.Text = t.Created;
                 createdByLabel.Text = t.Creator;
+                hashLabel.Text = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
                 commentLabel.Text = t.Comment;
                 trackersListView.SuspendLayout();
+                trackersListView.Items.Clear();
                 foreach (JsonObject tracker in t.Trackers)
                 {
                     int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
@@ -1566,14 +1556,15 @@ namespace TransmissionRemoteDotnet
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRate;
-            seedersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs);
-            leechersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs);
+            seedersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
+            leechersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             ratioLabel.Text = t.LocalRatioString;
             progressBar.Value = (int)t.Percentage;
             if (t.Pieces != null)
             {
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
             }
+            piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.IsFinished)
             {
@@ -1749,8 +1740,8 @@ namespace TransmissionRemoteDotnet
 
         private void showErrorLogToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ErrorLogWindow.Instance.Show();
-            ErrorLogWindow.Instance.BringToFront();
+            ClassSingleton<ErrorLogWindow>.Instance.Show();
+            ClassSingleton<ErrorLogWindow>.Instance.BringToFront();
         }
 
         private void filesListView_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -1846,8 +1837,8 @@ namespace TransmissionRemoteDotnet
 
         private void sessionStatsButton_Click(object sender, EventArgs e)
         {
-            StatsDialog.Instance.Show();
-            StatsDialog.Instance.BringToFront();
+            ClassSingleton<StatsDialog>.Instance.Show();
+            ClassSingleton<StatsDialog>.Instance.BringToFront();
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -2076,6 +2067,22 @@ namespace TransmissionRemoteDotnet
                     BackgroundProcessStart(new ProcessStartInfo((bool)filesListView.SelectedItems[0].SubItems[0].Tag ? sambaShare + @"\" + filesListView.SelectedItems[0].SubItems[0].Text.Replace(@"/", @"\") : sambaShare));
                 }
             }
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.Connected)
+                if (FindDialog == null)
+                {
+                    FindDialog = new FindDialog();
+                    FindDialog.Torrentlistview = torrentListView;
+                    FindDialog.FormClosed += delegate(object s, FormClosedEventArgs ee) { FindDialog = null; };
+                    FindDialog.Show();
+                }
+                else
+                {
+                    FindDialog.Focus();
+                }
         }
     }
 }
