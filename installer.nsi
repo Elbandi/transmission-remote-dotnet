@@ -5,6 +5,11 @@
 ;
 ; It will install example2.nsi into a directory that the user selects,
 
+!include "FileAssociation.nsh"
+
+;Rebuild Release
+!system "%Windir%\Microsoft.NET\Framework\v3.5\MSBuild.exe /verbosity:m /t:Rebuild /p:Configuration=Release"
+
 ;--------------------------------
 
 ; The name of the installer
@@ -65,97 +70,119 @@ Section "Transmission Remote (required)"
 SectionEnd
 
 ; Optional section (can be disabled by the user)
-Section "Start Menu Shortcuts"
-  CreateDirectory "$SMPROGRAMS\Transmission Remote"
-  CreateShortCut "$SMPROGRAMS\Transmission Remote\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\Transmission Remote\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
-SectionEnd
 
-Section /o "Desktop Shortcut"
-  CreateShortCut "$DESKTOP\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0
-SectionEnd
+SubSection "Shortcuts" SEC01
+
+  Section "Start Menu Shortcuts"
+    CreateDirectory "$SMPROGRAMS\Transmission Remote"
+    CreateShortCut "$SMPROGRAMS\Transmission Remote\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
+    CreateShortCut "$SMPROGRAMS\Transmission Remote\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
+  SectionEnd
+  
+  Section /o "Desktop Shortcut"
+    CreateShortCut "$DESKTOP\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0
+  SectionEnd
+
+SubSectionEnd
   
 Section "GeoIP Database"
   File "GeoIP.dat"
 SectionEnd
 
-Section /o "Chinese translation"
-  CreateDirectory "$INSTDIR\zh-CN"
-  SetOutPath "$INSTDIR\zh-CN"
-  File "TransmissionClientNew\bin\Release\zh-CN\Transmission Remote.resources.dll"
-SectionEnd
+SubSection "File type associations" SEC02
 
-Section /o "Czech translation"
-  CreateDirectory "$INSTDIR\cs-CZ"
-  SetOutPath "$INSTDIR\cs-CZ"
-  File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
-SectionEnd
+  Section "Register .torrent to Transmission Remote"
+    ${registerExtension} "$INSTDIR\Transmission Remote.exe" ".torrent" "Transmission Remote Torrent"
+  SectionEnd
 
-Section /o "Danish translation"
-  CreateDirectory "$INSTDIR\da-DK"
-  SetOutPath "$INSTDIR\da-DK"
-  File "TransmissionClientNew\bin\Release\da-DK\Transmission Remote.resources.dll"
-SectionEnd
+SubSectionEnd
 
-Section /o "French translation"
-  CreateDirectory "$INSTDIR\fr-FR"
-  SetOutPath "$INSTDIR\fr-FR"
-  File "TransmissionClientNew\bin\Release\fr-FR\Transmission Remote.resources.dll"
-SectionEnd
+; Translation
 
-Section /o "German translation"
-  CreateDirectory "$INSTDIR\de-DE"
-  SetOutPath "$INSTDIR\de-DE"
-  File "TransmissionClientNew\bin\Release\de-DE\Transmission Remote.resources.dll"
-SectionEnd
+SubSection "Translation" SEC03
 
-Section /o "Hungarian translation"
-  CreateDirectory "$INSTDIR\hu-HU"
-  SetOutPath "$INSTDIR\hu-HU"
-  File "TransmissionClientNew\bin\Release\hu-HU\Transmission Remote.resources.dll"
-SectionEnd
+  Section /o "Chinese translation"
+    CreateDirectory "$INSTDIR\zh-CN"
+    SetOutPath "$INSTDIR\zh-CN"
+    File "TransmissionClientNew\bin\Release\zh-CN\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Czech translation"
+    CreateDirectory "$INSTDIR\cs-CZ"
+    SetOutPath "$INSTDIR\cs-CZ"
+    File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Danish translation"
+    CreateDirectory "$INSTDIR\da-DK"
+    SetOutPath "$INSTDIR\da-DK"
+    File "TransmissionClientNew\bin\Release\da-DK\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "French translation"
+    CreateDirectory "$INSTDIR\fr-FR"
+    SetOutPath "$INSTDIR\fr-FR"
+    File "TransmissionClientNew\bin\Release\fr-FR\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "German translation"
+    CreateDirectory "$INSTDIR\de-DE"
+    SetOutPath "$INSTDIR\de-DE"
+    File "TransmissionClientNew\bin\Release\de-DE\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Hungarian translation"
+    CreateDirectory "$INSTDIR\hu-HU"
+    SetOutPath "$INSTDIR\hu-HU"
+    File "TransmissionClientNew\bin\Release\hu-HU\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Korean translation"
+    CreateDirectory "$INSTDIR\ko-KR"
+    SetOutPath "$INSTDIR\ko-KR"
+    File "TransmissionClientNew\bin\Release\ko-KR\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Polish translation"
+    CreateDirectory "$INSTDIR\pl-PL"
+    SetOutPath "$INSTDIR\pl-PL"
+    File "TransmissionClientNew\bin\Release\pl-PL\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Russian translation"
+    CreateDirectory "$INSTDIR\ru-RU"
+    SetOutPath "$INSTDIR\ru-RU"
+    File "TransmissionClientNew\bin\Release\ru-RU\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Spanish translation"
+    CreateDirectory "$INSTDIR\es-ES"
+    SetOutPath "$INSTDIR\es-ES"
+    File "TransmissionClientNew\bin\Release\es-ES\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Taiwanese translation"
+    CreateDirectory "$INSTDIR\zh-TW"
+    SetOutPath "$INSTDIR\zh-TW"
+    File "TransmissionClientNew\bin\Release\zh-TW\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Turkish translation"
+    CreateDirectory "$INSTDIR\tr-TR"
+    SetOutPath "$INSTDIR\tr-TR"
+    File "TransmissionClientNew\bin\Release\tr-TR\Transmission Remote.resources.dll"
+  SectionEnd
 
-Section /o "Korean translation"
-  CreateDirectory "$INSTDIR\ko-KR"
-  SetOutPath "$INSTDIR\ko-KR"
-  File "TransmissionClientNew\bin\Release\ko-KR\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Polish translation"
-  CreateDirectory "$INSTDIR\pl-PL"
-  SetOutPath "$INSTDIR\pl-PL"
-  File "TransmissionClientNew\bin\Release\pl-PL\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Russian translation"
-  CreateDirectory "$INSTDIR\ru-RU"
-  SetOutPath "$INSTDIR\ru-RU"
-  File "TransmissionClientNew\bin\Release\ru-RU\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Spanish translation"
-  CreateDirectory "$INSTDIR\es-ES"
-  SetOutPath "$INSTDIR\es-ES"
-  File "TransmissionClientNew\bin\Release\es-ES\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Taiwanese translation"
-  CreateDirectory "$INSTDIR\zh-TW"
-  SetOutPath "$INSTDIR\zh-TW"
-  File "TransmissionClientNew\bin\Release\zh-TW\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Turkish translation"
-  CreateDirectory "$INSTDIR\tr-TR"
-  SetOutPath "$INSTDIR\tr-TR"
-  File "TransmissionClientNew\bin\Release\tr-TR\Transmission Remote.resources.dll"
-SectionEnd
+SubSectionEnd
 
 ;--------------------------------
 
 ; Uninstaller
 
 Section "Uninstall"
+
+  ; Unregister File Association
+  ${unregisterExtension} ".torrent" "Transmission Remote Torrent"
   
   ; Remove registry keys
   DeleteRegKey HKLM SOFTWARE\TransmissionRemote
