@@ -65,7 +65,7 @@ namespace TransmissionRemoteDotnet
                     bandwidthPriority = 1;
                 arguments.Put(ProtocolConstants.FIELD_BANDWIDTHPRIORITY, bandwidthPriority);
             }
-            Program.Form.CreateActionWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
             this.Close();
         }
 

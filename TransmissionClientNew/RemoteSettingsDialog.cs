@@ -266,27 +266,12 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
             }
             arguments.Put(ProtocolConstants.FIELD_DOWNLOADDIR, downloadToField.Text);
-            CreateSettingsWorker().RunWorkerAsync(request);
+            CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
             CloseAndDispose();
         }
 
-        private BackgroundWorker CreateSettingsWorker()
+        void RemoteSettingsDialog_Completed(object sender, ResultEventArgs e)
         {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += new DoWorkEventHandler(SettingsWorker_DoWork);
-            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(SettingsWorker_RunWorkerCompleted);
-            return worker;
-        }
-
-        private void SettingsWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CommandFactory.Request((JsonObject)e.Argument);
-        }
-
-        private void SettingsWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ICommand command = (ICommand)e.Result;
-            command.Execute();
             Timer t = new Timer();
             t.Interval = 250;
             t.Tick += new EventHandler(t_Tick);
@@ -297,7 +282,7 @@ namespace TransmissionRemoteDotnet
         {
             Timer t = (Timer)sender;
             t.Stop();
-            Program.Form.CreateActionWorker().RunWorkerAsync(Requests.SessionGet());
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.SessionGet()));
         }
 
         private void altSpeedLimitEnable_CheckedChanged(object sender, EventArgs e)
@@ -320,7 +305,7 @@ namespace TransmissionRemoteDotnet
             updateBlocklistButton.Enabled = false;
             updateBlocklistButton.Tag = updateBlocklistButton.Text;
             updateBlocklistButton.Text = OtherStrings.Updating;
-            Program.Form.CreateActionWorker().RunWorkerAsync(Requests.BlocklistUpdate());
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.BlocklistUpdate()));
         }
 
         public static void BlocklistUpdateDone(int size)
@@ -343,7 +328,7 @@ namespace TransmissionRemoteDotnet
             testPortButton.Enabled = false;
             testPortButton.Tag = testPortButton.Text;
             testPortButton.Text = OtherStrings.Querying;
-            Program.Form.CreateActionWorker().RunWorkerAsync(Requests.PortTest());
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.PortTest()));
         }
     }
 }

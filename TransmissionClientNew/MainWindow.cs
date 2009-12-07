@@ -65,7 +65,10 @@ namespace TransmissionRemoteDotnet
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
         private MenuItem openNetworkShareMenuItem;
-        private BackgroundWorker connectWorker;
+        private WebClient sessionWebClient;
+        private WebClient refreshWebClient = new WebClient();
+
+        private WebClient filesWebClient = new WebClient();
         private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
 
@@ -295,7 +298,7 @@ namespace TransmissionRemoteDotnet
             {
                 arguments.Put(key, limit == -1 ? 0 : limit);
             }
-            CreateActionWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
         }
 
         private JsonObject CreateLimitChangeRequest()
@@ -318,7 +321,7 @@ namespace TransmissionRemoteDotnet
             {
                 arguments.Put(key, limit == -1 ? 0 : limit);
             }
-            CreateActionWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
         }
 
         private void OpenGeoipDatabase()
@@ -485,12 +488,12 @@ namespace TransmissionRemoteDotnet
 
         public void startAllMenuItem_Click(object sender, EventArgs e)
         {
-            CreateActionWorker().RunWorkerAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, null));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, null)));
         }
 
         public void stopAllMenuItem_Click(object sender, EventArgs e)
         {
-            CreateActionWorker().RunWorkerAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, null));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, null)));
         }
 
         public void SuspendTorrentListView()
@@ -716,72 +719,15 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public BackgroundWorker CreateUploadWorker()
+        public void SetupAction(TransmissionWebClient twc)
         {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += new DoWorkEventHandler(this.UploadWorker_DoWork);
-            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(this.UploadWorker_RunWorkerCompleted);
-            return worker;
+            twc.Completed += new EventHandler<ResultEventArgs>(twc_Completed);
         }
 
-        public BackgroundWorker CreateActionWorker()
+        void twc_Completed(object sender, ResultEventArgs e)
         {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += new DoWorkEventHandler(this.ActionWorker_DoWork);
-            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(this.ActionWorker_RunWorkerCompleted);
-            return worker;
-        }
-
-        private void ActionWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CommandFactory.Request((JsonObject)e.Argument);
-        }
-
-        private void ActionWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ICommand command = (ICommand)e.Result;
-            command.Execute();
-            /* Everything seemed to go OK, so do an update if not already. */
-            if (command.GetType() != typeof(ErrorCommand))
+            if (e.Result.GetType() != typeof(ErrorCommand))
             {
-                RefreshIfNotRefreshing();
-            }
-        }
-
-        private void UploadWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                if (e.Argument.GetType().Equals(typeof(string[])))
-                {
-                    foreach (string file in (string[])e.Argument)
-                    {
-                        if (file != null && file.Length > 0 && File.Exists(file))
-                        {
-                            if ((e.Result = CommandFactory.Request(Requests.TorrentAddByFile(file, false))).GetType() == typeof(ErrorCommand))
-                            {
-                                /* An exception occured, so display it. */
-                                return;
-                            }
-                        }
-                    }
-                }
-                else if (e.Argument.GetType().Equals(typeof(JsonObject)))
-                {
-                    e.Result = CommandFactory.Request((JsonObject)e.Argument);
-                }
-            }
-            catch (Exception ex)
-            {
-                e.Result = new ErrorCommand(ex, true);
-            }
-        }
-
-        private void UploadWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Result != null)
-            {
-                ((ICommand)e.Result).Execute();
                 RefreshIfNotRefreshing();
             }
         }
@@ -835,7 +781,7 @@ namespace TransmissionRemoteDotnet
         {
             if (torrentListView.SelectedItems.Count > 0)
             {
-                CreateActionWorker().RunWorkerAsync(Requests.RemoveTorrent(BuildIdArray(), delete));
+                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.RemoveTorrent(BuildIdArray(), delete)));
             }
         }
 
@@ -871,21 +817,6 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void connectWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CommandFactory.Request(Requests.SessionGet());
-        }
-
-        private void connectWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            BackgroundWorker senderBW = (BackgroundWorker)sender;
-            if (this.connectWorker != null && this.connectWorker.Equals(senderBW))
-            {
-                this.connectWorker = null;
-                ((ICommand)e.Result).Execute();
-            }
-        }
-
         private delegate void ConnectDelegate();
         public void Connect()
         {
@@ -898,16 +829,8 @@ namespace TransmissionRemoteDotnet
                 if (Program.Connected)
                     Program.Connected = false;
                 toolStripStatusLabel.Text = OtherStrings.Connecting + "...";
-                BackgroundWorker connectWorker = this.connectWorker = new BackgroundWorker();
-                connectWorker.DoWork += new DoWorkEventHandler(connectWorker_DoWork);
-                connectWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(connectWorker_RunWorkerCompleted);
-                connectWorker.RunWorkerAsync();
+                sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
             }
-        }
-
-        private void refreshWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CommandFactory.Request(Requests.TorrentGet());
         }
 
         private void refreshTimer_Tick(object sender, EventArgs e)
@@ -917,9 +840,13 @@ namespace TransmissionRemoteDotnet
 
         public void RefreshIfNotRefreshing()
         {
-            if (!refreshWorker.IsBusy)
+            if (!sessionWebClient.IsBusy)
             {
-                refreshWorker.RunWorkerAsync();
+                sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
+            }
+            if (!refreshWebClient.IsBusy)
+            {
+                refreshWebClient = CommandFactory.RequestAsync(Requests.TorrentGet());
             }
         }
 
@@ -954,7 +881,7 @@ namespace TransmissionRemoteDotnet
             if (one)
             {
                 UpdateInfoPanel(true, t);
-                CreateActionWorker().RunWorkerAsync(Requests.FilesAndPriorities(t.Id));
+                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
             }
             else
             {
@@ -1037,17 +964,17 @@ namespace TransmissionRemoteDotnet
             JsonObject request = Requests.Generic(ProtocolConstants.METHOD_TORRENTSET, torrentListView.SelectedItems.Count > 0 ? BuildIdArray() : null);
             JsonObject arguments = Requests.GetArgObject(request);
             arguments.Put(ProtocolConstants.FIELD_BANDWIDTHPRIORITY, (int)((MenuItem)sender).Tag);
-            CreateActionWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
         }
 
         private void startTorrentButton_Click(object sender, EventArgs e)
         {
-            CreateActionWorker().RunWorkerAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, torrentListView.SelectedItems.Count > 0 ? BuildIdArray() : null));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, torrentListView.SelectedItems.Count > 0 ? BuildIdArray() : null)));
         }
 
         private void pauseTorrentButton_Click(object sender, EventArgs e)
         {
-            CreateActionWorker().RunWorkerAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, torrentListView.SelectedItems.Count > 0 ? BuildIdArray() : null));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, torrentListView.SelectedItems.Count > 0 ? BuildIdArray() : null)));
         }
 
         public void UpdateGraph(int downspeed, int upspeed)
@@ -1073,7 +1000,7 @@ namespace TransmissionRemoteDotnet
                 openFile.Multiselect = true;
                 if (openFile.ShowDialog() == DialogResult.OK)
                 {
-                    CreateUploadWorker().RunWorkerAsync(openFile.FileNames);
+                    Upload(openFile.FileNames);
                 }
             }
         }
@@ -1091,7 +1018,13 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
-                CreateUploadWorker().RunWorkerAsync(args);
+                foreach (string file in args)
+                {
+                    if (file != null && file.Length > 0 && File.Exists(file))
+                    {
+                        Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile(file, false)));
+                    }
+                }
             }
         }
 
@@ -1126,6 +1059,10 @@ namespace TransmissionRemoteDotnet
         {
             if (Program.Connected)
                 Program.Connected = false;
+            sessionWebClient.CancelAsync();
+            refreshWebClient.CancelAsync();
+            filesWebClient.CancelAsync();
+
         }
 
         public void connectButton_Click(object sender, EventArgs e)
@@ -1247,7 +1184,7 @@ namespace TransmissionRemoteDotnet
 
         private void filesTimer_Tick(object sender, EventArgs e)
         {
-            if (!filesWorker.IsBusy)
+            if (!filesWebClient.IsBusy)
             {
                 filesTimer.Enabled = false;
                 lock (torrentListView)
@@ -1255,21 +1192,10 @@ namespace TransmissionRemoteDotnet
                     if (torrentListView.SelectedItems.Count == 1)
                     {
                         Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
-                        filesWorker.RunWorkerAsync(t.Id);
+                        filesWebClient = CommandFactory.RequestAsync(Requests.Files(t.Id));
                     }
                 }
             }
-        }
-
-        private void filesWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            int id = (int)e.Argument;
-            e.Result = CommandFactory.Request(Requests.Files(id));
-        }
-
-        private void filesWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ((ICommand)e.Result).Execute();
         }
 
         private void SetHighPriorityHandler(object sender, EventArgs e)
@@ -1522,7 +1448,7 @@ namespace TransmissionRemoteDotnet
 
             request.Put(ProtocolConstants.KEY_ARGUMENTS, arguments);
             request.Put(ProtocolConstants.KEY_TAG, (int)ResponseTag.DoNothing);
-            CreateActionWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
         }
 
         // lock torrentListView BEFORE calling this method
@@ -1824,16 +1750,11 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void refreshWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ((ICommand)e.Result).Execute();
-        }
-
         private void recheckTorrentButton_Click(object sender, EventArgs e)
         {
             if (torrentListView.SelectedItems.Count > 0)
             {
-                CreateActionWorker().RunWorkerAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray()));
+                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray())));
             }
         }
 
@@ -1970,7 +1891,7 @@ namespace TransmissionRemoteDotnet
 
         private void Reannounce(ReannounceMode mode)
         {
-            CreateActionWorker().RunWorkerAsync(Requests.Reannounce(mode, mode.Equals(ReannounceMode.Specific) ? BuildIdArray() : null));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Reannounce(mode, mode.Equals(ReannounceMode.Specific) ? BuildIdArray() : null)));
         }
 
         private void recentlyActiveToolStripMenuItem_Click(object sender, EventArgs e)

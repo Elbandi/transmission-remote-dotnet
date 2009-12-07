@@ -50,7 +50,6 @@ namespace TransmissionRemoteDotnet
             this.downloadedBytesLabel2 = new System.Windows.Forms.Label();
             this.uploadedBytesLabel2 = new System.Windows.Forms.Label();
             this.CloseFormButton = new System.Windows.Forms.Button();
-            this.statsWorker = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.secondsActiveValue2 = new System.Windows.Forms.Label();
             this.sessionCountValue2 = new System.Windows.Forms.Label();
@@ -93,11 +92,6 @@ namespace TransmissionRemoteDotnet
             this.CloseFormButton.Name = "CloseFormButton";
             this.CloseFormButton.UseVisualStyleBackColor = true;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
-            // 
-            // statsWorker
-            // 
-            this.statsWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.StatsWorker_DoWork);
-            this.statsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.StatsWorker_RunWorkerCompleted);
             // 
             // groupBox1
             // 
@@ -252,7 +246,6 @@ namespace TransmissionRemoteDotnet
 
         private System.Windows.Forms.Button CloseFormButton;
         private System.Windows.Forms.Timer timer1;
-        private System.ComponentModel.BackgroundWorker statsWorker;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label secondsActiveValue1;
         private System.Windows.Forms.Label sessionCountValue1;

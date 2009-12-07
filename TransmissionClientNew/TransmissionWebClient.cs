@@ -24,7 +24,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace TransmissionRemoteDotnet
 {
-    class TransmissionWebClient : WebClient
+    public class TransmissionWebClient : WebClient
     {
         private bool authenticate;
         private static string x_transmission_session_id;
@@ -49,6 +49,15 @@ namespace TransmissionRemoteDotnet
             return sslPolicyErrors != SslPolicyErrors.RemoteCertificateNotAvailable; // we need certificate, but accept untrusted
         }
 
+        public event EventHandler<ResultEventArgs> Completed;
+        internal void OnCompleted(ICommand result)
+        {
+            if (Completed != null)
+            {
+                Completed(this, new ResultEventArgs() { Result = result });
+            }
+        }
+
         protected override WebRequest GetWebRequest(Uri address)
         {
             WebRequest request = base.GetWebRequest(address);
@@ -63,6 +72,7 @@ namespace TransmissionRemoteDotnet
         {
             request.KeepAlive = false;
             request.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip, deflate");
+            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
             request.UserAgent = "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042523 Ubuntu/9.04 (jaunty) Firefox/3.0.10";
             if (x_transmission_session_id != null && authenticate)
                 request.Headers["X-Transmission-Session-Id"] = x_transmission_session_id;

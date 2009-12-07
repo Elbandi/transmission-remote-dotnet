@@ -40,7 +40,7 @@ namespace TransmissionRemoteDotnet
         private void button1_Click(object sender, EventArgs e)
         {
             LocalSettingsSingleton.Instance.AddDestinationPath(comboBox1.Text);
-            Program.Form.CreateActionWorker().RunWorkerAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), comboBox1.Text, true));
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), comboBox1.Text, true)));
             this.Close();
         }
 
