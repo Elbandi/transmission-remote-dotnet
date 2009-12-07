@@ -20,33 +20,29 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace TransmissionRemoteDotnet.Comparers
 {
     public class ListViewTextComparer : IComparer
     {
         int column;
-        bool caseSensitive;
-        static CaseInsensitiveComparer casecomparer = new CaseInsensitiveComparer();
+        IComparer comparer;
 
         public ListViewTextComparer(int column, bool caseSensitive)
         {
             this.column = column;
-            this.caseSensitive = caseSensitive;
+            if (caseSensitive)
+                comparer = new Comparer(Thread.CurrentThread.CurrentCulture);
+            else
+                comparer = new CaseInsensitiveComparer();
         }
 
         int IComparer.Compare(object x, object y)
         {
             ListViewItem lx = (ListViewItem)x;
             ListViewItem ly = (ListViewItem)y;
-            if (caseSensitive)
-            {
-                return lx.SubItems[column].Text.CompareTo(ly.SubItems[column].Text);
-            }
-            else
-            {
-                return casecomparer.Compare(lx.SubItems[column].Text, ly.SubItems[column].Text);
-            }
+            return comparer.Compare(lx.SubItems[column].Text, ly.SubItems[column].Text);
         }
     }
 }
