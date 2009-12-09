@@ -26,6 +26,7 @@ namespace TransmissionRemoteDotnet.Comparers
     public class ListViewTextInsensitiveReverseComparer : IComparer
     {
         int column;
+        static CaseInsensitiveComparer casecomparer = new CaseInsensitiveComparer();
 
         public ListViewTextInsensitiveReverseComparer(int column)
         {
@@ -38,7 +39,7 @@ namespace TransmissionRemoteDotnet.Comparers
             ListViewItem ly = (ListViewItem)y;
             string sx = ReverseString(lx.SubItems[column].Text);
             string sy = ReverseString(ly.SubItems[column].Text);
-            return ((new CaseInsensitiveComparer()).Compare(sx, sy));
+            return casecomparer.Compare(sx, sy);
         }
 
         string ReverseString(string str)

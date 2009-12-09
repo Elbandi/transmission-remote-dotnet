@@ -1,9 +1,9 @@
-; example2.nsi
-;
-; This script is based on example1.nsi, but it remember the directory, 
-; has uninstall support and (optionally) installs start menu shortcuts.
-;
-; It will install example2.nsi into a directory that the user selects,
+!include "MUI2.nsh"
+!include "FileAssociation.nsh"
+!include "x64.nsh"
+
+;Rebuild Release
+!system "%Windir%\Microsoft.NET\Framework\v3.5\MSBuild.exe /nologo /verbosity:m /t:Rebuild /p:Configuration=Release"
 
 
 !system 'GetVersion.exe "TransmissionClientNew\bin\Release\Transmission Remote.exe" > verinclude.nsh' = 0
@@ -18,7 +18,7 @@ Name "Transmission Remote"
 OutFile "transmission-remote-dotnet-${VERSION}-installer.exe"
 
 ; The default installation directory
-InstallDir "$PROGRAMFILES\Transmission Remote"
+!define ProgramFilesDir "Transmission Remote"
 
 ; Registry key to check for directory (so if you install again, it will 
 ; overwrite the old one automatically)
@@ -29,19 +29,63 @@ RequestExecutionLevel admin
 
 ;--------------------------------
 
+XPStyle on
+
+Var StartMenuFolder
+
+!define MUI_ICON "TransmissionClientNew\transmission_large.ico"
+!define MUI_UNICON "TransmissionClientNew\transmission_large.ico"
+!define MUI_HEADERIMAGE
+;!define MUI_HEADERIMAGE_BITMAP "logo.bmp"
+;!define MUI_WELCOMEFINISHPAGE_BITMAP "nsis_wizard.bmp"
+;!define MUI_UNWELCOMEFINISHPAGE_BITMAP "nsis_wizard.bmp"
+;!define MUI_COMPONENTSPAGE_CHECKBITMAP "${NSISDIR}\Contrib\Graphics\Checks\colorful.bmp"
+!define MUI_COMPONENTSPAGE_SMALLDESC
+!define MUI_ABORTWARNING
+
+!define MUI_FINISHPAGE_SHOWREADME "$INSTDIR\README.txt"
+!define MUI_FINISHPAGE_SHOWREADME_TEXT "Show ReadMe"
+!define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED
+
 ; Pages
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_LICENSE "LICENCE.txt"
+!insertmacro MUI_PAGE_COMPONENTS
+!insertmacro MUI_PAGE_DIRECTORY
+;!define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU"
+;!define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\TransmissionRemote"
+;!define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
+!insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
+!insertmacro MUI_PAGE_INSTFILES
+!insertmacro MUI_PAGE_FINISH
 
-Page components
-Page directory
-Page instfiles
+!insertmacro MUI_UNPAGE_WELCOME
+!insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
 
-UninstPage uninstConfirm
-UninstPage instfiles
+;--------------------------------
+
+!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_RESERVEFILE_LANGDLL
+
+; English
+LangString NAME_SecTransmissionRemote ${LANG_ENGLISH} "Transmission Remote (required)"
+LangString DESC_SecTransmissionRemote ${LANG_ENGLISH} "If set, a shortcut for Transmission Remote will be created on the desktop."
+LangString NAME_SecFiletypeAssociations ${LANG_ENGLISH} "Register Filetype Associations"
+LangString DESC_SecFiletypeAssociations ${LANG_ENGLISH} "Register Associations to Transmission Remote"
+LangString NAME_SecRegiterTorrent ${LANG_ENGLISH} "Register .torrent"
+LangString DESC_SecRegiterTorrent ${LANG_ENGLISH} "Register .torrent to Transmission Remote"
+LangString NAME_SecDesktopIcon ${LANG_ENGLISH} "Create icon on desktop"
+LangString DESC_SecDesktopIcon ${LANG_ENGLISH} "If set, a shortcut for Transmission Remote will be created on the desktop."
+LangString DESC_SecGeoIPDatabase ${LANG_ENGLISH} "GeoIP database"
+LangString NAME_SecLanguages ${LANG_ENGLISH} "Languages"
+LangString DESC_SecLanguages ${LANG_ENGLISH} "Languages for Transmission Remote"
 
 ;--------------------------------
 
 ; The stuff to install
-Section "Transmission Remote (required)"
+Section $(NAME_SecTransmissionRemote) SecTransmissionRemote
   SectionIn RO
   
   ; Set output path to the installation directory.
@@ -66,100 +110,124 @@ Section "Transmission Remote (required)"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Transmission Remote" "NoRepair" 1
   WriteUninstaller "uninstall.exe"
   
+  !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+    SetShellVarContext current
+    CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
+    SetShellVarContext all
+    CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
+;    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
+  !insertmacro MUI_STARTMENU_WRITE_END
+
 SectionEnd
 
 ; Optional section (can be disabled by the user)
-Section "Start Menu Shortcuts"
-  CreateDirectory "$SMPROGRAMS\Transmission Remote"
-  CreateShortCut "$SMPROGRAMS\Transmission Remote\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\Transmission Remote\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
-SectionEnd
 
-Section /o "Desktop Shortcut"
+Section /o $(NAME_SecDesktopIcon) SecDesktopIcon
+  SetShellVarContext current
+  SetOutPath "$INSTDIR\bin"
   CreateShortCut "$DESKTOP\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0
 SectionEnd
-  
-Section "GeoIP Database"
+
+Section "GeoIP Database" SecGeoIPDatabase
   File "GeoIP.dat"
 SectionEnd
 
-Section /o "Chinese translation"
-  CreateDirectory "$INSTDIR\zh-CN"
-  SetOutPath "$INSTDIR\zh-CN"
-  File "TransmissionClientNew\bin\Release\zh-CN\Transmission Remote.resources.dll"
-SectionEnd
+SubSection $(NAME_SecFiletypeAssociations) SecFiletypeAssociations
 
-Section /o "Czech translation"
-  CreateDirectory "$INSTDIR\cs-CZ"
-  SetOutPath "$INSTDIR\cs-CZ"
-  File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
-SectionEnd
+  Section $(NAME_SecRegiterTorrent) SecRegiterTorrent
+    ${registerExtension} "$INSTDIR\Transmission Remote.exe" ".torrent" "Transmission Remote Torrent"
+  SectionEnd
 
-Section /o "Danish translation"
-  CreateDirectory "$INSTDIR\da-DK"
-  SetOutPath "$INSTDIR\da-DK"
-  File "TransmissionClientNew\bin\Release\da-DK\Transmission Remote.resources.dll"
-SectionEnd
+SubSectionEnd
 
-Section /o "French translation"
-  CreateDirectory "$INSTDIR\fr-FR"
-  SetOutPath "$INSTDIR\fr-FR"
-  File "TransmissionClientNew\bin\Release\fr-FR\Transmission Remote.resources.dll"
-SectionEnd
+; Translation
 
-Section /o "German translation"
-  CreateDirectory "$INSTDIR\de-DE"
-  SetOutPath "$INSTDIR\de-DE"
-  File "TransmissionClientNew\bin\Release\de-DE\Transmission Remote.resources.dll"
-SectionEnd
+SectionGroup $(NAME_SecLanguages) SecLanguages
 
-Section /o "Hungarian translation"
-  CreateDirectory "$INSTDIR\hu-HU"
-  SetOutPath "$INSTDIR\hu-HU"
-  File "TransmissionClientNew\bin\Release\hu-HU\Transmission Remote.resources.dll"
-SectionEnd
+  Section /o "Chinese" SecLanguagesChinese
+    CreateDirectory "$INSTDIR\zh-CN"
+    SetOutPath "$INSTDIR\zh-CN"
+    File "TransmissionClientNew\bin\Release\zh-CN\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Czech" SecLanguagesCzech
+    CreateDirectory "$INSTDIR\cs-CZ"
+    SetOutPath "$INSTDIR\cs-CZ"
+    File "TransmissionClientNew\bin\Release\cs-CZ\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Danish" SecLanguagesDanish
+    CreateDirectory "$INSTDIR\da-DK"
+    SetOutPath "$INSTDIR\da-DK"
+    File "TransmissionClientNew\bin\Release\da-DK\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "French" SecLanguagesFrench
+    CreateDirectory "$INSTDIR\fr-FR"
+    SetOutPath "$INSTDIR\fr-FR"
+    File "TransmissionClientNew\bin\Release\fr-FR\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "German" SecLanguagesGerman
+    CreateDirectory "$INSTDIR\de-DE"
+    SetOutPath "$INSTDIR\de-DE"
+    File "TransmissionClientNew\bin\Release\de-DE\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Hungarian" SecLanguagesHungarian
+    CreateDirectory "$INSTDIR\hu-HU"
+    SetOutPath "$INSTDIR\hu-HU"
+    File "TransmissionClientNew\bin\Release\hu-HU\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Korean" SecLanguagesKorean
+    CreateDirectory "$INSTDIR\ko-KR"
+    SetOutPath "$INSTDIR\ko-KR"
+    File "TransmissionClientNew\bin\Release\ko-KR\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Polish" SecLanguagesPolish
+    CreateDirectory "$INSTDIR\pl-PL"
+    SetOutPath "$INSTDIR\pl-PL"
+    File "TransmissionClientNew\bin\Release\pl-PL\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Russian" SecLanguagesRussian
+    CreateDirectory "$INSTDIR\ru-RU"
+    SetOutPath "$INSTDIR\ru-RU"
+    File "TransmissionClientNew\bin\Release\ru-RU\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Spanish" SecLanguagesSpanish
+    CreateDirectory "$INSTDIR\es-ES"
+    SetOutPath "$INSTDIR\es-ES"
+    File "TransmissionClientNew\bin\Release\es-ES\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Taiwanese" SecLanguagesTaiwanese
+    CreateDirectory "$INSTDIR\zh-TW"
+    SetOutPath "$INSTDIR\zh-TW"
+    File "TransmissionClientNew\bin\Release\zh-TW\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Turkish" SecLanguagesTurkish
+    CreateDirectory "$INSTDIR\tr-TR"
+    SetOutPath "$INSTDIR\tr-TR"
+    File "TransmissionClientNew\bin\Release\tr-TR\Transmission Remote.resources.dll"
+  SectionEnd
 
-Section /o "Korean translation"
-  CreateDirectory "$INSTDIR\ko-KR"
-  SetOutPath "$INSTDIR\ko-KR"
-  File "TransmissionClientNew\bin\Release\ko-KR\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Polish translation"
-  CreateDirectory "$INSTDIR\pl-PL"
-  SetOutPath "$INSTDIR\pl-PL"
-  File "TransmissionClientNew\bin\Release\pl-PL\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Russian translation"
-  CreateDirectory "$INSTDIR\ru-RU"
-  SetOutPath "$INSTDIR\ru-RU"
-  File "TransmissionClientNew\bin\Release\ru-RU\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Spanish translation"
-  CreateDirectory "$INSTDIR\es-ES"
-  SetOutPath "$INSTDIR\es-ES"
-  File "TransmissionClientNew\bin\Release\es-ES\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Taiwanese translation"
-  CreateDirectory "$INSTDIR\zh-TW"
-  SetOutPath "$INSTDIR\zh-TW"
-  File "TransmissionClientNew\bin\Release\zh-TW\Transmission Remote.resources.dll"
-SectionEnd
-
-Section /o "Turkish translation"
-  CreateDirectory "$INSTDIR\tr-TR"
-  SetOutPath "$INSTDIR\tr-TR"
-  File "TransmissionClientNew\bin\Release\tr-TR\Transmission Remote.resources.dll"
-SectionEnd
+SectionGroupEnd
 
 ;--------------------------------
 
 ; Uninstaller
 
 Section "Uninstall"
+
+  ; Unregister File Association
+  ${unregisterExtension} ".torrent" "Transmission Remote Torrent"
   
   ; Remove registry keys
   DeleteRegKey HKLM SOFTWARE\TransmissionRemote
@@ -186,10 +254,15 @@ Section "Uninstall"
   Delete "$INSTDIR\cs-CZ\Transmission Remote.resources.dll"
 
   ; Remove shortcuts, if any
-  Delete "$SMPROGRAMS\Transmission Remote\*.*"
+  !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
+  SetShellVarContext current
+  Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
+  RMDir "$SMPROGRAMS\$StartMenuFolder"
+  SetShellVarContext all
+  Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
+  RMDir "$SMPROGRAMS\$StartMenuFolder"
 
   ; Remove directories used
-  RMDir "$SMPROGRAMS\Transmission Remote"
   RMDir "$INSTDIR\da-DK"
   RMDir "$INSTDIR\de-DE"
   RMDir "$INSTDIR\fr-FR"
@@ -204,4 +277,25 @@ Section "Uninstall"
   RMDir "$INSTDIR\cs-CZ"
   RMDir "$INSTDIR"
 
+  DeleteRegKey /ifempty HKCU "Software\TransmissionRemote"
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Transmission Remote"
+
 SectionEnd
+
+!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecTransmissionRemote} $(DESC_SecTransmissionRemote)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecDesktopIcon} $(DESC_SecDesktopIcon)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecFiletypeAssociations} $(DESC_SecFiletypeAssociations)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecGeoIPDatabase} $(DESC_SecGeoIPDatabase)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecLanguages} $(DESC_SecLanguages)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecRegiterTorrent} $(DESC_SecRegiterTorrent)
+!insertmacro MUI_FUNCTION_DESCRIPTION_END
+
+Function .onInit
+  !insertmacro MUI_LANGDLL_DISPLAY
+  ${If} ${RunningX64}
+      StrCpy $INSTDIR "$PROGRAMFILES64\${ProgramFilesDir}"
+  ${Else}
+      StrCpy $INSTDIR "$PROGRAMFILES\${ProgramFilesDir}"
+  ${Endif}
+FunctionEnd
