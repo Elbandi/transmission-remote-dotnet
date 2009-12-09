@@ -51,10 +51,9 @@ namespace TransmissionRemoteDotnet
             this.columnHeader30 = new System.Windows.Forms.ColumnHeader();
             this.torrentTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.generalTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.downloadProgressLabel = new System.Windows.Forms.Label();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.progressOrPiecesPanel = new System.Windows.Forms.Panel();
             this.piecesGraph = new TransmissionRemoteDotnet.PiecesGraph();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
@@ -218,15 +217,8 @@ namespace TransmissionRemoteDotnet
             this.mainVerticalSplitContainer.SuspendLayout();
             this.torrentTabControl.SuspendLayout();
             this.generalTabPage.SuspendLayout();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
+            this.generalTableLayoutPanel.SuspendLayout();
+            this.progressOrPiecesPanel.SuspendLayout();
             this.generalTorrentNameGroupBox.SuspendLayout();
             this.trackersTabPage.SuspendLayout();
             this.trackersTorrentNameGroupBox.SuspendLayout();
@@ -401,59 +393,31 @@ namespace TransmissionRemoteDotnet
             // 
             // generalTabPage
             // 
-            this.generalTabPage.Controls.Add(this.splitContainer3);
+            this.generalTabPage.Controls.Add(this.generalTableLayoutPanel);
             resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             this.generalTabPage.UseVisualStyleBackColor = true;
             // 
-            // splitContainer3
+            // generalTableLayoutPanel
             // 
-            resources.ApplyResources(this.splitContainer3, "splitContainer3");
-            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.splitContainer4);
-            // 
-            // splitContainer3.Panel2
-            // 
-            resources.ApplyResources(this.splitContainer3.Panel2, "splitContainer3.Panel2");
-            this.splitContainer3.Panel2.Controls.Add(this.generalTorrentNameGroupBox);
-            // 
-            // splitContainer4
-            // 
-            resources.ApplyResources(this.splitContainer4, "splitContainer4");
-            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.downloadProgressLabel);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
+            resources.ApplyResources(this.generalTableLayoutPanel, "generalTableLayoutPanel");
+            this.generalTableLayoutPanel.Controls.Add(this.downloadProgressLabel, 0, 0);
+            this.generalTableLayoutPanel.Controls.Add(this.progressOrPiecesPanel, 1, 0);
+            this.generalTableLayoutPanel.Controls.Add(this.percentageLabel, 2, 0);
+            this.generalTableLayoutPanel.Controls.Add(this.generalTorrentNameGroupBox, 0, 1);
+            this.generalTableLayoutPanel.Name = "generalTableLayoutPanel";
             // 
             // downloadProgressLabel
             // 
             resources.ApplyResources(this.downloadProgressLabel, "downloadProgressLabel");
             this.downloadProgressLabel.Name = "downloadProgressLabel";
             // 
-            // splitContainer5
+            // progressOrPiecesPanel
             // 
-            resources.ApplyResources(this.splitContainer5, "splitContainer5");
-            this.splitContainer5.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.piecesGraph);
-            this.splitContainer5.Panel1.Controls.Add(this.progressBar);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.percentageLabel);
+            this.progressOrPiecesPanel.Controls.Add(this.piecesGraph);
+            this.progressOrPiecesPanel.Controls.Add(this.progressBar);
+            resources.ApplyResources(this.progressOrPiecesPanel, "progressOrPiecesPanel");
+            this.progressOrPiecesPanel.Name = "progressOrPiecesPanel";
             // 
             // piecesGraph
             // 
@@ -477,6 +441,7 @@ namespace TransmissionRemoteDotnet
             // generalTorrentNameGroupBox
             // 
             resources.ApplyResources(this.generalTorrentNameGroupBox, "generalTorrentNameGroupBox");
+            this.generalTableLayoutPanel.SetColumnSpan(this.generalTorrentNameGroupBox, 3);
             this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabelLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.hashLabel);
@@ -1580,18 +1545,9 @@ namespace TransmissionRemoteDotnet
             this.mainVerticalSplitContainer.ResumeLayout(false);
             this.torrentTabControl.ResumeLayout(false);
             this.generalTabPage.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
-            this.splitContainer3.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel1.PerformLayout();
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            this.splitContainer4.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            this.splitContainer5.Panel2.PerformLayout();
-            this.splitContainer5.ResumeLayout(false);
+            this.generalTableLayoutPanel.ResumeLayout(false);
+            this.generalTableLayoutPanel.PerformLayout();
+            this.progressOrPiecesPanel.ResumeLayout(false);
             this.generalTorrentNameGroupBox.ResumeLayout(false);
             this.generalTorrentNameGroupBox.PerformLayout();
             this.trackersTabPage.ResumeLayout(false);
@@ -1678,11 +1634,12 @@ namespace TransmissionRemoteDotnet
         public TransmissionRemoteDotnet.ListViewNF filesListView;
         public System.Windows.Forms.Timer filesTimer;
         private System.Windows.Forms.TabPage generalTabPage;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.SplitContainer splitContainer5;
+        private System.Windows.Forms.TableLayoutPanel generalTableLayoutPanel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Panel progressOrPiecesPanel;
         private TransmissionRemoteDotnet.SelectableLabel percentageLabel;
+        private TransmissionRemoteDotnet.PiecesGraph piecesGraph;
+        private System.Windows.Forms.Label downloadProgressLabel;
         public System.Windows.Forms.TabControl torrentTabControl;
         private TransmissionRemoteDotnet.ListViewNF trackersListView;
         private System.Windows.Forms.ColumnHeader columnHeader22;
@@ -1720,7 +1677,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem projectSiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showErrorLogToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private TransmissionRemoteDotnet.PiecesGraph piecesGraph;
         private System.ComponentModel.BackgroundWorker refreshWorker;
         private System.Windows.Forms.TabPage speedTabPage;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -1791,7 +1747,6 @@ namespace TransmissionRemoteDotnet
         private SelectableLabel startedAtLabel;
         private SelectableLabel uploadLimitLabel;
         private SelectableLabel uploadRateLabel;
-        private System.Windows.Forms.Label downloadProgressLabel;
         private SelectableLabel timeElapsedLabel;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;

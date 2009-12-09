@@ -160,7 +160,7 @@
     <value>0, 0</value>
   </data>
   <data name="stateListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 256</value>
+    <value>109, 238</value>
   </data>
   <data name="stateListBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -259,7 +259,7 @@
     <value>0, 0</value>
   </data>
   <data name="torrentListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>861, 260</value>
+    <value>861, 245</value>
   </data>
   <data name="torrentListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -289,7 +289,7 @@
     <value>1</value>
   </data>
   <data name="mainVerticalSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 260</value>
+    <value>974, 245</value>
   </data>
   <data name="mainVerticalSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
     <value>109</value>
@@ -321,41 +321,29 @@
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="generalTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="downloadProgressLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="splitContainer3.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="splitContainer4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer4.IsSplitterFixed" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="splitContainer4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="downloadProgressLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="downloadProgressLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="downloadProgressLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
+    <value>3, 0</value>
   </data>
   <data name="downloadProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
+    <value>74, 31</value>
   </data>
   <data name="downloadProgressLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Pieces: </value>
+  </data>
+  <data name="downloadProgressLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;downloadProgressLabel.Name" xml:space="preserve">
     <value>downloadProgressLabel</value>
@@ -364,31 +352,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;downloadProgressLabel.Parent" xml:space="preserve">
-    <value>splitContainer4.Panel1</value>
+    <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadProgressLabel.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel1.Name" xml:space="preserve">
-    <value>splitContainer4.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer4</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer5.IsSplitterFixed" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="splitContainer5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="piecesGraph.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -400,10 +367,10 @@
     <value>0, 0</value>
   </data>
   <data name="piecesGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 25</value>
+    <value>794, 25</value>
   </data>
   <data name="piecesGraph.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Name" xml:space="preserve">
     <value>piecesGraph</value>
@@ -412,7 +379,7 @@
     <value>TransmissionRemoteDotnet.PiecesGraph, Transmission Remote, Version=3.12.3626.37165, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Parent" xml:space="preserve">
-    <value>splitContainer5.Panel1</value>
+    <value>progressOrPiecesPanel</value>
   </data>
   <data name="&gt;&gt;piecesGraph.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -430,10 +397,10 @@
     <value>0, 0</value>
   </data>
   <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 25</value>
+    <value>794, 25</value>
   </data>
   <data name="progressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="progressBar.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -445,37 +412,52 @@
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;progressBar.Parent" xml:space="preserve">
-    <value>splitContainer5.Panel1</value>
+    <value>progressOrPiecesPanel</value>
   </data>
   <data name="&gt;&gt;progressBar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;splitContainer5.Panel1.Name" xml:space="preserve">
-    <value>splitContainer5.Panel1</value>
+  <data name="progressOrPiecesPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;splitContainer5.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="progressOrPiecesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 3</value>
   </data>
-  <data name="&gt;&gt;splitContainer5.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer5</value>
+  <data name="progressOrPiecesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 25</value>
   </data>
-  <data name="&gt;&gt;splitContainer5.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="progressOrPiecesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;progressOrPiecesPanel.Name" xml:space="preserve">
+    <value>progressOrPiecesPanel</value>
+  </data>
+  <data name="&gt;&gt;progressOrPiecesPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressOrPiecesPanel.Parent" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;progressOrPiecesPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="percentageLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="percentageLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="percentageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
+    <value>883, 3</value>
   </data>
   <data name="percentageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>74, 13</value>
   </data>
   <data name="percentageLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
-    <value>This is selectable text</value>
+    <value>_</value>
   </data>
   <data name="percentageLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -487,91 +469,10 @@
     <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3626.37165, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;percentageLabel.Parent" xml:space="preserve">
-    <value>splitContainer5.Panel2</value>
+    <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;percentageLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Panel2.Name" xml:space="preserve">
-    <value>splitContainer5.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer5</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>877, 25</value>
-  </data>
-  <data name="splitContainer5.SplitterDistance" type="System.Int32, mscorlib">
-    <value>801</value>
-  </data>
-  <data name="splitContainer5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Name" xml:space="preserve">
-    <value>splitContainer5</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.Parent" xml:space="preserve">
-    <value>splitContainer4.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel2.Name" xml:space="preserve">
-    <value>splitContainer4.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer4</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 25</value>
-  </data>
-  <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="splitContainer4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Name" xml:space="preserve">
-    <value>splitContainer4</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.Parent" xml:space="preserve">
-    <value>splitContainer3.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.Name" xml:space="preserve">
-    <value>splitContainer3.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer3.Panel2.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>2</value>
   </data>
   <data name="generalTorrentNameGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1675,10 +1576,10 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="generalTorrentNameGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>3, 34</value>
   </data>
   <data name="generalTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 193</value>
+    <value>954, 200</value>
   </data>
   <data name="generalTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1690,43 +1591,43 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;generalTorrentNameGroupBox.Parent" xml:space="preserve">
-    <value>splitContainer3.Panel2</value>
+    <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;generalTorrentNameGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel2.Name" xml:space="preserve">
-    <value>splitContainer3.Panel2</value>
+  <data name="generalTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="generalTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer3</value>
+  <data name="generalTableLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.Panel2.ZOrder" xml:space="preserve">
+  <data name="generalTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="generalTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>960, 237</value>
+  </data>
+  <data name="generalTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 222</value>
+  <data name="&gt;&gt;generalTableLayoutPanel.Name" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
   </data>
-  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="&gt;&gt;generalTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Name" xml:space="preserve">
-    <value>splitContainer3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;generalTableLayoutPanel.Parent" xml:space="preserve">
     <value>generalTabPage</value>
   </data>
-  <data name="&gt;&gt;splitContainer3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;generalTableLayoutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="generalTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="downloadProgressLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="progressOrPiecesPanel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="percentageLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="generalTorrentNameGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,80,Percent,100,Absolute,80" /&gt;&lt;Rows Styles="Absolute,31,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
@@ -1735,7 +1636,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 228</value>
+    <value>966, 243</value>
   </data>
   <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1780,7 +1681,7 @@
     <value>3, 16</value>
   </data>
   <data name="trackersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 203</value>
+    <value>954, 218</value>
   </data>
   <data name="trackersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1804,7 +1705,7 @@
     <value>3, 3</value>
   </data>
   <data name="trackersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 222</value>
+    <value>960, 237</value>
   </data>
   <data name="trackersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1828,7 +1729,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="trackersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 228</value>
+    <value>966, 243</value>
   </data>
   <data name="trackersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1891,7 +1792,7 @@
     <value>3, 16</value>
   </data>
   <data name="filesListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 203</value>
+    <value>954, 218</value>
   </data>
   <data name="filesListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1915,7 +1816,7 @@
     <value>3, 3</value>
   </data>
   <data name="filesTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 222</value>
+    <value>960, 237</value>
   </data>
   <data name="filesTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1939,7 +1840,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="filesTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 228</value>
+    <value>966, 243</value>
   </data>
   <data name="filesTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2011,7 +1912,7 @@
     <value>3, 16</value>
   </data>
   <data name="peersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 203</value>
+    <value>954, 218</value>
   </data>
   <data name="peersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2035,7 +1936,7 @@
     <value>3, 3</value>
   </data>
   <data name="peersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 222</value>
+    <value>960, 237</value>
   </data>
   <data name="peersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2059,7 +1960,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="peersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 228</value>
+    <value>966, 243</value>
   </data>
   <data name="peersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2299,7 +2200,7 @@
     <value>0, 0</value>
   </data>
   <data name="speedGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 168</value>
+    <value>954, 183</value>
   </data>
   <data name="speedGraph.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2332,7 +2233,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 203</value>
+    <value>954, 218</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2359,7 +2260,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 222</value>
+    <value>960, 237</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2386,7 +2287,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="speedTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 228</value>
+    <value>966, 243</value>
   </data>
   <data name="speedTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2419,7 +2320,7 @@
     <value>0, 0</value>
   </data>
   <data name="torrentTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 255</value>
+    <value>974, 270</value>
   </data>
   <data name="torrentTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2449,13 +2350,13 @@
     <value>1</value>
   </data>
   <data name="torrentAndTabsSplitContainer.Panel2MinSize" type="System.Int32, mscorlib">
-    <value>250</value>
+    <value>270</value>
   </data>
   <data name="torrentAndTabsSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>974, 519</value>
   </data>
   <data name="torrentAndTabsSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>260</value>
+    <value>245</value>
   </data>
   <data name="torrentAndTabsSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
