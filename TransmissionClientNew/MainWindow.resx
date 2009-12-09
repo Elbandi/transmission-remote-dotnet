@@ -2040,18 +2040,6 @@
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 sec</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 sec</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 min</value>
-  </data>
   <data name="speedResComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>69, 6</value>
   </data>

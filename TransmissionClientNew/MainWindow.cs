@@ -105,7 +105,8 @@ namespace TransmissionRemoteDotnet
             peersListView.ListViewItemSorter = peersLvwColumnSorter = new PeersListViewItemSorter();
             InitStaticContextMenus();
             InitStateListBox();
-            speedResComboBox.SelectedIndex = 2;
+            speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
+            speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
             List<string> profiles = settings.Profiles;
             for (int i = 0; i < profiles.Count; i++)
@@ -752,6 +753,15 @@ namespace TransmissionRemoteDotnet
                     item.SubItems[5].Text = (bool)item.SubItems[5].Tag ? OtherStrings.No : OtherStrings.Yes;
                     item.SubItems[6].Text = Toolbox.FormatPriority((JsonNumber)item.SubItems[6].Tag);
                 }
+                foreach (ListViewItem item in torrentListView.Items)
+                {
+                    Torrent t = (Torrent)item.Tag;
+                    item.SubItems[3].Text = t.Status;
+                }
+                int oldindex = speedResComboBox.SelectedIndex;
+                speedResComboBox.Items.Clear();
+                speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
+                speedResComboBox.SelectedIndex = Math.Min(oldindex, speedResComboBox.Items.Count - 1);
                 filesListView_SelectedIndexChanged(null, null);
                 Program_onTorrentsUpdated(null, null);
                 this.Refresh();

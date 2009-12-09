@@ -934,11 +934,6 @@ namespace TransmissionRemoteDotnet
             // 
             this.speedResComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.speedResComboBox.FormattingEnabled = true;
-            this.speedResComboBox.Items.AddRange(new object[] {
-            resources.GetString("speedResComboBox.Items"),
-            resources.GetString("speedResComboBox.Items1"),
-            resources.GetString("speedResComboBox.Items2"),
-            resources.GetString("speedResComboBox.Items3")});
             resources.ApplyResources(this.speedResComboBox, "speedResComboBox");
             this.speedResComboBox.Name = "speedResComboBox";
             this.speedResComboBox.SelectedIndexChanged += new System.EventHandler(this.SpeedResComboBox_SelectedIndexChanged);
@@ -1205,9 +1200,9 @@ namespace TransmissionRemoteDotnet
             // 
             // connectToolStripMenuItem
             // 
-            resources.ApplyResources(this.connectToolStripMenuItem, "connectToolStripMenuItem");
             this.connectToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.connect_creating;
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
+            resources.ApplyResources(this.connectToolStripMenuItem, "connectToolStripMenuItem");
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectButton_Click);
             // 
             // disconnectToolStripMenuItem
@@ -1231,9 +1226,9 @@ namespace TransmissionRemoteDotnet
             // 
             // addTorrentWithOptionsToolStripMenuItem
             // 
+            resources.ApplyResources(this.addTorrentWithOptionsToolStripMenuItem, "addTorrentWithOptionsToolStripMenuItem");
             this.addTorrentWithOptionsToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.edit_add;
             this.addTorrentWithOptionsToolStripMenuItem.Name = "addTorrentWithOptionsToolStripMenuItem";
-            resources.ApplyResources(this.addTorrentWithOptionsToolStripMenuItem, "addTorrentWithOptionsToolStripMenuItem");
             this.addTorrentWithOptionsToolStripMenuItem.Click += new System.EventHandler(this.addTorrentWithOptionsToolStripMenuItem_Click);
             // 
             // addTorrentFromUrlToolStripMenuItem
@@ -1266,9 +1261,9 @@ namespace TransmissionRemoteDotnet
             // 
             // localSettingsToolStripMenuItem
             // 
-            resources.ApplyResources(this.localSettingsToolStripMenuItem, "localSettingsToolStripMenuItem");
             this.localSettingsToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.configure;
             this.localSettingsToolStripMenuItem.Name = "localSettingsToolStripMenuItem";
+            resources.ApplyResources(this.localSettingsToolStripMenuItem, "localSettingsToolStripMenuItem");
             this.localSettingsToolStripMenuItem.Click += new System.EventHandler(this.localConfigureButton_Click);
             // 
             // remoteSettingsToolStripMenuItem
@@ -1307,8 +1302,8 @@ namespace TransmissionRemoteDotnet
             this.toolStripSeparator5,
             this.startAllToolStripMenuItem,
             this.stopAllToolStripMenuItem});
-            this.torrentToolStripMenuItem.Name = "torrentToolStripMenuItem";
             resources.ApplyResources(this.torrentToolStripMenuItem, "torrentToolStripMenuItem");
+            this.torrentToolStripMenuItem.Name = "torrentToolStripMenuItem";
             this.torrentToolStripMenuItem.Click += new System.EventHandler(this.reannounceButton_ButtonClick);
             // 
             // findToolStripMenuItem

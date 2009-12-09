@@ -862,6 +862,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5 sec|10 sec|30 sec|5 min.
+        /// </summary>
+        internal static string SpeedResolutions {
+            get {
+                return ResourceManager.GetString("SpeedResolutions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
         internal static string Start {
