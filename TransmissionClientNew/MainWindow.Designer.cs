@@ -154,6 +154,8 @@ namespace TransmissionRemoteDotnet
             this.openNetworkShareButton = new System.Windows.Forms.ToolStripButton();
             this.remoteCmdButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.AltSpeedButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.localConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.remoteConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
@@ -1008,6 +1010,8 @@ namespace TransmissionRemoteDotnet
             this.openNetworkShareButton,
             this.remoteCmdButton,
             this.toolStripSeparator2,
+            this.AltSpeedButton,
+            this.toolStripSeparator3,
             this.localConfigureButton,
             this.remoteConfigureButton,
             this.sessionStatsButton});
@@ -1147,6 +1151,19 @@ namespace TransmissionRemoteDotnet
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // AltSpeedButton
+            // 
+            this.AltSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AltSpeedButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off;
+            resources.ApplyResources(this.AltSpeedButton, "AltSpeedButton");
+            this.AltSpeedButton.Name = "AltSpeedButton";
+            this.AltSpeedButton.Click += new System.EventHandler(this.AltSpeedButton_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // localConfigureButton
             // 
@@ -1737,5 +1754,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label hashLabelLabel;
         private SelectableLabel piecesInfoLabel;
         private System.Windows.Forms.Label piecesInfoLabelLabel;
+        private System.Windows.Forms.ToolStripButton AltSpeedButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }

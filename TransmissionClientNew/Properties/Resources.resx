@@ -193,6 +193,12 @@
   <data name="netconfigure" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\netconfigure.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="altspeed_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gnome-logo_l.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="altspeed_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gnome-logo_d.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_16x16_ledpurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16x16_ledpurple.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

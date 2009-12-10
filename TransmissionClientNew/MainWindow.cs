@@ -539,7 +539,14 @@ namespace TransmissionRemoteDotnet
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
             sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            AltSpeedButton.Visible = toolStripSeparator3.Visible = connected && dd.RpcVersion >= 5;
             addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
+        }
+
+        public void SetAltSpeedButtonState(bool enabled)
+        {
+            AltSpeedButton.Image = enabled ? global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on : global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off;
+            AltSpeedButton.Tag = enabled;
         }
 
         public void SetRemoteCmdButtonVisible(bool connected)
@@ -1462,7 +1469,7 @@ namespace TransmissionRemoteDotnet
             }
             request.Put(ProtocolConstants.KEY_ARGUMENTS, arguments);
             request.Put(ProtocolConstants.KEY_TAG, (int)ResponseTag.DoNothing);
-            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed += 
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed +=
                 delegate(object sender, ResultEventArgs e)
                 {
                     if (e.Result.GetType() != typeof(ErrorCommand))
@@ -2048,6 +2055,21 @@ namespace TransmissionRemoteDotnet
                 {
                     FindDialog.Focus();
                 }
+        }
+
+        private void AltSpeedButton_Click(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            arguments.Put(ProtocolConstants.FIELD_ALTSPEEDENABLED, !(bool)AltSpeedButton.Tag);
+            CommandFactory.RequestAsync(request).Completed +=
+                delegate(object dsender, ResultEventArgs de)
+                {
+                    if (de.Result.GetType() != typeof(ErrorCommand) && !sessionWebClient.IsBusy)
+                    {
+                        sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
+                    }
+                };
         }
     }
 }

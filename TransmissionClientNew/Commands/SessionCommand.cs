@@ -108,6 +108,10 @@ namespace TransmissionRemoteDotnet.Commmands
                         Program.UploadArgs = null;
                     }
                 }
+                else
+                {
+                    form.SetAltSpeedButtonState(Toolbox.ToBool(Program.DaemonDescriptor.SessionData[ProtocolConstants.FIELD_ALTSPEEDENABLED]));
+                }
             }
         }
     }
