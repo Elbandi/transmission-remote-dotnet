@@ -123,9 +123,6 @@
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
   </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote</value>
   </data>
@@ -443,15 +440,6 @@
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 초</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 초</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 분</value>
   </data>
   <data name="speedTabPage.Text" xml:space="preserve">
     <value>속도</value>
