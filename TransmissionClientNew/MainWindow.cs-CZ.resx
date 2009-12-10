@@ -120,18 +120,6 @@
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
     <value>Find...</value>
   </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 sec</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 sec</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 min</value>
-  </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>

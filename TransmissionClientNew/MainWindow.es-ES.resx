@@ -123,9 +123,6 @@
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
   </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
-  </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>Nombre</value>
   </data>
@@ -290,15 +287,6 @@
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Resolución:</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 seg</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 seg</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 min</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Bajada</value>
