@@ -123,9 +123,6 @@
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
   </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
-  </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
     <value>Start torrent(s)</value>
   </data>
@@ -323,15 +320,6 @@
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Auflösung:</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 Sek</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 Sek</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 Min</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Down</value>
