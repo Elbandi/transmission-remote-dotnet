@@ -225,7 +225,7 @@ namespace TransmissionRemoteDotnet
                 checkBox2.Checked ? (int)numericUpDown1.Value : -1
             );
             Program.Settings.Current.AddDestinationPath(comboBox1.Text);
-            Program.Form.CreateUploadWorker().RunWorkerAsync(request);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request));
             this.Close();
         }
 
