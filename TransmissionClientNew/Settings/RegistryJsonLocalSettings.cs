@@ -10,7 +10,7 @@ namespace TransmissionRemoteDotnet.Settings
 {
     public class RegistryJsonLocalSettingsStore : ILocalSettingsStore
     {
-        public string REGISTRY_KEY_ROOT = @"Software\TransmissionRemote2";
+        public string REGISTRY_KEY_ROOT = @"Software\TransmissionRemote\Settings";
 
         protected RegistryKey GetRootKey(bool writeable)
         {
