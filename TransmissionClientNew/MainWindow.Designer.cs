@@ -199,11 +199,9 @@ namespace TransmissionRemoteDotnet
             this.checkForNewVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flagsImageList = new System.Windows.Forms.ImageList(this.components);
-            this.refreshWorker = new System.ComponentModel.BackgroundWorker();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.filesTimer = new System.Windows.Forms.Timer(this.components);
-            this.filesWorker = new System.ComponentModel.BackgroundWorker();
             this.refreshElapsedTimer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -1477,11 +1475,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.flagsImageList, "flagsImageList");
             this.flagsImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // refreshWorker
-            // 
-            this.refreshWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.refreshWorker_DoWork);
-            this.refreshWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.refreshWorker_RunWorkerCompleted);
-            // 
             // notifyIcon
             // 
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
@@ -1494,11 +1487,6 @@ namespace TransmissionRemoteDotnet
             // filesTimer
             // 
             this.filesTimer.Tick += new System.EventHandler(this.filesTimer_Tick);
-            // 
-            // filesWorker
-            // 
-            this.filesWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.filesWorker_DoWork);
-            this.filesWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.filesWorker_RunWorkerCompleted);
             // 
             // refreshElapsedTimer
             // 
@@ -1625,7 +1613,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem localSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteSettingsToolStripMenuItem;
         public TransmissionRemoteDotnet.GListBox stateListBox;
-        private System.ComponentModel.BackgroundWorker filesWorker;
         public TransmissionRemoteDotnet.ListViewNF filesListView;
         public System.Windows.Forms.Timer filesTimer;
         private System.Windows.Forms.TabPage generalTabPage;
@@ -1672,7 +1659,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem projectSiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showErrorLogToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.ComponentModel.BackgroundWorker refreshWorker;
         private System.Windows.Forms.TabPage speedTabPage;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
