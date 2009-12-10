@@ -291,6 +291,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap welcomefinish {
+            get {
+                object obj = ResourceManager.GetObject("welcomefinish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap xmag16 {
             get {
                 object obj = ResourceManager.GetObject("xmag16", resourceCulture);

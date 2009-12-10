@@ -884,6 +884,7 @@
     <None Include="Resources\player_play_all.png" />
     <None Include="Resources\error16.png" />
     <None Include="Resources\xmag16.png" />
+    <None Include="Resources\welcomefinish.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
