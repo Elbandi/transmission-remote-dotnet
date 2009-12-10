@@ -1388,43 +1388,49 @@ namespace TransmissionRemoteDotnet
             ((ICommand)e.Result).Execute();
         }
 
-        private void SetFilesItemState(int column, string data)
+        private void SetFilesItemState(string datatype, int column)
         {
+            JsonArray array = new JsonArray();
             lock (filesListView)
             {
-                filesListView.SuspendLayout();
-                foreach (ListViewItem item in filesListView.SelectedItems)
+                lock (fileItems)
                 {
-                    item.SubItems[column].Text = data;
+                    foreach (ListViewItem item in filesListView.SelectedItems)
+                    {
+                        int i = fileItems.IndexOf(item);
+                        if (i != -1)
+                        {
+                            array.Add(i);
+                        }
+                    }
                 }
-                filesListView.ResumeLayout();
             }
-            DispatchFilesUpdate();
+            DispatchFilesUpdate(datatype, array);
         }
 
         private void SetHighPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(6, OtherStrings.High);
+            SetFilesItemState(ProtocolConstants.PRIORITY_HIGH, 6);
         }
 
         private void SetLowPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(6, OtherStrings.Low);
+            SetFilesItemState(ProtocolConstants.PRIORITY_LOW, 6);
         }
 
         private void SetNormalPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(6, OtherStrings.Normal);
+            SetFilesItemState(ProtocolConstants.PRIORITY_NORMAL, 6);
         }
 
         private void SetUnwantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(5, OtherStrings.Yes);
+            SetFilesItemState(ProtocolConstants.FILES_UNWANTED, 5);
         }
 
         private void SetWantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(5, OtherStrings.No);
+            SetFilesItemState(ProtocolConstants.FILES_WANTED, 5);
         }
 
         public void SetAllStateCounters()
@@ -1511,13 +1517,8 @@ namespace TransmissionRemoteDotnet
             filesListView.ContextMenu = filesListView.SelectedItems.Count > 0 ? this.fileSelectionMenu : this.noFileSelectionMenu;
         }
 
-        private void DispatchFilesUpdate()
+        private void DispatchFilesUpdate(string datatype, JsonArray FileList)
         {
-            JsonArray high = new JsonArray();
-            JsonArray normal = new JsonArray();
-            JsonArray low = new JsonArray();
-            JsonArray wanted = new JsonArray();
-            JsonArray unwanted = new JsonArray();
             Torrent t;
             lock (torrentListView)
             {
@@ -1527,87 +1528,31 @@ namespace TransmissionRemoteDotnet
                 }
                 t = (Torrent)torrentListView.SelectedItems[0].Tag;
             }
-            lock (fileItems)
-            {
-                for (int i = 0; i < fileItems.Count; i++)
-                {
-                    ListViewItem item = fileItems[i];
-                    if (item.SubItems[5].Text.Equals(OtherStrings.Yes))
-                    {
-                        unwanted.Add(i);
-                    }
-                    else
-                    {
-                        wanted.Add(i);
-                    }
-                    if (item.SubItems[6].Text.Equals(OtherStrings.High))
-                    {
-                        high.Add(i);
-                    }
-                    else if (item.SubItems[6].Text.Equals(OtherStrings.Normal))
-                    {
-                        normal.Add(i);
-                    }
-                    else if (item.SubItems[6].Text.Equals(OtherStrings.Low))
-                    {
-                        low.Add(i);
-                    }
-                }
-            }
             JsonObject request = new JsonObject();
             request.Put(ProtocolConstants.KEY_METHOD, ProtocolConstants.METHOD_TORRENTSET);
             JsonObject arguments = new JsonObject();
             JsonArray ids = new JsonArray();
             ids.Put(t.Id);
             arguments.Put(ProtocolConstants.KEY_IDS, ids);
-            if (high.Count == fileItems.Count)
+            if (FileList.Count == fileItems.Count)
             {
-                arguments.Put(ProtocolConstants.PRIORITY_HIGH, new JsonArray());
+                arguments.Put(datatype, new JsonArray());
             }
-            else if (high.Count > 0)
+            else if (FileList.Count > 0)
             {
-                arguments.Put(ProtocolConstants.PRIORITY_HIGH, high);
+                arguments.Put(datatype, FileList);
             }
-
-            if (normal.Count == fileItems.Count)
-            {
-                arguments.Put(ProtocolConstants.PRIORITY_NORMAL, new JsonArray());
-            }
-            else if (normal.Count > 0)
-            {
-                arguments.Put(ProtocolConstants.PRIORITY_NORMAL, normal);
-            }
-
-            if (low.Count == fileItems.Count)
-            {
-                arguments.Put(ProtocolConstants.PRIORITY_LOW, new JsonArray());
-            }
-            else if (low.Count > 0)
-            {
-                arguments.Put(ProtocolConstants.PRIORITY_LOW, low);
-            }
-
-            if (wanted.Count == fileItems.Count)
-            {
-                arguments.Put(ProtocolConstants.FILES_WANTED, new JsonArray());
-            }
-            else if (wanted.Count > 0)
-            {
-                arguments.Put(ProtocolConstants.FILES_WANTED, wanted);
-            }
-
-            if (unwanted.Count == fileItems.Count)
-            {
-                arguments.Put(ProtocolConstants.FILES_UNWANTED, new JsonArray());
-            }
-            else if (unwanted.Count > 0)
-            {
-                arguments.Put(ProtocolConstants.FILES_UNWANTED, unwanted);
-            }
-
             request.Put(ProtocolConstants.KEY_ARGUMENTS, arguments);
             request.Put(ProtocolConstants.KEY_TAG, (int)ResponseTag.DoNothing);
-            CreateActionWorker().RunWorkerAsync(request);
+            BackgroundWorker bw = CreateActionWorker();
+            bw.RunWorkerCompleted += delegate(object sender, RunWorkerCompletedEventArgs e)
+                 {
+                     if (e.Result.GetType() != typeof(ErrorCommand))
+                     {
+                         CreateActionWorker().RunWorkerAsync(Requests.FilesAndPriorities(t.Id));
+                     }
+                 };
+            bw.RunWorkerAsync(request);
         }
 
         // lock torrentListView BEFORE calling this method
@@ -1647,8 +1592,8 @@ namespace TransmissionRemoteDotnet
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRate;
-            seedersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
-            leechersLabel.Text = String.Format(Program.DaemonDescriptor.RpcVersion > 6 ? OtherStrings.XConnected : OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
+            seedersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
+            leechersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             ratioLabel.Text = t.LocalRatioString;
             progressBar.Value = (int)t.Percentage;
             if (t.Pieces != null)

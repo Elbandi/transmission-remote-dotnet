@@ -88,7 +88,7 @@ namespace TransmissionRemoteDotnet
             {
                 item.ForeColor = Color.Red;
             }
-            SeedersColumnFormat = Program.DaemonDescriptor.RpcVersion > 6 ? "{1}" : "{0} ({1})";
+            SeedersColumnFormat = "{0} ({1})";
             item.ToolTipText = item.Name;
             item.Tag = this;
             item.SubItems.Add(Toolbox.GetFileSize(this.SizeWhenDone));
@@ -386,6 +386,14 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public JsonArray TrackerStats
+        {
+            get
+            {
+                return (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
+            }
+        }
+
         public string Name
         {
             get
@@ -551,7 +559,21 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDERS]);
+                if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
+                {
+                    int seedersTotal = 0;
+                    foreach (JsonObject tracker in this.TrackerStats)
+                        seedersTotal += Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_SEEDERCOUNT]);
+                    return seedersTotal;
+                }
+                else if (info.Contains(ProtocolConstants.FIELD_SEEDERS))
+                {
+                    return Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDERS]);
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
 
@@ -567,7 +589,21 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return Toolbox.ToInt(info[ProtocolConstants.FIELD_LEECHERS]);
+                if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
+                {
+                    int leechersTotal = 0;
+                    foreach (JsonObject tracker in this.TrackerStats)
+                        leechersTotal += Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_LEECHERCOUNT]);
+                    return leechersTotal;
+                }
+                else if (info.Contains(ProtocolConstants.FIELD_LEECHERS))
+                {
+                    return Toolbox.ToInt(info[ProtocolConstants.FIELD_LEECHERS]);
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
 

@@ -31,7 +31,7 @@ namespace TransmissionRemoteDotnet.Commmands
         private bool first;
         private List<ICommand> uiUpdateBatch;
 #if !MONO
-        private ImageList imgList;
+        private static ImageList imgList = new ImageList();
 #endif
 
         public UpdateFilesCommand(JsonObject response)
@@ -70,11 +70,13 @@ namespace TransmissionRemoteDotnet.Commmands
             }
             JsonArray priorities = (JsonArray)torrent[ProtocolConstants.FIELD_PRIORITIES];
             JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
-            first = (priorities != null && wanted != null);
+            first = Program.Form.FileItems.Count == 0;
+            bool havepriority = (priorities != null && wanted != null);
             uiUpdateBatch = new List<ICommand>();
 #if !MONO
-            this.imgList = new ImageList();
             imgList.ColorDepth = ColorDepth.Depth32Bit;
+            if (first)
+                imgList.Images.Clear();
             int mainWindowHandle = 0;
             Program.Form.Invoke(new MethodInvoker(delegate()
             {
@@ -101,7 +103,10 @@ namespace TransmissionRemoteDotnet.Commmands
                     lock (form.FileItems)
                     {
                         if (i < form.FileItems.Count)
-                            uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted));
+                            if (havepriority)
+                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted));
+                            else
+                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], bytesCompleted));
                     }
                 }
             }
@@ -112,7 +117,7 @@ namespace TransmissionRemoteDotnet.Commmands
             MainWindow form = Program.Form;
             lock (form.filesListView)
             {
-                if (uiUpdateBatch == null || form.filesListView.Enabled)
+                if (uiUpdateBatch == null)
                 {
                     return;
                 }
