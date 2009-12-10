@@ -76,21 +76,21 @@ namespace TransmissionRemoteDotnet
             request.UserAgent = "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042523 Ubuntu/9.04 (jaunty) Firefox/3.0.10";
             if (x_transmission_session_id != null && authenticate)
                 request.Headers["X-Transmission-Session-Id"] = x_transmission_session_id;
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            Settings.TransmissionServer settings = Program.Settings.Current;
             if (settings.AuthEnabled && authenticate)
             {
-                request.Credentials = new NetworkCredential(settings.User, settings.Pass);
+                request.Credentials = new NetworkCredential(settings.Username, settings.Password);
                 request.PreAuthenticate = Program.DaemonDescriptor.Version < 1.40 || Program.DaemonDescriptor.Version >= 1.6;
             }
-            if (settings.ProxyMode == ProxyMode.Enabled)
+            if (settings.Proxy.ProxyMode == ProxyMode.Enabled)
             {
-                request.Proxy = new WebProxy(settings.ProxyHost, settings.ProxyPort);
-                if (settings.ProxyAuth)
+                request.Proxy = new WebProxy(settings.Proxy.Host, settings.Proxy.Port);
+                if (settings.Proxy.AuthEnabled)
                 {
-                    request.Proxy.Credentials = new NetworkCredential(settings.ProxyUser, settings.ProxyPass);
+                    request.Proxy.Credentials = new NetworkCredential(settings.Proxy.Username, settings.Proxy.Password);
                 }
             }
-            else if (settings.ProxyMode == ProxyMode.Disabled)
+            else if (settings.Proxy.ProxyMode == ProxyMode.Disabled)
             {
                 request.Proxy = null;
             }

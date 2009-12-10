@@ -149,7 +149,7 @@ namespace TransmissionRemoteDotnet
                         form.stateListBox.Items.Add(new GListBoxItem(item.SubItems[13].Text, 8));
                     }
                 }
-                if (LocalSettingsSingleton.Instance.StartedBalloon && this.updateSerial > 2)
+                if (Program.Settings.StartedBalloon && this.updateSerial > 2)
                 {
                     Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.Name, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
                 }
@@ -243,7 +243,7 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
-                if (LocalSettingsSingleton.Instance.CompletedBaloon
+                if (Program.Settings.CompletedBaloon
                     && form.notifyIcon.Visible == true
                     && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
                     && this.LeftUntilDone > 0
@@ -446,8 +446,8 @@ namespace TransmissionRemoteDotnet
             {
                 string downloadDir = this.DownloadDir;
                 string name = this.Name;
-                JsonObject mappings = LocalSettingsSingleton.Instance.SambaShareMappings;
-                foreach (string key in mappings.Names)
+                Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
+                foreach (string key in mappings.Keys)
                 {
                     if (downloadDir.StartsWith(key))
                         return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.Name);

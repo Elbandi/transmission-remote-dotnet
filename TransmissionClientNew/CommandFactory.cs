@@ -42,7 +42,7 @@ namespace TransmissionRemoteDotnet
         {
             TransmissionWebClient wc = new TransmissionWebClient(true);
             wc.UploadStringCompleted += new UploadStringCompletedEventHandler(wc_UploadStringCompleted);
-            wc.UploadStringAsync(new Uri(LocalSettingsSingleton.Instance.RpcUrl), null, data.ToString(), new TransmissonRequest(data, allowRecursion));
+            wc.UploadStringAsync(new Uri(Program.Settings.Current.RpcUrl), null, data.ToString(), new TransmissonRequest(data, allowRecursion));
             return wc;
         }
 
@@ -65,7 +65,7 @@ namespace TransmissionRemoteDotnet
                                 if (sessionid != null && sessionid.Length > 0)
                                 {
                                     TransmissionWebClient.X_transmission_session_id = sessionid;
-                                    (sender as TransmissionWebClient).UploadStringAsync(new Uri(LocalSettingsSingleton.Instance.RpcUrl), null, ((TransmissonRequest)e.UserState).data.ToString(), new TransmissonRequest(((TransmissonRequest)e.UserState).data, false));
+                                    (sender as TransmissionWebClient).UploadStringAsync(new Uri(Program.Settings.Current.RpcUrl), null, ((TransmissonRequest)e.UserState).data.ToString(), new TransmissonRequest(((TransmissonRequest)e.UserState).data, false));
                                     return;
                                 }
                             }

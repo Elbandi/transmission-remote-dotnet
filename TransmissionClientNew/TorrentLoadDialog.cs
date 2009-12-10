@@ -82,7 +82,7 @@ namespace TransmissionRemoteDotnet
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
             this.path = path;
             this.toolStripStatusLabel1.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
-            foreach (string s in LocalSettingsSingleton.Instance.DestPathHistory)
+            foreach (string s in Program.Settings.Current.DestPathHistory)
             {
                 comboBox1.Items.Add(s);
             }
@@ -224,7 +224,7 @@ namespace TransmissionRemoteDotnet
                 checkBox1.Checked ? comboBox1.Text : null,
                 checkBox2.Checked ? (int)numericUpDown1.Value : -1
             );
-            LocalSettingsSingleton.Instance.AddDestinationPath(comboBox1.Text);
+            Program.Settings.Current.AddDestinationPath(comboBox1.Text);
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
             this.Close();
         }
