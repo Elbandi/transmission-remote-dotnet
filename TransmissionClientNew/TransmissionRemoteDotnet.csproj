@@ -116,7 +116,6 @@
     </Compile>
     <Compile Include="Comparers\FilesListViewColumnSorter.cs" />
     <Compile Include="Comparers\ErrorsListViewColumnSorter.cs" />
-    <Compile Include="FileLocalSettingsSingleton.cs" />
     <Compile Include="FindDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,7 +169,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OtherStrings.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegistryLocalSettingsSingleton.cs" />
     <Compile Include="Comparers\PeersListViewColumnSorter.cs" />
     <Compile Include="PiecesGraph.cs">
       <SubType>UserControl</SubType>
@@ -770,10 +768,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings\FileLocalSettings.cs" />
+    <Compile Include="Settings\FileLocalSettingsSingleton.cs" />
     <Compile Include="Settings\ILocalSettingsStore.cs" />
     <Compile Include="Settings\RegistryJsonLocalSettings.cs" />
     <Compile Include="Settings\RegistryLocalSettings.cs" />
     <Compile Include="Settings\LocalSettings.cs" />
+    <Compile Include="Settings\RegistryLocalSettingsSingleton.cs" />
     <Compile Include="Settings\SambaShareMappings.cs" />
     <Compile Include="SplitContainerFix.cs">
       <SubType>Component</SubType>
