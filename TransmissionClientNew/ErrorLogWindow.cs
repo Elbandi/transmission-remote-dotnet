@@ -30,24 +30,6 @@ namespace TransmissionRemoteDotnet
     {
         private ErrorsListViewColumnSorter lvwColumnSorter;
 
-        private static ErrorLogWindow instance = null;
-        private static readonly object padlock = new object();
-
-        public static ErrorLogWindow Instance
-        {
-            get
-            {
-                lock (padlock)
-                {
-                    if (instance == null || instance.IsDisposed)
-                    {
-                        instance = new ErrorLogWindow();
-                    }
-                }
-                return instance;
-            }
-        }
-
         private EventHandler onErrorDelegate;
 
         private ErrorLogWindow()

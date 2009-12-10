@@ -1047,7 +1047,7 @@ namespace TransmissionRemoteDotnet
         private void remoteConfigureButton_Click(object sender, EventArgs e)
         {
             if (Program.Connected)
-                RemoteSettingsDialog.Instance.ShowDialog();
+                ClassSingleton<RemoteSettingsDialog>.Instance.ShowDialog();
         }
 
         private void OneOrMoreTorrentsSelected(bool oneOrMore)
@@ -1768,8 +1768,8 @@ namespace TransmissionRemoteDotnet
 
         private void showErrorLogToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ErrorLogWindow.Instance.Show();
-            ErrorLogWindow.Instance.BringToFront();
+            ClassSingleton<ErrorLogWindow>.Instance.Show();
+            ClassSingleton<ErrorLogWindow>.Instance.BringToFront();
         }
 
         private void filesListView_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -1870,8 +1870,8 @@ namespace TransmissionRemoteDotnet
 
         private void sessionStatsButton_Click(object sender, EventArgs e)
         {
-            StatsDialog.Instance.Show();
-            StatsDialog.Instance.BringToFront();
+            ClassSingleton<StatsDialog>.Instance.Show();
+            ClassSingleton<StatsDialog>.Instance.BringToFront();
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)

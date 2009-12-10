@@ -28,44 +28,26 @@ namespace TransmissionRemoteDotnet
 {
     public partial class RemoteSettingsDialog : CultureForm
     {
-        private static RemoteSettingsDialog instance = null;
-        private static readonly object padlock = new object();
-
-        public static RemoteSettingsDialog Instance
-        {
-            get
-            {
-                lock (padlock)
-                {
-                    if (!IsActive())
-                    {
-                        instance = new RemoteSettingsDialog();
-                    }
-                }
-                return instance;
-            }
-        }
-
-        private static bool IsActive()
-        {
-            return instance != null && !instance.IsDisposed;
-        }
-
         public static void CloseIfOpen()
         {
-            if (IsActive())
+            if (ClassSingleton<RemoteSettingsDialog>.IsActive())
             {
-                instance.CloseAndDispose();
+                ClassSingleton<RemoteSettingsDialog>.Instance.CloseAndDispose();
             }
         }
 
         public static void PortTestReplyArrived()
         {
-            if (IsActive())
+            if (ClassSingleton<RemoteSettingsDialog>.IsActive())
             {
-                instance.testPortButton.Text = (string)instance.testPortButton.Tag;
-                instance.testPortButton.Enabled = true;
+                ClassSingleton<RemoteSettingsDialog>.Instance.SetPortTestReplyArrived();
             }
+        }
+
+        public void SetPortTestReplyArrived()
+        {
+            testPortButton.Text = (string)testPortButton.Tag;
+            testPortButton.Enabled = true;
         }
 
         private RemoteSettingsDialog()
@@ -325,12 +307,17 @@ namespace TransmissionRemoteDotnet
 
         public static void BlocklistUpdateDone(int size)
         {
-            if (IsActive())
+            if (ClassSingleton<RemoteSettingsDialog>.IsActive())
             {
-                instance.updateBlocklistButton.Enabled = true;
-                instance.updateBlocklistButton.Text = (string)instance.updateBlocklistButton.Tag;
-                instance.label15.Text = String.Format(OtherStrings.XInBlocklist, size);
+                ClassSingleton<RemoteSettingsDialog>.Instance.SetBlocklistUpdateDone(size);
             }
+        }
+
+        public void SetBlocklistUpdateDone(int size)
+        {
+            updateBlocklistButton.Enabled = true;
+            updateBlocklistButton.Text = (string)updateBlocklistButton.Tag;
+            label15.Text = String.Format(OtherStrings.XInBlocklist, size);
         }
 
         private void seedRatioEnabledCheckBox_CheckedChanged(object sender, EventArgs e)

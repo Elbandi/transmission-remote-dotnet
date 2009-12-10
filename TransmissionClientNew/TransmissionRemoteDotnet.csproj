@@ -85,6 +85,7 @@
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ArgumentsReceivedEventArgs.cs" />
+    <Compile Include="ClassSingleton.cs" />
     <Compile Include="CommandFactory.cs" />
     <Compile Include="Commands\ErrorCommand.cs" />
     <Compile Include="Commands\NoCommand.cs" />
