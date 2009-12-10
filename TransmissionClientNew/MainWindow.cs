@@ -1275,92 +1275,82 @@ namespace TransmissionRemoteDotnet
             {
                 if (stateListBox.SelectedIndex == 1)
                 {
-                    ShowTorrentIfStatus(ProtocolConstants.STATUS_DOWNLOADING);
+                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_DOWNLOADING);
                 }
                 else if (stateListBox.SelectedIndex == 2)
                 {
-                    ShowTorrentIfStatus(ProtocolConstants.STATUS_PAUSED);
+                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_PAUSED);
                 }
                 else if (stateListBox.SelectedIndex == 3)
                 {
-                    ShowTorrentIfStatus(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK);
+                    FilterTorrent(ShowTorrentIfStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
                 }
-                else if (stateListBox.SelectedIndex == 4 || stateListBox.SelectedIndex == 5)
+                else if (stateListBox.SelectedIndex == 4)
                 {
-                    foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
-                    {
-                        Torrent t = pair.Value;
-                        if (stateListBox.SelectedIndex == 5 ? !t.IsFinished : t.IsFinished)
-                        {
-                            t.Show();
-                        }
-                        else
-                        {
-                            t.Remove();
-                        }
-                    }
+                    FilterTorrent(IsFinished, null);
+                }
+                else if (stateListBox.SelectedIndex == 5)
+                {
+                    FilterTorrent(NotFinished, null);
                 }
                 else if (stateListBox.SelectedIndex == 6)
                 {
-                    ShowTorrentIfStatus(ProtocolConstants.STATUS_SEEDING);
+                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_SEEDING);
                 }
                 else if (stateListBox.SelectedIndex == 7)
                 {
-                    foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
-                    {
-                        Torrent t = pair.Value;
-                        if (t.HasError)
-                        {
-                            t.Show();
-                        }
-                        else
-                        {
-                            t.Remove();
-                        }
-                    }
-
+                    FilterTorrent(TorrentHasError, null);
                 }
                 else if (stateListBox.SelectedIndex > 8)
                 {
-                    foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
-                    {
-                        Torrent t = pair.Value;
-                        if (t.Item.SubItems[13].Text.Equals(stateListBox.SelectedItem.ToString()))
-                        {
-                            t.Show();
-                        }
-                        else
-                        {
-                            t.Remove();
-                        }
-                    }
+                    FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
                 }
                 else
                 {
-                    foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
-                    {
-                        Torrent t = pair.Value;
-                        t.Show();
-                    }
+                    FilterTorrent(AlwaysTrue, null);
                 }
             }
             ResumeTorrentListView();
         }
 
-        private void ShowTorrentIfStatus(short statusCode)
+        private delegate bool FilterCompare(Torrent t, object param);
+        private void FilterTorrent(FilterCompare fc, object param)
         {
             foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
             {
-                Torrent t = pair.Value;
-                if ((t.StatusCode & statusCode) > 0)
+                if (fc(pair.Value, param))
                 {
-                    t.Show();
+                    pair.Value.Show();
                 }
                 else
                 {
-                    t.Remove();
+                    pair.Value.Remove();
                 }
             }
+        }
+        private bool ShowTorrentIfStatus(Torrent t, object statusCode)
+        {
+            return (t.StatusCode & (short)statusCode) > 0;
+        }
+        private bool IsFinished(Torrent t, object dummy)
+        {
+            return t.IsFinished;
+        }
+        private bool NotFinished(Torrent t, object dummy)
+        {
+            return !t.IsFinished;
+        }
+        private bool TorrentHasError(Torrent t, object dummy)
+        {
+            return t.HasError;
+        }
+        private bool UsingTracker(Torrent t, object tracker)
+        {
+            return t.Item.SubItems[13].Text.Equals(tracker);
+        }
+        private bool AlwaysTrue(Torrent t, object dummy)
+        {
+            return true;
         }
 
         private void filesTimer_Tick(object sender, EventArgs e)
