@@ -149,6 +149,7 @@ namespace TransmissionRemoteDotnet
             // 
             // SaveButton
             // 
+            this.SaveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.SaveButton, "SaveButton");
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -164,6 +165,7 @@ namespace TransmissionRemoteDotnet
             // 
             // SaveAndConnectButton
             // 
+            this.SaveAndConnectButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.SaveAndConnectButton, "SaveAndConnectButton");
             this.SaveAndConnectButton.Name = "SaveAndConnectButton";
             this.SaveAndConnectButton.UseVisualStyleBackColor = true;

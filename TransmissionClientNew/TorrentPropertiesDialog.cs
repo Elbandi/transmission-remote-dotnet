@@ -36,6 +36,23 @@ namespace TransmissionRemoteDotnet
             InitializeComponent();
         }
 
+        private string BuildTrackerList(JsonArray Trackers)
+        {
+            int oldtier = -1;
+            string result = string.Empty;
+            foreach (JsonObject tracker in Trackers)
+            {
+                int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
+                string announceUrl = (string)tracker[ProtocolConstants.ANNOUNCE];
+                if (oldtier == -1)
+                    oldtier = tier;
+                if (oldtier != tier)
+                    result += Environment.NewLine;
+                result += announceUrl + Environment.NewLine;
+            }
+            return result;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_TORRENTSET);
@@ -120,6 +137,7 @@ namespace TransmissionRemoteDotnet
                 label4.Enabled = comboBox1.Enabled = false;
             }
             peerLimitValue.Value = firstTorrent.MaxConnectedPeers >= 0 && (decimal)firstTorrent.MaxConnectedPeers <= peerLimitValue.Maximum ? (decimal)firstTorrent.MaxConnectedPeers : 0;
+            trackersList.Text = BuildTrackerList(firstTorrent.Trackers);
         }
 
         private void downloadLimitEnableField_CheckedChanged(object sender, EventArgs e)

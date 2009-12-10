@@ -61,6 +61,8 @@ namespace TransmissionRemoteDotnet
             this.uploadLimitField = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.downloadLimitEnableField = new System.Windows.Forms.CheckBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.trackersList = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,11 +72,13 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -193,6 +197,19 @@ namespace TransmissionRemoteDotnet
             this.downloadLimitEnableField.UseVisualStyleBackColor = true;
             this.downloadLimitEnableField.CheckedChanged += new System.EventHandler(this.downloadLimitEnableField_CheckedChanged);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.trackersList);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // trackersList
+            // 
+            resources.ApplyResources(this.trackersList, "trackersList");
+            this.trackersList.Name = "trackersList";
+            this.trackersList.ReadOnly = true;
+            // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -236,6 +253,8 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -260,6 +279,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox honorsSessionLimits;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox trackersList;
 
 
     }

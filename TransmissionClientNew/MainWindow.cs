@@ -1184,6 +1184,7 @@ namespace TransmissionRemoteDotnet
 
         public void connectButton_Click(object sender, EventArgs e)
         {
+            fileToolStripMenuItem.DropDown.Close();
             if (!Program.Connected)
                 Connect();
         }
