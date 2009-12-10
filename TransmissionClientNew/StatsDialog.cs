@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using Jayrock.Json;
@@ -28,6 +29,8 @@ namespace TransmissionRemoteDotnet
 {
     public partial class StatsDialog : CultureForm
     {
+        private static WebClient wc;
+
         private StatsDialog()
         {
             InitializeComponent();
@@ -86,22 +89,11 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void StatsWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CommandFactory.Request((JsonObject)e.Argument);
-        }
-
-        private void StatsWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ((ICommand)e.Result).Execute();
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!statsWorker.IsBusy)
-            {
-                statsWorker.RunWorkerAsync(Requests.SessionStats());
-            }
+            if (!wc.IsBusy)
+                wc = CommandFactory.RequestAsync(Requests.SessionStats());
         }
 
         private void StatsDialog_FormClosing(object sender, FormClosingEventArgs e)
@@ -111,7 +103,7 @@ namespace TransmissionRemoteDotnet
 
         private void StatsDialog_Load(object sender, EventArgs e)
         {
-            statsWorker.RunWorkerAsync(Requests.SessionStats());
+            wc = CommandFactory.RequestAsync(Requests.SessionStats());
             timer1.Enabled = true;
         }
     }

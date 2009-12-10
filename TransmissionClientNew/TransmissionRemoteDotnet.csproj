@@ -41,6 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -764,6 +765,7 @@
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="NamedPipeSingleInstance.cs" />
+    <Compile Include="ResultEventArgs.cs" />
     <Compile Include="SelectableLabel.cs">
       <SubType>Component</SubType>
     </Compile>
