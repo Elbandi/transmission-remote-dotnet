@@ -74,46 +74,8 @@ namespace TransmissionRemoteDotnet
             minimizeOnCloseCheckBox.Checked = sett.MinOnClose;
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
+            DeleteTorrentCheckBox.Checked = sett.DeleteTorrentWhenAdding;
             PlinkPathTextBox.Text = sett.PlinkPath;
-            /*
-            LocalSettingsSingleton settings = null;
-            HostField.Text = originalHost = settings.Host;
-            PortField.Value = originalPort = settings.Port;
-            RefreshRateValue.Value = settings.RefreshRate;
-            UseSSLCheckBox.Checked = settings.UseSSL;
-//            AutoConnectCheckBox.Checked = settings.AutoConnect;
-            PassField.Enabled = UserField.Enabled = EnableAuthCheckBox.Checked = settings.AuthEnabled;
-            UserField.Text = settings.User;
-            PassField.Text = settings.Pass;
-            notificationOnCompletionCheckBox.Enabled = notificationOnAdditionCheckBox.Enabled
-                = minimizeOnCloseCheckBox.Enabled = MinToTrayCheckBox.Checked
-                = settings.MinToTray;
-            EnableProxyCombo.SelectedIndex = (int)settings.ProxyMode;
-            ProxyPortField.Enabled = ProxyHostField.Enabled = settings.ProxyMode == ProxyMode.Enabled;
-            ProxyHostField.Text = settings.ProxyHost;
-            ProxyPortField.Value = settings.ProxyPort;
-            ProxyAuthEnableCheckBox.Checked = settings.ProxyAuth;
-            ProxyUserField.Enabled = ProxyPassField.Enabled = (settings.ProxyAuth && settings.ProxyMode == ProxyMode.Enabled);
-            ProxyUserField.Text = settings.ProxyUser;
-            ProxyPassField.Text = settings.ProxyPass;
-            StartPausedCheckBox.Checked = settings.StartPaused;
-            RetryLimitValue.Value = settings.RetryLimit;
-            notificationOnAdditionCheckBox.Checked = settings.StartedBalloon;
-            notificationOnCompletionCheckBox.Checked = settings.CompletedBaloon;
-            minimizeOnCloseCheckBox.Checked = settings.MinOnClose;
-            textBox2.Text = settings.PlinkPath;
-            checkBox1.Checked = settings.PlinkEnable;
-            textBox3.Text = settings.PlinkCmd;
-            downloadLimitItems.Text = settings.DownLimit;
-            uploadLimitItems.Text = settings.UpLimit;
-            checkBox2.Checked = settings.UploadPrompt;
-            listBox1.Items.Clear();
-            JsonObject mappings = settings.SambaShareMappings;
-            foreach (string key in mappings.Names)
-            {
-                listBox1.Items.Add(String.Format("{0} => {1}", key, (string)mappings[key]));
-            }
-             */
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -130,6 +92,7 @@ namespace TransmissionRemoteDotnet
             sett.MinOnClose = minimizeOnCloseCheckBox.Checked;
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
+            sett.DeleteTorrentWhenAdding = DeleteTorrentCheckBox.Checked;
             sett.PlinkPath = PlinkPathTextBox.Text;
             sett.Servers.Clear();
             foreach (ListViewItem lvi in listServers.Items)

@@ -393,6 +393,36 @@
   <data name="&gt;&gt;groupPlinkPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="DeleteTorrentCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 88</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
+    <value>Delete torrent when adding</value>
+  </data>
+  <data name="&gt;&gt;DeleteTorrentCheckBox.Name" xml:space="preserve">
+    <value>DeleteTorrentCheckBox</value>
+  </data>
+  <data name="&gt;&gt;DeleteTorrentCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteTorrentCheckBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;DeleteTorrentCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -421,7 +451,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,7 +481,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +511,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,7 +541,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="UploadPromptCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -541,7 +571,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;UploadPromptCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -571,7 +601,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="groupBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>

@@ -125,6 +125,7 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -255,6 +256,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.DeleteTorrentCheckBox);
             this.groupBehavior.Controls.Add(this.notificationOnCompletionCheckBox);
             this.groupBehavior.Controls.Add(this.notificationOnAdditionCheckBox);
             this.groupBehavior.Controls.Add(this.minimizeOnCloseCheckBox);
@@ -750,6 +752,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
+            // DeleteTorrentCheckBox
+            // 
+            resources.ApplyResources(this.DeleteTorrentCheckBox, "DeleteTorrentCheckBox");
+            this.DeleteTorrentCheckBox.Name = "DeleteTorrentCheckBox";
+            this.DeleteTorrentCheckBox.UseVisualStyleBackColor = true;
+            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -876,5 +884,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem removeServerToolStripMenuItem;
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
+        private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
     }
 }

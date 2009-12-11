@@ -215,7 +215,7 @@ namespace TransmissionRemoteDotnet
             }
             JsonObject request = Requests.TorrentAddByFile(
                 path,
-                false,
+                Program.Settings.DeleteTorrentWhenAdding,
                 high.Count > 0 ? high : null,
                 normal.Count > 0 ? normal : null,
                 low.Count > 0 ? low : null,
