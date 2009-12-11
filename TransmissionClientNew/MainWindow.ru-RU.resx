@@ -402,6 +402,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>Показать статистику</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Показать статистику</value>
+  </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Подключиться</value>
   </data>

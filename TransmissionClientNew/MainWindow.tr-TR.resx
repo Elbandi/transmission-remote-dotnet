@@ -393,6 +393,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>İstatistikleri Göster</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>İstatistikleri Göster</value>
+  </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Bağlan</value>
   </data>

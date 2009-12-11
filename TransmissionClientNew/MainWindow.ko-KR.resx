@@ -435,6 +435,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>통계 표시</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>통계 표시</value>
+  </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>상세 정보 보기</value>
   </data>

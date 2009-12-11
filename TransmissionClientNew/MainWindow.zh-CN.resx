@@ -390,6 +390,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>显示统计信息</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>显示统计信息</value>
+  </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>连接</value>
   </data>

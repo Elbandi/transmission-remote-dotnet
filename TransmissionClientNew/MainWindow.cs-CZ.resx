@@ -447,6 +447,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>Zobrazit statistiku</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zobrazit statistiku</value>
+  </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Panel s detaily</value>
   </data>

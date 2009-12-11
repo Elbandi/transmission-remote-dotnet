@@ -2481,10 +2481,10 @@
   <data name="disconnectButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolbarToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
-  <data name="toolStripSeparator4.Visible" type="System.Boolean, mscorlib">
+  <data name="toolbarToolStripSeparator1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="addTorrentButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -2517,10 +2517,10 @@
   <data name="addWebTorrentButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolbarToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
-  <data name="toolStripSeparator1.Visible" type="System.Boolean, mscorlib">
+  <data name="toolbarToolStripSeparator2.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="startTorrentButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -2694,10 +2694,10 @@
   <data name="remoteCmdButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolbarToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
-  <data name="toolStripSeparator2.Visible" type="System.Boolean, mscorlib">
+  <data name="toolbarToolStripSeparator3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="AltSpeedButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -2715,10 +2715,10 @@
   <data name="AltSpeedButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolbarToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
-  <data name="toolStripSeparator3.Visible" type="System.Boolean, mscorlib">
+  <data name="toolbarToolStripSeparator4.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="localConfigureButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -2767,7 +2767,7 @@
     <value>3, 0</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 39</value>
+    <value>694, 39</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2832,7 +2832,7 @@
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
     <value>Disconnect</value>
   </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="fileMenuToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 6</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
@@ -2871,7 +2871,7 @@
   <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent from URL</value>
   </data>
-  <data name="fileMenuItemSeperator1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="fileMenuToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 6</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -2907,7 +2907,7 @@
   <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Remote settings</value>
   </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="optionsMenuToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 6</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -2931,7 +2931,7 @@
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
     <value>Find...</value>
   </data>
-  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="torrentMenuToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 6</value>
   </data>
   <data name="startToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
@@ -3066,7 +3066,7 @@
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>CSV info to clipboard</value>
   </data>
-  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="torrentMenuToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 6</value>
   </data>
   <data name="startAllToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -3114,6 +3114,18 @@
   <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Category filter panel</value>
   </data>
+  <data name="viewMenuToolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 6</value>
+  </data>
+  <data name="statsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Display statistics</value>
+  </data>
   <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
@@ -3129,7 +3141,7 @@
   <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
     <value>Show Error Log</value>
   </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="helpMenuToolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 6</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -3718,10 +3730,10 @@
   <data name="&gt;&gt;disconnectButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
+  <data name="&gt;&gt;toolbarToolStripSeparator1.Name" xml:space="preserve">
+    <value>toolbarToolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolbarToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;addTorrentButton.Name" xml:space="preserve">
@@ -3736,10 +3748,10 @@
   <data name="&gt;&gt;addWebTorrentButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
+  <data name="&gt;&gt;toolbarToolStripSeparator2.Name" xml:space="preserve">
+    <value>toolbarToolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolbarToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startTorrentButton.Name" xml:space="preserve">
@@ -3808,10 +3820,10 @@
   <data name="&gt;&gt;remoteCmdButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
+  <data name="&gt;&gt;toolbarToolStripSeparator3.Name" xml:space="preserve">
+    <value>toolbarToolStripSeparator3</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolbarToolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AltSpeedButton.Name" xml:space="preserve">
@@ -3820,10 +3832,10 @@
   <data name="&gt;&gt;AltSpeedButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
+  <data name="&gt;&gt;toolbarToolStripSeparator4.Name" xml:space="preserve">
+    <value>toolbarToolStripSeparator4</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolbarToolStripSeparator4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;localConfigureButton.Name" xml:space="preserve">
@@ -3862,10 +3874,10 @@
   <data name="&gt;&gt;disconnectToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
+  <data name="&gt;&gt;fileMenuToolStripSeparator1.Name" xml:space="preserve">
+    <value>fileMenuToolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+  <data name="&gt;&gt;fileMenuToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;addTorrentToolStripMenuItem.Name" xml:space="preserve">
@@ -3886,10 +3898,10 @@
   <data name="&gt;&gt;addTorrentFromUrlToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;fileMenuItemSeperator1.Name" xml:space="preserve">
-    <value>fileMenuItemSeperator1</value>
+  <data name="&gt;&gt;fileMenuToolStripSeparator2.Name" xml:space="preserve">
+    <value>fileMenuToolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;fileMenuItemSeperator1.Type" xml:space="preserve">
+  <data name="&gt;&gt;fileMenuToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
@@ -3916,10 +3928,10 @@
   <data name="&gt;&gt;remoteSettingsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
-    <value>toolStripMenuItem3</value>
+  <data name="&gt;&gt;optionsMenuToolStripSeparator1.Name" xml:space="preserve">
+    <value>optionsMenuToolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
+  <data name="&gt;&gt;optionsMenuToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
@@ -3940,10 +3952,10 @@
   <data name="&gt;&gt;findToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator10.Name" xml:space="preserve">
-    <value>toolStripSeparator10</value>
+  <data name="&gt;&gt;torrentMenuToolStripSeparator1.Name" xml:space="preserve">
+    <value>torrentMenuToolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator10.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentMenuToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startToolStripMenuItem.Name" xml:space="preserve">
@@ -4012,10 +4024,10 @@
   <data name="&gt;&gt;cSVInfoToClipboardToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
-    <value>toolStripSeparator5</value>
+  <data name="&gt;&gt;torrentMenuToolStripSeparator2.Name" xml:space="preserve">
+    <value>torrentMenuToolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentMenuToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startAllToolStripMenuItem.Name" xml:space="preserve">
@@ -4048,6 +4060,18 @@
   <data name="&gt;&gt;categoriesPanelToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;viewMenuToolStripSeparator.Name" xml:space="preserve">
+    <value>viewMenuToolStripSeparator</value>
+  </data>
+  <data name="&gt;&gt;viewMenuToolStripSeparator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statsToolStripMenuItem.Name" xml:space="preserve">
+    <value>statsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;statsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
   </data>
@@ -4060,10 +4084,10 @@
   <data name="&gt;&gt;showErrorLogToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
+  <data name="&gt;&gt;helpMenuToolStripSeparator.Name" xml:space="preserve">
+    <value>helpMenuToolStripSeparator</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+  <data name="&gt;&gt;helpMenuToolStripSeparator.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;projectSiteToolStripMenuItem.Name" xml:space="preserve">

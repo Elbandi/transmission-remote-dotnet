@@ -372,6 +372,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>Pokaż Statystyki</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pokaż Statystyki</value>
+  </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Połącz</value>
   </data>

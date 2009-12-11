@@ -526,20 +526,20 @@ namespace TransmissionRemoteDotnet
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
-                = removeTorrentButton.Visible = toolStripSeparator4.Visible
-                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Enabled
+                = removeTorrentButton.Visible = toolbarToolStripSeparator1.Visible
+                = toolbarToolStripSeparator2.Visible = disconnectToolStripMenuItem.Enabled
                 = configureTorrentButton.Visible = torrentToolStripMenuItem.Enabled
                 = remoteSettingsToolStripMenuItem.Enabled
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
-                = speedGraph.Enabled = toolStripSeparator2.Visible
+                = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
-            sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
-            AltSpeedButton.Visible = toolStripSeparator3.Visible = connected && dd.RpcVersion >= 5;
+            statsToolStripMenuItem.Enabled = sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            AltSpeedButton.Visible = toolbarToolStripSeparator4.Visible = connected && dd.RpcVersion >= 5;
             addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
         }
 
