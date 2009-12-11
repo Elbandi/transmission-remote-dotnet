@@ -61,6 +61,9 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
+            this.defaultActionLabel = new System.Windows.Forms.Label();
+            this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
             this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
             this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
             this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
@@ -125,7 +128,6 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -205,11 +207,6 @@ namespace TransmissionRemoteDotnet
             // 
             this.AutoConnectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AutoConnectComboBox.FormattingEnabled = true;
-            this.AutoConnectComboBox.Items.AddRange(new object[] {
-            resources.GetString("AutoConnectComboBox.Items"),
-            resources.GetString("AutoConnectComboBox.Items1"),
-            resources.GetString("AutoConnectComboBox.Items2"),
-            resources.GetString("AutoConnectComboBox.Items3")});
             resources.ApplyResources(this.AutoConnectComboBox, "AutoConnectComboBox");
             this.AutoConnectComboBox.Name = "AutoConnectComboBox";
             // 
@@ -224,11 +221,6 @@ namespace TransmissionRemoteDotnet
             // 
             this.CurrentProfileComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CurrentProfileComboBox.FormattingEnabled = true;
-            this.CurrentProfileComboBox.Items.AddRange(new object[] {
-            resources.GetString("CurrentProfileComboBox.Items"),
-            resources.GetString("CurrentProfileComboBox.Items1"),
-            resources.GetString("CurrentProfileComboBox.Items2"),
-            resources.GetString("CurrentProfileComboBox.Items3")});
             resources.ApplyResources(this.CurrentProfileComboBox, "CurrentProfileComboBox");
             this.CurrentProfileComboBox.Name = "CurrentProfileComboBox";
             // 
@@ -256,6 +248,8 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.defaultActionComboBox);
+            this.groupBehavior.Controls.Add(this.defaultActionLabel);
             this.groupBehavior.Controls.Add(this.DeleteTorrentCheckBox);
             this.groupBehavior.Controls.Add(this.notificationOnCompletionCheckBox);
             this.groupBehavior.Controls.Add(this.notificationOnAdditionCheckBox);
@@ -266,6 +260,28 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // defaultActionComboBox
+            // 
+            this.defaultActionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.defaultActionComboBox.FormattingEnabled = true;
+            this.defaultActionComboBox.Items.AddRange(new object[] {
+            resources.GetString("defaultActionComboBox.Items"),
+            resources.GetString("defaultActionComboBox.Items1"),
+            resources.GetString("defaultActionComboBox.Items2")});
+            resources.ApplyResources(this.defaultActionComboBox, "defaultActionComboBox");
+            this.defaultActionComboBox.Name = "defaultActionComboBox";
+            // 
+            // defaultActionLabel
+            // 
+            resources.ApplyResources(this.defaultActionLabel, "defaultActionLabel");
+            this.defaultActionLabel.Name = "defaultActionLabel";
+            // 
+            // DeleteTorrentCheckBox
+            // 
+            resources.ApplyResources(this.DeleteTorrentCheckBox, "DeleteTorrentCheckBox");
+            this.DeleteTorrentCheckBox.Name = "DeleteTorrentCheckBox";
+            this.DeleteTorrentCheckBox.UseVisualStyleBackColor = true;
             // 
             // notificationOnCompletionCheckBox
             // 
@@ -752,12 +768,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
-            // DeleteTorrentCheckBox
-            // 
-            resources.ApplyResources(this.DeleteTorrentCheckBox, "DeleteTorrentCheckBox");
-            this.DeleteTorrentCheckBox.Name = "DeleteTorrentCheckBox";
-            this.DeleteTorrentCheckBox.UseVisualStyleBackColor = true;
-            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -885,5 +895,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
+        private System.Windows.Forms.ComboBox defaultActionComboBox;
+        private System.Windows.Forms.Label defaultActionLabel;
     }
 }

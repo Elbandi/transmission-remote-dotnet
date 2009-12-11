@@ -207,18 +207,6 @@
   <data name="PlinkPathOpenFileDialog.Filter" xml:space="preserve">
     <value>plink.exe|plink.exe</value>
   </data>
-  <data name="AutoConnectComboBox.Items" xml:space="preserve">
-    <value>fdaf</value>
-  </data>
-  <data name="AutoConnectComboBox.Items1" xml:space="preserve">
-    <value>fdsaf</value>
-  </data>
-  <data name="AutoConnectComboBox.Items2" xml:space="preserve">
-    <value>gfsdg</value>
-  </data>
-  <data name="AutoConnectComboBox.Items3" xml:space="preserve">
-    <value>gfdsg</value>
-  </data>
   <data name="AutoConnectComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 23</value>
   </data>
@@ -263,18 +251,6 @@
   </data>
   <data name="&gt;&gt;groupAutoConnect.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items" xml:space="preserve">
-    <value>fdaf</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items1" xml:space="preserve">
-    <value>fdsaf</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items2" xml:space="preserve">
-    <value>gfsdg</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items3" xml:space="preserve">
-    <value>gfdsg</value>
   </data>
   <data name="CurrentProfileComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 23</value>
@@ -393,6 +369,63 @@
   <data name="&gt;&gt;groupPlinkPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="defaultActionComboBox.Items" xml:space="preserve">
+    <value>Torrent Properties</value>
+  </data>
+  <data name="defaultActionComboBox.Items1" xml:space="preserve">
+    <value>Open remote folder</value>
+  </data>
+  <data name="defaultActionComboBox.Items2" xml:space="preserve">
+    <value>Start/Stop torrent</value>
+  </data>
+  <data name="defaultActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 86</value>
+  </data>
+  <data name="defaultActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="defaultActionComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;defaultActionComboBox.Name" xml:space="preserve">
+    <value>defaultActionComboBox</value>
+  </data>
+  <data name="&gt;&gt;defaultActionComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;defaultActionComboBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;defaultActionComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="defaultActionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="defaultActionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 89</value>
+  </data>
+  <data name="defaultActionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="defaultActionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="defaultActionLabel.Text" xml:space="preserve">
+    <value>Default Action:</value>
+  </data>
+  <data name="&gt;&gt;defaultActionLabel.Name" xml:space="preserve">
+    <value>defaultActionLabel</value>
+  </data>
+  <data name="&gt;&gt;defaultActionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;defaultActionLabel.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;defaultActionLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="DeleteTorrentCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -421,7 +454,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;DeleteTorrentCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,7 +484,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +514,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,7 +544,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -541,7 +574,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="UploadPromptCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -571,7 +604,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;UploadPromptCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -601,7 +634,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="groupBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>

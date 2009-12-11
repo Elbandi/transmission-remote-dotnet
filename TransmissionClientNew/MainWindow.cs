@@ -1066,6 +1066,31 @@ namespace TransmissionRemoteDotnet
             OneTorrentsSelected(one, t);
         }
 
+        private void torrentListView_DoubleClick(object sender, EventArgs e)
+        {
+            Torrent t = null;
+            switch (Program.Settings.DefaultDoubleClickAction)
+            {
+                case 1:
+                    if (openNetworkShareButton.Visible)
+                        openNetworkShareButton.PerformClick();
+                    else
+                        ShowTorrentPropsHandler(sender, e);
+                    break;
+                case 2:
+                    t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    if (IfTorrentStatus(t, ProtocolConstants.STATUS_PAUSED))
+                        startTorrentButton.PerformClick();
+                    else
+                        pauseTorrentButton.PerformClick();
+                    break;
+                case 0:
+                default:
+                    ShowTorrentPropsHandler(sender, e);
+                    break;
+            }
+        }
+
         private void ShowTorrentPropsHandler(object sender, EventArgs e)
         {
             lock (torrentListView)
@@ -1219,15 +1244,15 @@ namespace TransmissionRemoteDotnet
             {
                 if (stateListBox.SelectedIndex == 1)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
                 }
                 else if (stateListBox.SelectedIndex == 2)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_PAUSED);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
                 }
                 else if (stateListBox.SelectedIndex == 3)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                    FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
                 }
                 else if (stateListBox.SelectedIndex == 4)
                 {
@@ -1239,7 +1264,7 @@ namespace TransmissionRemoteDotnet
                 }
                 else if (stateListBox.SelectedIndex == 6)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_SEEDING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
                 }
                 else if (stateListBox.SelectedIndex == 7)
                 {
@@ -1272,7 +1297,7 @@ namespace TransmissionRemoteDotnet
                 }
             }
         }
-        private bool ShowTorrentIfStatus(Torrent t, object statusCode)
+        private bool IfTorrentStatus(Torrent t, object statusCode)
         {
             return (t.StatusCode & (short)statusCode) > 0;
         }

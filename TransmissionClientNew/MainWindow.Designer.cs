@@ -321,7 +321,7 @@ namespace TransmissionRemoteDotnet
             this.torrentListView.UseCompatibleStateImageBehavior = false;
             this.torrentListView.View = System.Windows.Forms.View.Details;
             this.torrentListView.SelectedIndexChanged += new System.EventHandler(this.torrentListView_SelectedIndexChanged);
-            this.torrentListView.DoubleClick += new System.EventHandler(this.ShowTorrentPropsHandler);
+            this.torrentListView.DoubleClick += new System.EventHandler(this.torrentListView_DoubleClick);
             this.torrentListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.torrentListView_ColumnClick);
             this.torrentListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentListView_KeyDown);
             // 

@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
                 if (s.Key.Equals(sett.CurrentProfile))
                     CurrentProfileComboBox.SelectedIndex = c;
             }
+            try { defaultActionComboBox.SelectedIndex = sett.DefaultDoubleClickAction; }
+            catch { }
             notificationOnCompletionCheckBox.Enabled = notificationOnAdditionCheckBox.Enabled
                 = minimizeOnCloseCheckBox.Enabled = MinToTrayCheckBox.Checked
                 = sett.MinToTray;
@@ -93,6 +95,7 @@ namespace TransmissionRemoteDotnet
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
             sett.DeleteTorrentWhenAdding = DeleteTorrentCheckBox.Checked;
+            sett.DefaultDoubleClickAction = defaultActionComboBox.SelectedIndex;
             sett.PlinkPath = PlinkPathTextBox.Text;
             sett.Servers.Clear();
             foreach (ListViewItem lvi in listServers.Items)
