@@ -47,7 +47,7 @@ namespace TransmissionRemoteDotnet
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentPropertiesDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabGeneral = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.honorsSessionLimits = new System.Windows.Forms.CheckBox();
@@ -61,46 +61,46 @@ namespace TransmissionRemoteDotnet
             this.uploadLimitField = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.downloadLimitEnableField = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabTrackers = new System.Windows.Forms.TabPage();
             this.trackersList = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabTrackers.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabGeneral);
+            this.tabControl1.Controls.Add(this.tabTrackers);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
-            // tabPage1
+            // tabGeneral
             // 
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.honorsSessionLimits);
-            this.tabPage1.Controls.Add(this.seedRatioLimitedCheckBox);
-            this.tabPage1.Controls.Add(this.seedRatioLimitValue);
-            this.tabPage1.Controls.Add(this.peerLimitValue);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.uploadLimitEnableField);
-            this.tabPage1.Controls.Add(this.downloadLimitField);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.uploadLimitField);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.downloadLimitEnableField);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabGeneral.Controls.Add(this.comboBox1);
+            this.tabGeneral.Controls.Add(this.label4);
+            this.tabGeneral.Controls.Add(this.honorsSessionLimits);
+            this.tabGeneral.Controls.Add(this.seedRatioLimitedCheckBox);
+            this.tabGeneral.Controls.Add(this.seedRatioLimitValue);
+            this.tabGeneral.Controls.Add(this.peerLimitValue);
+            this.tabGeneral.Controls.Add(this.label3);
+            this.tabGeneral.Controls.Add(this.uploadLimitEnableField);
+            this.tabGeneral.Controls.Add(this.downloadLimitField);
+            this.tabGeneral.Controls.Add(this.label1);
+            this.tabGeneral.Controls.Add(this.uploadLimitField);
+            this.tabGeneral.Controls.Add(this.label2);
+            this.tabGeneral.Controls.Add(this.downloadLimitEnableField);
+            resources.ApplyResources(this.tabGeneral, "tabGeneral");
+            this.tabGeneral.Name = "tabGeneral";
+            this.tabGeneral.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -197,12 +197,12 @@ namespace TransmissionRemoteDotnet
             this.downloadLimitEnableField.UseVisualStyleBackColor = true;
             this.downloadLimitEnableField.CheckedChanged += new System.EventHandler(this.downloadLimitEnableField_CheckedChanged);
             // 
-            // tabPage2
+            // tabTrackers
             // 
-            this.tabPage2.Controls.Add(this.trackersList);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabTrackers.Controls.Add(this.trackersList);
+            resources.ApplyResources(this.tabTrackers, "tabTrackers");
+            this.tabTrackers.Name = "tabTrackers";
+            this.tabTrackers.UseVisualStyleBackColor = true;
             // 
             // trackersList
             // 
@@ -247,14 +247,14 @@ namespace TransmissionRemoteDotnet
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.TorrentPropertiesDialog_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabGeneral.ResumeLayout(false);
+            this.tabGeneral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabTrackers.ResumeLayout(false);
+            this.tabTrackers.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -262,7 +262,7 @@ namespace TransmissionRemoteDotnet
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.NumericUpDown downloadLimitField;
         private System.Windows.Forms.NumericUpDown uploadLimitField;
         private System.Windows.Forms.CheckBox downloadLimitEnableField;
@@ -279,7 +279,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox honorsSessionLimits;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabTrackers;
         private System.Windows.Forms.TextBox trackersList;
 
 
