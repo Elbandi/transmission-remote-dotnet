@@ -48,7 +48,7 @@ namespace TransmissionRemoteDotnet
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentPropertiesDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bandwidthComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.honorsSessionLimits = new System.Windows.Forms.CheckBox();
             this.seedRatioLimitedCheckBox = new System.Windows.Forms.CheckBox();
@@ -85,7 +85,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
-            this.tabGeneral.Controls.Add(this.comboBox1);
+            this.tabGeneral.Controls.Add(this.bandwidthComboBox);
             this.tabGeneral.Controls.Add(this.label4);
             this.tabGeneral.Controls.Add(this.honorsSessionLimits);
             this.tabGeneral.Controls.Add(this.seedRatioLimitedCheckBox);
@@ -102,12 +102,12 @@ namespace TransmissionRemoteDotnet
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // bandwidthComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.bandwidthComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bandwidthComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.bandwidthComboBox, "bandwidthComboBox");
+            this.bandwidthComboBox.Name = "bandwidthComboBox";
             // 
             // label4
             // 
@@ -278,7 +278,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox seedRatioLimitedCheckBox;
         private System.Windows.Forms.CheckBox honorsSessionLimits;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox bandwidthComboBox;
         private System.Windows.Forms.TabPage tabTrackers;
         private System.Windows.Forms.TextBox trackersList;
 

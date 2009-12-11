@@ -120,13 +120,13 @@
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Hata</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="clearButton.Text" xml:space="preserve">
     <value>Temizle</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value> Hata mesajını kopyalamak için ilgili satıra çift tıklayın</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>Kapat</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

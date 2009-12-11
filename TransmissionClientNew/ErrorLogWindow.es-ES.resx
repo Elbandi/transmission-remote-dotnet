@@ -120,13 +120,13 @@
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Cuerpo</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="clearButton.Text" xml:space="preserve">
     <value>Vaciar</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value> Puedes copiar el cuerpo de un error al portapapeles haciendo doble click en él</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>Cerrar</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
