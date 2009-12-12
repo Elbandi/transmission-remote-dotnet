@@ -74,7 +74,7 @@ namespace TransmissionRemoteDotnet
                 e.Link.Visited = true;
                 System.Diagnostics.Process.Start("mailto:" + e.Link.LinkData.ToString());
             }
-            catch (Exception ee)
+            catch (Exception)
             {
             }
         }
