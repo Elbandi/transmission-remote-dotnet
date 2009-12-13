@@ -50,7 +50,7 @@ namespace TransmissionRemoteDotnet
             this.downloadedBytesLabel2 = new System.Windows.Forms.Label();
             this.uploadedBytesLabel2 = new System.Windows.Forms.Label();
             this.CloseFormButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CumulativeGroupBox = new System.Windows.Forms.GroupBox();
             this.secondsActiveValue2 = new System.Windows.Forms.Label();
             this.sessionCountValue2 = new System.Windows.Forms.Label();
             this.filesAddedValue2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@ namespace TransmissionRemoteDotnet
             this.sessionCountLabel2 = new System.Windows.Forms.Label();
             this.filesAddedLabel2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CurrentSessionGroupBox = new System.Windows.Forms.GroupBox();
             this.secondsActiveValue1 = new System.Windows.Forms.Label();
             this.sessionCountValue1 = new System.Windows.Forms.Label();
             this.filesAddedValue1 = new System.Windows.Forms.Label();
@@ -71,8 +71,8 @@ namespace TransmissionRemoteDotnet
             this.filesAddedLabel1 = new System.Windows.Forms.Label();
             this.downloadedBytesLabel1 = new System.Windows.Forms.Label();
             this.uploadedBytesLabel1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.CumulativeGroupBox.SuspendLayout();
+            this.CurrentSessionGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // downloadedBytesLabel2
@@ -93,21 +93,21 @@ namespace TransmissionRemoteDotnet
             this.CloseFormButton.UseVisualStyleBackColor = true;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
             // 
-            // groupBox1
+            // CumulativeGroupBox
             // 
-            this.groupBox1.Controls.Add(this.secondsActiveValue2);
-            this.groupBox1.Controls.Add(this.sessionCountValue2);
-            this.groupBox1.Controls.Add(this.filesAddedValue2);
-            this.groupBox1.Controls.Add(this.uploadedBytesValue2);
-            this.groupBox1.Controls.Add(this.downloadedBytesValue2);
-            this.groupBox1.Controls.Add(this.secondsActiveLabel2);
-            this.groupBox1.Controls.Add(this.sessionCountLabel2);
-            this.groupBox1.Controls.Add(this.filesAddedLabel2);
-            this.groupBox1.Controls.Add(this.downloadedBytesLabel2);
-            this.groupBox1.Controls.Add(this.uploadedBytesLabel2);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            this.CumulativeGroupBox.Controls.Add(this.secondsActiveValue2);
+            this.CumulativeGroupBox.Controls.Add(this.sessionCountValue2);
+            this.CumulativeGroupBox.Controls.Add(this.filesAddedValue2);
+            this.CumulativeGroupBox.Controls.Add(this.uploadedBytesValue2);
+            this.CumulativeGroupBox.Controls.Add(this.downloadedBytesValue2);
+            this.CumulativeGroupBox.Controls.Add(this.secondsActiveLabel2);
+            this.CumulativeGroupBox.Controls.Add(this.sessionCountLabel2);
+            this.CumulativeGroupBox.Controls.Add(this.filesAddedLabel2);
+            this.CumulativeGroupBox.Controls.Add(this.downloadedBytesLabel2);
+            this.CumulativeGroupBox.Controls.Add(this.uploadedBytesLabel2);
+            resources.ApplyResources(this.CumulativeGroupBox, "CumulativeGroupBox");
+            this.CumulativeGroupBox.Name = "CumulativeGroupBox";
+            this.CumulativeGroupBox.TabStop = false;
             // 
             // secondsActiveValue2
             // 
@@ -154,21 +154,21 @@ namespace TransmissionRemoteDotnet
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox2
+            // CurrentSessionGroupBox
             // 
-            this.groupBox2.Controls.Add(this.secondsActiveValue1);
-            this.groupBox2.Controls.Add(this.sessionCountValue1);
-            this.groupBox2.Controls.Add(this.filesAddedValue1);
-            this.groupBox2.Controls.Add(this.uploadedBytesValue1);
-            this.groupBox2.Controls.Add(this.downloadedBytesValue1);
-            this.groupBox2.Controls.Add(this.secondsActiveLabel1);
-            this.groupBox2.Controls.Add(this.sessionCountLabel1);
-            this.groupBox2.Controls.Add(this.filesAddedLabel1);
-            this.groupBox2.Controls.Add(this.downloadedBytesLabel1);
-            this.groupBox2.Controls.Add(this.uploadedBytesLabel1);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
+            this.CurrentSessionGroupBox.Controls.Add(this.secondsActiveValue1);
+            this.CurrentSessionGroupBox.Controls.Add(this.sessionCountValue1);
+            this.CurrentSessionGroupBox.Controls.Add(this.filesAddedValue1);
+            this.CurrentSessionGroupBox.Controls.Add(this.uploadedBytesValue1);
+            this.CurrentSessionGroupBox.Controls.Add(this.downloadedBytesValue1);
+            this.CurrentSessionGroupBox.Controls.Add(this.secondsActiveLabel1);
+            this.CurrentSessionGroupBox.Controls.Add(this.sessionCountLabel1);
+            this.CurrentSessionGroupBox.Controls.Add(this.filesAddedLabel1);
+            this.CurrentSessionGroupBox.Controls.Add(this.downloadedBytesLabel1);
+            this.CurrentSessionGroupBox.Controls.Add(this.uploadedBytesLabel1);
+            resources.ApplyResources(this.CurrentSessionGroupBox, "CurrentSessionGroupBox");
+            this.CurrentSessionGroupBox.Name = "CurrentSessionGroupBox";
+            this.CurrentSessionGroupBox.TabStop = false;
             // 
             // secondsActiveValue1
             // 
@@ -226,18 +226,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseFormButton;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.CurrentSessionGroupBox);
+            this.Controls.Add(this.CumulativeGroupBox);
             this.Controls.Add(this.CloseFormButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "StatsDialog";
             this.Load += new System.EventHandler(this.StatsDialog_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatsDialog_FormClosing);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.CumulativeGroupBox.ResumeLayout(false);
+            this.CumulativeGroupBox.PerformLayout();
+            this.CurrentSessionGroupBox.ResumeLayout(false);
+            this.CurrentSessionGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -246,7 +246,7 @@ namespace TransmissionRemoteDotnet
 
         private System.Windows.Forms.Button CloseFormButton;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox CumulativeGroupBox;
         private System.Windows.Forms.Label secondsActiveValue1;
         private System.Windows.Forms.Label sessionCountValue1;
         private System.Windows.Forms.Label filesAddedValue1;
@@ -257,7 +257,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label filesAddedLabel1;
         private System.Windows.Forms.Label downloadedBytesLabel1;
         private System.Windows.Forms.Label uploadedBytesLabel1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox CurrentSessionGroupBox;
         private System.Windows.Forms.Label filesAddedLabel2;
         private System.Windows.Forms.Label sessionCountLabel2;
         private System.Windows.Forms.Label secondsActiveLabel2;

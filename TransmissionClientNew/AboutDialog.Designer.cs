@@ -46,70 +46,144 @@ namespace TransmissionRemoteDotnet
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutDialog));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.labelDevelopers = new System.Windows.Forms.LinkLabel();
+            this.labelProductName = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
+            this.labelCopyright = new System.Windows.Forms.Label();
+            this.labelHomepageLink = new System.Windows.Forms.LinkLabel();
+            this.panelDescription = new System.Windows.Forms.Panel();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.labelCredits = new System.Windows.Forms.Label();
+            this.okButton = new System.Windows.Forms.Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel.SuspendLayout();
+            this.panelDescription.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // tableLayoutPanel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(this.labelDevelopers, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.labelProductName, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.labelVersion, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.labelCopyright, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.labelHomepageLink, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.panelDescription, 0, 4);
+            this.tableLayoutPanel.Controls.Add(this.okButton, 0, 5);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
             // 
-            // label2
+            // labelDevelopers
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            this.tableLayoutPanel.SetColumnSpan(this.labelDevelopers, 2);
+            resources.ApplyResources(this.labelDevelopers, "labelDevelopers");
+            this.labelDevelopers.MaximumSize = new System.Drawing.Size(0, 17);
+            this.labelDevelopers.Name = "labelDevelopers";
+            this.labelDevelopers.UseCompatibleTextRendering = true;
             // 
-            // linkLabel1
+            // labelProductName
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            resources.ApplyResources(this.labelProductName, "labelProductName");
+            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 17);
+            this.labelProductName.Name = "labelProductName";
             // 
-            // label3
+            // labelVersion
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.labelVersion, "labelVersion");
+            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
+            this.labelVersion.Name = "labelVersion";
             // 
-            // button1
+            // labelCopyright
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tableLayoutPanel.SetColumnSpan(this.labelCopyright, 2);
+            resources.ApplyResources(this.labelCopyright, "labelCopyright");
+            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 17);
+            this.labelCopyright.Name = "labelCopyright";
+            // 
+            // labelHomepageLink
+            // 
+            this.tableLayoutPanel.SetColumnSpan(this.labelHomepageLink, 2);
+            resources.ApplyResources(this.labelHomepageLink, "labelHomepageLink");
+            this.labelHomepageLink.MaximumSize = new System.Drawing.Size(0, 17);
+            this.labelHomepageLink.Name = "labelHomepageLink";
+            this.labelHomepageLink.TabStop = true;
+            this.labelHomepageLink.UseCompatibleTextRendering = true;
+            this.labelHomepageLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelHomepageLink_LinkClicked);
+            // 
+            // panelDescription
+            // 
+            this.panelDescription.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel.SetColumnSpan(this.panelDescription, 2);
+            this.panelDescription.Controls.Add(this.textBoxDescription);
+            this.panelDescription.Controls.Add(this.labelCredits);
+            resources.ApplyResources(this.panelDescription, "panelDescription");
+            this.panelDescription.Name = "panelDescription";
+            // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.BackColor = System.Drawing.Color.White;
+            this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxDescription, "textBoxDescription");
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.ReadOnly = true;
+            this.textBoxDescription.TabStop = false;
+            // 
+            // labelCredits
+            // 
+            resources.ApplyResources(this.labelCredits, "labelCredits");
+            this.labelCredits.Name = "labelCredits";
+            // 
+            // okButton
+            // 
+            resources.ApplyResources(this.okButton, "okButton");
+            this.tableLayoutPanel.SetColumnSpan(this.okButton, 2);
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okButton.Name = "okButton";
+            this.okButton.UseVisualStyleBackColor = true;
+            // 
+            // logoPictureBox
+            // 
+            resources.ApplyResources(this.logoPictureBox, "logoPictureBox");
+            this.logoPictureBox.Image = global::TransmissionRemoteDotnet.Properties.Resources.welcomefinish;
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.TabStop = false;
             // 
             // AboutDialog
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button1;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.tableLayoutPanel);
+            this.Controls.Add(this.logoPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AboutDialog";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.AboutDialog_Load);
+            this.tableLayoutPanel.ResumeLayout(false);
+            this.tableLayoutPanel.PerformLayout();
+            this.panelDescription.ResumeLayout(false);
+            this.panelDescription.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+        private System.Windows.Forms.Label labelProductName;
+        private System.Windows.Forms.Label labelVersion;
+        private System.Windows.Forms.Label labelCopyright;
+        private System.Windows.Forms.LinkLabel labelHomepageLink;
+        private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.Panel panelDescription;
+        private System.Windows.Forms.Label labelCredits;
+        private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.PictureBox logoPictureBox;
+        private System.Windows.Forms.LinkLabel labelDevelopers;
     }
 }

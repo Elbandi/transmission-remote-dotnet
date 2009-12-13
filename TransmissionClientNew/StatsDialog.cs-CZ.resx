@@ -140,10 +140,10 @@
   <data name="filesAddedValue2.Text" xml:space="preserve">
     <value>Získávám...</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
+  <data name="CumulativeGroupBox.Text" xml:space="preserve">
     <value>Celkové statistiky</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Statistiky relace</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">

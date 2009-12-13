@@ -28,6 +28,7 @@ using System.Reflection;
 using System.Resources;
 using System.Security.Cryptography;
 using System.Linq;
+using Microsoft.Win32;
 
 namespace TransmissionRemoteDotnet
 {
@@ -82,43 +83,96 @@ namespace TransmissionRemoteDotnet
 
         public static double ToDouble(object o)
         {
-            if (o.GetType().Equals(typeof(string)))
+            return ToDouble(o, 0.0);
+        }
+
+        public static double ToDouble(object o, double Default)
+        {
+            if (o != null)
             {
-                return double.Parse((string)o, NUMBER_FORMAT);
+                if (o.GetType().Equals(typeof(string)))
+                {
+                    return double.Parse((string)o, NUMBER_FORMAT);
+                }
+                else if (o.GetType().Equals(typeof(JsonNumber)))
+                {
+                    return ((JsonNumber)o).ToDouble();
+                }
             }
-            else
-            {
-                return ((JsonNumber)o).ToDouble();
-            }
+            return Default;
         }
 
         public static long ToLong(object o)
         {
-            return ((JsonNumber)o).ToInt64();
+            return ToLong(o, 0);
         }
 
-        public static int ToInt(object o)
+        public static long ToLong(object o, long Default)
         {
             if (o != null)
             {
-                return ((JsonNumber)o).ToInt32();
+                if (o.GetType().Equals(typeof(long)))
+                {
+                    return (long)o;
+                }
+                if (o.GetType().Equals(typeof(bool)))
+                {
+                    return (bool)o ? 1 : 0;
+                }
+                if (o.GetType().Equals(typeof(JsonNumber)))
+                {
+                    return ((JsonNumber)o).ToInt64();
+                }
             }
-            else
+            return Default;
+        }
+
+        private static int ToInt(bool b)
+        {
+            return b ? 1 : 0;
+        }
+        public static int ToInt(object o)
+        {
+            return ToInt(o, 0);
+        }
+        public static int ToInt(object o, int Default)
+        {
+            if (o != null)
             {
-                return 0;
+                if (o.GetType().Equals(typeof(int)))
+                {
+                    return (int)o;
+                }
+                if (o.GetType().Equals(typeof(bool)))
+                {
+                    return (bool)o ? 1 : 0;
+                }
+                if (o.GetType().Equals(typeof(JsonNumber)))
+                {
+                    return ((JsonNumber)o).ToInt32();
+                }
             }
+            return Default;
         }
 
         public static decimal ToDecimal(object o)
         {
-            if (o.GetType().Equals(typeof(string)))
+            return ToDecimal(o, 0);
+        }
+        public static decimal ToDecimal(object o, decimal Default)
+        {
+            if (o != null)
             {
-                return decimal.Parse((string)o, NUMBER_FORMAT);
+                if (o.GetType().Equals(typeof(string)))
+                {
+                    return decimal.Parse((string)o, NUMBER_FORMAT);
+                }
+                else if (o.GetType().Equals(typeof(JsonNumber)))
+                {
+                    return ((JsonNumber)o).ToDecimal();
+                }
             }
-            else
-            {
-                return ((JsonNumber)o).ToDecimal();
-            }
+            return Default;
         }
 
         public static JsonArray ListViewSelectionToIdArray(ListView.SelectedListViewItemCollection selections)
@@ -190,21 +244,64 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static void JsonGet(ref bool d, object o)
+        {
+            if (o != null) d = Toolbox.ToBool(o, d);
+        }
+
+        public static void JsonGet(ref int d, object o)
+        {
+            if (o != null) d = Toolbox.ToInt(o, d);
+        }
+
+        public static void JsonGet(ref string d, object o)
+        {
+            if (o != null) d = o as string;
+        }
+
+        public static void JsonPut(JsonObject dest, string key, bool value)
+        {
+            JsonPut(dest, key, Toolbox.ToInt(value));
+        }
+
+        public static void JsonPut(JsonObject dest, string key, object value)
+        {
+            dest.Put(key, value);
+        }
+
         public static short ToShort(object o)
         {
-            return ((JsonNumber)o).ToInt16();
+            return ToShort(o, 0);
+        }
+
+        public static short ToShort(object o, short Default)
+        {
+            return o != null ? ((JsonNumber)o).ToInt16() : Default;
         }
 
         public static Boolean ToBool(object o)
         {
-            if (o.GetType().Equals(typeof(Boolean)))
+            return ToBool(o, true);
+        }
+
+        public static Boolean ToBool(object o, Boolean Default)
+        {
+            if (o != null)
             {
-                return (Boolean)o;
+                if (o.GetType().Equals(typeof(Boolean)))
+                {
+                    return (Boolean)o;
+                }
+                if (o.GetType().Equals(typeof(int)))
+                {
+                    return (int)o != 0;
+                }
+                if (o.GetType().Equals(typeof(JsonNumber)))
+                {
+                    return ((JsonNumber)o).ToBoolean();
+                }
             }
-            else
-            {
-                return ((JsonNumber)o).ToBoolean();
-            }
+            return Default;
         }
 
         public static DateTime DateFromEpoch(double e)
@@ -332,6 +429,71 @@ namespace TransmissionRemoteDotnet
                     item.Selected = true;
                 }
                 lv.ResumeLayout();
+            }
+        }
+
+        /// <summary>
+        /// Renames a subkey of the passed in registry key since 
+        /// the Framework totally forgot to include such a handy feature.
+        /// </summary>
+        /// <param name="regKey">The RegistryKey that contains the subkey 
+        /// you want to rename (must be writeable)</param>
+        /// <param name="subKeyName">The name of the subkey that you want to rename
+        /// </param>
+        /// <param name="newSubKeyName">The new name of the RegistryKey</param>
+        /// <returns>True if succeeds</returns>
+        public static bool RenameSubKey(RegistryKey parentKey,
+        string subKeyName, string newSubKeyName)
+        {
+            CopyKey(parentKey, subKeyName, newSubKeyName);
+            parentKey.DeleteSubKeyTree(subKeyName);
+            return true;
+        }
+
+        /// <summary>
+        /// Copy a registry key. The parentKey must be writeable.
+        /// </summary>
+        /// <param name="parentKey"></param>
+        /// <param name="keyNameToCopy"></param>
+        /// <param name="newKeyName"></param>
+        /// <returns></returns>
+        public static bool CopyKey(RegistryKey parentKey,
+        string keyNameToCopy, string newKeyName)
+        {
+            //Create new key
+            using (RegistryKey destinationKey = parentKey.CreateSubKey(newKeyName))
+            {
+                //Open the sourceKey we are copying from
+                using (RegistryKey sourceKey = parentKey.OpenSubKey(keyNameToCopy))
+                {
+                    RecurseCopyKey(sourceKey, destinationKey);
+                }
+            }
+            return true;
+        }
+
+        private static void RecurseCopyKey(RegistryKey sourceKey, RegistryKey destinationKey)
+        {
+            //copy all the values
+            foreach (string valueName in sourceKey.GetValueNames())
+            {
+                object objValue = sourceKey.GetValue(valueName);
+                RegistryValueKind valKind = sourceKey.GetValueKind(valueName);
+                destinationKey.SetValue(valueName, objValue, valKind);
+            }
+
+            //For Each subKey 
+            //Create a new subKey in destinationKey 
+            //Call myself 
+            foreach (string sourceSubKeyName in sourceKey.GetSubKeyNames())
+            {
+                using (RegistryKey sourceSubKey = sourceKey.OpenSubKey(sourceSubKeyName))
+                {
+                    using (RegistryKey destSubKey = destinationKey.CreateSubKey(sourceSubKeyName))
+                    {
+                        RecurseCopyKey(sourceSubKey, destSubKey);
+                    }
+                }
             }
         }
 

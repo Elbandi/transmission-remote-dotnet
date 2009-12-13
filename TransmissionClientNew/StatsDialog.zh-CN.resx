@@ -143,7 +143,7 @@
   <data name="filesAddedLabel2.Text" xml:space="preserve">
     <value>已添加文件:</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
+  <data name="CumulativeGroupBox.Text" xml:space="preserve">
     <value>累计</value>
   </data>
   <data name="secondsActiveValue1.Text" xml:space="preserve">
@@ -176,7 +176,7 @@
   <data name="uploadedBytesLabel1.Text" xml:space="preserve">
     <value>已上传字节:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>当前会话统计</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
