@@ -526,20 +526,27 @@ namespace TransmissionRemoteDotnet
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
-                = removeTorrentButton.Visible = toolStripSeparator4.Visible
-                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Enabled
+                = removeTorrentButton.Visible = toolbarToolStripSeparator1.Visible
+                = toolbarToolStripSeparator2.Visible = disconnectToolStripMenuItem.Enabled
                 = configureTorrentButton.Visible = torrentToolStripMenuItem.Enabled
                 = remoteSettingsToolStripMenuItem.Enabled
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
-                = speedGraph.Enabled = toolStripSeparator2.Visible
+                = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
-            sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            statsToolStripMenuItem.Enabled = sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            AltSpeedButton.Visible = toolbarToolStripSeparator4.Visible = connected && dd.RpcVersion >= 5;
             addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
+        }
+
+        public void SetAltSpeedButtonState(bool enabled)
+        {
+            AltSpeedButton.Image = enabled ? global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on : global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off;
+            AltSpeedButton.Tag = enabled;
         }
 
         public void SetRemoteCmdButtonVisible(bool connected)
@@ -1059,6 +1066,31 @@ namespace TransmissionRemoteDotnet
             OneTorrentsSelected(one, t);
         }
 
+        private void torrentListView_DoubleClick(object sender, EventArgs e)
+        {
+            Torrent t = null;
+            switch (Program.Settings.DefaultDoubleClickAction)
+            {
+                case 1:
+                    if (openNetworkShareButton.Visible)
+                        openNetworkShareButton.PerformClick();
+                    else
+                        ShowTorrentPropsHandler(sender, e);
+                    break;
+                case 2:
+                    t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    if (IfTorrentStatus(t, ProtocolConstants.STATUS_PAUSED))
+                        startTorrentButton.PerformClick();
+                    else
+                        pauseTorrentButton.PerformClick();
+                    break;
+                case 0:
+                default:
+                    ShowTorrentPropsHandler(sender, e);
+                    break;
+            }
+        }
+
         private void ShowTorrentPropsHandler(object sender, EventArgs e)
         {
             lock (torrentListView)
@@ -1184,6 +1216,7 @@ namespace TransmissionRemoteDotnet
 
         public void connectButton_Click(object sender, EventArgs e)
         {
+            fileToolStripMenuItem.DropDown.Close();
             if (!Program.Connected)
                 Connect();
         }
@@ -1211,15 +1244,15 @@ namespace TransmissionRemoteDotnet
             {
                 if (stateListBox.SelectedIndex == 1)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
                 }
                 else if (stateListBox.SelectedIndex == 2)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_PAUSED);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
                 }
                 else if (stateListBox.SelectedIndex == 3)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                    FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
                 }
                 else if (stateListBox.SelectedIndex == 4)
                 {
@@ -1231,7 +1264,7 @@ namespace TransmissionRemoteDotnet
                 }
                 else if (stateListBox.SelectedIndex == 6)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_SEEDING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
                 }
                 else if (stateListBox.SelectedIndex == 7)
                 {
@@ -1264,7 +1297,7 @@ namespace TransmissionRemoteDotnet
                 }
             }
         }
-        private bool ShowTorrentIfStatus(Torrent t, object statusCode)
+        private bool IfTorrentStatus(Torrent t, object statusCode)
         {
             return (t.StatusCode & (short)statusCode) > 0;
         }
@@ -1461,7 +1494,7 @@ namespace TransmissionRemoteDotnet
             }
             request.Put(ProtocolConstants.KEY_ARGUMENTS, arguments);
             request.Put(ProtocolConstants.KEY_TAG, (int)ResponseTag.DoNothing);
-            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed += 
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed +=
                 delegate(object sender, ResultEventArgs e)
                 {
                     if (e.Result.GetType() != typeof(ErrorCommand))
@@ -2047,6 +2080,21 @@ namespace TransmissionRemoteDotnet
                 {
                     FindDialog.Focus();
                 }
+        }
+
+        private void AltSpeedButton_Click(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            arguments.Put(ProtocolConstants.FIELD_ALTSPEEDENABLED, !(bool)AltSpeedButton.Tag);
+            CommandFactory.RequestAsync(request).Completed +=
+                delegate(object dsender, ResultEventArgs de)
+                {
+                    if (de.Result.GetType() != typeof(ErrorCommand) && !sessionWebClient.IsBusy)
+                    {
+                        sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
+                    }
+                };
         }
     }
 }

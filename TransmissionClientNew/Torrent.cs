@@ -561,10 +561,14 @@ namespace TransmissionRemoteDotnet
             {
                 if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
                 {
-                    int seedersTotal = 0;
+                    int seedersMax = 0;
                     foreach (JsonObject tracker in this.TrackerStats)
-                        seedersTotal += Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_SEEDERCOUNT]);
-                    return seedersTotal;
+                    {
+                        int trackerSeeders = Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_SEEDERCOUNT]);
+                        if (seedersMax < trackerSeeders)
+                            seedersMax = trackerSeeders;
+                    }
+                    return seedersMax;
                 }
                 else if (info.Contains(ProtocolConstants.FIELD_SEEDERS))
                 {
@@ -591,10 +595,14 @@ namespace TransmissionRemoteDotnet
             {
                 if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
                 {
-                    int leechersTotal = 0;
+                    int leechersMax = 0;
                     foreach (JsonObject tracker in this.TrackerStats)
-                        leechersTotal += Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_LEECHERCOUNT]);
-                    return leechersTotal;
+                    {
+                        int trackerLeechers = Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_LEECHERCOUNT]);
+                        if (leechersMax < trackerLeechers)
+                            leechersMax = trackerLeechers;
+                    }
+                    return leechersMax;
                 }
                 else if (info.Contains(ProtocolConstants.FIELD_LEECHERS))
                 {

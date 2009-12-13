@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,6 +20,8 @@ namespace TransmissionRemoteDotnet.Settings
         public bool MinOnClose = false;
         public bool MinToTray = false;
         public bool AutoCheckupdate = false;
+        public bool DeleteTorrentWhenAdding = false;
+        public int DefaultDoubleClickAction = 0;
         public bool StartedBalloon = true;
         public string Locale = "en-GB";
         public string PlinkPath = null;
@@ -58,6 +60,8 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINTOTRAY, MinToTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTEDBALLOON, StartedBalloon);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_DELETETORRENT, DeleteTorrentWhenAdding);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_DEFAULTACTION, DefaultDoubleClickAction);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_LOCALE, Locale);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKPATH, PlinkPath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPLOADPROMPT, UploadPrompt);
@@ -84,6 +88,8 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
             Toolbox.JsonGet(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
+            Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
+            Toolbox.JsonGet(ref DefaultDoubleClickAction, o[SettingsKey.REGKEY_DEFAULTACTION]);
             Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
@@ -418,6 +424,8 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_USESSL = "usessl",
             REGKEY_AUTOCONNECT = "autoConnect",
             REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
+            REGKEY_DELETETORRENT = "deleteTorrentWhenAdding",
+            REGKEY_DEFAULTACTION = "defaultDoubleClickAction",
             REGKEY_USER = "user",
             REGKEY_PASS = "pass",
             REGKEY_AUTHENABLED = "authEnabled",

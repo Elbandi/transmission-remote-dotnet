@@ -114,10 +114,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>오류 기록</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>닫기</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="clearButton.Text" xml:space="preserve">
     <value>지우기</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">

@@ -140,10 +140,10 @@
   <data name="filesAddedValue2.Text" xml:space="preserve">
     <value>확인 중...</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
+  <data name="CumulativeGroupBox.Text" xml:space="preserve">
     <value>전체 통계</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>현재 접속 통계</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">

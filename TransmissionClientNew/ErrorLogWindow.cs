@@ -57,12 +57,12 @@ namespace TransmissionRemoteDotnet
             errorListView.ResumeLayout();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             lock (errorListView)
             {
