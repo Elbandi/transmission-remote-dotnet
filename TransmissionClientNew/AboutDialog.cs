@@ -41,6 +41,13 @@ namespace TransmissionRemoteDotnet
             this.labelVersion.Text = String.Format("v{0}.{1} ({2} {3})", version.Major, version.Minor, "build" /* OtherStrings.Build.ToLower() */, version.Build);
             this.labelCopyright.Text = String.Format("{0} {1}", AssemblyCopyright, Encoding.ASCII.GetString(Convert.FromBase64String("")));
             this.tableLayoutPanel.ColumnStyles[0].Width = this.labelProductName.Width + 8;
+            LinkLabel.Link hl = new LinkLabel.Link();
+            hl.Description = "desc";
+            hl.LinkData = hl.Name  = "http://code.google.com/p/transmission-remote-dotnet";
+            hl.Start = labelHomepageLink.Text.Length + 1;
+            hl.Length = hl.Name.Length;
+            labelHomepageLink.Text += " " + hl.Name;
+            this.labelHomepageLink.Links.Add(hl);
             bool first = true;
             foreach (KeyValuePair<string, string> c in coders)
             {

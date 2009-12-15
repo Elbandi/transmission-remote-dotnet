@@ -124,7 +124,7 @@
     <value>Copyright</value>
   </data>
   <data name="labelHomepageLink.Text" xml:space="preserve">
-    <value>Homepage: http://code.google.com/p/transmission-remote-dotnet</value>
+    <value>Homepage:</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value> * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/
