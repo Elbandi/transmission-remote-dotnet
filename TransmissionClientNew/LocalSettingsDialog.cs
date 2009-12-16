@@ -77,6 +77,7 @@ namespace TransmissionRemoteDotnet
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
             DeleteTorrentCheckBox.Checked = sett.DeleteTorrentWhenAdding;
+            DontSavePasswordsCheckBox.Checked = sett.DontSavePasswords;
             PlinkPathTextBox.Text = sett.PlinkPath;
         }
 
@@ -111,39 +112,8 @@ namespace TransmissionRemoteDotnet
                 sett.CurrentProfile = CurrentProfileComboBox.SelectedItem as string;
             else
                 sett.CurrentProfile = "";
+            sett.DontSavePasswords = DontSavePasswordsCheckBox.Checked;
             sett.Commit();
-            /*
-            LocalSettingsSingleton settings = null;
-            settings.Host = HostField.Text;
-            settings.Port = (int)PortField.Value;
-            settings.UseSSL = UseSSLCheckBox.Checked;
-            //            settings.AutoConnect = AutoConnectCheckBox.Checked;
-            settings.RefreshRate = (int)RefreshRateValue.Value;
-            Program.Form.refreshTimer.Interval = (int)RefreshRateValue.Value * 1000;
-            settings.AuthEnabled = EnableAuthCheckBox.Checked;
-            settings.User = UserField.Text;
-            settings.Pass = PassField.Text;
-            Program.Form.notifyIcon.Visible = settings.MinToTray = MinToTrayCheckBox.Checked;
-            settings.ProxyMode = (ProxyMode)EnableProxyCombo.SelectedIndex;
-            settings.ProxyHost = ProxyHostField.Text;
-            settings.ProxyPort = (int)ProxyPortField.Value;
-            settings.ProxyAuth = ProxyAuthEnableCheckBox.Checked;
-            settings.ProxyUser = ProxyUserField.Text;
-            settings.ProxyPass = ProxyPassField.Text;
-            settings.StartPaused = StartPausedCheckBox.Checked;
-            settings.RetryLimit = (int)RetryLimitValue.Value;
-            settings.StartedBalloon = notificationOnAdditionCheckBox.Checked;
-            settings.CompletedBaloon = notificationOnCompletionCheckBox.Checked;
-            settings.MinOnClose = minimizeOnCloseCheckBox.Checked;
-            settings.PlinkCmd = PlinkCmdTextBox.Text;
-            settings.PlinkEnable = PlinkEnableCheckBox.Checked;
-            settings.PlinkPath = PlinkPathTextBox.Text;
-            settings.UpLimit = uploadLimitItems.Text;
-            settings.DownLimit = downloadLimitItems.Text;
-            settings.UploadPrompt = UploadPromptCheckBox.Checked;
-            Program.Form.SetRemoteCmdButtonVisible(Program.Connected);
-            settings.Commit();
-             */
         }
 
         private void SaveButton_Click(object sender, EventArgs e)

@@ -129,6 +129,9 @@
     <Compile Include="GListBoxItem.cs" />
     <Compile Include="IconHelper.cs" />
     <Compile Include="Comparers\TorrentListViewColumnSorter.cs" />
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -318,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindDialog.zh-TW.resx">
       <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.hu-HU.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalSettingsDialog.cs-CZ.resx">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>

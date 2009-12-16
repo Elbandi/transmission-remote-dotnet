@@ -61,6 +61,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.DontSavePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
             this.defaultActionLabel = new System.Windows.Forms.Label();
             this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
@@ -248,6 +249,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
             this.groupBehavior.Controls.Add(this.defaultActionLabel);
             this.groupBehavior.Controls.Add(this.DeleteTorrentCheckBox);
@@ -260,6 +262,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // DontSavePasswordsCheckBox
+            // 
+            resources.ApplyResources(this.DontSavePasswordsCheckBox, "DontSavePasswordsCheckBox");
+            this.DontSavePasswordsCheckBox.Name = "DontSavePasswordsCheckBox";
+            this.DontSavePasswordsCheckBox.UseVisualStyleBackColor = true;
             // 
             // defaultActionComboBox
             // 
@@ -897,5 +905,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
         private System.Windows.Forms.ComboBox defaultActionComboBox;
         private System.Windows.Forms.Label defaultActionLabel;
+        private System.Windows.Forms.CheckBox DontSavePasswordsCheckBox;
     }
 }

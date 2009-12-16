@@ -23,6 +23,7 @@ namespace TransmissionRemoteDotnet.Settings
         public bool DeleteTorrentWhenAdding = false;
         public int DefaultDoubleClickAction = 0;
         public bool StartedBalloon = true;
+        private bool dontsavepasswords = false;
         public string Locale = "en-GB";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
@@ -38,6 +39,20 @@ namespace TransmissionRemoteDotnet.Settings
                     currentprofile = value;
             }
         }
+
+        public bool DontSavePasswords
+        {
+            get { return dontsavepasswords; }
+            set
+            {
+                dontsavepasswords = value;
+                foreach (KeyValuePair<string, TransmissionServer> s in Servers)
+                {
+                    s.Value.SetDontSavePasswords(dontsavepasswords);
+                }
+            }
+        }
+
         public TransmissionServer Current
         {
             get
@@ -59,6 +74,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINONCLOSE, MinOnClose);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINTOTRAY, MinToTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTEDBALLOON, StartedBalloon);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_DONTSAVEPASSWORDS, DontSavePasswords);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DELETETORRENT, DeleteTorrentWhenAdding);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DEFAULTACTION, DefaultDoubleClickAction);
@@ -103,6 +119,9 @@ namespace TransmissionRemoteDotnet.Settings
                 }
             }
             Toolbox.JsonGet(ref currentprofile, o[SettingsKey.REGKEY_CURRENTPROFILE]);
+            bool dsp = false;
+            Toolbox.JsonGet(ref dsp, o[SettingsKey.REGKEY_DONTSAVEPASSWORDS]);
+            DontSavePasswords = dsp;
             if (!Servers.ContainsKey(currentprofile))
                 currentprofile = "";
             ja = (JsonObject)o[SettingsKey.REGKEY_MISC];
@@ -229,14 +248,15 @@ namespace TransmissionRemoteDotnet.Settings
         public string Host = "";
         public int Port = 0;
         public string Username = "";
-        public string Password = "";
+        private string password = null;
+        private bool dontsavepasswords = false;
 
         public virtual void LoadFromJson(JsonObject o)
         {
             Toolbox.JsonGet(ref Host, o[SettingsKey.REGKEY_HOST]);
             Toolbox.JsonGet(ref Port, o[SettingsKey.REGKEY_PORT]);
             Toolbox.JsonGet(ref Username, o[SettingsKey.REGKEY_USER]);
-            Toolbox.JsonGet(ref Password, o[SettingsKey.REGKEY_PASS]);
+            Toolbox.JsonGet(ref password, o[SettingsKey.REGKEY_PASS]);
         }
         public virtual JsonObject SaveToJson()
         {
@@ -244,7 +264,8 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_HOST, Host);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PORT, Port);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_USER, Username);
-            Toolbox.JsonPut(jo, SettingsKey.REGKEY_PASS, Password);
+            if (!dontsavepasswords)
+                Toolbox.JsonPut(jo, SettingsKey.REGKEY_PASS, password);
             return jo;
         }
         public Server()
@@ -253,6 +274,30 @@ namespace TransmissionRemoteDotnet.Settings
         public Server(JsonObject o)
         {
             LoadFromJson(o);
+        }
+        public virtual void SetDontSavePasswords(bool Value)
+        {
+            dontsavepasswords = Value;
+        }
+
+        public string ValidPassword
+        {
+            get
+            {
+                if (password == null)
+                {
+                    password = InputBox.Show("Jelszo", "izeize", true);
+                    if (password == null)
+                        throw new PasswordEmptyException("aaa");
+                }
+                return this.Password;
+            }
+        }
+
+        public string Password
+        {
+            get { return password != null ? password : ""; }
+            set { password = value; }
         }
     }
     public class TransmissionServer : Server
@@ -329,6 +374,11 @@ namespace TransmissionRemoteDotnet.Settings
         public TransmissionServer(JsonObject o):this()
         {
             LoadFromJson(o);
+        }
+        public override void SetDontSavePasswords(bool Value)
+        {
+            base.SetDontSavePasswords(Value);
+            Proxy.SetDontSavePasswords(Value);
         }
 
         public void RemoveSambaMapping(string unixPrefix)
@@ -442,6 +492,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_REFRESHRATE = "refreshRate",
             REGKEY_CURRENTPROFILE = "currentProfile",
             REGKEY_STARTEDBALLOON = "startedBalloon",
+            REGKEY_DONTSAVEPASSWORDS = "dontSavePasswords",
             REGKEY_COMPLETEDBALLOON = "completedBalloon",
             REGKEY_MINONCLOSE = "minOnClose",
             REGKEY_PLINKPATH = "plinkPath",
@@ -455,12 +506,11 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_UPLOADPROMPT = "uploadPrompt",
             REGKEY_DESTINATION_PATH_HISTORY = "destPathHistory";
     }
-    /*
-    public enum ProxyMode
+    public class PasswordEmptyException : Exception
     {
-        Auto = 0,
-        Enabled = 1,
-        Disabled = 2
+        public PasswordEmptyException(string message)
+            : base(message)
+        {
+        }
     }
-     */
 }
