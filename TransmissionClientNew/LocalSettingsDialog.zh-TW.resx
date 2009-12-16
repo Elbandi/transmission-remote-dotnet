@@ -111,35 +111,29 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
+    <value>Don't save passwords</value>
+  </data>
+  <data name="defaultActionComboBox.Items" xml:space="preserve">
+    <value>Torrent Properties</value>
+  </data>
+  <data name="defaultActionComboBox.Items1" xml:space="preserve">
+    <value>Open remote folder</value>
+  </data>
+  <data name="defaultActionComboBox.Items2" xml:space="preserve">
+    <value>Start/Stop torrent</value>
+  </data>
+  <data name="defaultActionLabel.Text" xml:space="preserve">
+    <value>Default Action:</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
+    <value>Delete torrent when adding</value>
+  </data>
   <data name="SaveAndConnectButton.Text" xml:space="preserve">
     <value>Save and Connect</value>
   </data>
-  <data name="AutoConnectComboBox.Items" xml:space="preserve">
-    <value>fdaf</value>
-  </data>
-  <data name="AutoConnectComboBox.Items1" xml:space="preserve">
-    <value>fdsaf</value>
-  </data>
-  <data name="AutoConnectComboBox.Items2" xml:space="preserve">
-    <value>gfsdg</value>
-  </data>
-  <data name="AutoConnectComboBox.Items3" xml:space="preserve">
-    <value>gfdsg</value>
-  </data>
   <data name="groupAutoConnect.Text" xml:space="preserve">
     <value>Auto connect</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items" xml:space="preserve">
-    <value>fdaf</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items1" xml:space="preserve">
-    <value>fdsaf</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items2" xml:space="preserve">
-    <value>gfsdg</value>
-  </data>
-  <data name="CurrentProfileComboBox.Items3" xml:space="preserve">
-    <value>gfdsg</value>
   </data>
   <data name="groupCurrentProfile.Text" xml:space="preserve">
     <value>Current profile</value>

@@ -455,4 +455,7 @@
     <value>5 sec|10 sec|30 sec|5 min</value>
     <comment>delim with | char!!</comment>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
 </root>

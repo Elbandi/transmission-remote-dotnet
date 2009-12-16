@@ -664,6 +664,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pause.
         /// </summary>
         internal static string Pause {

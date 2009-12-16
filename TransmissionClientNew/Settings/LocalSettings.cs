@@ -286,9 +286,9 @@ namespace TransmissionRemoteDotnet.Settings
             {
                 if (password == null)
                 {
-                    password = InputBox.Show("Jelszo", "izeize", true);
+                    password = InputBox.Show(OtherStrings.Password + ":", this.Host, true);
                     if (password == null)
-                        throw new PasswordEmptyException("aaa");
+                        throw new PasswordEmptyException();
                 }
                 return this.Password;
             }
@@ -508,9 +508,5 @@ namespace TransmissionRemoteDotnet.Settings
     }
     public class PasswordEmptyException : Exception
     {
-        public PasswordEmptyException(string message)
-            : base(message)
-        {
-        }
     }
 }

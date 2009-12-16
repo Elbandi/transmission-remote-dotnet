@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
   <data name="SpeedResolutions" xml:space="preserve">
     <value>5 sec|10 sec|30 sec|5 min</value>
     <comment>delim with | char!!</comment>
