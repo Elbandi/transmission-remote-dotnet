@@ -2299,7 +2299,7 @@
     <value>Fill</value>
   </data>
   <metadata name="tabControlImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 39</value>
+    <value>17, 56</value>
   </metadata>
   <data name="tabControlImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -2362,7 +2362,7 @@
     <value>0</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 519</value>
+    <value>319, 56</value>
   </metadata>
   <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -2449,7 +2449,7 @@
     <value>Center</value>
   </data>
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>3, 0</value>
+    <value>125, 17</value>
   </metadata>
   <data name="toolStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
@@ -2767,7 +2767,7 @@
     <value>3, 0</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 39</value>
+    <value>87, 39</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2809,7 +2809,7 @@
     <value>0</value>
   </data>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+    <value>17, 17</value>
   </metadata>
   <data name="connectToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+C</value>
@@ -3193,13 +3193,13 @@
     <value>1</value>
   </data>
   <metadata name="flagsImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 0</value>
+    <value>223, 17</value>
   </metadata>
   <data name="flagsImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 12</value>
   </data>
   <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>469, 0</value>
+    <value>352, 17</value>
   </metadata>
   <data name="notifyIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3229,16 +3229,16 @@
     <value>Transmission Remote</value>
   </data>
   <metadata name="refreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>575, 0</value>
+    <value>458, 17</value>
   </metadata>
   <metadata name="filesTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>127, 39</value>
+    <value>578, 17</value>
   </metadata>
   <metadata name="refreshElapsedTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>344, 39</value>
+    <value>682, 17</value>
   </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 78</value>
+    <value>179, 56</value>
   </metadata>
   <data name="openFileDialog1.Filter" xml:space="preserve">
     <value>BitTorrent metadata|*.torrent</value>
