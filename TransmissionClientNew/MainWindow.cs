@@ -696,6 +696,13 @@ namespace TransmissionRemoteDotnet
             {
                 Connect();
             }
+            else
+            {
+                if (Program.UploadArgs != null && Program.UploadArgs.Length > 0)
+                {
+                    ShowMustBeConnectedDialog(Program.UploadArgs);
+                }
+            }
         }
 
         private void PopulateLanguagesMenu()
@@ -832,6 +839,10 @@ namespace TransmissionRemoteDotnet
             {
                 Program.UploadArgs = args;
                 Connect();
+            }
+            else
+            {
+                Program.UploadArgs = null;
             }
         }
 
