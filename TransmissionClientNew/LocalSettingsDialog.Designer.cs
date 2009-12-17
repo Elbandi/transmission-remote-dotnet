@@ -129,6 +129,8 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClearPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.ClearProxyPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -462,6 +464,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ClearPasswordCheckBox);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.EnableAuthCheckBox);
             this.tabPage2.Controls.Add(this.label4);
@@ -500,6 +503,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.ClearProxyPasswordCheckBox);
             this.tabPage3.Controls.Add(this.ProxyAuthEnableCheckBox);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label8);
@@ -776,6 +780,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
+            // ClearPasswordCheckBox
+            // 
+            resources.ApplyResources(this.ClearPasswordCheckBox, "ClearPasswordCheckBox");
+            this.ClearPasswordCheckBox.Name = "ClearPasswordCheckBox";
+            this.ClearPasswordCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ClearProxyPasswordCheckBox
+            // 
+            resources.ApplyResources(this.ClearProxyPasswordCheckBox, "ClearProxyPasswordCheckBox");
+            this.ClearProxyPasswordCheckBox.Name = "ClearProxyPasswordCheckBox";
+            this.ClearProxyPasswordCheckBox.UseVisualStyleBackColor = true;
+            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -906,5 +922,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ComboBox defaultActionComboBox;
         private System.Windows.Forms.Label defaultActionLabel;
         private System.Windows.Forms.CheckBox DontSavePasswordsCheckBox;
+        private System.Windows.Forms.CheckBox ClearPasswordCheckBox;
+        private System.Windows.Forms.CheckBox ClearProxyPasswordCheckBox;
     }
 }

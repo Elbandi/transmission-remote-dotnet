@@ -275,12 +275,12 @@ namespace TransmissionRemoteDotnet
             ts.RefreshRate = (int)RefreshRateValue.Value;
             ts.UseSSL = UseSSLCheckBox.Checked;
             ts.Username = UserField.Text;
-            ts.Password = PassField.Text;
+            ts.Password = !ClearPasswordCheckBox.Checked ? PassField.Text : null;
             ts.Proxy.ProxyMode = (ProxyMode)EnableProxyCombo.SelectedIndex;
             ts.Proxy.Host = ProxyHostField.Text;
             ts.Proxy.Port = (int)ProxyPortField.Value;
             ts.Proxy.Username = ProxyUserField.Text;
-            ts.Proxy.Password = ProxyPassField.Text;
+            ts.Proxy.Password = !ClearProxyPasswordCheckBox.Checked ? ProxyPassField.Text : null;
             ts.RetryLimit = (int)RetryLimitValue.Value;
             ts.PlinkEnable = PlinkEnableCheckBox.Checked;
             ts.PlinkCmd = PlinkCmdTextBox.Text;

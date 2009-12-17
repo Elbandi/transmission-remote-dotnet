@@ -1032,6 +1032,36 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ClearPasswordCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ClearPasswordCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ClearPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 43</value>
+  </data>
+  <data name="ClearPasswordCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="ClearPasswordCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
+    <value>Clear the password at save</value>
+  </data>
+  <data name="&gt;&gt;ClearPasswordCheckBox.Name" xml:space="preserve">
+    <value>ClearPasswordCheckBox</value>
+  </data>
+  <data name="&gt;&gt;ClearPasswordCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearPasswordCheckBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;ClearPasswordCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1060,7 +1090,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="EnableAuthCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1090,7 +1120,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;EnableAuthCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1120,7 +1150,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="PassField.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 44</value>
@@ -1144,7 +1174,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;PassField.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="UserField.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 18</value>
@@ -1165,7 +1195,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;UserField.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1194,6 +1224,36 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ClearProxyPasswordCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 98</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
+    <value>Clear the password at save</value>
+  </data>
+  <data name="&gt;&gt;ClearProxyPasswordCheckBox.Name" xml:space="preserve">
+    <value>ClearProxyPasswordCheckBox</value>
+  </data>
+  <data name="&gt;&gt;ClearProxyPasswordCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearProxyPasswordCheckBox.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;ClearProxyPasswordCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="ProxyAuthEnableCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1201,7 +1261,7 @@
     <value>NoControl</value>
   </data>
   <data name="ProxyAuthEnableCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 68</value>
+    <value>243, 72</value>
   </data>
   <data name="ProxyAuthEnableCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -1222,7 +1282,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;ProxyAuthEnableCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1252,7 +1312,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1282,7 +1342,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="EnableProxyCombo.Items" xml:space="preserve">
     <value>Auto</value>
@@ -1294,7 +1354,7 @@
     <value>Disabled</value>
   </data>
   <data name="EnableProxyCombo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 39</value>
+    <value>273, 17</value>
   </data>
   <data name="EnableProxyCombo.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 21</value>
@@ -1312,7 +1372,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;EnableProxyCombo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1342,7 +1402,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="ProxyPortField.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 43</value>
@@ -1363,7 +1423,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;ProxyPortField.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1393,7 +1453,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="ProxyHostField.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 17</value>
@@ -1414,13 +1474,13 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;ProxyHostField.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="ProxyUserField.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 70</value>
   </data>
   <data name="ProxyUserField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="ProxyUserField.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1435,7 +1495,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;ProxyUserField.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="ProxyPassField.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 96</value>
@@ -1444,7 +1504,7 @@
     <value>*</value>
   </data>
   <data name="ProxyPassField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 20</value>
+    <value>128, 20</value>
   </data>
   <data name="ProxyPassField.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1459,7 +1519,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;ProxyPassField.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
