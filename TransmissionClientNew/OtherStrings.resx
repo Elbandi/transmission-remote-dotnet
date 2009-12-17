@@ -458,4 +458,7 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>
