@@ -144,7 +144,7 @@ namespace TransmissionRemoteDotnet
                 }
                 lock (form.stateListBox)
                 {
-                    if (form.stateListBox.FindItem(item.SubItems[13].Text) == null)
+                    if (item.SubItems[13].Text.Length > 0 && form.stateListBox.FindItem(item.SubItems[13].Text) == null)
                     {
                         form.stateListBox.Items.Add(new GListBoxItem(item.SubItems[13].Text, 8));
                     }
@@ -214,6 +214,8 @@ namespace TransmissionRemoteDotnet
             {
                 return;
             }
+            if (this.item.SubItems[13].Text.Length == 0)
+                return;
             lock (Program.TorrentIndex)
             {
                 foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
@@ -340,7 +342,7 @@ namespace TransmissionRemoteDotnet
                 if (info.Contains(ProtocolConstants.FIELD_PIECES))
                 {
                     string pieces = (string)info[ProtocolConstants.FIELD_PIECES];
-                    return Convert.FromBase64CharArray(pieces.ToCharArray(), 0, pieces.Length); ;
+                    return pieces.Length > 0 ? Convert.FromBase64CharArray(pieces.ToCharArray(), 0, pieces.Length) : new byte[0];
                 }
                 else
                 {
@@ -353,6 +355,8 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
+                if (this.Trackers.Length == 0)
+                    return "";
                 JsonObject tracker = (JsonObject)this.Trackers[0];
                 Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
                 if (!trim)
