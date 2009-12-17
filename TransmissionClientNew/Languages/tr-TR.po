@@ -1099,8 +1099,8 @@ msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?"
 
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
-msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED.""
-msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.""
+msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
+msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1109,8 +1109,8 @@ msgstr "Do you want to remove {0}?"
 
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
-msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED.""
-msgstr "Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.""
+msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
+msgstr "Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
