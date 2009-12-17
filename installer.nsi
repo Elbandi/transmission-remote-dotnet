@@ -1,5 +1,6 @@
 !include "MUI2.nsh"
 !include "FileAssociation.nsh"
+!include "ProtocolAssociation.nsh"
 !include "x64.nsh"
 
 ;Rebuild Release
@@ -72,6 +73,8 @@ LangString NAME_SecFiletypeAssociations ${LANG_ENGLISH} "Register Filetype Assoc
 LangString DESC_SecFiletypeAssociations ${LANG_ENGLISH} "Register Associations to Transmission Remote"
 LangString NAME_SecRegiterTorrent ${LANG_ENGLISH} "Register .torrent"
 LangString DESC_SecRegiterTorrent ${LANG_ENGLISH} "Register .torrent to Transmission Remote"
+LangString NAME_SecRegiterMagnet ${LANG_ENGLISH} "Register Magnet URI"
+LangString DESC_SecRegiterMagnet ${LANG_ENGLISH} "Register Magnet URI to Transmission Remote"
 LangString NAME_SecDesktopIcon ${LANG_ENGLISH} "Create icon on desktop"
 LangString DESC_SecDesktopIcon ${LANG_ENGLISH} "If set, a shortcut for Transmission Remote will be created on the desktop."
 LangString DESC_SecGeoIPDatabase ${LANG_ENGLISH} "GeoIP database"
@@ -134,6 +137,10 @@ SubSection $(NAME_SecFiletypeAssociations) SecFiletypeAssociations
 
   Section $(NAME_SecRegiterTorrent) SecRegiterTorrent
     ${registerExtension} "$INSTDIR\Transmission Remote.exe" ".torrent" "Transmission Remote Torrent"
+  SectionEnd
+
+  Section $(NAME_SecRegiterMagnet) SecRegiterMagnet
+    ${registerProtocol} "$INSTDIR\Transmission Remote.exe" "magnet" "Magnet URI"
   SectionEnd
 
 SubSectionEnd
@@ -224,6 +231,7 @@ Section "Uninstall"
 
   ; Unregister File Association
   ${unregisterExtension} ".torrent" "Transmission Remote Torrent"
+  ${unregisterProtocol} "magnet" "Magnet URI"
   
   ; Remove registry keys
   DeleteRegKey HKLM SOFTWARE\TransmissionRemote
@@ -285,6 +293,7 @@ SectionEnd
   !insertmacro MUI_DESCRIPTION_TEXT ${SecGeoIPDatabase} $(DESC_SecGeoIPDatabase)
   !insertmacro MUI_DESCRIPTION_TEXT ${SecLanguages} $(DESC_SecLanguages)
   !insertmacro MUI_DESCRIPTION_TEXT ${SecRegiterTorrent} $(DESC_SecRegiterTorrent)
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecRegiterMagnet} $(DESC_SecRegiterMagnet)
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 Function .onInit
