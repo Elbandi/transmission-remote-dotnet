@@ -422,7 +422,7 @@ namespace TransmissionRemoteDotnet.Settings
         {
             get
             {
-                return String.Format("{0}://{1}:{2}{3}rpc", new object[] { UseSSL ? "https" : "http", Host, Port, CustomPath == null ? "/transmission/" : CustomPath });
+                return String.Format("{0}://{1}:{2}{3}rpc", new object[] { UseSSL ? "https" : "http", Host, Port, (CustomPath == null || CustomPath.Length == 0) ? "/transmission/" : CustomPath });
             }
         }
 

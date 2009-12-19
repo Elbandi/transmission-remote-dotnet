@@ -2109,9 +2109,6 @@
   <data name="splitContainer1.Panel1MinSize" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
@@ -2119,7 +2116,7 @@
     <value>NoControl</value>
   </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 84</value>
+    <value>2, 84</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 18</value>
@@ -2145,9 +2142,6 @@
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
@@ -2155,10 +2149,10 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 54</value>
+    <value>2, 54</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 18</value>
+    <value>51, 18</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

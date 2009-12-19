@@ -250,6 +250,7 @@ namespace TransmissionRemoteDotnet
                 PlinkCmdTextBox.Text = ts.PlinkCmd;
                 downloadLimitItems.Text = ts.DownLimit;
                 uploadLimitItems.Text = ts.UpLimit;
+                customPathTextBox.Text = ts.CustomPath != null ? ts.CustomPath : "";
                 listSambaShareMappings.Items.Clear();
                 foreach (KeyValuePair<string, string> s in ts.SambaShareMappings)
                 {
@@ -286,6 +287,7 @@ namespace TransmissionRemoteDotnet
             ts.PlinkCmd = PlinkCmdTextBox.Text;
             ts.DownLimit = downloadLimitItems.Text;
             ts.UpLimit = uploadLimitItems.Text;
+            ts.CustomPath = customPathTextBox.Text.Length > 0 ? customPathTextBox.Text : null;
             ts.SambaShareMappings.Clear();
             foreach (SambaShareMappings s in listSambaShareMappings.Items)
             {

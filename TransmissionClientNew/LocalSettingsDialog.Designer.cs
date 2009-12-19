@@ -86,12 +86,14 @@ namespace TransmissionRemoteDotnet
             this.PortField = new System.Windows.Forms.NumericUpDown();
             this.RefreshRateValue = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ClearPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.EnableAuthCheckBox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PassField = new System.Windows.Forms.TextBox();
             this.UserField = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ClearProxyPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.ProxyAuthEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -109,6 +111,8 @@ namespace TransmissionRemoteDotnet
             this.PlinkCmdTextBox = new System.Windows.Forms.TextBox();
             this.PlinkEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.customPathTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.downloadLimitItems = new System.Windows.Forms.TextBox();
@@ -129,8 +133,6 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClearPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.ClearProxyPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -474,6 +476,12 @@ namespace TransmissionRemoteDotnet
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // ClearPasswordCheckBox
+            // 
+            resources.ApplyResources(this.ClearPasswordCheckBox, "ClearPasswordCheckBox");
+            this.ClearPasswordCheckBox.Name = "ClearPasswordCheckBox";
+            this.ClearPasswordCheckBox.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -517,6 +525,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ClearProxyPasswordCheckBox
+            // 
+            resources.ApplyResources(this.ClearProxyPasswordCheckBox, "ClearProxyPasswordCheckBox");
+            this.ClearProxyPasswordCheckBox.Name = "ClearProxyPasswordCheckBox";
+            this.ClearProxyPasswordCheckBox.UseVisualStyleBackColor = true;
             // 
             // ProxyAuthEnableCheckBox
             // 
@@ -634,6 +648,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.customPathTextBox);
+            this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.label17);
             this.tabPage6.Controls.Add(this.label16);
             this.tabPage6.Controls.Add(this.downloadLimitItems);
@@ -641,6 +657,16 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // customPathTextBox
+            // 
+            resources.ApplyResources(this.customPathTextBox, "customPathTextBox");
+            this.customPathTextBox.Name = "customPathTextBox";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
             // label17
             // 
@@ -780,18 +806,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
-            // ClearPasswordCheckBox
-            // 
-            resources.ApplyResources(this.ClearPasswordCheckBox, "ClearPasswordCheckBox");
-            this.ClearPasswordCheckBox.Name = "ClearPasswordCheckBox";
-            this.ClearPasswordCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ClearProxyPasswordCheckBox
-            // 
-            resources.ApplyResources(this.ClearProxyPasswordCheckBox, "ClearProxyPasswordCheckBox");
-            this.ClearProxyPasswordCheckBox.Name = "ClearProxyPasswordCheckBox";
-            this.ClearProxyPasswordCheckBox.UseVisualStyleBackColor = true;
-            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -924,5 +938,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox DontSavePasswordsCheckBox;
         private System.Windows.Forms.CheckBox ClearPasswordCheckBox;
         private System.Windows.Forms.CheckBox ClearProxyPasswordCheckBox;
+        private System.Windows.Forms.TextBox customPathTextBox;
+        private System.Windows.Forms.Label label12;
     }
 }
