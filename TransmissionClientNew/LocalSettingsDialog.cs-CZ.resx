@@ -111,6 +111,12 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
+    <value>Clear the password at save</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
+    <value>Clear the password at save</value>
+  </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
     <value>Don't save passwords</value>
   </data>
@@ -163,10 +169,10 @@
     <value>Add</value>
   </data>
   <data name="RemoveShareButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>Odstranit</value>
   </data>
   <data name="columnName.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Název</value>
   </data>
   <data name="columnHost.Text" xml:space="preserve">
     <value>Host</value>

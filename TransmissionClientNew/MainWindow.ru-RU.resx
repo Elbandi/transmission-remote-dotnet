@@ -142,7 +142,7 @@
     <value>Info object to clipboard</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>Скопировать как CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Move torrent data</value>
@@ -175,7 +175,7 @@
     <value>Language</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Переанонсировать</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Open on Network Share</value>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -209,7 +209,7 @@
     <value>Upload Limit</value>
   </data>
   <data name="Querying" xml:space="preserve">
-    <value>Querying...</value>
+    <value>En cours d'interrogation...</value>
   </data>
   <data name="Updating" xml:space="preserve">
     <value>Updating...</value>

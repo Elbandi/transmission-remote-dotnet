@@ -133,10 +133,10 @@
     <value>Enable Distributed Hash Table (DHT)</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>KB/s</value>
+    <value>Кб/с</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>KB/s</value>
+    <value>Кб/с</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>:</value>
