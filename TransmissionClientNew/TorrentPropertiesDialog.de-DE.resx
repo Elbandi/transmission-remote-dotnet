@@ -112,13 +112,13 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabTrackers.Text" xml:space="preserve">
-    <value>Trackers</value>
+    <value>Tracker</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Bandwidth priority:</value>
+    <value>Bandbreiten Priorität:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Akzeptiere Sitzungs Limits</value>
+    <value>Akzeptiere Sitzungs-Limits</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
     <value>Limitiere Seed-Ratio</value>
@@ -148,7 +148,7 @@
     <value>OK</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTE: Availability of some options may require a transmission-daemon upgrade.</value>
+    <value>BEACHTE: Einige Optionen benötigen ein Upgrade des Transmission-Daemons.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentEigenschaftenDialog</value>

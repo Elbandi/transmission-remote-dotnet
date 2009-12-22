@@ -121,80 +121,80 @@
     <value>Abbrechen</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Passwort</value>
   </data>
   <data name="SpeedResolutions" xml:space="preserve">
-    <value>5 sec|10 sec|30 sec|5 min</value>
+    <value>5 Sekunden|10 Sekunden|30 Sekunden|5 Minuten</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="PiecesInfo" xml:space="preserve">
-    <value>{0} x {1} (davon {2} Teile fertig)</value>
+    <value>{0} x {1} ({2} Teile fertig)</value>
   </data>
   <data name="XConnected" xml:space="preserve">
     <value>{0} verbunden</value>
   </data>
   <data name="EmptyFile" xml:space="preserve">
-    <value>Empty file</value>
+    <value>Leere Datei</value>
   </data>
   <data name="UnknownResponseTag" xml:space="preserve">
-    <value>Unknown response tag</value>
+    <value>Unbekannter Response-Tag</value>
   </data>
   <data name="GeoipInitError" xml:space="preserve">
-    <value>GeoIP init error ({0})</value>
+    <value>GeoIP Initalisierungs-Fehler ({0})</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
-    <value>Bandwidth allocation</value>
+    <value>Bandbreiten-Ausnutzung</value>
   </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
-    <value>Multiple Torrent Properties</value>
+    <value>Mehrere Torrent Eigenschaften</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Unbekannt</value>
   </data>
   <data name="UnableToOpen" xml:space="preserve">
-    <value>Unable to open</value>
+    <value>Konnte nicht geöffnet werden</value>
   </data>
   <data name="LoadingFile" xml:space="preserve">
-    <value>Loading {0}...</value>
+    <value>Lade {0}...</value>
   </data>
   <data name="InfoObjectToClipboard" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Torrenteigenschaften in die Zwischenablage kopieren</value>
   </data>
   <data name="MoveMultipleTorrents" xml:space="preserve">
-    <value>Move multiple torrent data</value>
+    <value>Verschiebe mehrere Torrent Daten</value>
   </data>
   <data name="MoveTorrentData" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Verschiebe Torrent Daten</value>
   </data>
   <data name="MoveX" xml:space="preserve">
-    <value>Move {0}</value>
+    <value>Verschiebe {0}</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Verlassen</value>
   </data>
   <data name="NewTorrentIs" xml:space="preserve">
-    <value>New torrent {0}.</value>
+    <value>Neuer Torrent {0}.</value>
   </data>
   <data name="PortIsClosed" xml:space="preserve">
-    <value>The incoming port on your daemon is CLOSED.</value>
+    <value>Incoming Port des Daemons ist CLOSED.</value>
   </data>
   <data name="PortIsOpen" xml:space="preserve">
-    <value>The incoming port on your daemon is OPEN.</value>
+    <value>Incoming Port des Daemons ist OPEN.</value>
   </data>
   <data name="PortTestResult" xml:space="preserve">
-    <value>Port test result</value>
+    <value>Port-Test Ergebnis</value>
   </data>
   <data name="DownloadLimit" xml:space="preserve">
-    <value>Download Limit</value>
+    <value>Download-Limit</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>Kein Limit</value>
   </data>
   <data name="UploadLimit" xml:space="preserve">
-    <value>Upload Limit</value>
+    <value>Upload-Limit</value>
   </data>
   <data name="Querying" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="Updating" xml:space="preserve">
     <value>Updating...</value>
@@ -203,19 +203,19 @@
     <value>{0} in blocklist.</value>
   </data>
   <data name="Pieces" xml:space="preserve">
-    <value>Pieces</value>
+    <value>Teile</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>Fortschritt</value>
   </data>
   <data name="Reannounce" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Aktualisiere Tracker</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Öffne auf Netzwerkfreigabe</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>Alles</value>
+    <value>Alle</value>
   </data>
   <data name="Author" xml:space="preserve">
     <value>Autor</value>
@@ -233,7 +233,7 @@
     <value>Fertig</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Bestätige</value>
+    <value>Sind Sie sicher?</value>
   </data>
   <data name="ConfirmMultipleRemove" xml:space="preserve">
     <value>Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?</value>
@@ -245,7 +245,7 @@
     <value>Wirklich entfernen {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Entfernen und löschen {0}?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT."</value>
+    <value>Entfernen und löschen {0}?{1}ALLE DATEN DIESES TORRENTS WERDEN GELÖSCHT."</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Verbinden</value>
@@ -281,10 +281,10 @@
     <value>Download</value>
   </data>
   <data name="DownloadedValid" xml:space="preserve">
-    <value>{0} ({1} valid)</value>
+    <value>{0} ({1} geprüft)</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>Downloading</value>
+    <value>Download</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Fehler</value>
@@ -359,10 +359,10 @@
     <value>Prüfen</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Entfernen</value>
+    <value>Entferne Torrent(s)</value>
   </data>
   <data name="RemoveAndDelete" xml:space="preserve">
-    <value>Entfernen und löschen</value>
+    <value>Entferne Torrent(s) und lösche Daten</value>
   </data>
   <data name="Revision" xml:space="preserve">
     <value>Revision</value>

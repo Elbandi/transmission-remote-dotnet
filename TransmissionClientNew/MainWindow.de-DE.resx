@@ -112,7 +112,7 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AltSpeedButton.Text" xml:space="preserve">
-    <value>Alt Speed</value>
+    <value>Bandbreiten-Limit (de)aktivieren</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Teile x Größe:</value>
@@ -121,46 +121,46 @@
     <value>Prüf-ID:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Suche...</value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Start torrent(s)</value>
+    <value>Starte Torrent(s)</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Recheck Torrent(s)</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Setze Torrent Eigenschaften</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add torrent with options</value>
+    <value>Torrent hinzufügen (mit Optionen)</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Torrenteigenschaften in die Zwischenablage kopieren</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Speichern als CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Verschiebe Torrent Daten</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>Typ</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Über Netzwerk-Freigabe öffnen</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Aktualisiere Tracker</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Über Netzwerk-Freigabe öffnen</value>
   </data>
   <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Category filter panel</value>
+    <value>Kategorie-Filter ein-/ausblenden</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>Name</value>
@@ -169,37 +169,37 @@
     <value>Größe</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Fertiggestellt</value>
+    <value>Prozent</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Status</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Seeds</value>
+    <value>Seeder</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Leecher</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Down Rate</value>
+    <value>Download-Rate</value>
   </data>
   <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Up Rate</value>
+    <value>Upload-Rate</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>Restzeit</value>
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Uploaded</value>
+    <value>Gesendet</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>Ratio</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Hinzugfügt am</value>
+    <value>Hinzugfügt</value>
   </data>
   <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Fertiggestellt am</value>
+    <value>Fertiggestellt</value>
   </data>
   <data name="columnHeader30.Text" xml:space="preserve">
     <value>Tracker</value>
@@ -226,28 +226,28 @@
     <value>Leecher:</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Seeds:</value>
+    <value>Seeder:</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Upload Limit:</value>
+    <value>Upload-Limit:</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Upload Rate:</value>
+    <value>Upload-Rate:</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Hochgeladen:</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Verbleibend:</value>
+    <value>Restzeit:</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Status:</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Download Limit:</value>
+    <value>Download-Limit:</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Download Rate:</value>
+    <value>Download-Rate:</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Runtergeladen:</value>
@@ -256,7 +256,7 @@
     <value>Gestartet am:</value>
   </data>
   <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
-    <value>Verbleibende Zeit:</value>
+    <value>Laufzeit</value>
   </data>
   <data name="generalTabPage.Text" xml:space="preserve">
     <value>Allgemein</value>
@@ -283,7 +283,7 @@
     <value>Fertiggestellt</value>
   </data>
   <data name="columnHeader4.Text" xml:space="preserve">
-    <value>%</value>
+    <value>Prozent</value>
   </data>
   <data name="columnHeader17.Text" xml:space="preserve">
     <value>Auslassen</value>
@@ -295,7 +295,7 @@
     <value>Dateien</value>
   </data>
   <data name="columnHeader23.Text" xml:space="preserve">
-    <value>IP Addresse</value>
+    <value>IP Adresse</value>
   </data>
   <data name="columnHeader24.Text" xml:space="preserve">
     <value>Hostname</value>
@@ -313,16 +313,16 @@
     <value>Fortschritt</value>
   </data>
   <data name="columnHeader28.Text" xml:space="preserve">
-    <value>Down Rate</value>
+    <value>Download-Rate</value>
   </data>
   <data name="columnHeader29.Text" xml:space="preserve">
-    <value>Up Rate</value>
+    <value>Upload-Rate</value>
   </data>
   <data name="peersTabPage.Text" xml:space="preserve">
     <value>Peers</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Auflösung:</value>
+    <value>Intervall:</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Down</value>
@@ -337,7 +337,7 @@
     <value>Gesamtbandbreiten-Ausnutzung</value>
   </data>
   <data name="speedTabPage.Text" xml:space="preserve">
-    <value>Geschwindigkeit</value>
+    <value>Grafik</value>
   </data>
   <data name="statusStrip.Text" xml:space="preserve">
     <value>statusStrip1</value>
@@ -373,7 +373,7 @@
     <value>Entferne Torrent(s)</value>
   </data>
   <data name="removeAndDeleteButton.Text" xml:space="preserve">
-    <value>Entferne und lösche Torrent(s)</value>
+    <value>Entferne Torrent(s) und lösche Daten</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
     <value>Alle</value>
@@ -382,7 +382,7 @@
     <value>Kürzlich aktiv</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Nächstes Update</value>
+    <value>Aktuallisiere Tracker</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>Lokale Einstellungen</value>
@@ -439,10 +439,10 @@
     <value>Eigenschaften</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Entferne</value>
+    <value>Entferne Torrent(s)</value>
   </data>
   <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Entferne und lösche</value>
+    <value>Entferne Torrent(s) und lösche Daten</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Alle starten</value>
