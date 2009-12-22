@@ -112,25 +112,25 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="encryptionCombobox.Items" xml:space="preserve">
-    <value>tolerated</value>
+    <value>toleriert</value>
   </data>
   <data name="limitUploadCheckBox.Text" xml:space="preserve">
-    <value>Limit upload</value>
+    <value>Limitiere Upload</value>
   </data>
   <data name="limitDownloadCheckBox.Text" xml:space="preserve">
-    <value>Limit download</value>
+    <value>Limitiere Download</value>
   </data>
   <data name="portForwardCheckBox.Text" xml:space="preserve">
-    <value>Enable UPnP</value>
+    <value>UPnP aktivieren</value>
   </data>
   <data name="encryptionCombobox.Items1" xml:space="preserve">
-    <value>preferred</value>
+    <value>bevorzugt</value>
   </data>
   <data name="encryptionCombobox.Items2" xml:space="preserve">
-    <value>required</value>
+    <value>benötigt</value>
   </data>
   <data name="dhtEnabled.Text" xml:space="preserve">
-    <value>Enable Distributed Hash Table (DHT)</value>
+    <value>DHT aktivieren (Distributed Hash Table)</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Schließen</value>
@@ -142,7 +142,7 @@
     <value>Zeitbindung</value>
   </data>
   <data name="altSpeedLimitEnable.Text" xml:space="preserve">
-    <value>Wechselnde Speed Limits aktivieren</value>
+    <value>Bandbreiten-Limit aktivieren</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Remote Einstellungen</value>
@@ -202,10 +202,10 @@
     <value>Allgemein</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
-    <value>Speed Limits</value>
+    <value>Bandbreiten-Limit</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Wechselnde Speed Limits</value>
+    <value>Bandbreiten-Limit</value>
   </data>
   <data name="testPortButton.Text" xml:space="preserve">
     <value>Teste Port</value>

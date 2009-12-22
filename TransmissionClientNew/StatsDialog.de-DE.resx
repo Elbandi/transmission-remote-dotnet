@@ -111,31 +111,31 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="downloadedBytesLabel2.Text" xml:space="preserve">
-    <value>Heruntergeladenen Bytes:</value>
+    <value>Heruntergeladen:</value>
   </data>
   <data name="uploadedBytesLabel2.Text" xml:space="preserve">
-    <value>Hochgeladene Bytes:</value>
+    <value>Hochgeladen:</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Schließen</value>
   </data>
   <data name="secondsActiveValue2.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="sessionCountValue2.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="filesAddedValue2.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="uploadedBytesValue2.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="downloadedBytesValue2.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="secondsActiveLabel2.Text" xml:space="preserve">
-    <value>Gesamtlaufzeit:</value>
+    <value>Laufzeit:</value>
   </data>
   <data name="sessionCountLabel2.Text" xml:space="preserve">
     <value>Sitzungen:</value>
@@ -147,22 +147,22 @@
     <value>Gesamtstatistik</value>
   </data>
   <data name="secondsActiveValue1.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="sessionCountValue1.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="filesAddedValue1.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="uploadedBytesValue1.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="downloadedBytesValue1.Text" xml:space="preserve">
-    <value>Abfrage läuft...</value>
+    <value>Anfrage läuft...</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">
-    <value>Gesamtlaufzeit:</value>
+    <value>Laufzeit:</value>
   </data>
   <data name="sessionCountLabel1.Text" xml:space="preserve">
     <value>Sitzungen:</value>
@@ -171,10 +171,10 @@
     <value>Dateien hinzugefügt:</value>
   </data>
   <data name="downloadedBytesLabel1.Text" xml:space="preserve">
-    <value>Heruntergeladenen Bytes:</value>
+    <value>Heruntergeladen:</value>
   </data>
   <data name="uploadedBytesLabel1.Text" xml:space="preserve">
-    <value>Hochgeladene Bytes:</value>
+    <value>Hochgeladen:</value>
   </data>
   <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Sitzungsstatistik</value>

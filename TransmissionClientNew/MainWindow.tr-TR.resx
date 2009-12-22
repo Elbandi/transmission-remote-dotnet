@@ -142,7 +142,7 @@
     <value>Info object to clipboard</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>CSV olarak kopyala</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Move torrent data</value>
@@ -373,7 +373,7 @@
     <value>Torrentı sil ve kaldır</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>All</value>
+    <value>Tümü</value>
   </data>
   <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
     <value>Geçmiş aktiviteler</value>

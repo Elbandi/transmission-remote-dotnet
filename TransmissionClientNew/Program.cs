@@ -74,10 +74,9 @@ namespace TransmissionRemoteDotnet
         public static List<ListViewItem> LogItems
         {
             get { return Program.logItems; }
-        
         }
 
-        private static string[] uploadArgs; 
+        private static string[] uploadArgs;
         public static string[] UploadArgs
         {
             get { return Program.uploadArgs; }
@@ -114,7 +113,7 @@ namespace TransmissionRemoteDotnet
                     ServicePointManager.Expect100Continue = false;
 
                     /* Store a list of torrents to upload after connect? */
-                    if (!settings.AutoConnect.Equals("") && args.Length > 0)
+                    if (args.Length > 0)
                     {
                         Program.uploadArgs = args;
                     }

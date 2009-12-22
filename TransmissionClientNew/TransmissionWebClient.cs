@@ -21,6 +21,7 @@ using System.Text;
 using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using TransmissionRemoteDotnet.Settings;
 
 namespace TransmissionRemoteDotnet
 {
@@ -61,9 +62,16 @@ namespace TransmissionRemoteDotnet
         protected override WebRequest GetWebRequest(Uri address)
         {
             WebRequest request = base.GetWebRequest(address);
-            if (request.GetType() == typeof(HttpWebRequest))
+            try
             {
-                SetupWebRequest((HttpWebRequest)request, authenticate);
+                if (request.GetType() == typeof(HttpWebRequest))
+                {
+                    SetupWebRequest((HttpWebRequest)request, authenticate);
+                }
+            }
+            catch (PasswordEmptyException e)
+            {
+                this.CancelAsync();
             }
             return request;
         }
@@ -79,7 +87,7 @@ namespace TransmissionRemoteDotnet
             Settings.TransmissionServer settings = Program.Settings.Current;
             if (settings.AuthEnabled && authenticate)
             {
-                request.Credentials = new NetworkCredential(settings.Username, settings.Password);
+                request.Credentials = new NetworkCredential(settings.Username, settings.ValidPassword);
                 request.PreAuthenticate = Program.DaemonDescriptor.Version < 1.40 || Program.DaemonDescriptor.Version >= 1.6;
             }
             if (settings.Proxy.ProxyMode == ProxyMode.Enabled)
@@ -87,7 +95,7 @@ namespace TransmissionRemoteDotnet
                 request.Proxy = new WebProxy(settings.Proxy.Host, settings.Proxy.Port);
                 if (settings.Proxy.AuthEnabled)
                 {
-                    request.Proxy.Credentials = new NetworkCredential(settings.Proxy.Username, settings.Proxy.Password);
+                    request.Proxy.Credentials = new NetworkCredential(settings.Proxy.Username, settings.Proxy.ValidPassword);
                 }
             }
             else if (settings.Proxy.ProxyMode == ProxyMode.Disabled)

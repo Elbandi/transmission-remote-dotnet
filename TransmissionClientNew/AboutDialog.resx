@@ -265,7 +265,7 @@
     <value>Fill</value>
   </data>
   <data name="labelHomepageLink.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
-    <value>10, 51</value>
+    <value>9, 0</value>
   </data>
   <data name="labelHomepageLink.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 75</value>
@@ -280,7 +280,7 @@
     <value>22</value>
   </data>
   <data name="labelHomepageLink.Text" xml:space="preserve">
-    <value>Homepage: http://code.google.com/p/transmission-remote-dotnet</value>
+    <value>Homepage:</value>
   </data>
   <data name="labelHomepageLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
