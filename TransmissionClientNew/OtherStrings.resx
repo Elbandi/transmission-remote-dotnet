@@ -142,13 +142,13 @@
     <value>You have selected {0} torrents for removal. Are you sure?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."</value>
+    <value>You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Do you want to remove {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."</value>
+    <value>Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Connect</value>

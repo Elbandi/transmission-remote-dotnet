@@ -236,13 +236,13 @@
     <value>Du har valgt at fjerne {0} torrents. Er du sikker?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."</value>
+    <value>You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Do you want to remove {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Du har valgt at fjerne {0} torrents. Er du sikker?{1}ALLE DATA FRA DISSE TORRENTS VIL BLIVE FJERNET."</value>
+    <value>Du har valgt at fjerne {0} torrents. Er du sikker?{1}ALLE DATA FRA DISSE TORRENTS VIL BLIVE FJERNET.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Forbind</value>
