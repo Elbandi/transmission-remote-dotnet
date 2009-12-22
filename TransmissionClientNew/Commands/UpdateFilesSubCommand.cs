@@ -28,7 +28,7 @@ using Etier.IconHelper;
 #endif
 
 namespace TransmissionRemoteDotnet.Commands
-{     
+{
     class UpdateFilesUpdateSubCommand : ICommand
     {
         private ListViewItem item;
@@ -38,13 +38,17 @@ namespace TransmissionRemoteDotnet.Commands
         private bool wanted;
         private JsonNumber priority;
 
-        public UpdateFilesUpdateSubCommand(ListViewItem item, bool wanted,
-            JsonNumber priority, long bytesCompleted)
+        public UpdateFilesUpdateSubCommand(ListViewItem item, long bytesCompleted)
         {
             this.item = item;
             this.bytesCompleted = bytesCompleted;
             this.bytesCompletedStr = Toolbox.GetFileSize(bytesCompleted);
             this.progress = Toolbox.CalcPercentage(bytesCompleted, (long)item.SubItems[2].Tag);
+        }
+        public UpdateFilesUpdateSubCommand(ListViewItem item, bool wanted,
+            JsonNumber priority, long bytesCompleted)
+            : this(item, bytesCompleted)
+        {
             this.wanted = wanted;
             this.priority = priority;
         }

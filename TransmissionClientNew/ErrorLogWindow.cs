@@ -57,12 +57,12 @@ namespace TransmissionRemoteDotnet
             errorListView.ResumeLayout();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             lock (errorListView)
             {
@@ -79,26 +79,32 @@ namespace TransmissionRemoteDotnet
             Program.OnError -= onErrorDelegate;
         }
 
+        private delegate void OnErrorDelegate(object sender, EventArgs e);
         private void OnError(object sender, EventArgs e)
         {
-            errorListView.SuspendLayout();
-            lock (Program.LogItems)
+            if (errorListView.InvokeRequired)
+                errorListView.Invoke(new OnErrorDelegate(this.OnError), sender, e);
+            else
             {
-                lock (errorListView)
+                errorListView.SuspendLayout();
+                lock (Program.LogItems)
                 {
-                    List<ListViewItem> logItems = Program.LogItems;
-                    if (logItems.Count > errorListView.Items.Count)
+                    lock (errorListView)
                     {
-                        for (int i = errorListView.Items.Count; i < logItems.Count; i++)
+                        List<ListViewItem> logItems = Program.LogItems;
+                        if (logItems.Count > errorListView.Items.Count)
                         {
-                            errorListView.Items.Add((ListViewItem)logItems[i].Clone());
+                            for (int i = errorListView.Items.Count; i < logItems.Count; i++)
+                            {
+                                errorListView.Items.Add((ListViewItem)logItems[i].Clone());
+                            }
                         }
                     }
                 }
+                errorListView.Sort();
+                Toolbox.StripeListView(errorListView);
+                errorListView.ResumeLayout();
             }
-            errorListView.Sort();
-            Toolbox.StripeListView(errorListView);
-            errorListView.ResumeLayout();
         }
 
         private void errorListView_DoubleClick(object sender, EventArgs e)

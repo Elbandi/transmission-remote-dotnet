@@ -120,13 +120,13 @@
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Informace</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="clearButton.Text" xml:space="preserve">
     <value>Vyčistit</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Můžete zkopírovat informace pomocí dvojkliku</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>Zavřít</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

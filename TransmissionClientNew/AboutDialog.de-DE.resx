@@ -109,15 +109,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Bitte senden Sie Fehlerberichte und Korrekturen an diese Seite.</value>
+  <data name="labelDevelopers.Text" xml:space="preserve">
+    <value>Entwickler:</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <data name="labelProductName.Text" xml:space="preserve">
+    <value>Produkt Name</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Schließen</value>
+  <data name="labelVersion.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="labelCopyright.Text" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="labelHomepageLink.Text" xml:space="preserve">
+    <value>Webseite:</value>
+  </data>
+  <data name="textBoxDescription.Text" xml:space="preserve">
+       <value>* Die meisten Icons sind die Kreation von David Vignoni aus seinem Nuvola Icon 
+	Theme. http://www.icon-king.com/
+* Einige Icons wurden freundlicherweise von liuzhiyi und benketom beigesteuert.
+* charles und den anderen Transmission Entwicklern für ihre großartige Arbeit.
+* Der Quellcode für das Auslesen von .torrent Dateien wurde von Alan McGovern's
+	MonoTorrent Projekt übernommen.
+* Ein Dank an die Übersetzer:
+  * [französisch]	Romaric R.
+  * [deutsch]	benba
+  * [dänisch]	drphrozen
+  * [ungarisch]	András Elso
+  * [chinesisch]	liuzhiyi
+  * [polnisch]	Woodzu and cichy
+  * [türkisch]	RayTracer
+  * [russisch]	Alexey Komarov
+  * [spanisch]	huexxx
+  * [koreanisch]	twohertz
+  * [taiwanesisch]	zeal.tsai
+  * [tschechisch]	ikeblaster       </value>
+  </data>
+  <data name="labelCredits.Text" xml:space="preserve">
+    <value>Verdienst &amp;&amp; Danksagung:</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>&amp;OK</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Über Transmission Remote</value>

@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Speed</value>
+  </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Pieces:</value>
   </data>
@@ -122,9 +125,6 @@
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
-  </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
     <value>Start torrent(s)</value>
@@ -142,7 +142,7 @@
     <value>Info object to clipboard</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>Скопировать как CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Move torrent data</value>
@@ -162,15 +162,6 @@
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>%</value>
   </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 sec</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 sec</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 min</value>
-  </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>
@@ -184,7 +175,7 @@
     <value>Language</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Переанонсировать</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Open on Network Share</value>
@@ -409,6 +400,9 @@
     <value>Настройки сервера</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>Показать статистику</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
     <value>Показать статистику</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">

@@ -29,7 +29,7 @@ namespace TransmissionRemoteDotnet
             {
                 this.Text = OtherStrings.MoveMultipleTorrents;
             }
-            foreach (string s in LocalSettingsSingleton.Instance.DestPathHistory)
+            foreach (string s in Program.Settings.Current.DestPathHistory)
             {
                 comboBox1.Items.Add(s);
             }
@@ -39,8 +39,8 @@ namespace TransmissionRemoteDotnet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LocalSettingsSingleton.Instance.AddDestinationPath(comboBox1.Text);
-            Program.Form.CreateActionWorker().RunWorkerAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), comboBox1.Text, true));
+            Program.Settings.Current.AddDestinationPath(comboBox1.Text);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), comboBox1.Text, true)));
             this.Close();
         }
 

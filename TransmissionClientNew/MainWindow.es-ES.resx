@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Speed</value>
+  </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Pieces:</value>
   </data>
@@ -122,9 +125,6 @@
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
-  </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>Nombre</value>
@@ -291,15 +291,6 @@
   <data name="label18.Text" xml:space="preserve">
     <value>Resolución:</value>
   </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 seg</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 seg</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 min</value>
-  </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Bajada</value>
   </data>
@@ -379,6 +370,9 @@
     <value>Configuración Remota</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>Mostrar Estadísticas</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
     <value>Mostrar Estadísticas</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">

@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Speed</value>
+  </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Pieces:</value>
   </data>
@@ -122,9 +125,6 @@
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
-  </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote</value>
@@ -435,6 +435,9 @@
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>통계 표시</value>
   </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>통계 표시</value>
+  </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>상세 정보 보기</value>
   </data>
@@ -443,15 +446,6 @@
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
-  </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 초</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 초</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 분</value>
   </data>
   <data name="speedTabPage.Text" xml:space="preserve">
     <value>속도</value>

@@ -88,7 +88,7 @@ namespace TransmissionRemoteDotnet
             {
                 item.ForeColor = Color.Red;
             }
-            SeedersColumnFormat = Program.DaemonDescriptor.RpcVersion > 6 ? "{1}" : "{0} ({1})";
+            SeedersColumnFormat = "{0} ({1})";
             item.ToolTipText = item.Name;
             item.Tag = this;
             item.SubItems.Add(Toolbox.GetFileSize(this.SizeWhenDone));
@@ -144,12 +144,12 @@ namespace TransmissionRemoteDotnet
                 }
                 lock (form.stateListBox)
                 {
-                    if (form.stateListBox.FindItem(item.SubItems[13].Text) == null)
+                    if (item.SubItems[13].Text.Length > 0 && form.stateListBox.FindItem(item.SubItems[13].Text) == null)
                     {
                         form.stateListBox.Items.Add(new GListBoxItem(item.SubItems[13].Text, 8));
                     }
                 }
-                if (LocalSettingsSingleton.Instance.StartedBalloon && this.updateSerial > 2)
+                if (Program.Settings.StartedBalloon && this.updateSerial > 2)
                 {
                     Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.Name, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
                 }
@@ -214,6 +214,8 @@ namespace TransmissionRemoteDotnet
             {
                 return;
             }
+            if (this.item.SubItems[13].Text.Length == 0)
+                return;
             lock (Program.TorrentIndex)
             {
                 foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
@@ -243,7 +245,7 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
-                if (LocalSettingsSingleton.Instance.CompletedBaloon
+                if (Program.Settings.CompletedBaloon
                     && form.notifyIcon.Visible == true
                     && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
                     && this.LeftUntilDone > 0
@@ -340,7 +342,7 @@ namespace TransmissionRemoteDotnet
                 if (info.Contains(ProtocolConstants.FIELD_PIECES))
                 {
                     string pieces = (string)info[ProtocolConstants.FIELD_PIECES];
-                    return Convert.FromBase64CharArray(pieces.ToCharArray(), 0, pieces.Length); ;
+                    return pieces.Length > 0 ? Convert.FromBase64CharArray(pieces.ToCharArray(), 0, pieces.Length) : new byte[0];
                 }
                 else
                 {
@@ -353,6 +355,8 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
+                if (this.Trackers.Length == 0)
+                    return "";
                 JsonObject tracker = (JsonObject)this.Trackers[0];
                 Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
                 if (!trim)
@@ -383,6 +387,14 @@ namespace TransmissionRemoteDotnet
             get
             {
                 return (JsonArray)info[ProtocolConstants.FIELD_TRACKERS];
+            }
+        }
+
+        public JsonArray TrackerStats
+        {
+            get
+            {
+                return (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
             }
         }
 
@@ -438,8 +450,8 @@ namespace TransmissionRemoteDotnet
             {
                 string downloadDir = this.DownloadDir;
                 string name = this.Name;
-                JsonObject mappings = LocalSettingsSingleton.Instance.SambaShareMappings;
-                foreach (string key in mappings.Names)
+                Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
+                foreach (string key in mappings.Keys)
                 {
                     if (downloadDir.StartsWith(key))
                         return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.Name);
@@ -551,7 +563,25 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDERS]);
+                if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
+                {
+                    int seedersMax = 0;
+                    foreach (JsonObject tracker in this.TrackerStats)
+                    {
+                        int trackerSeeders = Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_SEEDERCOUNT]);
+                        if (seedersMax < trackerSeeders)
+                            seedersMax = trackerSeeders;
+                    }
+                    return seedersMax;
+                }
+                else if (info.Contains(ProtocolConstants.FIELD_SEEDERS))
+                {
+                    return Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDERS]);
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
 
@@ -567,7 +597,25 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return Toolbox.ToInt(info[ProtocolConstants.FIELD_LEECHERS]);
+                if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
+                {
+                    int leechersMax = 0;
+                    foreach (JsonObject tracker in this.TrackerStats)
+                    {
+                        int trackerLeechers = Toolbox.ToInt(tracker[ProtocolConstants.TRACKERSTAT_LEECHERCOUNT]);
+                        if (leechersMax < trackerLeechers)
+                            leechersMax = trackerLeechers;
+                    }
+                    return leechersMax;
+                }
+                else if (info.Contains(ProtocolConstants.FIELD_LEECHERS))
+                {
+                    return Toolbox.ToInt(info[ProtocolConstants.FIELD_LEECHERS]);
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
 

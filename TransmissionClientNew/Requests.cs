@@ -138,7 +138,7 @@ namespace TransmissionRemoteDotnet
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTADD);
             JsonObject arguments = GetArgObject(request);
             arguments.Put(ProtocolConstants.FIELD_METAINFO, Convert.ToBase64String(binaryData, 0, binaryData.Length));
-            arguments.Put(ProtocolConstants.FIELD_PAUSED, LocalSettingsSingleton.Instance.StartPaused);
+            arguments.Put(ProtocolConstants.FIELD_PAUSED, Program.Settings.Current.StartPaused);
             if (high != null)
                 arguments.Put(ProtocolConstants.PRIORITY_HIGH, high);
             if (normal != null)
@@ -171,7 +171,7 @@ namespace TransmissionRemoteDotnet
             Uri uri = new Uri(url);
             Console.WriteLine(uri.AbsoluteUri);
             arguments.Put(ProtocolConstants.FIELD_FILENAME, uri.AbsoluteUri);
-            arguments.Put(ProtocolConstants.FIELD_PAUSED, LocalSettingsSingleton.Instance.StartPaused);
+            arguments.Put(ProtocolConstants.FIELD_PAUSED, Program.Settings.Current.StartPaused);
             return request;
         }
 
@@ -254,6 +254,7 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_DATECREATED,
                 ProtocolConstants.FIELD_CREATOR,
                 ProtocolConstants.FIELD_TRACKERS,
+                ProtocolConstants.FIELD_TRACKERSTATS,
                 ProtocolConstants.FIELD_HASHSTRING,
                 ProtocolConstants.FIELD_DOWNLOADDIR,
                 ProtocolConstants.FIELD_SEEDRATIOLIMIT,

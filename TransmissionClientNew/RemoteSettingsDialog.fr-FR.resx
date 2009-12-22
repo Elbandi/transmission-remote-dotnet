@@ -163,10 +163,10 @@
     <value>Down:</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>KB/s</value>
+    <value>Ko/s</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>KB/s</value>
+    <value>Ko/s</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>to</value>

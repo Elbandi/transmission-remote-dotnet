@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Speed</value>
+  </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Szeletek:</value>
   </data>
@@ -122,9 +125,6 @@
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
-  </data>
-  <data name="speedResComboBox.Items" xml:space="preserve">
-    <value>5 sec</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
     <value>Start torrent(s)</value>
@@ -139,13 +139,13 @@
     <value>Add torrent with options</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Info object vágólapra másolása</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>Másolás mint CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Torrent adat áthelyezése</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
     <value>Típus</value>
@@ -342,15 +342,6 @@
   <data name="label18.Text" xml:space="preserve">
     <value>Felbontás:</value>
   </data>
-  <data name="speedResComboBox.Items1" xml:space="preserve">
-    <value>10 másodperc</value>
-  </data>
-  <data name="speedResComboBox.Items2" xml:space="preserve">
-    <value>30 másodperc</value>
-  </data>
-  <data name="speedResComboBox.Items3" xml:space="preserve">
-    <value>5 perc</value>
-  </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Fel</value>
   </data>
@@ -409,6 +400,9 @@
     <value>Távoli beállítások</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>Statisztikák</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
     <value>Statisztikák</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
