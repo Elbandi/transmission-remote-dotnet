@@ -59,14 +59,14 @@ namespace TransmissionRemoteDotnet
             get { return sessionData; }
             set { sessionData = value; }
         }
-        private long updateSerial = 0;
+        private static long updateSerial = 0;
 
         public long UpdateSerial
         {
             get { return updateSerial; }
             set { updateSerial = value; }
         }
-        private int failCount = 0;
+        private static int failCount = 0;
 
         public int FailCount
         {

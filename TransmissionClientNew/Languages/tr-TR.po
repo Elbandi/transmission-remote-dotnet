@@ -1,4 +1,5 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Turkish translation of transmission-remote-dotnet
+# Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
@@ -37,8 +38,8 @@ msgstr "Copyright"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
-msgid "Homepage: http://code.google.com/p/transmission-remote-dotnet"
-msgstr "Homepage: http://code.google.com/p/transmission-remote-dotnet"
+msgid "Homepage:"
+msgstr "Homepage:"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -159,6 +160,7 @@ msgid "Save"
 msgstr "Kaydet"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
+#: OtherStrings~Cancel
 #: TorrentLoadDialog~button2.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
@@ -190,6 +192,11 @@ msgstr "Browse"
 #, csharp-format
 msgid "plink.exe:"
 msgstr "plink.exe:"
+
+#: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
+#, csharp-format
+msgid "Don't save passwords"
+msgstr "Don't save passwords"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
@@ -297,6 +304,12 @@ msgstr "Yenileme Hızı:"
 #, csharp-format
 msgid "Server"
 msgstr "Sunucu"
+
+#: LocalSettingsDialog~ClearPasswordCheckBox.Text
+#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
+#, csharp-format
+msgid "Clear the password at save"
+msgstr "Clear the password at save"
 
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
@@ -484,14 +497,16 @@ msgid "Leechers"
 msgstr "İndiren"
 
 #: MainWindow~columnHeader12.Text
+#: MainWindow~columnHeader28.Text
 #, csharp-format
 msgid "Down Speed"
-msgstr "İndirme Hızı"
+msgstr "İndirme Oranı"
 
 #: MainWindow~columnHeader13.Text
+#: MainWindow~columnHeader29.Text
 #, csharp-format
 msgid "Up Speed"
-msgstr "Gönderme Hızı"
+msgstr "Gönderme Oranı"
 
 #: MainWindow~columnHeader14.Text
 #, csharp-format
@@ -585,7 +600,7 @@ msgstr "Gönderme Limiti:"
 
 #: MainWindow~label8.Text
 #, csharp-format
-msgid "Upload rate:"
+msgid "Upload speed:"
 msgstr "Gönderme Oranı :"
 
 #: MainWindow~label5.Text
@@ -610,7 +625,7 @@ msgstr "İndirme Limiti :"
 
 #: MainWindow~label7.Text
 #, csharp-format
-msgid "Download rate:"
+msgid "Download speed:"
 msgstr "İndirme Oranı :"
 
 #: MainWindow~label6.Text
@@ -721,16 +736,6 @@ msgstr "İstemci"
 #, csharp-format
 msgid "Progress"
 msgstr "Progress"
-
-#: MainWindow~columnHeader28.Text
-#, csharp-format
-msgid "Down Rate"
-msgstr "İndirme Oranı"
-
-#: MainWindow~columnHeader29.Text
-#, csharp-format
-msgid "Up Rate"
-msgstr "Gönderme Oranı"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -1100,7 +1105,7 @@ msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?"
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."
+msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.""
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1110,7 +1115,7 @@ msgstr "Do you want to remove {0}?"
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."
+msgstr "Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.""
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
@@ -1517,6 +1522,11 @@ msgstr "{0} x {1} (have {2})"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr "5 sec|10 sec|30 sec|5 min"
 
+#: OtherStrings~Password
+#, csharp-format
+msgid "Password"
+msgstr "Password"
+
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
 msgid "Download To:"
@@ -1761,13 +1771,13 @@ msgstr "İndirme oranı limiti"
 msgid "TorrentPropertiesDialog"
 msgstr "TorrentPropertiesDialog"
 
-#: UriPromptWindow~$this.Text
-#, csharp-format
-msgid "Upload by URL"
-msgstr "Adrese gönder"
-
 #: UriPromptWindow~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Adresten bekleniyor..."
+
+#: UriPromptWindow~$this.Text
+#, csharp-format
+msgid "Upload by URL"
+msgstr "Adrese gönder"
 

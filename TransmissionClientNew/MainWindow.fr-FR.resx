@@ -142,7 +142,7 @@
     <value>Info object to clipboard</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>Copier en tant que CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Move torrent data</value>
@@ -151,7 +151,7 @@
     <value>Type</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>All</value>
+    <value>Tous</value>
   </data>
   <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
     <value>Recently Active</value>
@@ -160,7 +160,7 @@
     <value>Reannounce</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Open on network share</value>
+    <value>Open on Network Share</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
     <value>Reannounce</value>

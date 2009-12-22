@@ -1,4 +1,5 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Simplified Chinese translation of transmission-remote-dotnet
+# Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
@@ -37,8 +38,8 @@ msgstr "Copyright"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
-msgid "Homepage: http://code.google.com/p/transmission-remote-dotnet"
-msgstr "Homepage: http://code.google.com/p/transmission-remote-dotnet"
+msgid "Homepage:"
+msgstr "Homepage:"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -159,6 +160,7 @@ msgid "Save"
 msgstr "保存"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
+#: OtherStrings~Cancel
 #: TorrentLoadDialog~button2.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
@@ -190,6 +192,11 @@ msgstr "Browse"
 #, csharp-format
 msgid "plink.exe:"
 msgstr "plink.exe:"
+
+#: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
+#, csharp-format
+msgid "Don't save passwords"
+msgstr "Don't save passwords"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
@@ -297,6 +304,12 @@ msgstr "刷新速率:"
 #, csharp-format
 msgid "Server"
 msgstr "服务器"
+
+#: LocalSettingsDialog~ClearPasswordCheckBox.Text
+#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
+#, csharp-format
+msgid "Clear the password at save"
+msgstr "Clear the password at save"
 
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
@@ -484,14 +497,16 @@ msgid "Leechers"
 msgstr "下载者"
 
 #: MainWindow~columnHeader12.Text
+#: MainWindow~columnHeader28.Text
 #, csharp-format
 msgid "Down Speed"
-msgstr "下载速度"
+msgstr "下载速率"
 
 #: MainWindow~columnHeader13.Text
+#: MainWindow~columnHeader29.Text
 #, csharp-format
 msgid "Up Speed"
-msgstr "上传速度"
+msgstr "上传速率"
 
 #: MainWindow~columnHeader14.Text
 #, csharp-format
@@ -585,7 +600,7 @@ msgstr "上传限速:"
 
 #: MainWindow~label8.Text
 #, csharp-format
-msgid "Upload rate:"
+msgid "Upload speed:"
 msgstr "上传速率:"
 
 #: MainWindow~label5.Text
@@ -610,7 +625,7 @@ msgstr "下载限速:"
 
 #: MainWindow~label7.Text
 #, csharp-format
-msgid "Download rate:"
+msgid "Download speed:"
 msgstr "下载速率:"
 
 #: MainWindow~label6.Text
@@ -721,16 +736,6 @@ msgstr "客户端"
 #, csharp-format
 msgid "Progress"
 msgstr "进度"
-
-#: MainWindow~columnHeader28.Text
-#, csharp-format
-msgid "Down Rate"
-msgstr "下载速率"
-
-#: MainWindow~columnHeader29.Text
-#, csharp-format
-msgid "Up Rate"
-msgstr "上传速率"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -1100,7 +1105,7 @@ msgstr "您选择移除 {0} 个任务. 是否确定?"
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "您选择移除 {0} 个任务. 是否确定?{1}所有属于此任务的数据将会被删除."
+msgstr "您选择移除 {0} 个任务. 是否确定?{1}所有属于此任务的数据将会被删除.""
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1110,7 +1115,7 @@ msgstr "您确定要移除 {0} 吗?"
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "您确定要移除 {0} 吗?{1}所有属于此任务的数据将会被删除."
+msgstr "您确定要移除 {0} 吗?{1}所有属于此任务的数据将会被删除.""
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
@@ -1517,6 +1522,11 @@ msgstr "{0} x {1} (have {2})"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr "5 sec|10 sec|30 sec|5 min"
 
+#: OtherStrings~Password
+#, csharp-format
+msgid "Password"
+msgstr "Password"
+
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
 msgid "Download To:"
@@ -1761,13 +1771,13 @@ msgstr "限制下载速率"
 msgid "TorrentPropertiesDialog"
 msgstr "TorrentPropertiesDialog"
 
-#: UriPromptWindow~$this.Text
-#, csharp-format
-msgid "Upload by URL"
-msgstr "从链接上传"
-
 #: UriPromptWindow~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "正在等待 URL..."
+
+#: UriPromptWindow~$this.Text
+#, csharp-format
+msgid "Upload by URL"
+msgstr "从链接上传"
 

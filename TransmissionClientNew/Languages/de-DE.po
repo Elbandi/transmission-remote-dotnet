@@ -1,4 +1,5 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# German translation of transmission-remote-dotnet
+# Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
@@ -17,12 +18,12 @@ msgstr ""
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr "Developers:"
+msgstr "Entwickler:"
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
 msgid "Product Name"
-msgstr "Product Name"
+msgstr "Produkt Name"
 
 #: AboutDialog~labelVersion.Text
 #: OtherStrings~Version
@@ -37,8 +38,8 @@ msgstr "Copyright"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
-msgid "Homepage: http://code.google.com/p/transmission-remote-dotnet"
-msgstr "Homepage: http://code.google.com/p/transmission-remote-dotnet"
+msgid "Homepage:"
+msgstr "Webseite:"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -61,28 +62,30 @@ msgid ""
 "    * zeal.tsai for the Taiwanese translation.\r\n"
 "    * ikeblaster for the Czech translation."
 msgstr ""
-" * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/\r\n"
-" * Some icons were kindly contributed by liuzhiyi and benketom.\r\n"
-" * charles and the other Transmission developers for their great work.\r\n"
-" * The code for reading .torrent files was taken from Alan McGovern's MonoTorrent project.\r\n"
-" * Thank you to all the following users kind enough to translate this application:\r\n"
-"    * Romaric R. for the French translation.\r\n"
-"    * benba for the German translation.\r\n"
-"    * drphrozen for the Danish translation.\r\n"
-"    * András Első for the Hungarian translation.\r\n"
-"    * liuzhiyi for the Chinese translation.\r\n"
-"    * Woodzu and cichy for the Polish translation.\r\n"
-"    * RayTracer for the Turkish translation.\r\n"
-"    * Alexey Komarov for the Russian translation.\r\n"
-"    * huexxx for the Spanish translation.\r\n"
-"    * twohertz for the Korean translation.\r\n"
-"    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
+"* Die meisten Icons sind die Kreation von David Vignoni aus seinem Nuvola Icon \r\n"
+"	Theme. http://www.icon-king.com/\r\n"
+"* Einige Icons wurden freundlicherweise von liuzhiyi und benketom beigesteuert.\r\n"
+"* charles und den anderen Transmission Entwicklern für ihre großartige Arbeit.\r\n"
+"* Der Quellcode für das Auslesen von .torrent Dateien wurde von Alan McGovern's\r\n"
+"	MonoTorrent Projekt übernommen.\r\n"
+"* Ein Dank an die Übersetzer:\r\n"
+"  * [französisch]	Romaric R.\r\n"
+"  * [deutsch]	benba\r\n"
+"  * [dänisch]	drphrozen\r\n"
+"  * [ungarisch]	András Elso\r\n"
+"  * [chinesisch]	liuzhiyi\r\n"
+"  * [polnisch]	Woodzu and cichy\r\n"
+"  * [türkisch]	RayTracer\r\n"
+"  * [russisch]	Alexey Komarov\r\n"
+"  * [spanisch]	huexxx\r\n"
+"  * [koreanisch]	twohertz\r\n"
+"  * [taiwanesisch]	zeal.tsai\r\n"
+"  * [tschechisch]	ikeblaster       "
 
 #: AboutDialog~labelCredits.Text
 #, csharp-format
 msgid "Credits && acknowledgements:"
-msgstr "Credits && acknowledgements:"
+msgstr "Verdienst && Danksagung:"
 
 #: AboutDialog~okButton.Text
 #, csharp-format
@@ -140,17 +143,17 @@ msgstr "Find"
 #: FindDialog~CaseSensitiveCheckBox.Text
 #, csharp-format
 msgid "Case insensitiv"
-msgstr "Case insensitiv"
+msgstr "Case insensitive"
 
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
-msgstr "Find Torrent..."
+msgstr "Suche Torrent..."
 
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
-msgstr "Find what:"
+msgstr "Suche nach:"
 
 #: LocalSettingsDialog~SaveButton.Text
 #: RemoteSettingsDialog~SaveButton.Text
@@ -159,6 +162,7 @@ msgid "Save"
 msgstr "Speichern"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
+#: OtherStrings~Cancel
 #: TorrentLoadDialog~button2.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
@@ -169,52 +173,57 @@ msgstr "Abbrechen"
 #: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
 msgid "Save and Connect"
-msgstr "Save and Connect"
+msgstr "Speichern und verbinden"
 
 #: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
 msgid "Auto connect"
-msgstr "Auto connect"
+msgstr "Automatisch verbinden"
 
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
 msgid "Current profile"
-msgstr "Current profile"
+msgstr "akutelles Profil"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
-msgstr "Browse"
+msgstr "Durchsuchen"
 
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
 msgid "plink.exe:"
 msgstr "plink.exe:"
 
+#: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
+#, csharp-format
+msgid "Don't save passwords"
+msgstr "Keine Passwörter speichern"
+
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr "Torrent Properties"
+msgstr "Torrent Eigenschaften"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr "Open remote folder"
+msgstr "Öffne Remote-Ordner"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
 msgid "Start/Stop torrent"
-msgstr "Start/Stop torrent"
+msgstr "Start/Stopp Torrent"
 
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
 msgid "Default Action:"
-msgstr "Default Action:"
+msgstr "Doppel-Klick:"
 
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
 msgid "Delete torrent when adding"
-msgstr "Delete torrent when adding"
+msgstr "Lösche Torrent, wenn hinzugefügt"
 
 #: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
 #, csharp-format
@@ -229,32 +238,32 @@ msgstr "Beim Hinzufügen benachrichtigen"
 #: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
 #, csharp-format
 msgid "Minimize on close"
-msgstr "Beim Schließem minimieren"
+msgstr "Beim Schließen minimieren"
 
 #: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
 #, csharp-format
 msgid "Check for update at startup"
-msgstr "Check for update at startup"
+msgstr "Beim Start auf Updates überprüfen"
 
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
 msgid "Upload prompt"
-msgstr "Upload prompt"
+msgstr "Upload Prompt"
 
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
 msgid "Enable tray icon"
-msgstr "Aktiviere Tray Icon"
+msgstr "Aktiviere Tray-Icon"
 
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
-msgstr "Behavior"
+msgstr "Verhalten"
 
 #: LocalSettingsDialog~tabGlobalSettings.Text
 #, csharp-format
 msgid "Global Settings"
-msgstr "Global Settings"
+msgstr "Globale Einstellungen"
 
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
@@ -264,12 +273,12 @@ msgstr "Starte Torrents pausiert"
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr "Save Server"
+msgstr "Speicher Server"
 
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
 msgid "Secure (SSL)"
-msgstr "Secure (SSL)"
+msgstr "Sicher (SSL)"
 
 #: LocalSettingsDialog~label1.Text
 #: LocalSettingsDialog~label6.Text
@@ -298,6 +307,12 @@ msgstr "Aktualisierungsrate:"
 msgid "Server"
 msgstr "Server"
 
+#: LocalSettingsDialog~ClearPasswordCheckBox.Text
+#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
+#, csharp-format
+msgid "Clear the password at save"
+msgstr "Beim Speichern Passwort löschen"
+
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
 #, csharp-format
@@ -307,7 +322,7 @@ msgstr "Passwort:"
 #: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
 msgid "Enable authentication"
-msgstr "Aktiviere Authentifizierung"
+msgstr "Authentifizierung"
 
 #: LocalSettingsDialog~label4.Text
 #: LocalSettingsDialog~label8.Text
@@ -323,7 +338,7 @@ msgstr "Authentifizierung"
 #: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
 msgid "Authenticate"
-msgstr "authentifizieren"
+msgstr "Authentifizierung"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items
 #, csharp-format
@@ -363,7 +378,7 @@ msgstr "Befehl: "
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr "Display remote command button"
+msgstr "Zeige Remote Command Button"
 
 #: LocalSettingsDialog~tabPage5.Text
 #, csharp-format
@@ -373,17 +388,17 @@ msgstr "SSH"
 #: LocalSettingsDialog~label17.Text
 #, csharp-format
 msgid "Download limit menu items:"
-msgstr "Download limit menu items:"
+msgstr "Download-Limit Menü Einträge:"
 
 #: LocalSettingsDialog~label16.Text
 #, csharp-format
 msgid "Upload limit menu items:"
-msgstr "Upload limit menu items:"
+msgstr "Upload-Limit Menü Einträge:"
 
 #: LocalSettingsDialog~tabPage6.Text
 #, csharp-format
 msgid "Misc"
-msgstr "Misc"
+msgstr "Verschiedenes"
 
 #: LocalSettingsDialog~label11.Text
 #, csharp-format
@@ -393,7 +408,7 @@ msgstr "UNIX path prefix:"
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
-msgstr "Add"
+msgstr "Hinzufügen"
 
 #: LocalSettingsDialog~label14.Text
 #, csharp-format
@@ -410,7 +425,7 @@ msgstr "New mapping:"
 #: OtherStrings~Remove
 #, csharp-format
 msgid "Remove"
-msgstr "Entfernen"
+msgstr "Entferne Torrent(s)"
 
 #: LocalSettingsDialog~tabPage7.Text
 #, csharp-format
@@ -437,17 +452,17 @@ msgstr "Port"
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
-msgstr "Add Server"
+msgstr "Server hinzufügen"
 
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr "Remove Server"
+msgstr "Server löschen"
 
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Servers Settings"
+msgstr "Server Einstellungen"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
@@ -460,7 +475,7 @@ msgstr "Lokale Einstellungen"
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Size"
+msgstr "Größe"
 
 #: MainWindow~columnHeader8.Text
 #: MainWindow~columnHeader3.Text
@@ -476,7 +491,7 @@ msgstr "Status"
 #: MainWindow~columnHeader10.Text
 #, csharp-format
 msgid "Seeds"
-msgstr "Seeds"
+msgstr "Seeder"
 
 #: MainWindow~columnHeader11.Text
 #, csharp-format
@@ -484,14 +499,16 @@ msgid "Leechers"
 msgstr "Leecher"
 
 #: MainWindow~columnHeader12.Text
+#: MainWindow~columnHeader28.Text
 #, csharp-format
 msgid "Down Speed"
-msgstr "Down Speed"
+msgstr "Download-Rate"
 
 #: MainWindow~columnHeader13.Text
+#: MainWindow~columnHeader29.Text
 #, csharp-format
 msgid "Up Speed"
-msgstr "Up Speed"
+msgstr "Upload-Rate"
 
 #: MainWindow~columnHeader14.Text
 #, csharp-format
@@ -501,7 +518,7 @@ msgstr "Restzeit"
 #: MainWindow~columnHeader15.Text
 #, csharp-format
 msgid "Uploaded"
-msgstr "Uploaded"
+msgstr "Gesendet"
 
 #: MainWindow~columnHeader16.Text
 #, csharp-format
@@ -511,12 +528,12 @@ msgstr "Ratio"
 #: MainWindow~columnHeader18.Text
 #, csharp-format
 msgid "Added At"
-msgstr "Hinzugfügt am"
+msgstr "Hinzugfügt"
 
 #: MainWindow~columnHeader19.Text
 #, csharp-format
 msgid "Completed At"
-msgstr "Fertiggestellt am"
+msgstr "Fertiggestellt"
 
 #: MainWindow~columnHeader30.Text
 #, csharp-format
@@ -526,7 +543,7 @@ msgstr "Tracker"
 #: MainWindow~downloadProgressLabel.Text
 #, csharp-format
 msgid "Pieces: "
-msgstr "Downloaded:"
+msgstr "Runtergeladen:"
 
 #: MainWindow~percentageLabel.Text
 #, csharp-format
@@ -576,17 +593,17 @@ msgstr "Leecher:"
 #: MainWindow~label10.Text
 #, csharp-format
 msgid "Seeds:"
-msgstr "Seeds:"
+msgstr "Seeder:"
 
 #: MainWindow~label12.Text
 #, csharp-format
 msgid "Upload limit:"
-msgstr "Upload Limit:"
+msgstr "Upload-Limit:"
 
 #: MainWindow~label8.Text
 #, csharp-format
-msgid "Upload rate:"
-msgstr "Upload Rate:"
+msgid "Upload speed:"
+msgstr "Upload-Rate:"
 
 #: MainWindow~label5.Text
 #, csharp-format
@@ -596,7 +613,7 @@ msgstr "Hochgeladen:"
 #: MainWindow~label4.Text
 #, csharp-format
 msgid "Remaining:"
-msgstr "Verbleibend:"
+msgstr "Restzeit:"
 
 #: MainWindow~label11.Text
 #, csharp-format
@@ -606,12 +623,12 @@ msgstr "Status:"
 #: MainWindow~label9.Text
 #, csharp-format
 msgid "Download limit:"
-msgstr "Download Limit:"
+msgstr "Download-Limit:"
 
 #: MainWindow~label7.Text
 #, csharp-format
-msgid "Download rate:"
-msgstr "Download Rate:"
+msgid "Download speed:"
+msgstr "Download-Rate:"
 
 #: MainWindow~label6.Text
 #, csharp-format
@@ -626,7 +643,7 @@ msgstr "Gestartet am:"
 #: MainWindow~timeElapsedLabelLabel.Text
 #, csharp-format
 msgid "Time elapsed:"
-msgstr "Verbleibende Zeit:"
+msgstr "Laufzeit"
 
 #: MainWindow~generalTabPage.Text
 #: RemoteSettingsDialog~tabPage1.Text
@@ -654,37 +671,37 @@ msgstr "Scrape URL"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "Tracker"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Path"
+msgstr "Pfad"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
 #, csharp-format
 msgid "Type"
-msgstr "Type"
+msgstr "Typ"
 
 #: MainWindow~columnHeader4.Text
 #, csharp-format
 msgid "%"
-msgstr "%"
+msgstr "Prozent"
 
 #: MainWindow~columnHeader17.Text
 #: OtherStrings~Skip
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Skip"
+msgstr "Auslassen"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Priority"
+msgstr "Priorität"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
@@ -694,7 +711,7 @@ msgstr "Dateien"
 #: MainWindow~columnHeader23.Text
 #, csharp-format
 msgid "IP Address"
-msgstr "IP Addresse"
+msgstr "IP Adresse"
 
 #: MainWindow~columnHeader24.Text
 #, csharp-format
@@ -720,17 +737,7 @@ msgstr "Client"
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progress"
-
-#: MainWindow~columnHeader28.Text
-#, csharp-format
-msgid "Down Rate"
-msgstr "Down Rate"
-
-#: MainWindow~columnHeader29.Text
-#, csharp-format
-msgid "Up Rate"
-msgstr "Up Rate"
+msgstr "Fortschritt"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -740,7 +747,7 @@ msgstr "Peers"
 #: MainWindow~label18.Text
 #, csharp-format
 msgid "Resolution:"
-msgstr "Auflösung:"
+msgstr "Intervall:"
 
 #: MainWindow~label20.Text
 #: OtherStrings~Down
@@ -767,7 +774,7 @@ msgstr "Gesamtbandbreiten-Ausnutzung"
 #: MainWindow~speedTabPage.Text
 #, csharp-format
 msgid "Speed"
-msgstr "Geschwindigkeit"
+msgstr "Grafik"
 
 #: MainWindow~statusStrip.Text
 #: TorrentLoadDialog~statusStrip1.Text
@@ -809,7 +816,7 @@ msgstr "Torrent von URL hinzufügen"
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Start torrent(s)"
+msgstr "Starte Torrent(s)"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
@@ -820,13 +827,13 @@ msgstr "Torrent(s) pausieren"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Recheck Torrent(s)"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Setze Torrent Eigenschaften"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -836,13 +843,13 @@ msgstr "Entferne Torrent(s)"
 #: MainWindow~removeAndDeleteButton.Text
 #, csharp-format
 msgid "Remove and delete torrent(s)"
-msgstr "Entferne und lösche Torrent(s)"
+msgstr "Entferne Torrent(s) und lösche Daten"
 
 #: MainWindow~allToolStripMenuItem.Text
 #: OtherStrings~All
 #, csharp-format
 msgid "All"
-msgstr "Alles"
+msgstr "Alle"
 
 #: MainWindow~recentlyActiveToolStripMenuItem.Text
 #, csharp-format
@@ -854,18 +861,18 @@ msgstr "Kürzlich aktiv"
 #: OtherStrings~Reannounce
 #, csharp-format
 msgid "Reannounce"
-msgstr "Reannounce"
+msgstr "Aktualisiere Tracker"
 
 #: MainWindow~openNetworkShareButton.Text
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
 msgid "Open on network share"
-msgstr "Open on Network Share"
+msgstr "Über Netzwerk-Freigabe öffnen"
 
 #: MainWindow~AltSpeedButton.Text
 #, csharp-format
 msgid "Alt Speed"
-msgstr "Alt Speed"
+msgstr "Bandbreiten-Limit (de)aktivieren"
 
 #: MainWindow~remoteConfigureButton.Text
 #: RemoteSettingsDialog~$this.Text
@@ -888,7 +895,7 @@ msgstr "Torrent hinzufügen"
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
 #, csharp-format
 msgid "Add torrent with options"
-msgstr "Add torrent with options"
+msgstr "Torrent hinzufügen (mit Optionen)"
 
 #: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
 #, csharp-format
@@ -899,7 +906,7 @@ msgstr "Torrent von URL hinzufügen"
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Exit"
+msgstr "Verlassen"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format
@@ -929,7 +936,7 @@ msgstr "Optionen"
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
-msgstr "Find..."
+msgstr "Suche..."
 
 #: MainWindow~startToolStripMenuItem.Text
 #: OtherStrings~Start
@@ -959,19 +966,19 @@ msgstr "Eigenschaften"
 #: OtherStrings~RemoveAndDelete
 #, csharp-format
 msgid "Remove and delete"
-msgstr "Entfernen und löschen"
+msgstr "Entferne Torrent(s) und lösche Daten"
 
 #: MainWindow~moveTorrentDataToolStripMenuItem.Text
 #: OtherStrings~MoveTorrentData
 #, csharp-format
 msgid "Move torrent data"
-msgstr "Move torrent data"
+msgstr "Verschiebe Torrent Daten"
 
 #: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
 #: OtherStrings~InfoObjectToClipboard
 #, csharp-format
 msgid "Info object to clipboard"
-msgstr "Info object to clipboard"
+msgstr "Torrenteigenschaften in die Zwischenablage kopieren"
 
 #: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
 #: OtherStrings~CopyAsCSV
@@ -1004,7 +1011,7 @@ msgstr "Detailfeld"
 #: MainWindow~categoriesPanelToolStripMenuItem.Text
 #, csharp-format
 msgid "Category filter panel"
-msgstr "Category filter panel"
+msgstr "Kategorie-Filter ein-/ausblenden"
 
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
@@ -1050,12 +1057,12 @@ msgstr "Transmission Remote"
 #: MoveDataPrompt~label1.Text
 #, csharp-format
 msgid "Destination directory: "
-msgstr "Destination directory: "
+msgstr "Ziel-Verzeichnis:"
 
 #: MoveDataPrompt~button1.Text
 #, csharp-format
 msgid "Move"
-msgstr "Move"
+msgstr "Vrschieben"
 
 #: MoveDataPrompt~$this.Text
 #, csharp-format
@@ -1090,7 +1097,7 @@ msgstr "Fertig"
 #: OtherStrings~Confirm
 #, csharp-format
 msgid "Confirm"
-msgstr "Bestätige"
+msgstr "Sind Sie sicher?"
 
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
@@ -1100,7 +1107,7 @@ msgstr "Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?"
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT."
+msgstr "Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT.""
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1110,7 +1117,7 @@ msgstr "Wirklich entfernen {0}?"
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "Entfernen und löschen {0}?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT."
+msgstr "Entfernen und löschen {0}?{1}ALLE DATEN DIESES TORRENTS WERDEN GELÖSCHT.""
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
@@ -1145,12 +1152,12 @@ msgstr "Download"
 #: OtherStrings~DownloadedValid
 #, csharp-format
 msgid "{0} ({1} valid)"
-msgstr "{0} ({1} valid)"
+msgstr "{0} ({1} geprüft)"
 
 #: OtherStrings~Downloading
 #, csharp-format
 msgid "Downloading"
-msgstr "Downloading"
+msgstr "Download"
 
 #: OtherStrings~Error
 #, csharp-format
@@ -1385,32 +1392,32 @@ msgstr "Sekunde"
 #: OtherStrings~PortIsClosed
 #, csharp-format
 msgid "The incoming port on your daemon is CLOSED."
-msgstr "The incoming port on your daemon is CLOSED."
+msgstr "Incoming Port des Daemons ist CLOSED."
 
 #: OtherStrings~PortIsOpen
 #, csharp-format
 msgid "The incoming port on your daemon is OPEN."
-msgstr "The incoming port on your daemon is OPEN."
+msgstr "Incoming Port des Daemons ist OPEN."
 
 #: OtherStrings~PortTestResult
 #, csharp-format
 msgid "Port test result"
-msgstr "Port test result"
+msgstr "Port-Test Ergebnis"
 
 #: OtherStrings~DownloadLimit
 #, csharp-format
 msgid "Download Limit"
-msgstr "Download Limit"
+msgstr "Download-Limit"
 
 #: OtherStrings~Unlimited
 #, csharp-format
 msgid "Unlimited"
-msgstr "Unlimited"
+msgstr "Kein Limit"
 
 #: OtherStrings~UploadLimit
 #, csharp-format
 msgid "Upload Limit"
-msgstr "Upload Limit"
+msgstr "Upload-Limit"
 
 #: OtherStrings~Querying
 #: StatsDialog~secondsActiveValue2.Text
@@ -1425,7 +1432,7 @@ msgstr "Upload Limit"
 #: StatsDialog~downloadedBytesValue1.Text
 #, csharp-format
 msgid "Querying..."
-msgstr "Abfrage läuft..."
+msgstr "Anfrage läuft..."
 
 #: OtherStrings~Updating
 #, csharp-format
@@ -1440,67 +1447,67 @@ msgstr "{0} in blocklist."
 #: OtherStrings~Pieces
 #, csharp-format
 msgid "Pieces"
-msgstr "Pieces"
+msgstr "Teile"
 
 #: OtherStrings~OpenNetworkShare
 #, csharp-format
 msgid "Open on Network Share"
-msgstr "Open on Network Share"
+msgstr "Öffne auf Netzwerkfreigabe"
 
 #: OtherStrings~NewTorrentIs
 #, csharp-format
 msgid "New torrent {0}."
-msgstr "New torrent {0}."
+msgstr "Neuer Torrent {0}."
 
 #: OtherStrings~MoveMultipleTorrents
 #, csharp-format
 msgid "Move multiple torrent data"
-msgstr "Move multiple torrent data"
+msgstr "Verschiebe mehrere Torrent Daten"
 
 #: OtherStrings~MoveX
 #, csharp-format
 msgid "Move {0}"
-msgstr "Move {0}"
+msgstr "Verschiebe {0}"
 
 #: OtherStrings~LoadingFile
 #, csharp-format
 msgid "Loading {0}..."
-msgstr "Loading {0}..."
+msgstr "Lade {0}..."
 
 #: OtherStrings~BandwidthAllocation
 #, csharp-format
 msgid "Bandwidth allocation"
-msgstr "Bandwidth allocation"
+msgstr "Bandbreiten-Ausnutzung"
 
 #: OtherStrings~MultipleTorrentProperties
 #, csharp-format
 msgid "Multiple Torrent Properties"
-msgstr "Multiple Torrent Properties"
+msgstr "Mehrere Torrent Eigenschaften"
 
 #: OtherStrings~Unknown
 #, csharp-format
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Unbekannt"
 
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
-msgstr "Unable to open"
+msgstr "Konnte nicht geöffnet werden"
 
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
-msgstr "Empty file"
+msgstr "Leere Datei"
 
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
-msgstr "GeoIP init error ({0})"
+msgstr "GeoIP Initalisierungs-Fehler ({0})"
 
 #: OtherStrings~UnknownResponseTag
 #, csharp-format
 msgid "Unknown response tag"
-msgstr "Unknown response tag"
+msgstr "Unbekannter Response-Tag"
 
 #: OtherStrings~XConnected
 #, csharp-format
@@ -1510,12 +1517,17 @@ msgstr "{0} verbunden"
 #: OtherStrings~PiecesInfo
 #, csharp-format
 msgid "{0} x {1} (have {2})"
-msgstr "{0} x {1} (davon {2} Teile fertig)"
+msgstr "{0} x {1} ({2} Teile fertig)"
 
 #: OtherStrings~SpeedResolutions
 #, csharp-format
 msgid "5 sec|10 sec|30 sec|5 min"
-msgstr "5 sec|10 sec|30 sec|5 min"
+msgstr "5 Sekunden|10 Sekunden|30 Sekunden|5 Minuten"
+
+#: OtherStrings~Password
+#, csharp-format
+msgid "Password"
+msgstr "Passwort"
 
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
@@ -1525,12 +1537,12 @@ msgstr "Herunterladen nach:"
 #: RemoteSettingsDialog~limitUploadCheckBox.Text
 #, csharp-format
 msgid "Limit upload"
-msgstr "Limit upload"
+msgstr "Limitiere Upload"
 
 #: RemoteSettingsDialog~limitDownloadCheckBox.Text
 #, csharp-format
 msgid "Limit download"
-msgstr "Limit download"
+msgstr "Limitiere Download"
 
 #: RemoteSettingsDialog~label2.Text
 #, csharp-format
@@ -1550,22 +1562,22 @@ msgstr "Peer Limit"
 #: RemoteSettingsDialog~portForwardCheckBox.Text
 #, csharp-format
 msgid "Enable UPnP"
-msgstr "Enable UPnP"
+msgstr "UPnP aktivieren"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items
 #, csharp-format
 msgid "tolerated"
-msgstr "tolerated"
+msgstr "toleriert"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items1
 #, csharp-format
 msgid "preferred"
-msgstr "preferred"
+msgstr "bevorzugt"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items2
 #, csharp-format
 msgid "required"
-msgstr "required"
+msgstr "benötigt"
 
 #: RemoteSettingsDialog~label3.Text
 #, csharp-format
@@ -1585,7 +1597,7 @@ msgstr "KB/s"
 #: RemoteSettingsDialog~dhtEnabled.Text
 #, csharp-format
 msgid "Enable Distributed Hash Table (DHT)"
-msgstr "Enable Distributed Hash Table (DHT)"
+msgstr "DHT aktivieren (Distributed Hash Table)"
 
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
@@ -1610,7 +1622,7 @@ msgstr "Seed Ratio Limit"
 #: RemoteSettingsDialog~tabPage2.Text
 #, csharp-format
 msgid "Limits"
-msgstr "Speed Limits"
+msgstr "Bandbreiten-Limit"
 
 #: RemoteSettingsDialog~label14.Text
 #: RemoteSettingsDialog~label13.Text
@@ -1641,36 +1653,36 @@ msgstr "Zeitbindung"
 #: RemoteSettingsDialog~altSpeedLimitEnable.Text
 #, csharp-format
 msgid "Enable alternate speed limits"
-msgstr "Wechselnde Speed Limits aktivieren"
+msgstr "Bandbreiten-Limit aktivieren"
 
 #: RemoteSettingsDialog~tabPage3.Text
 #, csharp-format
 msgid "Alternate limits"
-msgstr "Wechselnde Speed Limits"
+msgstr "Bandbreiten-Limit"
 
 #: RemoteSettingsDialog~label7.Text
 #: TorrentPropertiesDialog~label7.Text
 #, csharp-format
 msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
-msgstr "NOTE: Availability of some options may require a transmission-daemon upgrade."
+msgstr "BEACHTE: Einige Optionen benötigen ein Upgrade des Transmission-Daemons."
 
 #: StatsDialog~downloadedBytesLabel2.Text
 #: StatsDialog~downloadedBytesLabel1.Text
 #, csharp-format
 msgid "Downloaded bytes:"
-msgstr "Heruntergeladenen Bytes:"
+msgstr "Heruntergeladen:"
 
 #: StatsDialog~uploadedBytesLabel2.Text
 #: StatsDialog~uploadedBytesLabel1.Text
 #, csharp-format
 msgid "Uploaded bytes:"
-msgstr "Hochgeladene Bytes:"
+msgstr "Hochgeladen:"
 
 #: StatsDialog~secondsActiveLabel2.Text
 #: StatsDialog~secondsActiveLabel1.Text
 #, csharp-format
 msgid "Seconds active"
-msgstr "Gesamtlaufzeit:"
+msgstr "Laufzeit:"
 
 #: StatsDialog~sessionCountLabel2.Text
 #: StatsDialog~sessionCountLabel1.Text
@@ -1707,12 +1719,12 @@ msgstr "toolStripStatusLabel1"
 #: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
 msgid "Alternate peer limit: "
-msgstr "Alternate peer limit: "
+msgstr "Alternatives Peer Limit: "
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
 msgid "Alternate destination directory: "
-msgstr "Alternate destination directory: "
+msgstr "Alternatives Zielverzeichnis: "
 
 #: TorrentLoadDialog~button1.Text
 #: TorrentPropertiesDialog~button1.Text
@@ -1729,12 +1741,12 @@ msgstr "TorrentLoadDialog"
 #: TorrentPropertiesDialog~label4.Text
 #, csharp-format
 msgid "Bandwidth priority:"
-msgstr "Bandwidth priority:"
+msgstr "Bandbreiten Priorität:"
 
 #: TorrentPropertiesDialog~honorsSessionLimits.Text
 #, csharp-format
 msgid "Honors session limits"
-msgstr "Akzeptiere Sitzungs Limits"
+msgstr "Akzeptiere Sitzungs-Limits"
 
 #: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
 #, csharp-format
@@ -1761,13 +1773,13 @@ msgstr "Limitiere Download-Rate"
 msgid "TorrentPropertiesDialog"
 msgstr "TorrentEigenschaftenDialog"
 
-#: UriPromptWindow~$this.Text
-#, csharp-format
-msgid "Upload by URL"
-msgstr "Upload mittels URL"
-
 #: UriPromptWindow~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Warte auf URL..."
+
+#: UriPromptWindow~$this.Text
+#, csharp-format
+msgid "Upload by URL"
+msgstr "Upload mittels URL"
 

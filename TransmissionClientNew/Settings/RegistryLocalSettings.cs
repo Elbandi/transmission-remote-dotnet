@@ -44,13 +44,20 @@ namespace TransmissionRemoteDotnet.Settings
             {
                 using (RegistryKey key = root != null ? root : GetRootKey(true))
                 {
-                    foreach(string subkey in key.GetSubKeyNames())
+                    string[] names = new string[s.Names.Count];
+                    s.Names.CopyTo(names, 0);
+                    foreach (string subkey in key.GetSubKeyNames())
                     {
-                        string[] names = new string[s.Names.Count];
-                        s.Names.CopyTo(names, 0);
                         if (!Array.Exists<string>(names, delegate(string ss) { return subkey.Equals(ss); }))
                         {
                             key.DeleteSubKeyTree(subkey);
+                        }
+                    }
+                    foreach (string subkey in key.GetValueNames())
+                    {
+                        if (!Array.Exists<string>(names, delegate(string ss) { return subkey.Equals(ss); }))
+                        {
+                            key.DeleteValue(subkey, false);
                         }
                     }
                     foreach (string n in s.Names)
@@ -67,6 +74,10 @@ namespace TransmissionRemoteDotnet.Settings
                                 {
                                     key.SetValue(n, s[n]);
                                 }
+                            }
+                            else
+                            {
+                                key.DeleteValue(n, false);
                             }
                         }
                         catch { noerror = false; };

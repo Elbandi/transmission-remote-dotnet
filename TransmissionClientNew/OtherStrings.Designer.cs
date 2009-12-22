@@ -115,6 +115,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checking.
         /// </summary>
         internal static string Checking {
@@ -151,7 +160,7 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED.&quot;.
+        ///   Looks up a localized string similar to You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED..
         /// </summary>
         internal static string ConfirmMultipleRemoveAndDelete {
             get {
@@ -169,7 +178,7 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED.&quot;.
+        ///   Looks up a localized string similar to Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED..
         /// </summary>
         internal static string ConfirmSingleRemoveAndDelete {
             get {
@@ -660,6 +669,15 @@ namespace TransmissionRemoteDotnet {
         internal static string OpenNetworkShare {
             get {
                 return ResourceManager.GetString("OpenNetworkShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
