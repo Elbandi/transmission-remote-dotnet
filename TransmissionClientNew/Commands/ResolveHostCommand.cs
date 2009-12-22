@@ -25,15 +25,15 @@ namespace TransmissionRemoteDotnet.Commmands
 {
     public class ResolveHostCommand : ICommand
     {
-        private ListViewItem item;
+        private PeerListViewItem item;
         private IPHostEntry host;
 
-        public ResolveHostCommand(ListViewItem item)
+        public ResolveHostCommand(PeerListViewItem item)
         {
             this.item = item;
             try
             {
-                this.host = Dns.GetHostEntry((IPAddress)item.SubItems[0].Tag);
+                this.host = Dns.GetHostEntry(item.IpAddress);
             }
             catch { }
         }
@@ -42,7 +42,7 @@ namespace TransmissionRemoteDotnet.Commmands
         {
             if (this.host != null && !host.HostName.Equals(this.item.SubItems[0].Text))
             {
-                item.SubItems[1].Text = item.ToolTipText = host.HostName;
+                item.Hostname = host.HostName;
             }
         }
     }

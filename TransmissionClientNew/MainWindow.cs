@@ -1,4 +1,4 @@
-// transmission-remote-dotnet
+// transmfission-remote-dotnet
 // http://code.google.com/p/transmission-remote-dotnet/
 // Copyright (C) 2009 Alan F
 //
@@ -42,7 +42,6 @@ namespace TransmissionRemoteDotnet
     {
         private const string
             DEFAULT_WINDOW_TITLE = "Transmission Remote",
-            GEOIP_DATABASE_FILE = "GeoIP.dat",
             CONFKEY_MAINWINDOW_HEIGHT = "mainwindow-height",
             CONFKEY_MAINWINDOW_WIDTH = "mainwindow-width",
             CONFKEY_MAINWINDOW_LOCATION_X = "mainwindow-loc-x",
@@ -69,7 +68,7 @@ namespace TransmissionRemoteDotnet
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
-        private GeoIPCountry geo;
+        //private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
         private static FindDialog FindDialog;
 
@@ -111,7 +110,8 @@ namespace TransmissionRemoteDotnet
             speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
             CreateProfileMenu();
-            OpenGeoipDatabase();
+            //OpenGeoipDatabase();
+            peersListView.SmallImageList = GeoIPCountry.FlagImageList;
             PopulateLanguagesMenu();
             OneTorrentsSelected(false, null);
         }
@@ -325,28 +325,6 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(key, limit == -1 ? 0 : limit);
             }
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
-        }
-
-        private void OpenGeoipDatabase()
-        {
-            try
-            {
-                geo = new GeoIPCountry(Toolbox.SupportFilePath(GEOIP_DATABASE_FILE));
-                for (int i = 1; i < GeoIPCountry.CountryCodes.Length; i++)
-                {
-                    string flagname = "flags_" + GeoIPCountry.CountryCodes[i].ToLower();
-                    Bitmap flag = global::TransmissionRemoteDotnet.Properties.Flags.GetFlags(flagname);
-                    if (flag != null)
-                    {
-                        flagsImageList.Images.Add(flagname, flag);
-                    }
-                }
-                this.peersListView.SmallImageList = this.flagsImageList;
-            }
-            catch (Exception ex)
-            {
-                Program.Log(String.Format(OtherStrings.GeoipInitError, ex.GetType()), ex.Message);
-            }
         }
 
         private void Program_onTorrentCompleted(Torrent t)
@@ -1587,63 +1565,24 @@ namespace TransmissionRemoteDotnet
                 peersListView.SuspendLayout();
                 foreach (JsonObject peer in t.Peers)
                 {
-                    ListViewItem item = FindPeerItem(peer[ProtocolConstants.ADDRESS].ToString());
+                    PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
                     if (item == null)
                     {
-                        item = new ListViewItem((string)peer[ProtocolConstants.ADDRESS]); // 0
-                        item.SubItems[0].Tag = IPAddress.Parse(item.Text);
-                        item.SubItems.Add(""); // 1
-                        int countryIndex = -1;
-                        if (geo != null)
-                        {
-                            try
-                            {
-                                countryIndex = geo.FindIndex((IPAddress)item.SubItems[0].Tag);
-                            }
-                            catch { }
-                        }
-                        item.SubItems.Add(countryIndex >= 0 ? GeoIPCountry.CountryNames[countryIndex] : "");
-                        item.SubItems.Add((string)peer[ProtocolConstants.FIELD_FLAGSTR]);
-                        item.SubItems.Add((string)peer[ProtocolConstants.FIELD_CLIENTNAME]);
-                        item.ToolTipText = item.SubItems[0].Text;
-                        decimal progress = Toolbox.ToProgress(peer[ProtocolConstants.FIELD_PROGRESS]);
-                        item.SubItems.Add(progress + "%");
-                        item.SubItems[5].Tag = progress;
-                        long rateToClient = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOCLIENT]);
-                        item.SubItems.Add(Toolbox.GetSpeed(rateToClient));
-                        item.SubItems[6].Tag = rateToClient;
-                        long rateToPeer = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOPEER]);
-                        item.SubItems.Add(Toolbox.GetSpeed(rateToPeer));
-                        item.SubItems[7].Tag = rateToPeer;
+                        item = new PeerListViewItem(peer);
                         peersListView.Items.Add(item);
-                        Toolbox.StripeListView(peersListView);
-                        if (countryIndex > 0)
-                        {
-                            item.ImageIndex = flagsImageList.Images.IndexOfKey("flags_" + GeoIPCountry.CountryCodes[countryIndex].ToLower());
-                        }
-                        CreateHostnameResolutionWorker().RunWorkerAsync(item);
                     }
                     else
                     {
-                        decimal progress = Toolbox.ToProgress(peer[ProtocolConstants.FIELD_PROGRESS]);
-                        item.SubItems[3].Text = (string)peer[ProtocolConstants.FIELD_FLAGSTR];
-                        item.SubItems[5].Text = progress + "%";
-                        item.SubItems[5].Tag = progress;
-                        long rateToClient = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOCLIENT]);
-                        item.SubItems[6].Text = Toolbox.GetSpeed(rateToClient);
-                        item.SubItems[6].Tag = rateToClient;
-                        long rateToPeer = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOPEER]);
-                        item.SubItems[7].Text = Toolbox.GetSpeed(rateToPeer);
-                        item.SubItems[7].Tag = rateToPeer;
+                        item.Update(peer);
                     }
-                    item.Tag = peersListView.Tag;
+                    item.UpdateSerial = (int)peersListView.Tag;
                 }
                 lock (peersListView)
                 {
                     Queue<ListViewItem> removalQueue = null;
-                    foreach (ListViewItem item in peersListView.Items)
+                    foreach (PeerListViewItem item in peersListView.Items)
                     {
-                        if ((int)item.Tag != (int)peersListView.Tag)
+                        if (item.UpdateSerial != (int)peersListView.Tag)
                         {
                             if (removalQueue == null)
                                 removalQueue = new Queue<ListViewItem>();
@@ -1664,31 +1603,13 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private BackgroundWorker CreateHostnameResolutionWorker()
-        {
-            BackgroundWorker resolveHostWorker = new BackgroundWorker();
-            resolveHostWorker.DoWork += new DoWorkEventHandler(resolveHostWorker_DoWork);
-            resolveHostWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(resolveHostWorker_RunWorkerCompleted);
-            return resolveHostWorker;
-        }
-
-        private void resolveHostWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ((ICommand)e.Result).Execute();
-        }
-
-        private void resolveHostWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = new ResolveHostCommand((ListViewItem)e.Argument);
-        }
-
-        private ListViewItem FindPeerItem(string address)
+        private PeerListViewItem FindPeerItem(string address)
         {
             lock (peersListView)
             {
-                foreach (ListViewItem peer in peersListView.Items)
+                foreach (PeerListViewItem peer in peersListView.Items)
                 {
-                    if (peer.SubItems[0].Text.Equals(address))
+                    if (peer.Address.Equals(address))
                     {
                         return peer;
                     }

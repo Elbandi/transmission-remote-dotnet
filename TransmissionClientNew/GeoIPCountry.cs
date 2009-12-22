@@ -20,6 +20,9 @@
 using System;
 using System.IO;
 using System.Net;
+using TransmissionRemoteDotnet;
+using System.Windows.Forms;
+using System.Drawing;
 
 // This code is based on MaxMind's original C# code, which was ported from Java.
 // This version is very simplified and does not support a majority of features for speed.
@@ -28,6 +31,21 @@ namespace MaxMind
 {
 	public sealed class GeoIPCountry : IDisposable
 	{
+        private static GeoIPCountry instance = null;
+        private static bool disabled = false;
+
+        private static ImageList _flagImageList = new ImageList();
+        public static ImageList FlagImageList
+        {
+            get { return _flagImageList; }
+        }
+
+        public static bool Disabled
+        {
+            get { return disabled; }
+        }
+        private static readonly object padlock = new object();
+
 		Stream _geodata;
 		bool _close;
 
@@ -99,9 +117,33 @@ namespace MaxMind
 			"Jersey","Saint Barthelemy","Saint Martin"
 		};
 
-		public GeoIPCountry(string filename)
+        public static GeoIPCountry Instance
+        {
+            get
+            {
+                lock (padlock)
+                {
+                    if (instance == null && !disabled)
+                    {
+                        instance = new GeoIPCountry();
+                        for (int i = 0; i < GeoIPCountry.CountryCodes.Length; i++)
+                        {
+                            string flagName = "flags_" + GeoIPCountry.CountryCodes[i].ToLower();
+                            Bitmap flag = global::TransmissionRemoteDotnet.Properties.Flags.GetFlags(flagName);
+                            if (flag != null)
+                                _flagImageList.Images.Add(flagName, flag);
+                        }
+                    }
+                    return instance;
+                }
+            }
+        }
+
+        private const string GEOIP_DATABASE_FILE = "GeoIP.dat";
+		
+        private GeoIPCountry()
 		{
-			FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
+			FileStream fs = new FileStream(Toolbox.SupportFilePath(GEOIP_DATABASE_FILE), FileMode.Open, FileAccess.Read);
 			_geodata = (Stream)fs;
 			_close = true;
 		}
