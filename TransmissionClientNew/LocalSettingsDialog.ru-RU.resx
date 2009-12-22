@@ -108,17 +108,92 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SaveAndConnectButton.Text" xml:space="preserve">
+    <value>Save and Connect</value>
+  </data>
+  <data name="AutoConnectComboBox.Items" xml:space="preserve">
+    <value>fdaf</value>
+  </data>
+  <data name="AutoConnectComboBox.Items1" xml:space="preserve">
+    <value>fdsaf</value>
+  </data>
+  <data name="AutoConnectComboBox.Items2" xml:space="preserve">
+    <value>gfsdg</value>
+  </data>
+  <data name="AutoConnectComboBox.Items3" xml:space="preserve">
+    <value>gfdsg</value>
+  </data>
+  <data name="groupAutoConnect.Text" xml:space="preserve">
+    <value>Auto connect</value>
+  </data>
+  <data name="CurrentProfileComboBox.Items" xml:space="preserve">
+    <value>fdaf</value>
+  </data>
+  <data name="CurrentProfileComboBox.Items1" xml:space="preserve">
+    <value>fdsaf</value>
+  </data>
+  <data name="CurrentProfileComboBox.Items2" xml:space="preserve">
+    <value>gfsdg</value>
+  </data>
+  <data name="CurrentProfileComboBox.Items3" xml:space="preserve">
+    <value>gfdsg</value>
+  </data>
+  <data name="groupCurrentProfile.Text" xml:space="preserve">
+    <value>Current profile</value>
+  </data>
+  <data name="PlinkPathButton.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="groupPlinkPath.Text" xml:space="preserve">
+    <value>plink.exe:</value>
+  </data>
+  <data name="UploadPromptCheckBox.Text" xml:space="preserve">
+    <value>Upload prompt</value>
+  </data>
+  <data name="groupBehavior.Text" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="tabGlobalSettings.Text" xml:space="preserve">
+    <value>Global Settings</value>
+  </data>
+  <data name="SaveServerButton.Text" xml:space="preserve">
+    <value>Save Server</value>
+  </data>
+  <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
+    <value>Display remote command button</value>
+  </data>
+  <data name="AddShareButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="RemoveShareButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="columnName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnHost.Text" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="columnPort.Text" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="addServerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Server</value>
+  </data>
+  <data name="removeServerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove Server</value>
+  </data>
+  <data name="tabServersSettings.Text" xml:space="preserve">
+    <value>Servers Settings</value>
+  </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
     <value>Check for update at startup</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>UNIX path prefix:</value>
-  </data>
-  <data name="button4.Text" xml:space="preserve">
-    <value>Add</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Samba share:</value>
@@ -126,26 +201,17 @@
   <data name="groupBox1.Text" xml:space="preserve">
     <value>New mapping:</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
   <data name="tabPage7.Text" xml:space="preserve">
     <value>Samba</value>
   </data>
   <data name="EnableProxyCombo.Items" xml:space="preserve">
     <value>Auto</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
-    <value>Upload prompt</value>
-  </data>
   <data name="tabPage5.Text" xml:space="preserve">
     <value>SSH</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>http://code.google.com/p/transmission-remote-dotnet/wiki/SSH</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>plink.exe:</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Хост:</value>
@@ -158,9 +224,6 @@
   </data>
   <data name="CloseDialogButton.Text" xml:space="preserve">
     <value>Отмена</value>
-  </data>
-  <data name="AutoConnectCheckBox.Text" xml:space="preserve">
-    <value>Автоконнект</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Период обновления:</value>
@@ -201,9 +264,6 @@
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Сервер</value>
   </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>Общие</value>
-  </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Авторизация</value>
   </data>
@@ -215,12 +275,6 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Команда: </value>
-  </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Показать кнопку удалённого управления</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Обзор</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>Ограничения скорости скачивания:</value>
@@ -248,15 +302,6 @@
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Имя:</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Сохранить и подключиться</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Текущий профиль</value>
-  </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Новый профиль</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Настройки клиента</value>

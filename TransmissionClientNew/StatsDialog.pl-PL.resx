@@ -143,7 +143,7 @@
   <data name="filesAddedLabel2.Text" xml:space="preserve">
     <value>Dodanych plików:</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
+  <data name="CumulativeGroupBox.Text" xml:space="preserve">
     <value>Statystyki Ogólne</value>
   </data>
   <data name="secondsActiveValue1.Text" xml:space="preserve">
@@ -176,7 +176,7 @@
   <data name="uploadedBytesLabel1.Text" xml:space="preserve">
     <value>Wysłano:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Obecna Sesja</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

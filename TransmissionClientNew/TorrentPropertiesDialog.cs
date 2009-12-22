@@ -36,6 +36,23 @@ namespace TransmissionRemoteDotnet
             InitializeComponent();
         }
 
+        private string BuildTrackerList(JsonArray Trackers)
+        {
+            int oldtier = -1;
+            string result = string.Empty;
+            foreach (JsonObject tracker in Trackers)
+            {
+                int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
+                string announceUrl = (string)tracker[ProtocolConstants.ANNOUNCE];
+                if (oldtier == -1)
+                    oldtier = tier;
+                if (oldtier != tier)
+                    result += Environment.NewLine;
+                result += announceUrl + Environment.NewLine;
+            }
+            return result;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_TORRENTSET);
@@ -56,12 +73,12 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_HONORSSESSIONLIMITS, honorsSessionLimits.Checked);
             if (seedRatioLimitedCheckBox.Enabled)
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOMODE, seedRatioLimitedCheckBox.Checked ? 1 : 0);
-            if (comboBox1.Enabled)
+            if (bandwidthComboBox.Enabled)
             {
                 int bandwidthPriority = 0;
-                if (comboBox1.SelectedIndex == 0)
+                if (bandwidthComboBox.SelectedIndex == 0)
                     bandwidthPriority = -1;
-                else if (comboBox1.SelectedIndex == 2)
+                else if (bandwidthComboBox.SelectedIndex == 2)
                     bandwidthPriority = 1;
                 arguments.Put(ProtocolConstants.FIELD_BANDWIDTHPRIORITY, bandwidthPriority);
             }
@@ -82,10 +99,10 @@ namespace TransmissionRemoteDotnet
             downloadLimitField.Value = firstTorrent.SpeedLimitDown >= 0 && firstTorrent.SpeedLimitDown <= downloadLimitField.Maximum ? firstTorrent.SpeedLimitDown : 0;
             uploadLimitField.Enabled = uploadLimitEnableField.Checked = firstTorrent.SpeedLimitUpEnabled;
             downloadLimitField.Enabled = downloadLimitEnableField.Checked = firstTorrent.SpeedLimitDownEnabled;
-            comboBox1.Items.Add(OtherStrings.Low);
-            comboBox1.Items.Add(OtherStrings.Normal);
-            comboBox1.Items.Add(OtherStrings.High);
-            comboBox1.SelectedIndex = 1;
+            bandwidthComboBox.Items.Add(OtherStrings.Low);
+            bandwidthComboBox.Items.Add(OtherStrings.Normal);
+            bandwidthComboBox.Items.Add(OtherStrings.High);
+            bandwidthComboBox.SelectedIndex = 1;
             try
             {
                 honorsSessionLimits.Checked = firstTorrent.HonorsSessionLimits;
@@ -108,18 +125,19 @@ namespace TransmissionRemoteDotnet
             try
             {
                 if (firstTorrent.BandwidthPriority < 0)
-                    comboBox1.SelectedIndex = 0;
+                    bandwidthComboBox.SelectedIndex = 0;
                 else if (firstTorrent.BandwidthPriority > 0)
-                    comboBox1.SelectedIndex = 2;
+                    bandwidthComboBox.SelectedIndex = 2;
                 else
-                    comboBox1.SelectedIndex = 1;
-                label4.Enabled = comboBox1.Enabled = true;
+                    bandwidthComboBox.SelectedIndex = 1;
+                label4.Enabled = bandwidthComboBox.Enabled = true;
             }
             catch
             {
-                label4.Enabled = comboBox1.Enabled = false;
+                label4.Enabled = bandwidthComboBox.Enabled = false;
             }
             peerLimitValue.Value = firstTorrent.MaxConnectedPeers >= 0 && (decimal)firstTorrent.MaxConnectedPeers <= peerLimitValue.Maximum ? (decimal)firstTorrent.MaxConnectedPeers : 0;
+            trackersList.Text = BuildTrackerList(firstTorrent.Trackers);
         }
 
         private void downloadLimitEnableField_CheckedChanged(object sender, EventArgs e)

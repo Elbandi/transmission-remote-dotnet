@@ -25,6 +25,7 @@ using System.Windows.Forms;
 using System.Net;
 using TransmissionRemoteDotnet.Commmands;
 using TransmissionRemoteDotnet.Comparers;
+using TransmissionRemoteDotnet.Settings;
 using Jayrock.Json;
 using MaxMind;
 using System.IO;
@@ -79,10 +80,9 @@ namespace TransmissionRemoteDotnet
 
         public MainWindow()
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
             try
             {
-                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(settings.Locale);
+                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(Program.Settings.Locale);
             }
             catch { }
             Program.OnConnStatusChanged += new EventHandler(Program_connStatusChanged);
@@ -100,8 +100,8 @@ namespace TransmissionRemoteDotnet
             tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.info16);
             generalTabPage.ImageIndex = 4;
             mainVerticalSplitContainer.Panel1Collapsed = true;
-            refreshTimer.Interval = settings.RefreshRate * 1000;
-            filesTimer.Interval = settings.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
+            refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
+            filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
             torrentListView.ListViewItemSorter = lvwColumnSorter = new ListViewItemSorter();
             filesListView.ListViewItemSorter = filesLvwColumnSorter = new FilesListViewItemSorter();
             peersListView.ListViewItemSorter = peersLvwColumnSorter = new PeersListViewItemSorter();
@@ -110,15 +110,7 @@ namespace TransmissionRemoteDotnet
             speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
             speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
-            List<string> profiles = settings.Profiles;
-            for (int i = 0; i < profiles.Count; i++)
-            {
-                ToolStripMenuItem profile = CreateProfileMenuItem(profiles[i]);
-                if (profiles[i].Equals(settings.CurrentProfile))
-                {
-                    profile.Checked = true;
-                }
-            }
+            CreateProfileMenu();
             OpenGeoipDatabase();
             PopulateLanguagesMenu();
             OneTorrentsSelected(false, null);
@@ -126,7 +118,18 @@ namespace TransmissionRemoteDotnet
 
         public ToolStripMenuItem CreateProfileMenuItem(string name)
         {
-            return connectButton.DropDownItems.Add(name, null, new EventHandler(this.connectButtonprofile_SelectedIndexChanged)) as ToolStripMenuItem;
+            return new ToolStripMenuItem(name, null, new EventHandler(this.connectButtonprofile_SelectedIndexChanged));
+        }
+
+        public void CreateProfileMenu()
+        {
+            foreach (KeyValuePair<string, TransmissionServer> s in Program.Settings.Servers)
+            {
+                connectButton.DropDownItems.Add(CreateProfileMenuItem(s.Key));
+                ToolStripMenuItem profile = CreateProfileMenuItem(s.Key);
+                profile.Click += delegate(object sender, EventArgs e) { connectToolStripMenuItem.PerformClick(); };
+                connectToolStripMenuItem.DropDownItems.Add(profile);
+            }
         }
 
         private void InitStateListBox()
@@ -211,7 +214,7 @@ namespace TransmissionRemoteDotnet
             MenuItem downLimitMenuItem = new MenuItem(OtherStrings.DownloadLimit);
             downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeDownLimit).Tag = -1;
             downLimitMenuItem.MenuItems.Add("-");
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            Settings.TransmissionServer settings = Program.Settings.Current;
             foreach (string limit in settings.DownLimit.Split(','))
             {
                 try
@@ -426,8 +429,8 @@ namespace TransmissionRemoteDotnet
                 MenuItem downLimitMenuItem = new MenuItem(OtherStrings.DownloadLimit);
                 downLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionDownLimit).Tag = -1;
                 downLimitMenuItem.MenuItems.Add("-");
-                LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
-                foreach (string limit in settings.DownLimit.Split(','))
+                TransmissionServer server = Program.Settings.Current;
+                foreach (string limit in server.DownLimit.Split(','))
                 {
                     try
                     {
@@ -442,7 +445,7 @@ namespace TransmissionRemoteDotnet
                 MenuItem upLimitMenuItem = new MenuItem(OtherStrings.UploadLimit);
                 upLimitMenuItem.MenuItems.Add(OtherStrings.Unlimited, ChangeSessionUpLimit).Tag = -1;
                 upLimitMenuItem.MenuItems.Add("-");
-                foreach (string limit in settings.UpLimit.Split(','))
+                foreach (string limit in server.UpLimit.Split(','))
                 {
                     try
                     {
@@ -480,7 +483,7 @@ namespace TransmissionRemoteDotnet
                 CreateTorrentSelectionContextMenu();
                 this.toolStripStatusLabel.Text = OtherStrings.ConnectedGettingInfo;
                 lvwColumnSorter.SetupColumn(Program.DaemonDescriptor.RpcVersion);
-                this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + LocalSettingsSingleton.Instance.Host;
+                this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + Program.Settings.Current.Host;
                 speedGraph.MaxPeekMagnitude = 100;
                 speedGraph.AddLine("Download", Color.Green);
                 speedGraph.AddLine("Upload", Color.Yellow);
@@ -523,28 +526,35 @@ namespace TransmissionRemoteDotnet
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
-                = removeTorrentButton.Visible = toolStripSeparator4.Visible
-                = toolStripSeparator1.Visible = disconnectToolStripMenuItem.Enabled
+                = removeTorrentButton.Visible = toolbarToolStripSeparator1.Visible
+                = toolbarToolStripSeparator2.Visible = disconnectToolStripMenuItem.Enabled
                 = configureTorrentButton.Visible = torrentToolStripMenuItem.Enabled
                 = remoteSettingsToolStripMenuItem.Enabled
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
-                = speedGraph.Enabled = toolStripSeparator2.Visible
+                = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
-            sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            statsToolStripMenuItem.Enabled = sessionStatsButton.Visible = connected && dd.RpcVersion >= 4;
+            AltSpeedButton.Visible = toolbarToolStripSeparator4.Visible = connected && dd.RpcVersion >= 5;
             addTorrentWithOptionsToolStripMenuItem.Enabled = (dd.Version < 1.60 || dd.Version >= 1.7) && connected;
+        }
+
+        public void SetAltSpeedButtonState(bool enabled)
+        {
+            AltSpeedButton.Image = enabled ? global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on : global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off;
+            AltSpeedButton.Tag = enabled;
         }
 
         public void SetRemoteCmdButtonVisible(bool connected)
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
-            remoteCmdButton.Visible = connected && settings.PlinkEnable && settings.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
+            LocalSettings settings = Program.Settings;
+            remoteCmdButton.Visible = connected && settings.Current.PlinkEnable && settings.Current.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
             //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
-            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && LocalSettingsSingleton.Instance.SambaShareMappings.Count > 0;
+            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && settings.Current.SambaShareMappings.Count > 0;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
         }
@@ -588,15 +598,15 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
-                LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
-                if (settings.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
-                    this.Size = new Size((int)settings.GetObject(CONFKEY_MAINWINDOW_WIDTH), (int)settings.GetObject(CONFKEY_MAINWINDOW_HEIGHT));
-                if (settings.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
+                LocalSettings settings = Program.Settings;
+                if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
+                    this.Size = new Size((int)settings.Misc[CONFKEY_MAINWINDOW_WIDTH], (int)settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]);
+                if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
                     this.Location = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
-                if (settings.ContainsKey(CONFKEY_SPLITTERDISTANCE))
+                if (settings.Misc.ContainsKey(CONFKEY_SPLITTERDISTANCE))
                     this.torrentAndTabsSplitContainer.SplitterDistance = (int)settings.GetObject(CONFKEY_SPLITTERDISTANCE);
-                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
-                if (settings.ContainsKey(CONFKEY_MAINWINDOW_STATE))
+                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
+                if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
                     FormWindowState _mainWindowState = (FormWindowState)((int)settings.GetObject(CONFKEY_MAINWINDOW_STATE));
                     if (_mainWindowState != FormWindowState.Minimized)
@@ -620,7 +630,7 @@ namespace TransmissionRemoteDotnet
                 widths.Add(column.Width);
                 indexes.Add(column.DisplayIndex);
             }
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            LocalSettings settings = Program.Settings;
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name, widths.ToString());
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name, indexes.ToString());
             IListViewItemSorter listViewItemSorter = (IListViewItemSorter)listView.ListViewItemSorter;
@@ -629,7 +639,7 @@ namespace TransmissionRemoteDotnet
 
         public void RestoreListViewProperties(ListView listView)
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            LocalSettings settings = Program.Settings;
             string widthsConfKey = CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name,
               indexesConfKey = CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name,
               sortIndexConfKey = CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name;
@@ -661,12 +671,12 @@ namespace TransmissionRemoteDotnet
 
         private JsonArray GetListViewPropertyArray(string key)
         {
-            return (JsonArray)JsonConvert.Import((string)LocalSettingsSingleton.Instance.GetObject(key));
+            return (JsonArray)JsonConvert.Import((string)Program.Settings.GetObject(key));
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            LocalSettings settings = Program.Settings;
             if (notifyIcon.Visible = settings.MinToTray)
             {
                 foreach (string arg in Environment.GetCommandLineArgs())
@@ -682,7 +692,7 @@ namespace TransmissionRemoteDotnet
             {
                 DoCheckVersion(false);
             }
-            if (settings.AutoConnect)
+            if (!settings.AutoConnect.Equals(""))
             {
                 Connect();
             }
@@ -693,7 +703,7 @@ namespace TransmissionRemoteDotnet
             ToolStripMenuItem englishItem = new ToolStripMenuItem("English");
             englishItem.Click += new EventHandler(this.ChangeUICulture);
             englishItem.Tag = new CultureInfo("en-GB");
-            englishItem.Checked = LocalSettingsSingleton.Instance.Locale.Equals("en-GB");
+            englishItem.Checked = Program.Settings.Locale.Equals("en-GB");
             languageToolStripMenuItem.DropDownItems.Add(englishItem);
             languageToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
             DirectoryInfo di = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
@@ -708,7 +718,7 @@ namespace TransmissionRemoteDotnet
                         ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName + " / " + cInfo.EnglishName);
                         item.Tag = cInfo;
                         item.Click += new EventHandler(this.ChangeUICulture);
-                        item.Checked = LocalSettingsSingleton.Instance.Locale.Equals(cInfo.Name);
+                        item.Checked = Program.Settings.Locale.Equals(cInfo.Name);
                         languageToolStripMenuItem.DropDownItems.Add(item);
                     }
                     catch (Exception ex)
@@ -723,7 +733,7 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
-                LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+                LocalSettings settings = Program.Settings;
                 ToolStripMenuItem senderMI = sender as ToolStripMenuItem;
                 CultureInfo culture = (CultureInfo)senderMI.Tag;
                 foreach (ToolStripItem mi in languageToolStripMenuItem.DropDownItems)
@@ -767,7 +777,7 @@ namespace TransmissionRemoteDotnet
 
         private void connectButtonprofile_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            LocalSettings settings = Program.Settings;
             ToolStripMenuItem profile = (sender as ToolStripMenuItem);
             foreach (ToolStripMenuItem item in connectButton.DropDownItems)
             {
@@ -959,7 +969,12 @@ namespace TransmissionRemoteDotnet
 
         private void localConfigureButton_Click(object sender, EventArgs e)
         {
-            (new LocalSettingsDialog()).ShowDialog();
+            if ((new LocalSettingsDialog()).ShowDialog() == DialogResult.OK)
+            {
+                connectButton.DropDownItems.Clear();
+                connectToolStripMenuItem.DropDownItems.Clear();
+                CreateProfileMenu();
+            }
         }
 
         private void remoteConfigureButton_Click(object sender, EventArgs e)
@@ -1051,6 +1066,31 @@ namespace TransmissionRemoteDotnet
             OneTorrentsSelected(one, t);
         }
 
+        private void torrentListView_DoubleClick(object sender, EventArgs e)
+        {
+            Torrent t = null;
+            switch (Program.Settings.DefaultDoubleClickAction)
+            {
+                case 1:
+                    if (openNetworkShareButton.Visible)
+                        openNetworkShareButton.PerformClick();
+                    else
+                        ShowTorrentPropsHandler(sender, e);
+                    break;
+                case 2:
+                    t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    if (IfTorrentStatus(t, ProtocolConstants.STATUS_PAUSED))
+                        startTorrentButton.PerformClick();
+                    else
+                        pauseTorrentButton.PerformClick();
+                    break;
+                case 0:
+                default:
+                    ShowTorrentPropsHandler(sender, e);
+                    break;
+            }
+        }
+
         private void ShowTorrentPropsHandler(object sender, EventArgs e)
         {
             lock (torrentListView)
@@ -1116,7 +1156,7 @@ namespace TransmissionRemoteDotnet
 
         public void Upload(string[] args)
         {
-            if (LocalSettingsSingleton.Instance.UploadPrompt)
+            if (Program.Settings.UploadPrompt)
             {
                 foreach (string s in args)
                 {
@@ -1176,6 +1216,7 @@ namespace TransmissionRemoteDotnet
 
         public void connectButton_Click(object sender, EventArgs e)
         {
+            fileToolStripMenuItem.DropDown.Close();
             if (!Program.Connected)
                 Connect();
         }
@@ -1203,15 +1244,15 @@ namespace TransmissionRemoteDotnet
             {
                 if (stateListBox.SelectedIndex == 1)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
                 }
                 else if (stateListBox.SelectedIndex == 2)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_PAUSED);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
                 }
                 else if (stateListBox.SelectedIndex == 3)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                    FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
                 }
                 else if (stateListBox.SelectedIndex == 4)
                 {
@@ -1223,7 +1264,7 @@ namespace TransmissionRemoteDotnet
                 }
                 else if (stateListBox.SelectedIndex == 6)
                 {
-                    FilterTorrent(ShowTorrentIfStatus, ProtocolConstants.STATUS_SEEDING);
+                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
                 }
                 else if (stateListBox.SelectedIndex == 7)
                 {
@@ -1256,7 +1297,7 @@ namespace TransmissionRemoteDotnet
                 }
             }
         }
-        private bool ShowTorrentIfStatus(Torrent t, object statusCode)
+        private bool IfTorrentStatus(Torrent t, object statusCode)
         {
             return (t.StatusCode & (short)statusCode) > 0;
         }
@@ -1453,7 +1494,7 @@ namespace TransmissionRemoteDotnet
             }
             request.Put(ProtocolConstants.KEY_ARGUMENTS, arguments);
             request.Put(ProtocolConstants.KEY_TAG, (int)ResponseTag.DoNothing);
-            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed += 
+            Program.Form.SetupAction(CommandFactory.RequestAsync(request)).Completed +=
                 delegate(object sender, ResultEventArgs e)
                 {
                     if (e.Result.GetType() != typeof(ErrorCommand))
@@ -1787,7 +1828,7 @@ namespace TransmissionRemoteDotnet
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            LocalSettingsSingleton settings = LocalSettingsSingleton.Instance;
+            LocalSettings settings = Program.Settings;
             if (settings.MinToTray && settings.MinOnClose && e.CloseReason == CloseReason.UserClosing)
             {
                 this.WindowState = FormWindowState.Minimized;
@@ -1795,7 +1836,7 @@ namespace TransmissionRemoteDotnet
             }
             else if (this.WindowState != FormWindowState.Minimized)
             {
-                settings.SetObject(CONFKEY_MAINWINDOW_STATE, (int)this.WindowState);
+                settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.WindowState;
                 if (this.WindowState != FormWindowState.Maximized)
                 {
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_X, this.Location.X);
@@ -1883,12 +1924,12 @@ namespace TransmissionRemoteDotnet
                 {
                     Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
                     Process.Start(
-                        LocalSettingsSingleton.Instance.PlinkPath,
+                        Program.Settings.PlinkPath,
                         String.Format(
                             "\"{0}\" \"{1}\"",
-                            LocalSettingsSingleton.Instance.Host,
+                            Program.Settings.Current.Host,
                             String.Format(
-                                LocalSettingsSingleton.Instance.PlinkCmd.Replace("$DATA", "{0}"),
+                                Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
                                 String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.Name))
                         ));
                 }
@@ -2013,6 +2054,18 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void connectButton_DropDownOpening(object sender, EventArgs e)
+        {
+            foreach (ToolStripMenuItem item in connectButton.DropDownItems)
+            {
+                item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
+            }
+            foreach (ToolStripMenuItem item in connectToolStripMenuItem.DropDownItems)
+            {
+                item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
+            }
+        }
+
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Program.Connected)
@@ -2027,6 +2080,21 @@ namespace TransmissionRemoteDotnet
                 {
                     FindDialog.Focus();
                 }
+        }
+
+        private void AltSpeedButton_Click(object sender, EventArgs e)
+        {
+            JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_SESSIONSET);
+            JsonObject arguments = Requests.GetArgObject(request);
+            arguments.Put(ProtocolConstants.FIELD_ALTSPEEDENABLED, !(bool)AltSpeedButton.Tag);
+            CommandFactory.RequestAsync(request).Completed +=
+                delegate(object dsender, ResultEventArgs de)
+                {
+                    if (de.Result.GetType() != typeof(ErrorCommand) && !sessionWebClient.IsBusy)
+                    {
+                        sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
+                    }
+                };
         }
     }
 }

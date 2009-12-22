@@ -109,15 +109,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please send bug reports and patches through this site.</value>
+  <data name="labelDevelopers.Text" xml:space="preserve">
+    <value>Developers:</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/</value>
+  <data name="labelProductName.Text" xml:space="preserve">
+    <value>Product Name</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>關閉</value>
+  <data name="labelVersion.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="labelCopyright.Text" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="labelHomepageLink.Text" xml:space="preserve">
+    <value>Homepage: http://code.google.com/p/transmission-remote-dotnet</value>
+  </data>
+  <data name="textBoxDescription.Text" xml:space="preserve">
+    <value> * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/
+ * Some icons were kindly contributed by liuzhiyi and benketom.
+ * charles and the other Transmission developers for their great work.
+ * The code for reading .torrent files was taken from Alan McGovern's MonoTorrent project.
+ * Thank you to all the following users kind enough to translate this application:
+    * Romaric R. for the French translation.
+    * benba for the German translation.
+    * drphrozen for the Danish translation.
+    * András Első for the Hungarian translation.
+    * liuzhiyi for the Chinese translation.
+    * Woodzu and cichy for the Polish translation.
+    * RayTracer for the Turkish translation.
+    * Alexey Komarov for the Russian translation.
+    * huexxx for the Spanish translation.
+    * twohertz for the Korean translation.
+    * zeal.tsai for the Taiwanese translation.
+    * ikeblaster for the Czech translation.</value>
+  </data>
+  <data name="labelCredits.Text" xml:space="preserve">
+    <value>Credits &amp;&amp; acknowledgements:</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>&amp;OK</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>關於 Transmission Remote</value>
