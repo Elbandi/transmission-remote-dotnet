@@ -67,7 +67,6 @@ namespace TransmissionRemoteDotnet
         private MenuItem openNetworkShareMenuItem;
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
-
         private WebClient filesWebClient = new WebClient();
         private GeoIPCountry geo;
         private List<ListViewItem> fileItems = new List<ListViewItem>();
