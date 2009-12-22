@@ -139,13 +139,13 @@
     <value>Add torrent with options</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Info object vágólapra másolása</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>CSV info to clipboard</value>
+    <value>Másolás mint CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Torrent adat áthelyezése</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
     <value>Típus</value>

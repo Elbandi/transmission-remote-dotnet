@@ -696,6 +696,13 @@ namespace TransmissionRemoteDotnet
             {
                 Connect();
             }
+            else
+            {
+                if (Program.UploadArgs != null && Program.UploadArgs.Length > 0)
+                {
+                    ShowMustBeConnectedDialog(Program.UploadArgs);
+                }
+            }
         }
 
         private void PopulateLanguagesMenu()
@@ -832,6 +839,10 @@ namespace TransmissionRemoteDotnet
             {
                 Program.UploadArgs = args;
                 Connect();
+            }
+            else
+            {
+                Program.UploadArgs = null;
             }
         }
 
@@ -1156,23 +1167,25 @@ namespace TransmissionRemoteDotnet
 
         public void Upload(string[] args)
         {
-            if (Program.Settings.UploadPrompt)
+            foreach (string s in args)
             {
-                foreach (string s in args)
+                if (s == null || s.Length == 0)
+                    continue;
+                if (File.Exists(s))
                 {
-                    Console.WriteLine(s);
-                    TorrentLoadDialog dialog = new TorrentLoadDialog(s);
-                    dialog.ShowDialog();
-                }
-            }
-            else
-            {
-                foreach (string file in args)
-                {
-                    if (file != null && file.Length > 0 && File.Exists(file))
+                    if (Program.Settings.UploadPrompt)
                     {
-                        Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile(file, false)));
+                        TorrentLoadDialog dialog = new TorrentLoadDialog(s);
+                        dialog.ShowDialog();
                     }
+                    else
+                    {
+                        Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile(s, false)));
+                    }
+                }
+                else
+                {
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(s)));
                 }
             }
         }
@@ -1403,10 +1416,13 @@ namespace TransmissionRemoteDotnet
                     Torrent t = pair.Value;
                     string tracker = t.GetFirstTracker(true);
                     short statusCode = t.StatusCode;
-                    if (trackers.ContainsKey(tracker))
-                        trackers[tracker] = trackers[tracker] + 1;
-                    else
-                        trackers[tracker] = 1;
+                    if (tracker.Length > 0)
+                    {
+                        if (trackers.ContainsKey(tracker))
+                            trackers[tracker] = trackers[tracker] + 1;
+                        else
+                            trackers[tracker] = 1;
+                    }
                     if (t.HasError)
                     {
                         broken++;
