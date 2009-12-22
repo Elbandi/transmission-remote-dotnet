@@ -127,7 +127,7 @@
     <value> You can copy the body of an error to the clipboard by double clicking it</value>
   </data>
   <data name="closeButton.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Luk</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Error Log</value>

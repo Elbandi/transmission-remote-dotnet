@@ -129,6 +129,8 @@
     <Compile Include="GListBoxItem.cs" />
     <Compile Include="IconHelper.cs" />
     <Compile Include="Comparers\TorrentListViewColumnSorter.cs" />
+    <Compile Include="InputBox.cs">
+    </Compile>
     <Compile Include="ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
