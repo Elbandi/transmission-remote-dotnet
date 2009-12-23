@@ -5,10 +5,10 @@
 # Elbandi <elso.andras@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: transmission-remote-dotnet\n"
+"Project-Id-Version: hu-HU\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2009-12-22 11:44+0100\n"
+"PO-Revision-Date: 2009-12-23 12:05+0100\n"
 "Last-Translator: Elbandi <elso.andras@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr "Developers:"
+msgstr "Fejlesztők:"
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
@@ -40,7 +40,7 @@ msgstr "Copyright"
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
 msgid "Homepage:"
-msgstr "Homepage:"
+msgstr "Honlap:"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -84,7 +84,7 @@ msgstr ""
 #: AboutDialog~labelCredits.Text
 #, csharp-format
 msgid "Credits && acknowledgements:"
-msgstr "Credits && acknowledgements:"
+msgstr "Credits és elismerések:"
 
 #: AboutDialog~okButton.Text
 #, csharp-format
@@ -172,22 +172,22 @@ msgstr "Mégse"
 #: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
 msgid "Save and Connect"
-msgstr "Save and Connect"
+msgstr "Mentés és csatlakozás"
 
 #: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
 msgid "Auto connect"
-msgstr "Auto connect"
+msgstr "Automatikus csatlakozás"
 
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
 msgid "Current profile"
-msgstr "Current profile"
+msgstr "Aktuális profil"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
-msgstr "Browse"
+msgstr "Tallóz"
 
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
@@ -202,12 +202,12 @@ msgstr "Don't save passwords"
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr "Torrent Properties"
+msgstr "Torrent tulajdonságok"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr "Open remote folder"
+msgstr "Távoli könyvtár megnyitása"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
@@ -217,12 +217,12 @@ msgstr "Start/Stop torrent"
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
 msgid "Default Action:"
-msgstr "Default Action:"
+msgstr "Alap cselekvés:"
 
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
 msgid "Delete torrent when adding"
-msgstr "Delete torrent when adding"
+msgstr "Torrent törlése hozzáadáskor"
 
 #: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
 #, csharp-format
@@ -242,7 +242,7 @@ msgstr "Kisméretben tálcára"
 #: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
 #, csharp-format
 msgid "Check for update at startup"
-msgstr "Check for update at startup"
+msgstr "Frissítés keresése induláskor"
 
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
@@ -257,12 +257,12 @@ msgstr "Tálca ikon mutatása"
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
-msgstr "Behavior"
+msgstr "Viselkedés"
 
 #: LocalSettingsDialog~tabGlobalSettings.Text
 #, csharp-format
 msgid "Global Settings"
-msgstr "Global Settings"
+msgstr "Átfogó beállítások"
 
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
@@ -272,7 +272,7 @@ msgstr "Torrentek indítása szüneteltetve"
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr "Save Server"
+msgstr "Kiszolgáló mentése"
 
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
@@ -377,7 +377,7 @@ msgstr "Parancs: "
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr "Display remote command button"
+msgstr "Távoli parancs gomb mutatása"
 
 #: LocalSettingsDialog~tabPage5.Text
 #, csharp-format
@@ -402,17 +402,17 @@ msgstr "Egyéb"
 #: LocalSettingsDialog~label11.Text
 #, csharp-format
 msgid "UNIX path prefix:"
-msgstr "UNIX path prefix:"
+msgstr "UNIX útvonal elõtag:"
 
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
-msgstr "Add"
+msgstr "Hozzáad"
 
 #: LocalSettingsDialog~label14.Text
 #, csharp-format
 msgid "Samba share:"
-msgstr "Samba share:"
+msgstr "Samba megosztás:"
 
 #: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
@@ -451,17 +451,17 @@ msgstr "Port"
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
-msgstr "Add Server"
+msgstr "Kiszolgáló hozzáadása"
 
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr "Remove Server"
+msgstr "Kiszolgáló eltávolítása"
 
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Servers Settings"
+msgstr "Kiszolgáló beállítások"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
@@ -815,7 +815,7 @@ msgstr "Torrent hozzáadása URL-ből..."
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Start torrent(s)"
+msgstr "Torrent(ek) indítása"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
@@ -826,13 +826,13 @@ msgstr "Torrent(ek) szüneteltetése"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Torrent(ek) újraellenőrzése"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Torrent(ek) tulajdonságok"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -871,7 +871,7 @@ msgstr "Hálózati megosztás megnyitása"
 #: MainWindow~AltSpeedButton.Text
 #, csharp-format
 msgid "Alt Speed"
-msgstr "Alt Speed"
+msgstr "Alternatív sebesség"
 
 #: MainWindow~remoteConfigureButton.Text
 #: RemoteSettingsDialog~$this.Text
@@ -894,7 +894,7 @@ msgstr "Torrent hozzáadása..."
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
 #, csharp-format
 msgid "Add torrent with options"
-msgstr "Add torrent with options"
+msgstr "Torrent hozzáadása beállítással..."
 
 #: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
 #, csharp-format
@@ -935,7 +935,7 @@ msgstr "Beállítások"
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
-msgstr "Find..."
+msgstr "Keresés..."
 
 #: MainWindow~startToolStripMenuItem.Text
 #: OtherStrings~Start
@@ -1066,7 +1066,7 @@ msgstr "Mozgat"
 #: MoveDataPrompt~$this.Text
 #, csharp-format
 msgid "MoveDataPrompt"
-msgstr "MoveDataPrompt"
+msgstr "Adatok mozgatása"
 
 #: OtherStrings~Author
 #, csharp-format
@@ -1106,17 +1106,17 @@ msgstr "Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet?"
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet és az összes csatlakozó adatot?"
+msgstr "Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet{1}és az összes csatlakozó adatot?"
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
-msgstr "Biztos benne, hogy eltávolítja a kiválasztott torrenteket?"
+msgstr "Biztos benne, hogy eltávolítja a {0} torrenteket?"
 
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "Biztos benne, hogy eltávolítja a kiválasztott torrenteket és az összes csatlakozó adatot?"
+msgstr "Biztos benne, hogy eltávolítja a {0} torrenteket{1}és az összes csatlakozó adatot?"
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format

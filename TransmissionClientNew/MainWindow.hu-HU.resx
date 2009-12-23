@@ -112,7 +112,7 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AltSpeedButton.Text" xml:space="preserve">
-    <value>Alt Speed</value>
+    <value>Alternatív sebesség</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Szeletek:</value>
@@ -121,22 +121,22 @@
     <value>Ellenőrző-összeg:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Keresés...</value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Start torrent(s)</value>
+    <value>Torrent(ek) indítása</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Torrent(ek) újraellenőrzése</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Torrent(ek) tulajdonságok</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add torrent with options</value>
+    <value>Torrent hozzáadása beállítással...</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Info object vágólapra másolása</value>
