@@ -1,4 +1,4 @@
-// transmfission-remote-dotnet
+// transmission-remote-dotnet
 // http://code.google.com/p/transmission-remote-dotnet/
 // Copyright (C) 2009 Alan F
 //
@@ -68,14 +68,7 @@ namespace TransmissionRemoteDotnet
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
-        //private GeoIPCountry geo;
-        private List<ListViewItem> fileItems = new List<ListViewItem>();
         private static FindDialog FindDialog;
-
-        public List<ListViewItem> FileItems
-        {
-            get { return fileItems; }
-        }
 
         public MainWindow()
         {
@@ -736,12 +729,12 @@ namespace TransmissionRemoteDotnet
                     (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
                 }
                 CreateTrayContextMenu();
-                foreach (ListViewItem item in filesListView.Items)
+                foreach (FileListViewItem item in filesListView.Items)
                 {
-                    item.SubItems[5].Text = (bool)item.SubItems[5].Tag ? OtherStrings.No : OtherStrings.Yes;
-                    item.SubItems[6].Text = Toolbox.FormatPriority((JsonNumber)item.SubItems[6].Tag);
+                    item.SubItems[5].Text = item.Wanted ? OtherStrings.No : OtherStrings.Yes;
+                    item.SubItems[6].Text = Toolbox.FormatPriority(item.Priority);
                 }
-                foreach (ListViewItem item in torrentListView.Items)
+                foreach (FileListViewItem item in torrentListView.Items)
                 {
                     Torrent t = (Torrent)item.Tag;
                     item.SubItems[3].Text = t.Status;
@@ -1000,10 +993,6 @@ namespace TransmissionRemoteDotnet
                 lock (filesListView)
                 {
                     filesListView.Items.Clear();
-                }
-                lock (fileItems)
-                {
-                    fileItems.Clear();
                 }
                 lock (peersListView)
                 {
@@ -1334,11 +1323,11 @@ namespace TransmissionRemoteDotnet
             JsonArray array = new JsonArray();
             lock (filesListView)
             {
-                lock (fileItems)
+                lock (filesListView.Items)
                 {
                     foreach (ListViewItem item in filesListView.SelectedItems)
                     {
-                        int i = fileItems.IndexOf(item);
+                        int i = filesListView.Items.IndexOf(item);
                         if (i != -1)
                         {
                             array.Add(i);
@@ -1478,7 +1467,7 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             ids.Put(t.Id);
             arguments.Put(ProtocolConstants.KEY_IDS, ids);
-            if (FileList.Count == fileItems.Count)
+            if (FileList.Count == filesListView.Items.Count)
             {
                 arguments.Put(datatype, new JsonArray());
             }

@@ -55,14 +55,6 @@ namespace TransmissionRemoteDotnet.Commands
 
         public void Execute()
         {
-            item.SubItems[3].Tag = bytesCompleted;
-            item.SubItems[3].Text = bytesCompletedStr;
-            item.SubItems[4].Tag = progress;
-            item.SubItems[4].Text = progress + "%";
-            item.SubItems[5].Text = wanted ? OtherStrings.No : OtherStrings.Yes;
-            item.SubItems[5].Tag = wanted;
-            item.SubItems[6].Text = Toolbox.FormatPriority(priority);
-            item.SubItems[6].Tag = priority;
         }
     }
 
@@ -76,40 +68,6 @@ namespace TransmissionRemoteDotnet.Commands
         public UpdateFilesCreateSubCommand(string name, long length, bool wanted,
             JsonNumber priority, long bytesCompleted, ImageList img, int mainHandle)
         {
-            this.item = new ListViewItem(Toolbox.TrimPath(name));
-            item.SubItems[0].Tag = item.SubItems[0].Text.Length != name.Length;
-            string[] split = name.Split('.');
-            string typeName = "";
-            if (split.Length > 1)
-            {
-                string extension = split[split.Length - 1].ToLower();
-#if !MONO
-                if (img.Images.ContainsKey(extension) || IconReader.AddToImgList(extension, img))
-                {
-                    this.extension = extension;
-                    typeName = IconReader.GetTypeName(extension);
-                }
-#else
-                typeName = extension;
-#endif
-            }
-            item.Name = item.ToolTipText = name;
-            item.SubItems.Add(typeName);
-            item.SubItems.Add(Toolbox.GetFileSize(length));
-            item.SubItems[2].Tag = length;
-            item.SubItems.Add(Toolbox.GetFileSize(bytesCompleted));
-            item.SubItems[3].Tag = bytesCompleted;
-            decimal progress = Toolbox.CalcPercentage(bytesCompleted, length);
-            item.SubItems.Add(progress + "%");
-            item.SubItems[4].Tag = progress;
-            item.SubItems.Add(wanted ? OtherStrings.No : OtherStrings.Yes);
-            item.SubItems[5].Tag = wanted;
-            item.SubItems.Add(Toolbox.FormatPriority(priority));
-            item.SubItems[6].Tag = priority;
-            lock (Program.Form.FileItems)
-            {
-                Program.Form.FileItems.Add(item);
-            }
         }
 
         public void Execute()

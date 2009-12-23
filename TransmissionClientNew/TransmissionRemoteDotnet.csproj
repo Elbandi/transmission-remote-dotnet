@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Comparers\FilesListViewColumnSorter.cs" />
     <Compile Include="Comparers\ErrorsListViewColumnSorter.cs" />
+    <Compile Include="FileListViewItem.cs" />
     <Compile Include="FindDialog.cs">
       <SubType>Form</SubType>
     </Compile>

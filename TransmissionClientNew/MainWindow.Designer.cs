@@ -112,6 +112,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.fileIconImageList = new System.Windows.Forms.ImageList(this.components);
             this.peersTabPage = new System.Windows.Forms.TabPage();
             this.peersTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
             this.peersListView = new TransmissionRemoteDotnet.ListViewNF();
@@ -202,7 +203,6 @@ namespace TransmissionRemoteDotnet
             this.projectSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForNewVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flagsImageList = new System.Windows.Forms.ImageList(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.filesTimer = new System.Windows.Forms.Timer(this.components);
@@ -784,6 +784,7 @@ namespace TransmissionRemoteDotnet
             this.filesListView.FullRowSelect = true;
             this.filesListView.Name = "filesListView";
             this.filesListView.ShowItemToolTips = true;
+            this.filesListView.SmallImageList = this.fileIconImageList;
             this.filesListView.UseCompatibleStateImageBehavior = false;
             this.filesListView.View = System.Windows.Forms.View.Details;
             this.filesListView.SelectedIndexChanged += new System.EventHandler(this.filesListView_SelectedIndexChanged);
@@ -818,6 +819,12 @@ namespace TransmissionRemoteDotnet
             // columnHeader5
             // 
             resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            // 
+            // fileIconImageList
+            // 
+            this.fileIconImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.fileIconImageList, "fileIconImageList");
+            this.fileIconImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // peersTabPage
             // 
@@ -942,15 +949,15 @@ namespace TransmissionRemoteDotnet
             // 
             // label20
             // 
-            resources.ApplyResources(this.label20, "label20");
             this.label20.BackColor = System.Drawing.Color.MidnightBlue;
+            resources.ApplyResources(this.label20, "label20");
             this.label20.ForeColor = System.Drawing.Color.Green;
             this.label20.Name = "label20";
             // 
             // label19
             // 
-            resources.ApplyResources(this.label19, "label19");
             this.label19.BackColor = System.Drawing.Color.MidnightBlue;
+            resources.ApplyResources(this.label19, "label19");
             this.label19.ForeColor = System.Drawing.Color.Yellow;
             this.label19.Name = "label19";
             // 
@@ -1504,12 +1511,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // flagsImageList
-            // 
-            this.flagsImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            resources.ApplyResources(this.flagsImageList, "flagsImageList");
-            this.flagsImageList.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // notifyIcon
             // 
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
@@ -1578,7 +1579,6 @@ namespace TransmissionRemoteDotnet
             this.groupBox1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -1664,7 +1664,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.Label timeElapsedLabelLabel;
         private System.Windows.Forms.Timer refreshElapsedTimer;
-        private System.Windows.Forms.ImageList flagsImageList;
         private System.Windows.Forms.GroupBox generalTorrentNameGroupBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
@@ -1774,5 +1773,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label piecesInfoLabelLabel;
         private System.Windows.Forms.ToolStripButton AltSpeedButton;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator4;
+        public System.Windows.Forms.ImageList fileIconImageList;
     }
 }
