@@ -112,19 +112,19 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelDevelopers.Text" xml:space="preserve">
-    <value>Developers:</value>
+    <value>Twórcy:</value>
   </data>
   <data name="labelProductName.Text" xml:space="preserve">
-    <value>Product Name</value>
+    <value>Nazwa programu</value>
   </data>
   <data name="labelVersion.Text" xml:space="preserve">
     <value>Wersja</value>
   </data>
   <data name="labelCopyright.Text" xml:space="preserve">
-    <value>Copyright</value>
+    <value>Prawa autorskie</value>
   </data>
   <data name="labelHomepageLink.Text" xml:space="preserve">
-    <value>Homepage:</value>
+    <value>Strona projektu:</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value> * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/
@@ -146,7 +146,7 @@
     * ikeblaster for the Czech translation.</value>
   </data>
   <data name="labelCredits.Text" xml:space="preserve">
-    <value>Credits &amp;&amp; acknowledgements:</value>
+    <value>Info dla użytkowników:</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
     <value>&amp;OK</value>

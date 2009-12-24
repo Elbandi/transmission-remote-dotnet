@@ -121,38 +121,38 @@
     <value>Anuluj</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Hasło</value>
   </data>
   <data name="SpeedResolutions" xml:space="preserve">
-    <value>5 sec|10 sec|30 sec|5 min</value>
+    <value>5 sek|10 sek|30 sek|5 min</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="PiecesInfo" xml:space="preserve">
-    <value>{0} x {1} (have {2})</value>
+    <value>{0} x {1} (ukończono {2})</value>
   </data>
   <data name="XConnected" xml:space="preserve">
     <value>{0} połączonych</value>
   </data>
   <data name="EmptyFile" xml:space="preserve">
-    <value>Empty file</value>
+    <value>Pusty plik</value>
   </data>
   <data name="UnknownResponseTag" xml:space="preserve">
-    <value>Unknown response tag</value>
+    <value>Nieznana odpowiedź</value>
   </data>
   <data name="GeoipInitError" xml:space="preserve">
-    <value>GeoIP init error ({0})</value>
+    <value>Błąd inicjalizacji GeoIP ({0})</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
-    <value>Bandwidth allocation</value>
+    <value>Zarządzanie łączem</value>
   </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
-    <value>Multiple Torrent Properties</value>
+    <value>Właściwości wielu torrentów</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Nieznany</value>
   </data>
   <data name="UnableToOpen" xml:space="preserve">
-    <value>Unable to open</value>
+    <value>Nie można otworzyć</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Wszystkie</value>
