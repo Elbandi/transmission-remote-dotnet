@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Text;
 using Jayrock.Json;
 using System.Windows.Forms;
-using TransmissionRemoteDotnet.Commands;
 using System.Threading;
 using System.Collections;
 
@@ -52,7 +51,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 {
                     if (torrentListView.SelectedItems.Count == 1)
                     {
-                        t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                        t = (Torrent)torrentListView.SelectedItems[0];
                     }
                 }
             }));
@@ -69,15 +68,7 @@ namespace TransmissionRemoteDotnet.Commmands
             JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
             first = form.filesListView.Items.Count == 0;
             bool havepriority = (priorities != null && wanted != null);
-            //uiUpdateBatch = new List<ICommand>();
-#if !MONO
             ImageList imgList = Program.Form.fileIconImageList;
-            /*int mainWindowHandle = 0;
-            Program.Form.Invoke(new MethodInvoker(delegate()
-            {
-                mainWindowHandle = Program.Form.Handle.ToInt32();
-            }));*/
-#endif
             if (first)
                 newItems = new FileListViewItem[files.Length];
             for (int i = 0; i < files.Length; i++)
@@ -89,13 +80,6 @@ namespace TransmissionRemoteDotnet.Commmands
                 {
                     FileListViewItem fileItem = new FileListViewItem(file, imgList, i, wanted, priorities);
                     newItems[i] = fileItem;
-                    //string name = (string)file[ProtocolConstants.FIELD_NAME];
-#if !MONO
-                    //UpdateFilesCreateSubCommand subCommand = new UpdateFilesCreateSubCommand(name, length, Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted, imgList, mainWindowHandle);
-#else
-                    //UpdateFilesCreateSubCommand subCommand = new UpdateFilesCreateSubCommand(name, length, Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted, null, -1);
-#endif
-                    //uiUpdateBatch.Add((ICommand)subCommand);
                 }
                 else
                 {
@@ -107,15 +91,6 @@ namespace TransmissionRemoteDotnet.Commmands
                             item.Update(file, wanted, priorities);
                         }
                     }));
-
-                    /*lock (form.FileItems)
-                    {
-                        if (i < form.FileItems.Count)
-                            if (havepriority)
-                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted));
-                            else
-                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], bytesCompleted));
-                    }*/
                 }
             }
         }

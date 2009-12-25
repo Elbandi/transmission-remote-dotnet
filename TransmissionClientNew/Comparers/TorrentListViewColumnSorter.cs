@@ -71,34 +71,34 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewTextComparer(0, false);
                         break;
                     case 1:
-                        objectCompare = new ListViewTorrentInt64Comparer(ProtocolConstants.FIELD_TOTALSIZE);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 2:
                         objectCompare = new ListViewItemDecimalComparer(value);
                         break;
                     case 4:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_SEEDERS);
+                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
                         break;
                     case 5:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_LEECHERS);
+                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
                         break;
                     case 6:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_RATEDOWNLOAD);
+                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
                         break;
                     case 7:
-                        objectCompare = new ListViewTorrentInt32Comparer(ProtocolConstants.FIELD_RATEUPLOAD);
+                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
                         break;
                     case 8:
-                        objectCompare = new ListViewTorrentInt64Comparer(ProtocolConstants.FIELD_ETA);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 9:
-                        objectCompare = new ListViewTorrentInt64Comparer(ProtocolConstants.FIELD_UPLOADEDEVER);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 10:
                         objectCompare = new ListViewTorrentRatioComparer();
                         break;
                     case 11:
-                        objectCompare = new ListViewTorrentInt64Comparer(ProtocolConstants.FIELD_ADDEDDATE);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 12:
                         objectCompare = new ListViewDoneDateComparer();

@@ -97,7 +97,6 @@
     <Compile Include="Commands\TorrentGetCommand.cs" />
     <Compile Include="Commands\UpdateBlocklistCommand.cs" />
     <Compile Include="Commands\UpdateFilesCommand.cs" />
-    <Compile Include="Commands\UpdateFilesSubCommand.cs" />
     <Compile Include="Comparers\IListViewItemSorter.cs" />
     <Compile Include="Comparers\ListViewDoneDateComparer.cs" />
     <Compile Include="Comparers\ListViewItemIPComparer.cs" />

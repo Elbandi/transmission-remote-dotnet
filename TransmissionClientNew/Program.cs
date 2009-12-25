@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Jayrock.Json;
 using System.Net;
-using TransmissionRemoteDotnet.Commands;
 using TransmissionRemoteDotnet.Settings;
 using System.Threading;
 using Troschuetz;
@@ -57,11 +56,11 @@ namespace TransmissionRemoteDotnet
             set { Program.settings = value; }
         }
 
-        private static Dictionary<string, Torrent> torrentIndex = new Dictionary<string, Torrent>();
+        /*private static Dictionary<string, Torrent> torrentIndex = new Dictionary<string, Torrent>();
         public static Dictionary<string, Torrent> TorrentIndex
         {
             get { return Program.torrentIndex; }
-        }
+        }*/
 
         private static TransmissionDaemonDescriptor daemonDescriptor = new TransmissionDaemonDescriptor();
         public static TransmissionDaemonDescriptor DaemonDescriptor
@@ -197,10 +196,7 @@ namespace TransmissionRemoteDotnet
                 connected = value;
                 if (!connected)
                 {
-                    lock (torrentIndex)
-                    {
-                        torrentIndex.Clear();
-                    }
+                    form.torrentListView.Items.Clear();
                     Program.DaemonDescriptor.UpdateSerial = 0;
                 }
                 if (OnConnStatusChanged != null)

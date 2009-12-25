@@ -26,34 +26,20 @@ namespace TransmissionRemoteDotnet.Comparers
 {
     public class ListViewTorrentInt32Comparer : IComparer
     {
-        string jsonKey;
+        int column;
 
-        public ListViewTorrentInt32Comparer(string jsonKey)
+        public ListViewTorrentInt32Comparer(int column)
         {
-            this.jsonKey = jsonKey;
+            this.column = column;
         }
 
         int IComparer.Compare(object x, object y)
         {
-            ListViewItem lx = (ListViewItem)x;
-            ListViewItem ly = (ListViewItem)y;
-            Torrent tx = (Torrent)lx.Tag;
-            Torrent ty = (Torrent)ly.Tag;
-
-            if (jsonKey.Equals(ProtocolConstants.FIELD_LEECHERS))
-            {
-                return tx.Leechers.CompareTo(ty.Leechers);
-            }
-            else if (jsonKey.Equals(ProtocolConstants.FIELD_SEEDERS))
-            {
-                return tx.Seeders.CompareTo(ty.Seeders);
-            }
-            else
-            {
-                int nx = Toolbox.ToInt(tx.Info[jsonKey]);
-                int ny = Toolbox.ToInt(ty.Info[jsonKey]);
-                return nx.CompareTo(ny);
-            }
+            Torrent tx = (Torrent)x;
+            Torrent ty = (Torrent)y;
+            int ix = (int)tx.SubItems[column].Tag;
+            int iy = (int)tx.SubItems[column].Tag;
+            return ix.CompareTo(iy);
         }
     }
 }
