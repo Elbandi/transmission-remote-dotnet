@@ -670,7 +670,7 @@ msgstr "Scrape URL"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "Tracker-ek"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
@@ -694,7 +694,7 @@ msgstr "%"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Kihagy"
+msgstr "Kihagyás"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
@@ -832,7 +832,7 @@ msgstr "Torrent(ek) újraellenőrzése"
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Torrent(ek) tulajdonságok"
+msgstr "Torrent(ek) tulajdonságai"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -941,13 +941,13 @@ msgstr "Keresés..."
 #: OtherStrings~Start
 #, csharp-format
 msgid "Start"
-msgstr "Start"
+msgstr "Indítás"
 
 #: MainWindow~pauseToolStripMenuItem.Text
 #: OtherStrings~Pause
 #, csharp-format
 msgid "Pause"
-msgstr "Szünet"
+msgstr "Szüneteltet"
 
 #: MainWindow~recheckToolStripMenuItem.Text
 #: OtherStrings~Recheck

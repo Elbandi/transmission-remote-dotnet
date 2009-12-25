@@ -675,7 +675,7 @@ msgstr "Trackery"
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Folder docelowy:"
+msgstr "Folder docelowy"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text

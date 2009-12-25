@@ -161,13 +161,13 @@
     <value>Autor</value>
   </data>
   <data name="Broken" xml:space="preserve">
-    <value>Uszkodzone</value>
+    <value>Błędne</value>
   </data>
   <data name="Build" xml:space="preserve">
     <value>Build</value>
   </data>
   <data name="Checking" xml:space="preserve">
-    <value>Sprawdzane</value>
+    <value>Sprawdzanie</value>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>Ukończone</value>
@@ -179,13 +179,13 @@
     <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!"</value>
+    <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Czy chcesz usunąć {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Czy chcesz usunąć i skasować {0}?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!"</value>
+    <value>Czy chcesz usunąć i skasować {0}?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Połącz</value>
@@ -263,7 +263,7 @@
     <value>Musisz być połączony by móc dodawać torrenty. Czy chcesz się połączyć?</value>
   </data>
   <data name="NewerVersion" xml:space="preserve">
-    <value>Dostępna jest nowa ({0}.{1}) wersja. Czy otworzyć stronę pobierania??</value>
+    <value>Dostępna jest nowa wersja - ({0}.{1}). Czy otworzyć stronę pobierania??</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>Nie</value>
@@ -314,7 +314,7 @@
     <value>Minimalna wersja RPC</value>
   </data>
   <data name="Seeding" xml:space="preserve">
-    <value>Udostępnianie</value>
+    <value>Wysyłanie</value>
   </data>
   <data name="SelectAll" xml:space="preserve">
     <value>Zaznacz wszystko</value>
@@ -411,13 +411,13 @@
     <value>Wyniki testu</value>
   </data>
   <data name="DownloadLimit" xml:space="preserve">
-    <value>Limit Pobierania</value>
+    <value>Limit pobierania</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Bez limitu</value>
   </data>
   <data name="UploadLimit" xml:space="preserve">
-    <value>Limit Wysyłania</value>
+    <value>Limit wysyłania</value>
   </data>
   <data name="Querying" xml:space="preserve">
     <value>Sprawdzanie...</value>
@@ -435,10 +435,10 @@
     <value>Postęp</value>
   </data>
   <data name="Reannounce" xml:space="preserve">
-    <value>Aktualizuj Tracker</value>
+    <value>Aktualizuj tracker</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
-    <value>Otwórz Folder Sieciowy</value>
+    <value>Otwórz folder sieciowy</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>Zamknij</value>
@@ -459,6 +459,6 @@
     <value>Kopiuj info o torrencie</value>
   </data>
   <data name="LoadingFile" xml:space="preserve">
-    <value>Przenoszę {0}...</value>
+    <value>Ładowanie {0}...</value>
   </data>
 </root>

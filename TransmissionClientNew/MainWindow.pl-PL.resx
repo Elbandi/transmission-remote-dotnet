@@ -124,7 +124,7 @@
     <value>Znajdź...</value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
-    <value>This is selectable text</value>
+    <value>Ten tekst jest zaznaczalny</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
     <value>Uruchom torrent(y)</value>
@@ -142,7 +142,7 @@
     <value>Rozmiar</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Ukończono</value>
+    <value>Pobrano</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Status</value>
@@ -238,16 +238,16 @@
     <value>#</value>
   </data>
   <data name="columnHeader20.Text" xml:space="preserve">
-    <value>Adres Announce</value>
+    <value>Adres announce</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Adres Scrape</value>
+    <value>Adres scrape</value>
   </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
     <value>Trackery</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Folder\Nazwa pliku</value>
+    <value>Folder docelowy</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
     <value>Typ</value>
@@ -328,10 +328,10 @@
     <value>Rozłącz</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>Dodaj Torrent</value>
+    <value>Dodaj torrent...</value>
   </data>
   <data name="addWebTorrentButton.Text" xml:space="preserve">
-    <value>Dodaj Torrent z adresu</value>
+    <value>Dodaj torrent z adresu...</value>
   </data>
   <data name="startTorrentButton.Text" xml:space="preserve">
     <value>Uruchom torrent(y)</value>
@@ -343,7 +343,7 @@
     <value>Sprawdź torrent(y)</value>
   </data>
   <data name="configureTorrentButton.Text" xml:space="preserve">
-    <value>Ustaw właściwości torrenta(ów)</value>
+    <value>Ustaw właściwości torrent(ów)</value>
   </data>
   <data name="removeTorrentButton.Text" xml:space="preserve">
     <value>Usuń torrent(y)</value>
@@ -355,25 +355,25 @@
     <value>Wszystkie</value>
   </data>
   <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ostatnio Aktywne</value>
+    <value>Ostatnio aktywne</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Aktualizuj Tracker</value>
+    <value>Aktualizuj tracker</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Otwórz Folder Sieciowy</value>
+    <value>Otwórz folder sieciowy</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
-    <value>Ustawienia Lokalne</value>
+    <value>Ustawienia lokalne</value>
   </data>
   <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>Ustawienia Zdalne</value>
+    <value>Ustawienia zdalne</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Pokaż Statystyki</value>
+    <value>Pokaż statystyki</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pokaż Statystyki</value>
+    <value>Pokaż statystyki</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Połącz</value>
@@ -382,13 +382,13 @@
     <value>Rozłącz</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj Torrent</value>
+    <value>Dodaj torrent...</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj Torrent z opcjami</value>
+    <value>Dodaj torrent z opcjami...</value>
   </data>
   <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj Torrent z adresu</value>
+    <value>Dodaj torrent z adresu...</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Zamknij</value>
@@ -412,7 +412,7 @@
     <value>Uruchom</value>
   </data>
   <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Wstrzymaj</value>
+    <value>Pauza</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
     <value>Sprawdź ponownie</value>
@@ -427,25 +427,25 @@
     <value>Usuń i skasuj dane</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Aktualizuj Tracker</value>
+    <value>Aktualizuj tracker</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Przenieś dane torrenta</value>
+    <value>Zmień folder docelowy torrenta</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Otwórz Folder Sieciowy</value>
+    <value>Otwórz folder sieciowy</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kopiuj info o objekcie</value>
+    <value>Kopiuj info o torrencie</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Kopiuj do CSV</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Uruchom Wszystkie</value>
+    <value>Uruchom wszystkie</value>
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Wstrzymaj Wszystkie</value>
+    <value>Wstrzymaj wszystkie</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>
@@ -460,13 +460,13 @@
     <value>Widok</value>
   </data>
   <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pokaż Log Błędów</value>
+    <value>Pokaż log błędów</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Strona Domowa</value>
+    <value>Strona domowa</value>
   </data>
   <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprawdź Uaktualnienia</value>
+    <value>Sprawdź uaktualnienia</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>O Transmission Remote</value>

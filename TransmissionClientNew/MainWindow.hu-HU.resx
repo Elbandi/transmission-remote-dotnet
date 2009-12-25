@@ -133,7 +133,7 @@
     <value>Torrent(ek) újraellenőrzése</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Torrent(ek) tulajdonságok</value>
+    <value>Torrent(ek) tulajdonságai</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent hozzáadása beállítással...</value>
@@ -304,7 +304,7 @@
     <value>%</value>
   </data>
   <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Kihagy</value>
+    <value>Kihagyás</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Prioritás</value>
@@ -328,7 +328,7 @@
     <value>Kliens</value>
   </data>
   <data name="columnHeader27.Text" xml:space="preserve">
-    <value>%</value>
+    <value>Progress</value>
   </data>
   <data name="columnHeader28.Text" xml:space="preserve">
     <value>Letöltés</value>
@@ -343,10 +343,10 @@
     <value>Felbontás:</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>Fel</value>
+    <value>Le</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Le</value>
+    <value>Fel</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Teljes sebesség használat</value>
@@ -358,7 +358,7 @@
     <value>Csatlakozás</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Szétkapcsol</value>
+    <value>Szétkapcsolás</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Torrent hozzáadása...</value>
@@ -373,7 +373,7 @@
     <value>Torrent(ek) szüneteltetése</value>
   </data>
   <data name="recheckTorrentButton.Text" xml:space="preserve">
-    <value>Torrent(ek) kényszerített újraellenőrzése</value>
+    <value>Torrent(ek) újraellenőrzése</value>
   </data>
   <data name="configureTorrentButton.Text" xml:space="preserve">
     <value>Torrent(ek) tulajdonságai</value>
@@ -385,7 +385,7 @@
     <value>Torrent(ek) eltávolítása és törlése</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>Összes</value>
+    <value>Minden</value>
   </data>
   <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
     <value>Nemrég aktív</value>
@@ -409,7 +409,7 @@
     <value>Csatlakozás</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Szétkapcsol</value>
+    <value>Szétkapcsolás</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent hozzáadása...</value>
@@ -442,7 +442,7 @@
     <value>Szüneteltet</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kényszerített újraellenőrzés</value>
+    <value>Újraellenőrzés</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Tulajdonságok</value>

@@ -220,7 +220,7 @@
     <value>Anuluj</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Tempo Odświeżania:</value>
+    <value>Odświeżanie:</value>
   </data>
   <data name="UseSSLCheckBox.Text" xml:space="preserve">
     <value>Bezpieczne (użyj SSL)</value>
@@ -304,6 +304,6 @@
     <value>Elementy menu limitu wysyłania:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Ustawienia Lokalne</value>
+    <value>Ustawienia lokalne</value>
   </data>
 </root>

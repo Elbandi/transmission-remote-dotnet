@@ -123,6 +123,6 @@
     <value>statusStrip1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Wczytaj z URL</value>
+    <value>Wczytaj z URL...</value>
   </data>
 </root>
