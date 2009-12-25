@@ -79,7 +79,8 @@ namespace TransmissionRemoteDotnet.Commmands
                     }
                     if (!Program.Form.torrentListView.Items.ContainsKey(hash))
                     {
-                        Program.Form.torrentListView.Items.Add(new Torrent(torrent));
+                        Torrent t = new Torrent(torrent);
+                        Program.Form.torrentListView.Items.Add(t);
                     }
                     else
                     {

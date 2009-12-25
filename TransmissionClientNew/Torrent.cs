@@ -180,6 +180,19 @@ namespace TransmissionRemoteDotnet
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
             this.Comment = (string)info[ProtocolConstants.FIELD_COMMENT];
             this.Update(info);
+            MainWindow form = Program.Form;
+            lock (form.stateListBox)
+            {
+                if (this.FirstTrackerTrimmed.Length > 0 && form.stateListBox.FindItem(this.FirstTrackerTrimmed) == null)
+                {
+                    form.stateListBox.Items.Add(new GListBoxItem(this.FirstTrackerTrimmed, 8));
+                }
+            }
+            if (Program.Settings.StartedBalloon && this.updateSerial > 2)
+            {
+                Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
+            }
+            LogError();
         }
 
         /*private delegate void AddDelegate();
