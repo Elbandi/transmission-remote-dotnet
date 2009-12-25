@@ -836,9 +836,8 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             lock (torrentListView)
             {
-                foreach (ListViewItem item in torrentListView.SelectedItems)
+                foreach (Torrent t in torrentListView.SelectedItems)
                 {
-                    Torrent t = (Torrent)item.Tag;
                     ids.Put(t.Id);
                 }
             }
