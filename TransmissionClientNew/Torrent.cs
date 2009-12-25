@@ -140,6 +140,8 @@ namespace TransmissionRemoteDotnet
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
             this.SwarmSpeed = Toolbox.GetSpeed(info[ProtocolConstants.FIELD_SWARMSPEED]);
             
+            base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
+            
             return (this.StatusCode != Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS])) || (this.HasError != IsErrorString((string)info[ProtocolConstants.FIELD_ERRORSTRING]));
         }
 
@@ -165,10 +167,6 @@ namespace TransmissionRemoteDotnet
             this.Id = Toolbox.ToInt(info[ProtocolConstants.FIELD_ID]);
             for (int i = 0; i < 13; i++)
                 base.SubItems.Add("");
-            if (this.HasError)
-            {
-                base.ForeColor = Color.Red;
-            }
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
             this.SizeWhenDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_SIZEWHENDONE]);
@@ -182,7 +180,6 @@ namespace TransmissionRemoteDotnet
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
             this.Comment = (string)info[ProtocolConstants.FIELD_COMMENT];
             this.Update(info);
-            //Add();
         }
 
         /*private delegate void AddDelegate();
@@ -363,7 +360,6 @@ namespace TransmissionRemoteDotnet
             get
             {
                 return Toolbox.BitCount(this.Pieces);
-                //return Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECECOMPLETE]);
             }
         }
 
@@ -542,19 +538,6 @@ namespace TransmissionRemoteDotnet
                 return this._longEta;
             }
         }
-
-        /*public decimal RecheckPercentage
-        {
-            get
-            {
-                return (decimal)base.SubItems[2].Tag;
-            }
-            set
-            {
-                base.SubItems[2].Tag = value;
-                base.SubItems[2].Text = value + "%";
-            }
-        }*/
 
         public decimal Percentage
         {
@@ -795,7 +778,7 @@ namespace TransmissionRemoteDotnet
             set
             {
                 base.SubItems[10].Tag = value;
-                base.SubItems[10].Text = value.ToString();
+                base.SubItems[10].Text = value < 0 ? "∞" : value.ToString();
             }
         }
 
@@ -803,8 +786,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                decimal ratio = this.LocalRatio;
-                return ratio < 0 ? "∞" : ratio.ToString();
+                return base.SubItems[10].Text;
             }
         }
 

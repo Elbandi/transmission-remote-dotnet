@@ -38,8 +38,7 @@ namespace TransmissionRemoteDotnet.Comparers
 
         public int Compare(object x, object y)
         {
-            int compareResult;
-            compareResult = objectCompare.Compare(x, y);
+            int compareResult = objectCompare.Compare(x, y);
             if (orderOfSort == SortOrder.Ascending)
             {
                 return compareResult;
