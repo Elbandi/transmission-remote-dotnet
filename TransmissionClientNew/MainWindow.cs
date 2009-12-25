@@ -1325,13 +1325,9 @@ namespace TransmissionRemoteDotnet
             {
                 lock (filesListView.Items)
                 {
-                    foreach (ListViewItem item in filesListView.SelectedItems)
+                    foreach (FileListViewItem item in filesListView.SelectedItems)
                     {
-                        int i = filesListView.Items.IndexOf(item);
-                        if (i != -1)
-                        {
-                            array.Add(i);
-                        }
+                        array.Add(item.FileIndex);
                     }
                 }
             }

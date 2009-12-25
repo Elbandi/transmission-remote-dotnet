@@ -100,8 +100,12 @@ namespace TransmissionRemoteDotnet.Commmands
                 else
                 {
                     Program.Form.Invoke(new MethodInvoker(delegate(){
-                        FileListViewItem item = (FileListViewItem)form.filesListView.Items[i];
-                        item.Update(file, wanted, priorities);
+                        string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
+                        if (form.filesListView.Items.ContainsKey(name))
+                        {
+                            FileListViewItem item = (FileListViewItem)form.filesListView.Items[name];
+                            item.Update(file, wanted, priorities);
+                        }
                     }));
 
                     /*lock (form.FileItems)
