@@ -80,7 +80,7 @@ namespace TransmissionRemoteDotnet
             if (this.StatusCode == ProtocolConstants.STATUS_CHECKING)
                 this.Percentage = Toolbox.ToProgress(info[ProtocolConstants.FIELD_RECHECKPROGRESS]);
             else
-                this.Percentage = Toolbox.ToProgress(info[ProtocolConstants.FIELD_PROGRESS]);
+                this.Percentage = Toolbox.CalcPercentage(this.HaveTotal, this.SizeWhenDone);
 
             if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
                 this.TrackerStats = (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
@@ -139,6 +139,7 @@ namespace TransmissionRemoteDotnet
             this.HonorsSessionLimits = Toolbox.ToBool(info[ProtocolConstants.FIELD_HONORSSESSIONLIMITS]);
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
             this.SwarmSpeed = Toolbox.GetSpeed(info[ProtocolConstants.FIELD_SWARMSPEED]);
+            
             return (this.StatusCode != Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS])) || (this.HasError != IsErrorString((string)info[ProtocolConstants.FIELD_ERRORSTRING]));
         }
 
@@ -148,6 +149,14 @@ namespace TransmissionRemoteDotnet
             this.SubItems[4].Tag = this.Seeders;
             this.SubItems[5].Text = string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs);
             this.SubItems[5].Tag = this.Leechers;
+        }
+
+        public string TorrentName
+        {
+            get
+            {
+                return base.Text;
+            }
         }
 
         public Torrent(JsonObject info)
@@ -701,18 +710,10 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private long _haveTotal;
         public long HaveTotal
         {
-            get
-            {
-                return this._haveTotal;
-            }
-            set
-            {
-                this._haveTotal = value;
-                this.Percentage = Toolbox.CalcPercentage(value, this.SizeWhenDone);
-            }
+            get;
+            set;
         }
 
         public long HaveValid
@@ -787,8 +788,15 @@ namespace TransmissionRemoteDotnet
 
         public decimal LocalRatio
         {
-            get;
-            set;
+            get
+            {
+                return (decimal)base.SubItems[10].Tag;
+            }
+            set
+            {
+                base.SubItems[10].Tag = value;
+                base.SubItems[10].Text = value.ToString();
+            }
         }
 
         public string LocalRatioString

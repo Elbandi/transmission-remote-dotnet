@@ -322,7 +322,7 @@ namespace TransmissionRemoteDotnet
 
         private void Program_onTorrentCompleted(Torrent t)
         {
-            notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, t.Name, OtherStrings.TheTorrentHasFinishedDownloading, ToolTipIcon.Info);
+            notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, t.TorrentName, OtherStrings.TheTorrentHasFinishedDownloading, ToolTipIcon.Info);
         }
 
         private void Program_onTorrentsUpdated(object sender, EventArgs e)
@@ -1485,7 +1485,7 @@ namespace TransmissionRemoteDotnet
             {
                 generalTorrentNameGroupBox.Text = peersTorrentNameGroupBox.Text
                     = trackersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
-                    = t.Name;
+                    = t.TorrentName;
                 startedAtLabel.Text = t.Added.ToString();
                 createdAtLabel.Text = t.Created;
                 createdByLabel.Text = t.Creator;
@@ -1847,7 +1847,7 @@ namespace TransmissionRemoteDotnet
                             Program.Settings.Current.Host,
                             String.Format(
                                 Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
-                                String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.Name))
+                                String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.TorrentName))
                         ));
                 }
                 catch (Exception ex)

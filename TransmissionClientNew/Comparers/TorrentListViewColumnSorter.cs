@@ -74,7 +74,7 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 2:
-                        objectCompare = new ListViewItemDecimalComparer(value);
+                        objectCompare = new ListViewItemDecimalComparer(columnToSort);
                         break;
                     case 4:
                         objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
@@ -83,10 +83,10 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
                         break;
                     case 6:
-                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 7:
-                        objectCompare = new ListViewTorrentInt32Comparer(columnToSort);
+                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 8:
                         objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
@@ -95,13 +95,13 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
                         break;
                     case 10:
-                        objectCompare = new ListViewTorrentRatioComparer();
+                        objectCompare = new ListViewItemDecimalComparer(columnToSort);
                         break;
                     case 11:
-                        objectCompare = new ListViewTorrentInt64Comparer(columnToSort);
+                        objectCompare = new ListViewDateTimeComparer(columnToSort);
                         break;
                     case 12:
-                        objectCompare = new ListViewDoneDateComparer();
+                        objectCompare = new ListViewDateTimeComparer(columnToSort);
                         break;
                     default:
                         objectCompare = new ListViewTextComparer(columnToSort, true);

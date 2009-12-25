@@ -39,6 +39,7 @@ namespace TransmissionRemoteDotnet.Comparers
             Torrent ty = (Torrent)y;
             int ix = (int)tx.SubItems[column].Tag;
             int iy = (int)tx.SubItems[column].Tag;
+            Console.WriteLine(".Compare("+ix+","+iy+")");
             return ix.CompareTo(iy);
         }
     }

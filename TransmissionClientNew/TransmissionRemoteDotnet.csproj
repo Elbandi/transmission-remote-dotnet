@@ -98,7 +98,7 @@
     <Compile Include="Commands\UpdateBlocklistCommand.cs" />
     <Compile Include="Commands\UpdateFilesCommand.cs" />
     <Compile Include="Comparers\IListViewItemSorter.cs" />
-    <Compile Include="Comparers\ListViewDoneDateComparer.cs" />
+    <Compile Include="Comparers\ListViewDateTimeComparer.cs" />
     <Compile Include="Comparers\ListViewItemIPComparer.cs" />
     <Compile Include="Comparers\ListViewItemDecimalComparer.cs" />
     <Compile Include="Comparers\ListViewItemInt64Comparer.cs" />
@@ -106,7 +106,6 @@
     <Compile Include="Comparers\ListViewTextInsensitiveReverseComparer.cs" />
     <Compile Include="Comparers\ListViewTorrentInt32Comparer.cs" />
     <Compile Include="Comparers\ListViewTorrentInt64Comparer.cs" />
-    <Compile Include="Comparers\ListViewTorrentRatioComparer.cs" />
     <Compile Include="ErrorLogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
