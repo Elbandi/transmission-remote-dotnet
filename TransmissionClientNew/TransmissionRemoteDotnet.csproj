@@ -104,8 +104,7 @@
     <Compile Include="Comparers\ListViewItemInt64Comparer.cs" />
     <Compile Include="Comparers\ListViewTextComparer.cs" />
     <Compile Include="Comparers\ListViewTextInsensitiveReverseComparer.cs" />
-    <Compile Include="Comparers\ListViewTorrentInt32Comparer.cs" />
-    <Compile Include="Comparers\ListViewTorrentInt64Comparer.cs" />
+    <Compile Include="Comparers\ListViewItemInt32Comparer.cs" />
     <Compile Include="ErrorLogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,6 +424,9 @@
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.de-DE.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.es-ES.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -605,6 +607,9 @@
     <EmbeddedResource Include="TorrentLoadDialog.cs-CZ.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.de-DE.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.es-ES.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>

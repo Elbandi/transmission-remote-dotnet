@@ -24,22 +24,22 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet.Comparers
 {
-    public class ListViewTorrentInt64Comparer : IComparer
+    public class ListViewItemInt32Comparer : IComparer
     {
         int column;
 
-        public ListViewTorrentInt64Comparer(int column)
+        public ListViewItemInt32Comparer(int column)
         {
             this.column = column;
         }
 
         int IComparer.Compare(object x, object y)
         {
-            Torrent tx = (Torrent)x;
+            ListViewItem tx = (ListViewItem)x;
             Torrent ty = (Torrent)y;
-            long nx = (long)tx.SubItems[column].Tag;
-            long ny = (long)ty.SubItems[column].Tag;
-            return nx.CompareTo(ny);
+            int ix = (int)tx.SubItems[column].Tag;
+            int iy = (int)ty.SubItems[column].Tag;
+            return ix.CompareTo(iy);
         }
     }
 }
