@@ -193,6 +193,8 @@ namespace TransmissionRemoteDotnet
                 Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
             }
             LogError();
+            lock (Program.TorrentIndex)
+                Program.TorrentIndex.Add(this.Hash, this);
         }
 
         /*private delegate void AddDelegate();
@@ -266,7 +268,7 @@ namespace TransmissionRemoteDotnet
         {
             MainWindow form = Program.Form;
             int matchingTrackers = 0;
-            ListView.ListViewItemCollection itemCollection = form.torrentListView.Items;
+            ListView.ListViewItemCollection itemCollection = Program.Form.torrentListView.Items;
             if (itemCollection.Contains(this))
             {
                 lock (form.torrentListView)
@@ -281,24 +283,26 @@ namespace TransmissionRemoteDotnet
             {
                 return;
             }
-            if (base.SubItems[13].Text.Length == 0)
+
+            if (this.FirstTrackerTrimmed == null)
                 return;
 
-            foreach (Torrent torrent in Program.Form.torrentListView.Items)
+            lock (Program.TorrentIndex)
             {
-                if (torrent.FirstTracker.Equals(this.FirstTracker))
-                    matchingTrackers++;
+                foreach (KeyValuePair<string, Torrent> torrent in Program.TorrentIndex)
+                {
+                    if (torrent.Value.FirstTrackerTrimmed.Equals(this.FirstTrackerTrimmed))
+                        matchingTrackers++;
+                }
             }
 
             if (matchingTrackers <= 0)
             {
                 lock (form.stateListBox)
                 {
-                    form.stateListBox.RemoveItem(this.FirstTracker);
+                    form.stateListBox.RemoveItem(this.FirstTrackerTrimmed);
                 }
             }
-
-            Program.Form.torrentListView.Items.Remove(this);
         }
 
         public string FirstTracker

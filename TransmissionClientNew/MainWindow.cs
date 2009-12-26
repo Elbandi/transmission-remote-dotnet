@@ -1217,60 +1217,60 @@ namespace TransmissionRemoteDotnet
         private void FilterByStateOrTracker()
         {
             SuspendTorrentListView();
-            /*lock (Program.TorrentIndex)
-            {*/
-                if (stateListBox.SelectedIndex == 1)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
-                }
-                else if (stateListBox.SelectedIndex == 2)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
-                }
-                else if (stateListBox.SelectedIndex == 3)
-                {
-                    FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
-                }
-                else if (stateListBox.SelectedIndex == 4)
-                {
-                    FilterTorrent(IsFinished, null);
-                }
-                else if (stateListBox.SelectedIndex == 5)
-                {
-                    FilterTorrent(NotFinished, null);
-                }
-                else if (stateListBox.SelectedIndex == 6)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
-                }
-                else if (stateListBox.SelectedIndex == 7)
-                {
-                    FilterTorrent(TorrentHasError, null);
-                }
-                else if (stateListBox.SelectedIndex > 8)
-                {
-                    FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
-                }
-                else
-                {
-                    FilterTorrent(AlwaysTrue, null);
-                }
-            //}
+            if (stateListBox.SelectedIndex == 1)
+            {
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+            }
+            else if (stateListBox.SelectedIndex == 2)
+            {
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+            }
+            else if (stateListBox.SelectedIndex == 3)
+            {
+                FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+            }
+            else if (stateListBox.SelectedIndex == 4)
+            {
+                FilterTorrent(IsFinished, null);
+            }
+            else if (stateListBox.SelectedIndex == 5)
+            {
+                FilterTorrent(NotFinished, null);
+            }
+            else if (stateListBox.SelectedIndex == 6)
+            {
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
+            }
+            else if (stateListBox.SelectedIndex == 7)
+            {
+                FilterTorrent(TorrentHasError, null);
+            }
+            else if (stateListBox.SelectedIndex > 8)
+            {
+                FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+            }
+            else
+            {
+                FilterTorrent(AlwaysTrue, null);
+            }
             ResumeTorrentListView();
         }
 
         private delegate bool FilterCompare(Torrent t, object param);
         private void FilterTorrent(FilterCompare fc, object param)
         {
-            foreach (Torrent t in Program.Form.torrentListView.Items)
+            lock (Program.TorrentIndex)
             {
-                if (fc(t, param))
+                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    t.Show();
-                }
-                else
-                {
-                    t.RemoveItem();
+                    if (fc(pair.Value, param))
+                    {
+                        pair.Value.Show();
+                    }
+                    else
+                    {
+                        pair.Value.RemoveItem();
+                    }
                 }
             }
         }
@@ -1292,7 +1292,7 @@ namespace TransmissionRemoteDotnet
         }
         private bool UsingTracker(Torrent t, object tracker)
         {
-            return t.FirstTracker.Equals(tracker);
+            return t.FirstTrackerTrimmed.Equals(tracker);
         }
         private bool AlwaysTrue(Torrent t, object dummy)
         {
@@ -1367,19 +1367,20 @@ namespace TransmissionRemoteDotnet
             int seeding = 0;
             int broken = 0;
             Dictionary<string, int> trackers = new Dictionary<string, int>();
-            System.Windows.Forms.ListView.ListViewItemCollection torrents = Program.Form.torrentListView.Items;
-                all = torrents.Count;
-                foreach (Torrent t in torrents)
+            lock (Program.TorrentIndex)
+            {
+                all = Program.TorrentIndex.Count;
+                foreach (KeyValuePair<string, Torrent> t in Program.TorrentIndex)
                 {
-                    short statusCode = t.StatusCode;
-                    if (t.FirstTracker.Length > 0)
+                    short statusCode = t.Value.StatusCode;
+                    if (t.Value.FirstTrackerTrimmed != null)
                     {
-                        if (trackers.ContainsKey(t.FirstTracker))
-                            trackers[t.FirstTracker] = trackers[t.FirstTracker] + 1;
+                        if (trackers.ContainsKey(t.Value.FirstTrackerTrimmed))
+                            trackers[t.Value.FirstTrackerTrimmed] = trackers[t.Value.FirstTrackerTrimmed] + 1;
                         else
-                            trackers[t.FirstTracker] = 1;
+                            trackers[t.Value.FirstTrackerTrimmed] = 1;
                     }
-                    if (t.HasError)
+                    if (t.Value.HasError)
                     {
                         broken++;
                     }
@@ -1400,7 +1401,7 @@ namespace TransmissionRemoteDotnet
                         checking++;
                     }
 
-                    if (t.IsFinished)
+                    if (t.Value.IsFinished)
                     {
                         complete++;
                     }
@@ -1409,7 +1410,7 @@ namespace TransmissionRemoteDotnet
                         incomplete++;
                     }
                 }
-            
+            }
             SetStateCounter(0, all);
             SetStateCounter(1, downloading);
             SetStateCounter(2, paused);

@@ -56,11 +56,11 @@ namespace TransmissionRemoteDotnet
             set { Program.settings = value; }
         }
 
-        /*private static Dictionary<string, Torrent> torrentIndex = new Dictionary<string, Torrent>();
+        private static Dictionary<string, Torrent> torrentIndex = new Dictionary<string, Torrent>();
         public static Dictionary<string, Torrent> TorrentIndex
         {
             get { return Program.torrentIndex; }
-        }*/
+        }
 
         private static TransmissionDaemonDescriptor daemonDescriptor = new TransmissionDaemonDescriptor();
         public static TransmissionDaemonDescriptor DaemonDescriptor
@@ -197,6 +197,7 @@ namespace TransmissionRemoteDotnet
                 if (!connected)
                 {
                     form.torrentListView.Items.Clear();
+                    torrentIndex.Clear();
                     Program.DaemonDescriptor.UpdateSerial = 0;
                 }
                 if (OnConnStatusChanged != null)
