@@ -36,7 +36,7 @@ namespace TransmissionRemoteDotnet.Comparers
         int IComparer.Compare(object x, object y)
         {
             ListViewItem tx = (ListViewItem)x;
-            Torrent ty = (Torrent)y;
+            ListViewItem ty = (ListViewItem)y;
             int ix = (int)tx.SubItems[column].Tag;
             int iy = (int)ty.SubItems[column].Tag;
             return ix.CompareTo(iy);

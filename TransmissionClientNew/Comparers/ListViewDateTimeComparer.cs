@@ -16,8 +16,8 @@ namespace TransmissionRemoteDotnet
 
         int IComparer.Compare(object x, object y)
         {
-            Torrent tx = (Torrent)x;
-            Torrent ty = (Torrent)y;
+            ListViewItem tx = (ListViewItem)x;
+            ListViewItem ty = (ListViewItem)y;
             DateTime dtx = (DateTime)tx.SubItems[column].Tag;
             DateTime dty = (DateTime)ty.SubItems[column].Tag;
             if (dtx == null)
