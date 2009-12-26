@@ -46,9 +46,9 @@ namespace TranslationConverter
                 foreach (string l in lines)
                 {
                     if (s.Length > 0)
-                        s += "\\r\\n\"\n\"";
+                        s += "\\r\\n\"\r\n\"";
                     else
-                        s += "\"\n\"";
+                        s += "\"\r\n\"";
                     s += l.TrimEnd("\n\r".ToCharArray());
                 }
                 return s;
@@ -91,7 +91,6 @@ namespace TranslationConverter
                 foreach (KeyValuePair<string, StringsList> l in trd_language)
                 {
                     StringsList sl = trd_language[l.Key];
-
                     #region generate template and pofiles
                     Dictionary<string, string> nyelv = new Dictionary<string, string>();
                     foreach (KeyValuePair<string, string> item in template)
@@ -100,7 +99,8 @@ namespace TranslationConverter
                         if (nyelv.ContainsKey(k) && !nyelv[k].Equals(""))
                             continue;
                         string v = !l.Key.Equals("en-US") && sl.ContainsKey(k) ? sl[k] : item.Value;
-                        nyelv[item.Value] = v;
+                        if (!nyelv.ContainsKey(item.Value) || (!nyelv[item.Value].Equals(v) && !item.Value.Equals(v)))
+                            nyelv[item.Value] = v;
                     }
 
                     string pofile = path + "\\Languages\\" + (l.Key.Equals("en-US") ? "template.pot" : l.Key + ".po");
@@ -108,7 +108,10 @@ namespace TranslationConverter
                     {
                         using (TextWriter tw = new StreamWriter(pofile))
                         {
-                            tw.WriteLine("# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER");
+                            CultureInfo ci = new CultureInfo(l.Key);
+                            string tlang = !ci.Parent.Name.Equals("") ? ci.Parent.EnglishName : ci.EnglishName;
+                            tw.WriteLine("# {0} translation of transmission-remote-dotnet", tlang);
+                            tw.WriteLine("# Copyright (C) 2009 Alan F");
                             tw.WriteLine("# This file is distributed under the same license as the transmission-remote-dotnet package.");
                             tw.WriteLine("#");
                             tw.WriteLine("# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.");
@@ -174,15 +177,19 @@ namespace TranslationConverter
                         foreach (XmlNode data in datas)
                         {
                             string name = data.Attributes["name"].Value;
-                            string value = data["value"].InnerText;
-                            if (podata.ContainsKey(value))
+                            string value, value_eng, value_new;
+                            value = value_eng = value_new = data["value"].InnerText;
+                            if (template.ContainsKey(cat + "~" + name))
                             {
-                                data["value"].InnerText = podata[value];
-                                changed = true;
+                                value_eng = template[cat + "~" + name];
                             }
-                            else if (template.ContainsKey(name))
+                            if (podata.ContainsKey(value_eng))
                             {
-                                data["value"].InnerText = template[name];
+                                value_new = podata[value_eng];
+                            }
+                            if (!value_new.Equals(value))
+                            {
+                                data["value"].InnerText = value_new;
                                 changed = true;
                             }
                         }
