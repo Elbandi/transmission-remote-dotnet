@@ -142,7 +142,7 @@
     <value>复制对象信息到剪贴板</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>复制CSV信息到剪贴版</value>
+    <value>复制为CSV</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>更改下载目录</value>
@@ -154,7 +154,7 @@
     <value>在网络共享目录中打开</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>重新通知</value>
+    <value>重新通告</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>在网络共享目录中打开</value>
@@ -178,10 +178,10 @@
     <value>下载者</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>下载速度</value>
+    <value>下载速率</value>
   </data>
   <data name="columnHeader13.Text" xml:space="preserve">
-    <value>上传速度</value>
+    <value>上传速率</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>剩余时间</value>
@@ -361,7 +361,7 @@
     <value>暂停任务</value>
   </data>
   <data name="recheckTorrentButton.Text" xml:space="preserve">
-    <value>校验</value>
+    <value>重校验</value>
   </data>
   <data name="configureTorrentButton.Text" xml:space="preserve">
     <value>设置任务属性</value>
@@ -379,7 +379,7 @@
     <value>最近活动</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>重新通知</value>
+    <value>重新通告</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>本地设置</value>
@@ -388,10 +388,10 @@
     <value>远程设置</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>显示统计信息</value>
+    <value>显示统计</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>显示统计信息</value>
+    <value>显示统计</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>连接</value>

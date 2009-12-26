@@ -360,7 +360,7 @@
     <value>등록 정보</value>
   </data>
   <data name="Querying" xml:space="preserve">
-    <value>요청 중...</value>
+    <value>확인 중...</value>
   </data>
   <data name="Reannounce" xml:space="preserve">
     <value>트랙커 업데이트</value>

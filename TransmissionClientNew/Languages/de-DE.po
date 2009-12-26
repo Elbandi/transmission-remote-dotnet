@@ -948,7 +948,7 @@ msgstr "Starte"
 #: OtherStrings~Pause
 #, csharp-format
 msgid "Pause"
-msgstr "Pause"
+msgstr "Pausieren"
 
 #: MainWindow~recheckToolStripMenuItem.Text
 #: OtherStrings~Recheck

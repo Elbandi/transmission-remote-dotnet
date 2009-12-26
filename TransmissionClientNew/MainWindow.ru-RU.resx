@@ -127,13 +127,13 @@
     <value>This is selectable text</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Start torrent(s)</value>
+    <value>Запустить торрент(ы)</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Перепроверить торрент(ы)</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Свойства торрента(-ов)</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
@@ -391,7 +391,7 @@
     <value>Переанонсировать</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Открыть в локальной сети</value>
+    <value>Open on Network Share</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>Настройки клиента</value>

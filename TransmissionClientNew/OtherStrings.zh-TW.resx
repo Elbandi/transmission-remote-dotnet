@@ -212,13 +212,13 @@
     <value>您選擇移除 {0} 個任務. 是否確定?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>您選擇移除 {0} 個任務. 是否確定?{1}所有屬於此任務的資料將會被刪除."</value>
+    <value>您選擇移除 {0} 個任務. 是否確定?{1}所有屬於此任務的資料將會被刪除.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>您確定要移除 {0} 嗎?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>您確定要移除 {0} 嗎?{1}所有屬於此任務的資料將會被刪除."</value>
+    <value>您確定要移除 {0} 嗎?{1}所有屬於此任務的資料將會被刪除.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>連接</value>

@@ -169,7 +169,7 @@
     <value>Größe</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Prozent</value>
+    <value>Fertiggestellt</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Status</value>
@@ -349,7 +349,7 @@
     <value>Verbinden</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Trennen</value>
+    <value>Trenne</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Torrent hinzufügen</value>
@@ -364,10 +364,10 @@
     <value>Torrent(s) pausieren</value>
   </data>
   <data name="recheckTorrentButton.Text" xml:space="preserve">
-    <value>Überprüfe Torrent(s)</value>
+    <value>Recheck Torrent(s)</value>
   </data>
   <data name="configureTorrentButton.Text" xml:space="preserve">
-    <value>Torrent Eigenschaften setzen</value>
+    <value>Setze Torrent Eigenschaften</value>
   </data>
   <data name="removeTorrentButton.Text" xml:space="preserve">
     <value>Entferne Torrent(s)</value>
@@ -382,7 +382,7 @@
     <value>Kürzlich aktiv</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Aktuallisiere Tracker</value>
+    <value>Aktualisiere Tracker</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>Lokale Einstellungen</value>
@@ -391,16 +391,16 @@
     <value>Remote Einstellungen</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Statistik anzeigen</value>
+    <value>Zeige Statistik</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Statistik anzeigen</value>
+    <value>Zeige Statistik</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Verbinden</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Trennen</value>
+    <value>Trenne</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent hinzufügen</value>
@@ -409,7 +409,7 @@
     <value>Torrent von URL hinzufügen</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Beenden</value>
+    <value>Verlassen</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Datei</value>
@@ -433,7 +433,7 @@
     <value>Pausieren</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>Überprüfen</value>
+    <value>Prüfen</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Eigenschaften</value>
@@ -445,10 +445,10 @@
     <value>Entferne Torrent(s) und lösche Daten</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Alle starten</value>
+    <value>Starte alle</value>
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Alle pausieren</value>
+    <value>Alle Pausieren</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>

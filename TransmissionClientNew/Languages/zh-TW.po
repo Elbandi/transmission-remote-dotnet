@@ -1,4 +1,4 @@
-# Traditional Chinese translation of transmission-remote-dotnet
+# Chinese (Traditional) translation of transmission-remote-dotnet
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 #
@@ -669,7 +669,7 @@ msgstr "獲取 URL"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "伺服器"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text

@@ -226,7 +226,7 @@
     <value>Klient</value>
   </data>
   <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Procent</value>
+    <value>Průběh</value>
   </data>
   <data name="columnHeader28.Text" xml:space="preserve">
     <value>Rychlost Down</value>
@@ -259,7 +259,7 @@
     <value>Velikost</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Procent</value>
+    <value>Dokočeno</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Stav</value>
@@ -301,7 +301,7 @@
     <value>Soubor</value>
   </data>
   <data name="generalTabPage.Text" xml:space="preserve">
-    <value>Hlavní</value>
+    <value>Allgemein</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Průměrené rychlost</value>
@@ -376,7 +376,7 @@
     <value>Místní nastavení</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Přesunout data</value>
+    <value>Přesunout data torrentu</value>
   </data>
   <data name="notifyIcon.Text" xml:space="preserve">
     <value>Transmission Remote</value>
@@ -439,16 +439,16 @@
     <value>Odstranit a smazat</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Smazat</value>
+    <value>Odstranit</value>
   </data>
   <data name="removeTorrentButton.Text" xml:space="preserve">
     <value>Smazat</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Zobrazit statistiku</value>
+    <value>Zobrazit statistiky</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zobrazit statistiku</value>
+    <value>Zobrazit statistiky</value>
   </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Panel s detaily</value>
