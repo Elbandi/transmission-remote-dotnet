@@ -45,25 +45,28 @@ namespace TransmissionRemoteDotnet
             {
                 base.ImageIndex = GeoIPCountry.FlagImageList.Images.IndexOfKey("flags_" + GeoIPCountry.CountryCodes[countryIndex].ToLower());
             }
-            CreateHostnameResolutionWorker().RunWorkerAsync(this);
+            Dns.BeginGetHostEntry(this.IpAddress, new AsyncCallback(GetHostEntryCallback), this);
         }
 
-        private static BackgroundWorker CreateHostnameResolutionWorker()
+        private delegate void SetHostNameDelegate(IPHostEntry host);
+        private void SetHostName(IPHostEntry host)
         {
-            BackgroundWorker resolveHostWorker = new BackgroundWorker();
-            resolveHostWorker.DoWork += new DoWorkEventHandler(resolveHostWorker_DoWork);
-            resolveHostWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(resolveHostWorker_RunWorkerCompleted);
-            return resolveHostWorker;
+            if (this.ListView != null && this.ListView.InvokeRequired)
+            {
+                this.ListView.Invoke(new SetHostNameDelegate(this.SetHostName), host);
+            }
+            else
+                if (host != null && !host.HostName.Equals(this.SubItems[0].Text))
+                {
+                    this.Hostname = host.HostName;
+                }
         }
 
-        private static void resolveHostWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private static void GetHostEntryCallback(IAsyncResult ar)
         {
-            ((ICommand)e.Result).Execute();
-        }
-
-        private static void resolveHostWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = new ResolveHostCommand((PeerListViewItem)e.Argument);
+            PeerListViewItem item = (PeerListViewItem)ar.AsyncState;
+            IPHostEntry host = Dns.EndGetHostEntry(ar);
+            item.SetHostName(host);
         }
 
         public string Hostname

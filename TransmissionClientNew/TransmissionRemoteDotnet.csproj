@@ -91,7 +91,6 @@
     <Compile Include="Commands\ErrorCommand.cs" />
     <Compile Include="Commands\NoCommand.cs" />
     <Compile Include="Commands\PortTestCommand.cs" />
-    <Compile Include="Commands\ResolveHostCommand.cs" />
     <Compile Include="Commands\SessionCommand.cs" />
     <Compile Include="Commands\SessionStatsCommand.cs" />
     <Compile Include="Commands\TorrentGetCommand.cs" />
