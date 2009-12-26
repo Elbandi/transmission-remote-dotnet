@@ -65,8 +65,14 @@ namespace TransmissionRemoteDotnet
         private static void GetHostEntryCallback(IAsyncResult ar)
         {
             PeerListViewItem item = (PeerListViewItem)ar.AsyncState;
-            IPHostEntry host = Dns.EndGetHostEntry(ar);
-            item.SetHostName(host);
+            try
+            {
+                IPHostEntry host = Dns.EndGetHostEntry(ar);
+                item.SetHostName(host);
+            }
+            catch
+            {
+            }
         }
 
         public string Hostname

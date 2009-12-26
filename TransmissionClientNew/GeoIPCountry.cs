@@ -125,13 +125,20 @@ namespace MaxMind
                 {
                     if (instance == null && !disabled)
                     {
-                        instance = new GeoIPCountry();
-                        for (int i = 0; i < GeoIPCountry.CountryCodes.Length; i++)
+                        try
                         {
-                            string flagName = "flags_" + GeoIPCountry.CountryCodes[i].ToLower();
-                            Bitmap flag = global::TransmissionRemoteDotnet.Properties.Flags.GetFlags(flagName);
-                            if (flag != null)
-                                _flagImageList.Images.Add(flagName, flag);
+                            instance = new GeoIPCountry();
+                            for (int i = 0; i < GeoIPCountry.CountryCodes.Length; i++)
+                            {
+                                string flagName = "flags_" + GeoIPCountry.CountryCodes[i].ToLower();
+                                Bitmap flag = global::TransmissionRemoteDotnet.Properties.Flags.GetFlags(flagName);
+                                if (flag != null)
+                                    _flagImageList.Images.Add(flagName, flag);
+                            }
+                        }
+                        catch
+                        {
+                            disabled = true;
                         }
                     }
                     return instance;
