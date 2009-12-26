@@ -734,10 +734,9 @@ namespace TransmissionRemoteDotnet
                     item.SubItems[5].Text = item.Wanted ? OtherStrings.No : OtherStrings.Yes;
                     item.SubItems[6].Text = Toolbox.FormatPriority(item.Priority);
                 }
-                foreach (FileListViewItem item in torrentListView.Items)
+                foreach (Torrent item in torrentListView.Items)
                 {
-                    Torrent t = (Torrent)item.Tag;
-                    item.SubItems[3].Text = t.Status;
+                    item.StatusCode = item.StatusCode; //StatusCode field set update the language
                 }
                 int oldindex = speedResComboBox.SelectedIndex;
                 speedResComboBox.Items.Clear();
