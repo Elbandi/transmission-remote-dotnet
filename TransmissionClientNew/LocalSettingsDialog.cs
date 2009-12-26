@@ -224,6 +224,16 @@ namespace TransmissionRemoteDotnet
                 MessageBox.Show("Unix path exists", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        private void listSambaShareMappings_DoubleClick(object sender, EventArgs e)
+        {
+            if (listSambaShareMappings.SelectedItem != null)
+            {
+                SambaShareMappings ssm = (SambaShareMappings)listSambaShareMappings.SelectedItem;
+                UnixPathPrefixTextBox.Text = ssm.UnixPathPrefix;
+                SambaShareTextBox.Text = ssm.SambaShare;
+            }
+        }
+
         private void listServers_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listServers.SelectedItems.Count > 0)
