@@ -430,7 +430,7 @@
     <value>Aktualizuj tracker</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zmień folder docelowy torrenta</value>
+    <value>Zmień folder docelowy</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Otwórz folder sieciowy</value>

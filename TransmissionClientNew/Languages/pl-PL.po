@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2009-12-24 20:53+0100\n"
+"PO-Revision-Date: 2009-12-26 12:59+0100\n"
 "Last-Translator: Cichon Marcin <ml.cichy@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr "Uwzgledniaj wielkość liter"
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
-msgstr "Znajdź torrent..."
+msgstr "Wyszukaj torrent..."
 
 #: FindDialog~findLabel.Text
 #, csharp-format
@@ -246,7 +246,7 @@ msgstr "Sprawdź wersję przy uruchamianiu"
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
 msgid "Upload prompt"
-msgstr "Powiadom o udostepnianiu"
+msgstr "Powiadom o udostępnianiu"
 
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
@@ -271,7 +271,7 @@ msgstr "Uruchom wstrzymane torrenty"
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr "Zapisz Serwer"
+msgstr "Zapisz serwer"
 
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
@@ -460,7 +460,7 @@ msgstr "Usuń serwer"
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Ustawienia serwera"
+msgstr "Serwera"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
@@ -970,7 +970,7 @@ msgstr "Usuń i skasuj dane"
 #: OtherStrings~MoveTorrentData
 #, csharp-format
 msgid "Move torrent data"
-msgstr "Zmień folder docelowy torrenta"
+msgstr "Zmień folder docelowy"
 
 #: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
 #: OtherStrings~InfoObjectToClipboard
@@ -1190,7 +1190,7 @@ msgstr "Dane poprawne"
 #: OtherStrings~LatestVersion
 #, csharp-format
 msgid "You are using the latest version ({0}.{1})."
-msgstr "Używasz aktualnej wersji - ({0}.{1})."
+msgstr "Używasz aktualnej wersji - {0}.{1}"
 
 #: OtherStrings~LatestVersionCheckFailed
 #, csharp-format
@@ -1475,7 +1475,7 @@ msgstr "Ładowanie {0}..."
 #: OtherStrings~BandwidthAllocation
 #, csharp-format
 msgid "Bandwidth allocation"
-msgstr "Zarządzanie łączem"
+msgstr "Wykorzystanie łącza"
 
 #: OtherStrings~MultipleTorrentProperties
 #, csharp-format
@@ -1774,10 +1774,10 @@ msgstr "TorrentPropertiesDialog"
 #: UriPromptWindow~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "Waiting for URL..."
-msgstr "Oczekiwanie na URL..."
+msgstr "Oczekiwanie na adres URL..."
 
 #: UriPromptWindow~$this.Text
 #, csharp-format
 msgid "Upload by URL"
-msgstr "Wczytaj z URL..."
+msgstr "Wczytaj z adresu URL..."
 

@@ -151,7 +151,7 @@
     <value>plink.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
-    <value>Powiadom o udostepnianiu</value>
+    <value>Powiadom o udostępnianiu</value>
   </data>
   <data name="groupBehavior.Text" xml:space="preserve">
     <value>Zachowanie</value>
@@ -160,7 +160,7 @@
     <value>Ogólne</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
-    <value>Zapisz Serwer</value>
+    <value>Zapisz serwer</value>
   </data>
   <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
     <value>Wyświetl przycisk zdalnych poleceń</value>
@@ -187,7 +187,7 @@
     <value>Usuń serwer</value>
   </data>
   <data name="tabServersSettings.Text" xml:space="preserve">
-    <value>Ustawienia serwera</value>
+    <value>Serwera</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
     <value>Sprawdź wersję przy uruchamianiu</value>

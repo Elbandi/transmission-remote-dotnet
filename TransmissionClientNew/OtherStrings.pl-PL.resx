@@ -143,7 +143,7 @@
     <value>Błąd inicjalizacji GeoIP ({0})</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
-    <value>Zarządzanie łączem</value>
+    <value>Wykorzystanie łącza</value>
   </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
     <value>Właściwości wielu torrentów</value>
@@ -248,7 +248,7 @@
     <value>Dane poprawne</value>
   </data>
   <data name="LatestVersion" xml:space="preserve">
-    <value>Używasz aktualnej wersji - ({0}.{1}).</value>
+    <value>Używasz aktualnej wersji - {0}.{1}</value>
   </data>
   <data name="LatestVersionCheckFailed" xml:space="preserve">
     <value>Sprawdzanie wersji nie powiodło się.</value>
@@ -450,7 +450,7 @@
     <value>Zmień folder docelowy wielu torrentów</value>
   </data>
   <data name="MoveTorrentData" xml:space="preserve">
-    <value>Zmień folder docelowy torrenta</value>
+    <value>Zmień folder docelowy</value>
   </data>
   <data name="MoveX" xml:space="preserve">
     <value>Przenieś {0}</value>
