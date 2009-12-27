@@ -142,7 +142,7 @@
     <value>Blocklist enabled</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>General</value>
+    <value>Général</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
     <value>Seed Ratio Limit</value>
@@ -205,10 +205,10 @@
     <value>Encryption :</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>KO/s</value>
+    <value>Ko/s</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>KO/s</value>
+    <value>Ko/s</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Paramètres distants</value>

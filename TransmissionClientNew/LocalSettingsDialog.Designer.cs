@@ -750,6 +750,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.listSambaShareMappings, "listSambaShareMappings");
             this.listSambaShareMappings.Name = "listSambaShareMappings";
             this.listSambaShareMappings.SelectedIndexChanged += new System.EventHandler(this.listSambaShareMappings_SelectedIndexChanged);
+            this.listSambaShareMappings.DoubleClick += new System.EventHandler(this.listSambaShareMappings_DoubleClick);
             // 
             // listServers
             // 

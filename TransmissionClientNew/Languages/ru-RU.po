@@ -126,7 +126,7 @@ msgstr "Вы можете скопировать описание ошибки �
 #: StatsDialog~CloseFormButton.Text
 #, csharp-format
 msgid "Close"
-msgstr "Close"
+msgstr "Закрыть"
 
 #: ErrorLogWindow~$this.Text
 #, csharp-format
@@ -473,7 +473,7 @@ msgstr "Настройки клиента"
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Size"
+msgstr "Размер"
 
 #: MainWindow~columnHeader8.Text
 #: MainWindow~columnHeader3.Text
@@ -669,13 +669,13 @@ msgstr "Scrape URL"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "Трекеры"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Path"
+msgstr "Путь"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
@@ -693,13 +693,13 @@ msgstr "%"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Skip"
+msgstr "Пропустить"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Priority"
+msgstr "Приоритет"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
@@ -735,7 +735,7 @@ msgstr "Клиент"
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progress"
+msgstr "Прогресс"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -814,7 +814,7 @@ msgstr "Добавить торрент по ссылке"
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Start torrent(s)"
+msgstr "Запустить торрент(ы)"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
@@ -825,13 +825,13 @@ msgstr "Остановить торрент(ы)"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Перепроверить торрент(ы)"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Свойства торрента(-ов)"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -904,7 +904,7 @@ msgstr "Добавить торрент по ссылке"
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Exit"
+msgstr "Выход"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format

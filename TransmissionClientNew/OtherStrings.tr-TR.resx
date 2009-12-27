@@ -170,7 +170,7 @@
     <value>Move {0}</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Çıkış</value>
   </data>
   <data name="NewTorrentIs" xml:space="preserve">
     <value>New torrent {0}.</value>
@@ -179,10 +179,10 @@
     <value>Pieces</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>İşlemler</value>
   </data>
   <data name="Reannounce" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Tekrar Anonsla</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
     <value>Open on Network Share</value>
@@ -212,13 +212,13 @@
     <value>Silmek için {0} torrent seçtiniz. Emin misiniz?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."</value>
+    <value>Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Do you want to remove {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK."</value>
+    <value>Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Bağlan</value>
@@ -453,7 +453,7 @@
     <value>Gönderme Limiti</value>
   </data>
   <data name="Querying" xml:space="preserve">
-    <value>Sorgulanıyor...</value>
+    <value>Okunuyor...</value>
   </data>
   <data name="Updating" xml:space="preserve">
     <value>Güncelleniyor...</value>

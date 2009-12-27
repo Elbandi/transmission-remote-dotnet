@@ -124,7 +124,7 @@
     <value>Zapnout blocklist</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
-    <value>Zrušit</value>
+    <value>Zavřít</value>
   </data>
   <data name="dhtEnabled.Text" xml:space="preserve">
     <value>Zapnout Distributed Hash Table (DHT)</value>
@@ -199,7 +199,7 @@
     <value>Seed Ratio Limit</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>Hlavní</value>
+    <value>Allgemein</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Limity</value>

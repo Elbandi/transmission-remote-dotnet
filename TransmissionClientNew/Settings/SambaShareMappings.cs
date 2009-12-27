@@ -9,6 +9,7 @@ namespace TransmissionRemoteDotnet.Settings
     {
         public string UnixPathPrefix;
         public string SambaShare;
+
         public SambaShareMappings(string UnixPathPrefix, string SambaShare)
         {
             this.UnixPathPrefix = UnixPathPrefix;
