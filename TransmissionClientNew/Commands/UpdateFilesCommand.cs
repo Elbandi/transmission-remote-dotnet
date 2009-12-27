@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Text;
 using Jayrock.Json;
 using System.Windows.Forms;
-using TransmissionRemoteDotnet.Commands;
 using System.Threading;
 using System.Collections;
 
@@ -29,10 +28,7 @@ namespace TransmissionRemoteDotnet.Commmands
     public class UpdateFilesCommand : ICommand
     {
         private bool first;
-        private List<ICommand> uiUpdateBatch;
-#if !MONO
-        private static ImageList imgList = new ImageList();
-#endif
+        private FileListViewItem[] newItems;
 
         public UpdateFilesCommand(JsonObject response)
         {
@@ -55,7 +51,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 {
                     if (torrentListView.SelectedItems.Count == 1)
                     {
-                        t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                        t = (Torrent)torrentListView.SelectedItems[0];
                     }
                 }
             }));
@@ -70,19 +66,11 @@ namespace TransmissionRemoteDotnet.Commmands
             }
             JsonArray priorities = (JsonArray)torrent[ProtocolConstants.FIELD_PRIORITIES];
             JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
-            first = Program.Form.FileItems.Count == 0;
+            first = form.filesListView.Items.Count == 0;
             bool havepriority = (priorities != null && wanted != null);
-            uiUpdateBatch = new List<ICommand>();
-#if !MONO
-            imgList.ColorDepth = ColorDepth.Depth32Bit;
+            ImageList imgList = Program.Form.fileIconImageList;
             if (first)
-                imgList.Images.Clear();
-            int mainWindowHandle = 0;
-            Program.Form.Invoke(new MethodInvoker(delegate()
-            {
-                mainWindowHandle = Program.Form.Handle.ToInt32();
-            }));
-#endif
+                newItems = new FileListViewItem[files.Length];
             for (int i = 0; i < files.Length; i++)
             {
                 JsonObject file = (JsonObject)files[i];
@@ -90,24 +78,19 @@ namespace TransmissionRemoteDotnet.Commmands
                 long length = Toolbox.ToLong(file[ProtocolConstants.FIELD_LENGTH]);
                 if (first)
                 {
-                    string name = (string)file[ProtocolConstants.FIELD_NAME];
-#if !MONO
-                    UpdateFilesCreateSubCommand subCommand = new UpdateFilesCreateSubCommand(name, length, Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted, imgList, mainWindowHandle);
-#else
-                    UpdateFilesCreateSubCommand subCommand = new UpdateFilesCreateSubCommand(name, length, Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted, null, -1);
-#endif
-                    uiUpdateBatch.Add((ICommand)subCommand);
+                    FileListViewItem fileItem = new FileListViewItem(file, imgList, i, wanted, priorities);
+                    newItems[i] = fileItem;
                 }
                 else
                 {
-                    lock (form.FileItems)
-                    {
-                        if (i < form.FileItems.Count)
-                            if (havepriority)
-                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], Toolbox.ToBool(wanted[i]), (JsonNumber)priorities[i], bytesCompleted));
-                            else
-                                uiUpdateBatch.Add(new UpdateFilesUpdateSubCommand(form.FileItems[i], bytesCompleted));
-                    }
+                    Program.Form.Invoke(new MethodInvoker(delegate(){
+                        string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
+                        if (form.filesListView.Items.ContainsKey(name))
+                        {
+                            FileListViewItem item = (FileListViewItem)form.filesListView.Items[name];
+                            item.Update(file, wanted, priorities);
+                        }
+                    }));
                 }
             }
         }
@@ -117,23 +100,16 @@ namespace TransmissionRemoteDotnet.Commmands
             MainWindow form = Program.Form;
             lock (form.filesListView)
             {
-                if (uiUpdateBatch == null)
-                {
-                    return;
-                }
                 form.filesListView.SuspendLayout();
-#if !MONO
-                form.filesListView.SmallImageList = imgList;
-#endif
                 IComparer tmp = form.filesListView.ListViewItemSorter;
                 form.filesListView.ListViewItemSorter = null;
-                foreach (ICommand uiUpdate in uiUpdateBatch)
-                {
-                    uiUpdate.Execute();
-                }
                 if (first)
                 {
                     form.filesListView.Enabled = true;
+                    foreach (FileListViewItem item in newItems)
+                    {
+                        form.filesListView.Items.Add(item);
+                    }
                 }
                 form.filesListView.ListViewItemSorter = tmp;
                 form.filesListView.Sort();

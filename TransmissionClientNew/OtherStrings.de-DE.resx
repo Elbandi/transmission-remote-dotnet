@@ -239,13 +239,13 @@
     <value>Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT."</value>
+    <value>Es wurden {0} Torrents zum Löschen ausgewählt, sind Sie sicher?{1}ALLE DATEN DIESER TORRENTS WERDEN GELÖSCHT.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Wirklich entfernen {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Entfernen und löschen {0}?{1}ALLE DATEN DIESES TORRENTS WERDEN GELÖSCHT."</value>
+    <value>Entfernen und löschen {0}?{1}ALLE DATEN DIESES TORRENTS WERDEN GELÖSCHT.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Verbinden</value>
@@ -344,7 +344,7 @@
     <value>BitTorrent Metafile (*.torrent)|*.torrent|Alle Dateien (*.*)|*.*</value>
   </data>
   <data name="Pause" xml:space="preserve">
-    <value>Pause</value>
+    <value>Pausieren</value>
   </data>
   <data name="PauseAll" xml:space="preserve">
     <value>Alle Pausieren</value>
@@ -380,7 +380,7 @@
     <value>Alle auswählen</value>
   </data>
   <data name="Skip" xml:space="preserve">
-    <value>Überspringen</value>
+    <value>Auslassen</value>
   </data>
   <data name="Start" xml:space="preserve">
     <value>Starte</value>

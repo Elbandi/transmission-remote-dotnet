@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Jayrock.Json;
 using System.Net;
-using TransmissionRemoteDotnet.Commands;
 using TransmissionRemoteDotnet.Settings;
 using System.Threading;
 using Troschuetz;
@@ -197,10 +196,8 @@ namespace TransmissionRemoteDotnet
                 connected = value;
                 if (!connected)
                 {
-                    lock (torrentIndex)
-                    {
-                        torrentIndex.Clear();
-                    }
+                    form.torrentListView.Items.Clear();
+                    torrentIndex.Clear();
                     Program.DaemonDescriptor.UpdateSerial = 0;
                 }
                 if (OnConnStatusChanged != null)

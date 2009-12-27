@@ -208,7 +208,7 @@
     <value>Альтернативные ограничения</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Примечание: Для некоторых опций может потребоваться обновление transmission-daemon.</value>
+    <value>ПРИМЕЧАНИЕ: Некоторые настройки могут потребовать обновления transmission-daemon.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Настройки сервера</value>

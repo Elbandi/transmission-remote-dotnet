@@ -29,10 +29,10 @@ namespace TransmissionRemoteDotnet.Comparers
     {
         int IComparer.Compare(object x, object y)
         {
-            ListViewItem lx = (ListViewItem)x;
-            ListViewItem ly = (ListViewItem)y;
-            IPAddress ix = (IPAddress)lx.SubItems[0].Tag;
-            IPAddress iy = (IPAddress)ly.SubItems[0].Tag;
+            PeerListViewItem lx = (PeerListViewItem)x;
+            PeerListViewItem ly = (PeerListViewItem)y;
+            IPAddress ix = lx.IpAddress;
+            IPAddress iy = ly.IpAddress;
             if (ix.AddressFamily == iy.AddressFamily)
             {
                 byte[] bx = ix.GetAddressBytes();

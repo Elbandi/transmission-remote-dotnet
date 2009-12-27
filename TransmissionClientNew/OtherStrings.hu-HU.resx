@@ -227,13 +227,13 @@
     <value>Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet és az összes csatlakozó adatot?</value>
+    <value>Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet{1}és az összes csatlakozó adatot?</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
-    <value>Biztos benne, hogy eltávolítja a kiválasztott torrenteket?</value>
+    <value>Biztos benne, hogy eltávolítja a {0} torrenteket?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Biztos benne, hogy eltávolítja a kiválasztott torrenteket és az összes csatlakozó adatot?</value>
+    <value>Biztos benne, hogy eltávolítja a {0} torrenteket{1}és az összes csatlakozó adatot?</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Csatlakozás</value>
@@ -332,7 +332,7 @@
     <value>BitTorrent Metafile (*.torrent)|*.torrent|Minden fájl (*.*)|*.*</value>
   </data>
   <data name="Pause" xml:space="preserve">
-    <value>Szünet</value>
+    <value>Szüneteltet</value>
   </data>
   <data name="PauseAll" xml:space="preserve">
     <value>Mind szüneteltetése</value>
@@ -371,7 +371,7 @@
     <value>Kihagyás</value>
   </data>
   <data name="Start" xml:space="preserve">
-    <value>Start</value>
+    <value>Indítás</value>
   </data>
   <data name="StartAll" xml:space="preserve">
     <value>Mind indítása</value>

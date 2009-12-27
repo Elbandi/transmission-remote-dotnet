@@ -124,12 +124,12 @@
     <value>Wyczyść</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value> Możesz skopiować wartość błędu klikając na nią dwukrotnie.</value>
+    <value>Dwukrotne kliknięcie kopiuje wartość błędu.</value>
   </data>
   <data name="closeButton.Text" xml:space="preserve">
     <value>Zamknij</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Log Błędów</value>
+    <value>Log błędów</value>
   </data>
 </root>

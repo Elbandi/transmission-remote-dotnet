@@ -669,7 +669,7 @@ msgstr "Scrape URL"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "Trackery"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text

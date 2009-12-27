@@ -473,7 +473,7 @@ msgstr "Paramètres locaux"
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Size"
+msgstr "Taille"
 
 #: MainWindow~columnHeader8.Text
 #: MainWindow~columnHeader3.Text
@@ -648,7 +648,7 @@ msgstr "Temps écoulé :"
 #: TorrentPropertiesDialog~tabGeneral.Text
 #, csharp-format
 msgid "General"
-msgstr "General"
+msgstr "Général"
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
@@ -675,7 +675,7 @@ msgstr "Trackers"
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Path"
+msgstr "Chemin"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
@@ -693,13 +693,13 @@ msgstr "%"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Skip"
+msgstr "Passer"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Priority"
+msgstr "Priorité"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
@@ -735,7 +735,7 @@ msgstr "Client"
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progress"
+msgstr "Avancement"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -814,7 +814,7 @@ msgstr "Ajouter un Torrent à partir d'une URL"
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Start torrent(s)"
+msgstr "Démarrer le(s) torrent(s)"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
@@ -825,13 +825,13 @@ msgstr "Pause le(s) torrent(s)"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Re-vérifier le(s) torrent(s)"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Définir les propriétés de(s) torrent(s)"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -904,7 +904,7 @@ msgstr "Ajouter un Torrent à partir d'une URL"
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Exit"
+msgstr "Sortir"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format

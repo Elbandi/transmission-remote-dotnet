@@ -112,16 +112,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="encryptionCombobox.Items" xml:space="preserve">
-    <value>tolerated</value>
+    <value>Tolerowane</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Pobieraj do:</value>
   </data>
   <data name="limitUploadCheckBox.Text" xml:space="preserve">
-    <value>Limit Wysyłania:</value>
+    <value>Limit wysyłania:</value>
   </data>
   <data name="limitDownloadCheckBox.Text" xml:space="preserve">
-    <value>Limit Pobierania:</value>
+    <value>Limit pobierania:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Port nasłuchu:</value>
@@ -172,7 +172,7 @@
     <value>Ogólne</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
-    <value>Wysyłaj do Ratio:</value>
+    <value>Wysyłaj do ratio:</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Limity</value>
@@ -211,6 +211,6 @@
     <value>WAŻNE: Niektóre opcje dostępne są tylko po uaktualnieniu transmission-daemon!</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Ustawienia Zdalne</value>
+    <value>Ustawienia zdalne</value>
   </data>
 </root>

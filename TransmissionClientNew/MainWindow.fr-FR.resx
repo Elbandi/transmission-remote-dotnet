@@ -127,13 +127,13 @@
     <value>This is selectable text</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Start torrent(s)</value>
+    <value>Démarrer le(s) torrent(s)</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Re-vérifier le(s) torrent(s)</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Définir les propriétés de(s) torrent(s)</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
@@ -190,10 +190,10 @@
     <value>Clients</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Réception</value>
+    <value>Taux de réception</value>
   </data>
   <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Emission</value>
+    <value>Taux d'émission</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>Estimé</value>
@@ -337,7 +337,7 @@
     <value>Réception</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Envoi</value>
+    <value>Emission</value>
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
@@ -355,10 +355,10 @@
     <value>toolStripContainer1</value>
   </data>
   <data name="connectButton.Text" xml:space="preserve">
-    <value>Connection</value>
+    <value>Se connecter</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Déconnection</value>
+    <value>Se déconnecter</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Ajouter un Torrent</value>
@@ -397,10 +397,10 @@
     <value>Afficher les statistiques</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Connection</value>
+    <value>Se connecter</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Déconnection</value>
+    <value>Se déconnecter</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Ajouter un Torrent</value>

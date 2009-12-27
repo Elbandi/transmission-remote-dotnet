@@ -473,7 +473,7 @@ msgstr "Lokale indstillinger"
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Size"
+msgstr "Størrelse"
 
 #: MainWindow~columnHeader8.Text
 #: MainWindow~columnHeader3.Text
@@ -675,7 +675,7 @@ msgstr "Trackers"
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Path"
+msgstr "Sti"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
@@ -693,13 +693,13 @@ msgstr "%"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Skip"
+msgstr "Spring over"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Priority"
+msgstr "Prioritet"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
@@ -735,7 +735,7 @@ msgstr "Klient"
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progress"
+msgstr "Fremskridt"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -825,13 +825,13 @@ msgstr "Pause torrent(s)"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Genbekræft torrent(s)"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Torrent indstillinger"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -904,7 +904,7 @@ msgstr "Tilføj torrent fra URL"
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Exit"
+msgstr "Afslut"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format

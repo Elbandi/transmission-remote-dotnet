@@ -59,43 +59,35 @@ namespace TransmissionRemoteDotnet.Commmands
                 Program.DaemonDescriptor.UpdateSerial++;
                 form.SuspendTorrentListView();
                 bool stateChange = false;
-                int oldCount = -1;
-                lock(Program.TorrentIndex)
-                {
-                    oldCount = Program.TorrentIndex.Count;
-                }
+                int oldCount = Program.TorrentIndex.Count;
                 foreach (JsonObject torrent in torrents)
                 {
                     string hash = (string)torrent[ProtocolConstants.FIELD_HASHSTRING];
-                    totalUpload += Toolbox.ToLong(torrent[ProtocolConstants.FIELD_RATEUPLOAD]);
-                    totalDownload += Toolbox.ToLong(torrent[ProtocolConstants.FIELD_RATEDOWNLOAD]);
-                    totalSize += Toolbox.ToLong(torrent[ProtocolConstants.FIELD_SIZEWHENDONE]);
-                    totalDownloadedSize += Toolbox.ToLong(torrent[ProtocolConstants.FIELD_HAVEVALID]);
                     totalTorrents++;
-                    short status = Toolbox.ToShort(torrent[ProtocolConstants.FIELD_STATUS]);
-                    if (status == ProtocolConstants.STATUS_DOWNLOADING)
+                    Torrent t = null;
+                    if (!Program.TorrentIndex.ContainsKey(hash))
+                    {
+                        t = new Torrent(torrent);
+                        Program.Form.torrentListView.Items.Add(t);
+                    }
+                    else
+                    {
+                        lock (Program.TorrentIndex)
+                            t = Program.TorrentIndex[hash];
+                        if (t.Update(torrent))
+                            stateChange = true;
+                    }
+                    totalUpload += t.UploadRate;
+                    totalDownload += t.DownloadRate;
+                    totalSize += t.TotalSize;
+                    totalDownloadedSize += t.HaveTotal;
+                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
                     {
                         totalDownloading++;
                     }
-                    else if (status == ProtocolConstants.STATUS_SEEDING)
+                    else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
                     {
                         totalSeeding++;
-                    }
-                    Torrent t = null;
-                    lock (Program.TorrentIndex)
-                    {
-                        if (Program.TorrentIndex.ContainsKey(hash))
-                        {
-                            t = Program.TorrentIndex[hash];
-                        }
-                    }
-                    if (t == null)
-                    {
-                        t = new Torrent(torrent);
-                    }
-                    else if (t.Update(torrent))
-                    {
-                        stateChange = true;
                     }
                 }
                 form.ResumeTorrentListView();
@@ -118,31 +110,28 @@ namespace TransmissionRemoteDotnet.Commmands
                     }
                 ));
                 Queue<KeyValuePair<string, Torrent>> removeQueue = null;
-                lock (Program.TorrentIndex)
+                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
+                    if (pair.Value.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)
                     {
-                        Torrent t = pair.Value;
-                        if (t.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)
+                        if (removeQueue == null)
                         {
-                            if (removeQueue == null)
-                            {
-                                removeQueue = new Queue<KeyValuePair<string, Torrent>>();
-                            }
-                            removeQueue.Enqueue(pair);
+                            removeQueue = new Queue<KeyValuePair<string, Torrent>>();
                         }
+                        removeQueue.Enqueue(pair);
                     }
-                    if (removeQueue != null)
-                    {
-                        foreach (KeyValuePair<string, Torrent> pair in removeQueue)
-                        {
-                            Program.TorrentIndex.Remove(pair.Key);
-                            pair.Value.Remove();
-                        }
-                    }
-                    if (oldCount != Program.TorrentIndex.Count)
-                        stateChange = true;
                 }
+                if (removeQueue != null)
+                {
+                    foreach (KeyValuePair<string, Torrent> t in removeQueue)
+                    {
+                        Program.TorrentIndex.Remove(t.Key);
+                        t.Value.RemoveItem();
+                    }
+                }
+                if (oldCount != Program.Form.torrentListView.Items.Count)
+                    stateChange = true;
+
                 if (stateChange)
                     form.SetAllStateCounters();
                 Program.RaisePostUpdateEvent();
