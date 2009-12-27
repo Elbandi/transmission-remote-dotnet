@@ -12,7 +12,7 @@
 Name "Transmission Remote"
 
 ; The file to write
-OutFile "transmission-remote-dotnet-3.12-installer.exe"
+OutFile "transmission-remote-dotnet-3.13-installer.exe"
 
 ; The default installation directory
 !define ProgramFilesDir "Transmission Remote"

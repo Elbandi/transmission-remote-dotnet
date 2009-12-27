@@ -77,16 +77,15 @@ namespace TransmissionRemoteDotnet.Commmands
                         if (t.Update(torrent))
                             stateChange = true;
                     }
-                    short status = Toolbox.ToShort(torrent[ProtocolConstants.FIELD_STATUS]);
                     totalUpload += t.UploadRate;
                     totalDownload += t.DownloadRate;
                     totalSize += t.TotalSize;
                     totalDownloadedSize += t.HaveTotal;
-                    if (status == ProtocolConstants.STATUS_DOWNLOADING)
+                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
                     {
                         totalDownloading++;
                     }
-                    else if (status == ProtocolConstants.STATUS_SEEDING)
+                    else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
                     {
                         totalSeeding++;
                     }
