@@ -76,7 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2DPushGraph.cs">
+    <Compile Include="CustomControls\2DPushGraph.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="AboutDialog.cs">
@@ -119,19 +119,19 @@
     <Compile Include="FindDialog.Designer.cs">
       <DependentUpon>FindDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeoIPCountry.cs" />
-    <Compile Include="GListBox.cs">
+    <Compile Include="CustomControls\GeoIPCountry.cs" />
+    <Compile Include="CustomControls\GListBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GListBoxItem.cs" />
-    <Compile Include="IconHelper.cs" />
+    <Compile Include="CustomControls\GListBoxItem.cs" />
+    <Compile Include="CustomControls\IconHelper.cs" />
     <Compile Include="Comparers\TorrentListViewColumnSorter.cs" />
-    <Compile Include="InputBox.cs">
+    <Compile Include="CustomControls\InputBox.cs">
     </Compile>
-    <Compile Include="ListViewNF.cs">
+    <Compile Include="CustomControls\ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CultureForm.cs">
+    <Compile Include="CustomControls\CultureForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LocalSettingsDialog.cs">
@@ -170,7 +170,7 @@
     </Compile>
     <Compile Include="Comparers\PeersListViewColumnSorter.cs" />
     <Compile Include="PeerListViewItem.cs" />
-    <Compile Include="PiecesGraph.cs">
+    <Compile Include="CustomControls\PiecesGraph.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -770,7 +770,7 @@
     </Compile>
     <Compile Include="NamedPipeSingleInstance.cs" />
     <Compile Include="ResultEventArgs.cs" />
-    <Compile Include="SelectableLabel.cs">
+    <Compile Include="CustomControls\SelectableLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings\FileLocalSettings.cs" />
@@ -780,7 +780,7 @@
     <Compile Include="Settings\LocalSettings.cs" />
     <Compile Include="Settings\RegistryLocalSettingsSingleton.cs" />
     <Compile Include="Settings\SambaShareMappings.cs" />
-    <Compile Include="SplitContainerFix.cs">
+    <Compile Include="CustomControls\SplitContainerFix.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="StatsDialog.cs">
@@ -810,7 +810,7 @@
     <Compile Include="TransmissionWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UICultureChanger.cs">
+    <Compile Include="CustomControls\UICultureChanger.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UriPromptWindow.cs">
