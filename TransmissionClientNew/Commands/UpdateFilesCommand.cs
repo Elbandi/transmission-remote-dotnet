@@ -27,9 +27,6 @@ namespace TransmissionRemoteDotnet.Commmands
 {
     public class UpdateFilesCommand : ICommand
     {
-        private bool first;
-        private FileListViewItem[] newItems;
-
         public UpdateFilesCommand(JsonObject response)
         {
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(Program.Settings.Locale);
@@ -66,31 +63,23 @@ namespace TransmissionRemoteDotnet.Commmands
             }
             JsonArray priorities = (JsonArray)torrent[ProtocolConstants.FIELD_PRIORITIES];
             JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
-            first = form.filesListView.Items.Count == 0;
             bool havepriority = (priorities != null && wanted != null);
             ImageList imgList = Program.Form.fileIconImageList;
-            if (first)
-                newItems = new FileListViewItem[files.Length];
             for (int i = 0; i < files.Length; i++)
             {
                 JsonObject file = (JsonObject)files[i];
+                string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
                 long bytesCompleted = Toolbox.ToLong(file[ProtocolConstants.FIELD_BYTESCOMPLETED]);
                 long length = Toolbox.ToLong(file[ProtocolConstants.FIELD_LENGTH]);
-                if (first)
+                FileItem item = t.Files.Find(name);
+                if (item == null)
                 {
-                    FileListViewItem fileItem = new FileListViewItem(file, imgList, i, wanted, priorities);
-                    newItems[i] = fileItem;
+                    FileItem fileItem = new FileItem(file, imgList, i, wanted, priorities);
+                    t.Files.Add(fileItem);
                 }
                 else
                 {
-                    Program.Form.Invoke(new MethodInvoker(delegate(){
-                        string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
-                        if (form.filesListView.Items.ContainsKey(name))
-                        {
-                            FileListViewItem item = (FileListViewItem)form.filesListView.Items[name];
-                            item.Update(file, wanted, priorities);
-                        }
-                    }));
+                    item.Update(file, wanted, priorities);
                 }
             }
         }
@@ -98,18 +87,39 @@ namespace TransmissionRemoteDotnet.Commmands
         public void Execute()
         {
             MainWindow form = Program.Form;
+            // TODO: need a real locking: torrent and filelist !!!
+            Torrent t = null;
+            form.Invoke(new MethodInvoker(delegate()
+            {
+                ListView torrentListView = form.torrentListView;
+                lock (torrentListView)
+                {
+                    if (torrentListView.SelectedItems.Count == 1)
+                    {
+                        t = (Torrent)torrentListView.SelectedItems[0];
+                    }
+                }
+            }));
+            if (t == null)
+                return;
             lock (form.filesListView)
             {
                 form.filesListView.SuspendLayout();
                 IComparer tmp = form.filesListView.ListViewItemSorter;
                 form.filesListView.ListViewItemSorter = null;
-                if (first)
+                form.filesListView.Enabled = true;
+                foreach (FileItem item in t.Files)
                 {
-                    form.filesListView.Enabled = true;
-                    foreach (FileListViewItem item in newItems)
+                    ListViewItem litem;
+                    if (!form.filesListView.Items.ContainsKey(item.FileName))
                     {
-                        form.filesListView.Items.Add(item);
+                        litem = form.filesListView.Items.Add(new ListViewItem());
                     }
+                    else
+                    {
+                        litem = form.filesListView.Items[item.FileName];
+                    }
+                    item.UpdateListviewItem(litem);
                 }
                 form.filesListView.ListViewItemSorter = tmp;
                 form.filesListView.Sort();

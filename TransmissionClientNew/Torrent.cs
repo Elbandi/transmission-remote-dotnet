@@ -153,6 +153,13 @@ namespace TransmissionRemoteDotnet
             this.SubItems[5].Tag = this.Leechers;
         }
 
+        private FileItemCollection files = new FileItemCollection();
+        public FileItemCollection Files
+        {
+            get { return files; }
+            //            set { files = value; }
+        }
+
         public string TorrentName
         {
             get
@@ -879,6 +886,14 @@ namespace TransmissionRemoteDotnet
             {
                 base.SubItems[12].Tag = value;
                 base.SubItems[12].Text = value.ToString();
+            }
+        }
+
+        public class FileItemCollection : List<FileItem>
+        {
+            public FileItem Find(string Key)
+            {
+                return Find(delegate(FileItem fi) { return fi.FileName.Equals(Key); });
             }
         }
     }

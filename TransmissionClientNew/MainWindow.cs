@@ -729,10 +729,14 @@ namespace TransmissionRemoteDotnet
                     (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
                 }
                 CreateTrayContextMenu();
-                foreach (FileListViewItem item in filesListView.Items)
+                if (torrentListView.SelectedItems.Count == 1)
                 {
-                    item.SubItems[5].Text = item.Wanted ? OtherStrings.No : OtherStrings.Yes;
-                    item.SubItems[6].Text = Toolbox.FormatPriority(item.Priority);
+                    Torrent t = (Torrent)torrentListView.SelectedItems[0];
+                    foreach (FileItem item in t.Files)
+                    {
+                        ListViewItem litem = filesListView.Items[item.FileName];
+                        item.UpdateListviewItem(litem);
+                    }
                 }
                 foreach (Torrent item in torrentListView.Items)
                 {
@@ -1322,9 +1326,11 @@ namespace TransmissionRemoteDotnet
             {
                 lock (filesListView.Items)
                 {
-                    foreach (FileListViewItem item in filesListView.SelectedItems)
+                    Torrent t = (Torrent)torrentListView.SelectedItems[0];
+                    foreach (ListViewItem item in filesListView.SelectedItems)
                     {
-                        array.Add(item.FileIndex);
+                        FileItem fitem = t.Files.Find(item.Name);
+                        array.Add(fitem.FileIndex);
                     }
                 }
             }
