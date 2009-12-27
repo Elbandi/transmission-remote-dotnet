@@ -111,7 +111,7 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="downloadedBytesLabel2.Text" xml:space="preserve">
-    <value>İndirilmiş (byte) :</value>
+    <value>İndirilmiş (byte):</value>
   </data>
   <data name="uploadedBytesLabel2.Text" xml:space="preserve">
     <value>Gönderilmiş (byte) :</value>
@@ -135,7 +135,7 @@
     <value>Okunuyor...</value>
   </data>
   <data name="secondsActiveLabel2.Text" xml:space="preserve">
-    <value>Anlık Aktivite</value>
+    <value>Anlık aktivite</value>
   </data>
   <data name="sessionCountLabel2.Text" xml:space="preserve">
     <value>İşlem</value>

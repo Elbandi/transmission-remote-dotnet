@@ -344,14 +344,13 @@ namespace TransmissionRemoteDotnet
             return String.Format("{0}{1} {2}{3} {4}{5} {6}{7}", new object[] { span.Days, OtherStrings.Day.ToLower()[0], span.Hours, OtherStrings.Hour.ToLower()[0], span.Minutes, OtherStrings.Minute.ToLower()[0], span.Seconds, OtherStrings.Second.ToLower()[0] });
         }
 
-        public static string FormatPriority(JsonNumber n)
+        public static string FormatPriority(int n)
         {
-            short s = n.ToInt16();
-            if (s < 0)
+            if (n < 0)
             {
                 return OtherStrings.Low;
             }
-            else if (s > 0)
+            else if (n > 0)
             {
                 return OtherStrings.High;
             }

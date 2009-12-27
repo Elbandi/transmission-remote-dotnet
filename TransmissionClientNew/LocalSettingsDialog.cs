@@ -224,6 +224,16 @@ namespace TransmissionRemoteDotnet
                 MessageBox.Show("Unix path exists", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        private void listSambaShareMappings_DoubleClick(object sender, EventArgs e)
+        {
+            if (listSambaShareMappings.SelectedItem != null)
+            {
+                SambaShareMappings ssm = (SambaShareMappings)listSambaShareMappings.SelectedItem;
+                UnixPathPrefixTextBox.Text = ssm.UnixPathPrefix;
+                SambaShareTextBox.Text = ssm.SambaShare;
+            }
+        }
+
         private void listServers_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listServers.SelectedItems.Count > 0)
@@ -324,66 +334,6 @@ namespace TransmissionRemoteDotnet
                 CurrentProfileComboBox.Items[icurrent] = e.Label;
                 AutoConnectComboBox.Items[iauto] = e.Label;
             }
-        }
-
-        private void removeProfileButton_Click(object sender, EventArgs e)
-        {
-            /*
-            LocalSettingsSingleton settings = null;
-            try
-            {
-                object selectedItem = profileComboBox.SelectedItem;
-                settings.RemoveProfile(selectedItem.ToString());
-                profileComboBox.SelectedIndex = 0;
-                settings.CurrentProfile = "Default";
-                profileComboBox.Items.Remove(selectedItem);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-             */
-        }
-
-        private void profileComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*
-            removeProfileButton.Enabled = !profileComboBox.SelectedItem.ToString().Equals("Default");
-            LocalSettingsSingleton settings = null;
-            string selectedProfile = profileComboBox.SelectedItem.ToString();
-            foreach (ToolStripMenuItem item in Program.Form.connectButton.DropDownItems)
-            {
-                item.Checked = selectedProfile.Equals(item.ToString());
-            }
-            if (!selectedProfile.Equals(settings.CurrentProfile))
-            {
-                SaveSettings();
-                settings.CurrentProfile = selectedProfile;
-                LoadCurrentProfile();
-            }
-             */
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //            addProfileButton.Enabled = textBox1.Text.Length > 0;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*
-            LocalSettingsSingleton settings = null;
-            ToolStripMenuItem profile = Program.Form.CreateProfileMenuItem(textBox1.Text);
-            foreach (ToolStripMenuItem item in Program.Form.connectButton.DropDownItems)
-            {
-                item.Checked = false;
-            }
-            profile.Checked = true;
-            settings.CreateProfile(textBox1.Text);
-            profileComboBox.SelectedIndex = profileComboBox.Items.Add(textBox1.Text);
-            textBox1.Text = "";
-            LoadSettings();
-             */
         }
     }
 }

@@ -17,33 +17,29 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.Windows.Forms;
-using System.Net;
+using Jayrock.Json;
 
-namespace TransmissionRemoteDotnet.Commmands
+namespace TransmissionRemoteDotnet.Comparers
 {
-    public class ResolveHostCommand : ICommand
+    public class ListViewItemInt32Comparer : IComparer
     {
-        private ListViewItem item;
-        private IPHostEntry host;
+        int column;
 
-        public ResolveHostCommand(ListViewItem item)
+        public ListViewItemInt32Comparer(int column)
         {
-            this.item = item;
-            try
-            {
-                this.host = Dns.GetHostEntry((IPAddress)item.SubItems[0].Tag);
-            }
-            catch { }
+            this.column = column;
         }
 
-        public void Execute()
+        int IComparer.Compare(object x, object y)
         {
-            if (this.host != null && !host.HostName.Equals(this.item.SubItems[0].Text))
-            {
-                item.SubItems[1].Text = item.ToolTipText = host.HostName;
-            }
+            ListViewItem tx = (ListViewItem)x;
+            ListViewItem ty = (ListViewItem)y;
+            int ix = (int)tx.SubItems[column].Tag;
+            int iy = (int)ty.SubItems[column].Tag;
+            return ix.CompareTo(iy);
         }
     }
 }

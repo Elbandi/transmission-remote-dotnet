@@ -370,10 +370,10 @@
     <value>Configuración Remota</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Mostrar Estadísticas</value>
+    <value>Mostrar estadísticas</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Mostrar Estadísticas</value>
+    <value>Mostrar estadísticas</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
     <value>Conectar</value>
@@ -436,7 +436,7 @@
     <value>Abrir en compartición de red</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Información del objeto al portapapeles</value>
+    <value>Información de objeto al portapapeles</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Información CSV al portapapeles</value>

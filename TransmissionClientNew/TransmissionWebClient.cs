@@ -69,7 +69,7 @@ namespace TransmissionRemoteDotnet
                     SetupWebRequest((HttpWebRequest)request, authenticate);
                 }
             }
-            catch (PasswordEmptyException e)
+            catch (PasswordEmptyException)
             {
                 this.CancelAsync();
             }

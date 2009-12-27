@@ -286,13 +286,13 @@
     <value>Tamamlandığında Uyar</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Şifre :</value>
+    <value>Şifre:</value>
   </data>
   <data name="EnableAuthCheckBox.Text" xml:space="preserve">
     <value>Kimlik onaylama etkin</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Kullanıcı Adı :</value>
+    <value>Kullanıcı:</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Destek : </value>
@@ -304,6 +304,6 @@
     <value>Komut : </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>İstemci Ayarları</value>
+    <value>İstemci ayarları</value>
   </data>
 </root>

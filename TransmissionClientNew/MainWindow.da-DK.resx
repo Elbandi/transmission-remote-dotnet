@@ -130,10 +130,10 @@
     <value>Start torrent(s)</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Genbekræft torrent(s)</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Torrent indstillinger</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
@@ -349,7 +349,7 @@
     <value>Forbind</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Afbryd forbindelse</value>
+    <value>Afbryd forbindelsen</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Tilføj torrent</value>
@@ -382,13 +382,13 @@
     <value>Nylig aktiv</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Genannoncer</value>
+    <value>Egenskaber</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>Lokale indstillinger</value>
   </data>
   <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>Fjernindstillinger</value>
+    <value>Fjern indstillinger</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
     <value>Vis statistik</value>
@@ -400,7 +400,7 @@
     <value>Forbind</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Afbryd forbindelse</value>
+    <value>Afbryd forbindelsen</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Tilføj torrent</value>
@@ -433,7 +433,7 @@
     <value>Pause</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>Genbekræft</value>
+    <value>Kontroller igen</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Egenskaber</value>

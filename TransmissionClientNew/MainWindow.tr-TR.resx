@@ -127,13 +127,13 @@
     <value>This is selectable text</value>
   </data>
   <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Start torrent(s)</value>
+    <value>Torrentı başlat</value>
   </data>
   <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Recheck torrent(s)</value>
+    <value>Torrentı Onayla</value>
   </data>
   <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Set torrent(s) properties</value>
+    <value>Torrent Özellikleri</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
@@ -151,7 +151,7 @@
     <value>Type</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Reannounce</value>
+    <value>Tekrar Anonsla</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Open on Network Share</value>
@@ -178,10 +178,10 @@
     <value>İndiren</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>İndirme Hızı</value>
+    <value>İndirme Oranı</value>
   </data>
   <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Gönderme Hızı</value>
+    <value>Gönderme Oranı</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>Kalan Süre</value>
@@ -322,10 +322,10 @@
     <value>Hassasiyet :</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>İndirme</value>
+    <value>İndir</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Gönderme</value>
+    <value>Yükselt</value>
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
@@ -346,7 +346,7 @@
     <value>Bağlan</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Bağlantıyı Kes</value>
+    <value>Bağlantıyı kes</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Torrent Ekle</value>
@@ -382,7 +382,7 @@
     <value>Tekrar Anonsla</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Ağ payaşımını aç</value>
+    <value>Open on Network Share</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>İstemci ayarları</value>
@@ -400,7 +400,7 @@
     <value>Bağlan</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bağlantıyı Kes</value>
+    <value>Bağlantıyı kes</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent Ekle</value>

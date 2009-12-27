@@ -42,7 +42,6 @@ namespace TransmissionRemoteDotnet
     {
         private const string
             DEFAULT_WINDOW_TITLE = "Transmission Remote",
-            GEOIP_DATABASE_FILE = "GeoIP.dat",
             CONFKEY_MAINWINDOW_HEIGHT = "mainwindow-height",
             CONFKEY_MAINWINDOW_WIDTH = "mainwindow-width",
             CONFKEY_MAINWINDOW_LOCATION_X = "mainwindow-loc-x",
@@ -69,14 +68,7 @@ namespace TransmissionRemoteDotnet
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
-        private GeoIPCountry geo;
-        private List<ListViewItem> fileItems = new List<ListViewItem>();
         private static FindDialog FindDialog;
-
-        public List<ListViewItem> FileItems
-        {
-            get { return fileItems; }
-        }
 
         public MainWindow()
         {
@@ -111,7 +103,8 @@ namespace TransmissionRemoteDotnet
             speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
             CreateProfileMenu();
-            OpenGeoipDatabase();
+            //OpenGeoipDatabase();
+            peersListView.SmallImageList = GeoIPCountry.FlagImageList;
             PopulateLanguagesMenu();
             OneTorrentsSelected(false, null);
         }
@@ -245,12 +238,12 @@ namespace TransmissionRemoteDotnet
             this.torrentSelectionMenu.MenuItems.Add(OtherStrings.Properties, this.ShowTorrentPropsHandler);
 
             this.torrentSelectionMenu.MenuItems.Add(OtherStrings.CopyAsCSV, this.TorrentsToClipboardHandler);
-            this.torrentSelectionMenu.MenuItems.Add(OtherStrings.InfoObjectToClipboard, this.copyInfoObjectToClipboardToolStripMenuItem_Click);
+            //this.torrentSelectionMenu.MenuItems.Add(OtherStrings.InfoObjectToClipboard, this.copyInfoObjectToClipboardToolStripMenuItem_Click);
         }
 
         private void bandwidth_Opening(object sender, EventArgs e)
         {
-            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0].Tag;
+            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0];
             if (firstTorrent == null)
                 return;
             int priority = firstTorrent.BandwidthPriority;
@@ -264,7 +257,7 @@ namespace TransmissionRemoteDotnet
 
         private void downlimit_Opening(object sender, EventArgs e)
         {
-            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0].Tag;
+            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0];
             if (firstTorrent == null)
                 return;
             int limit = firstTorrent.SpeedLimitDownEnabled ? firstTorrent.SpeedLimitDown : -1;
@@ -277,7 +270,7 @@ namespace TransmissionRemoteDotnet
 
         private void uplimit_Opening(object sender, EventArgs e)
         {
-            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0].Tag;
+            Torrent firstTorrent = (Torrent)torrentListView.SelectedItems[0];
             if (firstTorrent == null)
                 return;
             int limit = firstTorrent.SpeedLimitUpEnabled ? firstTorrent.SpeedLimitUp : -1;
@@ -327,31 +320,9 @@ namespace TransmissionRemoteDotnet
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
         }
 
-        private void OpenGeoipDatabase()
-        {
-            try
-            {
-                geo = new GeoIPCountry(Toolbox.SupportFilePath(GEOIP_DATABASE_FILE));
-                for (int i = 1; i < GeoIPCountry.CountryCodes.Length; i++)
-                {
-                    string flagname = "flags_" + GeoIPCountry.CountryCodes[i].ToLower();
-                    Bitmap flag = global::TransmissionRemoteDotnet.Properties.Flags.GetFlags(flagname);
-                    if (flag != null)
-                    {
-                        flagsImageList.Images.Add(flagname, flag);
-                    }
-                }
-                this.peersListView.SmallImageList = this.flagsImageList;
-            }
-            catch (Exception ex)
-            {
-                Program.Log(String.Format(OtherStrings.GeoipInitError, ex.GetType()), ex.Message);
-            }
-        }
-
         private void Program_onTorrentCompleted(Torrent t)
         {
-            notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, t.Name, OtherStrings.TheTorrentHasFinishedDownloading, ToolTipIcon.Info);
+            notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, t.TorrentName, OtherStrings.TheTorrentHasFinishedDownloading, ToolTipIcon.Info);
         }
 
         private void Program_onTorrentsUpdated(object sender, EventArgs e)
@@ -362,7 +333,7 @@ namespace TransmissionRemoteDotnet
                 lock (torrentListView)
                 {
                     if (torrentListView.SelectedItems.Count == 1)
-                        t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                        t = (Torrent)torrentListView.SelectedItems[0];
                 }
                 if (t != null)
                     UpdateInfoPanel(false, t);
@@ -758,15 +729,14 @@ namespace TransmissionRemoteDotnet
                     (stateListBox.Items[i] as GListBoxItem).Text = statestrings[i];
                 }
                 CreateTrayContextMenu();
-                foreach (ListViewItem item in filesListView.Items)
+                foreach (FileListViewItem item in filesListView.Items)
                 {
-                    item.SubItems[5].Text = (bool)item.SubItems[5].Tag ? OtherStrings.No : OtherStrings.Yes;
-                    item.SubItems[6].Text = Toolbox.FormatPriority((JsonNumber)item.SubItems[6].Tag);
+                    item.SubItems[5].Text = item.Wanted ? OtherStrings.No : OtherStrings.Yes;
+                    item.SubItems[6].Text = Toolbox.FormatPriority(item.Priority);
                 }
-                foreach (ListViewItem item in torrentListView.Items)
+                foreach (Torrent item in torrentListView.Items)
                 {
-                    Torrent t = (Torrent)item.Tag;
-                    item.SubItems[3].Text = t.Status;
+                    item.StatusCode = item.StatusCode; //StatusCode field set update the language
                 }
                 int oldindex = speedResComboBox.SelectedIndex;
                 speedResComboBox.Items.Clear();
@@ -865,9 +835,8 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             lock (torrentListView)
             {
-                foreach (ListViewItem item in torrentListView.SelectedItems)
+                foreach (Torrent t in torrentListView.SelectedItems)
                 {
-                    Torrent t = (Torrent)item.Tag;
                     ids.Put(t.Id);
                 }
             }
@@ -999,12 +968,11 @@ namespace TransmissionRemoteDotnet
             removeTorrentButton.Enabled = recheckTorrentButton.Enabled
                 = removeAndDeleteButton.Enabled = configureTorrentButton.Enabled
                 = startToolStripMenuItem.Enabled = pauseToolStripMenuItem.Enabled
-                = copyInfoObjectToClipboardToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled
                 = recheckToolStripMenuItem.Enabled = propertiesToolStripMenuItem.Enabled
                 = removeDeleteToolStripMenuItem.Enabled = removeToolStripMenuItem.Enabled
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
                 = moveTorrentDataToolStripMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled
-                = oneOrMore;
+                = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
             moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
             pauseTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_pause : global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all;
             startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
@@ -1022,10 +990,6 @@ namespace TransmissionRemoteDotnet
                 lock (filesListView)
                 {
                     filesListView.Items.Clear();
-                }
-                lock (fileItems)
-                {
-                    fileItems.Clear();
                 }
                 lock (peersListView)
                 {
@@ -1068,7 +1032,7 @@ namespace TransmissionRemoteDotnet
             lock (torrentListView)
             {
                 if (oneOrMore = torrentListView.SelectedItems.Count > 0)
-                    t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    t = (Torrent)torrentListView.SelectedItems[0];
                 one = torrentListView.SelectedItems.Count == 1;
             }
             peersListView.Tag = 0;
@@ -1089,7 +1053,7 @@ namespace TransmissionRemoteDotnet
                         ShowTorrentPropsHandler(sender, e);
                     break;
                 case 2:
-                    t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    t = (Torrent)torrentListView.SelectedItems[0];
                     if (IfTorrentStatus(t, ProtocolConstants.STATUS_PAUSED))
                         startTorrentButton.PerformClick();
                     else
@@ -1253,44 +1217,41 @@ namespace TransmissionRemoteDotnet
         private void FilterByStateOrTracker()
         {
             SuspendTorrentListView();
-            lock (Program.TorrentIndex)
+            if (stateListBox.SelectedIndex == 1)
             {
-                if (stateListBox.SelectedIndex == 1)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
-                }
-                else if (stateListBox.SelectedIndex == 2)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
-                }
-                else if (stateListBox.SelectedIndex == 3)
-                {
-                    FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
-                }
-                else if (stateListBox.SelectedIndex == 4)
-                {
-                    FilterTorrent(IsFinished, null);
-                }
-                else if (stateListBox.SelectedIndex == 5)
-                {
-                    FilterTorrent(NotFinished, null);
-                }
-                else if (stateListBox.SelectedIndex == 6)
-                {
-                    FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
-                }
-                else if (stateListBox.SelectedIndex == 7)
-                {
-                    FilterTorrent(TorrentHasError, null);
-                }
-                else if (stateListBox.SelectedIndex > 8)
-                {
-                    FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
-                }
-                else
-                {
-                    FilterTorrent(AlwaysTrue, null);
-                }
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+            }
+            else if (stateListBox.SelectedIndex == 2)
+            {
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+            }
+            else if (stateListBox.SelectedIndex == 3)
+            {
+                FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+            }
+            else if (stateListBox.SelectedIndex == 4)
+            {
+                FilterTorrent(IsFinished, null);
+            }
+            else if (stateListBox.SelectedIndex == 5)
+            {
+                FilterTorrent(NotFinished, null);
+            }
+            else if (stateListBox.SelectedIndex == 6)
+            {
+                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
+            }
+            else if (stateListBox.SelectedIndex == 7)
+            {
+                FilterTorrent(TorrentHasError, null);
+            }
+            else if (stateListBox.SelectedIndex > 8)
+            {
+                FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+            }
+            else
+            {
+                FilterTorrent(AlwaysTrue, null);
             }
             ResumeTorrentListView();
         }
@@ -1298,15 +1259,18 @@ namespace TransmissionRemoteDotnet
         private delegate bool FilterCompare(Torrent t, object param);
         private void FilterTorrent(FilterCompare fc, object param)
         {
-            foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
+            lock (Program.TorrentIndex)
             {
-                if (fc(pair.Value, param))
+                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    pair.Value.Show();
-                }
-                else
-                {
-                    pair.Value.Remove();
+                    if (fc(pair.Value, param))
+                    {
+                        pair.Value.Show();
+                    }
+                    else
+                    {
+                        pair.Value.RemoveItem();
+                    }
                 }
             }
         }
@@ -1328,7 +1292,7 @@ namespace TransmissionRemoteDotnet
         }
         private bool UsingTracker(Torrent t, object tracker)
         {
-            return t.Item.SubItems[13].Text.Equals(tracker);
+            return t.FirstTrackerTrimmed.Equals(tracker);
         }
         private bool AlwaysTrue(Torrent t, object dummy)
         {
@@ -1344,7 +1308,7 @@ namespace TransmissionRemoteDotnet
                 {
                     if (torrentListView.SelectedItems.Count == 1)
                     {
-                        Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                        Torrent t = (Torrent)torrentListView.SelectedItems[0];
                         filesWebClient = CommandFactory.RequestAsync(Requests.Files(t.Id));
                     }
                 }
@@ -1356,15 +1320,11 @@ namespace TransmissionRemoteDotnet
             JsonArray array = new JsonArray();
             lock (filesListView)
             {
-                lock (fileItems)
+                lock (filesListView.Items)
                 {
-                    foreach (ListViewItem item in filesListView.SelectedItems)
+                    foreach (FileListViewItem item in filesListView.SelectedItems)
                     {
-                        int i = fileItems.IndexOf(item);
-                        if (i != -1)
-                        {
-                            array.Add(i);
-                        }
+                        array.Add(item.FileIndex);
                     }
                 }
             }
@@ -1407,23 +1367,20 @@ namespace TransmissionRemoteDotnet
             int seeding = 0;
             int broken = 0;
             Dictionary<string, int> trackers = new Dictionary<string, int>();
-            Dictionary<string, Torrent> torrents = Program.TorrentIndex;
-            lock (torrents)
+            lock (Program.TorrentIndex)
             {
-                all = torrents.Count;
-                foreach (KeyValuePair<string, Torrent> pair in torrents)
+                all = Program.TorrentIndex.Count;
+                foreach (KeyValuePair<string, Torrent> t in Program.TorrentIndex)
                 {
-                    Torrent t = pair.Value;
-                    string tracker = t.GetFirstTracker(true);
-                    short statusCode = t.StatusCode;
-                    if (tracker.Length > 0)
+                    short statusCode = t.Value.StatusCode;
+                    if (t.Value.FirstTrackerTrimmed != null)
                     {
-                        if (trackers.ContainsKey(tracker))
-                            trackers[tracker] = trackers[tracker] + 1;
+                        if (trackers.ContainsKey(t.Value.FirstTrackerTrimmed))
+                            trackers[t.Value.FirstTrackerTrimmed] = trackers[t.Value.FirstTrackerTrimmed] + 1;
                         else
-                            trackers[tracker] = 1;
+                            trackers[t.Value.FirstTrackerTrimmed] = 1;
                     }
-                    if (t.HasError)
+                    if (t.Value.HasError)
                     {
                         broken++;
                     }
@@ -1444,7 +1401,7 @@ namespace TransmissionRemoteDotnet
                         checking++;
                     }
 
-                    if (t.IsFinished)
+                    if (t.Value.IsFinished)
                     {
                         complete++;
                     }
@@ -1492,7 +1449,7 @@ namespace TransmissionRemoteDotnet
                 {
                     return;
                 }
-                t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                t = (Torrent)torrentListView.SelectedItems[0];
             }
             JsonObject request = new JsonObject();
             request.Put(ProtocolConstants.KEY_METHOD, ProtocolConstants.METHOD_TORRENTSET);
@@ -1500,7 +1457,7 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             ids.Put(t.Id);
             arguments.Put(ProtocolConstants.KEY_IDS, ids);
-            if (FileList.Count == fileItems.Count)
+            if (FileList.Count == filesListView.Items.Count)
             {
                 arguments.Put(datatype, new JsonArray());
             }
@@ -1527,7 +1484,7 @@ namespace TransmissionRemoteDotnet
             {
                 generalTorrentNameGroupBox.Text = peersTorrentNameGroupBox.Text
                     = trackersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
-                    = t.Name;
+                    = t.TorrentName;
                 startedAtLabel.Text = t.Added.ToString();
                 createdAtLabel.Text = t.Created;
                 createdByLabel.Text = t.Creator;
@@ -1552,11 +1509,11 @@ namespace TransmissionRemoteDotnet
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
             }
-            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.GetLongETA();
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
             label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
-            uploadRateLabel.Text = t.UploadRate;
+            uploadRateLabel.Text = t.UploadRateString;
             seedersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
             leechersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             ratioLabel.Text = t.LocalRatioString;
@@ -1575,7 +1532,7 @@ namespace TransmissionRemoteDotnet
             {
                 downloadedLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             }
-            downloadSpeedLabel.Text = t.DownloadRate;
+            downloadSpeedLabel.Text = t.DownloadRateString;
             downloadLimitLabel.Text = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
             statusLabel.Text = t.Status;
             labelForErrorLabel.Visible = errorLabel.Visible = !(errorLabel.Text = t.ErrorString).Equals("");
@@ -1587,63 +1544,24 @@ namespace TransmissionRemoteDotnet
                 peersListView.SuspendLayout();
                 foreach (JsonObject peer in t.Peers)
                 {
-                    ListViewItem item = FindPeerItem(peer[ProtocolConstants.ADDRESS].ToString());
+                    PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
                     if (item == null)
                     {
-                        item = new ListViewItem((string)peer[ProtocolConstants.ADDRESS]); // 0
-                        item.SubItems[0].Tag = IPAddress.Parse(item.Text);
-                        item.SubItems.Add(""); // 1
-                        int countryIndex = -1;
-                        if (geo != null)
-                        {
-                            try
-                            {
-                                countryIndex = geo.FindIndex((IPAddress)item.SubItems[0].Tag);
-                            }
-                            catch { }
-                        }
-                        item.SubItems.Add(countryIndex >= 0 ? GeoIPCountry.CountryNames[countryIndex] : "");
-                        item.SubItems.Add((string)peer[ProtocolConstants.FIELD_FLAGSTR]);
-                        item.SubItems.Add((string)peer[ProtocolConstants.FIELD_CLIENTNAME]);
-                        item.ToolTipText = item.SubItems[0].Text;
-                        decimal progress = Toolbox.ToProgress(peer[ProtocolConstants.FIELD_PROGRESS]);
-                        item.SubItems.Add(progress + "%");
-                        item.SubItems[5].Tag = progress;
-                        long rateToClient = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOCLIENT]);
-                        item.SubItems.Add(Toolbox.GetSpeed(rateToClient));
-                        item.SubItems[6].Tag = rateToClient;
-                        long rateToPeer = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOPEER]);
-                        item.SubItems.Add(Toolbox.GetSpeed(rateToPeer));
-                        item.SubItems[7].Tag = rateToPeer;
+                        item = new PeerListViewItem(peer);
                         peersListView.Items.Add(item);
-                        Toolbox.StripeListView(peersListView);
-                        if (countryIndex > 0)
-                        {
-                            item.ImageIndex = flagsImageList.Images.IndexOfKey("flags_" + GeoIPCountry.CountryCodes[countryIndex].ToLower());
-                        }
-                        CreateHostnameResolutionWorker().RunWorkerAsync(item);
                     }
                     else
                     {
-                        decimal progress = Toolbox.ToProgress(peer[ProtocolConstants.FIELD_PROGRESS]);
-                        item.SubItems[3].Text = (string)peer[ProtocolConstants.FIELD_FLAGSTR];
-                        item.SubItems[5].Text = progress + "%";
-                        item.SubItems[5].Tag = progress;
-                        long rateToClient = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOCLIENT]);
-                        item.SubItems[6].Text = Toolbox.GetSpeed(rateToClient);
-                        item.SubItems[6].Tag = rateToClient;
-                        long rateToPeer = Toolbox.ToLong(peer[ProtocolConstants.FIELD_RATETOPEER]);
-                        item.SubItems[7].Text = Toolbox.GetSpeed(rateToPeer);
-                        item.SubItems[7].Tag = rateToPeer;
+                        item.Update(peer);
                     }
-                    item.Tag = peersListView.Tag;
+                    item.UpdateSerial = (int)peersListView.Tag;
                 }
                 lock (peersListView)
                 {
                     Queue<ListViewItem> removalQueue = null;
-                    foreach (ListViewItem item in peersListView.Items)
+                    foreach (PeerListViewItem item in peersListView.Items)
                     {
-                        if ((int)item.Tag != (int)peersListView.Tag)
+                        if (item.UpdateSerial != (int)peersListView.Tag)
                         {
                             if (removalQueue == null)
                                 removalQueue = new Queue<ListViewItem>();
@@ -1664,31 +1582,13 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private BackgroundWorker CreateHostnameResolutionWorker()
-        {
-            BackgroundWorker resolveHostWorker = new BackgroundWorker();
-            resolveHostWorker.DoWork += new DoWorkEventHandler(resolveHostWorker_DoWork);
-            resolveHostWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(resolveHostWorker_RunWorkerCompleted);
-            return resolveHostWorker;
-        }
-
-        private void resolveHostWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            ((ICommand)e.Result).Execute();
-        }
-
-        private void resolveHostWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = new ResolveHostCommand((ListViewItem)e.Argument);
-        }
-
-        private ListViewItem FindPeerItem(string address)
+        private PeerListViewItem FindPeerItem(string address)
         {
             lock (peersListView)
             {
-                foreach (ListViewItem peer in peersListView.Items)
+                foreach (PeerListViewItem peer in peersListView.Items)
                 {
-                    if (peer.SubItems[0].Text.Equals(address))
+                    if (peer.Address.Equals(address))
                     {
                         return peer;
                     }
@@ -1708,7 +1608,7 @@ namespace TransmissionRemoteDotnet
             {
                 if (torrentListView.SelectedItems.Count == 1)
                 {
-                    Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    Torrent t = (Torrent)torrentListView.SelectedItems[0];
                     TimeSpan ts = DateTime.Now.ToUniversalTime().Subtract(t.Added);
                     timeElapsedLabel.Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
                 }
@@ -1938,7 +1838,7 @@ namespace TransmissionRemoteDotnet
             {
                 try
                 {
-                    Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                    Torrent t = (Torrent)torrentListView.SelectedItems[0];
                     Process.Start(
                         Program.Settings.PlinkPath,
                         String.Format(
@@ -1946,7 +1846,7 @@ namespace TransmissionRemoteDotnet
                             Program.Settings.Current.Host,
                             String.Format(
                                 Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
-                                String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.Name))
+                                String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.TorrentName))
                         ));
                 }
                 catch (Exception ex)
@@ -1980,7 +1880,7 @@ namespace TransmissionRemoteDotnet
         {
             if (torrentListView.SelectedItems.Count == 1)
             {
-                Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                Torrent t = (Torrent)torrentListView.SelectedItems[0];
                 string sambaPath = t.SambaLocation;
                 if (sambaPath != null)
                 {
@@ -2005,15 +1905,6 @@ namespace TransmissionRemoteDotnet
         private void moveTorrentDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             (new MoveDataPrompt(this.torrentListView.SelectedItems)).ShowDialog();
-        }
-
-        private void copyInfoObjectToClipboardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (torrentListView.SelectedItems.Count == 1)
-            {
-                Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
-                Clipboard.SetText(t.Info.ToString());
-            }
         }
 
         private void addTorrentWithOptionsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2061,7 +1952,7 @@ namespace TransmissionRemoteDotnet
         {
             if (filesListView.Enabled && torrentListView.SelectedItems.Count == 1 && filesListView.SelectedItems.Count == 1)
             {
-                Torrent t = (Torrent)torrentListView.SelectedItems[0].Tag;
+                Torrent t = (Torrent)torrentListView.SelectedItems[0];
                 string sambaShare = t.SambaLocation;
                 if (sambaShare != null)
                 {

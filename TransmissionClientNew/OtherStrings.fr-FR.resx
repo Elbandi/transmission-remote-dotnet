@@ -170,7 +170,7 @@
     <value>Move {0}</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Sortir</value>
   </data>
   <data name="NewTorrentIs" xml:space="preserve">
     <value>New torrent {0}.</value>
@@ -221,7 +221,7 @@
     <value>Pieces</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>Avancement</value>
   </data>
   <data name="Reannounce" xml:space="preserve">
     <value>Reannounce</value>
@@ -254,13 +254,13 @@
     <value>Vous avez selectionné {0} torrents pour les retirer. Etes-vous sûre ?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Vous avez selectionné {0} torrents pour les retirer. Etes-vous sûre ?{1}Toutes les données de ces torrents seront supprimées."</value>
+    <value>Vous avez selectionné {0} torrents pour les retirer. Etes-vous sûre ?{1}Toutes les données de ces torrents seront supprimées.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Voulez vous retirer {0} ?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Voulez vous retirer et effacer {0} ?{1} Toutes les données de ce torrent seront supprimées."</value>
+    <value>Voulez vous retirer et effacer {0} ?{1} Toutes les données de ce torrent seront supprimées.</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Se connecter</value>

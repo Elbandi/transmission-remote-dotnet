@@ -669,7 +669,7 @@ msgstr "Scrape 주소"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "트랙커"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
@@ -1050,7 +1050,7 @@ msgstr "menuStrip1"
 #: MainWindow~$this.Text
 #, csharp-format
 msgid "Transmission Remote"
-msgstr "Transmission Remote"
+msgstr "트랜스미션 리모트"
 
 #: MoveDataPrompt~label1.Text
 #, csharp-format
