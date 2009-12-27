@@ -230,16 +230,16 @@ namespace TransmissionRemoteDotnet
         {
             if (this.HasError)
             {
-                List<ListViewItem> logItems = Program.LogItems;
+                List<LogItem> logItems = Program.LogItems;
                 lock (logItems)
                 {
                     if (logItems.Count > 0)
                     {
-                        foreach (ListViewItem item in logItems)
+                        foreach (LogItem item in logItems)
                         {
-                            if (item.Tag != null && this.updateSerial - (long)item.Tag < 2 && item.SubItems[1].Text.Equals(this.Name) && item.SubItems[2].Text.Equals(this.ErrorString))
+                            if (item.updateSerial != null && this.updateSerial - (long)item.updateSerial < 2 && item.Title.Equals(this.Name) && item.Body.Equals(this.ErrorString))
                             {
-                                item.Tag = this.updateSerial;
+                                item.updateSerial = this.updateSerial;
                                 return;
                             }
                         }

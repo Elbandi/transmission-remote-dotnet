@@ -46,9 +46,9 @@ namespace TransmissionRemoteDotnet
             {
                 lock (errorListView)
                 {
-                    foreach (ListViewItem item in Program.LogItems)
+                    foreach (LogItem item in Program.LogItems)
                     {
-                        errorListView.Items.Add((ListViewItem)item.Clone());
+                        errorListView.Items.Add(item.UpdateListviewItem(new ListViewItem()));
                     }
                 }
             }
@@ -91,12 +91,12 @@ namespace TransmissionRemoteDotnet
                 {
                     lock (errorListView)
                     {
-                        List<ListViewItem> logItems = Program.LogItems;
+                        List<LogItem> logItems = Program.LogItems;
                         if (logItems.Count > errorListView.Items.Count)
                         {
                             for (int i = errorListView.Items.Count; i < logItems.Count; i++)
                             {
-                                errorListView.Items.Add((ListViewItem)logItems[i].Clone());
+                                errorListView.Items.Add(logItems[i].UpdateListviewItem(new ListViewItem()));
                             }
                         }
                     }
