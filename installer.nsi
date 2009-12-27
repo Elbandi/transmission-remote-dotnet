@@ -134,6 +134,7 @@ Section /o $(NAME_SecDesktopIcon) SecDesktopIcon
 SectionEnd
 
 Section "GeoIP Database" SecGeoIPDatabase
+  SetOutPath "$INSTDIR"
   File "GeoIP.dat"
 SectionEnd
 

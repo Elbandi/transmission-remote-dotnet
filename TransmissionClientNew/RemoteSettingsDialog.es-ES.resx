@@ -208,7 +208,7 @@
     <value>Límites alternativos</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTA: Ciertas opciones puede requerir la actualización de transmission-daemon.</value>
+    <value>NOTA: La disponibilidad de ciertas opciones puede requerir la actualización de transmission-daemon.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Configuración Remota</value>

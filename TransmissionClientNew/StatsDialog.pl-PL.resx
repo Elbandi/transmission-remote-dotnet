@@ -144,7 +144,7 @@
     <value>Dodanych plików:</value>
   </data>
   <data name="CumulativeGroupBox.Text" xml:space="preserve">
-    <value>Statystyki Ogólne</value>
+    <value>Statystyki ogólne</value>
   </data>
   <data name="secondsActiveValue1.Text" xml:space="preserve">
     <value>Sprawdzanie...</value>
@@ -177,7 +177,7 @@
     <value>Wysłano:</value>
   </data>
   <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
-    <value>Obecna Sesja</value>
+    <value>Obecna sesja</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Daemon - Statystyki</value>

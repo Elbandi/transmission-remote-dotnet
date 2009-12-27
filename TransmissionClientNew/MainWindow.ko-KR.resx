@@ -127,7 +127,7 @@
     <value>This is selectable text</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Transmission Remote</value>
+    <value>트랜스미션 리모트</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Transmission Remote 정보</value>
@@ -148,7 +148,7 @@
     <value>URL로 토런트 추가</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>전체 트랙커 업데이트</value>
+    <value>전체</value>
   </data>
   <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>카테고리 보기</value>
@@ -238,7 +238,7 @@
     <value>%</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
-    <value>우선권</value>
+    <value>우선순위</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>이름</value>
@@ -265,7 +265,7 @@
     <value>연결</value>
   </data>
   <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>클립보드로 등록 정보 객체 복사</value>
+    <value>클립보드로 등록정보 객체 복사</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>클립보드로 CSV 정보 복사</value>
@@ -325,10 +325,10 @@
     <value>해상도:</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>업</value>
+    <value>업로드</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>다운</value>
+    <value>다운로드</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>시작 시간:</value>
@@ -367,7 +367,7 @@
     <value>menuStrip1</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 데이타 이동...</value>
+    <value>토런트 데이타 이동</value>
   </data>
   <data name="notifyIcon.Text" xml:space="preserve">
     <value>트랜스미션 리모트</value>
@@ -394,7 +394,7 @@
     <value>프로젝트 웹페이지</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>토런트 등록 정보...</value>
+    <value>등록 정보</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
     <value>트랙커 업데이트</value>

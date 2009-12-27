@@ -473,7 +473,7 @@ msgstr "İstemci ayarları"
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Size"
+msgstr "Boyut"
 
 #: MainWindow~columnHeader8.Text
 #: MainWindow~columnHeader3.Text
@@ -669,13 +669,13 @@ msgstr "Çekme Adresi"
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Trackers"
+msgstr "İzleyiciler"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Path"
+msgstr "Konum"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
@@ -693,13 +693,13 @@ msgstr "%"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Skip"
+msgstr "Atla"
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Priority"
+msgstr "Öncelik"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
@@ -735,7 +735,7 @@ msgstr "İstemci"
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progress"
+msgstr "İşlemler"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -814,7 +814,7 @@ msgstr "Adresten torrent ekle"
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Start torrent(s)"
+msgstr "Torrentı başlat"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
@@ -825,13 +825,13 @@ msgstr "Torrentı durdur"
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Recheck torrent(s)"
+msgstr "Torrentı Onayla"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Set torrent(s) properties"
+msgstr "Torrent Özellikleri"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
@@ -859,7 +859,7 @@ msgstr "Geçmiş aktiviteler"
 #: OtherStrings~Reannounce
 #, csharp-format
 msgid "Reannounce"
-msgstr "Reannounce"
+msgstr "Tekrar Anonsla"
 
 #: MainWindow~openNetworkShareButton.Text
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
@@ -904,7 +904,7 @@ msgstr "Adresten Torrent Ekle"
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Exit"
+msgstr "Çıkış"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format

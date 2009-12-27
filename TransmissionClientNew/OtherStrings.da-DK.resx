@@ -170,7 +170,7 @@
     <value>Move {0}</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Afslut</value>
   </data>
   <data name="NewTorrentIs" xml:space="preserve">
     <value>New torrent {0}.</value>
@@ -206,7 +206,7 @@
     <value>Pieces</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>Fremskridt</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
     <value>Open on Network Share</value>

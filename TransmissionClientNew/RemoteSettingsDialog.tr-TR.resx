@@ -208,7 +208,7 @@
     <value>Alternatif limitler</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOT: Bazı özelliklerin kullanılabilmesi için transmission-daemon'u güncellemeniz gerekebilir.</value>
+    <value>NOT : Bazı özellikleri kullanabilmeniz için transmission-daemon'u güncellemeniz gerekebilir.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Sunucu Ayarları</value>

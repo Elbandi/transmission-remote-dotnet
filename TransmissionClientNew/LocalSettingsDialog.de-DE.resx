@@ -169,7 +169,7 @@
     <value>Hinzufügen</value>
   </data>
   <data name="RemoveShareButton.Text" xml:space="preserve">
-    <value>Entfernen</value>
+    <value>Entferne Torrent(s)</value>
   </data>
   <data name="columnName.Text" xml:space="preserve">
     <value>Name</value>
