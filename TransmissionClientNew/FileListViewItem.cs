@@ -94,7 +94,9 @@ namespace TransmissionRemoteDotnet
         {
             for (int i = 0; i < 6; i++)
                 base.SubItems.Add("");
-            this.FileName = (string)file[ProtocolConstants.FIELD_NAME];
+            string name = (string)file[ProtocolConstants.FIELD_NAME];
+            this.FileName = Toolbox.TrimPath(name);
+            base.SubItems[0].Tag = name.Length != this.FileName.Length;
             this.FileIndex = index;
             string[] split = this.Name.Split('.');
             if (split.Length > 1)
@@ -125,7 +127,7 @@ namespace TransmissionRemoteDotnet
             get { return base.Name; }
             set
             {
-                base.Name = base.Text = base.SubItems[0].Text = base.ToolTipText = Toolbox.TrimPath(value);
+                base.Name = base.Text = base.SubItems[0].Text = base.ToolTipText = value;
             }
         }
     }

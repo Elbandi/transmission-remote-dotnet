@@ -935,6 +935,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <!-- <PostBuildEvent>copy /Y $(SolutionDir)\GeoIP.dat $(TargetDir)</PostBuildEvent> -->
+    <PostBuildEvent>copy /Y $(SolutionDir)\GeoIP.dat $(TargetDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>
