@@ -104,7 +104,7 @@ namespace TransmissionRemoteDotnet
                 TransmissionServer ts = lvi.Tag as TransmissionServer;
                 sett.Servers.Add(lvi.Name, lvi.Tag as TransmissionServer);
             }
-            if (sett.Servers.ContainsKey(AutoConnectComboBox.SelectedItem as string))
+            if (AutoConnectComboBox.SelectedItem != null && sett.Servers.ContainsKey(AutoConnectComboBox.SelectedItem as string))
                 sett.AutoConnect = AutoConnectComboBox.SelectedItem as string;
             else
                 sett.AutoConnect = "";

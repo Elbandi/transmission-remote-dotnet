@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Text;
 using Jayrock.Json;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace TransmissionRemoteDotnet.Commmands
 {
@@ -60,6 +61,8 @@ namespace TransmissionRemoteDotnet.Commmands
                 form.SuspendTorrentListView();
                 bool stateChange = false;
                 int oldCount = Program.TorrentIndex.Count;
+                IComparer tmp = Program.Form.torrentListView.ListViewItemSorter;
+                Program.Form.torrentListView.ListViewItemSorter = null;
                 foreach (JsonObject torrent in torrents)
                 {
                     string hash = (string)torrent[ProtocolConstants.FIELD_HASHSTRING];
@@ -134,6 +137,7 @@ namespace TransmissionRemoteDotnet.Commmands
 
                 if (stateChange)
                     form.SetAllStateCounters();
+                Program.Form.torrentListView.ListViewItemSorter = tmp;
                 Program.RaisePostUpdateEvent();
             }
         }
