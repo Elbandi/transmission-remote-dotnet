@@ -21,6 +21,7 @@ using System.Text;
 using Jayrock.Json;
 using System.Windows.Forms;
 using System.Collections;
+using System.Linq;
 
 namespace TransmissionRemoteDotnet.Commmands
 {
@@ -112,24 +113,13 @@ namespace TransmissionRemoteDotnet.Commmands
                         Toolbox.GetFileSize(totalSize)
                     }
                 ));
-                Queue<KeyValuePair<string, Torrent>> removeQueue = null;
-                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
+                foreach (string key in Enumerable.ToArray<string>(Program.TorrentIndex.Keys))
                 {
-                    if (pair.Value.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)
+                    Torrent t = Program.TorrentIndex[key];
+                    if (t.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)
                     {
-                        if (removeQueue == null)
-                        {
-                            removeQueue = new Queue<KeyValuePair<string, Torrent>>();
-                        }
-                        removeQueue.Enqueue(pair);
-                    }
-                }
-                if (removeQueue != null)
-                {
-                    foreach (KeyValuePair<string, Torrent> t in removeQueue)
-                    {
-                        Program.TorrentIndex.Remove(t.Key);
-                        t.Value.RemoveItem();
+                        Program.TorrentIndex.Remove(key);
+                        t.RemoveItem();
                     }
                 }
                 if (oldCount != Program.Form.torrentListView.Items.Count)

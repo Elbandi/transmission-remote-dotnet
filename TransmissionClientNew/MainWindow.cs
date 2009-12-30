@@ -35,6 +35,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Threading;
 using Jayrock.Json.Conversion;
+using System.Collections;
 
 namespace TransmissionRemoteDotnet
 {
@@ -1035,7 +1036,6 @@ namespace TransmissionRemoteDotnet
                     t = (Torrent)torrentListView.SelectedItems[0];
                 one = torrentListView.SelectedItems.Count == 1;
             }
-            peersListView.Tag = 0;
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
@@ -1540,7 +1540,7 @@ namespace TransmissionRemoteDotnet
             if (t.Peers != null)
             {
                 peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
-                peersListView.Tag = (int)peersListView.Tag + 1;
+                PeerListViewItem.CurrentUpdateSerial++;
                 peersListView.SuspendLayout();
                 foreach (JsonObject peer in t.Peers)
                 {
@@ -1554,23 +1554,14 @@ namespace TransmissionRemoteDotnet
                     {
                         item.Update(peer);
                     }
-                    item.UpdateSerial = (int)peersListView.Tag;
+                    item.UpdateSerial = PeerListViewItem.CurrentUpdateSerial;
                 }
                 lock (peersListView)
                 {
-                    Queue<ListViewItem> removalQueue = null;
-                    foreach (PeerListViewItem item in peersListView.Items)
+                    PeerListViewItem[] peers = (PeerListViewItem[])new ArrayList(peersListView.Items).ToArray(typeof(PeerListViewItem));
+                    foreach (PeerListViewItem item in peers)
                     {
-                        if (item.UpdateSerial != (int)peersListView.Tag)
-                        {
-                            if (removalQueue == null)
-                                removalQueue = new Queue<ListViewItem>();
-                            removalQueue.Enqueue(item);
-                        }
-                    }
-                    if (removalQueue != null)
-                    {
-                        foreach (ListViewItem item in removalQueue)
+                        if (item.UpdateSerial != PeerListViewItem.CurrentUpdateSerial)
                         {
                             peersListView.Items.Remove(item);
                         }
