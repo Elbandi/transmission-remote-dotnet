@@ -979,12 +979,36 @@ namespace TransmissionRemoteDotnet
             startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
         }
 
+        public void FillfilesListView(Torrent t)
+        {
+            lock (filesListView)
+            {
+                filesListView.SuspendLayout();
+                IComparer tmp = filesListView.ListViewItemSorter;
+                filesListView.ListViewItemSorter = null;
+                if (!filesListView.Enabled)
+                {
+                    filesListView.Enabled = true;
+                    filesListView.Items.AddRange(t.Files.ToArray());
+                }
+                else
+                    filesListView.Refresh();
+                filesListView.ListViewItemSorter = tmp;
+                filesListView.Sort();
+                Toolbox.StripeListView(filesListView);
+                filesListView.ResumeLayout();
+            }
+        }
+
         private void OneTorrentsSelected(bool one, Torrent t)
         {
             if (one)
             {
                 UpdateInfoPanel(true, t);
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                if (t.Files.Count == 0)
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                else
+                    FillfilesListView(t);
             }
             else
             {

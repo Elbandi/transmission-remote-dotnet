@@ -139,9 +139,9 @@ namespace TransmissionRemoteDotnet
             this.HonorsSessionLimits = Toolbox.ToBool(info[ProtocolConstants.FIELD_HONORSSESSIONLIMITS]);
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
             this.SwarmSpeed = Toolbox.GetSpeed(info[ProtocolConstants.FIELD_SWARMSPEED]);
-            
+
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
-            
+
             return (this.StatusCode != Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS])) || (this.HasError != IsErrorString((string)info[ProtocolConstants.FIELD_ERRORSTRING]));
         }
 
@@ -353,6 +353,12 @@ namespace TransmissionRemoteDotnet
                 return stateChange;
             }
         }*/
+
+        FileItemCollection files = new FileItemCollection();
+        public FileItemCollection Files
+        {
+            get { return files; }
+        }
 
         public JsonArray Peers
         {
@@ -880,6 +886,13 @@ namespace TransmissionRemoteDotnet
                 base.SubItems[12].Tag = value;
                 base.SubItems[12].Text = value.ToString();
             }
+        }
+    }
+    public class FileItemCollection : List<FileListViewItem>
+    {
+        public FileListViewItem Find(string Key)
+        {
+            return Find(delegate(FileListViewItem fi) { return fi.FileName.Equals(Key); });
         }
     }
 }
