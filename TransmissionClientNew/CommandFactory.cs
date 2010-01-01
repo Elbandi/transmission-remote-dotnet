@@ -33,6 +33,20 @@ namespace TransmissionRemoteDotnet
 {
     public class CommandFactory
     {
+        private static Encoding TransmissionEncoding = Encoding.UTF8;
+        /* 
+         * If this doesnt good, we should write a own converter like T:
+         * libtransmission/bencode.c:1308
+         */
+        private static byte[] GetBytes(string data)
+        {
+            return TransmissionEncoding.GetBytes(data);
+        }
+        private static string GetString(byte[] data)
+        {
+            return TransmissionEncoding.GetString(data);
+        }
+
         public static TransmissionWebClient RequestAsync(JsonObject data)
         {
             return RequestAsync(data, true);
@@ -41,12 +55,13 @@ namespace TransmissionRemoteDotnet
         public static TransmissionWebClient RequestAsync(JsonObject data, bool allowRecursion)
         {
             TransmissionWebClient wc = new TransmissionWebClient(true);
-            wc.UploadStringCompleted += new UploadStringCompletedEventHandler(wc_UploadStringCompleted);
-            wc.UploadStringAsync(new Uri(Program.Settings.Current.RpcUrl), null, data.ToString(), new TransmissonRequest(data, allowRecursion));
+            byte[] bdata = GetBytes(data.ToString());
+            wc.UploadDataCompleted += new UploadDataCompletedEventHandler(wc_UploadDataCompleted);
+            wc.UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, bdata, new TransmissonRequest(bdata, allowRecursion));
             return wc;
         }
 
-        static void wc_UploadStringCompleted(object sender, UploadStringCompletedEventArgs e)
+        static void wc_UploadDataCompleted(object sender, UploadDataCompletedEventArgs e)
         {
             ICommand cmd;
             if (!e.Cancelled)
@@ -65,7 +80,7 @@ namespace TransmissionRemoteDotnet
                                 if (sessionid != null && sessionid.Length > 0)
                                 {
                                     TransmissionWebClient.X_transmission_session_id = sessionid;
-                                    (sender as TransmissionWebClient).UploadStringAsync(new Uri(Program.Settings.Current.RpcUrl), null, ((TransmissonRequest)e.UserState).data.ToString(), new TransmissonRequest(((TransmissonRequest)e.UserState).data, false));
+                                    (sender as TransmissionWebClient).UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, ((TransmissonRequest)e.UserState).data, new TransmissonRequest(((TransmissonRequest)e.UserState).data, false));
                                     return;
                                 }
                             }
@@ -78,7 +93,7 @@ namespace TransmissionRemoteDotnet
                 {
                     try
                     {
-                        JsonObject jsonResponse = (JsonObject)JsonConvert.Import(e.Result);
+                        JsonObject jsonResponse = (JsonObject)JsonConvert.Import(GetString(e.Result));
                         if ((string)jsonResponse["result"] != "success")
                         {
                             cmd = new ErrorCommand(OtherStrings.UnsuccessfulRequest, (string)jsonResponse["result"], true);
@@ -109,18 +124,18 @@ namespace TransmissionRemoteDotnet
                                     cmd = new NoCommand();
                                     break;
                                 default:
-                                    cmd = new ErrorCommand(OtherStrings.UnknownResponseTag, e.Result != null ? e.Result : "null", false);
+                                    cmd = new ErrorCommand(OtherStrings.UnknownResponseTag, e.Result != null ? GetString(e.Result) : "null", false);
                                     break;
                             }
                         }
                     }
                     catch (InvalidCastException)
                     {
-                        cmd = new ErrorCommand(OtherStrings.UnableToParse, e.Result != null ? e.Result : "Null", false);
+                        cmd = new ErrorCommand(OtherStrings.UnableToParse, e.Result != null ? GetString(e.Result) : "Null", false);
                     }
                     catch (JsonException ex)
                     {
-                        cmd = new ErrorCommand(String.Format("{0} ({1})", OtherStrings.UnableToParse, ex.GetType()), e.Result, false);
+                        cmd = new ErrorCommand(String.Format("{0} ({1})", OtherStrings.UnableToParse, ex.GetType()), GetString(e.Result), false);
                     }
                     catch (Exception ex)
                     {
@@ -138,13 +153,13 @@ namespace TransmissionRemoteDotnet
                 (sender as TransmissionWebClient).OnCompleted(cmd);
             }
         }
-
     }
+
     struct TransmissonRequest
     {
-        public JsonObject data;
+        public byte[] data;
         public bool allowRecursion;
-        public TransmissonRequest(JsonObject data, bool allowRecursion)
+        public TransmissonRequest(byte[] data, bool allowRecursion)
         {
             this.data = data;
             this.allowRecursion = allowRecursion;
