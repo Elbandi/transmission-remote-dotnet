@@ -37,9 +37,24 @@ namespace TransmissionRemoteDotnet.Comparers
         {
             ListViewItem lx = (ListViewItem)x;
             ListViewItem ly = (ListViewItem)y;
-            long nx = (long)lx.SubItems[columnIndex].Tag;
-            long ny = (long)ly.SubItems[columnIndex].Tag;
-            return nx.CompareTo(ny);
+            if (lx.SubItems[columnIndex].Tag == null && ly.SubItems[columnIndex].Tag == null)
+            {
+                return 0;
+            }
+            else if (lx.SubItems[columnIndex].Tag == null)
+            {
+                return 1;
+            }
+            else if (ly.SubItems[columnIndex].Tag == null)
+            {
+                return -1;
+            }
+            else
+            {
+                long nx = (long)lx.SubItems[columnIndex].Tag;
+                long ny = (long)ly.SubItems[columnIndex].Tag;
+                return nx.CompareTo(ny);
+            }
         }
     }
 }
