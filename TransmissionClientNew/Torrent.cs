@@ -119,7 +119,7 @@ namespace TransmissionRemoteDotnet
                 && this.LeftUntilDone > 0
                 && (Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]) == 0))
             {
-                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.Name, "This torrent has finished downloading.", ToolTipIcon.Info);
+                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
                 this.DoneDate = DateTime.Now;
             }
             UpdateIcon();
@@ -237,7 +237,7 @@ namespace TransmissionRemoteDotnet
                     {
                         foreach (ListViewItem item in logItems)
                         {
-                            if (item.Tag != null && this.updateSerial - (long)item.Tag < 2 && item.SubItems[1].Text.Equals(this.Name) && item.SubItems[2].Text.Equals(this.ErrorString))
+                            if (item.Tag != null && this.updateSerial - (long)item.Tag < 2 && item.SubItems[1].Text.Equals(this.TorrentName) && item.SubItems[2].Text.Equals(this.ErrorString))
                             {
                                 item.Tag = this.updateSerial;
                                 return;
@@ -245,7 +245,7 @@ namespace TransmissionRemoteDotnet
                         }
                     }
                 }
-                Program.Log(this.Name, this.ErrorString, this.updateSerial);
+                Program.Log(this.TorrentName, this.ErrorString, this.updateSerial);
             }
         }
 
@@ -495,12 +495,12 @@ namespace TransmissionRemoteDotnet
             get
             {
                 string downloadDir = this.DownloadDir;
-                string name = this.Name;
+                string name = this.TorrentName;
                 Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
                 foreach (string key in mappings.Keys)
                 {
                     if (downloadDir.StartsWith(key))
-                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.Name);
+                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.TorrentName);
                 }
                 return null;
             }
