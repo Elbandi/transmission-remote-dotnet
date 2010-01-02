@@ -478,7 +478,7 @@
     <value>True</value>
   </data>
   <data name="piecesInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 143</value>
+    <value>664, 136</value>
   </data>
   <data name="piecesInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -511,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="piecesInfoLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 143</value>
+    <value>568, 136</value>
   </data>
   <data name="piecesInfoLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
@@ -535,10 +535,10 @@
     <value>1</value>
   </data>
   <data name="hashLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 143</value>
+    <value>104, 136</value>
   </data>
   <data name="hashLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 13</value>
+    <value>440, 13</value>
   </data>
   <data name="hashLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -568,7 +568,7 @@
     <value>NoControl</value>
   </data>
   <data name="hashLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 143</value>
+    <value>6, 136</value>
   </data>
   <data name="hashLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -595,7 +595,7 @@
     <value>NoControl</value>
   </data>
   <data name="timeElapsedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 25</value>
+    <value>104, 16</value>
   </data>
   <data name="timeElapsedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -619,7 +619,7 @@
     <value>4</value>
   </data>
   <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 119</value>
+    <value>384, 112</value>
   </data>
   <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -643,7 +643,7 @@
     <value>5</value>
   </data>
   <data name="uploadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 94</value>
+    <value>384, 88</value>
   </data>
   <data name="uploadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -667,7 +667,7 @@
     <value>6</value>
   </data>
   <data name="uploadRateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 71</value>
+    <value>384, 64</value>
   </data>
   <data name="uploadRateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -691,7 +691,7 @@
     <value>7</value>
   </data>
   <data name="uploadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 49</value>
+    <value>384, 40</value>
   </data>
   <data name="uploadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -715,7 +715,7 @@
     <value>8</value>
   </data>
   <data name="remainingLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 25</value>
+    <value>384, 16</value>
   </data>
   <data name="remainingLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -739,7 +739,7 @@
     <value>9</value>
   </data>
   <data name="downloadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 49</value>
+    <value>104, 40</value>
   </data>
   <data name="downloadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -763,7 +763,7 @@
     <value>10</value>
   </data>
   <data name="downloadSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 71</value>
+    <value>104, 64</value>
   </data>
   <data name="downloadSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -787,7 +787,7 @@
     <value>11</value>
   </data>
   <data name="downloadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 94</value>
+    <value>104, 88</value>
   </data>
   <data name="downloadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -811,7 +811,7 @@
     <value>12</value>
   </data>
   <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 118</value>
+    <value>104, 112</value>
   </data>
   <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -835,10 +835,10 @@
     <value>13</value>
   </data>
   <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 168</value>
+    <value>104, 160</value>
   </data>
   <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 13</value>
+    <value>440, 13</value>
   </data>
   <data name="commentLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -859,7 +859,7 @@
     <value>14</value>
   </data>
   <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 168</value>
+    <value>664, 160</value>
   </data>
   <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -883,7 +883,7 @@
     <value>15</value>
   </data>
   <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 118</value>
+    <value>664, 112</value>
   </data>
   <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -907,7 +907,7 @@
     <value>16</value>
   </data>
   <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 94</value>
+    <value>664, 88</value>
   </data>
   <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -931,7 +931,7 @@
     <value>17</value>
   </data>
   <data name="leechersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 49</value>
+    <value>664, 40</value>
   </data>
   <data name="leechersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -955,7 +955,7 @@
     <value>18</value>
   </data>
   <data name="ratioLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 71</value>
+    <value>664, 64</value>
   </data>
   <data name="ratioLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -979,7 +979,7 @@
     <value>19</value>
   </data>
   <data name="seedersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 25</value>
+    <value>664, 16</value>
   </data>
   <data name="seedersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -1012,7 +1012,7 @@
     <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 118</value>
+    <value>568, 112</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -1045,7 +1045,7 @@
     <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 94</value>
+    <value>568, 88</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -1078,7 +1078,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelForErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 168</value>
+    <value>568, 160</value>
   </data>
   <data name="labelForErrorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
@@ -1114,7 +1114,7 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 168</value>
+    <value>6, 160</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -1147,7 +1147,7 @@
     <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 71</value>
+    <value>568, 64</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -1180,7 +1180,7 @@
     <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 49</value>
+    <value>568, 40</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -1213,7 +1213,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 25</value>
+    <value>568, 16</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1246,7 +1246,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 94</value>
+    <value>288, 88</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -1279,7 +1279,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 71</value>
+    <value>288, 64</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -1312,7 +1312,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 49</value>
+    <value>288, 40</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1345,7 +1345,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 25</value>
+    <value>288, 16</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -1378,7 +1378,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 118</value>
+    <value>6, 112</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1411,7 +1411,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 94</value>
+    <value>6, 88</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -1444,7 +1444,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 71</value>
+    <value>6, 64</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 13</value>
@@ -1477,7 +1477,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 49</value>
+    <value>6, 40</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -1510,7 +1510,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 119</value>
+    <value>288, 112</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 13</value>
@@ -1543,7 +1543,7 @@
     <value>NoControl</value>
   </data>
   <data name="timeElapsedLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 16</value>
   </data>
   <data name="timeElapsedLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 13</value>
