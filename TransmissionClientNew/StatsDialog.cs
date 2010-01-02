@@ -69,13 +69,13 @@ namespace TransmissionRemoteDotnet
             {
                 JsonObject sessionstats = (JsonObject)stats["current-stats"];
                 JsonObject cumulativestats = (JsonObject)stats["cumulative-stats"];
-                TimeSpan ts = TimeSpan.FromSeconds(Toolbox.ToInt(sessionstats["secondsActive"]));
+                TimeSpan ts = TimeSpan.FromSeconds(Toolbox.ToLong(sessionstats["secondsActive"]));
                 downloadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["downloadedBytes"]));
                 uploadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["uploadedBytes"]));
                 filesAddedValue1.Text = ((JsonNumber)sessionstats["filesAdded"]).ToString();
                 sessionCountValue1.Text = ((JsonNumber)sessionstats["sessionCount"]).ToString();
                 secondsActiveValue1.Text = Toolbox.FormatTimespanLong(ts);
-                ts = TimeSpan.FromSeconds(Toolbox.ToInt(cumulativestats["secondsActive"]));
+                ts = TimeSpan.FromSeconds(Toolbox.ToLong(cumulativestats["secondsActive"]));
                 downloadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["downloadedBytes"]));
                 uploadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["uploadedBytes"]));
                 filesAddedValue2.Text = ((JsonNumber)cumulativestats["filesAdded"]).ToString();
