@@ -58,6 +58,8 @@ namespace TransmissionRemoteDotnet
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.generalTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
+            this.locationLabelLabel = new System.Windows.Forms.Label();
+            this.locationLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.piecesInfoLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.piecesInfoLabelLabel = new System.Windows.Forms.Label();
             this.hashLabel = new TransmissionRemoteDotnet.SelectableLabel();
@@ -443,6 +445,8 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.generalTorrentNameGroupBox, "generalTorrentNameGroupBox");
             this.generalTableLayoutPanel.SetColumnSpan(this.generalTorrentNameGroupBox, 3);
+            this.generalTorrentNameGroupBox.Controls.Add(this.locationLabelLabel);
+            this.generalTorrentNameGroupBox.Controls.Add(this.locationLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabelLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.hashLabel);
@@ -483,6 +487,18 @@ namespace TransmissionRemoteDotnet
             this.generalTorrentNameGroupBox.Controls.Add(this.timeElapsedLabelLabel);
             this.generalTorrentNameGroupBox.Name = "generalTorrentNameGroupBox";
             this.generalTorrentNameGroupBox.TabStop = false;
+            // 
+            // locationLabelLabel
+            // 
+            resources.ApplyResources(this.locationLabelLabel, "locationLabelLabel");
+            this.locationLabelLabel.Name = "locationLabelLabel";
+            // 
+            // locationLabel
+            // 
+            this.locationLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.locationLabel, "locationLabel");
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.ReadOnly = true;
             // 
             // piecesInfoLabel
             // 
@@ -1762,6 +1778,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label hashLabelLabel;
         private SelectableLabel piecesInfoLabel;
         private System.Windows.Forms.Label piecesInfoLabelLabel;
+        private SelectableLabel locationLabel;
+        private System.Windows.Forms.Label locationLabelLabel;
         private System.Windows.Forms.ToolStripButton AltSpeedButton;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator4;
         public System.Windows.Forms.ImageList fileIconImageList;
