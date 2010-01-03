@@ -75,6 +75,7 @@ namespace TransmissionRemoteDotnet
         {
             this.HaveValid = Toolbox.ToLong(info[ProtocolConstants.FIELD_HAVEVALID]);
             this.HaveTotal = this.HaveValid + Toolbox.ToLong(info[ProtocolConstants.FIELD_HAVEUNCHECKED]);
+            this.SizeWhenDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_SIZEWHENDONE]);
             this.StatusCode = Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS]);
 
             if (this.StatusCode == ProtocolConstants.STATUS_CHECKING)
@@ -85,6 +86,8 @@ namespace TransmissionRemoteDotnet
             if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
                 this.TrackerStats = (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
 
+            this.DownloadDir = (string)info[ProtocolConstants.FIELD_DOWNLOADDIR];
+            this.Trackers = (JsonArray)info[ProtocolConstants.FIELD_TRACKERS];
             this.Seeders = GetSeeders(info);
             this.Leechers = GetLeechers(info);
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
@@ -93,6 +96,7 @@ namespace TransmissionRemoteDotnet
 
             this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
             this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
+            this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
 
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
 
@@ -169,15 +173,11 @@ namespace TransmissionRemoteDotnet
                 base.SubItems.Add("");
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
-            this.SizeWhenDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_SIZEWHENDONE]);
             this.Created = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DATECREATED])).ToString();
             this.Creator = (string)info[ProtocolConstants.FIELD_CREATOR];
             this.Added = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_ADDEDDATE]));
-            this.Trackers = (JsonArray)info[ProtocolConstants.FIELD_TRACKERS];
             base.Name = this.Hash = (string)info[ProtocolConstants.FIELD_HASHSTRING];
-            this.DownloadDir = (string)info[ProtocolConstants.FIELD_DOWNLOADDIR];
             this.TotalSize = Toolbox.ToLong(info[ProtocolConstants.FIELD_TOTALSIZE]);
-            this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
             this.Comment = (string)info[ProtocolConstants.FIELD_COMMENT];
             this.Update(info);
             MainWindow form = Program.Form;
