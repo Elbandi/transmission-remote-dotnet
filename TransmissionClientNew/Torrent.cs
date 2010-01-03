@@ -110,6 +110,8 @@ namespace TransmissionRemoteDotnet
             {
                 form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
             }
+            base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
+            UpdateIcon();
         }
 
         public bool Update(JsonObject info, bool first)
@@ -168,7 +170,6 @@ namespace TransmissionRemoteDotnet
             else
                 this.Percentage = Toolbox.CalcPercentage(this.HaveTotal, this.SizeWhenDone);
 
-            UpdateIcon();
             this.updateSerial = Program.DaemonDescriptor.UpdateSerial;
             this.Peers = (JsonArray)info[ProtocolConstants.FIELD_PEERS];
             this.PieceSize = Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECESIZE]);
@@ -185,8 +186,6 @@ namespace TransmissionRemoteDotnet
             this.HonorsSessionLimits = Toolbox.ToBool(info[ProtocolConstants.FIELD_HONORSSESSIONLIMITS]);
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
             this.SwarmSpeed = Toolbox.GetSpeed(info[ProtocolConstants.FIELD_SWARMSPEED]);
-
-            base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
 
             return statusChange;
         }
