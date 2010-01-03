@@ -70,7 +70,7 @@ namespace TransmissionRemoteDotnet.Commmands
                     else
                     {
                         t = updateItems[i] = Program.TorrentIndex[hash];
-                        if (t.Update(torrent))
+                        if (t.Update(torrent, false))
                             stateChange = true;
                         isNew[i] = false;
                     }
@@ -126,8 +126,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 if (isNew[i])
                     Program.Form.torrentListView.Items.Add(updateItems[i]);
                 else
-                    updateItems[i].UpdateUi();
-
+                    updateItems[i].UpdateUi(false);
             }
 
             foreach (string key in Enumerable.ToArray<string>(Program.TorrentIndex.Keys))
