@@ -29,12 +29,6 @@ namespace TransmissionRemoteDotnet
     public class Torrent : ListViewItem
     {
         private string SeedersColumnFormat = "{1}";
-        /*private JsonObject info;
-
-        public JsonObject Info
-        {
-            get { return info; }
-        }*/
 
         private long updateSerial;
 
@@ -71,6 +65,28 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public void UpdateUi()
+        {
+            base.SubItems[2].Tag = this.Percentage;
+            base.SubItems[2].Text = this.Percentage + "%";
+            base.SubItems[3].Text = this.Status;
+            SetSeedersAndLeechersColumns();
+            base.SubItems[6].Tag = this.DownloadRate;
+            base.SubItems[6].Text = this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? Toolbox.GetSpeed(this.DownloadRate) : "";
+            base.SubItems[8].Text = this.Eta != null ? this.Eta.ToString() : "";
+            base.SubItems[9].Tag = this.Uploaded;
+            base.SubItems[9].Text = Toolbox.GetFileSize(this.Uploaded);
+            base.SubItems[10].Tag = this.LocalRatio;
+            base.SubItems[10].Text = this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString();
+            base.SubItems[11].Tag = this.Added;
+            base.SubItems[11].Text = this.Added.ToString();
+            if (this.DoneDate != null)
+            {
+	            base.SubItems[12].Tag = this.DoneDate;
+	            base.SubItems[12].Text = this.DoneDate.ToString();
+            }
+        }
+
         public bool Update(JsonObject info)
         {
             this.HaveValid = Toolbox.ToLong(info[ProtocolConstants.FIELD_HAVEVALID]);
@@ -85,23 +101,20 @@ namespace TransmissionRemoteDotnet
 
             if (info.Contains(ProtocolConstants.FIELD_TRACKERSTATS))
                 this.TrackerStats = (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
-
+            
+            CalcETA(info);
+            
             this.DownloadDir = (string)info[ProtocolConstants.FIELD_DOWNLOADDIR];
             this.Trackers = (JsonArray)info[ProtocolConstants.FIELD_TRACKERS];
             this.Seeders = GetSeeders(info);
             this.Leechers = GetLeechers(info);
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
-            SetSeedersAndLeechersColumns();
-
+            
             this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
             this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
-
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
-
-            CalcETA(info);
-
             this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, this.HaveTotal);
 
             this.LeftUntilDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]);
@@ -180,6 +193,7 @@ namespace TransmissionRemoteDotnet
             this.TotalSize = Toolbox.ToLong(info[ProtocolConstants.FIELD_TOTALSIZE]);
             this.Comment = (string)info[ProtocolConstants.FIELD_COMMENT];
             this.Update(info);
+            this.UpdateUi();
             MainWindow form = Program.Form;
             lock (form.stateListBox)
             {
@@ -196,35 +210,6 @@ namespace TransmissionRemoteDotnet
             lock (Program.TorrentIndex)
                 Program.TorrentIndex.Add(this.Hash, this);
         }
-
-        /*private delegate void AddDelegate();
-        private void Add()
-        {
-            MainWindow form = Program.Form;
-            if (form.InvokeRequired)
-            {
-                form.Invoke(new AddDelegate(this.Add));
-            }
-            else
-            {
-                lock (form.torrentListView)
-                {
-                    form.torrentListView.Items.Add(item);
-                }
-                lock (form.stateListBox)
-                {
-                    if (item.SubItems[13].Text.Length > 0 && form.stateListBox.FindItem(item.SubItems[13].Text) == null)
-                    {
-                        form.stateListBox.Items.Add(new GListBoxItem(item.SubItems[13].Text, 8));
-                    }
-                }
-                if (Program.Settings.StartedBalloon && this.updateSerial > 2)
-                {
-                    Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.Name, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
-                }
-                LogError();
-            }
-        }*/
 
         private void LogError()
         {
@@ -322,37 +307,6 @@ namespace TransmissionRemoteDotnet
                 base.SubItems[13].Text = value;
             }
         }
-
-        /*public delegate bool UpdateDelegate(JsonObject info);
-        public bool UpdateItem(JsonObject info)
-        {
-            MainWindow form = Program.Form;
-            if (form.InvokeRequired)
-            {
-                return (bool)form.Invoke(new UpdateDelegate(this.UpdateItem), info);
-            }
-            else
-            {
-                this.info = info;
-                UpdateIcon();
-                item.SubItems[0].Text = this.Name;
-                item.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
-                item.SubItems[1].Text = Toolbox.GetFileSize(this.SizeWhenDone);
-                decimal percentage = this.StatusCode == ProtocolConstants.STATUS_CHECKING ? this.RecheckPercentage : this.Percentage;
-                item.SubItems[2].Tag = percentage;
-                item.SubItems[2].Text = percentage.ToString() + "%";
-                item.SubItems[3].Text = this.Status;
-                item.SubItems[4].Text = string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs);
-                item.SubItems[5].Text = string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs);
-                item.SubItems[6].Text = this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING && this.Percentage <= 100 ? this.DownloadRate : "";
-                item.SubItems[7].Text = this.StatusCode == ProtocolConstants.STATUS_SEEDING || this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? this.UploadRate : "";
-                item.SubItems[8].Text = this.GetShortETA();
-                item.SubItems[9].Text = this.UploadedString;
-                item.SubItems[10].Text = this.LocalRatioString;
-                item.SubItems[11].Text = this.Added.ToString();
-                return stateChange;
-            }
-        }*/
 
         FileItemCollection files = new FileItemCollection();
         public FileItemCollection Files
@@ -476,18 +430,10 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private short _statusCode;
         public short StatusCode
         {
-            set
-            {
-                this._statusCode = value;
-                this.SubItems[3].Text = this.Status;
-            }
-            get
-            {
-                return this._statusCode;
-            }
+            get;
+            set;
         }
 
         public string SambaLocation
@@ -543,36 +489,32 @@ namespace TransmissionRemoteDotnet
             set;
         }
 
-        private string _longEta;
-
         private void CalcETA(JsonObject info)
         {
             double eta = Toolbox.ToDouble(info[ProtocolConstants.FIELD_ETA]);
             TimeSpan ts = TimeSpan.FromSeconds(eta);
             if (eta > 0)
-                base.SubItems[8].Text = ts.ToString();
-            this._longEta = Toolbox.FormatTimespanLong(ts);
+                this.Eta = ts;
+        }
+
+        public TimeSpan Eta
+        {
+            get;
+            set;
         }
 
         public string LongEta
         {
             get
             {
-                return this._longEta;
+                return Toolbox.FormatTimespanLong(this.Eta);
             }
         }
 
         public decimal Percentage
         {
-            get
-            {
-                return (decimal)base.SubItems[2].Tag;
-            }
-            set
-            {
-                base.SubItems[2].Tag = value;
-                base.SubItems[2].Text = value + "%";
-            }
+            get;
+            set;
         }
 
         private int GetSeeders(JsonObject info)
@@ -660,15 +602,8 @@ namespace TransmissionRemoteDotnet
 
         public DateTime Added
         {
-            get
-            {
-                return (DateTime)base.SubItems[11].Tag;
-            }
-            set
-            {
-                base.SubItems[11].Tag = value;
-                base.SubItems[11].Text = value.ToString();
-            }
+            get;
+            set;
         }
 
         public int BandwidthPriority
@@ -705,15 +640,8 @@ namespace TransmissionRemoteDotnet
 
         public long Uploaded
         {
-            get
-            {
-                return (long)base.SubItems[9].Tag;
-            }
-            set
-            {
-                base.SubItems[9].Tag = value;
-                base.SubItems[9].Text = Toolbox.GetFileSize(value);
-            }
+            get;
+            set;
         }
 
         public long HaveTotal
@@ -752,15 +680,8 @@ namespace TransmissionRemoteDotnet
 
         public long DownloadRate
         {
-            get
-            {
-                return (long)base.SubItems[6].Tag;
-            }
-            set
-            {
-                base.SubItems[6].Tag = value;
-                base.SubItems[6].Text = this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? Toolbox.GetSpeed(value) : "";
-            }
+            get;
+            set;
         }
 
         public string DownloadRateString
@@ -773,15 +694,8 @@ namespace TransmissionRemoteDotnet
 
         public long UploadRate
         {
-            get
-            {
-                return (long)base.SubItems[7].Tag;
-            }
-            set
-            {
-                base.SubItems[7].Tag = value;
-                base.SubItems[7].Text = this.StatusCode == ProtocolConstants.STATUS_SEEDING ? Toolbox.GetSpeed(value) : "";
-            }
+            get;
+            set;
         }
 
         public string UploadRateString
@@ -794,15 +708,8 @@ namespace TransmissionRemoteDotnet
 
         public decimal LocalRatio
         {
-            get
-            {
-                return (decimal)base.SubItems[10].Tag;
-            }
-            set
-            {
-                base.SubItems[10].Tag = value;
-                base.SubItems[10].Text = value < 0 ? "∞" : value.ToString();
-            }
+            get;
+            set;
         }
 
         public string LocalRatioString
@@ -877,15 +784,8 @@ namespace TransmissionRemoteDotnet
         // DateTime isn't nullable
         public object DoneDate
         {
-            get
-            {
-                return base.SubItems[12].Tag;
-            }
-            set
-            {
-                base.SubItems[12].Tag = value;
-                base.SubItems[12].Text = value.ToString();
-            }
+            get;
+            set;
         }
     }
     public class FileItemCollection : List<FileListViewItem>
