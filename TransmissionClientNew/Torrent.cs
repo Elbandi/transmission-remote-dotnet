@@ -68,12 +68,16 @@ namespace TransmissionRemoteDotnet
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
+            base.SubItems[1].Tag = this.SizeWhenDone;
+            base.SubItems[1].Text = Toolbox.GetFileSize(this.SizeWhenDone);
             base.SubItems[2].Tag = this.Percentage;
             base.SubItems[2].Text = this.Percentage + "%";
             base.SubItems[3].Text = this.Status;
             SetSeedersAndLeechersColumns();
             base.SubItems[6].Tag = this.DownloadRate;
-            base.SubItems[6].Text = this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING ? Toolbox.GetSpeed(this.DownloadRate) : "";
+            base.SubItems[6].Text = this.DownloadRate > 0 ? Toolbox.GetSpeed(this.DownloadRate) : "";
+            base.SubItems[7].Tag = this.UploadRate;
+            base.SubItems[7].Text = this.UploadRate > 0 ? Toolbox.GetSpeed(this.UploadRate) : "";
             base.SubItems[8].Text = this.Eta > 0 ? TimeSpan.FromSeconds(this.Eta).ToString() : "";
             base.SubItems[8].Tag = this.Eta;
             base.SubItems[9].Tag = this.Uploaded;
@@ -559,15 +563,8 @@ namespace TransmissionRemoteDotnet
 
         public long SizeWhenDone
         {
-            get
-            {
-                return (long)base.SubItems[1].Tag;
-            }
-            set
-            {
-                base.SubItems[1].Tag = value;
-                base.SubItems[1].Text = Toolbox.GetFileSize(value);
-            }
+            get;
+            set;
         }
 
         private int GetLeechers(JsonObject info)
