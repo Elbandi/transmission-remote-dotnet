@@ -86,8 +86,8 @@ namespace TransmissionRemoteDotnet
             {
                 if (this.DoneDate != null)
                 {
-	                base.SubItems[12].Tag = this.DoneDate;
-	                base.SubItems[12].Text = this.DoneDate.ToString();
+                    base.SubItems[12].Tag = this.DoneDate;
+                    base.SubItems[12].Text = this.DoneDate.ToString();
                 }
                 lock (form.stateListBox)
                 {
@@ -102,6 +102,10 @@ namespace TransmissionRemoteDotnet
                 }
                 LogError();
             }
+            else if (this.CompletionPopupPending)
+            {
+                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
+            }
         }
 
         public bool Update(JsonObject info, bool first)
@@ -114,14 +118,14 @@ namespace TransmissionRemoteDotnet
                 this.TrackerStats = (JsonArray)info[ProtocolConstants.FIELD_TRACKERSTATS];
 
             this.Eta = Toolbox.ToDouble(info[ProtocolConstants.FIELD_ETA]);
-            
+
             this.DownloadDir = (string)info[ProtocolConstants.FIELD_DOWNLOADDIR];
             this.Trackers = (JsonArray)info[ProtocolConstants.FIELD_TRACKERS];
             this.Seeders = GetSeeders(info);
             this.Leechers = GetLeechers(info);
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
-            
+
             this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
             this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
@@ -136,24 +140,24 @@ namespace TransmissionRemoteDotnet
             }
 
             this.PieceCount = Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECECOUNT]);
-            this.ErrorString = (string)info[ProtocolConstants.FIELD_ERRORSTRING];
+            
+            long leftUntilDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]);
+            short statusCode = Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS]);
+            string errorString = (string)info[ProtocolConstants.FIELD_ERRORSTRING];
 
-            MainWindow form = Program.Form;
-            if (!first)
+            bool statusChange = (this.StatusCode != statusCode) || (this.HasError != IsErrorString(errorString));
+
+            if (this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon
+                && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
+                && this.LeftUntilDone > 0
+                && (leftUntilDone == 0))
             {
-                if (Program.Settings.CompletedBaloon
-                    && form.notifyIcon.Visible == true
-                    && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
-                    && this.LeftUntilDone > 0
-                    && (Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]) == 0))
-                {
-                    form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
-                    this.DoneDate = DateTime.Now;
-                }
+                this.DoneDate = DateTime.Now;
             }
 
-            this.LeftUntilDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]);
-            this.StatusCode = Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS]);
+            this.LeftUntilDone = leftUntilDone;
+            this.StatusCode = statusCode;
+            this.ErrorString = errorString;
 
             if (this.StatusCode == ProtocolConstants.STATUS_CHECKING)
                 this.Percentage = Toolbox.ToProgress(info[ProtocolConstants.FIELD_RECHECKPROGRESS]);
@@ -180,7 +184,13 @@ namespace TransmissionRemoteDotnet
 
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
 
-            return (this.StatusCode != Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS])) || (this.HasError != IsErrorString((string)info[ProtocolConstants.FIELD_ERRORSTRING]));
+            return statusChange;
+        }
+
+        public bool CompletionPopupPending
+        {
+            get;
+            set;
         }
 
         private void SetSeedersAndLeechersColumns()
