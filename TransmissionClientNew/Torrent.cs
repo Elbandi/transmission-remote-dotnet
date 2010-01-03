@@ -106,7 +106,7 @@ namespace TransmissionRemoteDotnet
                 }
                 LogError();
             }
-            else if (this.CompletionPopupPending)
+            else if (this.CompletionPopupPending && form.notifyIcon.Visible)
             {
                 form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
             }
