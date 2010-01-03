@@ -1,9 +1,9 @@
 ﻿ABOUT
 ----------------------------
 
-transmission-remote-dotnet is a feature rich client to transmission-daemon, allowing you to remotely
-control your Transmission bittorrent client. The user interface is inspired by uTorrent, and its aim
-is to make using a remote machine for torrents as convenient as a local machine.
+transmission-remote-dotnet is a Windows remote client to the RPC interface of transmission-daemon, which is
+part of the Transmission BitTorrent client. The application is quite like µTorrent in appearance and
+currently supports almost all the RPC specification.
 
 FEATURES
 ----------------------------
