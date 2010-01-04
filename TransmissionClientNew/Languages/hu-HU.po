@@ -356,6 +356,11 @@ msgstr "Ismétlések száma:"
 msgid "UNIX path prefix:"
 msgstr "UNIX útvonal elõtag:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Egyéni rpc útvonal:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -691,12 +696,6 @@ msgstr "Torrent(ek) tulajdonságai"
 msgid "Connect"
 msgstr "Csatlakozás"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "Info object vágólapra másolása"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -858,6 +857,11 @@ msgstr "Nyelv"
 #, csharp-format
 msgid "Local settings"
 msgstr "Helyi beállítások"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Mentés helye:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1232,6 +1236,11 @@ msgstr "Befejezetlen"
 #, csharp-format
 msgid "Info"
 msgstr "Info"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Info object vágólapra másolása"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

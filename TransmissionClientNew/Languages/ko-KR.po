@@ -355,6 +355,11 @@ msgstr "재시도 제한:"
 msgid "UNIX path prefix:"
 msgstr "유닉스 경로:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -690,12 +695,6 @@ msgstr "토런트 등록 정보"
 msgid "Connect"
 msgstr "연결"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "클립보드로 등록정보 객체 복사"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -857,6 +856,11 @@ msgstr "언어"
 #, csharp-format
 msgid "Local settings"
 msgstr "트랜스미션 리모트 설정..."
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1231,6 +1235,11 @@ msgstr "미완료"
 #, csharp-format
 msgid "Info"
 msgstr "정보"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "클립보드로 등록정보 객체 복사"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

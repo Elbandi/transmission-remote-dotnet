@@ -355,6 +355,11 @@ msgstr "Yenileme limiti:"
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -690,12 +695,6 @@ msgstr "Torrent Özellikleri"
 msgid "Connect"
 msgstr "Bağlan"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "Info object to clipboard"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -857,6 +856,11 @@ msgstr "Dil"
 #, csharp-format
 msgid "Local settings"
 msgstr "İstemci Ayarları"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1231,6 +1235,11 @@ msgstr "Tamamlanmamış"
 #, csharp-format
 msgid "Info"
 msgstr "Bilgi"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Info object to clipboard"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

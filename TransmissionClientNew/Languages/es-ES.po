@@ -355,6 +355,11 @@ msgstr "Límite de reintentos:"
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -690,12 +695,6 @@ msgstr "Configurar torrent(s)"
 msgid "Connect"
 msgstr "Conectar"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "Información de objeto al portapapeles"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -857,6 +856,11 @@ msgstr "Idioma"
 #, csharp-format
 msgid "Local settings"
 msgstr "Configuración local"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1231,6 +1235,11 @@ msgstr "Incompletos"
 #, csharp-format
 msgid "Info"
 msgstr "Información"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Información de objeto al portapapeles"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

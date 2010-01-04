@@ -355,6 +355,11 @@ msgstr "重試上限:"
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -690,12 +695,6 @@ msgstr "設置任務屬性"
 msgid "Connect"
 msgstr "連接"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "複製物件資訊到剪貼板"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -857,6 +856,11 @@ msgstr "語言"
 #, csharp-format
 msgid "Local settings"
 msgstr "本地設置"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1231,6 +1235,11 @@ msgstr "未完成"
 #, csharp-format
 msgid "Info"
 msgstr "信息"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "複製物件資訊到剪貼板"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

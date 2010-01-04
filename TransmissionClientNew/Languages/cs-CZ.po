@@ -355,6 +355,11 @@ msgstr "Počet pokusů o připojení:"
 msgid "UNIX path prefix:"
 msgstr "UNIX prefix cesty:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -690,12 +695,6 @@ msgstr "Nastavit vlastnosti torrent(ů)"
 msgid "Connect"
 msgstr "Připojit"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "Info objektu do schránky"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -857,6 +856,11 @@ msgstr "Jazyk"
 #, csharp-format
 msgid "Local settings"
 msgstr "Místní nastavení"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1231,6 +1235,11 @@ msgstr "Nedokočeno"
 #, csharp-format
 msgid "Info"
 msgstr "Info"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Info objektu do schránky"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

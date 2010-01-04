@@ -357,6 +357,11 @@ msgstr "Wiederholungs-Limit:"
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
 
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr "Custom rpc path:"
+
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
@@ -692,12 +697,6 @@ msgstr "Setze Torrent Eigenschaften"
 msgid "Connect"
 msgstr "Verbinden"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
-#, csharp-format
-msgid "Info object to clipboard"
-msgstr "Torrenteigenschaften in die Zwischenablage kopieren"
-
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -859,6 +858,11 @@ msgstr "Sprache"
 #, csharp-format
 msgid "Local settings"
 msgstr "Lokale Einstellungen"
+
+#: MainWindow~locationLabelLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Location:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -1233,6 +1237,11 @@ msgstr "Nicht komplett"
 #, csharp-format
 msgid "Info"
 msgstr "Info"
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Torrenteigenschaften in die Zwischenablage kopieren"
 
 #: OtherStrings~InputAccepted
 #, csharp-format

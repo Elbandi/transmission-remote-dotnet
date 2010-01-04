@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="locationLabelLabel.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
     <value>Alt Speed</value>
   </data>
@@ -137,9 +140,6 @@
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Add torrent with options</value>
-  </data>
-  <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Info object to clipboard</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Kopier som CSV</value>
