@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+    </xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </assembly>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>Situação</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="columnHeader11.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>Vel Down</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Vel Up</value>
+  </data>
+  <data name="columnHeader14.Text" xml:space="preserve">
+    <value>TEF</value>
+  </data>
+  <data name="columnHeader15.Text" xml:space="preserve">
+    <value>Enviado</value>
+  </data>
+  <data name="columnHeader16.Text" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="columnHeader18.Text" xml:space="preserve">
+    <value>Adicionado em</value>
+  </data>
+  <data name="columnHeader19.Text" xml:space="preserve">
+    <value>Concluído em</value>
+  </data>
+  <data name="columnHeader30.Text" xml:space="preserve">
+    <value>Rastreador</value>
+  </data>
+  <data name="downloadProgressLabel.Text" xml:space="preserve">
+    <value>Peças: </value>
+  </data>
+  <data name="percentageLabel.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="locationLabelLabel.Text" xml:space="preserve">
+    <value>Local:</value>
+  </data>
+  <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
+    <value>Peças:</value>
+  </data>
+  <data name="hashLabelLabel.Text" xml:space="preserve">
+    <value>Hash:</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Criado por:</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Criado por:</value>
+  </data>
+  <data name="labelForErrorLabel.Text" xml:space="preserve">
+    <value>Erro:</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Comentário:</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Ratio:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Leechers:</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Seeds:</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Limite Upload:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Vel Upload:</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Enviado:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Restante:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Limite Download:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Vel Download:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Baixado:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Iniciado em:</value>
+  </data>
+  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
+    <value>Tempo gasto:</value>
+  </data>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="columnHeader22.Text" xml:space="preserve">
+    <value>Fila</value>
+  </data>
+  <data name="columnHeader20.Text" xml:space="preserve">
+    <value>URL de Anúncio</value>
+  </data>
+  <data name="columnHeader21.Text" xml:space="preserve">
+    <value>URL de Scrape</value>
+  </data>
+  <data name="trackersTabPage.Text" xml:space="preserve">
+    <value>Rastreadores</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Caminho</value>
+  </data>
+  <data name="columnHeader32.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="columnHeader17.Text" xml:space="preserve">
+    <value>Pular</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Prioridade</value>
+  </data>
+  <metadata name="fileIconImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 0</value>
+  </metadata>
+  <data name="filesTabPage.Text" xml:space="preserve">
+    <value>Arquivos</value>
+  </data>
+  <data name="columnHeader23.Text" xml:space="preserve">
+    <value>Endereço IP</value>
+  </data>
+  <data name="columnHeader24.Text" xml:space="preserve">
+    <value>Hostname</value>
+  </data>
+  <data name="columnHeader25.Text" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="columnHeader31.Text" xml:space="preserve">
+    <value>Bandeira</value>
+  </data>
+  <data name="columnHeader26.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="columnHeader27.Text" xml:space="preserve">
+    <value>Progresso</value>
+  </data>
+  <data name="columnHeader28.Text" xml:space="preserve">
+    <value>Vel Down</value>
+  </data>
+  <data name="columnHeader29.Text" xml:space="preserve">
+    <value>Vel Up</value>
+  </data>
+  <data name="peersTabPage.Text" xml:space="preserve">
+    <value>Peers</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Resolução:</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="speedGraph.Text" xml:space="preserve">
+    <value>c2DPushGraph1</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Utilização geral da banda</value>
+  </data>
+  <data name="speedTabPage.Text" xml:space="preserve">
+    <value>Velocidade</value>
+  </data>
+  <metadata name="tabControlImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>702, 0</value>
+  </metadata>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 519</value>
+  </metadata>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="toolStripContainer1.Text" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>3, 0</value>
+  </metadata>
+  <data name="connectButton.Text" xml:space="preserve">
+    <value>Conectar</value>
+  </data>
+  <data name="disconnectButton.Text" xml:space="preserve">
+    <value>Desconectar</value>
+  </data>
+  <data name="addTorrentButton.Text" xml:space="preserve">
+    <value>Adicionar Torrent</value>
+  </data>
+  <data name="addWebTorrentButton.Text" xml:space="preserve">
+    <value>Adicionar Torrent da URL</value>
+  </data>
+  <data name="startTorrentButton.Text" xml:space="preserve">
+    <value>Iniciar torrent(s)</value>
+  </data>
+  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Iniciar torrent(s)</value>
+  </data>
+  <data name="pauseTorrentButton.Text" xml:space="preserve">
+    <value>Pausar torrent(s)</value>
+  </data>
+  <data name="recheckTorrentButton.Text" xml:space="preserve">
+    <value>Re-checar torrent(s)</value>
+  </data>
+  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Re-checar torrent(s)</value>
+  </data>
+  <data name="configureTorrentButton.Text" xml:space="preserve">
+    <value>Configurar propriedades do(s) torrent(s)</value>
+  </data>
+  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Configurar propriedades do(s) torrent(s)</value>
+  </data>
+  <data name="removeTorrentButton.Text" xml:space="preserve">
+    <value>Remover torrent(s)</value>
+  </data>
+  <data name="removeAndDeleteButton.Text" xml:space="preserve">
+    <value>Remover e deletar torrent(s)</value>
+  </data>
+  <data name="allToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tudo</value>
+  </data>
+  <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ativado Recentimente</value>
+  </data>
+  <data name="reannounceButton.Text" xml:space="preserve">
+    <value>Reanunciar</value>
+  </data>
+  <data name="openNetworkShareButton.Text" xml:space="preserve">
+    <value>Abrir de rede compartilhada</value>
+  </data>
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Velocidade</value>
+  </data>
+  <data name="localConfigureButton.Text" xml:space="preserve">
+    <value>Configurações Locais</value>
+  </data>
+  <data name="remoteConfigureButton.Text" xml:space="preserve">
+    <value>Configurações Remotas</value>
+  </data>
+  <data name="sessionStatsButton.Text" xml:space="preserve">
+    <value>Mostrar estatísticas</value>
+  </data>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="connectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Conectar</value>
+  </data>
+  <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Desconectar</value>
+  </data>
+  <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Adicionar torrent rápidamente</value>
+  </data>
+  <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Adicionar torrent com opções</value>
+  </data>
+  <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
+    <value>Adicionar torrent da URL</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Arquivo</value>
+  </data>
+  <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configurações Locais</value>
+  </data>
+  <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configurações Remotas</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Opções</value>
+  </data>
+  <data name="findToolStripMenuItem.Text" xml:space="preserve">
+    <value>Encontrar...</value>
+  </data>
+  <data name="startToolStripMenuItem.Text" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
+    <value>Re-checar</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Propriedades</value>
+  </data>
+  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remover e deletar</value>
+  </data>
+  <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reanunciar</value>
+  </data>
+  <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mover dados de torrent</value>
+  </data>
+  <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abrir de rede compartilhada</value>
+  </data>
+  <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copiar informação CSV</value>
+  </data>
+  <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Iniciar todos</value>
+  </data>
+  <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pause em todos</value>
+  </data>
+  <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Torrent</value>
+  </data>
+  <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Painel de Detalhes</value>
+  </data>
+  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Painel Filtro de Categorias</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mostrar estatísticas</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Visualizar</value>
+  </data>
+  <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mostrar Log de Erro</value>
+  </data>
+  <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sito do Projeto</value>
+  </data>
+  <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Verficar por atualização</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sobre o Transmission Remote</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 0</value>
+  </metadata>
+  <data name="notifyIcon.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+  <metadata name="refreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>334, 0</value>
+  </metadata>
+  <metadata name="filesTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 0</value>
+  </metadata>
+  <metadata name="refreshElapsedTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>549, 0</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>114</value>
+  </metadata>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Transmission Remote</value>
+  </data>
+</root>

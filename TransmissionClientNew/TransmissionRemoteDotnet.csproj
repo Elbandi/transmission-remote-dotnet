@@ -209,6 +209,9 @@
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutDialog.pt-BR.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -261,6 +264,9 @@
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ErrorLogWindow.pt-BR.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ErrorLogWindow.resx">
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -303,6 +309,9 @@
       <DependentUpon>FindDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindDialog.pl-PL.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDialog.pt-BR.resx">
       <DependentUpon>FindDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindDialog.resx">
@@ -351,6 +360,9 @@
     <EmbeddedResource Include="LocalSettingsDialog.pl-PL.resx">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalSettingsDialog.pt-BR.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalSettingsDialog.resx">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
@@ -404,6 +416,9 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.pt-BR.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.ru-RU.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -438,6 +453,12 @@
     <EmbeddedResource Include="MoveDataPrompt.ko-KR.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.pl-PL.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.pt-BR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
@@ -475,6 +496,7 @@
     <EmbeddedResource Include="OtherStrings.pl-PL.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherStrings.pt-BR.resx" />
     <EmbeddedResource Include="OtherStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OtherStrings.Designer.cs</LastGenOutput>
@@ -532,6 +554,9 @@
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemoteSettingsDialog.pt-BR.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoteSettingsDialog.resx">
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -584,6 +609,9 @@
       <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="StatsDialog.pt-BR.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StatsDialog.resx">
       <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -626,6 +654,9 @@
     <EmbeddedResource Include="TorrentLoadDialog.pl-PL.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.pt-BR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
@@ -670,6 +701,9 @@
     <EmbeddedResource Include="TorrentPropertiesDialog.pl-PL.resx">
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentPropertiesDialog.pt-BR.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentPropertiesDialog.resx">
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
@@ -722,6 +756,9 @@
     <EmbeddedResource Include="UriPromptWindow.pl-PL.resx">
       <DependentUpon>UriPromptWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UriPromptWindow.pt-BR.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UriPromptWindow.resx">
       <DependentUpon>UriPromptWindow.cs</DependentUpon>
