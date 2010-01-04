@@ -1,7 +1,7 @@
 # Chinese (Simplified) translation of transmission-remote-dotnet
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
-#
+# 
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 msgid ""
 msgstr ""
@@ -15,10 +15,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: AboutDialog~$this.Text
+#, csharp-format
+msgid "AboutDialog"
+msgstr "关于 Transmission Remote"
+
+#: AboutDialog~labelCopyright.Text
+#, csharp-format
+msgid "Copyright"
+msgstr "Copyright"
+
+#: AboutDialog~labelCredits.Text
+#, csharp-format
+msgid "Credits && acknowledgements:"
+msgstr "Credits && acknowledgements:"
+
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
 msgstr "Developers:"
+
+#: AboutDialog~labelHomepageLink.Text
+#, csharp-format
+msgid "Homepage:"
+msgstr "Homepage:"
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
@@ -31,15 +51,10 @@ msgstr "Product Name"
 msgid "Version"
 msgstr "版本"
 
-#: AboutDialog~labelCopyright.Text
+#: AboutDialog~okButton.Text
 #, csharp-format
-msgid "Copyright"
-msgstr "Copyright"
-
-#: AboutDialog~labelHomepageLink.Text
-#, csharp-format
-msgid "Homepage:"
-msgstr "Homepage:"
+msgid "&OK"
+msgstr "&OK"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -80,20 +95,23 @@ msgstr ""
 "    * zeal.tsai for the Taiwanese translation.\r\n"
 "    * ikeblaster for the Czech translation."
 
-#: AboutDialog~labelCredits.Text
+#: ErrorLogWindow~$this.Text
 #, csharp-format
-msgid "Credits && acknowledgements:"
-msgstr "Credits && acknowledgements:"
+msgid "Error Log"
+msgstr "错误日志"
 
-#: AboutDialog~okButton.Text
+#: ErrorLogWindow~clearButton.Text
 #, csharp-format
-msgid "&OK"
-msgstr "&OK"
+msgid "Clear"
+msgstr "清除"
 
-#: AboutDialog~$this.Text
+#: ErrorLogWindow~closeButton.Text
+#: MoveDataPrompt~button2.Text
+#: RemoteSettingsDialog~CloseFormButton.Text
+#: StatsDialog~CloseFormButton.Text
 #, csharp-format
-msgid "AboutDialog"
-msgstr "关于 Transmission Remote"
+msgid "Close"
+msgstr "关闭"
 
 #: ErrorLogWindow~columnHeader1.Text
 #, csharp-format
@@ -110,54 +128,52 @@ msgstr "标题"
 msgid "Body"
 msgstr "详细信息"
 
-#: ErrorLogWindow~clearButton.Text
-#, csharp-format
-msgid "Clear"
-msgstr "清除"
-
 #: ErrorLogWindow~label1.Text
 #, csharp-format
 msgid " You can copy the body of an error to the clipboard by double clicking it"
 msgstr "您可通过双击将详细信息复制到剪贴板"
-
-#: ErrorLogWindow~closeButton.Text
-#: MoveDataPrompt~button2.Text
-#: RemoteSettingsDialog~CloseFormButton.Text
-#: StatsDialog~CloseFormButton.Text
-#, csharp-format
-msgid "Close"
-msgstr "关闭"
-
-#: ErrorLogWindow~$this.Text
-#, csharp-format
-msgid "Error Log"
-msgstr "错误日志"
-
-#: FindDialog~findButton.Text
-#, csharp-format
-msgid "Find"
-msgstr "Find"
-
-#: FindDialog~CaseSensitiveCheckBox.Text
-#, csharp-format
-msgid "Case insensitiv"
-msgstr "Case insensitiv"
 
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
 msgstr "Find Torrent..."
 
+#: FindDialog~CaseSensitiveCheckBox.Text
+#, csharp-format
+msgid "Case insensitiv"
+msgstr "Case insensitiv"
+
+#: FindDialog~findButton.Text
+#, csharp-format
+msgid "Find"
+msgstr "Find"
+
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
 msgstr "Find what:"
 
-#: LocalSettingsDialog~SaveButton.Text
-#: RemoteSettingsDialog~SaveButton.Text
+#: LocalSettingsDialog~$this.Text
+#: MainWindow~localConfigureButton.Text
 #, csharp-format
-msgid "Save"
-msgstr "保存"
+msgid "Local Settings"
+msgstr "本地设置"
+
+#: LocalSettingsDialog~AddShareButton.Text
+#, csharp-format
+msgid "Add"
+msgstr "Add"
+
+#: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
+#, csharp-format
+msgid "Check for update at startup"
+msgstr "Check for update at startup"
+
+#: LocalSettingsDialog~ClearPasswordCheckBox.Text
+#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
+#, csharp-format
+msgid "Clear the password at save"
+msgstr "Clear the password at save"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
@@ -168,35 +184,115 @@ msgstr "保存"
 msgid "Cancel"
 msgstr "取消"
 
-#: LocalSettingsDialog~SaveAndConnectButton.Text
+#: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
-msgid "Save and Connect"
-msgstr "Save and Connect"
+msgid "Delete torrent when adding"
+msgstr "Delete torrent when adding"
 
-#: LocalSettingsDialog~groupAutoConnect.Text
+#: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
 #, csharp-format
-msgid "Auto connect"
-msgstr "Auto connect"
+msgid "Don't save passwords"
+msgstr "Don't save passwords"
 
-#: LocalSettingsDialog~groupCurrentProfile.Text
+#: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
-msgid "Current profile"
-msgstr "Current profile"
+msgid "Enable authentication"
+msgstr "启用验证"
+
+#: LocalSettingsDialog~EnableProxyCombo.Items
+#, csharp-format
+msgid "Auto"
+msgstr "自动"
+
+#: LocalSettingsDialog~EnableProxyCombo.Items1
+#, csharp-format
+msgid "Enabled"
+msgstr "启用"
+
+#: LocalSettingsDialog~EnableProxyCombo.Items2
+#, csharp-format
+msgid "Disabled"
+msgstr "禁用"
+
+#: LocalSettingsDialog~MinToTrayCheckBox.Text
+#, csharp-format
+msgid "Enable tray icon"
+msgstr "启用任务栏图标"
+
+#: LocalSettingsDialog~PlinkEnableCheckBox.Text
+#, csharp-format
+msgid "Display remote command button"
+msgstr "Display remote command button"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
 msgstr "Browse"
 
-#: LocalSettingsDialog~groupPlinkPath.Text
+#: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
-msgid "plink.exe:"
-msgstr "plink.exe:"
+msgid "Authenticate"
+msgstr "验证"
 
-#: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
+#: LocalSettingsDialog~RemoveShareButton.Text
+#: MainWindow~removeToolStripMenuItem.Text
+#: OtherStrings~Remove
 #, csharp-format
-msgid "Don't save passwords"
-msgstr "Don't save passwords"
+msgid "Remove"
+msgstr "移除"
+
+#: LocalSettingsDialog~SaveAndConnectButton.Text
+#, csharp-format
+msgid "Save and Connect"
+msgstr "Save and Connect"
+
+#: LocalSettingsDialog~SaveButton.Text
+#: RemoteSettingsDialog~SaveButton.Text
+#, csharp-format
+msgid "Save"
+msgstr "保存"
+
+#: LocalSettingsDialog~SaveServerButton.Text
+#, csharp-format
+msgid "Save Server"
+msgstr "Save Server"
+
+#: LocalSettingsDialog~StartPausedCheckBox.Text
+#, csharp-format
+msgid "Start torrents paused"
+msgstr "开始时暂停任务"
+
+#: LocalSettingsDialog~UploadPromptCheckBox.Text
+#, csharp-format
+msgid "Upload prompt"
+msgstr "Upload prompt"
+
+#: LocalSettingsDialog~UseSSLCheckBox.Text
+#, csharp-format
+msgid "Secure (SSL)"
+msgstr "安全 (SSL)"
+
+#: LocalSettingsDialog~addServerToolStripMenuItem.Text
+#, csharp-format
+msgid "Add Server"
+msgstr "Add Server"
+
+#: LocalSettingsDialog~columnHost.Text
+#: OtherStrings~Host
+#, csharp-format
+msgid "Host"
+msgstr "主机"
+
+#: LocalSettingsDialog~columnName.Text
+#: MainWindow~columnHeader6.Text
+#, csharp-format
+msgid "Name"
+msgstr "名称"
+
+#: LocalSettingsDialog~columnPort.Text
+#, csharp-format
+msgid "Port"
+msgstr "Port"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
@@ -218,65 +314,30 @@ msgstr "Start/Stop torrent"
 msgid "Default Action:"
 msgstr "Default Action:"
 
-#: LocalSettingsDialog~DeleteTorrentCheckBox.Text
+#: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
-msgid "Delete torrent when adding"
-msgstr "Delete torrent when adding"
-
-#: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
-#, csharp-format
-msgid "Notification on completion"
-msgstr "完成任务时通知"
-
-#: LocalSettingsDialog~notificationOnAdditionCheckBox.Text
-#, csharp-format
-msgid "Notification on addition"
-msgstr "添加任务时通知"
-
-#: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
-#, csharp-format
-msgid "Minimize on close"
-msgstr "关闭时最小化"
-
-#: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
-#, csharp-format
-msgid "Check for update at startup"
-msgstr "Check for update at startup"
-
-#: LocalSettingsDialog~UploadPromptCheckBox.Text
-#, csharp-format
-msgid "Upload prompt"
-msgstr "Upload prompt"
-
-#: LocalSettingsDialog~MinToTrayCheckBox.Text
-#, csharp-format
-msgid "Enable tray icon"
-msgstr "启用任务栏图标"
+msgid "Auto connect"
+msgstr "Auto connect"
 
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
 msgstr "Behavior"
 
-#: LocalSettingsDialog~tabGlobalSettings.Text
+#: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
-msgid "Global Settings"
-msgstr "Global Settings"
+msgid "New mapping:"
+msgstr "New mapping:"
 
-#: LocalSettingsDialog~StartPausedCheckBox.Text
+#: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
-msgid "Start torrents paused"
-msgstr "开始时暂停任务"
+msgid "Current profile"
+msgstr "Current profile"
 
-#: LocalSettingsDialog~SaveServerButton.Text
+#: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
-msgid "Save Server"
-msgstr "Save Server"
-
-#: LocalSettingsDialog~UseSSLCheckBox.Text
-#, csharp-format
-msgid "Secure (SSL)"
-msgstr "安全 (SSL)"
+msgid "plink.exe:"
+msgstr "plink.exe:"
 
 #: LocalSettingsDialog~label1.Text
 #: LocalSettingsDialog~label6.Text
@@ -289,6 +350,36 @@ msgstr "主机:"
 msgid "Retry limit:"
 msgstr "重试上限:"
 
+#: LocalSettingsDialog~label11.Text
+#, csharp-format
+msgid "UNIX path prefix:"
+msgstr "UNIX path prefix:"
+
+#: LocalSettingsDialog~label13.Text
+#, csharp-format
+msgid "Command: "
+msgstr "命令: "
+
+#: LocalSettingsDialog~label14.Text
+#, csharp-format
+msgid "Samba share:"
+msgstr "Samba share:"
+
+#: LocalSettingsDialog~label15.Text
+#, csharp-format
+msgid "Help: "
+msgstr "帮助: "
+
+#: LocalSettingsDialog~label16.Text
+#, csharp-format
+msgid "Upload limit menu items:"
+msgstr "上传上限菜单项:"
+
+#: LocalSettingsDialog~label17.Text
+#, csharp-format
+msgid "Download limit menu items:"
+msgstr "下载上限菜单项:"
+
 #: LocalSettingsDialog~label2.Text
 #: LocalSettingsDialog~label7.Text
 #, csharp-format
@@ -300,16 +391,11 @@ msgstr "端口:"
 msgid "Refresh Rate:"
 msgstr "刷新速率:"
 
-#: LocalSettingsDialog~tabPage1.Text
+#: LocalSettingsDialog~label4.Text
+#: LocalSettingsDialog~label8.Text
 #, csharp-format
-msgid "Server"
-msgstr "服务器"
-
-#: LocalSettingsDialog~ClearPasswordCheckBox.Text
-#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
-#, csharp-format
-msgid "Clear the password at save"
-msgstr "Clear the password at save"
+msgid "User:"
+msgstr "用户:"
 
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
@@ -317,174 +403,139 @@ msgstr "Clear the password at save"
 msgid "Password:"
 msgstr "密码:"
 
-#: LocalSettingsDialog~EnableAuthCheckBox.Text
-#, csharp-format
-msgid "Enable authentication"
-msgstr "启用验证"
-
-#: LocalSettingsDialog~label4.Text
-#: LocalSettingsDialog~label8.Text
-#, csharp-format
-msgid "User:"
-msgstr "用户:"
-
-#: LocalSettingsDialog~tabPage2.Text
-#, csharp-format
-msgid "Authentication"
-msgstr "验证"
-
-#: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
-#, csharp-format
-msgid "Authenticate"
-msgstr "验证"
-
-#: LocalSettingsDialog~EnableProxyCombo.Items
-#, csharp-format
-msgid "Auto"
-msgstr "自动"
-
-#: LocalSettingsDialog~EnableProxyCombo.Items1
-#, csharp-format
-msgid "Enabled"
-msgstr "启用"
-
-#: LocalSettingsDialog~EnableProxyCombo.Items2
-#, csharp-format
-msgid "Disabled"
-msgstr "禁用"
-
-#: LocalSettingsDialog~tabPage3.Text
-#, csharp-format
-msgid "Proxy"
-msgstr "代理"
-
-#: LocalSettingsDialog~label15.Text
-#, csharp-format
-msgid "Help: "
-msgstr "帮助: "
-
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
 msgid "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
 msgstr "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
 
-#: LocalSettingsDialog~label13.Text
+#: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
 #, csharp-format
-msgid "Command: "
-msgstr "命令: "
+msgid "Minimize on close"
+msgstr "关闭时最小化"
 
-#: LocalSettingsDialog~PlinkEnableCheckBox.Text
+#: LocalSettingsDialog~notificationOnAdditionCheckBox.Text
 #, csharp-format
-msgid "Display remote command button"
-msgstr "Display remote command button"
+msgid "Notification on addition"
+msgstr "添加任务时通知"
 
-#: LocalSettingsDialog~tabPage5.Text
+#: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
 #, csharp-format
-msgid "SSH"
-msgstr "SSH"
-
-#: LocalSettingsDialog~label17.Text
-#, csharp-format
-msgid "Download limit menu items:"
-msgstr "下载上限菜单项:"
-
-#: LocalSettingsDialog~label16.Text
-#, csharp-format
-msgid "Upload limit menu items:"
-msgstr "上传上限菜单项:"
-
-#: LocalSettingsDialog~tabPage6.Text
-#, csharp-format
-msgid "Misc"
-msgstr "Misc"
-
-#: LocalSettingsDialog~label11.Text
-#, csharp-format
-msgid "UNIX path prefix:"
-msgstr "UNIX path prefix:"
-
-#: LocalSettingsDialog~AddShareButton.Text
-#, csharp-format
-msgid "Add"
-msgstr "Add"
-
-#: LocalSettingsDialog~label14.Text
-#, csharp-format
-msgid "Samba share:"
-msgstr "Samba share:"
-
-#: LocalSettingsDialog~groupBox1.Text
-#, csharp-format
-msgid "New mapping:"
-msgstr "New mapping:"
-
-#: LocalSettingsDialog~RemoveShareButton.Text
-#: MainWindow~removeToolStripMenuItem.Text
-#: OtherStrings~Remove
-#, csharp-format
-msgid "Remove"
-msgstr "移除"
-
-#: LocalSettingsDialog~tabPage7.Text
-#, csharp-format
-msgid "Samba"
-msgstr "Samba"
-
-#: LocalSettingsDialog~columnName.Text
-#: MainWindow~columnHeader6.Text
-#, csharp-format
-msgid "Name"
-msgstr "名称"
-
-#: LocalSettingsDialog~columnHost.Text
-#: OtherStrings~Host
-#, csharp-format
-msgid "Host"
-msgstr "主机"
-
-#: LocalSettingsDialog~columnPort.Text
-#, csharp-format
-msgid "Port"
-msgstr "Port"
-
-#: LocalSettingsDialog~addServerToolStripMenuItem.Text
-#, csharp-format
-msgid "Add Server"
-msgstr "Add Server"
+msgid "Notification on completion"
+msgstr "完成任务时通知"
 
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
 msgstr "Remove Server"
 
+#: LocalSettingsDialog~tabGlobalSettings.Text
+#, csharp-format
+msgid "Global Settings"
+msgstr "Global Settings"
+
+#: LocalSettingsDialog~tabPage1.Text
+#, csharp-format
+msgid "Server"
+msgstr "服务器"
+
+#: LocalSettingsDialog~tabPage2.Text
+#, csharp-format
+msgid "Authentication"
+msgstr "验证"
+
+#: LocalSettingsDialog~tabPage3.Text
+#, csharp-format
+msgid "Proxy"
+msgstr "代理"
+
+#: LocalSettingsDialog~tabPage5.Text
+#, csharp-format
+msgid "SSH"
+msgstr "SSH"
+
+#: LocalSettingsDialog~tabPage6.Text
+#, csharp-format
+msgid "Misc"
+msgstr "Misc"
+
+#: LocalSettingsDialog~tabPage7.Text
+#, csharp-format
+msgid "Samba"
+msgstr "Samba"
+
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
 msgstr "Servers Settings"
 
-#: LocalSettingsDialog~$this.Text
-#: MainWindow~localConfigureButton.Text
+#: MainWindow~$this.Text
+#: MainWindow~notifyIcon.Text
 #, csharp-format
-msgid "Local Settings"
-msgstr "本地设置"
+msgid "Transmission Remote"
+msgstr "Transmission Remote"
 
-#: MainWindow~columnHeader7.Text
-#: MainWindow~columnHeader2.Text
-#: TorrentLoadDialog~columnHeader5.Text
+#: MainWindow~AltSpeedButton.Text
 #, csharp-format
-msgid "Size"
-msgstr "大小"
+msgid "Alt Speed"
+msgstr "Alt Speed"
 
-#: MainWindow~columnHeader8.Text
-#: MainWindow~columnHeader3.Text
+#: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
-msgid "Done"
-msgstr "完成"
+msgid "About Transmission Remote"
+msgstr "关于 Transmission Remote"
 
-#: MainWindow~columnHeader9.Text
+#: MainWindow~addTorrentButton.Text
 #, csharp-format
-msgid "Status"
-msgstr "状态"
+msgid "Add Torrent"
+msgstr "添加任务"
+
+#: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
+#, csharp-format
+msgid "Add torrent from URL"
+msgstr "从链接添加任务"
+
+#: MainWindow~addTorrentToolStripMenuItem.Text
+#, csharp-format
+msgid "Quick add torrent"
+msgstr "添加任务"
+
+#: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
+#, csharp-format
+msgid "Add torrent with options"
+msgstr "添加任务 (附加选项)"
+
+#: MainWindow~addWebTorrentButton.Text
+#, csharp-format
+msgid "Add Torrent from URL"
+msgstr "从链接添加任务"
+
+#: MainWindow~allToolStripMenuItem.Text
+#: OtherStrings~All
+#, csharp-format
+msgid "All"
+msgstr "全部"
+
+#: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
+#: OtherStrings~CopyAsCSV
+#, csharp-format
+msgid "CSV info to clipboard"
+msgstr "复制为CSV"
+
+#: MainWindow~categoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr "分类过滤面板"
+
+#: MainWindow~checkForNewVersionToolStripMenuItem.Text
+#, csharp-format
+msgid "Check for new version"
+msgstr "检查版本更新"
+
+#: MainWindow~columnHeader1.Text
+#: TorrentLoadDialog~columnHeader1.Text
+#, csharp-format
+msgid "Path"
+msgstr "路径"
 
 #: MainWindow~columnHeader10.Text
 #, csharp-format
@@ -523,6 +574,13 @@ msgstr "已上传"
 msgid "Ratio"
 msgstr "分享率"
 
+#: MainWindow~columnHeader17.Text
+#: OtherStrings~Skip
+#: TorrentLoadDialog~columnHeader2.Text
+#, csharp-format
+msgid "Skip"
+msgstr "忽略"
+
 #: MainWindow~columnHeader18.Text
 #, csharp-format
 msgid "Added At"
@@ -533,127 +591,12 @@ msgstr "添加于"
 msgid "Completed At"
 msgstr "完成于"
 
-#: MainWindow~columnHeader30.Text
+#: MainWindow~columnHeader2.Text
+#: MainWindow~columnHeader7.Text
+#: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
-msgid "Tracker"
-msgstr "伺服器"
-
-#: MainWindow~downloadProgressLabel.Text
-#, csharp-format
-msgid "Pieces: "
-msgstr "已下载:"
-
-#: MainWindow~percentageLabel.Text
-#, csharp-format
-msgid "_"
-msgstr "This is selectable text"
-
-#: MainWindow~piecesInfoLabelLabel.Text
-#, csharp-format
-msgid "Pieces:"
-msgstr "Pieces:"
-
-#: MainWindow~hashLabelLabel.Text
-#, csharp-format
-msgid "Hash:"
-msgstr "Hash:"
-
-#: MainWindow~label17.Text
-#, csharp-format
-msgid "Created by:"
-msgstr "创建者:"
-
-#: MainWindow~label16.Text
-#, csharp-format
-msgid "Created at:"
-msgstr "创建于:"
-
-#: MainWindow~labelForErrorLabel.Text
-#, csharp-format
-msgid "Error:"
-msgstr "错误:"
-
-#: MainWindow~label15.Text
-#, csharp-format
-msgid "Comment:"
-msgstr "注释:"
-
-#: MainWindow~label14.Text
-#, csharp-format
-msgid "Ratio:"
-msgstr "分享率:"
-
-#: MainWindow~label13.Text
-#, csharp-format
-msgid "Leechers:"
-msgstr "下载者:"
-
-#: MainWindow~label10.Text
-#, csharp-format
-msgid "Seeds:"
-msgstr "做种者:"
-
-#: MainWindow~label12.Text
-#, csharp-format
-msgid "Upload limit:"
-msgstr "上传限速:"
-
-#: MainWindow~label8.Text
-#, csharp-format
-msgid "Upload speed:"
-msgstr "上传速率:"
-
-#: MainWindow~label5.Text
-#, csharp-format
-msgid "Uploaded:"
-msgstr "已上传:"
-
-#: MainWindow~label4.Text
-#, csharp-format
-msgid "Remaining:"
-msgstr "剩余时间:"
-
-#: MainWindow~label11.Text
-#, csharp-format
-msgid "Status:"
-msgstr "状态:"
-
-#: MainWindow~label9.Text
-#, csharp-format
-msgid "Download limit:"
-msgstr "下载限速:"
-
-#: MainWindow~label7.Text
-#, csharp-format
-msgid "Download speed:"
-msgstr "下载速率:"
-
-#: MainWindow~label6.Text
-#, csharp-format
-msgid "Downloaded:"
-msgstr "已下载:"
-
-#: MainWindow~label3.Text
-#, csharp-format
-msgid "Started At:"
-msgstr "起始于:"
-
-#: MainWindow~timeElapsedLabelLabel.Text
-#, csharp-format
-msgid "Time elapsed:"
-msgstr "运行时间:"
-
-#: MainWindow~generalTabPage.Text
-#: RemoteSettingsDialog~tabPage1.Text
-#: TorrentPropertiesDialog~tabGeneral.Text
-#, csharp-format
-msgid "General"
-msgstr "常规"
-
-#: MainWindow~columnHeader22.Text
-#, csharp-format
-msgid "Tier"
-msgstr "层"
+msgid "Size"
+msgstr "大小"
 
 #: MainWindow~columnHeader20.Text
 #, csharp-format
@@ -665,46 +608,10 @@ msgstr "通知 URL"
 msgid "Scrape URL"
 msgstr "获取 URL"
 
-#: MainWindow~trackersTabPage.Text
-#: TorrentPropertiesDialog~tabTrackers.Text
+#: MainWindow~columnHeader22.Text
 #, csharp-format
-msgid "Trackers"
-msgstr "伺服器"
-
-#: MainWindow~columnHeader1.Text
-#: TorrentLoadDialog~columnHeader1.Text
-#, csharp-format
-msgid "Path"
-msgstr "路径"
-
-#: MainWindow~columnHeader32.Text
-#: TorrentLoadDialog~columnHeader4.Text
-#, csharp-format
-msgid "Type"
-msgstr "类型"
-
-#: MainWindow~columnHeader4.Text
-#, csharp-format
-msgid "%"
-msgstr "%"
-
-#: MainWindow~columnHeader17.Text
-#: OtherStrings~Skip
-#: TorrentLoadDialog~columnHeader2.Text
-#, csharp-format
-msgid "Skip"
-msgstr "忽略"
-
-#: MainWindow~columnHeader5.Text
-#: TorrentLoadDialog~columnHeader3.Text
-#, csharp-format
-msgid "Priority"
-msgstr "优先级"
-
-#: MainWindow~filesTabPage.Text
-#, csharp-format
-msgid "Files"
-msgstr "文件"
+msgid "Tier"
+msgstr "层"
 
 #: MainWindow~columnHeader23.Text
 #, csharp-format
@@ -721,11 +628,6 @@ msgstr "主机名"
 msgid "Country"
 msgstr "国家"
 
-#: MainWindow~columnHeader31.Text
-#, csharp-format
-msgid "Flags"
-msgstr "标志"
-
 #: MainWindow~columnHeader26.Text
 #, csharp-format
 msgid "Client"
@@ -737,54 +639,49 @@ msgstr "客户端"
 msgid "Progress"
 msgstr "进度"
 
-#: MainWindow~peersTabPage.Text
+#: MainWindow~columnHeader3.Text
+#: MainWindow~columnHeader8.Text
 #, csharp-format
-msgid "Peers"
-msgstr "用户"
+msgid "Done"
+msgstr "完成"
 
-#: MainWindow~label18.Text
+#: MainWindow~columnHeader30.Text
 #, csharp-format
-msgid "Resolution:"
-msgstr "解析单位:"
+msgid "Tracker"
+msgstr "伺服器"
 
-#: MainWindow~label20.Text
-#: OtherStrings~Down
+#: MainWindow~columnHeader31.Text
 #, csharp-format
-msgid "Down"
-msgstr "下载"
+msgid "Flags"
+msgstr "标志"
 
-#: MainWindow~label19.Text
-#: OtherStrings~Up
+#: MainWindow~columnHeader32.Text
+#: TorrentLoadDialog~columnHeader4.Text
 #, csharp-format
-msgid "Up"
-msgstr "上传"
+msgid "Type"
+msgstr "类型"
 
-#: MainWindow~speedGraph.Text
+#: MainWindow~columnHeader4.Text
 #, csharp-format
-msgid "c2DPushGraph1"
-msgstr "c2DPushGraph1"
+msgid "%"
+msgstr "%"
 
-#: MainWindow~groupBox1.Text
+#: MainWindow~columnHeader5.Text
+#: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
-msgid "Overall bandwidth utilisation"
-msgstr "总体带宽使用率"
+msgid "Priority"
+msgstr "优先级"
 
-#: MainWindow~speedTabPage.Text
+#: MainWindow~columnHeader9.Text
 #, csharp-format
-msgid "Speed"
-msgstr "速度"
+msgid "Status"
+msgstr "状态"
 
-#: MainWindow~statusStrip.Text
-#: TorrentLoadDialog~statusStrip1.Text
-#: UriPromptWindow~statusStrip1.Text
+#: MainWindow~configureTorrentButton.Text
+#: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
-msgid "statusStrip1"
-msgstr "statusStrip1"
-
-#: MainWindow~toolStripContainer1.Text
-#, csharp-format
-msgid "toolStripContainer1"
-msgstr "toolStripContainer1"
+msgid "Set torrent(s) properties"
+msgstr "设置任务属性"
 
 #: MainWindow~connectButton.Text
 #: MainWindow~connectToolStripMenuItem.Text
@@ -793,6 +690,12 @@ msgstr "toolStripContainer1"
 msgid "Connect"
 msgstr "连接"
 
+#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "复制对象信息到剪贴板"
+
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
@@ -800,105 +703,10 @@ msgstr "连接"
 msgid "Disconnect"
 msgstr "断开"
 
-#: MainWindow~addTorrentButton.Text
+#: MainWindow~downloadProgressLabel.Text
 #, csharp-format
-msgid "Add Torrent"
-msgstr "添加任务"
-
-#: MainWindow~addWebTorrentButton.Text
-#, csharp-format
-msgid "Add Torrent from URL"
-msgstr "从链接添加任务"
-
-#: MainWindow~startTorrentButton.Text
-#: MainWindow~startTorrentButton.ToolTipText
-#, csharp-format
-msgid "Start torrent(s)"
-msgstr "开始任务"
-
-#: MainWindow~pauseTorrentButton.Text
-#, csharp-format
-msgid "Pause torrent(s)"
-msgstr "暂停任务"
-
-#: MainWindow~recheckTorrentButton.Text
-#: MainWindow~recheckTorrentButton.ToolTipText
-#, csharp-format
-msgid "Recheck torrent(s)"
-msgstr "重校验"
-
-#: MainWindow~configureTorrentButton.Text
-#: MainWindow~configureTorrentButton.ToolTipText
-#, csharp-format
-msgid "Set torrent(s) properties"
-msgstr "设置任务属性"
-
-#: MainWindow~removeTorrentButton.Text
-#, csharp-format
-msgid "Remove torrent(s)"
-msgstr "移除任务"
-
-#: MainWindow~removeAndDeleteButton.Text
-#, csharp-format
-msgid "Remove and delete torrent(s)"
-msgstr "移除任务并删除数据"
-
-#: MainWindow~allToolStripMenuItem.Text
-#: OtherStrings~All
-#, csharp-format
-msgid "All"
-msgstr "全部"
-
-#: MainWindow~recentlyActiveToolStripMenuItem.Text
-#, csharp-format
-msgid "Recently Active"
-msgstr "最近活动"
-
-#: MainWindow~reannounceButton.Text
-#: MainWindow~reannounceToolStripMenuItem.Text
-#: OtherStrings~Reannounce
-#, csharp-format
-msgid "Reannounce"
-msgstr "重新通告"
-
-#: MainWindow~openNetworkShareButton.Text
-#: MainWindow~openNetworkShareToolStripMenuItem.Text
-#, csharp-format
-msgid "Open on network share"
-msgstr "在网络共享目录中打开"
-
-#: MainWindow~AltSpeedButton.Text
-#, csharp-format
-msgid "Alt Speed"
-msgstr "Alt Speed"
-
-#: MainWindow~remoteConfigureButton.Text
-#: RemoteSettingsDialog~$this.Text
-#, csharp-format
-msgid "Remote Settings"
-msgstr "远程设置"
-
-#: MainWindow~sessionStatsButton.Text
-#: MainWindow~statsToolStripMenuItem.Text
-#: OtherStrings~DisplayStatistics
-#, csharp-format
-msgid "Display statistics"
-msgstr "显示统计"
-
-#: MainWindow~addTorrentToolStripMenuItem.Text
-#, csharp-format
-msgid "Quick add torrent"
-msgstr "添加任务"
-
-#: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
-#, csharp-format
-msgid "Add torrent with options"
-msgstr "添加任务 (附加选项)"
-
-#: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
-#, csharp-format
-msgid "Add torrent from URL"
-msgstr "从链接添加任务"
+msgid "Pieces: "
+msgstr "已下载:"
 
 #: MainWindow~exitToolStripMenuItem.Text
 #: OtherStrings~Exit
@@ -911,60 +719,149 @@ msgstr "退出"
 msgid "File"
 msgstr "文件"
 
-#: MainWindow~localSettingsToolStripMenuItem.Text
+#: MainWindow~filesTabPage.Text
 #, csharp-format
-msgid "Local settings"
-msgstr "本地设置"
-
-#: MainWindow~remoteSettingsToolStripMenuItem.Text
-#, csharp-format
-msgid "Remote settings"
-msgstr "远程设置"
-
-#: MainWindow~languageToolStripMenuItem.Text
-#, csharp-format
-msgid "Language"
-msgstr "语言"
-
-#: MainWindow~optionsToolStripMenuItem.Text
-#, csharp-format
-msgid "Options"
-msgstr "选项"
+msgid "Files"
+msgstr "文件"
 
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
 msgstr "Find..."
 
-#: MainWindow~startToolStripMenuItem.Text
-#: OtherStrings~Start
+#: MainWindow~generalTabPage.Text
+#: RemoteSettingsDialog~tabPage1.Text
+#: TorrentPropertiesDialog~tabGeneral.Text
 #, csharp-format
-msgid "Start"
-msgstr "开始"
+msgid "General"
+msgstr "常规"
 
-#: MainWindow~pauseToolStripMenuItem.Text
-#: OtherStrings~Pause
+#: MainWindow~groupBox1.Text
 #, csharp-format
-msgid "Pause"
-msgstr "暂停"
+msgid "Overall bandwidth utilisation"
+msgstr "总体带宽使用率"
 
-#: MainWindow~recheckToolStripMenuItem.Text
-#: OtherStrings~Recheck
+#: MainWindow~hashLabelLabel.Text
 #, csharp-format
-msgid "Recheck"
-msgstr "校验"
+msgid "Hash:"
+msgstr "Hash:"
 
-#: MainWindow~propertiesToolStripMenuItem.Text
-#: OtherStrings~Properties
+#: MainWindow~helpToolStripMenuItem.Text
 #, csharp-format
-msgid "Properties"
-msgstr "属性"
+msgid "Help"
+msgstr "帮助"
 
-#: MainWindow~removeDeleteToolStripMenuItem.Text
-#: OtherStrings~RemoveAndDelete
+#: MainWindow~label10.Text
 #, csharp-format
-msgid "Remove and delete"
-msgstr "移除并删除数据"
+msgid "Seeds:"
+msgstr "做种者:"
+
+#: MainWindow~label11.Text
+#, csharp-format
+msgid "Status:"
+msgstr "状态:"
+
+#: MainWindow~label12.Text
+#, csharp-format
+msgid "Upload limit:"
+msgstr "上传限速:"
+
+#: MainWindow~label13.Text
+#, csharp-format
+msgid "Leechers:"
+msgstr "下载者:"
+
+#: MainWindow~label14.Text
+#, csharp-format
+msgid "Ratio:"
+msgstr "分享率:"
+
+#: MainWindow~label15.Text
+#, csharp-format
+msgid "Comment:"
+msgstr "注释:"
+
+#: MainWindow~label16.Text
+#, csharp-format
+msgid "Created at:"
+msgstr "创建于:"
+
+#: MainWindow~label17.Text
+#, csharp-format
+msgid "Created by:"
+msgstr "创建者:"
+
+#: MainWindow~label18.Text
+#, csharp-format
+msgid "Resolution:"
+msgstr "解析单位:"
+
+#: MainWindow~label19.Text
+#: OtherStrings~Up
+#, csharp-format
+msgid "Up"
+msgstr "上传"
+
+#: MainWindow~label20.Text
+#: OtherStrings~Down
+#, csharp-format
+msgid "Down"
+msgstr "下载"
+
+#: MainWindow~label3.Text
+#, csharp-format
+msgid "Started At:"
+msgstr "起始于:"
+
+#: MainWindow~label4.Text
+#, csharp-format
+msgid "Remaining:"
+msgstr "剩余时间:"
+
+#: MainWindow~label5.Text
+#, csharp-format
+msgid "Uploaded:"
+msgstr "已上传:"
+
+#: MainWindow~label6.Text
+#, csharp-format
+msgid "Downloaded:"
+msgstr "已下载:"
+
+#: MainWindow~label7.Text
+#, csharp-format
+msgid "Download speed:"
+msgstr "下载速率:"
+
+#: MainWindow~label8.Text
+#, csharp-format
+msgid "Upload speed:"
+msgstr "上传速率:"
+
+#: MainWindow~label9.Text
+#, csharp-format
+msgid "Download limit:"
+msgstr "下载限速:"
+
+#: MainWindow~labelForErrorLabel.Text
+#, csharp-format
+msgid "Error:"
+msgstr "错误:"
+
+#: MainWindow~languageToolStripMenuItem.Text
+#, csharp-format
+msgid "Language"
+msgstr "语言"
+
+#: MainWindow~localSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Local settings"
+msgstr "本地设置"
+
+#: MainWindow~menuStrip.Text
+#, csharp-format
+msgid "menuStrip1"
+msgstr "menuStrip1"
 
 #: MainWindow~moveTorrentDataToolStripMenuItem.Text
 #: OtherStrings~MoveTorrentData
@@ -972,17 +869,131 @@ msgstr "移除并删除数据"
 msgid "Move torrent data"
 msgstr "更改下载目录"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
+#: MainWindow~openNetworkShareButton.Text
+#: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
-msgid "Info object to clipboard"
-msgstr "复制对象信息到剪贴板"
+msgid "Open on network share"
+msgstr "在网络共享目录中打开"
 
-#: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
-#: OtherStrings~CopyAsCSV
+#: MainWindow~optionsToolStripMenuItem.Text
 #, csharp-format
-msgid "CSV info to clipboard"
-msgstr "复制为CSV"
+msgid "Options"
+msgstr "选项"
+
+#: MainWindow~pauseToolStripMenuItem.Text
+#: OtherStrings~Pause
+#, csharp-format
+msgid "Pause"
+msgstr "暂停"
+
+#: MainWindow~pauseTorrentButton.Text
+#, csharp-format
+msgid "Pause torrent(s)"
+msgstr "暂停任务"
+
+#: MainWindow~peersTabPage.Text
+#, csharp-format
+msgid "Peers"
+msgstr "用户"
+
+#: MainWindow~percentageLabel.Text
+#, csharp-format
+msgid "_"
+msgstr "This is selectable text"
+
+#: MainWindow~piecesInfoLabelLabel.Text
+#, csharp-format
+msgid "Pieces:"
+msgstr "Pieces:"
+
+#: MainWindow~projectSiteToolStripMenuItem.Text
+#, csharp-format
+msgid "Project site"
+msgstr "项目站点"
+
+#: MainWindow~propertiesToolStripMenuItem.Text
+#: OtherStrings~Properties
+#, csharp-format
+msgid "Properties"
+msgstr "属性"
+
+#: MainWindow~reannounceButton.Text
+#: MainWindow~reannounceToolStripMenuItem.Text
+#: OtherStrings~Reannounce
+#, csharp-format
+msgid "Reannounce"
+msgstr "重新通告"
+
+#: MainWindow~recentlyActiveToolStripMenuItem.Text
+#, csharp-format
+msgid "Recently Active"
+msgstr "最近活动"
+
+#: MainWindow~recheckToolStripMenuItem.Text
+#: OtherStrings~Recheck
+#, csharp-format
+msgid "Recheck"
+msgstr "校验"
+
+#: MainWindow~recheckTorrentButton.Text
+#: MainWindow~recheckTorrentButton.ToolTipText
+#, csharp-format
+msgid "Recheck torrent(s)"
+msgstr "重校验"
+
+#: MainWindow~remoteConfigureButton.Text
+#: RemoteSettingsDialog~$this.Text
+#, csharp-format
+msgid "Remote Settings"
+msgstr "远程设置"
+
+#: MainWindow~remoteSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Remote settings"
+msgstr "远程设置"
+
+#: MainWindow~removeAndDeleteButton.Text
+#, csharp-format
+msgid "Remove and delete torrent(s)"
+msgstr "移除任务并删除数据"
+
+#: MainWindow~removeDeleteToolStripMenuItem.Text
+#: OtherStrings~RemoveAndDelete
+#, csharp-format
+msgid "Remove and delete"
+msgstr "移除并删除数据"
+
+#: MainWindow~removeTorrentButton.Text
+#, csharp-format
+msgid "Remove torrent(s)"
+msgstr "移除任务"
+
+#: MainWindow~sessionStatsButton.Text
+#: MainWindow~statsToolStripMenuItem.Text
+#: OtherStrings~DisplayStatistics
+#, csharp-format
+msgid "Display statistics"
+msgstr "显示统计"
+
+#: MainWindow~showDetailsPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Details panel"
+msgstr "详细面板"
+
+#: MainWindow~showErrorLogToolStripMenuItem.Text
+#, csharp-format
+msgid "Show Error Log"
+msgstr "显示错误日志"
+
+#: MainWindow~speedGraph.Text
+#, csharp-format
+msgid "c2DPushGraph1"
+msgstr "c2DPushGraph1"
+
+#: MainWindow~speedTabPage.Text
+#, csharp-format
+msgid "Speed"
+msgstr "速度"
 
 #: MainWindow~startAllToolStripMenuItem.Text
 #: OtherStrings~StartAll
@@ -990,87 +1001,81 @@ msgstr "复制为CSV"
 msgid "Start all"
 msgstr "开始所有"
 
+#: MainWindow~startToolStripMenuItem.Text
+#: OtherStrings~Start
+#, csharp-format
+msgid "Start"
+msgstr "开始"
+
+#: MainWindow~startTorrentButton.Text
+#: MainWindow~startTorrentButton.ToolTipText
+#, csharp-format
+msgid "Start torrent(s)"
+msgstr "开始任务"
+
+#: MainWindow~statusStrip.Text
+#: TorrentLoadDialog~statusStrip1.Text
+#: UriPromptWindow~statusStrip1.Text
+#, csharp-format
+msgid "statusStrip1"
+msgstr "statusStrip1"
+
 #: MainWindow~stopAllToolStripMenuItem.Text
 #: OtherStrings~PauseAll
 #, csharp-format
 msgid "Pause all"
 msgstr "暂停所有"
 
+#: MainWindow~timeElapsedLabelLabel.Text
+#, csharp-format
+msgid "Time elapsed:"
+msgstr "运行时间:"
+
+#: MainWindow~toolStripContainer1.Text
+#, csharp-format
+msgid "toolStripContainer1"
+msgstr "toolStripContainer1"
+
 #: MainWindow~torrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Torrent"
 msgstr "任务"
 
-#: MainWindow~showDetailsPanelToolStripMenuItem.Text
+#: MainWindow~trackersTabPage.Text
+#: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
-msgid "Details panel"
-msgstr "详细面板"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr "分类过滤面板"
+msgid "Trackers"
+msgstr "伺服器"
 
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
 msgid "View"
 msgstr "视图"
 
-#: MainWindow~showErrorLogToolStripMenuItem.Text
+#: MoveDataPrompt~$this.Text
 #, csharp-format
-msgid "Show Error Log"
-msgstr "显示错误日志"
-
-#: MainWindow~projectSiteToolStripMenuItem.Text
-#, csharp-format
-msgid "Project site"
-msgstr "项目站点"
-
-#: MainWindow~checkForNewVersionToolStripMenuItem.Text
-#, csharp-format
-msgid "Check for new version"
-msgstr "检查版本更新"
-
-#: MainWindow~aboutToolStripMenuItem.Text
-#, csharp-format
-msgid "About Transmission Remote"
-msgstr "关于 Transmission Remote"
-
-#: MainWindow~helpToolStripMenuItem.Text
-#, csharp-format
-msgid "Help"
-msgstr "帮助"
-
-#: MainWindow~menuStrip.Text
-#, csharp-format
-msgid "menuStrip1"
-msgstr "menuStrip1"
-
-#: MainWindow~notifyIcon.Text
-#: MainWindow~$this.Text
-#, csharp-format
-msgid "Transmission Remote"
-msgstr "Transmission Remote"
-
-#: MoveDataPrompt~label1.Text
-#, csharp-format
-msgid "Destination directory: "
-msgstr "下载目录:"
+msgid "MoveDataPrompt"
+msgstr "MoveDataPrompt"
 
 #: MoveDataPrompt~button1.Text
 #, csharp-format
 msgid "Move"
 msgstr "变更"
 
-#: MoveDataPrompt~$this.Text
+#: MoveDataPrompt~label1.Text
 #, csharp-format
-msgid "MoveDataPrompt"
-msgstr "MoveDataPrompt"
+msgid "Destination directory: "
+msgstr "下载目录:"
 
 #: OtherStrings~Author
 #, csharp-format
 msgid "Author"
 msgstr "作者"
+
+#: OtherStrings~BandwidthAllocation
+#, csharp-format
+msgid "Bandwidth allocation"
+msgstr "Bandwidth allocation"
 
 #: OtherStrings~Broken
 #, csharp-format
@@ -1081,6 +1086,11 @@ msgstr "已损毁"
 #, csharp-format
 msgid "Build"
 msgstr "Build"
+
+#: OtherStrings~Byte
+#, csharp-format
+msgid "Byte"
+msgstr "Byte"
 
 #: OtherStrings~Checking
 #, csharp-format
@@ -1105,7 +1115,7 @@ msgstr "您选择移除 {0} 个任务. 是否确定?"
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "您选择移除 {0} 个任务. 是否确定?{1}所有属于此任务的数据将会被删除.""
+msgstr "您选择移除 {0} 个任务. 是否确定?{1}所有属于此任务的数据将会被删除."
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1115,7 +1125,7 @@ msgstr "您确定要移除 {0} 吗?"
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "您确定要移除 {0} 吗?{1}所有属于此任务的数据将会被删除.""
+msgstr "您确定要移除 {0} 吗?{1}所有属于此任务的数据将会被删除."
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
@@ -1132,6 +1142,11 @@ msgstr "连接到"
 msgid "Connecting"
 msgstr "正在连接"
 
+#: OtherStrings~Day
+#, csharp-format
+msgid "Day"
+msgstr "Day"
+
 #: OtherStrings~Disconnected
 #, csharp-format
 msgid "Disconnected"
@@ -1147,6 +1162,11 @@ msgstr "已断开. 已达到最大错误请求数."
 msgid "Download"
 msgstr "下载"
 
+#: OtherStrings~DownloadLimit
+#, csharp-format
+msgid "Download Limit"
+msgstr "下载上限"
+
 #: OtherStrings~DownloadedValid
 #, csharp-format
 msgid "{0} ({1} valid)"
@@ -1156,6 +1176,11 @@ msgstr "{0} ({1} 有效)"
 #, csharp-format
 msgid "Downloading"
 msgstr "正在下载"
+
+#: OtherStrings~EmptyFile
+#, csharp-format
+msgid "Empty file"
+msgstr "Empty file"
 
 #: OtherStrings~Error
 #, csharp-format
@@ -1167,180 +1192,10 @@ msgstr "错误"
 msgid "Failed request"
 msgstr "错误的请求"
 
-#: OtherStrings~High
+#: OtherStrings~GeoipInitError
 #, csharp-format
-msgid "High"
-msgstr "高"
-
-#: OtherStrings~HighPriority
-#, csharp-format
-msgid "High priority"
-msgstr "高优先级"
-
-#: OtherStrings~Info
-#, csharp-format
-msgid "Info"
-msgstr "信息"
-
-#: OtherStrings~InputAccepted
-#, csharp-format
-msgid "Input accepted"
-msgstr "已接受输入"
-
-#: OtherStrings~LatestVersion
-#, csharp-format
-msgid "You are using the latest version ({0}.{1})."
-msgstr "您正在使用最新版本 ({0}.{1})."
-
-#: OtherStrings~LatestVersionCheckFailed
-#, csharp-format
-msgid "Latest version check failed"
-msgstr "最新版本检查失败"
-
-#: OtherStrings~Low
-#, csharp-format
-msgid "Low"
-msgstr "低"
-
-#: OtherStrings~LowPriority
-#, csharp-format
-msgid "Low priority"
-msgstr "低优先级"
-
-#: OtherStrings~MustBeConnected
-#, csharp-format
-msgid "You must be connected to add torrents. Would you like to connect now?"
-msgstr "您必须连接才能添加任务. 您希望现在就连接吗?"
-
-#: OtherStrings~NewerVersion
-#, csharp-format
-msgid "There is a newer version ({0}.{1}) available. Would you like to visit the downloads page?"
-msgstr "有新版本 ({0}.{1}) 可用. 您希望访问下载页面吗?"
-
-#: OtherStrings~No
-#, csharp-format
-msgid "No"
-msgstr "No"
-
-#: OtherStrings~Normal
-#, csharp-format
-msgid "Normal"
-msgstr "普通"
-
-#: OtherStrings~NormalPriority
-#, csharp-format
-msgid "Normal priority"
-msgstr "普通优先级"
-
-#: OtherStrings~NotConnected
-#, csharp-format
-msgid "Not connected"
-msgstr "未连接"
-
-#: OtherStrings~NoUpgradeAvailable
-#, csharp-format
-msgid "No upgrade available"
-msgstr "无可用更新"
-
-#: OtherStrings~OpenFileFilter
-#, csharp-format
-msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
-msgstr "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
-
-#: OtherStrings~Paused
-#, csharp-format
-msgid "Paused"
-msgstr "已暂停"
-
-#: OtherStrings~Revision
-#, csharp-format
-msgid "Revision"
-msgstr "修订"
-
-#: OtherStrings~RpcVersion
-#, csharp-format
-msgid "RpcVersion"
-msgstr "RpcVersion"
-
-#: OtherStrings~RpcVersionMinimum
-#, csharp-format
-msgid "RpcVersionMinimum"
-msgstr "RpcVersionMinimum"
-
-#: OtherStrings~Seeding
-#, csharp-format
-msgid "Seeding"
-msgstr "正在做种"
-
-#: OtherStrings~SelectAll
-#, csharp-format
-msgid "Select all"
-msgstr "选择所有"
-
-#: OtherStrings~TheTorrentHasFinishedDownloading
-#, csharp-format
-msgid "This torrent is now complete"
-msgstr "此任务已完成下载"
-
-#: OtherStrings~Torrents
-#, csharp-format
-msgid "Torrents"
-msgstr "任务"
-
-#: OtherStrings~UnableToParse
-#, csharp-format
-msgid "Unable to parse the server response"
-msgstr "无法解析服务器响应"
-
-#: OtherStrings~UnknownNegativeResult
-#, csharp-format
-msgid "Unknown (negative)"
-msgstr "未知 (负)"
-
-#: OtherStrings~UnsuccessfulRequest
-#, csharp-format
-msgid "Unsuccessful request"
-msgstr "失败的请求"
-
-#: OtherStrings~UpgradeAvailable
-#, csharp-format
-msgid "Upgrade available"
-msgstr "更新可用"
-
-#: OtherStrings~WaitingForInput
-#, csharp-format
-msgid "Waiting for input"
-msgstr "正在等待输入"
-
-#: OtherStrings~WaitingToCheck
-#, csharp-format
-msgid "Waiting to check"
-msgstr "正在等待校验"
-
-#: OtherStrings~XOfYConnected
-#, csharp-format
-msgid "{0} of {1} connected"
-msgstr "{1}个中的{0}个 已连接"
-
-#: OtherStrings~Yes
-#, csharp-format
-msgid "Yes"
-msgstr "Yes"
-
-#: OtherStrings~Incomplete
-#, csharp-format
-msgid "Incomplete"
-msgstr "未完成"
-
-#: OtherStrings~Byte
-#, csharp-format
-msgid "Byte"
-msgstr "Byte"
-
-#: OtherStrings~Day
-#, csharp-format
-msgid "Day"
-msgstr "Day"
+msgid "GeoIP init error ({0})"
+msgstr "GeoIP init error ({0})"
 
 #: OtherStrings~Gigabyte
 #, csharp-format
@@ -1352,10 +1207,35 @@ msgstr "Gigabyte"
 msgid "GB"
 msgstr "GB"
 
+#: OtherStrings~High
+#, csharp-format
+msgid "High"
+msgstr "高"
+
+#: OtherStrings~HighPriority
+#, csharp-format
+msgid "High priority"
+msgstr "高优先级"
+
 #: OtherStrings~Hour
 #, csharp-format
 msgid "Hour"
 msgstr "Hour"
+
+#: OtherStrings~Incomplete
+#, csharp-format
+msgid "Incomplete"
+msgstr "未完成"
+
+#: OtherStrings~Info
+#, csharp-format
+msgid "Info"
+msgstr "信息"
+
+#: OtherStrings~InputAccepted
+#, csharp-format
+msgid "Input accepted"
+msgstr "已接受输入"
 
 #: OtherStrings~Kilobyte
 #, csharp-format
@@ -1366,6 +1246,31 @@ msgstr "Kilobyte"
 #, csharp-format
 msgid "KB"
 msgstr "KB"
+
+#: OtherStrings~LatestVersion
+#, csharp-format
+msgid "You are using the latest version ({0}.{1})."
+msgstr "您正在使用最新版本 ({0}.{1})."
+
+#: OtherStrings~LatestVersionCheckFailed
+#, csharp-format
+msgid "Latest version check failed"
+msgstr "最新版本检查失败"
+
+#: OtherStrings~LoadingFile
+#, csharp-format
+msgid "Loading {0}..."
+msgstr "载入中 {0}..."
+
+#: OtherStrings~Low
+#, csharp-format
+msgid "Low"
+msgstr "低"
+
+#: OtherStrings~LowPriority
+#, csharp-format
+msgid "Low priority"
+msgstr "低优先级"
 
 #: OtherStrings~Megabyte
 #, csharp-format
@@ -1382,10 +1287,90 @@ msgstr "MB"
 msgid "Minute"
 msgstr "Minute"
 
-#: OtherStrings~Second
+#: OtherStrings~MoveMultipleTorrents
 #, csharp-format
-msgid "Second"
-msgstr "Second"
+msgid "Move multiple torrent data"
+msgstr "移动 (多选)"
+
+#: OtherStrings~MoveX
+#, csharp-format
+msgid "Move {0}"
+msgstr "移动 {0}"
+
+#: OtherStrings~MultipleTorrentProperties
+#, csharp-format
+msgid "Multiple Torrent Properties"
+msgstr "Multiple Torrent Properties"
+
+#: OtherStrings~MustBeConnected
+#, csharp-format
+msgid "You must be connected to add torrents. Would you like to connect now?"
+msgstr "您必须连接才能添加任务. 您希望现在就连接吗?"
+
+#: OtherStrings~NewTorrentIs
+#, csharp-format
+msgid "New torrent {0}."
+msgstr "New torrent {0}."
+
+#: OtherStrings~NewerVersion
+#, csharp-format
+msgid "There is a newer version ({0}.{1}) available. Would you like to visit the downloads page?"
+msgstr "有新版本 ({0}.{1}) 可用. 您希望访问下载页面吗?"
+
+#: OtherStrings~No
+#, csharp-format
+msgid "No"
+msgstr "No"
+
+#: OtherStrings~NoUpgradeAvailable
+#, csharp-format
+msgid "No upgrade available"
+msgstr "无可用更新"
+
+#: OtherStrings~Normal
+#, csharp-format
+msgid "Normal"
+msgstr "普通"
+
+#: OtherStrings~NormalPriority
+#, csharp-format
+msgid "Normal priority"
+msgstr "普通优先级"
+
+#: OtherStrings~NotConnected
+#, csharp-format
+msgid "Not connected"
+msgstr "未连接"
+
+#: OtherStrings~OpenFileFilter
+#, csharp-format
+msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
+msgstr "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
+
+#: OtherStrings~OpenNetworkShare
+#, csharp-format
+msgid "Open on Network Share"
+msgstr "在网络共享目录中打开"
+
+#: OtherStrings~Password
+#, csharp-format
+msgid "Password"
+msgstr "Password"
+
+#: OtherStrings~Paused
+#, csharp-format
+msgid "Paused"
+msgstr "已暂停"
+
+#: OtherStrings~Pieces
+#, csharp-format
+msgid "Pieces"
+msgstr "区块"
+
+#: OtherStrings~PiecesInfo
+#, csharp-format
+msgid "{0} x {1} (have {2})"
+msgstr "{0} x {1} (have {2})"
 
 #: OtherStrings~PortIsClosed
 #, csharp-format
@@ -1402,165 +1387,170 @@ msgstr "您的 daemon 端口已打开."
 msgid "Port test result"
 msgstr "端口测试结果"
 
-#: OtherStrings~DownloadLimit
-#, csharp-format
-msgid "Download Limit"
-msgstr "下载上限"
-
-#: OtherStrings~Unlimited
-#, csharp-format
-msgid "Unlimited"
-msgstr "无限制"
-
-#: OtherStrings~UploadLimit
-#, csharp-format
-msgid "Upload Limit"
-msgstr "上传上限"
-
 #: OtherStrings~Querying
-#: StatsDialog~secondsActiveValue2.Text
-#: StatsDialog~sessionCountValue2.Text
-#: StatsDialog~filesAddedValue2.Text
-#: StatsDialog~uploadedBytesValue2.Text
-#: StatsDialog~downloadedBytesValue2.Text
-#: StatsDialog~secondsActiveValue1.Text
-#: StatsDialog~sessionCountValue1.Text
-#: StatsDialog~filesAddedValue1.Text
-#: StatsDialog~uploadedBytesValue1.Text
 #: StatsDialog~downloadedBytesValue1.Text
+#: StatsDialog~downloadedBytesValue2.Text
+#: StatsDialog~filesAddedValue1.Text
+#: StatsDialog~filesAddedValue2.Text
+#: StatsDialog~secondsActiveValue1.Text
+#: StatsDialog~secondsActiveValue2.Text
+#: StatsDialog~sessionCountValue1.Text
+#: StatsDialog~sessionCountValue2.Text
+#: StatsDialog~uploadedBytesValue1.Text
+#: StatsDialog~uploadedBytesValue2.Text
 #, csharp-format
 msgid "Querying..."
 msgstr "正在查询..."
 
-#: OtherStrings~Updating
+#: OtherStrings~Revision
 #, csharp-format
-msgid "Updating..."
-msgstr "正在上传..."
+msgid "Revision"
+msgstr "修订"
 
-#: OtherStrings~XInBlocklist
+#: OtherStrings~RpcVersion
 #, csharp-format
-msgid "{0} in blocklist."
-msgstr "{0}个在阻止列表."
+msgid "RpcVersion"
+msgstr "RpcVersion"
 
-#: OtherStrings~Pieces
+#: OtherStrings~RpcVersionMinimum
 #, csharp-format
-msgid "Pieces"
-msgstr "区块"
+msgid "RpcVersionMinimum"
+msgstr "RpcVersionMinimum"
 
-#: OtherStrings~OpenNetworkShare
+#: OtherStrings~Second
 #, csharp-format
-msgid "Open on Network Share"
-msgstr "在网络共享目录中打开"
+msgid "Second"
+msgstr "Second"
 
-#: OtherStrings~NewTorrentIs
+#: OtherStrings~Seeding
 #, csharp-format
-msgid "New torrent {0}."
-msgstr "New torrent {0}."
+msgid "Seeding"
+msgstr "正在做种"
 
-#: OtherStrings~MoveMultipleTorrents
+#: OtherStrings~SelectAll
 #, csharp-format
-msgid "Move multiple torrent data"
-msgstr "移动 (多选)"
-
-#: OtherStrings~MoveX
-#, csharp-format
-msgid "Move {0}"
-msgstr "移动 {0}"
-
-#: OtherStrings~LoadingFile
-#, csharp-format
-msgid "Loading {0}..."
-msgstr "载入中 {0}..."
-
-#: OtherStrings~BandwidthAllocation
-#, csharp-format
-msgid "Bandwidth allocation"
-msgstr "Bandwidth allocation"
-
-#: OtherStrings~MultipleTorrentProperties
-#, csharp-format
-msgid "Multiple Torrent Properties"
-msgstr "Multiple Torrent Properties"
-
-#: OtherStrings~Unknown
-#, csharp-format
-msgid "Unknown"
-msgstr "Unknown"
-
-#: OtherStrings~UnableToOpen
-#, csharp-format
-msgid "Unable to open"
-msgstr "Unable to open"
-
-#: OtherStrings~EmptyFile
-#, csharp-format
-msgid "Empty file"
-msgstr "Empty file"
-
-#: OtherStrings~GeoipInitError
-#, csharp-format
-msgid "GeoIP init error ({0})"
-msgstr "GeoIP init error ({0})"
-
-#: OtherStrings~UnknownResponseTag
-#, csharp-format
-msgid "Unknown response tag"
-msgstr "Unknown response tag"
-
-#: OtherStrings~XConnected
-#, csharp-format
-msgid "{0} connected"
-msgstr "{0} connected"
-
-#: OtherStrings~PiecesInfo
-#, csharp-format
-msgid "{0} x {1} (have {2})"
-msgstr "{0} x {1} (have {2})"
+msgid "Select all"
+msgstr "选择所有"
 
 #: OtherStrings~SpeedResolutions
 #, csharp-format
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr "5 sec|10 sec|30 sec|5 min"
 
-#: OtherStrings~Password
+#: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
-msgid "Password"
-msgstr "Password"
+msgid "This torrent is now complete"
+msgstr "此任务已完成下载"
 
-#: RemoteSettingsDialog~label1.Text
+#: OtherStrings~Torrents
 #, csharp-format
-msgid "Download To:"
-msgstr "下载到:"
+msgid "Torrents"
+msgstr "任务"
 
-#: RemoteSettingsDialog~limitUploadCheckBox.Text
+#: OtherStrings~UnableToOpen
 #, csharp-format
-msgid "Limit upload"
-msgstr "限制上传"
+msgid "Unable to open"
+msgstr "Unable to open"
 
-#: RemoteSettingsDialog~limitDownloadCheckBox.Text
+#: OtherStrings~UnableToParse
 #, csharp-format
-msgid "Limit download"
-msgstr "限制下载"
+msgid "Unable to parse the server response"
+msgstr "无法解析服务器响应"
 
-#: RemoteSettingsDialog~label2.Text
+#: OtherStrings~Unknown
 #, csharp-format
-msgid "Incoming port:"
-msgstr "传入端口:"
+msgid "Unknown"
+msgstr "Unknown"
+
+#: OtherStrings~UnknownNegativeResult
+#, csharp-format
+msgid "Unknown (negative)"
+msgstr "未知 (负)"
+
+#: OtherStrings~UnknownResponseTag
+#, csharp-format
+msgid "Unknown response tag"
+msgstr "Unknown response tag"
+
+#: OtherStrings~Unlimited
+#, csharp-format
+msgid "Unlimited"
+msgstr "无限制"
+
+#: OtherStrings~UnsuccessfulRequest
+#, csharp-format
+msgid "Unsuccessful request"
+msgstr "失败的请求"
+
+#: OtherStrings~Updating
+#, csharp-format
+msgid "Updating..."
+msgstr "正在上传..."
+
+#: OtherStrings~UpgradeAvailable
+#, csharp-format
+msgid "Upgrade available"
+msgstr "更新可用"
+
+#: OtherStrings~UploadLimit
+#, csharp-format
+msgid "Upload Limit"
+msgstr "上传上限"
+
+#: OtherStrings~WaitingForInput
+#, csharp-format
+msgid "Waiting for input"
+msgstr "正在等待输入"
+
+#: OtherStrings~WaitingToCheck
+#, csharp-format
+msgid "Waiting to check"
+msgstr "正在等待校验"
+
+#: OtherStrings~XConnected
+#, csharp-format
+msgid "{0} connected"
+msgstr "{0} connected"
+
+#: OtherStrings~XInBlocklist
+#, csharp-format
+msgid "{0} in blocklist."
+msgstr "{0}个在阻止列表."
+
+#: OtherStrings~XOfYConnected
+#, csharp-format
+msgid "{0} of {1} connected"
+msgstr "{1}个中的{0}个 已连接"
+
+#: OtherStrings~Yes
+#, csharp-format
+msgid "Yes"
+msgstr "Yes"
 
 #: RemoteSettingsDialog~PEXcheckBox.Text
 #, csharp-format
 msgid "Enable Peer Exchange"
 msgstr "启用 用户交换"
 
-#: RemoteSettingsDialog~label4.Text
+#: RemoteSettingsDialog~altSpeedLimitEnable.Text
 #, csharp-format
-msgid "Peer Limit"
-msgstr "用户上限"
+msgid "Enable alternate speed limits"
+msgstr "启用时段限速"
 
-#: RemoteSettingsDialog~portForwardCheckBox.Text
+#: RemoteSettingsDialog~altTimeConstraintEnabled.Text
 #, csharp-format
-msgid "Enable UPnP"
-msgstr "启用 UPnP"
+msgid "Time constraint"
+msgstr "约束时间"
+
+#: RemoteSettingsDialog~blocklistEnabledCheckBox.Text
+#, csharp-format
+msgid "Blocklist enabled"
+msgstr "启用 阻止列表"
+
+#: RemoteSettingsDialog~dhtEnabled.Text
+#, csharp-format
+msgid "Enable Distributed Hash Table (DHT)"
+msgstr "启用分布式哈希表 (DHT)"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items
 #, csharp-format
@@ -1577,40 +1567,77 @@ msgstr "优先"
 msgid "required"
 msgstr "必须"
 
-#: RemoteSettingsDialog~label3.Text
+#: RemoteSettingsDialog~label1.Text
 #, csharp-format
-msgid "Encryption:"
-msgstr "加密:"
+msgid "Download To:"
+msgstr "下载到:"
 
-#: RemoteSettingsDialog~label6.Text
-#: RemoteSettingsDialog~label5.Text
-#: RemoteSettingsDialog~label9.Text
 #: RemoteSettingsDialog~label10.Text
+#: RemoteSettingsDialog~label5.Text
+#: RemoteSettingsDialog~label6.Text
+#: RemoteSettingsDialog~label9.Text
 #: TorrentPropertiesDialog~label1.Text
 #: TorrentPropertiesDialog~label2.Text
 #, csharp-format
 msgid "KB/s"
 msgstr "KB/s"
 
-#: RemoteSettingsDialog~dhtEnabled.Text
+#: RemoteSettingsDialog~label11.Text
 #, csharp-format
-msgid "Enable Distributed Hash Table (DHT)"
-msgstr "启用分布式哈希表 (DHT)"
+msgid "Down:"
+msgstr "下载:"
 
-#: RemoteSettingsDialog~testPortButton.Text
+#: RemoteSettingsDialog~label12.Text
 #, csharp-format
-msgid "Test Port"
-msgstr "测试端口"
+msgid "Up:"
+msgstr "上传:"
 
-#: RemoteSettingsDialog~updateBlocklistButton.Text
+#: RemoteSettingsDialog~label13.Text
+#: RemoteSettingsDialog~label14.Text
 #, csharp-format
-msgid "Update Blocklist"
-msgstr "更新阻止列表"
+msgid ":"
+msgstr ":"
 
-#: RemoteSettingsDialog~blocklistEnabledCheckBox.Text
+#: RemoteSettingsDialog~label2.Text
 #, csharp-format
-msgid "Blocklist enabled"
-msgstr "启用 阻止列表"
+msgid "Incoming port:"
+msgstr "传入端口:"
+
+#: RemoteSettingsDialog~label3.Text
+#, csharp-format
+msgid "Encryption:"
+msgstr "加密:"
+
+#: RemoteSettingsDialog~label4.Text
+#, csharp-format
+msgid "Peer Limit"
+msgstr "用户上限"
+
+#: RemoteSettingsDialog~label7.Text
+#: TorrentPropertiesDialog~label7.Text
+#, csharp-format
+msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
+msgstr "注意: 部分选项可能需要升级 transmission-daemon 才能使用."
+
+#: RemoteSettingsDialog~label8.Text
+#, csharp-format
+msgid "to"
+msgstr "到"
+
+#: RemoteSettingsDialog~limitDownloadCheckBox.Text
+#, csharp-format
+msgid "Limit download"
+msgstr "限制下载"
+
+#: RemoteSettingsDialog~limitUploadCheckBox.Text
+#, csharp-format
+msgid "Limit upload"
+msgstr "限制上传"
+
+#: RemoteSettingsDialog~portForwardCheckBox.Text
+#, csharp-format
+msgid "Enable UPnP"
+msgstr "启用 UPnP"
 
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
@@ -1622,77 +1649,25 @@ msgstr "限制分享率"
 msgid "Limits"
 msgstr "限速"
 
-#: RemoteSettingsDialog~label14.Text
-#: RemoteSettingsDialog~label13.Text
-#, csharp-format
-msgid ":"
-msgstr ":"
-
-#: RemoteSettingsDialog~label12.Text
-#, csharp-format
-msgid "Up:"
-msgstr "上传:"
-
-#: RemoteSettingsDialog~label11.Text
-#, csharp-format
-msgid "Down:"
-msgstr "下载:"
-
-#: RemoteSettingsDialog~label8.Text
-#, csharp-format
-msgid "to"
-msgstr "到"
-
-#: RemoteSettingsDialog~altTimeConstraintEnabled.Text
-#, csharp-format
-msgid "Time constraint"
-msgstr "约束时间"
-
-#: RemoteSettingsDialog~altSpeedLimitEnable.Text
-#, csharp-format
-msgid "Enable alternate speed limits"
-msgstr "启用时段限速"
-
 #: RemoteSettingsDialog~tabPage3.Text
 #, csharp-format
 msgid "Alternate limits"
 msgstr "时段限速"
 
-#: RemoteSettingsDialog~label7.Text
-#: TorrentPropertiesDialog~label7.Text
+#: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
-msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
-msgstr "注意: 部分选项可能需要升级 transmission-daemon 才能使用."
+msgid "Test Port"
+msgstr "测试端口"
 
-#: StatsDialog~downloadedBytesLabel2.Text
-#: StatsDialog~downloadedBytesLabel1.Text
+#: RemoteSettingsDialog~updateBlocklistButton.Text
 #, csharp-format
-msgid "Downloaded bytes:"
-msgstr "已下载字节:"
+msgid "Update Blocklist"
+msgstr "更新阻止列表"
 
-#: StatsDialog~uploadedBytesLabel2.Text
-#: StatsDialog~uploadedBytesLabel1.Text
+#: StatsDialog~$this.Text
 #, csharp-format
-msgid "Uploaded bytes:"
-msgstr "已上传字节:"
-
-#: StatsDialog~secondsActiveLabel2.Text
-#: StatsDialog~secondsActiveLabel1.Text
-#, csharp-format
-msgid "Seconds active"
-msgstr "活动时间:"
-
-#: StatsDialog~sessionCountLabel2.Text
-#: StatsDialog~sessionCountLabel1.Text
-#, csharp-format
-msgid "Session Count"
-msgstr "会话次数:"
-
-#: StatsDialog~filesAddedLabel2.Text
-#: StatsDialog~filesAddedLabel1.Text
-#, csharp-format
-msgid "Files added:"
-msgstr "已添加文件:"
+msgid "Transmission Daemon Statistics"
+msgstr "Transmission Daemon 统计"
 
 #: StatsDialog~CumulativeGroupBox.Text
 #, csharp-format
@@ -1704,25 +1679,40 @@ msgstr "累计"
 msgid "Current Session Stats"
 msgstr "当前会话统计"
 
-#: StatsDialog~$this.Text
+#: StatsDialog~downloadedBytesLabel1.Text
+#: StatsDialog~downloadedBytesLabel2.Text
 #, csharp-format
-msgid "Transmission Daemon Statistics"
-msgstr "Transmission Daemon 统计"
+msgid "Downloaded bytes:"
+msgstr "已下载字节:"
 
-#: TorrentLoadDialog~toolStripStatusLabel1.Text
+#: StatsDialog~filesAddedLabel1.Text
+#: StatsDialog~filesAddedLabel2.Text
 #, csharp-format
-msgid "toolStripStatusLabel1"
-msgstr "toolStripStatusLabel1"
+msgid "Files added:"
+msgstr "已添加文件:"
 
-#: TorrentLoadDialog~checkBox2.Text
+#: StatsDialog~secondsActiveLabel1.Text
+#: StatsDialog~secondsActiveLabel2.Text
 #, csharp-format
-msgid "Alternate peer limit: "
-msgstr "更改用户上限:"
+msgid "Seconds active"
+msgstr "活动时间:"
 
-#: TorrentLoadDialog~checkBox1.Text
+#: StatsDialog~sessionCountLabel1.Text
+#: StatsDialog~sessionCountLabel2.Text
 #, csharp-format
-msgid "Alternate destination directory: "
-msgstr "更改下载目录:"
+msgid "Session Count"
+msgstr "会话次数:"
+
+#: StatsDialog~uploadedBytesLabel1.Text
+#: StatsDialog~uploadedBytesLabel2.Text
+#, csharp-format
+msgid "Uploaded bytes:"
+msgstr "已上传字节:"
+
+#: TorrentLoadDialog~$this.Text
+#, csharp-format
+msgid "TorrentLoadDialog"
+msgstr "TorrentLoadDialog"
 
 #: TorrentLoadDialog~button1.Text
 #: TorrentPropertiesDialog~button1.Text
@@ -1731,53 +1721,62 @@ msgstr "更改下载目录:"
 msgid "OK"
 msgstr "确定"
 
-#: TorrentLoadDialog~$this.Text
+#: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
-msgid "TorrentLoadDialog"
-msgstr "TorrentLoadDialog"
+msgid "Alternate destination directory: "
+msgstr "更改下载目录:"
 
-#: TorrentPropertiesDialog~label4.Text
+#: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
-msgid "Bandwidth priority:"
-msgstr "带宽优先级:"
+msgid "Alternate peer limit: "
+msgstr "更改用户上限:"
 
-#: TorrentPropertiesDialog~honorsSessionLimits.Text
+#: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
-msgid "Honors session limits"
-msgstr "荣誉会话限制"
-
-#: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
-#, csharp-format
-msgid "Limit seed ratio"
-msgstr "限制种子分享率"
-
-#: TorrentPropertiesDialog~label3.Text
-#, csharp-format
-msgid "Maximum peers"
-msgstr "最大用户数"
-
-#: TorrentPropertiesDialog~uploadLimitEnableField.Text
-#, csharp-format
-msgid "Limit upload rate"
-msgstr "限制上传速率"
-
-#: TorrentPropertiesDialog~downloadLimitEnableField.Text
-#, csharp-format
-msgid "Limit download rate"
-msgstr "限制下载速率"
+msgid "toolStripStatusLabel1"
+msgstr "toolStripStatusLabel1"
 
 #: TorrentPropertiesDialog~$this.Text
 #, csharp-format
 msgid "TorrentPropertiesDialog"
 msgstr "TorrentPropertiesDialog"
 
-#: UriPromptWindow~toolStripStatusLabel1.Text
+#: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
-msgid "Waiting for URL..."
-msgstr "正在等待 URL..."
+msgid "Limit download rate"
+msgstr "限制下载速率"
+
+#: TorrentPropertiesDialog~honorsSessionLimits.Text
+#, csharp-format
+msgid "Honors session limits"
+msgstr "荣誉会话限制"
+
+#: TorrentPropertiesDialog~label3.Text
+#, csharp-format
+msgid "Maximum peers"
+msgstr "最大用户数"
+
+#: TorrentPropertiesDialog~label4.Text
+#, csharp-format
+msgid "Bandwidth priority:"
+msgstr "带宽优先级:"
+
+#: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
+#, csharp-format
+msgid "Limit seed ratio"
+msgstr "限制种子分享率"
+
+#: TorrentPropertiesDialog~uploadLimitEnableField.Text
+#, csharp-format
+msgid "Limit upload rate"
+msgstr "限制上传速率"
 
 #: UriPromptWindow~$this.Text
 #, csharp-format
 msgid "Upload by URL"
 msgstr "从链接上传"
 
+#: UriPromptWindow~toolStripStatusLabel1.Text
+#, csharp-format
+msgid "Waiting for URL..."
+msgstr "正在等待 URL..."
