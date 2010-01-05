@@ -8,7 +8,7 @@ using Jayrock.Json.Conversion;
 
 namespace TransmissionRemoteDotnet.Settings
 {
-    public class FileLocalSettings : ILocalSettingsStore
+    public class FileLocalSettingsStore : ILocalSettingsStore
     {
         private const string CONF_FILE = @"settings.json";
         public override JsonObject Load()

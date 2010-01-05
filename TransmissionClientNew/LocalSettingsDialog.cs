@@ -108,7 +108,7 @@ namespace TransmissionRemoteDotnet
                 sett.AutoConnect = AutoConnectComboBox.SelectedItem as string;
             else
                 sett.AutoConnect = "";
-            if (sett.Servers.ContainsKey(CurrentProfileComboBox.SelectedItem as string))
+            if (CurrentProfileComboBox.SelectedItem != null && sett.Servers.ContainsKey(CurrentProfileComboBox.SelectedItem as string))
                 sett.CurrentProfile = CurrentProfileComboBox.SelectedItem as string;
             else
                 sett.CurrentProfile = "";
