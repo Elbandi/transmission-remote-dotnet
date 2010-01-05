@@ -99,6 +99,8 @@ namespace TransmissionRemoteDotnet
         private LocalSettingsSingleton()
         {
             RegistryKey key = GetRootKey(false);
+            if (key == null)
+                throw new Exception();
             foreach (string subKey in key.GetValueNames())
             {
                 if (subKey.StartsWith("_"))
@@ -299,7 +301,7 @@ namespace TransmissionRemoteDotnet
         private RegistryKey GetRootKey(string keyroot, bool writeable)
         {
             RegistryKey key = Registry.CurrentUser.OpenSubKey(keyroot, writeable);
-            if (key == null)
+            if (key == null && writeable)
                 key = Registry.CurrentUser.CreateSubKey(keyroot);
             return key;
         }

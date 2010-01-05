@@ -107,7 +107,8 @@ namespace TransmissionRemoteDotnet
                     this.TypeName = IconReader.GetTypeName(this.Extension);
                     base.ImageKey = this.Extension;
                 }
-                this.TypeName = this.Extension;
+                else
+                    this.TypeName = this.Extension;
             }
             this.FileSize = Toolbox.ToLong(file[ProtocolConstants.FIELD_LENGTH]);
             this.Update(file, wanted, priorities);

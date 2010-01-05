@@ -20,7 +20,7 @@ namespace TransmissionRemoteDotnet.Settings
         protected RegistryKey GetKey(RegistryKey root, string subkey, bool writeable)
         {
             RegistryKey key = root.OpenSubKey(subkey, writeable);
-            if (key == null)
+            if (key == null && writeable)
                 key = root.CreateSubKey(subkey);
             return key;
         }

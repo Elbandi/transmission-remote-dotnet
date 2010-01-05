@@ -18,18 +18,22 @@ namespace TransmissionRemoteDotnet
         {
             ListViewItem tx = (ListViewItem)x;
             ListViewItem ty = (ListViewItem)y;
-            DateTime dtx = (DateTime)tx.SubItems[column].Tag;
-            DateTime dty = (DateTime)ty.SubItems[column].Tag;
-            if (dtx == null)
+            if (tx.SubItems[column].Tag == null && ty.SubItems[column].Tag == null)
+            {
+                return 0;
+            }
+            else if (tx.SubItems[column].Tag == null)
             {
                 return 1;
             }
-            else if (dty == null)
+            else if (ty.SubItems[column].Tag == null)
             {
                 return -1;
             }
             else
             {
+                DateTime dtx = (DateTime)tx.SubItems[column].Tag;
+                DateTime dty = (DateTime)ty.SubItems[column].Tag;
                 return dtx.CompareTo(dty);
             }
         }

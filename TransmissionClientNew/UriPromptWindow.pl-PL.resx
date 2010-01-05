@@ -117,12 +117,12 @@
     <value>Anuluj</value>
   </data>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Oczekiwanie na URL...</value>
+    <value>Oczekiwanie na adres URL...</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Wczytaj z URL...</value>
+    <value>Wczytaj z adresu URL...</value>
   </data>
 </root>

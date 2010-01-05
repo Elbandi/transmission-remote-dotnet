@@ -115,7 +115,7 @@
     <value>무시</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>트랜스미션 데몬 설정</value>
+    <value>트랜스미션 서버 설정</value>
   </data>
   <data name="altSpeedLimitEnable.Text" xml:space="preserve">
     <value>선택적 속도 제한</value>

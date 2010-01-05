@@ -104,11 +104,11 @@ namespace TransmissionRemoteDotnet
                 TransmissionServer ts = lvi.Tag as TransmissionServer;
                 sett.Servers.Add(lvi.Name, lvi.Tag as TransmissionServer);
             }
-            if (sett.Servers.ContainsKey(AutoConnectComboBox.SelectedItem as string))
+            if (AutoConnectComboBox.SelectedItem != null && sett.Servers.ContainsKey(AutoConnectComboBox.SelectedItem as string))
                 sett.AutoConnect = AutoConnectComboBox.SelectedItem as string;
             else
                 sett.AutoConnect = "";
-            if (sett.Servers.ContainsKey(CurrentProfileComboBox.SelectedItem as string))
+            if (CurrentProfileComboBox.SelectedItem != null && sett.Servers.ContainsKey(CurrentProfileComboBox.SelectedItem as string))
                 sett.CurrentProfile = CurrentProfileComboBox.SelectedItem as string;
             else
                 sett.CurrentProfile = "";

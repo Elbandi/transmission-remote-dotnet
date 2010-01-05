@@ -247,7 +247,7 @@ namespace TransmissionRemoteDotnet
             {
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
             }
-            arguments.Put(ProtocolConstants.FIELD_DOWNLOADDIR, downloadToField.Text);
+            arguments.Put(ProtocolConstants.DOWNLOAD_DIR, downloadToField.Text);
             CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
             CloseAndDispose();
         }

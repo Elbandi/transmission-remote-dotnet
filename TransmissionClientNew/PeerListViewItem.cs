@@ -14,6 +14,9 @@ namespace TransmissionRemoteDotnet
 {
     public class PeerListViewItem : ListViewItem
     {
+        public static int CurrentUpdateSerial = 0;
+
+
         public void Update(JsonObject peerObj)
         {
             this.FlagStr = (string)peerObj[ProtocolConstants.FIELD_FLAGSTR];
@@ -27,7 +30,7 @@ namespace TransmissionRemoteDotnet
         {
             for (int i = 0; i < 7; i++)
                 base.SubItems.Add("");
-            this.Address = base.Text;
+            this.Address = base.Name = base.Text;
             int countryIndex = -1;
             if (!GeoIPCountry.Disabled)
             {

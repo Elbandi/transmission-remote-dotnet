@@ -178,10 +178,9 @@ namespace TransmissionRemoteDotnet
         public static JsonArray ListViewSelectionToIdArray(ListView.SelectedListViewItemCollection selections)
         {
             JsonArray ids = new JsonArray();
-            foreach (ListViewItem item in selections)
+            foreach (Torrent item in selections)
             {
-                Torrent t = (Torrent)item.Tag;
-                ids.Put(t.Id);
+                ids.Put(item.Id);
             }
             return ids;
         }

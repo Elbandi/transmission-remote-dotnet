@@ -160,7 +160,7 @@
     <value>0, 0</value>
   </data>
   <data name="stateListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 238</value>
+    <value>109, 220</value>
   </data>
   <data name="stateListBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -169,7 +169,7 @@
     <value>stateListBox</value>
   </data>
   <data name="&gt;&gt;stateListBox.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.GListBox, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.GListBox, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stateListBox.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel1</value>
@@ -259,7 +259,7 @@
     <value>0, 0</value>
   </data>
   <data name="torrentListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>861, 245</value>
+    <value>861, 235</value>
   </data>
   <data name="torrentListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -268,7 +268,7 @@
     <value>torrentListView</value>
   </data>
   <data name="&gt;&gt;torrentListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;torrentListView.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel2</value>
@@ -289,7 +289,7 @@
     <value>1</value>
   </data>
   <data name="mainVerticalSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 245</value>
+    <value>974, 235</value>
   </data>
   <data name="mainVerticalSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
     <value>109</value>
@@ -376,7 +376,7 @@
     <value>piecesGraph</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.PiecesGraph, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.PiecesGraph, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Parent" xml:space="preserve">
     <value>progressOrPiecesPanel</value>
@@ -466,7 +466,7 @@
     <value>percentageLabel</value>
   </data>
   <data name="&gt;&gt;percentageLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;percentageLabel.Parent" xml:space="preserve">
     <value>generalTableLayoutPanel</value>
@@ -477,8 +477,65 @@
   <data name="generalTorrentNameGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="locationLabelLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="locationLabelLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="locationLabelLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="locationLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 184</value>
+  </data>
+  <data name="locationLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="locationLabelLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="locationLabelLabel.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="&gt;&gt;locationLabelLabel.Name" xml:space="preserve">
+    <value>locationLabelLabel</value>
+  </data>
+  <data name="&gt;&gt;locationLabelLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;locationLabelLabel.Parent" xml:space="preserve">
+    <value>generalTorrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;locationLabelLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="locationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 184</value>
+  </data>
+  <data name="locationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="locationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="locationLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Name" xml:space="preserve">
+    <value>locationLabel</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3654.37577, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Parent" xml:space="preserve">
+    <value>generalTorrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="piecesInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 143</value>
+    <value>664, 136</value>
   </data>
   <data name="piecesInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -493,13 +550,13 @@
     <value>piecesInfoLabel</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="piecesInfoLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,7 +568,7 @@
     <value>NoControl</value>
   </data>
   <data name="piecesInfoLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 143</value>
+    <value>568, 136</value>
   </data>
   <data name="piecesInfoLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
@@ -532,13 +589,13 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabelLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="hashLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 143</value>
+    <value>104, 136</value>
   </data>
   <data name="hashLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 13</value>
+    <value>440, 13</value>
   </data>
   <data name="hashLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -550,13 +607,13 @@
     <value>hashLabel</value>
   </data>
   <data name="&gt;&gt;hashLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hashLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;hashLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="hashLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -568,7 +625,7 @@
     <value>NoControl</value>
   </data>
   <data name="hashLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 143</value>
+    <value>6, 136</value>
   </data>
   <data name="hashLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -589,13 +646,13 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;hashLabelLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="timeElapsedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="timeElapsedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 25</value>
+    <value>104, 16</value>
   </data>
   <data name="timeElapsedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -610,16 +667,16 @@
     <value>timeElapsedLabel</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 119</value>
+    <value>384, 112</value>
   </data>
   <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -634,16 +691,16 @@
     <value>startedAtLabel</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="uploadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 94</value>
+    <value>384, 88</value>
   </data>
   <data name="uploadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -658,16 +715,16 @@
     <value>uploadLimitLabel</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="uploadRateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 71</value>
+    <value>384, 64</value>
   </data>
   <data name="uploadRateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -682,16 +739,16 @@
     <value>uploadRateLabel</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="uploadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 49</value>
+    <value>384, 40</value>
   </data>
   <data name="uploadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -706,16 +763,16 @@
     <value>uploadedLabel</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="remainingLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 25</value>
+    <value>384, 16</value>
   </data>
   <data name="remainingLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -730,16 +787,16 @@
     <value>remainingLabel</value>
   </data>
   <data name="&gt;&gt;remainingLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;remainingLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;remainingLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="downloadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 49</value>
+    <value>104, 40</value>
   </data>
   <data name="downloadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -754,16 +811,16 @@
     <value>downloadedLabel</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="downloadSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 71</value>
+    <value>104, 64</value>
   </data>
   <data name="downloadSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -778,16 +835,16 @@
     <value>downloadSpeedLabel</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="downloadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 94</value>
+    <value>104, 88</value>
   </data>
   <data name="downloadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -802,16 +859,16 @@
     <value>downloadLimitLabel</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 118</value>
+    <value>104, 112</value>
   </data>
   <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -826,19 +883,19 @@
     <value>statusLabel</value>
   </data>
   <data name="&gt;&gt;statusLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 168</value>
+    <value>103, 160</value>
   </data>
   <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 13</value>
+    <value>440, 13</value>
   </data>
   <data name="commentLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -850,16 +907,16 @@
     <value>commentLabel</value>
   </data>
   <data name="&gt;&gt;commentLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;commentLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 168</value>
+    <value>664, 160</value>
   </data>
   <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -874,16 +931,16 @@
     <value>errorLabel</value>
   </data>
   <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;errorLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 118</value>
+    <value>664, 112</value>
   </data>
   <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -898,16 +955,16 @@
     <value>createdByLabel</value>
   </data>
   <data name="&gt;&gt;createdByLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;createdByLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 94</value>
+    <value>664, 88</value>
   </data>
   <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -922,16 +979,16 @@
     <value>createdAtLabel</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="leechersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 49</value>
+    <value>664, 40</value>
   </data>
   <data name="leechersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -946,16 +1003,16 @@
     <value>leechersLabel</value>
   </data>
   <data name="&gt;&gt;leechersLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;leechersLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;leechersLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="ratioLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 71</value>
+    <value>664, 64</value>
   </data>
   <data name="ratioLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -970,16 +1027,16 @@
     <value>ratioLabel</value>
   </data>
   <data name="&gt;&gt;ratioLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ratioLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;ratioLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="seedersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 25</value>
+    <value>664, 16</value>
   </data>
   <data name="seedersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -994,13 +1051,13 @@
     <value>seedersLabel</value>
   </data>
   <data name="&gt;&gt;seedersLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;seedersLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;seedersLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1012,7 +1069,7 @@
     <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 118</value>
+    <value>568, 112</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -1033,7 +1090,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1045,7 +1102,7 @@
     <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 94</value>
+    <value>568, 88</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -1066,7 +1123,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <data name="labelForErrorLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1078,7 +1135,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelForErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 168</value>
+    <value>568, 160</value>
   </data>
   <data name="labelForErrorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
@@ -1102,7 +1159,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;labelForErrorLabel.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1114,7 +1171,7 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 168</value>
+    <value>6, 160</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -1135,7 +1192,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1147,7 +1204,7 @@
     <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 71</value>
+    <value>568, 64</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -1168,7 +1225,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1180,7 +1237,7 @@
     <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 49</value>
+    <value>568, 40</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -1201,7 +1258,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1213,7 +1270,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 25</value>
+    <value>568, 16</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1234,7 +1291,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1246,7 +1303,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 94</value>
+    <value>288, 88</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -1267,7 +1324,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1279,7 +1336,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 71</value>
+    <value>288, 64</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -1300,7 +1357,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>31</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1312,7 +1369,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 49</value>
+    <value>288, 40</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1333,7 +1390,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1345,7 +1402,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 25</value>
+    <value>288, 16</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -1366,7 +1423,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1378,7 +1435,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 118</value>
+    <value>6, 112</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1399,7 +1456,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1411,7 +1468,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 94</value>
+    <value>6, 88</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -1432,7 +1489,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>35</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1444,7 +1501,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 71</value>
+    <value>6, 64</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 13</value>
@@ -1465,7 +1522,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1477,7 +1534,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 49</value>
+    <value>6, 40</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -1498,7 +1555,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1510,7 +1567,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 119</value>
+    <value>288, 112</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 13</value>
@@ -1531,7 +1588,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>38</value>
   </data>
   <data name="timeElapsedLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1543,7 +1600,7 @@
     <value>NoControl</value>
   </data>
   <data name="timeElapsedLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 16</value>
   </data>
   <data name="timeElapsedLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 13</value>
@@ -1564,7 +1621,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabelLabel.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>39</value>
   </data>
   <data name="generalTorrentNameGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1579,7 +1636,7 @@
     <value>3, 34</value>
   </data>
   <data name="generalTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 200</value>
+    <value>954, 210</value>
   </data>
   <data name="generalTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1609,7 +1666,7 @@
     <value>2</value>
   </data>
   <data name="generalTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 237</value>
+    <value>960, 247</value>
   </data>
   <data name="generalTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1636,7 +1693,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 243</value>
+    <value>966, 253</value>
   </data>
   <data name="generalTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1681,7 +1738,7 @@
     <value>3, 16</value>
   </data>
   <data name="trackersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 218</value>
+    <value>954, 228</value>
   </data>
   <data name="trackersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1690,7 +1747,7 @@
     <value>trackersListView</value>
   </data>
   <data name="&gt;&gt;trackersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;trackersListView.Parent" xml:space="preserve">
     <value>trackersTorrentNameGroupBox</value>
@@ -1705,7 +1762,7 @@
     <value>3, 3</value>
   </data>
   <data name="trackersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 237</value>
+    <value>960, 247</value>
   </data>
   <data name="trackersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1729,7 +1786,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="trackersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 243</value>
+    <value>966, 253</value>
   </data>
   <data name="trackersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1792,7 +1849,7 @@
     <value>3, 16</value>
   </data>
   <data name="filesListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 218</value>
+    <value>954, 228</value>
   </data>
   <metadata name="fileIconImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>96, 0</value>
@@ -1807,7 +1864,7 @@
     <value>filesListView</value>
   </data>
   <data name="&gt;&gt;filesListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesListView.Parent" xml:space="preserve">
     <value>filesTorrentNameGroupBox</value>
@@ -1822,7 +1879,7 @@
     <value>3, 3</value>
   </data>
   <data name="filesTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 237</value>
+    <value>960, 247</value>
   </data>
   <data name="filesTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1846,7 +1903,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="filesTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 243</value>
+    <value>966, 253</value>
   </data>
   <data name="filesTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1918,7 +1975,7 @@
     <value>3, 16</value>
   </data>
   <data name="peersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 218</value>
+    <value>954, 228</value>
   </data>
   <data name="peersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1927,7 +1984,7 @@
     <value>peersListView</value>
   </data>
   <data name="&gt;&gt;peersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;peersListView.Parent" xml:space="preserve">
     <value>peersTorrentNameGroupBox</value>
@@ -1942,7 +1999,7 @@
     <value>3, 3</value>
   </data>
   <data name="peersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 237</value>
+    <value>960, 247</value>
   </data>
   <data name="peersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1966,7 +2023,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="peersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 243</value>
+    <value>966, 253</value>
   </data>
   <data name="peersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2188,7 +2245,7 @@
     <value>0, 0</value>
   </data>
   <data name="speedGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 183</value>
+    <value>954, 193</value>
   </data>
   <data name="speedGraph.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2200,7 +2257,7 @@
     <value>speedGraph</value>
   </data>
   <data name="&gt;&gt;speedGraph.Type" xml:space="preserve">
-    <value>CustomUIControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>CustomUIControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;speedGraph.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -2221,7 +2278,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 218</value>
+    <value>954, 228</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2248,7 +2305,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 237</value>
+    <value>960, 247</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2275,7 +2332,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="speedTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 243</value>
+    <value>966, 253</value>
   </data>
   <data name="speedTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2308,7 +2365,7 @@
     <value>0, 0</value>
   </data>
   <data name="torrentTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 270</value>
+    <value>974, 280</value>
   </data>
   <data name="torrentTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2338,13 +2395,13 @@
     <value>1</value>
   </data>
   <data name="torrentAndTabsSplitContainer.Panel2MinSize" type="System.Int32, mscorlib">
-    <value>270</value>
+    <value>280</value>
   </data>
   <data name="torrentAndTabsSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>974, 519</value>
   </data>
   <data name="torrentAndTabsSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>245</value>
+    <value>235</value>
   </data>
   <data name="torrentAndTabsSplitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2353,7 +2410,7 @@
     <value>torrentAndTabsSplitContainer</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SplitContainerFix, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SplitContainerFix, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -4124,6 +4181,6 @@
     <value>MainWindow</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.12.3646.38712, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

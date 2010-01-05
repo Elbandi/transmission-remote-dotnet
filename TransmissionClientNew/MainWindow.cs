@@ -35,6 +35,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Threading;
 using Jayrock.Json.Conversion;
+using System.Collections;
 
 namespace TransmissionRemoteDotnet
 {
@@ -954,6 +955,8 @@ namespace TransmissionRemoteDotnet
                 connectButton.DropDownItems.Clear();
                 connectToolStripMenuItem.DropDownItems.Clear();
                 CreateProfileMenu();
+                refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
+                filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
             }
         }
 
@@ -978,12 +981,36 @@ namespace TransmissionRemoteDotnet
             startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
         }
 
+        public void FillfilesListView(Torrent t)
+        {
+            lock (filesListView)
+            {
+                filesListView.SuspendLayout();
+                IComparer tmp = filesListView.ListViewItemSorter;
+                filesListView.ListViewItemSorter = null;
+                if (!filesListView.Enabled)
+                {
+                    filesListView.Enabled = true;
+                    filesListView.Items.AddRange(t.Files.ToArray());
+                }
+                else
+                    filesListView.Refresh();
+                filesListView.ListViewItemSorter = tmp;
+                filesListView.Sort();
+                Toolbox.StripeListView(filesListView);
+                filesListView.ResumeLayout();
+            }
+        }
+
         private void OneTorrentsSelected(bool one, Torrent t)
         {
             if (one)
             {
                 UpdateInfoPanel(true, t);
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                if (t.Files.Count == 0)
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                else
+                    FillfilesListView(t);
             }
             else
             {
@@ -1005,7 +1032,7 @@ namespace TransmissionRemoteDotnet
                     = uploadLimitLabel.Text = startedAtLabel.Text = seedersLabel.Text
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
-                    = hashLabel.Text = piecesInfoLabel.Text
+                    = hashLabel.Text = piecesInfoLabel.Text = locationLabel.Text
                     = generalTorrentNameGroupBox.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
@@ -1035,7 +1062,6 @@ namespace TransmissionRemoteDotnet
                     t = (Torrent)torrentListView.SelectedItems[0];
                 one = torrentListView.SelectedItems.Count == 1;
             }
-            peersListView.Tag = 0;
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
@@ -1523,6 +1549,7 @@ namespace TransmissionRemoteDotnet
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
             }
             piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
+            locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.IsFinished)
             {
@@ -1540,7 +1567,7 @@ namespace TransmissionRemoteDotnet
             if (t.Peers != null)
             {
                 peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
-                peersListView.Tag = (int)peersListView.Tag + 1;
+                PeerListViewItem.CurrentUpdateSerial++;
                 peersListView.SuspendLayout();
                 foreach (JsonObject peer in t.Peers)
                 {
@@ -1554,23 +1581,14 @@ namespace TransmissionRemoteDotnet
                     {
                         item.Update(peer);
                     }
-                    item.UpdateSerial = (int)peersListView.Tag;
+                    item.UpdateSerial = PeerListViewItem.CurrentUpdateSerial;
                 }
                 lock (peersListView)
                 {
-                    Queue<ListViewItem> removalQueue = null;
-                    foreach (PeerListViewItem item in peersListView.Items)
+                    PeerListViewItem[] peers = (PeerListViewItem[])new ArrayList(peersListView.Items).ToArray(typeof(PeerListViewItem));
+                    foreach (PeerListViewItem item in peers)
                     {
-                        if (item.UpdateSerial != (int)peersListView.Tag)
-                        {
-                            if (removalQueue == null)
-                                removalQueue = new Queue<ListViewItem>();
-                            removalQueue.Enqueue(item);
-                        }
-                    }
-                    if (removalQueue != null)
-                    {
-                        foreach (ListViewItem item in removalQueue)
+                        if (item.UpdateSerial != PeerListViewItem.CurrentUpdateSerial)
                         {
                             peersListView.Items.Remove(item);
                         }

@@ -1,4 +1,4 @@
-// transmission-remote-dotnet
+﻿// transmission-remote-dotnet
 // http://code.google.com/p/transmission-remote-dotnet/
 // Copyright (C) 2009 Alan F
 //
@@ -24,11 +24,11 @@ using Jayrock.Json;
 
 namespace TransmissionRemoteDotnet.Comparers
 {
-    public class ListViewItemInt32Comparer : IComparer
+    public class ListViewItemDoubleComparer : IComparer
     {
         int column;
 
-        public ListViewItemInt32Comparer(int column)
+        public ListViewItemDoubleComparer(int column)
         {
             this.column = column;
         }
@@ -51,9 +51,9 @@ namespace TransmissionRemoteDotnet.Comparers
             }
             else
             {
-                int ix = (int)tx.SubItems[column].Tag;
-                int iy = (int)ty.SubItems[column].Tag;
-                return ix.CompareTo(iy);
+                double dx = (double)tx.SubItems[column].Tag;
+                double dy = (double)ty.SubItems[column].Tag;
+                return dx.CompareTo(dy);
             }
         }
     }
