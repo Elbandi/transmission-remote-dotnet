@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2009-12-26 12:59+0100\n"
+"PO-Revision-Date: 2010-01-04 12:43+0100\n"
 "Last-Translator: Cichon Marcin <ml.cichy@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -358,7 +358,7 @@ msgstr "Udział UNIXowy:"
 #: LocalSettingsDialog~label12.Text
 #, csharp-format
 msgid "Custom rpc path:"
-msgstr "Custom rpc path:"
+msgstr "Niestandardowa ścieżka RPC:"
 
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
@@ -860,7 +860,7 @@ msgstr "Lokalne"
 #: MainWindow~locationLabelLabel.Text
 #, csharp-format
 msgid "Location:"
-msgstr "Location:"
+msgstr "Położenie:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
