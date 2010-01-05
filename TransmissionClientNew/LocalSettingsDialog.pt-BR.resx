@@ -187,13 +187,13 @@
     <value>Não salvar senhas</value>
   </data>
   <data name="defaultActionComboBox.Items" xml:space="preserve">
-    <value>Torrent Properties</value>
+    <value>Propriedades do Torrent</value>
   </data>
   <data name="defaultActionComboBox.Items1" xml:space="preserve">
-    <value>Open remote folder</value>
+    <value>Abrir pasta remota</value>
   </data>
   <data name="defaultActionComboBox.Items2" xml:space="preserve">
-    <value>Start/Stop torrent</value>
+    <value>Iniciar/Parar torrent</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
     <value>Ação Padrão:</value>
@@ -226,13 +226,13 @@
     <value>Salvar Servidor</value>
   </data>
   <data name="UseSSLCheckBox.Text" xml:space="preserve">
-    <value>Secure (SSL)</value>
+    <value>Seguro (SSL)</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Host:</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Limit de tentativas:</value>
+    <value>Limite de tentativas:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Porta:</value>
@@ -268,10 +268,10 @@
     <value>Auto</value>
   </data>
   <data name="EnableProxyCombo.Items1" xml:space="preserve">
-    <value>Enabled</value>
+    <value>Habilitado</value>
   </data>
   <data name="EnableProxyCombo.Items2" xml:space="preserve">
-    <value>Disabled</value>
+    <value>Disabilitado</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Senha:</value>

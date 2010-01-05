@@ -163,7 +163,7 @@
     <value>Conectando</value>
   </data>
   <data name="CopyAsCSV" xml:space="preserve">
-    <value>Copiar informação CSV</value>
+    <value>Copiar informação CSV para área de transferência</value>
   </data>
   <data name="Disconnect" xml:space="preserve">
     <value>Desconectar</value>
@@ -283,7 +283,7 @@
     <value>Selecionar todos</value>
   </data>
   <data name="Skip" xml:space="preserve">
-    <value>Pular</value>
+    <value>Ignorar</value>
   </data>
   <data name="Start" xml:space="preserve">
     <value>Iniciar</value>
@@ -392,7 +392,7 @@
     <value>{0} na lista.</value>
   </data>
   <data name="Pieces" xml:space="preserve">
-    <value>Peças</value>
+    <value>Partes</value>
   </data>
   <data name="Progress" xml:space="preserve">
     <value>Progresso</value>

@@ -121,26 +121,26 @@
     <value>취소</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>비밀번호</value>
   </data>
   <data name="SpeedResolutions" xml:space="preserve">
-    <value>5 sec|10 sec|30 sec|5 min</value>
+    <value>5 초|10 초|30 초|5 분</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="PiecesInfo" xml:space="preserve">
-    <value>{0} x {1} (have {2})</value>
+    <value>{0} x {1} ({2} 완료)</value>
   </data>
   <data name="XConnected" xml:space="preserve">
     <value>{0} 접속됨</value>
   </data>
   <data name="EmptyFile" xml:space="preserve">
-    <value>Empty file</value>
+    <value>빈 파일</value>
   </data>
   <data name="UnknownResponseTag" xml:space="preserve">
-    <value>Unknown response tag</value>
+    <value>알수없는 응답 태그</value>
   </data>
   <data name="GeoipInitError" xml:space="preserve">
-    <value>GeoIP init error ({0})</value>
+    <value>GeoIP 초기화 에러 ({0})</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>전체</value>

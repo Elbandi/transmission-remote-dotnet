@@ -2,18 +2,21 @@
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 # 
-# Kadu Leite <EMAIL@ADDRESS>, 2010.
+# Kadu Leite <kaduleite@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kadu Leite <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2010-01-05 08:05-0300\n"
+"Last-Translator: Kadu Leite <kaduleite@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: AboutDialog~$this.Text
 #, csharp-format
@@ -208,12 +211,12 @@ msgstr "Auto"
 #: LocalSettingsDialog~EnableProxyCombo.Items1
 #, csharp-format
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Habilitado"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items2
 #, csharp-format
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Disabilitado"
 
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
@@ -271,7 +274,7 @@ msgstr "Upload prompt"
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
 msgid "Secure (SSL)"
-msgstr "Secure (SSL)"
+msgstr "Seguro (SSL)"
 
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
@@ -298,17 +301,17 @@ msgstr "Porta"
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr "Torrent Properties"
+msgstr "Propriedades do Torrent"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr "Open remote folder"
+msgstr "Abrir pasta remota"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
 msgid "Start/Stop torrent"
-msgstr "Start/Stop torrent"
+msgstr "Iniciar/Parar torrent"
 
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
@@ -349,7 +352,7 @@ msgstr "Host:"
 #: LocalSettingsDialog~label10.Text
 #, csharp-format
 msgid "Retry limit:"
-msgstr "Limit de tentativas:"
+msgstr "Limite de tentativas:"
 
 #: LocalSettingsDialog~label11.Text
 #, csharp-format
@@ -503,7 +506,7 @@ msgstr "Adicionar torrent da URL"
 #: MainWindow~addTorrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Quick add torrent"
-msgstr "Adicionar torrent rápidamente"
+msgstr "Adicionar torrent rapidamente"
 
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
 #, csharp-format
@@ -525,7 +528,7 @@ msgstr "Tudo"
 #: OtherStrings~CopyAsCSV
 #, csharp-format
 msgid "CSV info to clipboard"
-msgstr "Copiar informação CSV"
+msgstr "Copiar informação CSV para área de transferência"
 
 #: MainWindow~categoriesPanelToolStripMenuItem.Text
 #, csharp-format
@@ -568,7 +571,7 @@ msgstr "Vel Up"
 #: MainWindow~columnHeader14.Text
 #, csharp-format
 msgid "ETA"
-msgstr "TEF"
+msgstr "Conclusão em"
 
 #: MainWindow~columnHeader15.Text
 #, csharp-format
@@ -585,7 +588,7 @@ msgstr "Ratio"
 #: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
-msgstr "Pular"
+msgstr "Ignorar"
 
 #: MainWindow~columnHeader18.Text
 #, csharp-format
@@ -706,7 +709,7 @@ msgstr "Desconectar"
 #: MainWindow~downloadProgressLabel.Text
 #, csharp-format
 msgid "Pieces: "
-msgstr "Peças: "
+msgstr "Partes: "
 
 #: MainWindow~exitToolStripMenuItem.Text
 #: OtherStrings~Exit
@@ -784,7 +787,7 @@ msgstr "Comentário:"
 #: MainWindow~label16.Text
 #, csharp-format
 msgid "Created at:"
-msgstr "Criado por:"
+msgstr "Criado em:"
 
 #: MainWindow~label17.Text
 #, csharp-format
@@ -909,12 +912,12 @@ msgstr "_"
 #: MainWindow~piecesInfoLabelLabel.Text
 #, csharp-format
 msgid "Pieces:"
-msgstr "Peças:"
+msgstr "Partes:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
 msgid "Project site"
-msgstr "Sito do Projeto"
+msgstr "Site do Projeto"
 
 #: MainWindow~propertiesToolStripMenuItem.Text
 #: OtherStrings~Properties
@@ -1375,7 +1378,7 @@ msgstr "Pausado"
 #: OtherStrings~Pieces
 #, csharp-format
 msgid "Pieces"
-msgstr "Peças"
+msgstr "Partes"
 
 #: OtherStrings~PiecesInfo
 #, csharp-format

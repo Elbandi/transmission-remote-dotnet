@@ -121,7 +121,7 @@
     <value>Tamanho</value>
   </data>
   <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Pular</value>
+    <value>Ignorar</value>
   </data>
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Prioridade</value>

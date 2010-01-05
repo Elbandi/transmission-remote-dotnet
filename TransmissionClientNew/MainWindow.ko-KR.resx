@@ -112,16 +112,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>Location:</value>
+    <value>위치:</value>
   </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
-    <value>Alt Speed</value>
+    <value>선택적 속도 제한</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>Pieces:</value>
+    <value>조각:</value>
   </data>
   <data name="hashLabelLabel.Text" xml:space="preserve">
-    <value>Hash:</value>
+    <value>해쉬:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
     <value>Find...</value>
@@ -358,7 +358,7 @@
     <value>언어</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
-    <value>트랜스미션 리모트 설정</value>
+    <value>설정</value>
   </data>
   <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>트랜스미션 리모트 설정...</value>
@@ -415,7 +415,7 @@
     <value>토런트 재검사</value>
   </data>
   <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>트랜스미션 데몬 설정</value>
+    <value>트랜스미션 서버 설정</value>
   </data>
   <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>트랜스미션 데몬 설정...</value>

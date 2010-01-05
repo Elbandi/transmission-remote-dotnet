@@ -155,7 +155,7 @@
     <value>Vel Up</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
-    <value>TEF</value>
+    <value>Conclusão em</value>
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
     <value>Enviado</value>
@@ -173,7 +173,7 @@
     <value>Rastreador</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
-    <value>Peças: </value>
+    <value>Partes: </value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>_</value>
@@ -182,7 +182,7 @@
     <value>Local:</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>Peças:</value>
+    <value>Partes:</value>
   </data>
   <data name="hashLabelLabel.Text" xml:space="preserve">
     <value>Hash:</value>
@@ -191,7 +191,7 @@
     <value>Criado por:</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>Criado por:</value>
+    <value>Criado em:</value>
   </data>
   <data name="labelForErrorLabel.Text" xml:space="preserve">
     <value>Erro:</value>
@@ -269,7 +269,7 @@
     <value>%</value>
   </data>
   <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Pular</value>
+    <value>Ignorar</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Prioridade</value>
@@ -413,7 +413,7 @@
     <value>Desconectar</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Adicionar torrent rápidamente</value>
+    <value>Adicionar torrent rapidamente</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Adicionar torrent com opções</value>
@@ -470,7 +470,7 @@
     <value>Abrir de rede compartilhada</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Copiar informação CSV</value>
+    <value>Copiar informação CSV para área de transferência</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Iniciar todos</value>
@@ -497,7 +497,7 @@
     <value>Mostrar Log de Erro</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sito do Projeto</value>
+    <value>Site do Projeto</value>
   </data>
   <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
     <value>Verficar por atualização</value>

@@ -2,14 +2,14 @@
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
 # 
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# tuhertz <tuhertz@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2010-01-05 22:04+0900\n"
+"Last-Translator: tuhertz <tuhertz@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,27 +23,27 @@ msgstr "Transmission Remote 정보"
 #: AboutDialog~labelCopyright.Text
 #, csharp-format
 msgid "Copyright"
-msgstr "Copyright"
+msgstr "저작권"
 
 #: AboutDialog~labelCredits.Text
 #, csharp-format
 msgid "Credits && acknowledgements:"
-msgstr "Credits && acknowledgements:"
+msgstr "정보 및 도움을 주신 분들"
 
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr "Developers:"
+msgstr "제작자:"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
 msgid "Homepage:"
-msgstr "Homepage:"
+msgstr "홈페이지:"
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
 msgid "Product Name"
-msgstr "Product Name"
+msgstr "프로그램 이름"
 
 #: AboutDialog~labelVersion.Text
 #: OtherStrings~Version
@@ -54,7 +54,7 @@ msgstr "버전"
 #: AboutDialog~okButton.Text
 #, csharp-format
 msgid "&OK"
-msgstr "&OK"
+msgstr "&확인"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -136,44 +136,44 @@ msgstr "더블클릭해서 로그 내용을 클립보드로 복사할 수 있습
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
-msgstr "Find Torrent..."
+msgstr "찾기..."
 
 #: FindDialog~CaseSensitiveCheckBox.Text
 #, csharp-format
 msgid "Case insensitiv"
-msgstr "Case insensitiv"
+msgstr "대소문자 구분하지 않음"
 
 #: FindDialog~findButton.Text
 #, csharp-format
 msgid "Find"
-msgstr "Find"
+msgstr "검색"
 
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
-msgstr "Find what:"
+msgstr "검색어 입력:"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
 #, csharp-format
 msgid "Local Settings"
-msgstr "트랜스미션 리모트 설정"
+msgstr "설정"
 
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
-msgstr "Add"
+msgstr "추가"
 
 #: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
 #, csharp-format
 msgid "Check for update at startup"
-msgstr "Check for update at startup"
+msgstr "프로그램 시작시 업데이트 검색"
 
 #: LocalSettingsDialog~ClearPasswordCheckBox.Text
 #: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
 #, csharp-format
 msgid "Clear the password at save"
-msgstr "Clear the password at save"
+msgstr "저장 시 패스워드 지우기"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
@@ -187,12 +187,12 @@ msgstr "취소"
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
 msgid "Delete torrent when adding"
-msgstr "Delete torrent when adding"
+msgstr "토런트 추가시 토런트 파일 지우기"
 
 #: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
 #, csharp-format
 msgid "Don't save passwords"
-msgstr "Don't save passwords"
+msgstr "비밀번호를 저장하지 않음"
 
 #: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
@@ -222,12 +222,12 @@ msgstr "트레이 아이콘 사용"
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr "Display remote command button"
+msgstr "원격 터미널 버튼 보기"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
-msgstr "Browse"
+msgstr "찾아보기..."
 
 #: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
@@ -244,7 +244,7 @@ msgstr "토런트 파일 삭제"
 #: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
 msgid "Save and Connect"
-msgstr "Save and Connect"
+msgstr "저장 후 접속"
 
 #: LocalSettingsDialog~SaveButton.Text
 #: RemoteSettingsDialog~SaveButton.Text
@@ -255,7 +255,7 @@ msgstr "저장"
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr "Save Server"
+msgstr "이 서버 저장"
 
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
@@ -265,7 +265,7 @@ msgstr "일시정지 상태로 추가 "
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
 msgid "Upload prompt"
-msgstr "Upload prompt"
+msgstr "토런트 추가창 열기"
 
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
@@ -275,7 +275,7 @@ msgstr "보안 접속(SSL)"
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
-msgstr "Add Server"
+msgstr "서버 추가"
 
 #: LocalSettingsDialog~columnHost.Text
 #: OtherStrings~Host
@@ -292,37 +292,37 @@ msgstr "이름"
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
 msgid "Port"
-msgstr "Port"
+msgstr "포트"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr "Torrent Properties"
+msgstr "토런트 등록 정보"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr "Open remote folder"
+msgstr "폴더 열기"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
 msgid "Start/Stop torrent"
-msgstr "Start/Stop torrent"
+msgstr "시딩 시작/멈춤"
 
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
 msgid "Default Action:"
-msgstr "Default Action:"
+msgstr "더블클릭 할 때:"
 
 #: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
 msgid "Auto connect"
-msgstr "Auto connect"
+msgstr "자동 접속"
 
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
-msgstr "Behavior"
+msgstr "행동"
 
 #: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
@@ -332,7 +332,7 @@ msgstr "새로운 연결 추가:"
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
 msgid "Current profile"
-msgstr "Current profile"
+msgstr "현재 설정"
 
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
@@ -358,7 +358,7 @@ msgstr "유닉스 경로:"
 #: LocalSettingsDialog~label12.Text
 #, csharp-format
 msgid "Custom rpc path:"
-msgstr "Custom rpc path:"
+msgstr "사용자 rpc 위치:"
 
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
@@ -400,7 +400,7 @@ msgstr "새로고침 주기(초):"
 #: LocalSettingsDialog~label8.Text
 #, csharp-format
 msgid "User:"
-msgstr "사용자 명:"
+msgstr "사용자:"
 
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
@@ -431,12 +431,12 @@ msgstr "다운로드 완료시 알림"
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr "Remove Server"
+msgstr "서버 삭제"
 
 #: LocalSettingsDialog~tabGlobalSettings.Text
 #, csharp-format
 msgid "Global Settings"
-msgstr "Global Settings"
+msgstr "기본 설정"
 
 #: LocalSettingsDialog~tabPage1.Text
 #, csharp-format
@@ -471,7 +471,7 @@ msgstr "삼바"
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Servers Settings"
+msgstr "서버 연결 설정"
 
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
@@ -482,7 +482,7 @@ msgstr "트랜스미션 리모트"
 #: MainWindow~AltSpeedButton.Text
 #, csharp-format
 msgid "Alt Speed"
-msgstr "Alt Speed"
+msgstr "선택적 속도 제한"
 
 #: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
@@ -743,7 +743,7 @@ msgstr "대역폭 사용 내역"
 #: MainWindow~hashLabelLabel.Text
 #, csharp-format
 msgid "Hash:"
-msgstr "Hash:"
+msgstr "해쉬:"
 
 #: MainWindow~helpToolStripMenuItem.Text
 #, csharp-format
@@ -860,7 +860,7 @@ msgstr "트랜스미션 리모트 설정..."
 #: MainWindow~locationLabelLabel.Text
 #, csharp-format
 msgid "Location:"
-msgstr "Location:"
+msgstr "위치:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -908,7 +908,7 @@ msgstr "This is selectable text"
 #: MainWindow~piecesInfoLabelLabel.Text
 #, csharp-format
 msgid "Pieces:"
-msgstr "Pieces:"
+msgstr "조각:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
@@ -949,7 +949,7 @@ msgstr "토런트 재검사"
 #: RemoteSettingsDialog~$this.Text
 #, csharp-format
 msgid "Remote Settings"
-msgstr "트랜스미션 데몬 설정"
+msgstr "트랜스미션 서버 설정"
 
 #: MainWindow~remoteSettingsToolStripMenuItem.Text
 #, csharp-format
@@ -1184,7 +1184,7 @@ msgstr "다운로드 중"
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
-msgstr "Empty file"
+msgstr "빈 파일"
 
 #: OtherStrings~Error
 #, csharp-format
@@ -1199,7 +1199,7 @@ msgstr "요청 실패"
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
-msgstr "GeoIP init error ({0})"
+msgstr "GeoIP 초기화 에러 ({0})"
 
 #: OtherStrings~Gigabyte
 #, csharp-format
@@ -1364,7 +1364,7 @@ msgstr "네트워크 공유 위치 열기"
 #: OtherStrings~Password
 #, csharp-format
 msgid "Password"
-msgstr "Password"
+msgstr "비밀번호"
 
 #: OtherStrings~Paused
 #, csharp-format
@@ -1379,7 +1379,7 @@ msgstr "조각"
 #: OtherStrings~PiecesInfo
 #, csharp-format
 msgid "{0} x {1} (have {2})"
-msgstr "{0} x {1} (have {2})"
+msgstr "{0} x {1} ({2} 완료)"
 
 #: OtherStrings~PortIsClosed
 #, csharp-format
@@ -1444,7 +1444,7 @@ msgstr "모두 선택"
 #: OtherStrings~SpeedResolutions
 #, csharp-format
 msgid "5 sec|10 sec|30 sec|5 min"
-msgstr "5 sec|10 sec|30 sec|5 min"
+msgstr "5 초|10 초|30 초|5 분"
 
 #: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
@@ -1479,7 +1479,7 @@ msgstr "알 수 없음"
 #: OtherStrings~UnknownResponseTag
 #, csharp-format
 msgid "Unknown response tag"
-msgstr "Unknown response tag"
+msgstr "알수없는 응답 태그"
 
 #: OtherStrings~Unlimited
 #, csharp-format
