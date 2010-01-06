@@ -27,7 +27,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.High;
+                item.SubItems[3].Text = OtherStrings.High;
             }
         }
 
@@ -35,7 +35,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.Low;
+                item.SubItems[3].Text = OtherStrings.Low;
             }
         }
 
@@ -43,7 +43,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.Normal;
+                item.SubItems[3].Text = OtherStrings.Normal;
             }
         }
 
@@ -51,7 +51,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[3].Text = OtherStrings.No;
+                item.Checked = true;
             }
         }
 
@@ -59,7 +59,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[3].Text = OtherStrings.Yes;
+                item.Checked = false;
             }
         }
 
@@ -124,8 +124,8 @@ namespace TransmissionRemoteDotnet
                     item.SubItems.Add("");
 #endif
                     item.SubItems.Add(Toolbox.GetFileSize(file.Length));
-                    item.SubItems.Add(OtherStrings.No);
                     item.SubItems.Add(OtherStrings.Normal);
+                    item.Checked = true;
                     items.Add(item);
                 }
                 e.Result = items;
@@ -193,7 +193,7 @@ namespace TransmissionRemoteDotnet
             JsonArray low = new JsonArray();
             foreach (ListViewItem item in listView1.Items)
             {
-                if (item.SubItems[3].Text.Equals(OtherStrings.Yes))
+                if (!item.Checked)
                 {
                     unwanted.Add(item.Index);
                 }
@@ -201,11 +201,11 @@ namespace TransmissionRemoteDotnet
                 {
                     wanted.Add(item.Index);
                 }
-                if (item.SubItems[4].Text.Equals(OtherStrings.High))
+                if (item.SubItems[3].Text.Equals(OtherStrings.High))
                 {
                     high.Add(item.Index);
                 }
-                else if (item.SubItems[4].Text.Equals(OtherStrings.Low))
+                else if (item.SubItems[3].Text.Equals(OtherStrings.Low))
                 {
                     low.Add(item.Index);
                 }
