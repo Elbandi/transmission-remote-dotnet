@@ -82,6 +82,7 @@ namespace TransmissionRemoteDotnet
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
             this.path = path;
             this.toolStripStatusLabel1.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
+            checkBox3.Checked = !Program.Settings.Current.StartPaused;
             foreach (string s in Program.Settings.Current.DestPathHistory)
             {
                 comboBox1.Items.Add(s);
@@ -145,7 +146,7 @@ namespace TransmissionRemoteDotnet
                     listView1.Items.Add(item);
                 }
                 Toolbox.StripeListView(listView1);
-                listView1.Enabled = button1.Enabled = checkBox1.Enabled = checkBox2.Enabled = true;
+                listView1.Enabled = button1.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
                 listView1.ResumeLayout();
                 this.Text = torrent.Name;
                 this.toolStripStatusLabel1.Text = "";
@@ -222,7 +223,8 @@ namespace TransmissionRemoteDotnet
                 wanted.Count > 0 ? wanted : null,
                 unwanted.Count > 0 ? unwanted : null,
                 checkBox1.Checked ? comboBox1.Text : null,
-                checkBox2.Checked ? (int)numericUpDown1.Value : -1
+                checkBox2.Checked ? (int)numericUpDown1.Value : -1,
+                checkBox3.Checked
             );
             Program.Settings.Current.AddDestinationPath(comboBox1.Text);
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
