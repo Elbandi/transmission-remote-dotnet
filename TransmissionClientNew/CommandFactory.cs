@@ -96,7 +96,18 @@ namespace TransmissionRemoteDotnet
                         JsonObject jsonResponse = (JsonObject)JsonConvert.Import(GetString(e.Result));
                         if ((string)jsonResponse["result"] != "success")
                         {
-                            cmd = new ErrorCommand(OtherStrings.UnsuccessfulRequest, (string)jsonResponse["result"], true);
+                            string response = (string)jsonResponse["result"];
+                            if (response.StartsWith("http error"))
+                            {
+                                int i = response.IndexOf(':');
+                                if (i >= 0)
+                                    response = response.Substring(i + 2);
+                                else
+                                    response = response.Remove(0, 11); /* strlen("http error") = 11 */
+                                cmd = new ErrorCommand(OtherStrings.UnsuccessfulRequest, string.Format(OtherStrings.HttpError, Environment.NewLine, response), true);
+                            }
+                            else
+                                cmd = new ErrorCommand(OtherStrings.UnsuccessfulRequest, response, true);
                         }
                         else
                         {

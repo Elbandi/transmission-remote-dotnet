@@ -461,4 +461,8 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="HttpError" xml:space="preserve">
+    <value>Daemon try to download something, but the http result is:{0}{1}</value>
+    <comment>{0} is the newline char</comment>
+  </data>
 </root>

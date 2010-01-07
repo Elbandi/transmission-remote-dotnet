@@ -421,6 +421,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Daemon try to download something, but the http result is:{0}{1}.
+        /// </summary>
+        internal static string HttpError {
+            get {
+                return ResourceManager.GetString("HttpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incomplete.
         /// </summary>
         internal static string Incomplete {
