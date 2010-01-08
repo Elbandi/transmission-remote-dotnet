@@ -628,6 +628,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The hostname not set.
+        /// </summary>
+        internal static string NoHostnameSet {
+            get {
+                return ResourceManager.GetString("NoHostnameSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Normal.
         /// </summary>
         internal static string Normal {

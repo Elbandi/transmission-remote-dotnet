@@ -465,4 +465,7 @@
     <value>Daemon try to download something, but the http result is:{0}{1}</value>
     <comment>{0} is the newline char</comment>
   </data>
+  <data name="NoHostnameSet" xml:space="preserve">
+    <value>The hostname not set</value>
+  </data>
 </root>

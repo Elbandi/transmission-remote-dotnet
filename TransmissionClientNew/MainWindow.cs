@@ -1220,6 +1220,11 @@ namespace TransmissionRemoteDotnet
         public void connectButton_Click(object sender, EventArgs e)
         {
             fileToolStripMenuItem.DropDown.Close();
+            if (Program.Settings.Current.Host.Equals(""))
+            {
+                MessageBox.Show(OtherStrings.NoHostnameSet, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (!Program.Connected)
                 Connect();
         }
@@ -1981,11 +1986,8 @@ namespace TransmissionRemoteDotnet
 
         private void connectButton_DropDownOpening(object sender, EventArgs e)
         {
-            foreach (ToolStripMenuItem item in connectButton.DropDownItems)
-            {
-                item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
-            }
-            foreach (ToolStripMenuItem item in connectToolStripMenuItem.DropDownItems)
+            ToolStripDropDownItem connectitem = sender as ToolStripDropDownItem;
+            foreach (ToolStripMenuItem item in connectitem.DropDownItems)
             {
                 item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
             }
