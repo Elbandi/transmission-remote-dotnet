@@ -31,8 +31,7 @@ namespace TransmissionRemoteDotnet.Commmands
         private string statusBarUpdate;
         private bool stateChange = false;
         private int totalUploadInt, totalDownloadInt;
-        private bool[] isNew;
-        private Torrent[] updateItems;
+        private List<Torrent> UpdateTorrents = new List<Torrent>();
 
         public TorrentGetCommand(JsonObject response)
         {
@@ -52,8 +51,7 @@ namespace TransmissionRemoteDotnet.Commmands
             JsonArray torrents = (JsonArray)arguments[ProtocolConstants.KEY_TORRENTS];
             Program.DaemonDescriptor.UpdateSerial++;
             oldCount = Program.TorrentIndex.Count;
-            updateItems = new Torrent[torrents.Count];
-            isNew = new bool[torrents.Count];
+            UpdateTorrents.Clear();
             for (int i = 0; i < torrents.Count; i++)
             {
                 JsonObject torrent = (JsonObject)torrents[i];
@@ -64,16 +62,15 @@ namespace TransmissionRemoteDotnet.Commmands
                 {
                     if (!Program.TorrentIndex.ContainsKey(hash))
                     {
-                        isNew[i] = true;
-                        t = updateItems[i] = new Torrent(torrent);
+                        t = new Torrent(torrent);
                     }
                     else
                     {
-                        t = updateItems[i] = Program.TorrentIndex[hash];
+                        t = Program.TorrentIndex[hash];
                         if (t.Update(torrent, false))
                             stateChange = true;
-                        isNew[i] = false;
                     }
+                    UpdateTorrents.Add(t);
                 }
                 totalUpload += t.UploadRate;
                 totalDownload += t.DownloadRate;
@@ -117,18 +114,14 @@ namespace TransmissionRemoteDotnet.Commmands
                 return;
             }
             MainWindow form = Program.Form;
-            form.SuspendTorrentListView();
-            IComparer tmp = Program.Form.torrentListView.ListViewItemSorter;
-            Program.Form.torrentListView.ListViewItemSorter = null;
-
-            for (int i = 0; i < isNew.Length; i++)
+            foreach (Torrent t in UpdateTorrents)
             {
-                if (isNew[i])
-                    Program.Form.torrentListView.Items.Add(updateItems[i]);
-                else
-                    updateItems[i].UpdateUi(false);
+                if (t.ListView != null)
+                {
+                    t.UpdateUi(false);
+                }
             }
-
+            UpdateTorrents.Clear();
             foreach (string key in Enumerable.ToArray<string>(Program.TorrentIndex.Keys))
             {
                 Torrent t = Program.TorrentIndex[key];
@@ -139,11 +132,8 @@ namespace TransmissionRemoteDotnet.Commmands
                 }
             }
 
-            if (oldCount != Program.Form.torrentListView.Items.Count)
+            if (oldCount != Program.TorrentIndex.Count)
                 stateChange = true;
-
-            Program.Form.torrentListView.ListViewItemSorter = tmp;
-            form.ResumeTorrentListView();
 
             if (stateChange)
                 form.SetAllStateCounters();

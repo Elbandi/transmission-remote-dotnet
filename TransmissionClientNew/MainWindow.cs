@@ -342,8 +342,6 @@ namespace TransmissionRemoteDotnet
                 if (categoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
-                torrentListView.Sort();
-                Toolbox.StripeListView(torrentListView);
             }
         }
 
@@ -1241,13 +1239,13 @@ namespace TransmissionRemoteDotnet
         private void stateListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterByStateOrTracker();
-            torrentListView.Sort();
-            Toolbox.StripeListView(torrentListView);
         }
 
         private void FilterByStateOrTracker()
         {
             SuspendTorrentListView();
+            IComparer tmp = Program.Form.torrentListView.ListViewItemSorter;
+            Program.Form.torrentListView.ListViewItemSorter = null;
             if (stateListBox.SelectedIndex == 1)
             {
                 FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
@@ -1284,6 +1282,10 @@ namespace TransmissionRemoteDotnet
             {
                 FilterTorrent(AlwaysTrue, null);
             }
+
+            torrentListView.ListViewItemSorter = tmp;
+            torrentListView.Sort();
+            Toolbox.StripeListView(torrentListView);
             ResumeTorrentListView();
         }
 

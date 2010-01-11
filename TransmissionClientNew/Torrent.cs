@@ -265,6 +265,7 @@ namespace TransmissionRemoteDotnet
                 {
                     if (!itemCollection.Contains(this))
                     {
+                        this.UpdateUi(false);
                         itemCollection.Add(this);
                     }
                 }
