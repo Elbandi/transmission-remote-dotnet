@@ -994,7 +994,6 @@ namespace TransmissionRemoteDotnet
                 else
                     filesListView.Refresh();
                 filesListView.ListViewItemSorter = tmp;
-                filesListView.Sort();
                 Toolbox.StripeListView(filesListView);
                 filesListView.ResumeLayout();
             }
@@ -1284,7 +1283,6 @@ namespace TransmissionRemoteDotnet
             }
 
             torrentListView.ListViewItemSorter = tmp;
-            torrentListView.Sort();
             Toolbox.StripeListView(torrentListView);
             ResumeTorrentListView();
         }
@@ -1576,6 +1574,8 @@ namespace TransmissionRemoteDotnet
                 peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
                 PeerListViewItem.CurrentUpdateSerial++;
                 peersListView.SuspendLayout();
+                IComparer tmp = peersListView.ListViewItemSorter;
+                peersListView.ListViewItemSorter = null;
                 foreach (JsonObject peer in t.Peers)
                 {
                     PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
@@ -1601,7 +1601,7 @@ namespace TransmissionRemoteDotnet
                         }
                     }
                 }
-                peersListView.Sort();
+                peersListView.ListViewItemSorter = tmp;
                 Toolbox.StripeListView(peersListView);
                 peersListView.ResumeLayout();
             }
