@@ -138,11 +138,11 @@ namespace TransmissionRemoteDotnet
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
             this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, this.HaveTotal);
 
-            if (info.Contains(ProtocolConstants.FIELD_ADDEDDATE))
+            if (info.Contains(ProtocolConstants.FIELD_DONEDATE))
             {
                 DateTime dateTime = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DONEDATE]));
                 if (!dateTime.Year.Equals(1970))
-                    this.DoneDate = dateTime;
+                    this.DoneDate = dateTime.ToLocalTime();
             }
 
             this.PieceCount = Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECECOUNT]);
@@ -220,9 +220,9 @@ namespace TransmissionRemoteDotnet
                 base.SubItems.Add("");
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
-            this.Created = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DATECREATED])).ToString();
+            this.Created = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DATECREATED])).ToLocalTime().ToString();
             this.Creator = (string)info[ProtocolConstants.FIELD_CREATOR];
-            this.Added = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_ADDEDDATE]));
+            this.Added = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_ADDEDDATE])).ToLocalTime();
             base.Name = this.Hash = (string)info[ProtocolConstants.FIELD_HASHSTRING];
             this.TotalSize = Toolbox.ToLong(info[ProtocolConstants.FIELD_TOTALSIZE]);
             this.Comment = (string)info[ProtocolConstants.FIELD_COMMENT];

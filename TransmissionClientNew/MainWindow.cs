@@ -1632,7 +1632,7 @@ namespace TransmissionRemoteDotnet
                 if (torrentListView.SelectedItems.Count == 1)
                 {
                     Torrent t = (Torrent)torrentListView.SelectedItems[0];
-                    TimeSpan ts = DateTime.Now.ToUniversalTime().Subtract(t.Added);
+                    TimeSpan ts = DateTime.Now.Subtract(t.Added);
                     timeElapsedLabel.Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
                 }
                 else
