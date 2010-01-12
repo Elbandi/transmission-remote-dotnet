@@ -14,7 +14,11 @@
 Name "Transmission Remote"
 
 ; The file to write
+!ifndef REV
 OutFile "transmission-remote-dotnet-3.13-installer.exe"
+!else
+OutFile "transmission-remote-dotnet-${REV}-installer.exe"
+!endif
 
 ; The default installation directory
 !define ProgramFilesDir "Transmission Remote"
