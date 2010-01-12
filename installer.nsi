@@ -3,8 +3,10 @@
 !include "ProtocolAssociation.nsh"
 !include "x64.nsh"
 
+!ifndef NOBUILD
 ;Rebuild Release
 !system "%Windir%\Microsoft.NET\Framework\v3.5\MSBuild.exe /nologo /verbosity:m /t:Rebuild /p:Configuration=Release"
+!endif
 
 ;--------------------------------
 
