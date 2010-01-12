@@ -94,6 +94,7 @@ namespace TransmissionRemoteDotnet
         private void TorrentLoadDialog_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
+            this.OkButton.Select();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -146,8 +147,12 @@ namespace TransmissionRemoteDotnet
                     listView1.Items.Add(item);
                 }
                 Toolbox.StripeListView(listView1);
-                listView1.Enabled = button1.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
+                listView1.Enabled = OkButton.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
                 listView1.ResumeLayout();
+                NameLabel.Text = torrent.Name;
+                CommentLabel.Text = torrent.Comment;
+                SizeLabel.Text = string.Format("{0} ({1} x {2})", Toolbox.GetFileSize(torrent.Size), torrent.Pieces.Count, Toolbox.GetFileSize(torrent.PieceLength));
+                DateLabel.Text = torrent.CreationDate.ToString();
                 this.Text = torrent.Name;
                 this.toolStripStatusLabel1.Text = "";
             }
@@ -234,6 +239,30 @@ namespace TransmissionRemoteDotnet
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             numericUpDown1.Enabled = checkBox2.Checked;
+        }
+
+        private void SelectAllButton_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem i in listView1.Items)
+            {
+                i.Checked = true;
+            }
+        }
+
+        private void SelectNoneButton_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem i in listView1.Items)
+            {
+                i.Checked = false;
+            }
+        }
+
+        private void SelectInvertButton_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem i in listView1.Items)
+            {
+                i.Checked ^= true;
+            }
         }
     }
 }

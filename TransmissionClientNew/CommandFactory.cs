@@ -160,7 +160,7 @@ namespace TransmissionRemoteDotnet
                 catch (Exception ee)
                 { // just for debugging...
                     Console.WriteLine(ee.Message);
-                    LogDebug(ee.Source, ee.Message);
+                    Program.LogDebug(ee.Source, ee.Message);
                 }
                 (sender as TransmissionWebClient).OnCompleted(cmd);
             }
