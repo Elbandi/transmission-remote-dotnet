@@ -141,6 +141,7 @@
     <Compile Include="LocalSettingsDialog.Designer.cs">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogListViewItem.cs" />
     <Compile Include="MonoTorrent\BEncodedDictionary.cs" />
     <Compile Include="MonoTorrent\BEncodedList.cs" />
     <Compile Include="MonoTorrent\BEncodedNumber.cs" />

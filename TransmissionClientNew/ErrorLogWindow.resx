@@ -163,7 +163,7 @@
     <value>errorListView</value>
   </data>
   <data name="&gt;&gt;errorListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.8.3430.34150, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3663.34633, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;errorListView.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -181,6 +181,33 @@
     <value>splitContainer1</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DebugCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DebugCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 8</value>
+  </data>
+  <data name="DebugCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 17</value>
+  </data>
+  <data name="DebugCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="DebugCheckBox.Text" xml:space="preserve">
+    <value>Show debug logs</value>
+  </data>
+  <data name="&gt;&gt;DebugCheckBox.Name" xml:space="preserve">
+    <value>DebugCheckBox</value>
+  </data>
+  <data name="&gt;&gt;DebugCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DebugCheckBox.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;DebugCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
@@ -205,7 +232,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;clearButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -232,7 +259,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>582, 4</value>
@@ -256,7 +283,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -581,6 +608,6 @@
     <value>ErrorLogWindow</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.13.3663.34633, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

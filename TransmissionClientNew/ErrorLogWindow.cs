@@ -42,13 +42,15 @@ namespace TransmissionRemoteDotnet
         private void ErrorLogWindow_Load(object sender, EventArgs e)
         {
             errorListView.SuspendLayout();
+            bool showdebug = DebugCheckBox.Checked;
             lock (Program.LogItems)
             {
                 lock (errorListView)
                 {
-                    foreach (ListViewItem item in Program.LogItems)
+                    foreach (LogListViewItem item in Program.LogItems)
                     {
-                        errorListView.Items.Add((ListViewItem)item.Clone());
+                        if (!item.Debug || showdebug)
+                            errorListView.Items.Add((ListViewItem)item.Clone());
                     }
                 }
             }
@@ -87,16 +89,18 @@ namespace TransmissionRemoteDotnet
             else
             {
                 errorListView.SuspendLayout();
+                bool showdebug = DebugCheckBox.Checked;
                 lock (Program.LogItems)
                 {
                     lock (errorListView)
                     {
-                        List<ListViewItem> logItems = Program.LogItems;
+                        List<LogListViewItem> logItems = Program.LogItems;
                         if (logItems.Count > errorListView.Items.Count)
                         {
                             for (int i = errorListView.Items.Count; i < logItems.Count; i++)
                             {
-                                errorListView.Items.Add((ListViewItem)logItems[i].Clone());
+                                if (!logItems[i].Debug || showdebug)
+                                    errorListView.Items.Add((ListViewItem)logItems[i].Clone());
                             }
                         }
                     }
@@ -131,6 +135,12 @@ namespace TransmissionRemoteDotnet
             }
             this.errorListView.Sort();
             Toolbox.StripeListView(errorListView);
+        }
+
+        private void DebugCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            errorListView.Items.Clear();
+            ErrorLogWindow_Load(this, e);
         }
     }
 }

@@ -69,8 +69,8 @@ namespace TransmissionRemoteDotnet
             set { Program.daemonDescriptor = value; }
         }
 
-        private static List<ListViewItem> logItems = new List<ListViewItem>();
-        public static List<ListViewItem> LogItems
+        private static List<LogListViewItem> logItems = new List<LogListViewItem>();
+        public static List<LogListViewItem> LogItems
         {
             get { return Program.logItems; }
         }
@@ -138,13 +138,24 @@ namespace TransmissionRemoteDotnet
 
         public static void Log(string title, string body)
         {
-            Log(title, body, null);
+            Log(title, body, -1);
         }
 
-        public static void Log(string title, string body, object tag)
+        public static void LogDebug(string title, string body)
         {
-            ListViewItem logItem = new ListViewItem(DateTime.Now.ToString());
-            logItem.Tag = tag;
+            Log(title, body, -1, true);
+        }
+
+        public static void Log(string title, string body, long UpdateSerial)
+        {
+            Log(title, body, UpdateSerial, false);
+        }
+
+        public static void Log(string title, string body, long UpdateSerial, bool debug)
+        {
+            LogListViewItem logItem = new LogListViewItem(DateTime.Now.ToString());
+            logItem.UpdateSerial = UpdateSerial;
+            logItem.Debug = debug;
             logItem.SubItems.Add(title);
             logItem.SubItems.Add(body);
             lock (logItems)

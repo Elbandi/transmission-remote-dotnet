@@ -51,6 +51,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.DebugCheckBox = new System.Windows.Forms.CheckBox();
             this.clearButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@ namespace TransmissionRemoteDotnet
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.DebugCheckBox);
             this.splitContainer1.Panel2.Controls.Add(this.clearButton);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.closeButton);
@@ -100,6 +102,13 @@ namespace TransmissionRemoteDotnet
             // columnHeader3
             // 
             resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // DebugCheckBox
+            // 
+            resources.ApplyResources(this.DebugCheckBox, "DebugCheckBox");
+            this.DebugCheckBox.Name = "DebugCheckBox";
+            this.DebugCheckBox.UseVisualStyleBackColor = true;
+            this.DebugCheckBox.CheckedChanged += new System.EventHandler(this.DebugCheckBox_CheckedChanged);
             // 
             // clearButton
             // 
@@ -146,5 +155,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox DebugCheckBox;
     }
 }
