@@ -359,7 +359,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return Toolbox.BitCount(this.Pieces);
+                return this.Pieces != null ? Toolbox.BitCount(this.Pieces) : -1;
             }
         }
 
