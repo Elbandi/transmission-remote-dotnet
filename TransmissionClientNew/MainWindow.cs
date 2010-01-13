@@ -603,8 +603,11 @@ namespace TransmissionRemoteDotnet
             LocalSettings settings = Program.Settings;
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name, widths.ToString());
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name, indexes.ToString());
-            IListViewItemSorter listViewItemSorter = (IListViewItemSorter)listView.ListViewItemSorter;
-            settings.SetObject(CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name, listViewItemSorter.Order == SortOrder.Descending ? -listViewItemSorter.SortColumn : listViewItemSorter.SortColumn);
+            lock (listView)
+            {
+                IListViewItemSorter listViewItemSorter = (IListViewItemSorter)listView.ListViewItemSorter;
+                settings.SetObject(CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name, listViewItemSorter.Order == SortOrder.Descending ? -listViewItemSorter.SortColumn : listViewItemSorter.SortColumn);
+            }
         }
 
         public void RestoreListViewProperties(ListView listView)
@@ -1240,51 +1243,64 @@ namespace TransmissionRemoteDotnet
             FilterByStateOrTracker();
         }
 
+        static bool FilteringProcess = false;
         private void FilterByStateOrTracker()
         {
-            SuspendTorrentListView();
-            IComparer tmp = Program.Form.torrentListView.ListViewItemSorter;
-            Program.Form.torrentListView.ListViewItemSorter = null;
-            if (stateListBox.SelectedIndex == 1)
+            if (FilteringProcess)
+                return;
+            FilteringProcess = true; /* Race condition is not important, so we not lock */
+            try
             {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                SuspendTorrentListView();
+                lock (torrentListView)
+                {
+                    IComparer tmp = torrentListView.ListViewItemSorter;
+                    torrentListView.ListViewItemSorter = null;
+                    if (stateListBox.SelectedIndex == 1)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                    }
+                    else if (stateListBox.SelectedIndex == 2)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+                    }
+                    else if (stateListBox.SelectedIndex == 3)
+                    {
+                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                    }
+                    else if (stateListBox.SelectedIndex == 4)
+                    {
+                        FilterTorrent(IsFinished, null);
+                    }
+                    else if (stateListBox.SelectedIndex == 5)
+                    {
+                        FilterTorrent(NotFinished, null);
+                    }
+                    else if (stateListBox.SelectedIndex == 6)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
+                    }
+                    else if (stateListBox.SelectedIndex == 7)
+                    {
+                        FilterTorrent(TorrentHasError, null);
+                    }
+                    else if (stateListBox.SelectedIndex > 8)
+                    {
+                        FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+                    }
+                    else
+                    {
+                        FilterTorrent(AlwaysTrue, null);
+                    }
+                    torrentListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(torrentListView);
+                }
+                ResumeTorrentListView();
             }
-            else if (stateListBox.SelectedIndex == 2)
+            finally
             {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+                FilteringProcess = false;
             }
-            else if (stateListBox.SelectedIndex == 3)
-            {
-                FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
-            }
-            else if (stateListBox.SelectedIndex == 4)
-            {
-                FilterTorrent(IsFinished, null);
-            }
-            else if (stateListBox.SelectedIndex == 5)
-            {
-                FilterTorrent(NotFinished, null);
-            }
-            else if (stateListBox.SelectedIndex == 6)
-            {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
-            }
-            else if (stateListBox.SelectedIndex == 7)
-            {
-                FilterTorrent(TorrentHasError, null);
-            }
-            else if (stateListBox.SelectedIndex > 8)
-            {
-                FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
-            }
-            else
-            {
-                FilterTorrent(AlwaysTrue, null);
-            }
-
-            torrentListView.ListViewItemSorter = tmp;
-            Toolbox.StripeListView(torrentListView);
-            ResumeTorrentListView();
         }
 
         private delegate bool FilterCompare(Torrent t, object param);
@@ -1573,25 +1589,25 @@ namespace TransmissionRemoteDotnet
             {
                 peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
                 PeerListViewItem.CurrentUpdateSerial++;
-                peersListView.SuspendLayout();
-                IComparer tmp = peersListView.ListViewItemSorter;
-                peersListView.ListViewItemSorter = null;
-                foreach (JsonObject peer in t.Peers)
-                {
-                    PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
-                    if (item == null)
-                    {
-                        item = new PeerListViewItem(peer);
-                        peersListView.Items.Add(item);
-                    }
-                    else
-                    {
-                        item.Update(peer);
-                    }
-                    item.UpdateSerial = PeerListViewItem.CurrentUpdateSerial;
-                }
                 lock (peersListView)
                 {
+                    peersListView.SuspendLayout();
+                    IComparer tmp = peersListView.ListViewItemSorter;
+                    peersListView.ListViewItemSorter = null;
+                    foreach (JsonObject peer in t.Peers)
+                    {
+                        PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
+                        if (item == null)
+                        {
+                            item = new PeerListViewItem(peer);
+                            peersListView.Items.Add(item);
+                        }
+                        else
+                        {
+                            item.Update(peer);
+                        }
+                        item.UpdateSerial = PeerListViewItem.CurrentUpdateSerial;
+                    }
                     PeerListViewItem[] peers = (PeerListViewItem[])new ArrayList(peersListView.Items).ToArray(typeof(PeerListViewItem));
                     foreach (PeerListViewItem item in peers)
                     {
@@ -1600,10 +1616,10 @@ namespace TransmissionRemoteDotnet
                             peersListView.Items.Remove(item);
                         }
                     }
+                    peersListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(peersListView);
+                    peersListView.ResumeLayout();
                 }
-                peersListView.ListViewItemSorter = tmp;
-                Toolbox.StripeListView(peersListView);
-                peersListView.ResumeLayout();
             }
         }
 
