@@ -100,6 +100,11 @@ msgstr ""
 msgid "Error Log"
 msgstr "错误日志"
 
+#: ErrorLogWindow~DebugCheckBox.Text
+#, csharp-format
+msgid "Show debug logs"
+msgstr "Show debug logs"
+
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
 msgid "Clear"
@@ -177,7 +182,7 @@ msgstr "Clear the password at save"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
-#: TorrentLoadDialog~button2.Text
+#: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
 #, csharp-format
@@ -351,6 +356,7 @@ msgid "Retry limit:"
 msgstr "重试上限:"
 
 #: LocalSettingsDialog~label11.Text
+#: OtherStrings~UnixPathPrefix
 #, csharp-format
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
@@ -366,6 +372,7 @@ msgid "Command: "
 msgstr "命令: "
 
 #: LocalSettingsDialog~label14.Text
+#: OtherStrings~SambaShare
 #, csharp-format
 msgid "Samba share:"
 msgstr "Samba share:"
@@ -543,11 +550,13 @@ msgid "Path"
 msgstr "路径"
 
 #: MainWindow~columnHeader10.Text
+#: MainWindow~columnHeader34.Text
 #, csharp-format
 msgid "Seeds"
 msgstr "做种者"
 
 #: MainWindow~columnHeader11.Text
+#: MainWindow~columnHeader35.Text
 #, csharp-format
 msgid "Leechers"
 msgstr "下载者"
@@ -581,7 +590,6 @@ msgstr "分享率"
 
 #: MainWindow~columnHeader17.Text
 #: OtherStrings~Skip
-#: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
 msgstr "忽略"
@@ -609,9 +617,10 @@ msgid "Announce URL"
 msgstr "通知 URL"
 
 #: MainWindow~columnHeader21.Text
+#: MainWindow~columnHeader9.Text
 #, csharp-format
-msgid "Scrape URL"
-msgstr "获取 URL"
+msgid "Status"
+msgstr "状态"
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
@@ -666,6 +675,16 @@ msgstr "标志"
 msgid "Type"
 msgstr "类型"
 
+#: MainWindow~columnHeader33.Text
+#, csharp-format
+msgid "Update In"
+msgstr "Update In"
+
+#: MainWindow~columnHeader36.Text
+#, csharp-format
+msgid "Downloaded"
+msgstr "Downloaded"
+
 #: MainWindow~columnHeader4.Text
 #, csharp-format
 msgid "%"
@@ -676,11 +695,6 @@ msgstr "%"
 #, csharp-format
 msgid "Priority"
 msgstr "优先级"
-
-#: MainWindow~columnHeader9.Text
-#, csharp-format
-msgid "Status"
-msgstr "状态"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
@@ -776,6 +790,7 @@ msgid "Ratio:"
 msgstr "分享率:"
 
 #: MainWindow~label15.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
 #, csharp-format
 msgid "Comment:"
 msgstr "注释:"
@@ -1226,6 +1241,11 @@ msgstr "高优先级"
 msgid "Hour"
 msgstr "Hour"
 
+#: OtherStrings~HttpError
+#, csharp-format
+msgid "Daemon try to download something, but the http result is:{0}{1}"
+msgstr "Daemon try to download something, but the http result is:{0}{1}"
+
 #: OtherStrings~Incomplete
 #, csharp-format
 msgid "Incomplete"
@@ -1281,6 +1301,11 @@ msgstr "低"
 msgid "Low priority"
 msgstr "低优先级"
 
+#: OtherStrings~MappingSample
+#, csharp-format
+msgid "Sample mapping:"
+msgstr "Sample mapping:"
+
 #: OtherStrings~Megabyte
 #, csharp-format
 msgid "Megabyte"
@@ -1330,6 +1355,11 @@ msgstr "有新版本 ({0}.{1}) 可用. 您希望访问下载页面吗?"
 #, csharp-format
 msgid "No"
 msgstr "No"
+
+#: OtherStrings~NoHostnameSet
+#, csharp-format
+msgid "No hostname has been set."
+msgstr "No hostname has been set."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1723,12 +1753,52 @@ msgstr "已上传字节:"
 msgid "TorrentLoadDialog"
 msgstr "TorrentLoadDialog"
 
-#: TorrentLoadDialog~button1.Text
+#: TorrentLoadDialog~DateLabelLabel.Text
+#, csharp-format
+msgid "Date:"
+msgstr "Date:"
+
+#: TorrentLoadDialog~NameLabelLabel.Text
+#, csharp-format
+msgid "Name:"
+msgstr "Name:"
+
+#: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
 #: UriPromptWindow~button1.Text
 #, csharp-format
 msgid "OK"
 msgstr "确定"
+
+#: TorrentLoadDialog~PropertiesGroupBox.Text
+#, csharp-format
+msgid "Torrent properties"
+msgstr "Torrent properties"
+
+#: TorrentLoadDialog~SelectAllButton.Text
+#, csharp-format
+msgid "Select All"
+msgstr "Select All"
+
+#: TorrentLoadDialog~SelectInvertButton.Text
+#, csharp-format
+msgid "Select Invert"
+msgstr "Select Invert"
+
+#: TorrentLoadDialog~SelectNoneButton.Text
+#, csharp-format
+msgid "Select None"
+msgstr "Select None"
+
+#: TorrentLoadDialog~SizelabelLabel.Text
+#, csharp-format
+msgid "Size:"
+msgstr "Size:"
+
+#: TorrentLoadDialog~TorrentContentsGroupBox.Text
+#, csharp-format
+msgid "Torrent Contents"
+msgstr "Torrent Contents"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
@@ -1739,6 +1809,11 @@ msgstr "更改下载目录:"
 #, csharp-format
 msgid "Alternate peer limit: "
 msgstr "更改用户上限:"
+
+#: TorrentLoadDialog~checkBox3.Text
+#, csharp-format
+msgid "Start torrent"
+msgstr "Start torrent"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
@@ -1789,3 +1864,6 @@ msgstr "从链接上传"
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "正在等待 URL..."
+
+#~ msgid "Scrape URL"
+#~ msgstr "获取 URL"

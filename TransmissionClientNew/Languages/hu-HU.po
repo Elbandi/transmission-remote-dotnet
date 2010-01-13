@@ -101,6 +101,11 @@ msgstr ""
 msgid "Error Log"
 msgstr "Hibanapló"
 
+#: ErrorLogWindow~DebugCheckBox.Text
+#, csharp-format
+msgid "Show debug logs"
+msgstr "Debug üzenetek"
+
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
 msgid "Clear"
@@ -178,7 +183,7 @@ msgstr "Clear the password at save"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
-#: TorrentLoadDialog~button2.Text
+#: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
 #, csharp-format
@@ -328,7 +333,7 @@ msgstr "Viselkedés"
 #: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
 msgid "New mapping:"
-msgstr "New mapping:"
+msgstr "Új összerendelés:"
 
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
@@ -352,6 +357,7 @@ msgid "Retry limit:"
 msgstr "Ismétlések száma:"
 
 #: LocalSettingsDialog~label11.Text
+#: OtherStrings~UnixPathPrefix
 #, csharp-format
 msgid "UNIX path prefix:"
 msgstr "UNIX útvonal elõtag:"
@@ -367,6 +373,7 @@ msgid "Command: "
 msgstr "Parancs: "
 
 #: LocalSettingsDialog~label14.Text
+#: OtherStrings~SambaShare
 #, csharp-format
 msgid "Samba share:"
 msgstr "Samba megosztás:"
@@ -544,11 +551,13 @@ msgid "Path"
 msgstr "Útvonal"
 
 #: MainWindow~columnHeader10.Text
+#: MainWindow~columnHeader34.Text
 #, csharp-format
 msgid "Seeds"
 msgstr "Megosztók"
 
 #: MainWindow~columnHeader11.Text
+#: MainWindow~columnHeader35.Text
 #, csharp-format
 msgid "Leechers"
 msgstr "Letöltők"
@@ -582,7 +591,6 @@ msgstr "Arány"
 
 #: MainWindow~columnHeader17.Text
 #: OtherStrings~Skip
-#: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
 msgstr "Kihagyás"
@@ -610,9 +618,10 @@ msgid "Announce URL"
 msgstr "Announce URL"
 
 #: MainWindow~columnHeader21.Text
+#: MainWindow~columnHeader9.Text
 #, csharp-format
-msgid "Scrape URL"
-msgstr "Scrape URL"
+msgid "Status"
+msgstr "Állapot"
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
@@ -667,6 +676,16 @@ msgstr "Jelzők"
 msgid "Type"
 msgstr "Típus"
 
+#: MainWindow~columnHeader33.Text
+#, csharp-format
+msgid "Update In"
+msgstr "Következő frissítés"
+
+#: MainWindow~columnHeader36.Text
+#, csharp-format
+msgid "Downloaded"
+msgstr "Letöltve"
+
 #: MainWindow~columnHeader4.Text
 #, csharp-format
 msgid "%"
@@ -677,11 +696,6 @@ msgstr "%"
 #, csharp-format
 msgid "Priority"
 msgstr "Prioritás"
-
-#: MainWindow~columnHeader9.Text
-#, csharp-format
-msgid "Status"
-msgstr "Állapot"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
@@ -777,6 +791,7 @@ msgid "Ratio:"
 msgstr "Arány:"
 
 #: MainWindow~label15.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
 #, csharp-format
 msgid "Comment:"
 msgstr "Megjegyzés:"
@@ -1227,6 +1242,11 @@ msgstr "Magas prioritás"
 msgid "Hour"
 msgstr "Óra"
 
+#: OtherStrings~HttpError
+#, csharp-format
+msgid "Daemon try to download something, but the http result is:{0}{1}"
+msgstr "Daemon valamit probált letölteni, de a http valasz:{0}{1}"
+
 #: OtherStrings~Incomplete
 #, csharp-format
 msgid "Incomplete"
@@ -1282,6 +1302,11 @@ msgstr "Alacsony"
 msgid "Low priority"
 msgstr "Alacsony prioritás"
 
+#: OtherStrings~MappingSample
+#, csharp-format
+msgid "Sample mapping:"
+msgstr "Minta összerendelés:"
+
 #: OtherStrings~Megabyte
 #, csharp-format
 msgid "Megabyte"
@@ -1331,6 +1356,11 @@ msgstr "Elérhető újabb verzió ({0}.{1}). Megakarja látogatni a letöltési 
 #, csharp-format
 msgid "No"
 msgstr "Nem"
+
+#: OtherStrings~NoHostnameSet
+#, csharp-format
+msgid "No hostname has been set."
+msgstr "Nincs megadva hostnév."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1724,12 +1754,52 @@ msgstr "Feltöltés:"
 msgid "TorrentLoadDialog"
 msgstr "TorrentLoadDialog"
 
-#: TorrentLoadDialog~button1.Text
+#: TorrentLoadDialog~DateLabelLabel.Text
+#, csharp-format
+msgid "Date:"
+msgstr "Dátum:"
+
+#: TorrentLoadDialog~NameLabelLabel.Text
+#, csharp-format
+msgid "Name:"
+msgstr "Név:"
+
+#: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
 #: UriPromptWindow~button1.Text
 #, csharp-format
 msgid "OK"
 msgstr "OK"
+
+#: TorrentLoadDialog~PropertiesGroupBox.Text
+#, csharp-format
+msgid "Torrent properties"
+msgstr "Torrent tulajdonságok"
+
+#: TorrentLoadDialog~SelectAllButton.Text
+#, csharp-format
+msgid "Select All"
+msgstr "Összeset"
+
+#: TorrentLoadDialog~SelectInvertButton.Text
+#, csharp-format
+msgid "Select Invert"
+msgstr "Fordított"
+
+#: TorrentLoadDialog~SelectNoneButton.Text
+#, csharp-format
+msgid "Select None"
+msgstr "Semelyiket"
+
+#: TorrentLoadDialog~SizelabelLabel.Text
+#, csharp-format
+msgid "Size:"
+msgstr "Méret:"
+
+#: TorrentLoadDialog~TorrentContentsGroupBox.Text
+#, csharp-format
+msgid "Torrent Contents"
+msgstr "Torrent Tartalma"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
@@ -1740,6 +1810,11 @@ msgstr "Cél könyvtár:"
 #, csharp-format
 msgid "Alternate peer limit: "
 msgstr "Kapcsolatok száma: "
+
+#: TorrentLoadDialog~checkBox3.Text
+#, csharp-format
+msgid "Start torrent"
+msgstr "Torrent indítása"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
@@ -1790,3 +1865,6 @@ msgstr "Torrent hozzáadása URL-ből"
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Várakozás az URL-re..."
+
+#~ msgid "Scrape URL"
+#~ msgstr "Scrape URL"

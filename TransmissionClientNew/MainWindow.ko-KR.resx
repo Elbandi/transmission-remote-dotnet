@@ -111,6 +111,18 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader33.Text" xml:space="preserve">
+    <value>Update In</value>
+  </data>
+  <data name="columnHeader34.Text" xml:space="preserve">
+    <value>배포</value>
+  </data>
+  <data name="columnHeader35.Text" xml:space="preserve">
+    <value>리쳐</value>
+  </data>
+  <data name="columnHeader36.Text" xml:space="preserve">
+    <value>Downloaded</value>
+  </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>위치:</value>
   </data>
@@ -199,7 +211,7 @@
     <value>Announce 주소</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Scrape 주소</value>
+    <value>상태</value>
   </data>
   <data name="columnHeader22.Text" xml:space="preserve">
     <value>순서</value>

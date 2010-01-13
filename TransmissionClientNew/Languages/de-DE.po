@@ -102,6 +102,11 @@ msgstr ""
 msgid "Error Log"
 msgstr "Fehler-Log"
 
+#: ErrorLogWindow~DebugCheckBox.Text
+#, csharp-format
+msgid "Show debug logs"
+msgstr "Show debug logs"
+
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
 msgid "Clear"
@@ -179,7 +184,7 @@ msgstr "Beim Speichern Passwort löschen"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
-#: TorrentLoadDialog~button2.Text
+#: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
 #, csharp-format
@@ -353,6 +358,7 @@ msgid "Retry limit:"
 msgstr "Wiederholungs-Limit:"
 
 #: LocalSettingsDialog~label11.Text
+#: OtherStrings~UnixPathPrefix
 #, csharp-format
 msgid "UNIX path prefix:"
 msgstr "UNIX path prefix:"
@@ -368,6 +374,7 @@ msgid "Command: "
 msgstr "Befehl: "
 
 #: LocalSettingsDialog~label14.Text
+#: OtherStrings~SambaShare
 #, csharp-format
 msgid "Samba share:"
 msgstr "Samba share:"
@@ -545,11 +552,13 @@ msgid "Path"
 msgstr "Pfad"
 
 #: MainWindow~columnHeader10.Text
+#: MainWindow~columnHeader34.Text
 #, csharp-format
 msgid "Seeds"
 msgstr "Seeder"
 
 #: MainWindow~columnHeader11.Text
+#: MainWindow~columnHeader35.Text
 #, csharp-format
 msgid "Leechers"
 msgstr "Leecher"
@@ -583,7 +592,6 @@ msgstr "Ratio"
 
 #: MainWindow~columnHeader17.Text
 #: OtherStrings~Skip
-#: TorrentLoadDialog~columnHeader2.Text
 #, csharp-format
 msgid "Skip"
 msgstr "Auslassen"
@@ -611,9 +619,10 @@ msgid "Announce URL"
 msgstr "Announce URL"
 
 #: MainWindow~columnHeader21.Text
+#: MainWindow~columnHeader9.Text
 #, csharp-format
-msgid "Scrape URL"
-msgstr "Scrape URL"
+msgid "Status"
+msgstr "Status"
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
@@ -668,6 +677,16 @@ msgstr "Flags"
 msgid "Type"
 msgstr "Typ"
 
+#: MainWindow~columnHeader33.Text
+#, csharp-format
+msgid "Update In"
+msgstr "Update In"
+
+#: MainWindow~columnHeader36.Text
+#, csharp-format
+msgid "Downloaded"
+msgstr "Downloaded"
+
 #: MainWindow~columnHeader4.Text
 #, csharp-format
 msgid "%"
@@ -678,11 +697,6 @@ msgstr "Prozent"
 #, csharp-format
 msgid "Priority"
 msgstr "Priorität"
-
-#: MainWindow~columnHeader9.Text
-#, csharp-format
-msgid "Status"
-msgstr "Status"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
@@ -778,6 +792,7 @@ msgid "Ratio:"
 msgstr "Ratio:"
 
 #: MainWindow~label15.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
 #, csharp-format
 msgid "Comment:"
 msgstr "Kommentar:"
@@ -1228,6 +1243,11 @@ msgstr "Hohe Priorität"
 msgid "Hour"
 msgstr "Stunde"
 
+#: OtherStrings~HttpError
+#, csharp-format
+msgid "Daemon try to download something, but the http result is:{0}{1}"
+msgstr "Daemon try to download something, but the http result is:{0}{1}"
+
 #: OtherStrings~Incomplete
 #, csharp-format
 msgid "Incomplete"
@@ -1283,6 +1303,11 @@ msgstr "Niedrig"
 msgid "Low priority"
 msgstr "Niedrige Priorität"
 
+#: OtherStrings~MappingSample
+#, csharp-format
+msgid "Sample mapping:"
+msgstr "Sample mapping:"
+
 #: OtherStrings~Megabyte
 #, csharp-format
 msgid "Megabyte"
@@ -1332,6 +1357,11 @@ msgstr "Es ist eine neue Version ({0}.{1}) verfügbar. Die Download Seite aufruf
 #, csharp-format
 msgid "No"
 msgstr "Nein"
+
+#: OtherStrings~NoHostnameSet
+#, csharp-format
+msgid "No hostname has been set."
+msgstr "No hostname has been set."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1725,12 +1755,52 @@ msgstr "Hochgeladen:"
 msgid "TorrentLoadDialog"
 msgstr "TorrentLoadDialog"
 
-#: TorrentLoadDialog~button1.Text
+#: TorrentLoadDialog~DateLabelLabel.Text
+#, csharp-format
+msgid "Date:"
+msgstr "Date:"
+
+#: TorrentLoadDialog~NameLabelLabel.Text
+#, csharp-format
+msgid "Name:"
+msgstr "Name:"
+
+#: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
 #: UriPromptWindow~button1.Text
 #, csharp-format
 msgid "OK"
 msgstr "OK"
+
+#: TorrentLoadDialog~PropertiesGroupBox.Text
+#, csharp-format
+msgid "Torrent properties"
+msgstr "Torrent properties"
+
+#: TorrentLoadDialog~SelectAllButton.Text
+#, csharp-format
+msgid "Select All"
+msgstr "Select All"
+
+#: TorrentLoadDialog~SelectInvertButton.Text
+#, csharp-format
+msgid "Select Invert"
+msgstr "Select Invert"
+
+#: TorrentLoadDialog~SelectNoneButton.Text
+#, csharp-format
+msgid "Select None"
+msgstr "Select None"
+
+#: TorrentLoadDialog~SizelabelLabel.Text
+#, csharp-format
+msgid "Size:"
+msgstr "Size:"
+
+#: TorrentLoadDialog~TorrentContentsGroupBox.Text
+#, csharp-format
+msgid "Torrent Contents"
+msgstr "Torrent Contents"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
@@ -1741,6 +1811,11 @@ msgstr "Alternatives Zielverzeichnis: "
 #, csharp-format
 msgid "Alternate peer limit: "
 msgstr "Alternatives Peer Limit: "
+
+#: TorrentLoadDialog~checkBox3.Text
+#, csharp-format
+msgid "Start torrent"
+msgstr "Start torrent"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
@@ -1791,3 +1866,6 @@ msgstr "Upload mittels URL"
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Warte auf URL..."
+
+#~ msgid "Scrape URL"
+#~ msgstr "Scrape URL"
