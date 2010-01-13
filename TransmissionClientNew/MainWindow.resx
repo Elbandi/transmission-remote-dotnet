@@ -1726,10 +1726,37 @@
     <value>300</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Scrape URL</value>
+    <value>Status</value>
   </data>
   <data name="columnHeader21.Width" type="System.Int32, mscorlib">
-    <value>300</value>
+    <value>150</value>
+  </data>
+  <data name="columnHeader33.Text" xml:space="preserve">
+    <value>Update In</value>
+  </data>
+  <data name="columnHeader33.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="columnHeader34.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="columnHeader34.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="columnHeader35.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="columnHeader35.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="columnHeader36.Text" xml:space="preserve">
+    <value>Downloaded</value>
+  </data>
+  <data name="columnHeader36.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="columnHeader36.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="trackersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3653,6 +3680,30 @@
     <value>columnHeader21</value>
   </data>
   <data name="&gt;&gt;columnHeader21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader33.Name" xml:space="preserve">
+    <value>columnHeader33</value>
+  </data>
+  <data name="&gt;&gt;columnHeader33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader34.Name" xml:space="preserve">
+    <value>columnHeader34</value>
+  </data>
+  <data name="&gt;&gt;columnHeader34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader35.Name" xml:space="preserve">
+    <value>columnHeader35</value>
+  </data>
+  <data name="&gt;&gt;columnHeader35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader36.Name" xml:space="preserve">
+    <value>columnHeader36</value>
+  </data>
+  <data name="&gt;&gt;columnHeader36.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">

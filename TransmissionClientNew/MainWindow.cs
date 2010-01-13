@@ -1543,18 +1543,46 @@ namespace TransmissionRemoteDotnet
                 {
                     int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
                     string announceUrl = (string)tracker[ProtocolConstants.ANNOUNCE];
-                    string scrapeUrl = (string)tracker[ProtocolConstants.SCRAPE];
                     ListViewItem item = new ListViewItem(tier.ToString());
                     item.SubItems.Add(announceUrl);
-                    item.SubItems.Add(scrapeUrl);
+                    while (item.SubItems.Count < 7)
+                        item.SubItems.Add("");
+                    item.Name = Toolbox.ToInt((JsonNumber)tracker[ProtocolConstants.FIELD_IDENTIFIER], -1).ToString();
                     trackersListView.Items.Add(item);
                 }
                 Toolbox.StripeListView(trackersListView);
                 trackersListView.ResumeLayout();
-                peersListView.Enabled = trackersListView.Enabled
-                    = true;
+                trackersListView.Enabled = true;
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
+            }
+            if (t.TrackerStats != null)
+            {
+                trackersListView.SuspendLayout();
+                foreach (JsonObject trackerstat in t.TrackerStats)
+                {
+                    int id = Toolbox.ToInt((JsonNumber)trackerstat[ProtocolConstants.FIELD_IDENTIFIER], -1);
+                    if (id >= 0 && trackersListView.Items.ContainsKey(id.ToString()))
+                    {
+                        ListViewItem item = trackersListView.Items[id.ToString()];
+                        double nat = Toolbox.ToDouble(trackerstat["nextAnnounceTime"]);
+                        int seederCount = Toolbox.ToInt(trackerstat["seederCount"]);
+                        int leecherCount = Toolbox.ToInt(trackerstat["leecherCount"]);
+                        int downloadCount = Toolbox.ToInt(trackerstat["downloadCount"]);
+                        item.SubItems[2].Text = (string)trackerstat["lastAnnounceResult"];
+                        if (nat > 0.0)
+                        {
+                            TimeSpan ts = Toolbox.DateFromEpoch(nat).ToLocalTime().Subtract(DateTime.Now);
+                            item.SubItems[3].Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
+                        }
+                        else
+                            item.SubItems[3].Text = "";
+                        item.SubItems[4].Text = seederCount >= 0 ? seederCount.ToString() : "";
+                        item.SubItems[5].Text = leecherCount >= 0 ? leecherCount.ToString() : "";
+                        item.SubItems[6].Text = downloadCount >= 0 ? downloadCount.ToString() : "";
+                    }
+                }
+                trackersListView.ResumeLayout();
             }
             remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
             label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
@@ -1585,9 +1613,9 @@ namespace TransmissionRemoteDotnet
             statusLabel.Text = t.Status;
             labelForErrorLabel.Visible = errorLabel.Visible = !(errorLabel.Text = t.ErrorString).Equals("");
             RefreshElapsedTimer();
-            if (t.Peers != null)
+            peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
+            if (t.Peers != null && peersListView.Enabled)
             {
-                peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
                 PeerListViewItem.CurrentUpdateSerial++;
                 lock (peersListView)
                 {

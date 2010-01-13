@@ -104,6 +104,10 @@ namespace TransmissionRemoteDotnet
             this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader33 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader34 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader35 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader36 = new System.Windows.Forms.ColumnHeader();
             this.filesTabPage = new System.Windows.Forms.TabPage();
             this.filesTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
             this.filesListView = new TransmissionRemoteDotnet.ListViewNF();
@@ -750,7 +754,11 @@ namespace TransmissionRemoteDotnet
             this.trackersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader22,
             this.columnHeader20,
-            this.columnHeader21});
+            this.columnHeader21,
+            this.columnHeader33,
+            this.columnHeader34,
+            this.columnHeader35,
+            this.columnHeader36});
             resources.ApplyResources(this.trackersListView, "trackersListView");
             this.trackersListView.FullRowSelect = true;
             this.trackersListView.Name = "trackersListView";
@@ -769,6 +777,22 @@ namespace TransmissionRemoteDotnet
             // columnHeader21
             // 
             resources.ApplyResources(this.columnHeader21, "columnHeader21");
+            // 
+            // columnHeader33
+            // 
+            resources.ApplyResources(this.columnHeader33, "columnHeader33");
+            // 
+            // columnHeader34
+            // 
+            resources.ApplyResources(this.columnHeader34, "columnHeader34");
+            // 
+            // columnHeader35
+            // 
+            resources.ApplyResources(this.columnHeader35, "columnHeader35");
+            // 
+            // columnHeader36
+            // 
+            resources.ApplyResources(this.columnHeader36, "columnHeader36");
             // 
             // filesTabPage
             // 
@@ -1670,6 +1694,10 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader33;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ColumnHeader columnHeader35;
+        private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.Label timeElapsedLabelLabel;
         private System.Windows.Forms.Timer refreshElapsedTimer;
         private System.Windows.Forms.GroupBox generalTorrentNameGroupBox;
