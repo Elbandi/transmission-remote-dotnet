@@ -262,21 +262,21 @@
             resources.ApplyResources(this.SelectNoneButton, "SelectNoneButton");
             this.SelectNoneButton.Name = "SelectNoneButton";
             this.SelectNoneButton.UseVisualStyleBackColor = true;
-            this.SelectNoneButton.Click += new System.EventHandler(this.SelectNoneButton_Click);
+            this.SelectNoneButton.Click += new System.EventHandler(this.SelectNoneHandler);
             // 
             // SelectInvertButton
             // 
             resources.ApplyResources(this.SelectInvertButton, "SelectInvertButton");
             this.SelectInvertButton.Name = "SelectInvertButton";
             this.SelectInvertButton.UseVisualStyleBackColor = true;
-            this.SelectInvertButton.Click += new System.EventHandler(this.SelectInvertButton_Click);
+            this.SelectInvertButton.Click += new System.EventHandler(this.SelectInvertHandler);
             // 
             // SelectAllButton
             // 
             resources.ApplyResources(this.SelectAllButton, "SelectAllButton");
             this.SelectAllButton.Name = "SelectAllButton";
             this.SelectAllButton.UseVisualStyleBackColor = true;
-            this.SelectAllButton.Click += new System.EventHandler(this.SelectAllButton_Click);
+            this.SelectAllButton.Click += new System.EventHandler(this.SelectAllHandler);
             // 
             // tableLayoutPanel1
             // 

@@ -430,6 +430,32 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static void SelectNone(ListView lv)
+        {
+            lock (lv)
+            {
+                lv.SuspendLayout();
+                foreach (ListViewItem item in lv.Items)
+                {
+                    item.Selected = false;
+                }
+                lv.ResumeLayout();
+            }
+        }
+
+        public static void SelectInvert(ListView lv)
+        {
+            lock (lv)
+            {
+                lv.SuspendLayout();
+                foreach (ListViewItem item in lv.Items)
+                {
+                    item.Selected ^= true;
+                }
+                lv.ResumeLayout();
+            }
+        }
+
         /// <summary>
         /// Renames a subkey of the passed in registry key since 
         /// the Framework totally forgot to include such a handy feature.

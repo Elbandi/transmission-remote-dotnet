@@ -466,6 +466,15 @@
     <comment>{0} is the newline char</comment>
   </data>
   <data name="NoHostnameSet" xml:space="preserve">
-    <value>The hostname not set</value>
+    <value>No hostname has been set.</value>
+  </data>
+  <data name="MappingSample" xml:space="preserve">
+    <value>Sample mapping:</value>
+  </data>
+  <data name="SambaShare" xml:space="preserve">
+    <value>Samba share:</value>
+  </data>
+  <data name="UnixPathPrefix" xml:space="preserve">
+    <value>UNIX path prefix:</value>
   </data>
 </root>

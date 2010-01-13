@@ -2688,6 +2688,33 @@
   <data name="&gt;&gt;PlinkEnableCheckBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="MappingHelpButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="MappingHelpButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="MappingHelpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 14</value>
+  </data>
+  <data name="MappingHelpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="MappingHelpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MappingHelpButton.Name" xml:space="preserve">
+    <value>MappingHelpButton</value>
+  </data>
+  <data name="&gt;&gt;MappingHelpButton.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.CustomControls.USButton, Transmission Remote, Version=3.13.3665.32214, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;MappingHelpButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;MappingHelpButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
   </data>

@@ -370,7 +370,11 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
 
             JsonArray ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
-            destpathhistory.AddRange((string[])ja.ToArray(typeof(string)));
+            foreach (string s in ja.ToArray())
+            {
+                if (s.Length > 0)
+                    destpathhistory.Add(s);
+            }
             JsonObject jo = (JsonObject)o[SettingsKey.REGKEY_SAMBASHAREMAPPINGS];
             if (jo != null)
             {

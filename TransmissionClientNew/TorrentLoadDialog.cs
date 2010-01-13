@@ -23,6 +23,16 @@ namespace TransmissionRemoteDotnet
             Toolbox.SelectAll(listView1);
         }
 
+        private void SelectNoneHandler(object sender, EventArgs e)
+        {
+            Toolbox.SelectNone(listView1);
+        }
+
+        private void SelectInvertHandler(object sender, EventArgs e)
+        {
+            Toolbox.SelectInvert(listView1);
+        }
+
         private void HighPriorityHandler(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listView1.SelectedItems)
@@ -47,22 +57,6 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void DownloadHandler(object sender, EventArgs e)
-        {
-            foreach (ListViewItem item in listView1.SelectedItems)
-            {
-                item.Checked = true;
-            }
-        }
-
-        private void SkipHandler(object sender, EventArgs e)
-        {
-            foreach (ListViewItem item in listView1.SelectedItems)
-            {
-                item.Checked = false;
-            }
-        }
-
         public TorrentLoadDialog(string path)
         {
             InitializeComponent();
@@ -72,9 +66,6 @@ namespace TransmissionRemoteDotnet
             this.noTorrentSelectionMenu = new ContextMenu();
             noTorrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
             this.torrentSelectionMenu = this.listView1.ContextMenu = new ContextMenu();
-            torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Download, new EventHandler(this.DownloadHandler)));
-            torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Skip, new EventHandler(this.SkipHandler)));
-            torrentSelectionMenu.MenuItems.Add(new MenuItem("-"));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.HighPriority, new EventHandler(this.HighPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.NormalPriority, new EventHandler(this.NormalPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.LowPriority, new EventHandler(this.LowPriorityHandler)));
@@ -87,6 +78,10 @@ namespace TransmissionRemoteDotnet
             {
                 comboBox1.Items.Add(s);
             }
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            string ddir = (string)session[ProtocolConstants.DOWNLOAD_DIR];
+            if (!comboBox1.Items.Contains(ddir))
+                comboBox1.Items.Insert(0, ddir);
             if (comboBox1.Items.Count > 0)
                 comboBox1.SelectedIndex = 0;
         }
@@ -239,30 +234,6 @@ namespace TransmissionRemoteDotnet
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             numericUpDown1.Enabled = checkBox2.Checked;
-        }
-
-        private void SelectAllButton_Click(object sender, EventArgs e)
-        {
-            foreach (ListViewItem i in listView1.Items)
-            {
-                i.Checked = true;
-            }
-        }
-
-        private void SelectNoneButton_Click(object sender, EventArgs e)
-        {
-            foreach (ListViewItem i in listView1.Items)
-            {
-                i.Checked = false;
-            }
-        }
-
-        private void SelectInvertButton_Click(object sender, EventArgs e)
-        {
-            foreach (ListViewItem i in listView1.Items)
-            {
-                i.Checked ^= true;
-            }
         }
     }
 }

@@ -119,6 +119,7 @@ namespace TransmissionRemoteDotnet
             this.uploadLimitItems = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MappingHelpButton = new TransmissionRemoteDotnet.CustomControls.USButton();
             this.label11 = new System.Windows.Forms.Label();
             this.AddShareButton = new System.Windows.Forms.Button();
             this.UnixPathPrefixTextBox = new System.Windows.Forms.TextBox();
@@ -699,6 +700,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.MappingHelpButton);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.AddShareButton);
             this.groupBox1.Controls.Add(this.UnixPathPrefixTextBox);
@@ -707,6 +709,16 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // MappingHelpButton
+            // 
+            this.MappingHelpButton.BackgroundImage = global::TransmissionRemoteDotnet.Properties.Resources.help14;
+            resources.ApplyResources(this.MappingHelpButton, "MappingHelpButton");
+            this.MappingHelpButton.Name = "MappingHelpButton";
+            this.MappingHelpButton.TabStop = false;
+            this.MappingHelpButton.UseMnemonic = false;
+            this.MappingHelpButton.UseVisualStyleBackColor = false;
+            this.MappingHelpButton.Click += new System.EventHandler(this.MappingHelpButton_Click);
             // 
             // label11
             // 
@@ -941,5 +953,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox ClearProxyPasswordCheckBox;
         private System.Windows.Forms.TextBox customPathTextBox;
         private System.Windows.Forms.Label label12;
+        private TransmissionRemoteDotnet.CustomControls.USButton MappingHelpButton;
     }
 }

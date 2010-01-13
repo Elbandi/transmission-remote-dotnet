@@ -529,6 +529,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sample mapping:.
+        /// </summary>
+        internal static string MappingSample {
+            get {
+                return ResourceManager.GetString("MappingSample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Megabyte.
         /// </summary>
         internal static string Megabyte {
@@ -628,7 +637,7 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The hostname not set.
+        ///   Looks up a localized string similar to No hostname has been set..
         /// </summary>
         internal static string NoHostnameSet {
             get {
@@ -862,6 +871,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Samba share:.
+        /// </summary>
+        internal static string SambaShare {
+            get {
+                return ResourceManager.GetString("SambaShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Second.
         /// </summary>
         internal static string Second {
@@ -957,6 +975,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToParse {
             get {
                 return ResourceManager.GetString("UnableToParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UNIX path prefix:.
+        /// </summary>
+        internal static string UnixPathPrefix {
+            get {
+                return ResourceManager.GetString("UnixPathPrefix", resourceCulture);
             }
         }
         

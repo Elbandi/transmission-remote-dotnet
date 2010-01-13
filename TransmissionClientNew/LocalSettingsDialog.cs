@@ -335,5 +335,13 @@ namespace TransmissionRemoteDotnet
                 AutoConnectComboBox.Items[iauto] = e.Label;
             }
         }
+
+        private void MappingHelpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                string.Format(@"{0}{1}{1}{2} /storage/torrent/{1}{3} \\sambaserver\torrentshare", 
+                    OtherStrings.MappingSample, Environment.NewLine, OtherStrings.UnixPathPrefix, OtherStrings.SambaShare),
+                OtherStrings.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
