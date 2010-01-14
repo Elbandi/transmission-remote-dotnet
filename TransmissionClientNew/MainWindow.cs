@@ -1547,7 +1547,7 @@ namespace TransmissionRemoteDotnet
                     item.SubItems.Add(announceUrl);
                     while (item.SubItems.Count < 7)
                         item.SubItems.Add("");
-                    item.Name = Toolbox.ToInt((JsonNumber)tracker[ProtocolConstants.FIELD_IDENTIFIER], -1).ToString();
+                    item.Name = Toolbox.ToInt(tracker[ProtocolConstants.FIELD_IDENTIFIER], -1).ToString();
                     trackersListView.Items.Add(item);
                 }
                 Toolbox.StripeListView(trackersListView);
@@ -1561,7 +1561,7 @@ namespace TransmissionRemoteDotnet
                 trackersListView.SuspendLayout();
                 foreach (JsonObject trackerstat in t.TrackerStats)
                 {
-                    int id = Toolbox.ToInt((JsonNumber)trackerstat[ProtocolConstants.FIELD_IDENTIFIER], -1);
+                    int id = Toolbox.ToInt(trackerstat[ProtocolConstants.FIELD_IDENTIFIER], -1);
                     if (id >= 0 && trackersListView.Items.ContainsKey(id.ToString()))
                     {
                         ListViewItem item = trackersListView.Items[id.ToString()];
