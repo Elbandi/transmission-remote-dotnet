@@ -41,7 +41,7 @@ namespace TransmissionRemoteDotnet
 
         private void ErrorLogWindow_Load(object sender, EventArgs e)
         {
-            errorListView.SuspendLayout();
+            errorListView.BeginUpdate();
             bool showdebug = DebugCheckBox.Checked;
             lock (Program.LogItems)
             {
@@ -56,7 +56,7 @@ namespace TransmissionRemoteDotnet
             }
             errorListView.Sort();
             Toolbox.StripeListView(errorListView);
-            errorListView.ResumeLayout();
+            errorListView.EndUpdate();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace TransmissionRemoteDotnet
                 errorListView.Invoke(new OnErrorDelegate(this.OnError), sender, e);
             else
             {
-                errorListView.SuspendLayout();
+                errorListView.BeginUpdate();
                 bool showdebug = DebugCheckBox.Checked;
                 lock (Program.LogItems)
                 {
@@ -107,7 +107,7 @@ namespace TransmissionRemoteDotnet
                 }
                 errorListView.Sort();
                 Toolbox.StripeListView(errorListView);
-                errorListView.ResumeLayout();
+                errorListView.EndUpdate();
             }
         }
 

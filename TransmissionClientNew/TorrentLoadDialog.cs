@@ -136,14 +136,14 @@ namespace TransmissionRemoteDotnet
         {
             if (e.Result.GetType().Equals(typeof(List<ListViewItem>)))
             {
-                listView1.SuspendLayout();
+                listView1.BeginUpdate();
                 foreach (ListViewItem item in (List<ListViewItem>)e.Result)
                 {
                     listView1.Items.Add(item);
                 }
                 Toolbox.StripeListView(listView1);
                 listView1.Enabled = OkButton.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
-                listView1.ResumeLayout();
+                listView1.EndUpdate();
                 NameLabel.Text = torrent.Name;
                 CommentLabel.Text = torrent.Comment;
                 SizeLabel.Text = string.Format("{0} ({1} x {2})", Toolbox.GetFileSize(torrent.Size), torrent.Pieces.Count, Toolbox.GetFileSize(torrent.PieceLength));

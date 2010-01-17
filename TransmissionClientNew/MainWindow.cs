@@ -128,7 +128,7 @@ namespace TransmissionRemoteDotnet
 
         private void InitStateListBox()
         {
-            stateListBox.SuspendLayout();
+            stateListBox.BeginUpdate();
             ImageList stateListBoxImageList = new ImageList();
             stateListBoxImageList.ColorDepth = ColorDepth.Depth32Bit;
             stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources._16x16_ledpurple);
@@ -150,7 +150,7 @@ namespace TransmissionRemoteDotnet
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Seeding, 4));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Broken, 6));
             stateListBox.Items.Add(new GListBoxItem(""));
-            stateListBox.ResumeLayout();
+            stateListBox.EndUpdate();
         }
 
         private void InitStaticContextMenus()
@@ -552,16 +552,6 @@ namespace TransmissionRemoteDotnet
         public void stopAllMenuItem_Click(object sender, EventArgs e)
         {
             Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, null)));
-        }
-
-        public void SuspendTorrentListView()
-        {
-            torrentListView.SuspendLayout();
-        }
-
-        public void ResumeTorrentListView()
-        {
-            torrentListView.ResumeLayout();
         }
 
         public void RestoreFormProperties()
@@ -986,7 +976,7 @@ namespace TransmissionRemoteDotnet
         {
             lock (filesListView)
             {
-                filesListView.SuspendLayout();
+                filesListView.BeginUpdate();
                 IComparer tmp = filesListView.ListViewItemSorter;
                 filesListView.ListViewItemSorter = null;
                 if (!filesListView.Enabled)
@@ -998,7 +988,7 @@ namespace TransmissionRemoteDotnet
                     filesListView.Refresh();
                 filesListView.ListViewItemSorter = tmp;
                 Toolbox.StripeListView(filesListView);
-                filesListView.ResumeLayout();
+                filesListView.EndUpdate();
             }
         }
 
@@ -1251,7 +1241,7 @@ namespace TransmissionRemoteDotnet
             FilteringProcess = true; /* Race condition is not important, so we not lock */
             try
             {
-                SuspendTorrentListView();
+                torrentListView.BeginUpdate();
                 lock (torrentListView)
                 {
                     IComparer tmp = torrentListView.ListViewItemSorter;
@@ -1295,10 +1285,10 @@ namespace TransmissionRemoteDotnet
                     torrentListView.ListViewItemSorter = tmp;
                     Toolbox.StripeListView(torrentListView);
                 }
-                ResumeTorrentListView();
             }
             finally
             {
+                torrentListView.EndUpdate();
                 FilteringProcess = false;
             }
         }
@@ -1537,7 +1527,7 @@ namespace TransmissionRemoteDotnet
                 createdByLabel.Text = t.Creator;
                 hashLabel.Text = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
                 commentLabel.Text = t.Comment;
-                trackersListView.SuspendLayout();
+                trackersListView.BeginUpdate();
                 trackersListView.Items.Clear();
                 foreach (JsonObject tracker in t.Trackers)
                 {
@@ -1551,14 +1541,14 @@ namespace TransmissionRemoteDotnet
                     trackersListView.Items.Add(item);
                 }
                 Toolbox.StripeListView(trackersListView);
-                trackersListView.ResumeLayout();
                 trackersListView.Enabled = true;
+                trackersListView.EndUpdate();
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
             }
             if (t.TrackerStats != null)
             {
-                trackersListView.SuspendLayout();
+                trackersListView.BeginUpdate();
                 foreach (JsonObject trackerstat in t.TrackerStats)
                 {
                     int id = Toolbox.ToInt(trackerstat[ProtocolConstants.FIELD_IDENTIFIER], -1);
@@ -1582,7 +1572,7 @@ namespace TransmissionRemoteDotnet
                         item.SubItems[6].Text = downloadCount >= 0 ? downloadCount.ToString() : "";
                     }
                 }
-                trackersListView.ResumeLayout();
+                trackersListView.EndUpdate();
             }
             remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
             label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
@@ -1619,7 +1609,7 @@ namespace TransmissionRemoteDotnet
                 PeerListViewItem.CurrentUpdateSerial++;
                 lock (peersListView)
                 {
-                    peersListView.SuspendLayout();
+                    peersListView.BeginUpdate();
                     IComparer tmp = peersListView.ListViewItemSorter;
                     peersListView.ListViewItemSorter = null;
                     foreach (JsonObject peer in t.Peers)
@@ -1646,7 +1636,7 @@ namespace TransmissionRemoteDotnet
                     }
                     peersListView.ListViewItemSorter = tmp;
                     Toolbox.StripeListView(peersListView);
-                    peersListView.ResumeLayout();
+                    peersListView.EndUpdate();
                 }
             }
         }

@@ -230,7 +230,7 @@ namespace TransmissionRemoteDotnet
             Color window = SystemColors.Window;
             lock (list)
             {
-                list.SuspendLayout();
+                list.BeginUpdate();
                 foreach (ListViewItem item in list.Items)
                 {
                     item.BackColor = item.Index % 2 == 1 ?
@@ -239,7 +239,7 @@ namespace TransmissionRemoteDotnet
                             window.B - STRIPE_OFFSET)
                         : window;
                 }
-                list.ResumeLayout();
+                list.EndUpdate();
             }
         }
 
@@ -421,12 +421,12 @@ namespace TransmissionRemoteDotnet
         {
             lock (lv)
             {
-                lv.SuspendLayout();
+                lv.BeginUpdate();
                 foreach (ListViewItem item in lv.Items)
                 {
                     item.Selected = true;
                 }
-                lv.ResumeLayout();
+                lv.EndUpdate();
             }
         }
 
@@ -434,12 +434,12 @@ namespace TransmissionRemoteDotnet
         {
             lock (lv)
             {
-                lv.SuspendLayout();
+                lv.BeginUpdate();
                 foreach (ListViewItem item in lv.Items)
                 {
                     item.Selected = false;
                 }
-                lv.ResumeLayout();
+                lv.EndUpdate();
             }
         }
 
@@ -447,12 +447,12 @@ namespace TransmissionRemoteDotnet
         {
             lock (lv)
             {
-                lv.SuspendLayout();
+                lv.BeginUpdate();
                 foreach (ListViewItem item in lv.Items)
                 {
                     item.Selected ^= true;
                 }
-                lv.ResumeLayout();
+                lv.EndUpdate();
             }
         }
 
