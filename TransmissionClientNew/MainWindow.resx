@@ -152,6 +152,12 @@
   <data name="stateListBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
+  <metadata name="stateListBoxImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 37</value>
+  </metadata>
+  <data name="stateListBoxImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="stateListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>18</value>
@@ -3309,6 +3315,12 @@
   <data name="openFileDialog1.Filter" xml:space="preserve">
     <value>BitTorrent metadata|*.torrent</value>
   </data>
+  <metadata name="toolStripImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>411, 37</value>
+  </metadata>
+  <data name="toolStripImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3579,6 +3591,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote</value>
+  </data>
+  <data name="&gt;&gt;stateListBoxImageList.Name" xml:space="preserve">
+    <value>stateListBoxImageList</value>
+  </data>
+  <data name="&gt;&gt;stateListBoxImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
     <value>columnHeader6</value>
@@ -4227,6 +4245,12 @@
   </data>
   <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripImageList.Name" xml:space="preserve">
+    <value>toolStripImageList</value>
+  </data>
+  <data name="&gt;&gt;toolStripImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainWindow</value>

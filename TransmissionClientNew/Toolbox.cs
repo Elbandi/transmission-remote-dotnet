@@ -456,6 +456,41 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static Bitmap LoadSkinImage(string FileName, int MinHeight, int MaxHeight, int ImageNumber)
+        {
+            try
+            {
+                if (File.Exists(FileName))
+                {
+                    Bitmap b = new Bitmap(FileName);
+                    if (MinHeight <= b.Height && b.Height <= MaxHeight && b.Width == b.Height * ImageNumber)
+                    {
+                        return b;
+                    }
+                    b.Dispose();
+                }
+            }
+            catch { }
+            return null;
+        }
+
+        public static void LoadSkinToImagelist(string FileName, int MinHeight, int MaxHeight, ImageList imageList, List<Bitmap> Default)
+        {
+            imageList.Images.Clear();
+            Bitmap skin = Toolbox.LoadSkinImage(FileName, MinHeight, MaxHeight, Default.Count);
+            if (skin != null)
+            {
+                imageList.ImageSize = new Size(skin.Height, skin.Height);
+                imageList.Images.AddStrip(skin);
+            }
+            else
+            {
+                if (Default.Count > 0)
+                    imageList.ImageSize = new Size(Default[0].Height, Default[0].Height);
+                imageList.Images.AddRange(Default.ToArray());
+            }
+        }
+
         /// <summary>
         /// Renames a subkey of the passed in registry key since 
         /// the Framework totally forgot to include such a handy feature.

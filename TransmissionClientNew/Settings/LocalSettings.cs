@@ -24,6 +24,9 @@ namespace TransmissionRemoteDotnet.Settings
         public int DefaultDoubleClickAction = 0;
         public bool StartedBalloon = true;
         private bool dontsavepasswords = false;
+        public string StateImagePath = "";
+        public string InfopanelImagePath = "";
+        public string ToolbarImagePath = "";
         public string Locale = "en-GB";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
@@ -83,6 +86,9 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_LOCALE, Locale);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKPATH, PlinkPath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPLOADPROMPT, UploadPrompt);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TABIMAGE, InfopanelImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_STATEIMAGE, StateImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TOOLBARIMAGE, ToolbarImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
             JsonObject ja = new JsonObject();
@@ -108,6 +114,9 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
             Toolbox.JsonGet(ref DefaultDoubleClickAction, o[SettingsKey.REGKEY_DEFAULTACTION]);
+            Toolbox.JsonGet(ref StateImagePath, o[SettingsKey.REGKEY_STATEIMAGE]);
+            Toolbox.JsonGet(ref InfopanelImagePath, o[SettingsKey.REGKEY_TABIMAGE]);
+            Toolbox.JsonGet(ref ToolbarImagePath, o[SettingsKey.REGKEY_TOOLBARIMAGE]);
             Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
@@ -515,6 +524,9 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_MINTOTRAY = "minToTray",
             REGKEY_REFRESHRATE = "refreshRate",
             REGKEY_CURRENTPROFILE = "currentProfile",
+            REGKEY_STATEIMAGE = "stateImage",
+            REGKEY_TABIMAGE = "tabImage",
+            REGKEY_TOOLBARIMAGE = "toolbarImage",
             REGKEY_STARTEDBALLOON = "startedBalloon",
             REGKEY_DONTSAVEPASSWORDS = "dontSavePasswords",
             REGKEY_COMPLETEDBALLOON = "completedBalloon",

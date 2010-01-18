@@ -35,6 +35,17 @@ namespace TransmissionRemoteDotnet
         public LocalSettingsDialog()
         {
             InitializeComponent();
+        }
+
+        public void SetImageNumbers(int toolbar, int state, int infopanel)
+        {
+            toolbarImageBrowse.ImageNumber = toolbar;
+            stateImageBrowse.ImageNumber = state;
+            infopanelImageBrowse.ImageNumber = infopanel;            
+        }
+
+        private void LocalSettingsDialog_Load(object sender, EventArgs e)
+        {
             LoadSettings();
         }
 
@@ -47,6 +58,7 @@ namespace TransmissionRemoteDotnet
             lv.Tag = ts;
             return lv;
         }
+
         private void LoadSettings()
         {
             LocalSettings sett = Program.Settings;
@@ -79,6 +91,9 @@ namespace TransmissionRemoteDotnet
             DeleteTorrentCheckBox.Checked = sett.DeleteTorrentWhenAdding;
             DontSavePasswordsCheckBox.Checked = sett.DontSavePasswords;
             PlinkPathTextBox.Text = sett.PlinkPath;
+            stateImageBrowse.FileName = sett.StateImagePath;
+            infopanelImageBrowse.FileName = sett.InfopanelImagePath;
+            toolbarImageBrowse.FileName = sett.ToolbarImagePath;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -98,6 +113,9 @@ namespace TransmissionRemoteDotnet
             sett.DeleteTorrentWhenAdding = DeleteTorrentCheckBox.Checked;
             sett.DefaultDoubleClickAction = defaultActionComboBox.SelectedIndex;
             sett.PlinkPath = PlinkPathTextBox.Text;
+            sett.StateImagePath = stateImageBrowse.FileName;
+            sett.InfopanelImagePath = infopanelImageBrowse.FileName;
+            sett.ToolbarImagePath = toolbarImageBrowse.FileName;
             sett.Servers.Clear();
             foreach (ListViewItem lvi in listServers.Items)
             {
@@ -339,7 +357,7 @@ namespace TransmissionRemoteDotnet
         private void MappingHelpButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                string.Format(@"{0}{1}{1}{2} /storage/torrent/{1}{3} \\sambaserver\torrentshare", 
+                string.Format(@"{0}{1}{1}{2} /storage/torrent/{1}{3} \\sambaserver\torrentshare",
                     OtherStrings.MappingSample, Environment.NewLine, OtherStrings.UnixPathPrefix, OtherStrings.SambaShare),
                 OtherStrings.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

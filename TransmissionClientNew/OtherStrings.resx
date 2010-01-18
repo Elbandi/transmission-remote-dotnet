@@ -477,4 +477,7 @@
   <data name="UnixPathPrefix" xml:space="preserve">
     <value>UNIX path prefix:</value>
   </data>
+  <data name="OpenImageFilter" xml:space="preserve">
+    <value>PNG Image|*.png</value>
+  </data>
 </root>

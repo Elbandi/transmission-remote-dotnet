@@ -105,6 +105,9 @@
     <Compile Include="Comparers\ListViewTextComparer.cs" />
     <Compile Include="Comparers\ListViewTextInsensitiveReverseComparer.cs" />
     <Compile Include="Comparers\ListViewItemInt32Comparer.cs" />
+    <Compile Include="CustomControls\FileBrowseTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>

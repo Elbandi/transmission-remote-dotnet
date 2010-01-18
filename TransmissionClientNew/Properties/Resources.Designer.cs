@@ -319,9 +319,9 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap xmag16 {
+        internal static System.Drawing.Bitmap xmag {
             get {
-                object obj = ResourceManager.GetObject("xmag16", resourceCulture);
+                object obj = ResourceManager.GetObject("xmag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

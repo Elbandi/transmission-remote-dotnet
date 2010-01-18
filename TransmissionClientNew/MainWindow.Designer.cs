@@ -34,6 +34,7 @@ namespace TransmissionRemoteDotnet
             this.torrentAndTabsSplitContainer = new TransmissionRemoteDotnet.SplitContainerFix();
             this.mainVerticalSplitContainer = new System.Windows.Forms.SplitContainer();
             this.stateListBox = new TransmissionRemoteDotnet.GListBox();
+            this.stateListBoxImageList = new System.Windows.Forms.ImageList(this.components);
             this.torrentListView = new TransmissionRemoteDotnet.ListViewNF();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
@@ -213,6 +214,7 @@ namespace TransmissionRemoteDotnet
             this.filesTimer = new System.Windows.Forms.Timer(this.components);
             this.refreshElapsedTimer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolStripImageList = new System.Windows.Forms.ImageList(this.components);
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -297,9 +299,15 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.stateListBox, "stateListBox");
             this.stateListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.stateListBox.FormattingEnabled = true;
-            this.stateListBox.ImageList = null;
+            this.stateListBox.ImageList = this.stateListBoxImageList;
             this.stateListBox.Name = "stateListBox";
             this.stateListBox.SelectedIndexChanged += new System.EventHandler(this.stateListBox_SelectedIndexChanged);
+            // 
+            // stateListBoxImageList
+            // 
+            this.stateListBoxImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.stateListBoxImageList, "stateListBoxImageList");
+            this.stateListBoxImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // torrentListView
             // 
@@ -323,6 +331,7 @@ namespace TransmissionRemoteDotnet
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.Name = "torrentListView";
             this.torrentListView.ShowItemToolTips = true;
+            this.torrentListView.SmallImageList = this.stateListBoxImageList;
             this.torrentListView.UseCompatibleStateImageBehavior = false;
             this.torrentListView.View = System.Windows.Forms.View.Details;
             this.torrentListView.SelectedIndexChanged += new System.EventHandler(this.torrentListView_SelectedIndexChanged);
@@ -1372,7 +1381,7 @@ namespace TransmissionRemoteDotnet
             // 
             // findToolStripMenuItem
             // 
-            this.findToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag16;
+            this.findToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
@@ -1565,6 +1574,12 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.Multiselect = true;
+            // 
+            // toolStripImageList
+            // 
+            this.toolStripImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.toolStripImageList, "toolStripImageList");
+            this.toolStripImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MainWindow
             // 
@@ -1811,5 +1826,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripButton AltSpeedButton;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator4;
         public System.Windows.Forms.ImageList fileIconImageList;
+        private System.Windows.Forms.ImageList stateListBoxImageList;
+        private System.Windows.Forms.ImageList toolStripImageList;
     }
 }

@@ -691,6 +691,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PNG Image|*.png.
+        /// </summary>
+        internal static string OpenImageFilter {
+            get {
+                return ResourceManager.GetString("OpenImageFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open on Network Share.
         /// </summary>
         internal static string OpenNetworkShare {
