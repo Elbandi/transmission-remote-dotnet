@@ -98,9 +98,16 @@ namespace TranslationConverter
                         string k = item.Key;
                         if (nyelv.ContainsKey(k) && !nyelv[k].Equals(""))
                             continue;
-                        string v = !l.Key.Equals("en-US") && sl.ContainsKey(k) ? sl[k] : item.Value;
-                        if (!nyelv.ContainsKey(item.Value) || (!nyelv[item.Value].Equals(v) && !item.Value.Equals(v)))
-                            nyelv[item.Value] = v;
+                        if (!l.Key.Equals("en-US"))
+                        {
+                            string v = sl.ContainsKey(k) ? sl[k] : item.Value;
+                            if (!nyelv.ContainsKey(item.Value))
+                                nyelv[item.Value] = "";
+                            if (!nyelv[item.Value].Equals(v) && !item.Value.Equals(v))
+                                nyelv[item.Value] = v;
+                        }
+                        else
+                            nyelv[item.Value] = "";
                     }
 
                     string pofile = path + "\\Languages\\" + (l.Key.Equals("en-US") ? "template.pot" : l.Key + ".po");
@@ -185,7 +192,9 @@ namespace TranslationConverter
                             }
                             if (podata.ContainsKey(value_eng))
                             {
-                                value_new = podata[value_eng];
+                                string s = podata[value_eng];
+                                if (s.Length > 0)
+                                    value_new = s;
                             }
                             if (!value_new.Equals(value))
                             {
