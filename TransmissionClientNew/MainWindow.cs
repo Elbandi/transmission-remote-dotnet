@@ -96,14 +96,14 @@ namespace TransmissionRemoteDotnet
             speedTabPage.ImageIndex = 4;
             tabControlImageList.Images.AddRange(defaultinfopanelimages.ToArray());
             defaultstateimages = new List<Bitmap>();
-            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources._16x16_ledpurple);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.all16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.down16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.pause16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.apply16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.up16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.player_reload16);
-            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning);
-            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.server16);
             stateListBoxImageList.Images.AddRange(defaultstateimages.ToArray());
             LocalSettings settings = Program.Settings;
@@ -114,18 +114,18 @@ namespace TransmissionRemoteDotnet
              */
             List<ToolStripBitmap> initialimages = new List<ToolStripBitmap>()
             {
-                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.connect_creating, Controls = new ToolStripItem[]{connectButton, connectToolStripMenuItem} },
-                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.connect_no, Controls = new ToolStripItem[]{disconnectButton, disconnectToolStripMenuItem} },
+                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.connect, Controls = new ToolStripItem[]{connectButton, connectToolStripMenuItem} },
+                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.disconnect, Controls = new ToolStripItem[]{disconnectButton, disconnectToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.edit_add, Controls = new ToolStripItem[]{addTorrentButton, addTorrentToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.edit_add, Controls = new ToolStripItem[]{addTorrentWithOptionsToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.net_add, Controls = new ToolStripItem[]{addWebTorrentButton, addTorrentFromUrlToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_play_all, Controls = new ToolStripItem[]{startTorrentButton, startAllToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all, Controls = new ToolStripItem[]{pauseTorrentButton, stopAllToolStripMenuItem} },
-                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_play1, Controls = new ToolStripItem[]{startToolStripMenuItem} },
+                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_play, Controls = new ToolStripItem[]{startToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_pause, Controls = new ToolStripItem[]{pauseToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.player_reload, Controls = new ToolStripItem[]{recheckTorrentButton, recheckToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.kgpg_edit, Controls = new ToolStripItem[]{configureTorrentButton, propertiesToolStripMenuItem} },
-                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.button_cancel1, Controls = new ToolStripItem[]{removeTorrentButton, removeToolStripMenuItem} },
+                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.remove, Controls = new ToolStripItem[]{removeTorrentButton, removeToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.remove_and_delete, Controls = new ToolStripItem[]{removeAndDeleteButton, removeDeleteToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.reannounce, Controls = new ToolStripItem[]{reannounceButton, reannounceToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareToolStripMenuItem} },
@@ -135,7 +135,7 @@ namespace TransmissionRemoteDotnet
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.configure, Controls = new ToolStripItem[]{localConfigureButton, localSettingsToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.netconfigure, Controls = new ToolStripItem[]{remoteConfigureButton, remoteSettingsToolStripMenuItem} },
                 new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.hwinfo, Controls = new ToolStripItem[]{sessionStatsButton, statsToolStripMenuItem} },
-                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.xmag, Controls = new ToolStripItem[]{findToolStripMenuItem} },
+                new ToolStripBitmap() { Image = global::TransmissionRemoteDotnet.Properties.Resources.find, Controls = new ToolStripItem[]{findToolStripMenuItem} },
             };
             defaulttoolbarimages = new List<Bitmap>();
             foreach (ToolStripBitmap tsb in initialimages)
@@ -1043,7 +1043,7 @@ namespace TransmissionRemoteDotnet
             moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
             // Index sould the same, so we can use the defaultimages
             pauseTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_pause) : defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all);
-            startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_play1) : defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_play_all);
+            startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_play) : defaulttoolbarimages.IndexOf(global::TransmissionRemoteDotnet.Properties.Resources.player_play_all);
         }
 
         public void FillfilesListView(Torrent t)

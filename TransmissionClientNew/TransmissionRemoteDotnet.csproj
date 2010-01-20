@@ -935,7 +935,7 @@
     <None Include="Resources\player_pause_all.png" />
     <None Include="Resources\player_play_all.png" />
     <None Include="Resources\error16.png" />
-    <None Include="Resources\xmag16.png" />
+    <None Include="Resources\xmag.png" />
     <None Include="Resources\welcomefinish.png" />
     <None Include="Resources\help14.png" />
     <Content Include="transmission_large.ico" />

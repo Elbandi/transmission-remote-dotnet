@@ -121,22 +121,22 @@
   <data name="openterm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\openterm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="player_play1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="player_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player_play.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_16x16_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="remove16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_16x16_remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apply16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apply16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect_creating" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect_creating.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect_no" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="disconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect_no.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="player_reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -160,10 +160,10 @@
   <data name="remove_and_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_and_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="incomplete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="incomplete16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\incomplete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="server16" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -172,7 +172,7 @@
   <data name="edit_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_16x16_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="add16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\viewmag+.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pipe16" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -199,7 +199,7 @@
   <data name="altspeed_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gnome-logo_d.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_16x16_ledpurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="all16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16x16_ledpurple.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="down16" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -220,10 +220,10 @@
   <data name="player_play_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player_play_all.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="warning16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xmag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="find" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xmag.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="welcomefinish" type="System.Resources.ResXFileRef, System.Windows.Forms">

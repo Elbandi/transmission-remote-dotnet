@@ -814,14 +814,14 @@ namespace TransmissionRemoteDotnet
             // 
             // addServerToolStripMenuItem
             // 
-            this.addServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources._16x16_add;
+            this.addServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
             this.addServerToolStripMenuItem.Name = "addServerToolStripMenuItem";
             resources.ApplyResources(this.addServerToolStripMenuItem, "addServerToolStripMenuItem");
             this.addServerToolStripMenuItem.Click += new System.EventHandler(this.addServerToolStripMenuItem_Click);
             // 
             // removeServerToolStripMenuItem
             // 
-            this.removeServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources._16x16_remove;
+            this.removeServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
             this.removeServerToolStripMenuItem.Name = "removeServerToolStripMenuItem";
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
