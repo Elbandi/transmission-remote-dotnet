@@ -1658,8 +1658,10 @@ namespace TransmissionRemoteDotnet
             if (t.Pieces != null)
             {
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
+                piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
             }
-            piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
+            else
+                piecesInfoLabel.Text = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
             locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.IsFinished)
