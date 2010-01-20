@@ -172,13 +172,6 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap kgpg_edit {
-            get {
-                object obj = ResourceManager.GetObject("kgpg_edit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap net_add {
             get {
                 object obj = ResourceManager.GetObject("net_add", resourceCulture);
@@ -259,6 +252,13 @@ namespace TransmissionRemoteDotnet.Properties {
         internal static System.Drawing.Bitmap player_reload16 {
             get {
                 object obj = ResourceManager.GetObject("player_reload16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap properties {
+            get {
+                object obj = ResourceManager.GetObject("properties", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

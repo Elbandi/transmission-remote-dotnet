@@ -1145,7 +1145,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.configureTorrentButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.configureTorrentButton, "configureTorrentButton");
-            this.configureTorrentButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.kgpg_edit;
+            this.configureTorrentButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.properties;
             this.configureTorrentButton.Name = "configureTorrentButton";
             this.configureTorrentButton.Click += new System.EventHandler(this.ShowTorrentPropsHandler);
             // 
@@ -1415,7 +1415,7 @@ namespace TransmissionRemoteDotnet
             // propertiesToolStripMenuItem
             // 
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
-            this.propertiesToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.kgpg_edit;
+            this.propertiesToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.properties;
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.ShowTorrentPropsHandler);
             // 

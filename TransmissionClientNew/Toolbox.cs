@@ -29,6 +29,7 @@ using System.Resources;
 using System.Security.Cryptography;
 using System.Linq;
 using Microsoft.Win32;
+using System.Collections.Specialized;
 
 namespace TransmissionRemoteDotnet
 {
@@ -476,6 +477,7 @@ namespace TransmissionRemoteDotnet
 
         public static void LoadSkinToImagelist(string FileName, int MinHeight, int MaxHeight, ImageList imageList, List<Bitmap> Default)
         {
+            StringCollection keys = imageList.Images.Keys;
             imageList.Images.Clear();
             Bitmap skin = Toolbox.LoadSkinImage(FileName, MinHeight, MaxHeight, Default.Count);
             if (skin != null)
@@ -489,6 +491,9 @@ namespace TransmissionRemoteDotnet
                     imageList.ImageSize = new Size(Default[0].Height, Default[0].Height);
                 imageList.Images.AddRange(Default.ToArray());
             }
+            System.Diagnostics.Trace.Assert(imageList.Images.Count <= keys.Count, "Imagelist has more image than image keys!");
+            for (int i = 0; i < imageList.Images.Count; i++)
+                imageList.Images.SetKeyName(i, keys[i]);
         }
 
         /// <summary>
