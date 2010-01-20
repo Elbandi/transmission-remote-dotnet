@@ -480,4 +480,7 @@
   <data name="OpenImageFilter" xml:space="preserve">
     <value>PNG Image|*.png</value>
   </data>
+  <data name="ConfirmSaveServer" xml:space="preserve">
+    <value>"{0}" server settings have been changed. Would you like to save it?</value>
+  </data>
 </root>

@@ -790,7 +790,7 @@ namespace TransmissionRemoteDotnet
             this.listServers.UseCompatibleStateImageBehavior = false;
             this.listServers.View = System.Windows.Forms.View.Details;
             this.listServers.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listServers_AfterLabelEdit);
-            this.listServers.SelectedIndexChanged += new System.EventHandler(this.listServers_SelectedIndexChanged);
+            this.listServers.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listServers_ItemSelectionChanged);
             // 
             // columnName
             // 

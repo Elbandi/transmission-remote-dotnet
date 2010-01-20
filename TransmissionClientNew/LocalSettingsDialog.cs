@@ -31,17 +31,44 @@ namespace TransmissionRemoteDotnet
     public partial class LocalSettingsDialog : CultureForm
     {
         private static int counter = 0;
+        private ListViewItem current = null;
+        private bool serversettingschanged = false;
 
         public LocalSettingsDialog()
         {
             InitializeComponent();
+            /* We cannot do this in a one line, becasue some controls already has Event */
+            HostField.TextChanged += new EventHandler(Field_ValueChanged);
+            UserField.TextChanged += new EventHandler(Field_ValueChanged);
+            PassField.TextChanged += new EventHandler(Field_ValueChanged);
+            ProxyHostField.TextChanged += new EventHandler(Field_ValueChanged);
+            ProxyUserField.TextChanged += new EventHandler(Field_ValueChanged);
+            ProxyPassField.TextChanged += new EventHandler(Field_ValueChanged);
+            PlinkCmdTextBox.TextChanged += new EventHandler(Field_ValueChanged);
+            uploadLimitItems.TextChanged += new EventHandler(Field_ValueChanged);
+            downloadLimitItems.TextChanged += new EventHandler(Field_ValueChanged);
+            customPathTextBox.TextChanged += new EventHandler(Field_ValueChanged);
+
+            PortField.ValueChanged += new EventHandler(Field_ValueChanged);
+            RefreshRateValue.ValueChanged += new EventHandler(Field_ValueChanged);
+            RetryLimitValue.ValueChanged += new EventHandler(Field_ValueChanged);
+            ProxyPortField.ValueChanged += new EventHandler(Field_ValueChanged);
+
+            UseSSLCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            StartPausedCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            ClearPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            ClearProxyPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            PlinkEnableCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+
+            AddShareButton.Click += new EventHandler(Field_ValueChanged);
+            RemoveShareButton.Click += new EventHandler(Field_ValueChanged);
         }
 
         public void SetImageNumbers(int toolbar, int state, int infopanel)
         {
             toolbarImageBrowse.ImageNumber = toolbar;
             stateImageBrowse.ImageNumber = state;
-            infopanelImageBrowse.ImageNumber = infopanel;            
+            infopanelImageBrowse.ImageNumber = infopanel;
         }
 
         private void LocalSettingsDialog_Load(object sender, EventArgs e)
@@ -101,6 +128,11 @@ namespace TransmissionRemoteDotnet
             this.Close();
         }
 
+        private void Field_ValueChanged(object sender, EventArgs e)
+        {
+            serversettingschanged = true;
+        }
+
         private void SaveSettings()
         {
             LocalSettings sett = Program.Settings;
@@ -136,6 +168,7 @@ namespace TransmissionRemoteDotnet
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            AskToSaveServerIfNeed();
             LocalSettings sett = Program.Settings;
             string originalHost = sett.Current.Host;
             int originalPort = sett.Current.Port;
@@ -166,6 +199,7 @@ namespace TransmissionRemoteDotnet
 
         private void SaveAndConnectButton_Click(object sender, EventArgs e)
         {
+            AskToSaveServerIfNeed();
             SaveSettings();
             if (Program.Connected)
             {
@@ -252,11 +286,12 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void listServers_SelectedIndexChanged(object sender, EventArgs e)
+        private void listServers_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if (listServers.SelectedItems.Count > 0)
+            if (e.IsSelected)
             {
-                TransmissionServer ts = listServers.SelectedItems[0].Tag as TransmissionServer;
+                current = e.Item;
+                TransmissionServer ts = current.Tag as TransmissionServer;
                 StartPausedCheckBox.Checked = ts.StartPaused;
                 HostField.Text = ts.Host;
                 PortField.Value = ts.Port;
@@ -285,7 +320,22 @@ namespace TransmissionRemoteDotnet
                     listSambaShareMappings.Items.Add(new SambaShareMappings(s.Key, s.Value));
                 }
             }
+            else
+            {
+                AskToSaveServerIfNeed();
+            }
+            serversettingschanged = false;
             removeServerToolStripMenuItem.Enabled = tabServerSettings.Enabled = (listServers.SelectedItems.Count > 0);
+        }
+
+        private void AskToSaveServerIfNeed()
+        {
+            if (serversettingschanged)
+            {
+                System.Diagnostics.Trace.Assert(current != null, "AskToSaveServerIfNeed souldnt called if no server is selected"); // DONT translate this
+                if (MessageBox.Show(string.Format(OtherStrings.ConfirmSaveServer, current.Name), OtherStrings.Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    SaveServerButton_Click(this, new EventArgs());
+            }
         }
 
         private void PlinkPathTextBox_TextChanged(object sender, EventArgs e)
@@ -295,12 +345,12 @@ namespace TransmissionRemoteDotnet
 
         private void SaveServerButton_Click(object sender, EventArgs e)
         {
-            ListViewItem lvi = listServers.SelectedItems[0];
-            TransmissionServer ts = lvi.Tag as TransmissionServer;
+            System.Diagnostics.Trace.Assert(current != null, "SaveServer button sould disabled if no server is selected"); // DONT translate this
+            TransmissionServer ts = current.Tag as TransmissionServer;
             ts.StartPaused = StartPausedCheckBox.Checked;
-            ts.Host = lvi.SubItems[1].Text = HostField.Text;
+            ts.Host = current.SubItems[1].Text = HostField.Text;
             ts.Port = (int)PortField.Value;
-            lvi.SubItems[2].Text = ts.Port.ToString();
+            current.SubItems[2].Text = ts.Port.ToString();
             ts.RefreshRate = (int)RefreshRateValue.Value;
             ts.UseSSL = UseSSLCheckBox.Checked;
             ts.Username = UserField.Text;
@@ -321,6 +371,7 @@ namespace TransmissionRemoteDotnet
             {
                 ts.AddSambaMapping(s.UnixPathPrefix, s.SambaShare);
             }
+            serversettingschanged = false;
         }
 
         private void removeServerToolStripMenuItem_Click(object sender, EventArgs e)

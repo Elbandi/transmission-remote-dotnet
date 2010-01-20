@@ -169,6 +169,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;{0}&quot; server settings have been changed. Would you like to save it?.
+        /// </summary>
+        internal static string ConfirmSaveServer {
+            get {
+                return ResourceManager.GetString("ConfirmSaveServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do you want to remove {0}?.
         /// </summary>
         internal static string ConfirmSingleRemove {
