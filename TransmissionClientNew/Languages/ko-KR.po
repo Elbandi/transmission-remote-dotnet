@@ -77,23 +77,6 @@ msgid ""
 "    * zeal.tsai for the Taiwanese translation.\r\n"
 "    * ikeblaster for the Czech translation."
 msgstr ""
-" * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/\r\n"
-" * Some icons were kindly contributed by liuzhiyi and benketom.\r\n"
-" * charles and the other Transmission developers for their great work.\r\n"
-" * The code for reading .torrent files was taken from Alan McGovern's MonoTorrent project.\r\n"
-" * Thank you to all the following users kind enough to translate this application:\r\n"
-"    * Romaric R. for the French translation.\r\n"
-"    * benba for the German translation.\r\n"
-"    * drphrozen for the Danish translation.\r\n"
-"    * András Első for the Hungarian translation.\r\n"
-"    * liuzhiyi for the Chinese translation.\r\n"
-"    * Woodzu and cichy for the Polish translation.\r\n"
-"    * RayTracer for the Turkish translation.\r\n"
-"    * Alexey Komarov for the Russian translation.\r\n"
-"    * huexxx for the Spanish translation.\r\n"
-"    * twohertz for the Korean translation.\r\n"
-"    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
 
 #: ErrorLogWindow~$this.Text
 #, csharp-format
@@ -103,7 +86,7 @@ msgstr "오류 기록"
 #: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
 msgid "Show debug logs"
-msgstr "Show debug logs"
+msgstr ""
 
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
@@ -342,7 +325,7 @@ msgstr "현재 설정"
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
 msgid "plink.exe:"
-msgstr "plink.exe:"
+msgstr ""
 
 #: LocalSettingsDialog~label1.Text
 #: LocalSettingsDialog~label6.Text
@@ -418,7 +401,7 @@ msgstr "비밀번호:"
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
 msgid "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
-msgstr "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
+msgstr ""
 
 #: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
 #, csharp-format
@@ -463,7 +446,7 @@ msgstr "프록시"
 #: LocalSettingsDialog~tabPage5.Text
 #, csharp-format
 msgid "SSH"
-msgstr "SSH"
+msgstr ""
 
 #: LocalSettingsDialog~tabPage6.Text
 #, csharp-format
@@ -678,17 +661,17 @@ msgstr "종류"
 #: MainWindow~columnHeader33.Text
 #, csharp-format
 msgid "Update In"
-msgstr "Update In"
+msgstr ""
 
 #: MainWindow~columnHeader36.Text
 #, csharp-format
 msgid "Downloaded"
-msgstr "Downloaded"
+msgstr ""
 
 #: MainWindow~columnHeader4.Text
 #, csharp-format
 msgid "%"
-msgstr "%"
+msgstr ""
 
 #: MainWindow~columnHeader5.Text
 #: TorrentLoadDialog~columnHeader3.Text
@@ -740,7 +723,7 @@ msgstr "파일"
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
-msgstr "Find..."
+msgstr ""
 
 #: MainWindow~generalTabPage.Text
 #: RemoteSettingsDialog~tabPage1.Text
@@ -880,7 +863,7 @@ msgstr "위치:"
 #: MainWindow~menuStrip.Text
 #, csharp-format
 msgid "menuStrip1"
-msgstr "menuStrip1"
+msgstr ""
 
 #: MainWindow~moveTorrentDataToolStripMenuItem.Text
 #: OtherStrings~MoveTorrentData
@@ -1007,7 +990,7 @@ msgstr "오류 기록 보기"
 #: MainWindow~speedGraph.Text
 #, csharp-format
 msgid "c2DPushGraph1"
-msgstr "c2DPushGraph1"
+msgstr ""
 
 #: MainWindow~speedTabPage.Text
 #, csharp-format
@@ -1037,7 +1020,7 @@ msgstr "토런트 시작"
 #: UriPromptWindow~statusStrip1.Text
 #, csharp-format
 msgid "statusStrip1"
-msgstr "statusStrip1"
+msgstr ""
 
 #: MainWindow~stopAllToolStripMenuItem.Text
 #: OtherStrings~PauseAll
@@ -1053,7 +1036,7 @@ msgstr "경과 시간:"
 #: MainWindow~toolStripContainer1.Text
 #, csharp-format
 msgid "toolStripContainer1"
-msgstr "toolStripContainer1"
+msgstr ""
 
 #: MainWindow~torrentToolStripMenuItem.Text
 #, csharp-format
@@ -1074,7 +1057,7 @@ msgstr "보기"
 #: MoveDataPrompt~$this.Text
 #, csharp-format
 msgid "MoveDataPrompt"
-msgstr "MoveDataPrompt"
+msgstr ""
 
 #: MoveDataPrompt~button1.Text
 #, csharp-format
@@ -1109,7 +1092,7 @@ msgstr "빌드"
 #: OtherStrings~Byte
 #, csharp-format
 msgid "Byte"
-msgstr "Byte"
+msgstr ""
 
 #: OtherStrings~Checking
 #, csharp-format
@@ -1224,7 +1207,7 @@ msgstr "기가바이트"
 #: OtherStrings~GigabyteShort
 #, csharp-format
 msgid "GB"
-msgstr "GB"
+msgstr ""
 
 #: OtherStrings~High
 #, csharp-format
@@ -1244,7 +1227,7 @@ msgstr "시간"
 #: OtherStrings~HttpError
 #, csharp-format
 msgid "Daemon try to download something, but the http result is:{0}{1}"
-msgstr "Daemon try to download something, but the http result is:{0}{1}"
+msgstr ""
 
 #: OtherStrings~Incomplete
 #, csharp-format
@@ -1274,7 +1257,7 @@ msgstr "기가바이트"
 #: OtherStrings~KilobyteShort
 #, csharp-format
 msgid "KB"
-msgstr "KB"
+msgstr ""
 
 #: OtherStrings~LatestVersion
 #, csharp-format
@@ -1304,7 +1287,7 @@ msgstr "낮은 우선도"
 #: OtherStrings~MappingSample
 #, csharp-format
 msgid "Sample mapping:"
-msgstr "Sample mapping:"
+msgstr ""
 
 #: OtherStrings~Megabyte
 #, csharp-format
@@ -1314,7 +1297,7 @@ msgstr "메가바이트"
 #: OtherStrings~MegabyteShort
 #, csharp-format
 msgid "MB"
-msgstr "MB"
+msgstr ""
 
 #: OtherStrings~Minute
 #, csharp-format
@@ -1359,7 +1342,7 @@ msgstr "아니오"
 #: OtherStrings~NoHostnameSet
 #, csharp-format
 msgid "No hostname has been set."
-msgstr "No hostname has been set."
+msgstr ""
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1635,7 +1618,7 @@ msgstr "최대 업속도:"
 #: RemoteSettingsDialog~label14.Text
 #, csharp-format
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: RemoteSettingsDialog~label2.Text
 #, csharp-format
@@ -1751,17 +1734,17 @@ msgstr "업로드"
 #: TorrentLoadDialog~$this.Text
 #, csharp-format
 msgid "TorrentLoadDialog"
-msgstr "TorrentLoadDialog"
+msgstr ""
 
 #: TorrentLoadDialog~DateLabelLabel.Text
 #, csharp-format
 msgid "Date:"
-msgstr "Date:"
+msgstr ""
 
 #: TorrentLoadDialog~NameLabelLabel.Text
 #, csharp-format
 msgid "Name:"
-msgstr "Name:"
+msgstr ""
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
@@ -1773,32 +1756,32 @@ msgstr "확인"
 #: TorrentLoadDialog~PropertiesGroupBox.Text
 #, csharp-format
 msgid "Torrent properties"
-msgstr "Torrent properties"
+msgstr ""
 
 #: TorrentLoadDialog~SelectAllButton.Text
 #, csharp-format
 msgid "Select All"
-msgstr "Select All"
+msgstr ""
 
 #: TorrentLoadDialog~SelectInvertButton.Text
 #, csharp-format
 msgid "Select Invert"
-msgstr "Select Invert"
+msgstr ""
 
 #: TorrentLoadDialog~SelectNoneButton.Text
 #, csharp-format
 msgid "Select None"
-msgstr "Select None"
+msgstr ""
 
 #: TorrentLoadDialog~SizelabelLabel.Text
 #, csharp-format
 msgid "Size:"
-msgstr "Size:"
+msgstr ""
 
 #: TorrentLoadDialog~TorrentContentsGroupBox.Text
 #, csharp-format
 msgid "Torrent Contents"
-msgstr "Torrent Contents"
+msgstr ""
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
@@ -1813,17 +1796,17 @@ msgstr "최대 피어 제한:"
 #: TorrentLoadDialog~checkBox3.Text
 #, csharp-format
 msgid "Start torrent"
-msgstr "Start torrent"
+msgstr ""
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "toolStripStatusLabel1"
-msgstr "toolStripStatusLabel1"
+msgstr ""
 
 #: TorrentPropertiesDialog~$this.Text
 #, csharp-format
 msgid "TorrentPropertiesDialog"
-msgstr "TorrentPropertiesDialog"
+msgstr ""
 
 #: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
