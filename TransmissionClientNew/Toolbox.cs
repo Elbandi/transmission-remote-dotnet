@@ -496,6 +496,15 @@ namespace TransmissionRemoteDotnet
                 imageList.Images.SetKeyName(i, keys[i]);
         }
 
+        public static bool ScreenExists(Point p)
+        {
+            foreach (Screen s in Screen.AllScreens)
+            {
+                if (s.Bounds.Contains(p))
+                    return true;
+            }
+            return false;
+        }
         /// <summary>
         /// Renames a subkey of the passed in registry key since 
         /// the Framework totally forgot to include such a handy feature.

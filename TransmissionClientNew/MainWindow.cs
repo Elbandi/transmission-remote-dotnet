@@ -631,7 +631,11 @@ namespace TransmissionRemoteDotnet
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
                     this.Size = new Size((int)settings.Misc[CONFKEY_MAINWINDOW_WIDTH], (int)settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
-                    this.Location = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                {
+                    Point p = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                    if (Toolbox.ScreenExists(p))
+                        this.Location = p;
+                }
                 if (settings.Misc.ContainsKey(CONFKEY_SPLITTERDISTANCE))
                     this.torrentAndTabsSplitContainer.SplitterDistance = (int)settings.GetObject(CONFKEY_SPLITTERDISTANCE);
                 this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
@@ -640,8 +644,10 @@ namespace TransmissionRemoteDotnet
                     FormWindowState _mainWindowState = (FormWindowState)((int)settings.GetObject(CONFKEY_MAINWINDOW_STATE));
                     if (_mainWindowState != FormWindowState.Minimized)
                     {
-                        this.WindowState = _mainWindowState;
+                        this.notifyIcon.Tag = this.WindowState = _mainWindowState;
                     }
+                    else
+                        this.notifyIcon.Tag = this.WindowState;
                 }
                 RestoreListViewProperties(torrentListView);
                 RestoreListViewProperties(filesListView);
@@ -1883,16 +1889,31 @@ namespace TransmissionRemoteDotnet
                 this.WindowState = FormWindowState.Minimized;
                 e.Cancel = true;
             }
-            else if (this.WindowState != FormWindowState.Minimized)
+            else
             {
-                settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.WindowState;
-                if (this.WindowState != FormWindowState.Maximized)
+                if (this.WindowState != FormWindowState.Minimized)
+                    settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.WindowState;
+                else
+                    settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.notifyIcon.Tag;
+                if (this.WindowState.Equals(FormWindowState.Normal))
                 {
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_X, this.Location.X);
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_Y, this.Location.Y);
-                    settings.SetObject(CONFKEY_SPLITTERDISTANCE, this.torrentAndTabsSplitContainer.SplitterDistance);
                     settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.Size.Height);
                     settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.Size.Width);
+                }
+                else
+                {
+                    /* The value of the RestoreBounds property is valid only when 
+                       the WindowState property of the Form class is not equal to Normal. */
+                    settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_X, this.RestoreBounds.X);
+                    settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_Y, this.RestoreBounds.Y);
+                    settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.RestoreBounds.Height);
+                    settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.RestoreBounds.Width);
+                }
+                if (this.WindowState != FormWindowState.Maximized)
+                {
+                    settings.SetObject(CONFKEY_SPLITTERDISTANCE, this.torrentAndTabsSplitContainer.SplitterDistance);
                 }
             }
             SaveListViewProperties(torrentListView);
