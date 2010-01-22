@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Jayrock.Json;
 using Jayrock.Json.Conversion;
@@ -249,7 +248,7 @@ namespace TransmissionRemoteDotnet.Settings
                             tempsettings.CurrentProfile = p;
                     }
                     if (tempsettings.CurrentProfile.Equals("") && tempsettings.Servers.Count > 0)
-                        tempsettings.CurrentProfile = tempsettings.Servers.First().Key;
+                        tempsettings.CurrentProfile = "aa"; //tempsettings.Servers. . Key;
                     foreach (string s in oldsettings.ListObject(true))
                     {
                         if (s.StartsWith("mainwindow-") || s.StartsWith("listview-"))

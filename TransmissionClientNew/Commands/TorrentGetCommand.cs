@@ -21,7 +21,6 @@ using System.Text;
 using Jayrock.Json;
 using System.Windows.Forms;
 using System.Collections;
-using System.Linq;
 
 namespace TransmissionRemoteDotnet.Commmands
 {
@@ -122,7 +121,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 }
             }
             UpdateTorrents.Clear();
-            foreach (string key in Enumerable.ToArray<string>(Program.TorrentIndex.Keys))
+            foreach (string key in Program.TorrentIndex.Keys)
             {
                 Torrent t = Program.TorrentIndex[key];
                 if (t.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)

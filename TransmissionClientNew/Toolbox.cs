@@ -27,7 +27,6 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using System.Security.Cryptography;
-using System.Linq;
 using Microsoft.Win32;
 using System.Collections.Specialized;
 
@@ -405,7 +404,17 @@ namespace TransmissionRemoteDotnet
 
         public static string[] Split(string str, int chunkSize)
         {
-            return Enumerable.ToArray<string>(Enumerable.Range(0, str.Length / chunkSize).Select(i => str.Substring(i * chunkSize, chunkSize)));
+            if (chunkSize < 1)
+                throw new ArgumentOutOfRangeException("chunkSize");
+            int stringLength = str.Length;
+            int n = (stringLength + chunkSize - 1) / chunkSize;
+            string[] strings = new string[n];
+            for (int i = 0, s = 0; i < n; i++, s += chunkSize)
+            {
+                if (s + chunkSize > stringLength) chunkSize = stringLength - s;
+                strings[i] = str.Substring(s, chunkSize);
+            }
+            return strings;
         }
 
         public static int BitCount(byte[] bitmap)
