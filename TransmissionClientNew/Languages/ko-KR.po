@@ -463,6 +463,11 @@ msgstr "삼바"
 msgid "Servers Settings"
 msgstr "서버 연결 설정"
 
+#: LocalSettingsDialog~tabSkinSettings.Text
+#, csharp-format
+msgid "Skin"
+msgstr ""
+
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
 #, csharp-format
@@ -1119,6 +1124,11 @@ msgstr "{0}개의 토런트를 삭제 합니다. 계속 하시겠습니까?"
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
 msgstr "{0}개의 토런트와 데이타를 삭제합니다. 계속 하시겠습니까?{1}주의! 이 토런트에 연결된 모든 파일이 같이 삭제됩니다."
 
+#: OtherStrings~ConfirmSaveServer
+#, csharp-format
+msgid "\"{0}\" server settings have been changed. Would you like to save it?"
+msgstr ""
+
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
@@ -1368,6 +1378,11 @@ msgstr "연결 안됨"
 #, csharp-format
 msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
 msgstr "토런트 파일 (*.torrent)|*.torrent|모든 파일 (*.*)|*.*"
+
+#: OtherStrings~OpenImageFilter
+#, csharp-format
+msgid "PNG Image|*.png"
+msgstr ""
 
 #: OtherStrings~OpenNetworkShare
 #, csharp-format

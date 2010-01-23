@@ -464,6 +464,11 @@ msgstr ""
 msgid "Servers Settings"
 msgstr "Kiszolgáló beállítások"
 
+#: LocalSettingsDialog~tabSkinSettings.Text
+#, csharp-format
+msgid "Skin"
+msgstr ""
+
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
 #, csharp-format
@@ -1120,6 +1125,11 @@ msgstr "Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet?"
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
 msgstr "Biztos benne, hogy eltávolítja a {0} kiválasztott torrentet{1}és az összes csatlakozó adatot?"
 
+#: OtherStrings~ConfirmSaveServer
+#, csharp-format
+msgid "\"{0}\" server settings have been changed. Would you like to save it?"
+msgstr "A \"{0}\" kiszolgáló beállítások megváltoztak. Szeretné menteni?"
+
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
@@ -1369,6 +1379,11 @@ msgstr "Nincs csatlakozva"
 #, csharp-format
 msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
 msgstr "BitTorrent Metafile (*.torrent)|*.torrent|Minden fájl (*.*)|*.*"
+
+#: OtherStrings~OpenImageFilter
+#, csharp-format
+msgid "PNG Image|*.png"
+msgstr "PNG képfájl|*.png"
 
 #: OtherStrings~OpenNetworkShare
 #, csharp-format

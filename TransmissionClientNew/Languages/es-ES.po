@@ -463,6 +463,11 @@ msgstr ""
 msgid "Servers Settings"
 msgstr ""
 
+#: LocalSettingsDialog~tabSkinSettings.Text
+#, csharp-format
+msgid "Skin"
+msgstr ""
+
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
 #, csharp-format
@@ -1119,6 +1124,11 @@ msgstr "Has seleccionado {0} torrents para quitar. ¿Estás seguro?"
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
 msgstr "Has seleccionado {0} torrents para quitar. ¿Estás seguro?{1}TODOS LOS DATOS DE ESOS TORRENTS SERÁN BORRADOS."
 
+#: OtherStrings~ConfirmSaveServer
+#, csharp-format
+msgid "\"{0}\" server settings have been changed. Would you like to save it?"
+msgstr ""
+
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
@@ -1368,6 +1378,11 @@ msgstr "No conectado"
 #, csharp-format
 msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
 msgstr "Metadatos BitTorrent (*.torrent)|*.torrent|Todos los Archivos (*.*)|*.*"
+
+#: OtherStrings~OpenImageFilter
+#, csharp-format
+msgid "PNG Image|*.png"
+msgstr ""
 
 #: OtherStrings~OpenNetworkShare
 #, csharp-format
