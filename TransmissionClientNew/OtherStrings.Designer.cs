@@ -151,6 +151,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have selected {0} torrents for recheck. It may take a long time. Are you sure?.
+        /// </summary>
+        internal static string ConfirmMultipleRecheck {
+            get {
+                return ResourceManager.GetString("ConfirmMultipleRecheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have selected {0} torrents for removal. Are you sure?.
         /// </summary>
         internal static string ConfirmMultipleRemove {
@@ -174,6 +183,15 @@ namespace TransmissionRemoteDotnet {
         internal static string ConfirmSaveServer {
             get {
                 return ResourceManager.GetString("ConfirmSaveServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to recheck {0}? It may take a long time..
+        /// </summary>
+        internal static string ConfirmSingleRecheck {
+            get {
+                return ResourceManager.GetString("ConfirmSingleRecheck", resourceCulture);
             }
         }
         

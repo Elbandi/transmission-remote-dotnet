@@ -1866,7 +1866,11 @@ namespace TransmissionRemoteDotnet
         {
             if (torrentListView.SelectedItems.Count > 0)
             {
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray())));
+                string question = torrentListView.SelectedItems.Count == 1 ? String.Format(OtherStrings.ConfirmSingleRecheck, torrentListView.SelectedItems[0].Text) : String.Format(OtherStrings.ConfirmMultipleRecheck, torrentListView.SelectedItems.Count);
+                if (MessageBox.Show(question, OtherStrings.Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray())));
+                }
             }
         }
 

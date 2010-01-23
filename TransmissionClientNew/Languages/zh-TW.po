@@ -1114,6 +1114,11 @@ msgstr "完成"
 msgid "Confirm"
 msgstr "確認"
 
+#: OtherStrings~ConfirmMultipleRecheck
+#, csharp-format
+msgid "You have selected {0} torrents for recheck. It may take a long time. Are you sure?"
+msgstr ""
+
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?"
@@ -1127,6 +1132,11 @@ msgstr "您選擇移除 {0} 個任務. 是否確定?{1}所有屬於此任務的�
 #: OtherStrings~ConfirmSaveServer
 #, csharp-format
 msgid "\"{0}\" server settings have been changed. Would you like to save it?"
+msgstr ""
+
+#: OtherStrings~ConfirmSingleRecheck
+#, csharp-format
+msgid "Do you want to recheck {0}? It may take a long time."
 msgstr ""
 
 #: OtherStrings~ConfirmSingleRemove

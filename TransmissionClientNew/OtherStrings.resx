@@ -483,4 +483,10 @@
   <data name="ConfirmSaveServer" xml:space="preserve">
     <value>"{0}" server settings have been changed. Would you like to save it?</value>
   </data>
+  <data name="ConfirmMultipleRecheck" xml:space="preserve">
+    <value>You have selected {0} torrents for recheck. It may take a long time. Are you sure?</value>
+  </data>
+  <data name="ConfirmSingleRecheck" xml:space="preserve">
+    <value>Do you want to recheck {0}? It may take a long time.</value>
+  </data>
 </root>
