@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2010-01-04 12:43+0100\n"
-"Last-Translator: Cichon Marcin <ml.cichy@gmail.com>\n"
+"PO-Revision-Date: 2010-01-21 13:48+0100\n"
+"Last-Translator: Marcin Cichoń <ml.cichy@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,7 +103,7 @@ msgstr "Log błędów"
 #: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
 msgid "Show debug logs"
-msgstr ""
+msgstr "Pokaż log błędów"
 
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
@@ -297,7 +297,7 @@ msgstr "Nazwa"
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
 msgid "Port"
-msgstr ""
+msgstr "Port:"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
@@ -683,12 +683,12 @@ msgstr "Typ"
 #: MainWindow~columnHeader33.Text
 #, csharp-format
 msgid "Update In"
-msgstr ""
+msgstr "Uaktualniony"
 
 #: MainWindow~columnHeader36.Text
 #, csharp-format
 msgid "Downloaded"
-msgstr ""
+msgstr "Pobrano"
 
 #: MainWindow~columnHeader4.Text
 #, csharp-format
@@ -1254,7 +1254,7 @@ msgstr "Godzina"
 #: OtherStrings~HttpError
 #, csharp-format
 msgid "Daemon try to download something, but the http result is:{0}{1}"
-msgstr ""
+msgstr "Błędna próba pobierania, rezultat z http: {0}{1}"
 
 #: OtherStrings~Incomplete
 #, csharp-format
@@ -1314,7 +1314,7 @@ msgstr "Niski priorytet"
 #: OtherStrings~MappingSample
 #, csharp-format
 msgid "Sample mapping:"
-msgstr ""
+msgstr "Przykładowe mapowanie:"
 
 #: OtherStrings~Megabyte
 #, csharp-format
@@ -1369,7 +1369,7 @@ msgstr "Nie"
 #: OtherStrings~NoHostnameSet
 #, csharp-format
 msgid "No hostname has been set."
-msgstr ""
+msgstr "Nie wpisano nazwy hosta."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1429,17 +1429,17 @@ msgstr "{0} x {1} (ukończono {2})"
 #: OtherStrings~PortIsClosed
 #, csharp-format
 msgid "The incoming port on your daemon is CLOSED."
-msgstr "Port nasłuchu danych jest ZAMKNIĘTY."
+msgstr "Port pobierania danych jest ZAMKNIĘTY."
 
 #: OtherStrings~PortIsOpen
 #, csharp-format
 msgid "The incoming port on your daemon is OPEN."
-msgstr "Port nasłuchu danych jest OTWARTY."
+msgstr "Port pobierania danych jest OTWARTY."
 
 #: OtherStrings~PortTestResult
 #, csharp-format
 msgid "Port test result"
-msgstr "Wyniki testu"
+msgstr "Wyniki testu portów"
 
 #: OtherStrings~Querying
 #: StatsDialog~downloadedBytesValue1.Text
@@ -1711,7 +1711,7 @@ msgstr "Alternatywne limity"
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
 msgid "Test Port"
-msgstr "Testuj"
+msgstr "Sprawdź"
 
 #: RemoteSettingsDialog~updateBlocklistButton.Text
 #, csharp-format
@@ -1771,12 +1771,12 @@ msgstr ""
 #: TorrentLoadDialog~DateLabelLabel.Text
 #, csharp-format
 msgid "Date:"
-msgstr ""
+msgstr "Data:"
 
 #: TorrentLoadDialog~NameLabelLabel.Text
 #, csharp-format
 msgid "Name:"
-msgstr ""
+msgstr "Nazwa:"
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
@@ -1788,47 +1788,47 @@ msgstr ""
 #: TorrentLoadDialog~PropertiesGroupBox.Text
 #, csharp-format
 msgid "Torrent properties"
-msgstr ""
+msgstr "Właściwości torrenta"
 
 #: TorrentLoadDialog~SelectAllButton.Text
 #, csharp-format
 msgid "Select All"
-msgstr ""
+msgstr "Zaznacz wszystkie"
 
 #: TorrentLoadDialog~SelectInvertButton.Text
 #, csharp-format
 msgid "Select Invert"
-msgstr ""
+msgstr "Odwróć zaznaczenie"
 
 #: TorrentLoadDialog~SelectNoneButton.Text
 #, csharp-format
 msgid "Select None"
-msgstr ""
+msgstr "Odznacz wszystkie"
 
 #: TorrentLoadDialog~SizelabelLabel.Text
 #, csharp-format
 msgid "Size:"
-msgstr ""
+msgstr "Rozmiar:"
 
 #: TorrentLoadDialog~TorrentContentsGroupBox.Text
 #, csharp-format
 msgid "Torrent Contents"
-msgstr ""
+msgstr "Zawartość torrenta"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
 msgid "Alternate destination directory: "
-msgstr "Alternatywny folder docelowy: "
+msgstr "Alt. folder docelowy: "
 
 #: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
 msgid "Alternate peer limit: "
-msgstr "Alternatywny limit peerów: "
+msgstr "Alt. limit peerów: "
 
 #: TorrentLoadDialog~checkBox3.Text
 #, csharp-format
 msgid "Start torrent"
-msgstr ""
+msgstr "Uruchom torrent"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format

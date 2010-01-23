@@ -1,27 +1,24 @@
-# Brazilian Portuguese translation of transmission-remote-dotnet
+# Dutch translation of transmission-remote-dotnet
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
-# 
-# Kadu Leite <kaduleite@gmail.com>, 2010.
+#
+# Ingmar Hoogendoorn <ingmar@hoogendoorn.cc>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2010-01-09 21:23-0300\n"
-"Last-Translator: Kadu Leite <kaduleite@gmail.com>\n"
+"PO-Revision-Date: 2010-01-15 10:18+0100\n"
+"Last-Translator: Ingmar Hoogendoorn <ingmar@hoogendoorn.cc>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #: AboutDialog~$this.Text
 #, csharp-format
 msgid "AboutDialog"
-msgstr "Sobre"
+msgstr ""
 
 #: AboutDialog~labelCopyright.Text
 #, csharp-format
@@ -31,12 +28,12 @@ msgstr ""
 #: AboutDialog~labelCredits.Text
 #, csharp-format
 msgid "Credits && acknowledgements:"
-msgstr "Créditos && acknowledgements:"
+msgstr ""
 
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr "Desenvolvedores:"
+msgstr "Ontwikkelaars:"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
@@ -46,13 +43,13 @@ msgstr ""
 #: AboutDialog~labelProductName.Text
 #, csharp-format
 msgid "Product Name"
-msgstr "Nome do Produto"
+msgstr "Product Naam"
 
 #: AboutDialog~labelVersion.Text
 #: OtherStrings~Version
 #, csharp-format
 msgid "Version"
-msgstr "Versão"
+msgstr "Versie"
 
 #: AboutDialog~okButton.Text
 #, csharp-format
@@ -80,39 +77,21 @@ msgid ""
 "    * zeal.tsai for the Taiwanese translation.\r\n"
 "    * ikeblaster for the Czech translation."
 msgstr ""
-" * A maior parte dos ícones são criação de David Vignoni no seu tema Nuvola. http://www.icon-king.com/\r\n"
-" * Alguns ícones são gentis contribuições de liuzhiyi e benketom.\r\n"
-" * Agradecimento a charles e outros desenvolvedores do Transmission por seu grande trabalho.\r\n"
-" * O código para leitura de arquivos .torrent utilizado é do projeto MonoTorrent de Alan McGovern's.\r\n"
-" * Agradecimento a todos os seguintes usuários que gentilmente traduziram este aplicativo:\r\n"
-"    * Romaric R. for the French translation.\r\n"
-"    * benba for the German translation.\r\n"
-"    * drphrozen for the Danish translation.\r\n"
-"    * András Első for the Hungarian translation.\r\n"
-"    * liuzhiyi for the Chinese translation.\r\n"
-"    * Woodzu and cichy for the Polish translation.\r\n"
-"    * RayTracer for the Turkish translation.\r\n"
-"    * Alexey Komarov for the Russian translation.\r\n"
-"    * huexxx for the Spanish translation.\r\n"
-"    * twohertz for the Korean translation.\r\n"
-"    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation.\r\n"
-"    * KaduLeite for the Brazilian Portuguese translation."
 
 #: ErrorLogWindow~$this.Text
 #, csharp-format
 msgid "Error Log"
-msgstr "Log de Erro"
+msgstr ""
 
 #: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
 msgid "Show debug logs"
-msgstr ""
+msgstr "Bekijk debug informatie"
 
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
 msgid "Clear"
-msgstr "Limpar"
+msgstr "Leegmaken"
 
 #: ErrorLogWindow~closeButton.Text
 #: MoveDataPrompt~button2.Text
@@ -120,69 +99,69 @@ msgstr "Limpar"
 #: StatsDialog~CloseFormButton.Text
 #, csharp-format
 msgid "Close"
-msgstr "Fechar"
+msgstr "Sluiten"
 
 #: ErrorLogWindow~columnHeader1.Text
 #, csharp-format
 msgid "Time"
-msgstr "Tempo"
+msgstr "Tijd"
 
 #: ErrorLogWindow~columnHeader2.Text
 #, csharp-format
 msgid "Title"
-msgstr "Título"
+msgstr "Titel"
 
 #: ErrorLogWindow~columnHeader3.Text
 #, csharp-format
 msgid "Body"
-msgstr "Corpo"
+msgstr "Bericht"
 
 #: ErrorLogWindow~label1.Text
 #, csharp-format
 msgid " You can copy the body of an error to the clipboard by double clicking it"
-msgstr " Você pode copiar o texto de erro para a área de transferência (clipboard) comum duplo clique."
+msgstr "Je kan de inhoud van een bericht kopieren naar het klembord door erop te dubbelklikken"
 
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
-msgstr "Encontrar Torrent..."
+msgstr ""
 
 #: FindDialog~CaseSensitiveCheckBox.Text
 #, csharp-format
 msgid "Case insensitiv"
-msgstr "Difernciar Maiúsculas/Minúsculas"
+msgstr "Hoofdlettergevoelig"
 
 #: FindDialog~findButton.Text
 #, csharp-format
 msgid "Find"
-msgstr "Encontrar"
+msgstr "Zoek"
 
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
-msgstr "Encontrar:"
+msgstr "Zoektekst:"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
 #, csharp-format
 msgid "Local Settings"
-msgstr "Configurações Locais"
+msgstr "Lokale instellingen"
 
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
-msgstr "Adicionar"
+msgstr "Toevoegen"
 
 #: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
 #, csharp-format
 msgid "Check for update at startup"
-msgstr "Procurar atualizações ao iniciar"
+msgstr "Controleer op updates bij het opstarten"
 
 #: LocalSettingsDialog~ClearPasswordCheckBox.Text
 #: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
 #, csharp-format
 msgid "Clear the password at save"
-msgstr "Limpar senha ao salvar"
+msgstr "Maak wachtwoord leeg bij het opslaan"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
@@ -191,100 +170,100 @@ msgstr "Limpar senha ao salvar"
 #: UriPromptWindow~button2.Text
 #, csharp-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Annuleren"
 
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
 msgid "Delete torrent when adding"
-msgstr "Deletar torrent ao adicionar"
+msgstr "Verwijder torrent bij het toevoegen"
 
 #: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
 #, csharp-format
 msgid "Don't save passwords"
-msgstr "Não salvar senhas"
+msgstr "Sla wachtwoorden niet op"
 
 #: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
 msgid "Enable authentication"
-msgstr "Habilitar autenticação"
+msgstr "Zet authenticatie aan"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items
 #, csharp-format
 msgid "Auto"
-msgstr ""
+msgstr "Automatich"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items1
 #, csharp-format
 msgid "Enabled"
-msgstr "Habilitado"
+msgstr "Ingeschakeld"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items2
 #, csharp-format
 msgid "Disabled"
-msgstr "Disabilitado"
+msgstr "Uitgeschakeld"
 
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
 msgid "Enable tray icon"
-msgstr "Ícone na barra de tarefas"
+msgstr "Maak pictogram bij het afsluiten"
 
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr "Mostar botão de comando remoto"
+msgstr "Geef Server Commando knop weer"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
-msgstr "Buscar"
+msgstr "Bladeren"
 
 #: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
 msgid "Authenticate"
-msgstr "Autenticar"
+msgstr "Authenticatie"
 
 #: LocalSettingsDialog~RemoveShareButton.Text
 #: MainWindow~removeToolStripMenuItem.Text
 #: OtherStrings~Remove
 #, csharp-format
 msgid "Remove"
-msgstr "Remover"
+msgstr "Verwijder uit de lijst"
 
 #: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
 msgid "Save and Connect"
-msgstr "Salvar e Conectar"
+msgstr "Opslaan en verbinden"
 
 #: LocalSettingsDialog~SaveButton.Text
 #: RemoteSettingsDialog~SaveButton.Text
 #, csharp-format
 msgid "Save"
-msgstr "Salvar"
+msgstr "Opslaan"
 
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr "Salvar Servidor"
+msgstr "Sla Server gegevens op"
 
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
 msgid "Start torrents paused"
-msgstr "Iniciar torrents pausados"
+msgstr "Voeg torrents gepauzeerd toe"
 
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
 msgid "Upload prompt"
-msgstr "Habilitar opções no carregamento"
+msgstr ""
 
 #: LocalSettingsDialog~UseSSLCheckBox.Text
 #, csharp-format
 msgid "Secure (SSL)"
-msgstr "Seguro (SSL)"
+msgstr "Beveiligde verbinding (SSL)"
 
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
-msgstr "Adicionar Servidor"
+msgstr "Server toevoegen"
 
 #: LocalSettingsDialog~columnHost.Text
 #: OtherStrings~Host
@@ -296,52 +275,52 @@ msgstr ""
 #: MainWindow~columnHeader6.Text
 #, csharp-format
 msgid "Name"
-msgstr "Nome"
+msgstr "Naam"
 
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
 msgid "Port"
-msgstr "Porta"
+msgstr "Poort"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr "Propriedades do Torrent"
+msgstr "Torrent Eigenschappen"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr "Abrir pasta remota"
+msgstr "Open server map"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
 msgid "Start/Stop torrent"
-msgstr "Iniciar/Parar torrent"
+msgstr "Starten/Stoppen torrent"
 
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
 msgid "Default Action:"
-msgstr "Ação Padrão:"
+msgstr "Standaard aktie:"
 
 #: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
 msgid "Auto connect"
-msgstr "Auto conectar"
+msgstr "Automatisch verbinden"
 
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
-msgstr "Comportamento"
+msgstr "Gedrag"
 
 #: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
 msgid "New mapping:"
-msgstr "Novo mapeamento:"
+msgstr "Nieuwe map:"
 
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
 msgid "Current profile"
-msgstr "Perfil Atual"
+msgstr "Huidige profiel"
 
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
@@ -352,72 +331,72 @@ msgstr ""
 #: LocalSettingsDialog~label6.Text
 #, csharp-format
 msgid "Host:"
-msgstr ""
+msgstr "Server:"
 
 #: LocalSettingsDialog~label10.Text
 #, csharp-format
 msgid "Retry limit:"
-msgstr "Limite de tentativas:"
+msgstr "Maximaal aantal pogingen:"
 
 #: LocalSettingsDialog~label11.Text
 #: OtherStrings~UnixPathPrefix
 #, csharp-format
 msgid "UNIX path prefix:"
-msgstr "Caminho prefixado do UNIX:"
+msgstr "UNIX path voorvoegsel:"
 
 #: LocalSettingsDialog~label12.Text
 #, csharp-format
 msgid "Custom rpc path:"
-msgstr "Caminho rpc:"
+msgstr "Gebruikers rpc pad:"
 
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
 msgid "Command: "
-msgstr "Comando: "
+msgstr "Opdracht: "
 
 #: LocalSettingsDialog~label14.Text
 #: OtherStrings~SambaShare
 #, csharp-format
 msgid "Samba share:"
-msgstr "Compartilhamento Samba:"
+msgstr ""
 
 #: LocalSettingsDialog~label15.Text
 #, csharp-format
 msgid "Help: "
-msgstr "Ajuda: "
+msgstr "Hulp: "
 
 #: LocalSettingsDialog~label16.Text
 #, csharp-format
 msgid "Upload limit menu items:"
-msgstr "Limite de upload dos itens de menu:"
+msgstr "Upload limiet menu onderdelen:"
 
 #: LocalSettingsDialog~label17.Text
 #, csharp-format
 msgid "Download limit menu items:"
-msgstr "Limite de download dos itens de menu:"
+msgstr "Download limiet menu onderdelen:"
 
 #: LocalSettingsDialog~label2.Text
 #: LocalSettingsDialog~label7.Text
 #, csharp-format
 msgid "Port:"
-msgstr "Porta:"
+msgstr "Poort:"
 
 #: LocalSettingsDialog~label3.Text
 #, csharp-format
 msgid "Refresh Rate:"
-msgstr "Taxa de atualização:"
+msgstr "Verversingsfrequentie:"
 
 #: LocalSettingsDialog~label4.Text
 #: LocalSettingsDialog~label8.Text
 #, csharp-format
 msgid "User:"
-msgstr "Usuário:"
+msgstr "Gebruiker:"
 
 #: LocalSettingsDialog~label5.Text
 #: LocalSettingsDialog~label9.Text
 #, csharp-format
 msgid "Password:"
-msgstr "Senha:"
+msgstr "Wachtwoord:"
 
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
@@ -427,37 +406,37 @@ msgstr ""
 #: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
 #, csharp-format
 msgid "Minimize on close"
-msgstr "Minimizar ao fechar"
+msgstr "Minimaliseer bij sluiten"
 
 #: LocalSettingsDialog~notificationOnAdditionCheckBox.Text
 #, csharp-format
 msgid "Notification on addition"
-msgstr "Notificar ao adicionar"
+msgstr "Notificatie bij toevoegen"
 
 #: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
 #, csharp-format
 msgid "Notification on completion"
-msgstr "Notificar ao concluir"
+msgstr "Notificatie bij afronden"
 
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr "Remover Servidor"
+msgstr "Verwijder Server"
 
 #: LocalSettingsDialog~tabGlobalSettings.Text
 #, csharp-format
 msgid "Global Settings"
-msgstr "Configurações Globais"
+msgstr "Algemene instellingen"
 
 #: LocalSettingsDialog~tabPage1.Text
 #, csharp-format
 msgid "Server"
-msgstr "Servidor"
+msgstr ""
 
 #: LocalSettingsDialog~tabPage2.Text
 #, csharp-format
 msgid "Authentication"
-msgstr "Autenticação"
+msgstr "Authenticatie"
 
 #: LocalSettingsDialog~tabPage3.Text
 #, csharp-format
@@ -472,7 +451,7 @@ msgstr ""
 #: LocalSettingsDialog~tabPage6.Text
 #, csharp-format
 msgid "Misc"
-msgstr "Diversos"
+msgstr "Overig"
 
 #: LocalSettingsDialog~tabPage7.Text
 #, csharp-format
@@ -482,7 +461,7 @@ msgstr ""
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Configurações dos Servidores"
+msgstr "Servers Instellingen"
 
 #: LocalSettingsDialog~tabSkinSettings.Text
 #, csharp-format
@@ -498,65 +477,65 @@ msgstr ""
 #: MainWindow~AltSpeedButton.Text
 #, csharp-format
 msgid "Alt Speed"
-msgstr "Alt Velocidade"
+msgstr "Alt Snelheid"
 
 #: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
 msgid "About Transmission Remote"
-msgstr "Sobre o Transmission Remote"
+msgstr "Over Transmission Remote"
 
 #: MainWindow~addTorrentButton.Text
 #, csharp-format
 msgid "Add Torrent"
-msgstr "Adicionar Torrent"
+msgstr "Torrent toevoegen"
 
 #: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
 #, csharp-format
 msgid "Add torrent from URL"
-msgstr "Adicionar torrent da URL"
+msgstr "Voeg een torrent toe via een URL"
 
 #: MainWindow~addTorrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Quick add torrent"
-msgstr "Adicionar torrent rapidamente"
+msgstr "Snel toevoegen"
 
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
 #, csharp-format
 msgid "Add torrent with options"
-msgstr "Adicionar torrent com opções"
+msgstr "Torrent toevoegen met opties"
 
 #: MainWindow~addWebTorrentButton.Text
 #, csharp-format
 msgid "Add Torrent from URL"
-msgstr "Adicionar Torrent da URL"
+msgstr "Torrent toevoegen via een URL"
 
 #: MainWindow~allToolStripMenuItem.Text
 #: OtherStrings~All
 #, csharp-format
 msgid "All"
-msgstr "Tudo"
+msgstr "Alles"
 
 #: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
 #: OtherStrings~CopyAsCSV
 #, csharp-format
 msgid "CSV info to clipboard"
-msgstr "Copiar informação CSV para área de transferência"
+msgstr "Kopieër CSV informatie naar het klembord"
 
 #: MainWindow~categoriesPanelToolStripMenuItem.Text
 #, csharp-format
 msgid "Category filter panel"
-msgstr "Painel Filtro de Categorias"
+msgstr "Categorie filter paneel"
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
 msgid "Check for new version"
-msgstr "Verficar por atualização"
+msgstr "Controleer op nieuwe versie"
 
 #: MainWindow~columnHeader1.Text
 #: TorrentLoadDialog~columnHeader1.Text
 #, csharp-format
 msgid "Path"
-msgstr "Caminho"
+msgstr "Map"
 
 #: MainWindow~columnHeader10.Text
 #: MainWindow~columnHeader34.Text
@@ -574,23 +553,23 @@ msgstr ""
 #: MainWindow~columnHeader28.Text
 #, csharp-format
 msgid "Down Speed"
-msgstr "Vel Down"
+msgstr "Download Snelheid"
 
 #: MainWindow~columnHeader13.Text
 #: MainWindow~columnHeader29.Text
 #, csharp-format
 msgid "Up Speed"
-msgstr "Vel Up"
+msgstr "Upload Snelheid"
 
 #: MainWindow~columnHeader14.Text
 #, csharp-format
 msgid "ETA"
-msgstr "Conclusão em"
+msgstr "Resterend"
 
 #: MainWindow~columnHeader15.Text
 #, csharp-format
 msgid "Uploaded"
-msgstr "Enviado"
+msgstr "Ge-upload"
 
 #: MainWindow~columnHeader16.Text
 #, csharp-format
@@ -601,98 +580,98 @@ msgstr ""
 #: OtherStrings~Skip
 #, csharp-format
 msgid "Skip"
-msgstr "Ignorar"
+msgstr "Overslaan"
 
 #: MainWindow~columnHeader18.Text
 #, csharp-format
 msgid "Added At"
-msgstr "Adicionado em"
+msgstr "Toegevoegd op"
 
 #: MainWindow~columnHeader19.Text
 #, csharp-format
 msgid "Completed At"
-msgstr "Concluído em"
+msgstr "Afgerond op"
 
 #: MainWindow~columnHeader2.Text
 #: MainWindow~columnHeader7.Text
 #: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
 msgid "Size"
-msgstr "Tamanho"
+msgstr "Grootte"
 
 #: MainWindow~columnHeader20.Text
 #, csharp-format
 msgid "Announce URL"
-msgstr "URL de Anúncio"
+msgstr "Aankondigings URL"
 
 #: MainWindow~columnHeader21.Text
 #: MainWindow~columnHeader9.Text
 #, csharp-format
 msgid "Status"
-msgstr "Situação"
+msgstr ""
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
 msgid "Tier"
-msgstr "Fila"
+msgstr "Laag"
 
 #: MainWindow~columnHeader23.Text
 #, csharp-format
 msgid "IP Address"
-msgstr "Endereço IP"
+msgstr "IP Adres"
 
 #: MainWindow~columnHeader24.Text
 #, csharp-format
 msgid "Hostname"
-msgstr ""
+msgstr "Hostnaam"
 
 #: MainWindow~columnHeader25.Text
 #, csharp-format
 msgid "Country"
-msgstr "País"
+msgstr "Land"
 
 #: MainWindow~columnHeader26.Text
 #, csharp-format
 msgid "Client"
-msgstr "Cliente"
+msgstr "Klant"
 
 #: MainWindow~columnHeader27.Text
 #: OtherStrings~Progress
 #, csharp-format
 msgid "Progress"
-msgstr "Progresso"
+msgstr "Voortgang"
 
 #: MainWindow~columnHeader3.Text
 #: MainWindow~columnHeader8.Text
 #, csharp-format
 msgid "Done"
-msgstr "Concluído"
+msgstr "Afgerond"
 
 #: MainWindow~columnHeader30.Text
 #, csharp-format
 msgid "Tracker"
-msgstr "Rastreador"
+msgstr ""
 
 #: MainWindow~columnHeader31.Text
 #, csharp-format
 msgid "Flags"
-msgstr "Bandeira"
+msgstr "Vlaggen"
 
 #: MainWindow~columnHeader32.Text
 #: TorrentLoadDialog~columnHeader4.Text
 #, csharp-format
 msgid "Type"
-msgstr "Tipo"
+msgstr ""
 
 #: MainWindow~columnHeader33.Text
 #, csharp-format
 msgid "Update In"
-msgstr ""
+msgstr "Bijgewerkt op"
 
 #: MainWindow~columnHeader36.Text
 #, csharp-format
 msgid "Downloaded"
-msgstr ""
+msgstr "Gedownload"
 
 #: MainWindow~columnHeader4.Text
 #, csharp-format
@@ -703,65 +682,65 @@ msgstr ""
 #: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
 msgid "Priority"
-msgstr "Prioridade"
+msgstr "Prioriteit"
 
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
 msgid "Set torrent(s) properties"
-msgstr "Configurar propriedades do(s) torrent(s)"
+msgstr "Set torrent(s) eigenschappen"
 
 #: MainWindow~connectButton.Text
 #: MainWindow~connectToolStripMenuItem.Text
 #: OtherStrings~Connect
 #, csharp-format
 msgid "Connect"
-msgstr "Conectar"
+msgstr "Verbinden"
 
 #: MainWindow~disconnectButton.Text
 #: MainWindow~disconnectToolStripMenuItem.Text
 #: OtherStrings~Disconnect
 #, csharp-format
 msgid "Disconnect"
-msgstr "Desconectar"
+msgstr "Verbinding verbreken"
 
 #: MainWindow~downloadProgressLabel.Text
 #, csharp-format
 msgid "Pieces: "
-msgstr "Partes: "
+msgstr "Onderdelen: "
 
 #: MainWindow~exitToolStripMenuItem.Text
 #: OtherStrings~Exit
 #, csharp-format
 msgid "Exit"
-msgstr "Sair"
+msgstr "Afsluiten"
 
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format
 msgid "File"
-msgstr "Arquivo"
+msgstr "Bestand"
 
 #: MainWindow~filesTabPage.Text
 #, csharp-format
 msgid "Files"
-msgstr "Arquivos"
+msgstr "Bestanden"
 
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
-msgstr "Encontrar..."
+msgstr "Zoeken..."
 
 #: MainWindow~generalTabPage.Text
 #: RemoteSettingsDialog~tabPage1.Text
 #: TorrentPropertiesDialog~tabGeneral.Text
 #, csharp-format
 msgid "General"
-msgstr "Geral"
+msgstr "Algemeen"
 
 #: MainWindow~groupBox1.Text
 #, csharp-format
 msgid "Overall bandwidth utilisation"
-msgstr "Utilização geral da banda"
+msgstr "Totale bandbreedte gebruik"
 
 #: MainWindow~hashLabelLabel.Text
 #, csharp-format
@@ -771,7 +750,7 @@ msgstr ""
 #: MainWindow~helpToolStripMenuItem.Text
 #, csharp-format
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Hulp"
 
 #: MainWindow~label10.Text
 #, csharp-format
@@ -786,7 +765,7 @@ msgstr ""
 #: MainWindow~label12.Text
 #, csharp-format
 msgid "Upload limit:"
-msgstr "Limite Upload:"
+msgstr "Upload limiet:"
 
 #: MainWindow~label13.Text
 #, csharp-format
@@ -802,89 +781,89 @@ msgstr ""
 #: TorrentLoadDialog~CommentLabelLabel.Text
 #, csharp-format
 msgid "Comment:"
-msgstr "Comentário:"
+msgstr "Opmerking:"
 
 #: MainWindow~label16.Text
 #, csharp-format
 msgid "Created at:"
-msgstr "Criado em:"
+msgstr "Aangemaakt op:"
 
 #: MainWindow~label17.Text
 #, csharp-format
 msgid "Created by:"
-msgstr "Criado por:"
+msgstr "Aangemaakt door:"
 
 #: MainWindow~label18.Text
 #, csharp-format
 msgid "Resolution:"
-msgstr "Resolução:"
+msgstr "Oplossing:"
 
 #: MainWindow~label19.Text
 #: OtherStrings~Up
 #, csharp-format
 msgid "Up"
-msgstr ""
+msgstr "Omhoog"
 
 #: MainWindow~label20.Text
 #: OtherStrings~Down
 #, csharp-format
 msgid "Down"
-msgstr ""
+msgstr "Omlaag"
 
 #: MainWindow~label3.Text
 #, csharp-format
 msgid "Started At:"
-msgstr "Iniciado em:"
+msgstr "Begonnen op:"
 
 #: MainWindow~label4.Text
 #, csharp-format
 msgid "Remaining:"
-msgstr "Restante:"
+msgstr "Resterend:"
 
 #: MainWindow~label5.Text
 #, csharp-format
 msgid "Uploaded:"
-msgstr "Enviado:"
+msgstr "Geupload:"
 
 #: MainWindow~label6.Text
 #, csharp-format
 msgid "Downloaded:"
-msgstr "Baixado:"
+msgstr "Gedownload:"
 
 #: MainWindow~label7.Text
 #, csharp-format
 msgid "Download speed:"
-msgstr "Vel Download:"
+msgstr "Download snelheid:"
 
 #: MainWindow~label8.Text
 #, csharp-format
 msgid "Upload speed:"
-msgstr "Vel Upload:"
+msgstr "Upload snelheid:"
 
 #: MainWindow~label9.Text
 #, csharp-format
 msgid "Download limit:"
-msgstr "Limite Download:"
+msgstr "Download limiet:"
 
 #: MainWindow~labelForErrorLabel.Text
 #, csharp-format
 msgid "Error:"
-msgstr "Erro:"
+msgstr "Fout:"
 
 #: MainWindow~languageToolStripMenuItem.Text
 #, csharp-format
 msgid "Language"
-msgstr "Idioma"
+msgstr "Taal"
 
 #: MainWindow~localSettingsToolStripMenuItem.Text
 #, csharp-format
 msgid "Local settings"
-msgstr "Configurações Locais"
+msgstr "Lokale instellingen"
 
 #: MainWindow~locationLabelLabel.Text
 #, csharp-format
 msgid "Location:"
-msgstr "Local:"
+msgstr "Locatie:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -895,29 +874,29 @@ msgstr ""
 #: OtherStrings~MoveTorrentData
 #, csharp-format
 msgid "Move torrent data"
-msgstr "Mover dados de torrent"
+msgstr "Verplaats torrent gegevens"
 
 #: MainWindow~openNetworkShareButton.Text
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
 msgid "Open on network share"
-msgstr "Abrir de rede compartilhada"
+msgstr "Open op network map"
 
 #: MainWindow~optionsToolStripMenuItem.Text
 #, csharp-format
 msgid "Options"
-msgstr "Opções"
+msgstr "Opties"
 
 #: MainWindow~pauseToolStripMenuItem.Text
 #: OtherStrings~Pause
 #, csharp-format
 msgid "Pause"
-msgstr ""
+msgstr "Pauze"
 
 #: MainWindow~pauseTorrentButton.Text
 #, csharp-format
 msgid "Pause torrent(s)"
-msgstr "Pausar torrent(s)"
+msgstr "Pauzeer torrent(s)"
 
 #: MainWindow~peersTabPage.Text
 #, csharp-format
@@ -932,86 +911,86 @@ msgstr ""
 #: MainWindow~piecesInfoLabelLabel.Text
 #, csharp-format
 msgid "Pieces:"
-msgstr "Partes:"
+msgstr "Onderdelen:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
 msgid "Project site"
-msgstr "Site do Projeto"
+msgstr "Projekt lokatie"
 
 #: MainWindow~propertiesToolStripMenuItem.Text
 #: OtherStrings~Properties
 #, csharp-format
 msgid "Properties"
-msgstr "Propriedades"
+msgstr "Onderdelen"
 
 #: MainWindow~reannounceButton.Text
 #: MainWindow~reannounceToolStripMenuItem.Text
 #: OtherStrings~Reannounce
 #, csharp-format
 msgid "Reannounce"
-msgstr "Reanunciar"
+msgstr "Heraankondigen"
 
 #: MainWindow~recentlyActiveToolStripMenuItem.Text
 #, csharp-format
 msgid "Recently Active"
-msgstr "Ativado Recentimente"
+msgstr "Pas aktief"
 
 #: MainWindow~recheckToolStripMenuItem.Text
 #: OtherStrings~Recheck
 #, csharp-format
 msgid "Recheck"
-msgstr "Re-checar"
+msgstr "Hercontroleren"
 
 #: MainWindow~recheckTorrentButton.Text
 #: MainWindow~recheckTorrentButton.ToolTipText
 #, csharp-format
 msgid "Recheck torrent(s)"
-msgstr "Re-checar torrent(s)"
+msgstr "Hercontroleer torrent(s)"
 
 #: MainWindow~remoteConfigureButton.Text
 #: RemoteSettingsDialog~$this.Text
 #, csharp-format
 msgid "Remote Settings"
-msgstr "Configurações Remotas"
+msgstr "Server instellingen"
 
 #: MainWindow~remoteSettingsToolStripMenuItem.Text
 #, csharp-format
 msgid "Remote settings"
-msgstr "Configurações Remotas"
+msgstr "Server instellingen"
 
 #: MainWindow~removeAndDeleteButton.Text
 #, csharp-format
 msgid "Remove and delete torrent(s)"
-msgstr "Remover e deletar torrent(s)"
+msgstr "Verwijder torrent(s) uit lijst en van de harde schijf"
 
 #: MainWindow~removeDeleteToolStripMenuItem.Text
 #: OtherStrings~RemoveAndDelete
 #, csharp-format
 msgid "Remove and delete"
-msgstr "Remover e deletar"
+msgstr "Verwijder uit lijst en van de harde schijf"
 
 #: MainWindow~removeTorrentButton.Text
 #, csharp-format
 msgid "Remove torrent(s)"
-msgstr "Remover torrent(s)"
+msgstr "Verwijder torrent(s) uit de lijst"
 
 #: MainWindow~sessionStatsButton.Text
 #: MainWindow~statsToolStripMenuItem.Text
 #: OtherStrings~DisplayStatistics
 #, csharp-format
 msgid "Display statistics"
-msgstr "Mostrar estatísticas"
+msgstr "Laat statistieken zien"
 
 #: MainWindow~showDetailsPanelToolStripMenuItem.Text
 #, csharp-format
 msgid "Details panel"
-msgstr "Painel de Detalhes"
+msgstr "Details paneel"
 
 #: MainWindow~showErrorLogToolStripMenuItem.Text
 #, csharp-format
 msgid "Show Error Log"
-msgstr "Mostrar Log de Erro"
+msgstr "Laat foutenlogboek zien"
 
 #: MainWindow~speedGraph.Text
 #, csharp-format
@@ -1021,25 +1000,25 @@ msgstr ""
 #: MainWindow~speedTabPage.Text
 #, csharp-format
 msgid "Speed"
-msgstr "Velocidade"
+msgstr "Snelheid"
 
 #: MainWindow~startAllToolStripMenuItem.Text
 #: OtherStrings~StartAll
 #, csharp-format
 msgid "Start all"
-msgstr "Iniciar todos"
+msgstr "Begonnen op"
 
 #: MainWindow~startToolStripMenuItem.Text
 #: OtherStrings~Start
 #, csharp-format
 msgid "Start"
-msgstr "Iniciar"
+msgstr ""
 
 #: MainWindow~startTorrentButton.Text
 #: MainWindow~startTorrentButton.ToolTipText
 #, csharp-format
 msgid "Start torrent(s)"
-msgstr "Iniciar torrent(s)"
+msgstr ""
 
 #: MainWindow~statusStrip.Text
 #: TorrentLoadDialog~statusStrip1.Text
@@ -1052,12 +1031,12 @@ msgstr ""
 #: OtherStrings~PauseAll
 #, csharp-format
 msgid "Pause all"
-msgstr "Pause em todos"
+msgstr "Pauseer all"
 
 #: MainWindow~timeElapsedLabelLabel.Text
 #, csharp-format
 msgid "Time elapsed:"
-msgstr "Tempo gasto:"
+msgstr "Verstreken tijd:"
 
 #: MainWindow~toolStripContainer1.Text
 #, csharp-format
@@ -1073,12 +1052,12 @@ msgstr ""
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
-msgstr "Rastreadores"
+msgstr ""
 
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
 msgid "View"
-msgstr "Visualizar"
+msgstr "Bekijken"
 
 #: MoveDataPrompt~$this.Text
 #, csharp-format
@@ -1088,32 +1067,32 @@ msgstr ""
 #: MoveDataPrompt~button1.Text
 #, csharp-format
 msgid "Move"
-msgstr "Mover"
+msgstr "Verplaatsen"
 
 #: MoveDataPrompt~label1.Text
 #, csharp-format
 msgid "Destination directory: "
-msgstr "Pasta de Destino: "
+msgstr "Doel map: "
 
 #: OtherStrings~Author
 #, csharp-format
 msgid "Author"
-msgstr "Autor"
+msgstr "Auteur"
 
 #: OtherStrings~BandwidthAllocation
 #, csharp-format
 msgid "Bandwidth allocation"
-msgstr "Alocação de banda"
+msgstr "Bandbreedte allocatie"
 
 #: OtherStrings~Broken
 #, csharp-format
 msgid "Broken"
-msgstr "Quebrado"
+msgstr "Kapot"
 
 #: OtherStrings~Build
 #, csharp-format
 msgid "Build"
-msgstr "Construído"
+msgstr "Maak"
 
 #: OtherStrings~Byte
 #, csharp-format
@@ -1123,27 +1102,27 @@ msgstr ""
 #: OtherStrings~Checking
 #, csharp-format
 msgid "Checking"
-msgstr "Verificando"
+msgstr "Controleren"
 
 #: OtherStrings~Complete
 #, csharp-format
 msgid "Complete"
-msgstr "Concluído"
+msgstr "Afgerond"
 
 #: OtherStrings~Confirm
 #, csharp-format
 msgid "Confirm"
-msgstr "Confirmar"
+msgstr "Bevestigen"
 
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?"
-msgstr "Você selecionou {0} torrent(s) para remoção. Continuar?"
+msgstr "Weet je zeker dat je {0} torrents wilt verwijderen?"
 
 #: OtherStrings~ConfirmMultipleRemoveAndDelete
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
-msgstr "Você selecionou {0} torrent(s) para remoção. Continuar?{1}TODOS OS ARQUVIOS E DADOS DESTES TORRENTS SERÃO REMOVIDOS."
+msgstr "Weet je zeker dat je {0} torrents wilt verwijderen?{1}ALLE GEGEVENS VAN DEZE TORRENTS ZULLEN WORDEN VERWIJDERD"
 
 #: OtherStrings~ConfirmSaveServer
 #, csharp-format
@@ -1153,42 +1132,42 @@ msgstr ""
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
-msgstr "Gostaria de remover {0}?"
+msgstr "Weet je zeker dat je {0} wilt verwijderen?"
 
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
 msgid "Do you want to remove and delete {0}?{1}ALL THE DATA FROM THIS TORRENT WILL BE REMOVED."
-msgstr "Você quer remover e deletar {0}?{1}TODOS OS ARQUIVOS E DADOS DESTE TORRENTE SERÃO REMOVIDOS."
+msgstr "Weet je zeker dat je {0} wilt verwijderen?{1}ALLE GEGEVENS VAN DEZE TORRENTS ZULLEN WORDEN VERWIJDERD"
 
 #: OtherStrings~ConnectedGettingInfo
 #, csharp-format
 msgid "Connected. Getting torrent information..."
-msgstr "Conectado. Obtendo informações do torrent..."
+msgstr "Verbonden. Bezig met het ophalen van torrent informatie..."
 
 #: OtherStrings~ConnectedTo
 #, csharp-format
 msgid "Connected to"
-msgstr "Conectedo a"
+msgstr "Verbonden met"
 
 #: OtherStrings~Connecting
 #, csharp-format
 msgid "Connecting"
-msgstr "Conectando"
+msgstr "Bezig met verbinden"
 
 #: OtherStrings~Day
 #, csharp-format
 msgid "Day"
-msgstr "Dia"
+msgstr "Dag"
 
 #: OtherStrings~Disconnected
 #, csharp-format
 msgid "Disconnected"
-msgstr "Desconectado"
+msgstr "Niet verbonden"
 
 #: OtherStrings~DisconnectedExceeded
 #, csharp-format
 msgid "Disconnected. Exceeded maximum number of failed requests."
-msgstr "Desconectado. Número máxmo de requisições excedido."
+msgstr "Niet verbonden. Maximaal aantal pogingen bereikt."
 
 #: OtherStrings~Download
 #, csharp-format
@@ -1198,12 +1177,12 @@ msgstr ""
 #: OtherStrings~DownloadLimit
 #, csharp-format
 msgid "Download Limit"
-msgstr "Limite de Download"
+msgstr "Download Limiet"
 
 #: OtherStrings~DownloadedValid
 #, csharp-format
 msgid "{0} ({1} valid)"
-msgstr "{0} ({1} válido(s))"
+msgstr "{0} ({1} correct)"
 
 #: OtherStrings~Downloading
 #, csharp-format
@@ -1213,22 +1192,22 @@ msgstr ""
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
-msgstr "Arquivo vazio"
+msgstr "Bestand is leeg"
 
 #: OtherStrings~Error
 #, csharp-format
 msgid "Error"
-msgstr "Erro"
+msgstr "Fout"
 
 #: OtherStrings~FailedRequest
 #, csharp-format
 msgid "Failed request"
-msgstr "Requisição falhou"
+msgstr "Aantal pogingen"
 
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
-msgstr "GeoIP erro de inicialização ({0})"
+msgstr "Het initialiseren van GeoIP is mislukt ({0})"
 
 #: OtherStrings~Gigabyte
 #, csharp-format
@@ -1243,42 +1222,42 @@ msgstr ""
 #: OtherStrings~High
 #, csharp-format
 msgid "High"
-msgstr "Alta"
+msgstr "Hoog"
 
 #: OtherStrings~HighPriority
 #, csharp-format
 msgid "High priority"
-msgstr "Prioridade Alta"
+msgstr "Hoge prioriteit"
 
 #: OtherStrings~Hour
 #, csharp-format
 msgid "Hour"
-msgstr "Hora"
+msgstr "Uur"
 
 #: OtherStrings~HttpError
 #, csharp-format
 msgid "Daemon try to download something, but the http result is:{0}{1}"
-msgstr ""
+msgstr "Onverwachts resultaat bij het downloaden door de Daemon:{0}{1}"
 
 #: OtherStrings~Incomplete
 #, csharp-format
 msgid "Incomplete"
-msgstr "Incompleto"
+msgstr "Incompleet"
 
 #: OtherStrings~Info
 #, csharp-format
 msgid "Info"
-msgstr ""
+msgstr "Informatie"
 
 #: OtherStrings~InfoObjectToClipboard
 #, csharp-format
 msgid "Info object to clipboard"
-msgstr "Copiar info do objeto"
+msgstr "Info object naar klembord"
 
 #: OtherStrings~InputAccepted
 #, csharp-format
 msgid "Input accepted"
-msgstr "Entrada aceita"
+msgstr "Input ge-accepteerd"
 
 #: OtherStrings~Kilobyte
 #, csharp-format
@@ -1293,32 +1272,32 @@ msgstr ""
 #: OtherStrings~LatestVersion
 #, csharp-format
 msgid "You are using the latest version ({0}.{1})."
-msgstr "Você está usando a última versão ({0}.{1})."
+msgstr "Je maakt gebruik van de laatste versie ({0}.{1})."
 
 #: OtherStrings~LatestVersionCheckFailed
 #, csharp-format
 msgid "Latest version check failed"
-msgstr "Falha ao checar por última versão"
+msgstr "Controleren op laatste versie is mislukt"
 
 #: OtherStrings~LoadingFile
 #, csharp-format
 msgid "Loading {0}..."
-msgstr "Carregando {0}..."
+msgstr "Bezig met laden van {0}..."
 
 #: OtherStrings~Low
 #, csharp-format
 msgid "Low"
-msgstr "Baixa"
+msgstr "Laag"
 
 #: OtherStrings~LowPriority
 #, csharp-format
 msgid "Low priority"
-msgstr "Prioridade Baixa"
+msgstr "Lage prioriteit"
 
 #: OtherStrings~MappingSample
 #, csharp-format
 msgid "Sample mapping:"
-msgstr ""
+msgstr "Voorbeeld mapping:"
 
 #: OtherStrings~Megabyte
 #, csharp-format
@@ -1333,72 +1312,72 @@ msgstr ""
 #: OtherStrings~Minute
 #, csharp-format
 msgid "Minute"
-msgstr "Minuto"
+msgstr "Minuten"
 
 #: OtherStrings~MoveMultipleTorrents
 #, csharp-format
 msgid "Move multiple torrent data"
-msgstr "Mover dados de múltiplos torrents"
+msgstr "Verplaats torrent data"
 
 #: OtherStrings~MoveX
 #, csharp-format
 msgid "Move {0}"
-msgstr "Mover {0}"
+msgstr "Verplaats {0}"
 
 #: OtherStrings~MultipleTorrentProperties
 #, csharp-format
 msgid "Multiple Torrent Properties"
-msgstr "Propriedade de múltiplos torrents"
+msgstr "Torrent Instelligen"
 
 #: OtherStrings~MustBeConnected
 #, csharp-format
 msgid "You must be connected to add torrents. Would you like to connect now?"
-msgstr "Você deve estar conectado para adicionar. Gostaria de conectar agora?"
+msgstr "Je moet verbonden zijn om torrents toe te voegen. Wil je nu een verbinding opzetten?"
 
 #: OtherStrings~NewTorrentIs
 #, csharp-format
 msgid "New torrent {0}."
-msgstr "Novo torrent {0}."
+msgstr "Nieuwe torrent {0}."
 
 #: OtherStrings~NewerVersion
 #, csharp-format
 msgid "There is a newer version ({0}.{1}) available. Would you like to visit the downloads page?"
-msgstr "Há uma nova versão ({0}.{1}) disponível. Gostaria de visitar a página de downloads?"
+msgstr "Er is een nieuwere versie ({0}.{1}) beschikbaar. Wil je nu naar de downloadpagina gaan om deze te downloaden?"
 
 #: OtherStrings~No
 #, csharp-format
 msgid "No"
-msgstr "Não"
+msgstr "Nee"
 
 #: OtherStrings~NoHostnameSet
 #, csharp-format
 msgid "No hostname has been set."
-msgstr ""
+msgstr "Er is geen hostnaam ingesteld."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
 msgid "No upgrade available"
-msgstr "Nenhuma atualização disponível"
+msgstr "Er is geen nieuwere versie beschikbaar"
 
 #: OtherStrings~Normal
 #, csharp-format
 msgid "Normal"
-msgstr ""
+msgstr "Normaal"
 
 #: OtherStrings~NormalPriority
 #, csharp-format
 msgid "Normal priority"
-msgstr "Prioridade Normal"
+msgstr "Normale prioriteit"
 
 #: OtherStrings~NotConnected
 #, csharp-format
 msgid "Not connected"
-msgstr "Não conectado"
+msgstr "Niet verbonden"
 
 #: OtherStrings~OpenFileFilter
 #, csharp-format
 msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
-msgstr ""
+msgstr "BitTorrent Metabestanden (*.torrent)|*.torrent|All Files (*.*)|*.*"
 
 #: OtherStrings~OpenImageFilter
 #, csharp-format
@@ -1408,42 +1387,42 @@ msgstr ""
 #: OtherStrings~OpenNetworkShare
 #, csharp-format
 msgid "Open on Network Share"
-msgstr "Abrir no compartilhamento de rede"
+msgstr "Open netwerk map"
 
 #: OtherStrings~Password
 #, csharp-format
 msgid "Password"
-msgstr "Senha"
+msgstr "Wachtwoord"
 
 #: OtherStrings~Paused
 #, csharp-format
 msgid "Paused"
-msgstr "Pausado"
+msgstr "Gepauzeerd"
 
 #: OtherStrings~Pieces
 #, csharp-format
 msgid "Pieces"
-msgstr "Partes"
+msgstr "Onderdelen"
 
 #: OtherStrings~PiecesInfo
 #, csharp-format
 msgid "{0} x {1} (have {2})"
-msgstr ""
+msgstr "{0} x {1} (ontvangen {2})"
 
 #: OtherStrings~PortIsClosed
 #, csharp-format
 msgid "The incoming port on your daemon is CLOSED."
-msgstr "A porta de entrada do deamon está FECHADA."
+msgstr "De inkomende poort op de deamon is GESLOTEN."
 
 #: OtherStrings~PortIsOpen
 #, csharp-format
 msgid "The incoming port on your daemon is OPEN."
-msgstr "A porta de entrada do deamon está ABERTA."
+msgstr "De inkomende poort op de deamon is OPEN."
 
 #: OtherStrings~PortTestResult
 #, csharp-format
 msgid "Port test result"
-msgstr "Resultado do teste de porta"
+msgstr "Poort test resultaat"
 
 #: OtherStrings~Querying
 #: StatsDialog~downloadedBytesValue1.Text
@@ -1458,47 +1437,47 @@ msgstr "Resultado do teste de porta"
 #: StatsDialog~uploadedBytesValue2.Text
 #, csharp-format
 msgid "Querying..."
-msgstr "Pesquisando..."
+msgstr "Aanvragen..."
 
 #: OtherStrings~Revision
 #, csharp-format
 msgid "Revision"
-msgstr "Revisão"
+msgstr "Versie"
 
 #: OtherStrings~RpcVersion
 #, csharp-format
 msgid "RpcVersion"
-msgstr ""
+msgstr "RpcVersie"
 
 #: OtherStrings~RpcVersionMinimum
 #, csharp-format
 msgid "RpcVersionMinimum"
-msgstr ""
+msgstr "RpcVersieMinimum"
 
 #: OtherStrings~Second
 #, csharp-format
 msgid "Second"
-msgstr "Segundo"
+msgstr "Seconden"
 
 #: OtherStrings~Seeding
 #, csharp-format
 msgid "Seeding"
-msgstr "Semeando"
+msgstr ""
 
 #: OtherStrings~SelectAll
 #, csharp-format
 msgid "Select all"
-msgstr "Selecionar todos"
+msgstr "Alles selecteren"
 
 #: OtherStrings~SpeedResolutions
 #, csharp-format
 msgid "5 sec|10 sec|30 sec|5 min"
-msgstr "5 seg|10 seg|30 seg|5 min"
+msgstr ""
 
 #: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
 msgid "This torrent is now complete"
-msgstr "Este torrent está concluído"
+msgstr "De volgende torrent is nu compleet"
 
 #: OtherStrings~Torrents
 #, csharp-format
@@ -1508,127 +1487,127 @@ msgstr ""
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
-msgstr "Incapaz de abrir"
+msgstr "Het openen is mislukt"
 
 #: OtherStrings~UnableToParse
 #, csharp-format
 msgid "Unable to parse the server response"
-msgstr "Servidor não respondeu"
+msgstr "Valideren van de server response is mislukt"
 
 #: OtherStrings~Unknown
 #, csharp-format
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Onbekend"
 
 #: OtherStrings~UnknownNegativeResult
 #, csharp-format
 msgid "Unknown (negative)"
-msgstr "Desconhecido (negativo)"
+msgstr "Onbekend (negatief)"
 
 #: OtherStrings~UnknownResponseTag
 #, csharp-format
 msgid "Unknown response tag"
-msgstr "Resposta desconhecida"
+msgstr "Onbekende server reactie"
 
 #: OtherStrings~Unlimited
 #, csharp-format
 msgid "Unlimited"
-msgstr "Ilimitado"
+msgstr "Ongelimiteerd"
 
 #: OtherStrings~UnsuccessfulRequest
 #, csharp-format
 msgid "Unsuccessful request"
-msgstr "Requisição mal sucedida"
+msgstr "Request is mislukt"
 
 #: OtherStrings~Updating
 #, csharp-format
 msgid "Updating..."
-msgstr "Atualizando..."
+msgstr "Bijwerken..."
 
 #: OtherStrings~UpgradeAvailable
 #, csharp-format
 msgid "Upgrade available"
-msgstr "Atualização disponível"
+msgstr "Er is een nieuwe versie beschikbaar"
 
 #: OtherStrings~UploadLimit
 #, csharp-format
 msgid "Upload Limit"
-msgstr "Limite de Upload"
+msgstr "Upload Limiet"
 
 #: OtherStrings~WaitingForInput
 #, csharp-format
 msgid "Waiting for input"
-msgstr "Aguardando por entrada"
+msgstr "Wacht op invoer"
 
 #: OtherStrings~WaitingToCheck
 #, csharp-format
 msgid "Waiting to check"
-msgstr "Aguardando verificação"
+msgstr "Wacht op controle"
 
 #: OtherStrings~XConnected
 #, csharp-format
 msgid "{0} connected"
-msgstr "{0} conectado"
+msgstr "{0} verbonden"
 
 #: OtherStrings~XInBlocklist
 #, csharp-format
 msgid "{0} in blocklist."
-msgstr "{0} na lista."
+msgstr "{0} in banlijst."
 
 #: OtherStrings~XOfYConnected
 #, csharp-format
 msgid "{0} of {1} connected"
-msgstr "{0} de {1} conectado"
+msgstr "{0} of {1} verbonden"
 
 #: OtherStrings~Yes
 #, csharp-format
 msgid "Yes"
-msgstr "Sim"
+msgstr "Ja"
 
 #: RemoteSettingsDialog~PEXcheckBox.Text
 #, csharp-format
 msgid "Enable Peer Exchange"
-msgstr "Habilitar exportação de Peer"
+msgstr "Zet Peer Exchange aan"
 
 #: RemoteSettingsDialog~altSpeedLimitEnable.Text
 #, csharp-format
 msgid "Enable alternate speed limits"
-msgstr "Habilitar limites de velocidade alternativos"
+msgstr "Zet alternatieve snelheden aan"
 
 #: RemoteSettingsDialog~altTimeConstraintEnabled.Text
 #, csharp-format
 msgid "Time constraint"
-msgstr ""
+msgstr "Tijdsbeperking"
 
 #: RemoteSettingsDialog~blocklistEnabledCheckBox.Text
 #, csharp-format
 msgid "Blocklist enabled"
-msgstr "Blockist habilitada"
+msgstr "Blocklist aangezet"
 
 #: RemoteSettingsDialog~dhtEnabled.Text
 #, csharp-format
 msgid "Enable Distributed Hash Table (DHT)"
-msgstr "Habilitar DHT - Distributed Hash Table"
+msgstr "Zet Distributed Hash Table (DHT) aan"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items
 #, csharp-format
 msgid "tolerated"
-msgstr ""
+msgstr "Getoloreerd"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items1
 #, csharp-format
 msgid "preferred"
-msgstr ""
+msgstr "Voorkeur"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items2
 #, csharp-format
 msgid "required"
-msgstr ""
+msgstr "Verplicht"
 
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
 msgid "Download To:"
-msgstr "Baixar para:"
+msgstr "Downloaden Naar:"
 
 #: RemoteSettingsDialog~label10.Text
 #: RemoteSettingsDialog~label5.Text
@@ -1643,12 +1622,12 @@ msgstr ""
 #: RemoteSettingsDialog~label11.Text
 #, csharp-format
 msgid "Down:"
-msgstr ""
+msgstr "Beneden:"
 
 #: RemoteSettingsDialog~label12.Text
 #, csharp-format
 msgid "Up:"
-msgstr ""
+msgstr "Omhoog:"
 
 #: RemoteSettingsDialog~label13.Text
 #: RemoteSettingsDialog~label14.Text
@@ -1659,113 +1638,113 @@ msgstr ""
 #: RemoteSettingsDialog~label2.Text
 #, csharp-format
 msgid "Incoming port:"
-msgstr "Porta de entrada:"
+msgstr "Binnen komende poort:"
 
 #: RemoteSettingsDialog~label3.Text
 #, csharp-format
 msgid "Encryption:"
-msgstr "Criptografia:"
+msgstr "Versleuteling:"
 
 #: RemoteSettingsDialog~label4.Text
 #, csharp-format
 msgid "Peer Limit"
-msgstr "Limite de Peer"
+msgstr "Peer Limiet"
 
 #: RemoteSettingsDialog~label7.Text
 #: TorrentPropertiesDialog~label7.Text
 #, csharp-format
 msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
-msgstr "NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon."
+msgstr "LET OP: De beschikbaarheid van sommige opties vereisen een deamon upgrade"
 
 #: RemoteSettingsDialog~label8.Text
 #, csharp-format
 msgid "to"
-msgstr "a"
+msgstr "tot"
 
 #: RemoteSettingsDialog~limitDownloadCheckBox.Text
 #, csharp-format
 msgid "Limit download"
-msgstr "Limite de download"
+msgstr "Downloadlimiet"
 
 #: RemoteSettingsDialog~limitUploadCheckBox.Text
 #, csharp-format
 msgid "Limit upload"
-msgstr "Limite de upload"
+msgstr "Uploadlimiet"
 
 #: RemoteSettingsDialog~portForwardCheckBox.Text
 #, csharp-format
 msgid "Enable UPnP"
-msgstr "Habilitar UPnP"
+msgstr "UPnP inschakelen"
 
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
 msgid "Seed Ratio Limit"
-msgstr "Limite de Ratio de Sementes"
+msgstr "Seed Ratio Limiet"
 
 #: RemoteSettingsDialog~tabPage2.Text
 #, csharp-format
 msgid "Limits"
-msgstr "Limites"
+msgstr "Limieten"
 
 #: RemoteSettingsDialog~tabPage3.Text
 #, csharp-format
 msgid "Alternate limits"
-msgstr "Limits alternativos"
+msgstr "Alternatieve snelheden"
 
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
 msgid "Test Port"
-msgstr "Testar Porta"
+msgstr "Test Poort"
 
 #: RemoteSettingsDialog~updateBlocklistButton.Text
 #, csharp-format
 msgid "Update Blocklist"
-msgstr "Atualizar blocklist"
+msgstr "Blocklist bijwerken"
 
 #: StatsDialog~$this.Text
 #, csharp-format
 msgid "Transmission Daemon Statistics"
-msgstr "Estatísticas do Transmission Daemon"
+msgstr "Transmission Daemon Statistieken"
 
 #: StatsDialog~CumulativeGroupBox.Text
 #, csharp-format
 msgid "Cumulative Stats"
-msgstr "Estatísticas acumuladas"
+msgstr "Cumulatieve Statistieken"
 
 #: StatsDialog~CurrentSessionGroupBox.Text
 #, csharp-format
 msgid "Current Session Stats"
-msgstr "Estatísticas da Sessão Atual"
+msgstr "Huidige sessie statistieken"
 
 #: StatsDialog~downloadedBytesLabel1.Text
 #: StatsDialog~downloadedBytesLabel2.Text
 #, csharp-format
 msgid "Downloaded bytes:"
-msgstr "Bytes Baixados:"
+msgstr "Gedownloade bytes:"
 
 #: StatsDialog~filesAddedLabel1.Text
 #: StatsDialog~filesAddedLabel2.Text
 #, csharp-format
 msgid "Files added:"
-msgstr "Arquivos adicionados:"
+msgstr "Bestanden toegevoegd:"
 
 #: StatsDialog~secondsActiveLabel1.Text
 #: StatsDialog~secondsActiveLabel2.Text
 #, csharp-format
 msgid "Seconds active"
-msgstr "Tempo ativo"
+msgstr "Aantal seconden actief"
 
 #: StatsDialog~sessionCountLabel1.Text
 #: StatsDialog~sessionCountLabel2.Text
 #, csharp-format
 msgid "Session Count"
-msgstr "Contador de Sessões"
+msgstr "Sessie telling"
 
 #: StatsDialog~uploadedBytesLabel1.Text
 #: StatsDialog~uploadedBytesLabel2.Text
 #, csharp-format
 msgid "Uploaded bytes:"
-msgstr "Bytes enviados:"
+msgstr "Geuploade bytes:"
 
 #: TorrentLoadDialog~$this.Text
 #, csharp-format
@@ -1775,39 +1754,39 @@ msgstr ""
 #: TorrentLoadDialog~DateLabelLabel.Text
 #, csharp-format
 msgid "Date:"
-msgstr ""
+msgstr "Datum:"
 
 #: TorrentLoadDialog~NameLabelLabel.Text
 #, csharp-format
 msgid "Name:"
-msgstr ""
+msgstr "Naam:"
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
 #: UriPromptWindow~button1.Text
 #, csharp-format
 msgid "OK"
-msgstr ""
+msgstr "Bevestigen"
 
 #: TorrentLoadDialog~PropertiesGroupBox.Text
 #, csharp-format
 msgid "Torrent properties"
-msgstr ""
+msgstr "Torrent eigenschappen"
 
 #: TorrentLoadDialog~SelectAllButton.Text
 #, csharp-format
 msgid "Select All"
-msgstr ""
+msgstr "Selecteer alles"
 
 #: TorrentLoadDialog~SelectInvertButton.Text
 #, csharp-format
 msgid "Select Invert"
-msgstr ""
+msgstr "Draai selectie om"
 
 #: TorrentLoadDialog~SelectNoneButton.Text
 #, csharp-format
 msgid "Select None"
-msgstr ""
+msgstr "Selecteer niets"
 
 #: TorrentLoadDialog~SizelabelLabel.Text
 #, csharp-format
@@ -1817,22 +1796,22 @@ msgstr ""
 #: TorrentLoadDialog~TorrentContentsGroupBox.Text
 #, csharp-format
 msgid "Torrent Contents"
-msgstr ""
+msgstr "Torrent inhoud"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
 msgid "Alternate destination directory: "
-msgstr "Diretório de destino alternativo: "
+msgstr "Afwisselende bestemmingsmap: "
 
 #: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
 msgid "Alternate peer limit: "
-msgstr "Limite de peer alternativo: "
+msgstr "Afwisselende peer limiet: "
 
 #: TorrentLoadDialog~checkBox3.Text
 #, csharp-format
 msgid "Start torrent"
-msgstr ""
+msgstr "Start met torrent"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
@@ -1847,42 +1826,39 @@ msgstr ""
 #: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
 msgid "Limit download rate"
-msgstr "Limite de ratio de download"
+msgstr "Limiteer download snelheid"
 
 #: TorrentPropertiesDialog~honorsSessionLimits.Text
 #, csharp-format
 msgid "Honors session limits"
-msgstr "Preferir os limites globais"
+msgstr "Kom de sessie limieten na"
 
 #: TorrentPropertiesDialog~label3.Text
 #, csharp-format
 msgid "Maximum peers"
-msgstr "Máximo de peers"
+msgstr "Maximaal aantal verbonden peers"
 
 #: TorrentPropertiesDialog~label4.Text
 #, csharp-format
 msgid "Bandwidth priority:"
-msgstr "Prioridade de Banda:"
+msgstr "Bandbreedte prioriteit:"
 
 #: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
 #, csharp-format
 msgid "Limit seed ratio"
-msgstr "Limite de ratio para sements"
+msgstr "Limiteer seed ratio"
 
 #: TorrentPropertiesDialog~uploadLimitEnableField.Text
 #, csharp-format
 msgid "Limit upload rate"
-msgstr "Limite de ratio de envio"
+msgstr "Limiteer upload snelheid"
 
 #: UriPromptWindow~$this.Text
 #, csharp-format
 msgid "Upload by URL"
-msgstr "Enviador por URL"
+msgstr "Geupload door URL"
 
 #: UriPromptWindow~toolStripStatusLabel1.Text
 #, csharp-format
 msgid "Waiting for URL..."
-msgstr "Aguardando pela URL..."
-
-#~ msgid "Scrape URL"
-#~ msgstr "URL de Scrape"
+msgstr "Wacht op URL..."
