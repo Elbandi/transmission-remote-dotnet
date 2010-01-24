@@ -104,8 +104,8 @@ namespace TransmissionRemoteDotnet
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.player_reload16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete16);
-            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.server16);
             stateListBoxImageList.Images.AddRange(defaultstateimages.ToArray());
+            stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
             LocalSettings settings = Program.Settings;
             /* 
              * ToolStrips havent got ImageList field in design time.
@@ -184,6 +184,7 @@ namespace TransmissionRemoteDotnet
             Toolbox.LoadSkinToImagelist(Program.Settings.ToolbarImagePath, 16, 32, toolStripImageList, defaulttoolbarimages);
             Toolbox.LoadSkinToImagelist(Program.Settings.StateImagePath, 16, 16, stateListBoxImageList, defaultstateimages);
             Toolbox.LoadSkinToImagelist(Program.Settings.InfopanelImagePath, 16, 16, tabControlImageList, defaultinfopanelimages);
+            stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
             toolStrip.ImageList = menuStrip.ImageList =
                 fileToolStripMenuItem.DropDown.ImageList = optionsToolStripMenuItem.DropDown.ImageList =
                 torrentToolStripMenuItem.DropDown.ImageList = viewToolStripMenuItem.DropDown.ImageList =
