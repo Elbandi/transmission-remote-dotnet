@@ -85,6 +85,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader3});
             resources.ApplyResources(this.errorListView, "errorListView");
             this.errorListView.FullRowSelect = true;
+            this.errorListView.HideSelection = false;
             this.errorListView.Name = "errorListView";
             this.errorListView.UseCompatibleStateImageBehavior = false;
             this.errorListView.View = System.Windows.Forms.View.Details;

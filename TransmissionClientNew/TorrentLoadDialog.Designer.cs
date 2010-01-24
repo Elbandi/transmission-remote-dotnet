@@ -77,6 +77,7 @@
             this.columnHeader3});
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;

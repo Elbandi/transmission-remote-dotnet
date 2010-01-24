@@ -329,6 +329,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader30});
             resources.ApplyResources(this.torrentListView, "torrentListView");
             this.torrentListView.FullRowSelect = true;
+            this.torrentListView.HideSelection = false;
             this.torrentListView.Name = "torrentListView";
             this.torrentListView.ShowItemToolTips = true;
             this.torrentListView.SmallImageList = this.stateListBoxImageList;
@@ -770,6 +771,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader36});
             resources.ApplyResources(this.trackersListView, "trackersListView");
             this.trackersListView.FullRowSelect = true;
+            this.trackersListView.HideSelection = false;
             this.trackersListView.Name = "trackersListView";
             this.trackersListView.UseCompatibleStateImageBehavior = false;
             this.trackersListView.View = System.Windows.Forms.View.Details;
@@ -830,6 +832,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader5});
             resources.ApplyResources(this.filesListView, "filesListView");
             this.filesListView.FullRowSelect = true;
+            this.filesListView.HideSelection = false;
             this.filesListView.Name = "filesListView";
             this.filesListView.ShowItemToolTips = true;
             this.filesListView.SmallImageList = this.fileIconImageList;
@@ -902,6 +905,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader29});
             resources.ApplyResources(this.peersListView, "peersListView");
             this.peersListView.FullRowSelect = true;
+            this.peersListView.HideSelection = false;
             this.peersListView.Name = "peersListView";
             this.peersListView.ShowItemToolTips = true;
             this.peersListView.UseCompatibleStateImageBehavior = false;

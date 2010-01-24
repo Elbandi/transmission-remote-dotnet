@@ -56,6 +56,22 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void DownloadHandler(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                item.Checked = true;
+            }
+        }
+
+        private void SkipHandler(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                item.Checked = false;
+            }
+        }
+
         public TorrentLoadDialog(string path)
         {
             InitializeComponent();
@@ -65,6 +81,9 @@ namespace TransmissionRemoteDotnet
             this.noTorrentSelectionMenu = new ContextMenu();
             noTorrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
             this.torrentSelectionMenu = this.listView1.ContextMenu = new ContextMenu();
+            torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Download, new EventHandler(this.DownloadHandler)));
+            torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Skip, new EventHandler(this.SkipHandler)));
+            torrentSelectionMenu.MenuItems.Add(new MenuItem("-"));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.HighPriority, new EventHandler(this.HighPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.NormalPriority, new EventHandler(this.NormalPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.LowPriority, new EventHandler(this.LowPriorityHandler)));
