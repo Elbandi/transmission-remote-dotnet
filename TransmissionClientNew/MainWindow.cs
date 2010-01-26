@@ -561,7 +561,7 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
-            connectButton.Visible = connectToolStripMenuItem.Enabled
+            connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
@@ -993,6 +993,7 @@ namespace TransmissionRemoteDotnet
             {
                 if (Program.Connected)
                     Program.Connected = false;
+                connectButton.Enabled = connectToolStripMenuItem.Enabled = false;
                 toolStripStatusLabel.Text = OtherStrings.Connecting + "...";
                 sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
             }

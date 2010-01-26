@@ -1742,7 +1742,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.GroupBox trackersTorrentNameGroupBox;
         private System.Windows.Forms.GroupBox filesTorrentNameGroupBox;
         private System.Windows.Forms.GroupBox peersTorrentNameGroupBox;
-        private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disconnectToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator fileMenuToolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem projectSiteToolStripMenuItem;
