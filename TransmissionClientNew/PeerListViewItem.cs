@@ -15,7 +15,6 @@ namespace TransmissionRemoteDotnet
     {
         public static int CurrentUpdateSerial = 0;
 
-
         public void Update(JsonObject peerObj)
         {
             this.FlagStr = (string)peerObj[ProtocolConstants.FIELD_FLAGSTR];
@@ -77,12 +76,18 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void SetText(int idx, string str)
+        {
+            if (!str.Equals(base.SubItems[idx].Text))
+                base.SubItems[idx].Text = str;
+        }
+
         public string Hostname
         {
             get { return base.SubItems[1].Text; }
             set
             {
-                base.SubItems[1].Text = base.ToolTipText = value;
+                SetText(1, base.ToolTipText = value);
             }
         }
 
@@ -113,7 +118,7 @@ namespace TransmissionRemoteDotnet
             get { return (decimal)base.SubItems[5].Tag; }
             set
             {
-                base.SubItems[5].Text = value + "%";
+                SetText(5, value + "%");
                 base.SubItems[5].Tag = value;
             }
         }
@@ -123,7 +128,7 @@ namespace TransmissionRemoteDotnet
             get { return (long)base.SubItems[7].Tag; }
             set
             {
-                base.SubItems[7].Text = Toolbox.GetSpeed(value);
+                SetText(7, Toolbox.GetSpeed(value));
                 base.SubItems[7].Tag = value;
             }
         }
@@ -133,7 +138,7 @@ namespace TransmissionRemoteDotnet
             get { return (long)base.SubItems[6].Tag; }
             set
             {
-                base.SubItems[6].Text = Toolbox.GetSpeed(value);
+                SetText(6, Toolbox.GetSpeed(value));
                 base.SubItems[6].Tag = value;
             }
         }
@@ -141,19 +146,19 @@ namespace TransmissionRemoteDotnet
         public string Country
         {
             get { return base.SubItems[2].Text; }
-            set { base.SubItems[2].Text = value; }
+            set { SetText(2, value); }
         }
 
         public string FlagStr
         {
             get { return base.SubItems[3].Text; }
-            set { base.SubItems[3].Text = value; }
+            set { SetText(3, value); }
         }
 
         public string ClientName
         {
             get { return base.SubItems[4].Text; }
-            set { base.SubItems[4].Text = value; }
+            set { SetText(4, value); }
         }
     }
 }

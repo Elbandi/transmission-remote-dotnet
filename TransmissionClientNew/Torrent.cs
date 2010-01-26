@@ -65,33 +65,44 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        private void SetText(int idx, string str)
+        {
+            if (!str.Equals(base.SubItems[idx].Text))
+                base.SubItems[idx].Text = str;
+        }
+
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
             base.SubItems[1].Tag = this.SizeWhenDone;
-            base.SubItems[1].Text = Toolbox.GetFileSize(this.SizeWhenDone);
+            SetText(1, Toolbox.GetFileSize(this.SizeWhenDone));
             base.SubItems[2].Tag = this.Percentage;
-            base.SubItems[2].Text = this.Percentage + "%";
-            base.SubItems[3].Text = this.Status;
-            SetSeedersAndLeechersColumns();
+            SetText(2, this.Percentage + "%");
+            SetText(3, this.Status);
+            SetText(4, string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs));
+            this.SubItems[4].Tag = this.Seeders;
+            SetText(5, string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs));
+            this.SubItems[5].Tag = this.Leechers;
             base.SubItems[6].Tag = this.DownloadRate;
-            base.SubItems[6].Text = this.DownloadRate > 0 ? Toolbox.GetSpeed(this.DownloadRate) : "";
+            SetText(6, this.DownloadRate > 0 ? Toolbox.GetSpeed(this.DownloadRate) : "");
             base.SubItems[7].Tag = this.UploadRate;
-            base.SubItems[7].Text = this.UploadRate > 0 ? Toolbox.GetSpeed(this.UploadRate) : "";
-            base.SubItems[8].Text = this.Eta > 0 ? TimeSpan.FromSeconds(this.Eta).ToString() : "";
+            SetText(7, this.UploadRate > 0 ? Toolbox.GetSpeed(this.UploadRate) : "");
+            SetText(8, this.Eta > 0 ? TimeSpan.FromSeconds(this.Eta).ToString() : "");
             base.SubItems[8].Tag = this.Eta;
             base.SubItems[9].Tag = this.Uploaded;
-            base.SubItems[9].Text = Toolbox.GetFileSize(this.Uploaded);
+            SetText(9, Toolbox.GetFileSize(this.Uploaded));
             base.SubItems[10].Tag = this.LocalRatio;
-            base.SubItems[10].Text = this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString();
+            SetText(10, this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString());
             base.SubItems[11].Tag = this.Added;
-            base.SubItems[11].Text = this.Added.ToString();
+            SetText(11, this.Added.ToString());
+            SetText(13, this.FirstTrackerTrimmed);
+
             if (first)
             {
                 if (this.DoneDate != null)
                 {
                     base.SubItems[12].Tag = this.DoneDate;
-                    base.SubItems[12].Text = this.DoneDate.ToString();
+                    SetText(12, this.DoneDate.ToString());
                 }
                 lock (form.stateListBox)
                 {
@@ -146,7 +157,7 @@ namespace TransmissionRemoteDotnet
             }
 
             this.PieceCount = Toolbox.ToInt(info[ProtocolConstants.FIELD_PIECECOUNT]);
-            
+
             long leftUntilDone = Toolbox.ToLong(info[ProtocolConstants.FIELD_LEFTUNTILDONE]);
             short statusCode = Toolbox.ToShort(info[ProtocolConstants.FIELD_STATUS]);
             string errorString = (string)info[ProtocolConstants.FIELD_ERRORSTRING];
@@ -195,14 +206,6 @@ namespace TransmissionRemoteDotnet
         {
             get;
             set;
-        }
-
-        private void SetSeedersAndLeechersColumns()
-        {
-            this.SubItems[4].Text = string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs);
-            this.SubItems[4].Tag = this.Seeders;
-            this.SubItems[5].Text = string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs);
-            this.SubItems[5].Tag = this.Leechers;
         }
 
         public string TorrentName
@@ -322,14 +325,8 @@ namespace TransmissionRemoteDotnet
 
         public string FirstTrackerTrimmed
         {
-            get
-            {
-                return base.SubItems[13].Text;
-            }
-            set
-            {
-                base.SubItems[13].Text = value;
-            }
+            get;
+            set;
         }
 
         FileItemCollection files = new FileItemCollection();

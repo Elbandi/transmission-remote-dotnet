@@ -15,6 +15,12 @@ namespace TransmissionRemoteDotnet
             set;
         }
 
+        private void SetText(int idx, string str)
+        {
+            if (!str.Equals(base.SubItems[idx].Text))
+                base.SubItems[idx].Text = str;
+        }
+
         private string _extension;
         public string Extension
         {
@@ -28,10 +34,7 @@ namespace TransmissionRemoteDotnet
         public string TypeName
         {
             get { return base.SubItems[1].Text; }
-            set
-            {
-                base.SubItems[1].Text = value;
-            }
+            set { SetText(1, value); }
         }
 
         public long FileSize
@@ -40,7 +43,7 @@ namespace TransmissionRemoteDotnet
             set
             {
                 base.SubItems[2].Tag = value;
-                base.SubItems[2].Text = Toolbox.GetFileSize(value);
+                SetText(2, Toolbox.GetFileSize(value));
             }
         }
 
@@ -50,9 +53,9 @@ namespace TransmissionRemoteDotnet
             set
             {
                 base.SubItems[3].Tag = value;
-                base.SubItems[3].Text = Toolbox.GetFileSize(value);
+                SetText(3, Toolbox.GetFileSize(value));
                 base.SubItems[4].Tag = Toolbox.CalcPercentage(value, this.FileSize);
-                base.SubItems[4].Text = this.Progress + "%";
+                SetText(4, this.Progress + "%");
             }
         }
 
@@ -63,7 +66,7 @@ namespace TransmissionRemoteDotnet
             set
             {
                 this._wanted = value;
-                base.SubItems[5].Text = value ? OtherStrings.No : OtherStrings.Yes;
+                SetText(5, value ? OtherStrings.No : OtherStrings.Yes);
             }
         }
 
@@ -74,7 +77,7 @@ namespace TransmissionRemoteDotnet
             set
             {
                 this._priority = value;
-                base.SubItems[6].Text = Toolbox.FormatPriority(value);
+                SetText(6, Toolbox.FormatPriority(value));
             }
         }
 
@@ -84,7 +87,7 @@ namespace TransmissionRemoteDotnet
             set
             {
                 base.SubItems[4].Tag = value;
-                base.SubItems[4].Text = value + "%";
+                SetText(4, value + "%");
             }
         }
 
