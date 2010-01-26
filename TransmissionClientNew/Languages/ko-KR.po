@@ -1489,6 +1489,11 @@ msgstr "5 초|10 초|30 초|5 분"
 msgid "This torrent is now complete"
 msgstr "토런트가 완료되었습니다."
 
+#: OtherStrings~TorrentFinished
+#, csharp-format
+msgid "This torrent has finished downloading."
+msgstr ""
+
 #: OtherStrings~Torrents
 #, csharp-format
 msgid "Torrents"

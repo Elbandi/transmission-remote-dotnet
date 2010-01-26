@@ -1489,6 +1489,11 @@ msgstr ""
 msgid "This torrent is now complete"
 msgstr "Este torrent ha terminado de descargarse"
 
+#: OtherStrings~TorrentFinished
+#, csharp-format
+msgid "This torrent has finished downloading."
+msgstr ""
+
 #: OtherStrings~Torrents
 #, csharp-format
 msgid "Torrents"

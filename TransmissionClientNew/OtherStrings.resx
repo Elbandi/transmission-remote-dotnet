@@ -489,4 +489,7 @@
   <data name="ConfirmSingleRecheck" xml:space="preserve">
     <value>Do you want to recheck {0}? It may take a long time.</value>
   </data>
+  <data name="TorrentFinished" xml:space="preserve">
+    <value>This torrent has finished downloading.</value>
+  </data>
 </root>

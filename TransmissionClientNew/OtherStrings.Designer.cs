@@ -988,6 +988,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This torrent has finished downloading..
+        /// </summary>
+        internal static string TorrentFinished {
+            get {
+                return ResourceManager.GetString("TorrentFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Torrents.
         /// </summary>
         internal static string Torrents {

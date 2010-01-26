@@ -1508,6 +1508,11 @@ msgstr "5 Sekunden|10 Sekunden|30 Sekunden|5 Minuten"
 msgid "This torrent is now complete"
 msgstr "Dieser Torrent ist fertig heruntergeladen"
 
+#: OtherStrings~TorrentFinished
+#, csharp-format
+msgid "This torrent has finished downloading."
+msgstr ""
+
 #: OtherStrings~Torrents
 #, csharp-format
 msgid "Torrents"

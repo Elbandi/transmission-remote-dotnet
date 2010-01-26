@@ -119,7 +119,7 @@ namespace TransmissionRemoteDotnet
             }
             else if (this.CompletionPopupPending && form.notifyIcon.Visible)
             {
-                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, "This torrent has finished downloading.", ToolTipIcon.Info);
+                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
             }
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
             UpdateIcon();
