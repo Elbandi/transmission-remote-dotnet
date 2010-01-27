@@ -119,6 +119,7 @@ namespace TransmissionRemoteDotnet
             this.uploadLimitItems = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MappingHelpButton = new TransmissionRemoteDotnet.CustomControls.USButton();
             this.label11 = new System.Windows.Forms.Label();
             this.AddShareButton = new System.Windows.Forms.Button();
             this.UnixPathPrefixTextBox = new System.Windows.Forms.TextBox();
@@ -133,6 +134,11 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabSkinSettings = new System.Windows.Forms.TabPage();
+            this.toolbarImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
+            this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
+            this.infopanelImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
+            this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -153,6 +159,7 @@ namespace TransmissionRemoteDotnet
             this.tabPage7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ServersMenuStrip.SuspendLayout();
+            this.tabSkinSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -187,6 +194,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.tabSettings.Controls.Add(this.tabGlobalSettings);
             this.tabSettings.Controls.Add(this.tabServersSettings);
+            this.tabSettings.Controls.Add(this.tabSkinSettings);
             resources.ApplyResources(this.tabSettings, "tabSettings");
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.SelectedIndex = 0;
@@ -699,6 +707,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.MappingHelpButton);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.AddShareButton);
             this.groupBox1.Controls.Add(this.UnixPathPrefixTextBox);
@@ -707,6 +716,16 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // MappingHelpButton
+            // 
+            this.MappingHelpButton.BackgroundImage = global::TransmissionRemoteDotnet.Properties.Resources.help14;
+            resources.ApplyResources(this.MappingHelpButton, "MappingHelpButton");
+            this.MappingHelpButton.Name = "MappingHelpButton";
+            this.MappingHelpButton.TabStop = false;
+            this.MappingHelpButton.UseMnemonic = false;
+            this.MappingHelpButton.UseVisualStyleBackColor = false;
+            this.MappingHelpButton.Click += new System.EventHandler(this.MappingHelpButton_Click);
             // 
             // label11
             // 
@@ -771,7 +790,7 @@ namespace TransmissionRemoteDotnet
             this.listServers.UseCompatibleStateImageBehavior = false;
             this.listServers.View = System.Windows.Forms.View.Details;
             this.listServers.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listServers_AfterLabelEdit);
-            this.listServers.SelectedIndexChanged += new System.EventHandler(this.listServers_SelectedIndexChanged);
+            this.listServers.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listServers_ItemSelectionChanged);
             // 
             // columnName
             // 
@@ -795,17 +814,65 @@ namespace TransmissionRemoteDotnet
             // 
             // addServerToolStripMenuItem
             // 
-            this.addServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources._16x16_add;
+            this.addServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
             this.addServerToolStripMenuItem.Name = "addServerToolStripMenuItem";
             resources.ApplyResources(this.addServerToolStripMenuItem, "addServerToolStripMenuItem");
             this.addServerToolStripMenuItem.Click += new System.EventHandler(this.addServerToolStripMenuItem_Click);
             // 
             // removeServerToolStripMenuItem
             // 
-            this.removeServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources._16x16_remove;
+            this.removeServerToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
             this.removeServerToolStripMenuItem.Name = "removeServerToolStripMenuItem";
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
+            // 
+            // tabSkinSettings
+            // 
+            this.tabSkinSettings.Controls.Add(this.toolbarImageBrowse);
+            this.tabSkinSettings.Controls.Add(this.stateImageBrowse);
+            this.tabSkinSettings.Controls.Add(this.infopanelImageBrowse);
+            resources.ApplyResources(this.tabSkinSettings, "tabSkinSettings");
+            this.tabSkinSettings.Name = "tabSkinSettings";
+            this.tabSkinSettings.UseVisualStyleBackColor = true;
+            // 
+            // toolbarImageBrowse
+            // 
+            this.toolbarImageBrowse.FileName = "";
+            this.toolbarImageBrowse.ImageNumber = 0;
+            resources.ApplyResources(this.toolbarImageBrowse, "toolbarImageBrowse");
+            this.toolbarImageBrowse.MaxHeight = 32;
+            this.toolbarImageBrowse.MinHeight = 16;
+            this.toolbarImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.toolbarImageBrowse.Name = "toolbarImageBrowse";
+            this.toolbarImageBrowse.Title = "Toolbar Images";
+            // 
+            // stateImageBrowse
+            // 
+            this.stateImageBrowse.FileName = "";
+            this.stateImageBrowse.ImageNumber = 0;
+            resources.ApplyResources(this.stateImageBrowse, "stateImageBrowse");
+            this.stateImageBrowse.MaxHeight = 16;
+            this.stateImageBrowse.MinHeight = 16;
+            this.stateImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.stateImageBrowse.Name = "stateImageBrowse";
+            this.stateImageBrowse.Title = "State Images";
+            // 
+            // infopanelImageBrowse
+            // 
+            this.infopanelImageBrowse.FileName = "";
+            this.infopanelImageBrowse.ImageNumber = 0;
+            resources.ApplyResources(this.infopanelImageBrowse, "infopanelImageBrowse");
+            this.infopanelImageBrowse.MaxHeight = 16;
+            this.infopanelImageBrowse.MinHeight = 16;
+            this.infopanelImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.infopanelImageBrowse.Name = "infopanelImageBrowse";
+            this.infopanelImageBrowse.Title = "Torrent Infopanel Images";
+            // 
+            // openImageFileDialog
+            // 
+            this.openImageFileDialog.DefaultExt = "*.png";
+            this.openImageFileDialog.FileName = "openFileDialog1";
+            resources.ApplyResources(this.openImageFileDialog, "openImageFileDialog");
             // 
             // LocalSettingsDialog
             // 
@@ -821,6 +888,7 @@ namespace TransmissionRemoteDotnet
             this.MaximizeBox = false;
             this.Name = "LocalSettingsDialog";
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.LocalSettingsDialog_Load);
             this.tabSettings.ResumeLayout(false);
             this.tabGlobalSettings.ResumeLayout(false);
             this.groupAutoConnect.ResumeLayout(false);
@@ -849,6 +917,7 @@ namespace TransmissionRemoteDotnet
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ServersMenuStrip.ResumeLayout(false);
+            this.tabSkinSettings.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -941,5 +1010,11 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox ClearProxyPasswordCheckBox;
         private System.Windows.Forms.TextBox customPathTextBox;
         private System.Windows.Forms.Label label12;
+        private TransmissionRemoteDotnet.CustomControls.USButton MappingHelpButton;
+        private System.Windows.Forms.TabPage tabSkinSettings;
+        private System.Windows.Forms.OpenFileDialog openImageFileDialog;
+        private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox stateImageBrowse;
+        private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox infopanelImageBrowse;
+        private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox toolbarImageBrowse;
     }
 }

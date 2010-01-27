@@ -75,7 +75,7 @@ namespace TransmissionRemoteDotnet
             try
             {
                 JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
-                downloadToField.Text = (string)session["download-dir"];
+                downloadToField.Text = (string)session[ProtocolConstants.DOWNLOAD_DIR];
                 limitDownloadValue.Enabled = limitDownloadCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED]);
                 SetLimitField(limitDownloadValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_SPEEDLIMITDOWN]));
                 limitUploadValue.Enabled = limitUploadCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_SPEEDLIMITUPENABLED]);
@@ -247,7 +247,7 @@ namespace TransmissionRemoteDotnet
             {
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
             }
-            arguments.Put(ProtocolConstants.FIELD_DOWNLOADDIR, downloadToField.Text);
+            arguments.Put(ProtocolConstants.DOWNLOAD_DIR, downloadToField.Text);
             CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
             CloseAndDispose();
         }

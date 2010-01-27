@@ -22,8 +22,8 @@ namespace TransmissionRemoteDotnet
             }
             else if (selections.Count == 1)
             {
-                Torrent t = (Torrent)selections[0].Tag;
-                this.Text = String.Format(OtherStrings.MoveX, t.Name);
+                Torrent t = (Torrent)selections[0];
+                this.Text = String.Format(OtherStrings.MoveX, t.Text);
             }
             else
             {

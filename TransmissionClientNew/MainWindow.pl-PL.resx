@@ -111,6 +111,21 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader33.Text" xml:space="preserve">
+    <value>Update In</value>
+  </data>
+  <data name="columnHeader34.Text" xml:space="preserve">
+    <value>Seedów</value>
+  </data>
+  <data name="columnHeader35.Text" xml:space="preserve">
+    <value>Pobierających</value>
+  </data>
+  <data name="columnHeader36.Text" xml:space="preserve">
+    <value>Downloaded</value>
+  </data>
+  <data name="locationLabelLabel.Text" xml:space="preserve">
+    <value>Położenie:</value>
+  </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
     <value>Alternatywna prędkość</value>
   </data>
@@ -241,7 +256,7 @@
     <value>Adres announce</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Adres scrape</value>
+    <value>Status</value>
   </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
     <value>Trackery</value>
@@ -430,13 +445,10 @@
     <value>Aktualizuj tracker</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zmień folder docelowy torrenta</value>
+    <value>Zmień folder docelowy</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Otwórz folder sieciowy</value>
-  </data>
-  <data name="copyInfoObjectToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kopiuj info o torrencie</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Kopiuj do CSV</value>

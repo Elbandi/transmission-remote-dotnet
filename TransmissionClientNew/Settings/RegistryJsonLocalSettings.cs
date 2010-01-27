@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using Microsoft.Win32;
 using Jayrock.Json;
@@ -20,7 +19,7 @@ namespace TransmissionRemoteDotnet.Settings
         protected RegistryKey GetKey(RegistryKey root, string subkey, bool writeable)
         {
             RegistryKey key = root.OpenSubKey(subkey, writeable);
-            if (key == null)
+            if (key == null && writeable)
                 key = root.CreateSubKey(subkey);
             return key;
         }

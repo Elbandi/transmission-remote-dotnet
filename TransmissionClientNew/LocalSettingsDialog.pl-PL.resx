@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label12.Text" xml:space="preserve">
+    <value>Niestandardowa ścieżka RPC:</value>
+  </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
     <value>Wyczyść hasło przy zapisywaniu</value>
   </data>
@@ -151,7 +154,7 @@
     <value>plink.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
-    <value>Powiadom o udostepnianiu</value>
+    <value>Powiadom o udostępnianiu</value>
   </data>
   <data name="groupBehavior.Text" xml:space="preserve">
     <value>Zachowanie</value>
@@ -160,7 +163,7 @@
     <value>Ogólne</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
-    <value>Zapisz Serwer</value>
+    <value>Zapisz serwer</value>
   </data>
   <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
     <value>Wyświetl przycisk zdalnych poleceń</value>
@@ -187,7 +190,7 @@
     <value>Usuń serwer</value>
   </data>
   <data name="tabServersSettings.Text" xml:space="preserve">
-    <value>Ustawienia serwera</value>
+    <value>Serwera</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
     <value>Sprawdź wersję przy uruchamianiu</value>

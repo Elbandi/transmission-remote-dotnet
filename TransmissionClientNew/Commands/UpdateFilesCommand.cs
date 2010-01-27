@@ -27,8 +27,7 @@ namespace TransmissionRemoteDotnet.Commmands
 {
     public class UpdateFilesCommand : ICommand
     {
-        private bool first;
-        private FileListViewItem[] newItems;
+        public delegate Torrent GetTorrentDelegate();
 
         public UpdateFilesCommand(JsonObject response)
         {
@@ -42,7 +41,55 @@ namespace TransmissionRemoteDotnet.Commmands
                 return;
             }
             JsonObject torrent = (JsonObject)torrents[0];
+            JsonArray files = (JsonArray)torrent[ProtocolConstants.FIELD_FILES];
+            if (files == null)
+            {
+                return;
+            }
             int id = Toolbox.ToInt(torrent[ProtocolConstants.FIELD_ID]);
+            Torrent t = (Torrent)form.Invoke(new GetTorrentDelegate(delegate()
+            {
+                lock (Program.TorrentIndex)
+                {
+                    foreach (KeyValuePair<string, Torrent> st in Program.TorrentIndex)
+                    {
+                        if (st.Value.Id == id)
+                            return st.Value;
+                    }
+                }
+                return null;
+            }));
+            if (t == null)
+            {
+                return;
+            }
+            JsonArray priorities = (JsonArray)torrent[ProtocolConstants.FIELD_PRIORITIES];
+            JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
+            bool havepriority = (priorities != null && wanted != null);
+            ImageList imgList = Program.Form.fileIconImageList;
+            for (int i = 0; i < files.Length; i++)
+            {
+                JsonObject file = (JsonObject)files[i];
+                string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
+                FileListViewItem item = t.Files.Find(name);
+                if (item == null)
+                {
+                    item = new FileListViewItem(file, imgList, i, wanted, priorities);
+                    t.Files.Add(item);
+                }
+                else
+                {
+                    Program.Form.Invoke(new MethodInvoker(delegate()
+                    {
+                        item.Update(file, wanted, priorities);
+                    }));
+                }
+            }
+        }
+
+        public void Execute()
+        {
+            MainWindow form = Program.Form;
             Torrent t = null;
             form.Invoke(new MethodInvoker(delegate()
             {
@@ -55,67 +102,9 @@ namespace TransmissionRemoteDotnet.Commmands
                     }
                 }
             }));
-            if (t == null || t.Id != id)
-            {
+            if (t == null)
                 return;
-            }
-            JsonArray files = (JsonArray)torrent[ProtocolConstants.FIELD_FILES];
-            if (files == null)
-            {
-                return;
-            }
-            JsonArray priorities = (JsonArray)torrent[ProtocolConstants.FIELD_PRIORITIES];
-            JsonArray wanted = (JsonArray)torrent[ProtocolConstants.FIELD_WANTED];
-            first = form.filesListView.Items.Count == 0;
-            bool havepriority = (priorities != null && wanted != null);
-            ImageList imgList = Program.Form.fileIconImageList;
-            if (first)
-                newItems = new FileListViewItem[files.Length];
-            for (int i = 0; i < files.Length; i++)
-            {
-                JsonObject file = (JsonObject)files[i];
-                long bytesCompleted = Toolbox.ToLong(file[ProtocolConstants.FIELD_BYTESCOMPLETED]);
-                long length = Toolbox.ToLong(file[ProtocolConstants.FIELD_LENGTH]);
-                if (first)
-                {
-                    FileListViewItem fileItem = new FileListViewItem(file, imgList, i, wanted, priorities);
-                    newItems[i] = fileItem;
-                }
-                else
-                {
-                    Program.Form.Invoke(new MethodInvoker(delegate(){
-                        string name = Toolbox.TrimPath((string)file[ProtocolConstants.FIELD_NAME]);
-                        if (form.filesListView.Items.ContainsKey(name))
-                        {
-                            FileListViewItem item = (FileListViewItem)form.filesListView.Items[name];
-                            item.Update(file, wanted, priorities);
-                        }
-                    }));
-                }
-            }
-        }
-
-        public void Execute()
-        {
-            MainWindow form = Program.Form;
-            lock (form.filesListView)
-            {
-                form.filesListView.SuspendLayout();
-                IComparer tmp = form.filesListView.ListViewItemSorter;
-                form.filesListView.ListViewItemSorter = null;
-                if (first)
-                {
-                    form.filesListView.Enabled = true;
-                    foreach (FileListViewItem item in newItems)
-                    {
-                        form.filesListView.Items.Add(item);
-                    }
-                }
-                form.filesListView.ListViewItemSorter = tmp;
-                form.filesListView.Sort();
-                Toolbox.StripeListView(form.filesListView);
-                form.filesListView.ResumeLayout();
-            }
+            form.FillfilesListView(t);
             form.filesTimer.Enabled = true;
         }
     }

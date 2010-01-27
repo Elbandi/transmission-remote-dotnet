@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Jayrock.Json;
 using Jayrock.Json.Conversion;
@@ -15,7 +14,7 @@ namespace TransmissionRemoteDotnet.Settings
         /*
          * Modify this in MONO to right settings storage
          */
-        public ILocalSettingsStore DefaultLocalStore = new RegistryLocalSettingsStore();
+        public ILocalSettingsStore DefaultLocalStore;
         public bool CompletedBaloon = true;
         public bool MinOnClose = false;
         public bool MinToTray = false;
@@ -24,6 +23,9 @@ namespace TransmissionRemoteDotnet.Settings
         public int DefaultDoubleClickAction = 0;
         public bool StartedBalloon = true;
         private bool dontsavepasswords = false;
+        public string StateImagePath = "";
+        public string InfopanelImagePath = "";
+        public string ToolbarImagePath = "";
         public string Locale = "en-GB";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
@@ -57,8 +59,10 @@ namespace TransmissionRemoteDotnet.Settings
         {
             get
             {
-                TransmissionServer ts = Servers[CurrentProfile];
-                if (ts == null)
+                TransmissionServer ts;
+                if (Servers.ContainsKey(CurrentProfile))
+                    ts = Servers[CurrentProfile];
+                else
                     ts = new TransmissionServer();
                 return ts;
             }
@@ -81,6 +85,9 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_LOCALE, Locale);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKPATH, PlinkPath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPLOADPROMPT, UploadPrompt);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TABIMAGE, InfopanelImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_STATEIMAGE, StateImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TOOLBARIMAGE, ToolbarImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
             JsonObject ja = new JsonObject();
@@ -106,6 +113,9 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
             Toolbox.JsonGet(ref DefaultDoubleClickAction, o[SettingsKey.REGKEY_DEFAULTACTION]);
+            Toolbox.JsonGet(ref StateImagePath, o[SettingsKey.REGKEY_STATEIMAGE]);
+            Toolbox.JsonGet(ref InfopanelImagePath, o[SettingsKey.REGKEY_TABIMAGE]);
+            Toolbox.JsonGet(ref ToolbarImagePath, o[SettingsKey.REGKEY_TOOLBARIMAGE]);
             Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
@@ -135,8 +145,13 @@ namespace TransmissionRemoteDotnet.Settings
         }
         public LocalSettings()
         {
+#if PORTABLE
+            DefaultLocalStore = new FileLocalSettingsStore();
+#else
+            DefaultLocalStore = new RegistryLocalSettingsStore();
+#endif
         }
-        public LocalSettings(JsonObject o)
+        public LocalSettings(JsonObject o) : this()
         {
             LoadFromJson(o);
         }
@@ -158,19 +173,19 @@ namespace TransmissionRemoteDotnet.Settings
 
         public void Commit()
         {
-            //            Program.Form.refreshTimer.Interval = RefreshRate * 1000;
-            //            Program.Form.filesTimer.Interval = RefreshRate * 1000 * FILES_REFRESH_MULTIPLICANT;
             if (!DefaultLocalStore.Save(this.SaveToJson()))
-                MessageBox.Show("Error writing settings to registry", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to save settings", OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static LocalSettings TryLoad()
         {
             LocalSettings newsettings = null;
             ILocalSettingsStore[] SettingsSource = new ILocalSettingsStore[] { 
+#if !PORTABLE
                 new RegistryLocalSettingsStore(), 
                 new RegistryJsonLocalSettingsStore(), 
-                new FileLocalSettings() 
+#endif
+                new FileLocalSettingsStore() 
             };
             foreach (ILocalSettingsStore ls in SettingsSource)
             {
@@ -178,67 +193,78 @@ namespace TransmissionRemoteDotnet.Settings
                 {
                     JsonObject jo = ls.Load();
                     newsettings = new LocalSettings(jo);
+                    newsettings.DefaultLocalStore = ls;
                     break;
                 }
                 catch { };
             }
             if (newsettings == null)
             { // not load from any source :(, try old mode
-                LocalSettingsSingleton oldsettings = LocalSettingsSingleton.OneInstance();
-                newsettings = new LocalSettings();
-                newsettings.Locale = oldsettings.Locale;
-                newsettings.CompletedBaloon = oldsettings.CompletedBaloon;
-                newsettings.MinOnClose = oldsettings.MinOnClose;
-                newsettings.MinToTray = oldsettings.MinToTray;
-                newsettings.PlinkPath = oldsettings.PlinkPath;
-                newsettings.StartedBalloon = oldsettings.StartedBalloon;
-                newsettings.UploadPrompt = oldsettings.UploadPrompt;
-                newsettings.AutoCheckupdate = oldsettings.AutoCheckupdate;
-                string origcurrentprofile = oldsettings.CurrentProfile;
-                foreach (string p in oldsettings.Profiles)
+                try
                 {
-                    oldsettings.CurrentProfile = p;
-                    TransmissionServer ts = new TransmissionServer();
-                    ts.CustomPath = oldsettings.CustomPath;
-                    ts.DownLimit = oldsettings.DownLimit;
-                    ts.UpLimit = oldsettings.UpLimit;
-                    ts.Host = oldsettings.Host;
-                    ts.Password = oldsettings.Pass;
-                    ts.PlinkCmd = oldsettings.PlinkCmd;
-                    ts.PlinkEnable = oldsettings.PlinkEnable;
-                    ts.Port = oldsettings.Port;
-                    ts.RefreshRate = oldsettings.RefreshRate;
-                    ts.StartPaused = oldsettings.StartPaused;
-                    ts.Username = oldsettings.User;
-                    ts.UseSSL = oldsettings.UseSSL;
-                    JsonObject mappings = oldsettings.SambaShareMappings;
-                    foreach (string key in mappings.Names)
+                    LocalSettings tempsettings = new LocalSettings();
+#if !PORTABLE
+                    LocalSettingsSingleton oldsettings = LocalSettingsSingleton.OneInstance();
+                    tempsettings.Locale = oldsettings.Locale;
+                    tempsettings.CompletedBaloon = oldsettings.CompletedBaloon;
+                    tempsettings.MinOnClose = oldsettings.MinOnClose;
+                    tempsettings.MinToTray = oldsettings.MinToTray;
+                    tempsettings.PlinkPath = oldsettings.PlinkPath;
+                    tempsettings.StartedBalloon = oldsettings.StartedBalloon;
+                    tempsettings.UploadPrompt = oldsettings.UploadPrompt;
+                    tempsettings.AutoCheckupdate = oldsettings.AutoCheckupdate;
+                    string origcurrentprofile = oldsettings.CurrentProfile;
+                    foreach (string p in oldsettings.Profiles)
                     {
-                        ts.SambaShareMappings.Add(key, (string)mappings[key]);
+                        oldsettings.CurrentProfile = p;
+                        TransmissionServer ts = new TransmissionServer();
+                        ts.CustomPath = oldsettings.CustomPath;
+                        ts.DownLimit = oldsettings.DownLimit;
+                        ts.UpLimit = oldsettings.UpLimit;
+                        ts.Host = oldsettings.Host;
+                        ts.Password = oldsettings.Pass;
+                        ts.PlinkCmd = oldsettings.PlinkCmd;
+                        ts.PlinkEnable = oldsettings.PlinkEnable;
+                        ts.Port = oldsettings.Port;
+                        ts.RefreshRate = oldsettings.RefreshRate;
+                        ts.StartPaused = oldsettings.StartPaused;
+                        ts.Username = oldsettings.User;
+                        ts.UseSSL = oldsettings.UseSSL;
+                        JsonObject mappings = oldsettings.SambaShareMappings;
+                        foreach (string key in mappings.Names)
+                        {
+                            ts.SambaShareMappings.Add(key, (string)mappings[key]);
+                        }
+                        ts.destpathhistory.AddRange(oldsettings.DestPathHistory);
+                        ProxyServer ps = new ProxyServer();
+                        ps.Host = oldsettings.ProxyHost;
+                        ps.Password = oldsettings.ProxyPass;
+                        ps.Port = oldsettings.ProxyPort;
+                        ps.Username = oldsettings.ProxyUser;
+                        ps.ProxyMode = (ProxyMode)oldsettings.ProxyMode;
+                        ts.Proxy = ps;
+                        tempsettings.Servers.Add(p, ts);
+                        if (origcurrentprofile.Equals(p))
+                            tempsettings.CurrentProfile = p;
                     }
-                    ts.destpathhistory.AddRange(oldsettings.DestPathHistory);
-                    ProxyServer ps = new ProxyServer();
-                    ps.Host = oldsettings.ProxyHost;
-                    ps.Password = oldsettings.ProxyPass;
-                    ps.Port = oldsettings.ProxyPort;
-                    ps.Username = oldsettings.ProxyUser;
-                    ps.ProxyMode = (ProxyMode)oldsettings.ProxyMode;
-                    ts.Proxy = ps;
-                    newsettings.Servers.Add(p, ts);
-                    if (origcurrentprofile.Equals(p))
-                        newsettings.CurrentProfile = p;
+                    if (tempsettings.CurrentProfile.Equals("") && tempsettings.Servers.Count > 0)
+                        tempsettings.CurrentProfile = "aa"; //tempsettings.Servers. . Key;
+                    foreach (string s in oldsettings.ListObject(true))
+                    {
+                        if (s.StartsWith("mainwindow-") || s.StartsWith("listview-"))
+                            tempsettings.Misc[s] = oldsettings.GetObject(s, true);
+                    }
+                    // move old stuff to backup!
+                    //oldsettings.BackupSettings();
+#endif
+                    /* Only use the old settings, if we can read completely */
+                    newsettings = tempsettings;
                 }
-                if (newsettings.CurrentProfile.Equals("") && newsettings.Servers.Count > 0)
-                    newsettings.CurrentProfile = newsettings.Servers.First().Key;
-                foreach (string s in oldsettings.ListObject(true))
+                catch
                 {
-                    if (s.StartsWith("mainwindow-") || s.StartsWith("listview-"))
-                        newsettings.Misc[s] = oldsettings.GetObject(s, true);
-                }
-                // move old stuff to backup!
-                //oldsettings.BackupSettings();
-                if (!newsettings.DefaultLocalStore.Save(newsettings.SaveToJson()))
-                    MessageBox.Show("Failed to save settings");
+                    newsettings = new LocalSettings();
+                };
+                newsettings.Commit();
             }
             return newsettings;
         }
@@ -352,7 +378,11 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
 
             JsonArray ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
-            destpathhistory.AddRange((string[])ja.ToArray(typeof(string)));
+            foreach (string s in ja.ToArray())
+            {
+                if (s.Length > 0)
+                    destpathhistory.Add(s);
+            }
             JsonObject jo = (JsonObject)o[SettingsKey.REGKEY_SAMBASHAREMAPPINGS];
             if (jo != null)
             {
@@ -371,7 +401,8 @@ namespace TransmissionRemoteDotnet.Settings
         {
             Port = 9091;
         }
-        public TransmissionServer(JsonObject o):this()
+        public TransmissionServer(JsonObject o)
+            : this()
         {
             LoadFromJson(o);
         }
@@ -450,7 +481,8 @@ namespace TransmissionRemoteDotnet.Settings
         {
             Port = 8080;
         }
-        public ProxyServer(JsonObject o):this()
+        public ProxyServer(JsonObject o)
+            : this()
         {
             LoadFromJson(o);
         }
@@ -491,6 +523,9 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_MINTOTRAY = "minToTray",
             REGKEY_REFRESHRATE = "refreshRate",
             REGKEY_CURRENTPROFILE = "currentProfile",
+            REGKEY_STATEIMAGE = "stateImage",
+            REGKEY_TABIMAGE = "tabImage",
+            REGKEY_TOOLBARIMAGE = "toolbarImage",
             REGKEY_STARTEDBALLOON = "startedBalloon",
             REGKEY_DONTSAVEPASSWORDS = "dontSavePasswords",
             REGKEY_COMPLETEDBALLOON = "completedBalloon",

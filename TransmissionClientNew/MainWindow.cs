@@ -35,6 +35,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Threading;
 using Jayrock.Json.Conversion;
+using System.Collections;
 
 namespace TransmissionRemoteDotnet
 {
@@ -69,6 +70,7 @@ namespace TransmissionRemoteDotnet
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
         private static FindDialog FindDialog;
+        private List<Bitmap> defaulttoolbarimages, defaultstateimages, defaultinfopanelimages;
 
         public MainWindow()
         {
@@ -81,16 +83,78 @@ namespace TransmissionRemoteDotnet
             Program.OnTorrentsUpdated += new EventHandler(Program_onTorrentsUpdated);
             InitializeComponent();
             CreateTrayContextMenu();
-            tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.folder16);
-            filesTabPage.ImageIndex = 0;
-            tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.peer16);
-            peersTabPage.ImageIndex = 1;
-            tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.server16);
-            trackersTabPage.ImageIndex = 2;
-            tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.pipe16);
-            speedTabPage.ImageIndex = 3;
-            tabControlImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.info16);
-            generalTabPage.ImageIndex = 4;
+            defaultinfopanelimages = new List<Bitmap>();
+            defaultinfopanelimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.info16);
+            generalTabPage.ImageIndex = 0;
+            defaultinfopanelimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.server16);
+            trackersTabPage.ImageIndex = 1;
+            defaultinfopanelimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.peer16);
+            peersTabPage.ImageIndex = 2;
+            defaultinfopanelimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.folder16);
+            filesTabPage.ImageIndex = 3;
+            defaultinfopanelimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.pipe16);
+            speedTabPage.ImageIndex = 4;
+            tabControlImageList.Images.AddRange(defaultinfopanelimages.ToArray());
+            defaultstateimages = new List<Bitmap>();
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.all16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.down16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.pause16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.apply16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.up16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.player_reload16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete16);
+            stateListBoxImageList.Images.AddRange(defaultstateimages.ToArray());
+            stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
+            LocalSettings settings = Program.Settings;
+            /* 
+             * ToolStrips havent got ImageList field in design time.
+             * We set the Image field, we can see the toolstripbuttons.
+             * The ImageList is set in designtime, so ToolStrips will use ImageIndex.
+             */
+            List<ToolStripBitmap> initialimages = new List<ToolStripBitmap>()
+            {
+                new ToolStripBitmap() { Name = "connect", Image = global::TransmissionRemoteDotnet.Properties.Resources.connect, Controls = new ToolStripItem[]{connectButton, connectToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "disconnect", Image = global::TransmissionRemoteDotnet.Properties.Resources.disconnect, Controls = new ToolStripItem[]{disconnectButton, disconnectToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "addtorrent", Image = global::TransmissionRemoteDotnet.Properties.Resources.edit_add, Controls = new ToolStripItem[]{addTorrentButton, addTorrentToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "addtorrentoptions", Image = global::TransmissionRemoteDotnet.Properties.Resources.edit_add, Controls = new ToolStripItem[]{addTorrentWithOptionsToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "addurl", Image = global::TransmissionRemoteDotnet.Properties.Resources.net_add, Controls = new ToolStripItem[]{addWebTorrentButton, addTorrentFromUrlToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "player_play_all", Image = global::TransmissionRemoteDotnet.Properties.Resources.player_play_all, Controls = new ToolStripItem[]{startTorrentButton, startAllToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "player_pause_all", Image = global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all, Controls = new ToolStripItem[]{pauseTorrentButton, stopAllToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "player_play", Image = global::TransmissionRemoteDotnet.Properties.Resources.player_play, Controls = new ToolStripItem[]{startToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "player_pause", Image = global::TransmissionRemoteDotnet.Properties.Resources.player_pause, Controls = new ToolStripItem[]{pauseToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "player_reload", Image = global::TransmissionRemoteDotnet.Properties.Resources.player_reload, Controls = new ToolStripItem[]{recheckTorrentButton, recheckToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "properties", Image = global::TransmissionRemoteDotnet.Properties.Resources.properties, Controls = new ToolStripItem[]{configureTorrentButton, propertiesToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "remove", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove, Controls = new ToolStripItem[]{removeTorrentButton, removeToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "remove_and_delete", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove_and_delete, Controls = new ToolStripItem[]{removeAndDeleteButton, removeDeleteToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "reannounce", Image = global::TransmissionRemoteDotnet.Properties.Resources.reannounce, Controls = new ToolStripItem[]{reannounceButton, reannounceToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "samba", Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "openterm", Image = global::TransmissionRemoteDotnet.Properties.Resources.openterm, Controls = new ToolStripItem[]{remoteCmdButton} },
+                new ToolStripBitmap() { Name = "altspeed_on", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on, Controls = new ToolStripItem[]{} },
+                new ToolStripBitmap() { Name = "altspeed_off", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off, Controls = new ToolStripItem[]{AltSpeedButton} },
+                new ToolStripBitmap() { Name = "configure", Image = global::TransmissionRemoteDotnet.Properties.Resources.configure, Controls = new ToolStripItem[]{localConfigureButton, localSettingsToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "netconfigure", Image = global::TransmissionRemoteDotnet.Properties.Resources.netconfigure, Controls = new ToolStripItem[]{remoteConfigureButton, remoteSettingsToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "hwinfo", Image = global::TransmissionRemoteDotnet.Properties.Resources.hwinfo, Controls = new ToolStripItem[]{sessionStatsButton, statsToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "find", Image = global::TransmissionRemoteDotnet.Properties.Resources.find, Controls = new ToolStripItem[]{findToolStripMenuItem} },
+            };
+            defaulttoolbarimages = new List<Bitmap>();
+            foreach (ToolStripBitmap tsb in initialimages)
+            {
+                defaulttoolbarimages.Add(tsb.Image);
+                toolStripImageList.Images.Add(tsb.Image);
+                int idx = defaulttoolbarimages.IndexOf(tsb.Image);
+                toolStripImageList.Images.SetKeyName(idx, tsb.Name);
+                foreach (ToolStripItem i in tsb.Controls)
+                {
+                    i.ImageIndex = idx;
+                }
+            }
+
+            toolStrip.ImageList = menuStrip.ImageList =
+                fileToolStripMenuItem.DropDown.ImageList = optionsToolStripMenuItem.DropDown.ImageList =
+                torrentToolStripMenuItem.DropDown.ImageList = viewToolStripMenuItem.DropDown.ImageList =
+                helpToolStripMenuItem.DropDown.ImageList = toolStripImageList;
+
             mainVerticalSplitContainer.Panel1Collapsed = true;
             refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
             filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
@@ -104,9 +168,28 @@ namespace TransmissionRemoteDotnet
             RestoreFormProperties();
             CreateProfileMenu();
             //OpenGeoipDatabase();
+            LoadSkins();
             peersListView.SmallImageList = GeoIPCountry.FlagImageList;
             PopulateLanguagesMenu();
             OneTorrentsSelected(false, null);
+        }
+
+        public void LoadSkins()
+        {
+            toolStrip.ImageList = menuStrip.ImageList =
+                fileToolStripMenuItem.DropDown.ImageList = optionsToolStripMenuItem.DropDown.ImageList =
+                torrentToolStripMenuItem.DropDown.ImageList = viewToolStripMenuItem.DropDown.ImageList =
+                helpToolStripMenuItem.DropDown.ImageList = null;
+            torrentListView.SmallImageList = stateListBox.ImageList = null;
+            Toolbox.LoadSkinToImagelist(Program.Settings.ToolbarImagePath, 16, 32, toolStripImageList, defaulttoolbarimages);
+            Toolbox.LoadSkinToImagelist(Program.Settings.StateImagePath, 16, 16, stateListBoxImageList, defaultstateimages);
+            Toolbox.LoadSkinToImagelist(Program.Settings.InfopanelImagePath, 16, 16, tabControlImageList, defaultinfopanelimages);
+            stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
+            toolStrip.ImageList = menuStrip.ImageList =
+                fileToolStripMenuItem.DropDown.ImageList = optionsToolStripMenuItem.DropDown.ImageList =
+                torrentToolStripMenuItem.DropDown.ImageList = viewToolStripMenuItem.DropDown.ImageList =
+                helpToolStripMenuItem.DropDown.ImageList = toolStripImageList;
+            torrentListView.SmallImageList = stateListBox.ImageList = stateListBoxImageList;
         }
 
         public ToolStripMenuItem CreateProfileMenuItem(string name)
@@ -127,19 +210,7 @@ namespace TransmissionRemoteDotnet
 
         private void InitStateListBox()
         {
-            stateListBox.SuspendLayout();
-            ImageList stateListBoxImageList = new ImageList();
-            stateListBoxImageList.ColorDepth = ColorDepth.Depth32Bit;
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources._16x16_ledpurple);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.down16);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.pause16);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.apply16);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.up16);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.player_reload16);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete);
-            stateListBoxImageList.Images.Add(global::TransmissionRemoteDotnet.Properties.Resources.server16);
-            torrentListView.SmallImageList = stateListBox.ImageList = stateListBoxImageList;
+            stateListBox.BeginUpdate();
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.All, 0));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Downloading, 1));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Paused, 2));
@@ -149,7 +220,7 @@ namespace TransmissionRemoteDotnet
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Seeding, 4));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Broken, 6));
             stateListBox.Items.Add(new GListBoxItem(""));
-            stateListBox.ResumeLayout();
+            stateListBox.EndUpdate();
         }
 
         private void InitStaticContextMenus()
@@ -341,8 +412,6 @@ namespace TransmissionRemoteDotnet
                 if (categoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
-                torrentListView.Sort();
-                Toolbox.StripeListView(torrentListView);
             }
         }
 
@@ -492,7 +561,7 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
-            connectButton.Visible = connectToolStripMenuItem.Enabled
+            connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
@@ -516,7 +585,7 @@ namespace TransmissionRemoteDotnet
 
         public void SetAltSpeedButtonState(bool enabled)
         {
-            AltSpeedButton.Image = enabled ? global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on : global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off;
+            AltSpeedButton.ImageIndex = enabled ? toolStripImageList.Images.IndexOfKey("altspeed_on") : toolStripImageList.Images.IndexOfKey("altspeed_off");
             AltSpeedButton.Tag = enabled;
         }
 
@@ -555,16 +624,6 @@ namespace TransmissionRemoteDotnet
             Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTOP, null)));
         }
 
-        public void SuspendTorrentListView()
-        {
-            torrentListView.SuspendLayout();
-        }
-
-        public void ResumeTorrentListView()
-        {
-            torrentListView.ResumeLayout();
-        }
-
         public void RestoreFormProperties()
         {
             try
@@ -573,7 +632,11 @@ namespace TransmissionRemoteDotnet
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
                     this.Size = new Size((int)settings.Misc[CONFKEY_MAINWINDOW_WIDTH], (int)settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
-                    this.Location = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                {
+                    Point p = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                    if (Toolbox.ScreenExists(p))
+                        this.Location = p;
+                }
                 if (settings.Misc.ContainsKey(CONFKEY_SPLITTERDISTANCE))
                     this.torrentAndTabsSplitContainer.SplitterDistance = (int)settings.GetObject(CONFKEY_SPLITTERDISTANCE);
                 this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
@@ -582,8 +645,10 @@ namespace TransmissionRemoteDotnet
                     FormWindowState _mainWindowState = (FormWindowState)((int)settings.GetObject(CONFKEY_MAINWINDOW_STATE));
                     if (_mainWindowState != FormWindowState.Minimized)
                     {
-                        this.WindowState = _mainWindowState;
+                        this.notifyIcon.Tag = this.WindowState = _mainWindowState;
                     }
+                    else
+                        this.notifyIcon.Tag = this.WindowState;
                 }
                 RestoreListViewProperties(torrentListView);
                 RestoreListViewProperties(filesListView);
@@ -604,8 +669,11 @@ namespace TransmissionRemoteDotnet
             LocalSettings settings = Program.Settings;
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name, widths.ToString());
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name, indexes.ToString());
-            IListViewItemSorter listViewItemSorter = (IListViewItemSorter)listView.ListViewItemSorter;
-            settings.SetObject(CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name, listViewItemSorter.Order == SortOrder.Descending ? -listViewItemSorter.SortColumn : listViewItemSorter.SortColumn);
+            lock (listView)
+            {
+                IListViewItemSorter listViewItemSorter = (IListViewItemSorter)listView.ListViewItemSorter;
+                settings.SetObject(CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name, listViewItemSorter.Order == SortOrder.Descending ? -listViewItemSorter.SortColumn : listViewItemSorter.SortColumn);
+            }
         }
 
         public void RestoreListViewProperties(ListView listView)
@@ -925,6 +993,7 @@ namespace TransmissionRemoteDotnet
             {
                 if (Program.Connected)
                     Program.Connected = false;
+                connectButton.Enabled = connectToolStripMenuItem.Enabled = false;
                 toolStripStatusLabel.Text = OtherStrings.Connecting + "...";
                 sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
             }
@@ -949,11 +1018,16 @@ namespace TransmissionRemoteDotnet
 
         private void localConfigureButton_Click(object sender, EventArgs e)
         {
-            if ((new LocalSettingsDialog()).ShowDialog() == DialogResult.OK)
+            LocalSettingsDialog ls = new LocalSettingsDialog();
+            ls.SetImageNumbers(defaulttoolbarimages.Count, defaultstateimages.Count, defaultinfopanelimages.Count);
+            if (ls.ShowDialog() == DialogResult.OK)
             {
                 connectButton.DropDownItems.Clear();
                 connectToolStripMenuItem.DropDownItems.Clear();
                 CreateProfileMenu();
+                refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
+                filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
+                LoadSkins();
             }
         }
 
@@ -974,8 +1048,28 @@ namespace TransmissionRemoteDotnet
                 = moveTorrentDataToolStripMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled
                 = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
             moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
-            pauseTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_pause : global::TransmissionRemoteDotnet.Properties.Resources.player_pause_all;
-            startTorrentButton.Image = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? global::TransmissionRemoteDotnet.Properties.Resources.player_play1 : global::TransmissionRemoteDotnet.Properties.Resources.player_play_all;
+            pauseTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_pause") : toolStripImageList.Images.IndexOfKey("player_pause_all");
+            startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_play") : toolStripImageList.Images.IndexOfKey("player_play_all");
+        }
+
+        public void FillfilesListView(Torrent t)
+        {
+            lock (filesListView)
+            {
+                filesListView.BeginUpdate();
+                IComparer tmp = filesListView.ListViewItemSorter;
+                filesListView.ListViewItemSorter = null;
+                if (!filesListView.Enabled)
+                {
+                    filesListView.Enabled = true;
+                    filesListView.Items.AddRange(t.Files.ToArray());
+                }
+                else
+                    filesListView.Refresh();
+                filesListView.ListViewItemSorter = tmp;
+                Toolbox.StripeListView(filesListView);
+                filesListView.EndUpdate();
+            }
         }
 
         private void OneTorrentsSelected(bool one, Torrent t)
@@ -983,7 +1077,10 @@ namespace TransmissionRemoteDotnet
             if (one)
             {
                 UpdateInfoPanel(true, t);
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                if (t.Files.Count == 0)
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.FilesAndPriorities(t.Id)));
+                else
+                    FillfilesListView(t);
             }
             else
             {
@@ -1005,7 +1102,7 @@ namespace TransmissionRemoteDotnet
                     = uploadLimitLabel.Text = startedAtLabel.Text = seedersLabel.Text
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
-                    = hashLabel.Text = piecesInfoLabel.Text
+                    = hashLabel.Text = piecesInfoLabel.Text = locationLabel.Text
                     = generalTorrentNameGroupBox.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
@@ -1035,7 +1132,6 @@ namespace TransmissionRemoteDotnet
                     t = (Torrent)torrentListView.SelectedItems[0];
                 one = torrentListView.SelectedItems.Count == 1;
             }
-            peersListView.Tag = 0;
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
@@ -1194,6 +1290,11 @@ namespace TransmissionRemoteDotnet
         public void connectButton_Click(object sender, EventArgs e)
         {
             fileToolStripMenuItem.DropDown.Close();
+            if (Program.Settings.Current.Host.Equals(""))
+            {
+                MessageBox.Show(OtherStrings.NoHostnameSet, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (!Program.Connected)
                 Connect();
         }
@@ -1210,50 +1311,66 @@ namespace TransmissionRemoteDotnet
         private void stateListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterByStateOrTracker();
-            torrentListView.Sort();
-            Toolbox.StripeListView(torrentListView);
         }
 
+        static bool FilteringProcess = false;
         private void FilterByStateOrTracker()
         {
-            SuspendTorrentListView();
-            if (stateListBox.SelectedIndex == 1)
+            if (FilteringProcess)
+                return;
+            FilteringProcess = true; /* Race condition is not important, so we not lock */
+            try
             {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                torrentListView.BeginUpdate();
+                lock (torrentListView)
+                {
+                    IComparer tmp = torrentListView.ListViewItemSorter;
+                    torrentListView.ListViewItemSorter = null;
+                    if (stateListBox.SelectedIndex == 1)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                    }
+                    else if (stateListBox.SelectedIndex == 2)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+                    }
+                    else if (stateListBox.SelectedIndex == 3)
+                    {
+                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                    }
+                    else if (stateListBox.SelectedIndex == 4)
+                    {
+                        FilterTorrent(IsFinished, null);
+                    }
+                    else if (stateListBox.SelectedIndex == 5)
+                    {
+                        FilterTorrent(NotFinished, null);
+                    }
+                    else if (stateListBox.SelectedIndex == 6)
+                    {
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
+                    }
+                    else if (stateListBox.SelectedIndex == 7)
+                    {
+                        FilterTorrent(TorrentHasError, null);
+                    }
+                    else if (stateListBox.SelectedIndex > 8)
+                    {
+                        FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+                    }
+                    else
+                    {
+                        FilterTorrent(AlwaysTrue, null);
+                    }
+                    torrentListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(torrentListView);
+                }
             }
-            else if (stateListBox.SelectedIndex == 2)
+            finally
             {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+                torrentListView.EndUpdate();
+                FilteringProcess = false;
             }
-            else if (stateListBox.SelectedIndex == 3)
-            {
-                FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
-            }
-            else if (stateListBox.SelectedIndex == 4)
-            {
-                FilterTorrent(IsFinished, null);
-            }
-            else if (stateListBox.SelectedIndex == 5)
-            {
-                FilterTorrent(NotFinished, null);
-            }
-            else if (stateListBox.SelectedIndex == 6)
-            {
-                FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
-            }
-            else if (stateListBox.SelectedIndex == 7)
-            {
-                FilterTorrent(TorrentHasError, null);
-            }
-            else if (stateListBox.SelectedIndex > 8)
-            {
-                FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
-            }
-            else
-            {
-                FilterTorrent(AlwaysTrue, null);
-            }
-            ResumeTorrentListView();
         }
 
         private delegate bool FilterCompare(Torrent t, object param);
@@ -1490,24 +1607,52 @@ namespace TransmissionRemoteDotnet
                 createdByLabel.Text = t.Creator;
                 hashLabel.Text = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
                 commentLabel.Text = t.Comment;
-                trackersListView.SuspendLayout();
+                trackersListView.BeginUpdate();
                 trackersListView.Items.Clear();
                 foreach (JsonObject tracker in t.Trackers)
                 {
                     int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
                     string announceUrl = (string)tracker[ProtocolConstants.ANNOUNCE];
-                    string scrapeUrl = (string)tracker[ProtocolConstants.SCRAPE];
                     ListViewItem item = new ListViewItem(tier.ToString());
                     item.SubItems.Add(announceUrl);
-                    item.SubItems.Add(scrapeUrl);
+                    while (item.SubItems.Count < 7)
+                        item.SubItems.Add("");
+                    item.Name = Toolbox.ToInt(tracker[ProtocolConstants.FIELD_IDENTIFIER], -1).ToString();
                     trackersListView.Items.Add(item);
                 }
                 Toolbox.StripeListView(trackersListView);
-                trackersListView.ResumeLayout();
-                peersListView.Enabled = trackersListView.Enabled
-                    = true;
+                trackersListView.Enabled = true;
+                trackersListView.EndUpdate();
                 downloadProgressLabel.Text = ((piecesGraph.Visible = t.Pieces != null) ? OtherStrings.Pieces : OtherStrings.Progress) + ": ";
                 progressBar.Visible = !piecesGraph.Visible;
+            }
+            if (t.TrackerStats != null)
+            {
+                trackersListView.BeginUpdate();
+                foreach (JsonObject trackerstat in t.TrackerStats)
+                {
+                    int id = Toolbox.ToInt(trackerstat[ProtocolConstants.FIELD_IDENTIFIER], -1);
+                    if (id >= 0 && trackersListView.Items.ContainsKey(id.ToString()))
+                    {
+                        ListViewItem item = trackersListView.Items[id.ToString()];
+                        double nat = Toolbox.ToDouble(trackerstat["nextAnnounceTime"]);
+                        int seederCount = Toolbox.ToInt(trackerstat["seederCount"]);
+                        int leecherCount = Toolbox.ToInt(trackerstat["leecherCount"]);
+                        int downloadCount = Toolbox.ToInt(trackerstat["downloadCount"]);
+                        item.SubItems[2].Text = (string)trackerstat["lastAnnounceResult"];
+                        if (nat > 0.0)
+                        {
+                            TimeSpan ts = Toolbox.DateFromEpoch(nat).ToLocalTime().Subtract(DateTime.Now);
+                            item.SubItems[3].Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
+                        }
+                        else
+                            item.SubItems[3].Text = "";
+                        item.SubItems[4].Text = seederCount >= 0 ? seederCount.ToString() : "";
+                        item.SubItems[5].Text = leecherCount >= 0 ? leecherCount.ToString() : "";
+                        item.SubItems[6].Text = downloadCount >= 0 ? downloadCount.ToString() : "";
+                    }
+                }
+                trackersListView.EndUpdate();
             }
             remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
             label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
@@ -1521,8 +1666,11 @@ namespace TransmissionRemoteDotnet
             if (t.Pieces != null)
             {
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
+                piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
             }
-            piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
+            else
+                piecesInfoLabel.Text = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
+            locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.IsFinished)
             {
@@ -1537,48 +1685,41 @@ namespace TransmissionRemoteDotnet
             statusLabel.Text = t.Status;
             labelForErrorLabel.Visible = errorLabel.Visible = !(errorLabel.Text = t.ErrorString).Equals("");
             RefreshElapsedTimer();
-            if (t.Peers != null)
+            peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
+            if (t.Peers != null && peersListView.Enabled)
             {
-                peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
-                peersListView.Tag = (int)peersListView.Tag + 1;
-                peersListView.SuspendLayout();
-                foreach (JsonObject peer in t.Peers)
-                {
-                    PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
-                    if (item == null)
-                    {
-                        item = new PeerListViewItem(peer);
-                        peersListView.Items.Add(item);
-                    }
-                    else
-                    {
-                        item.Update(peer);
-                    }
-                    item.UpdateSerial = (int)peersListView.Tag;
-                }
+                PeerListViewItem.CurrentUpdateSerial++;
                 lock (peersListView)
                 {
-                    Queue<ListViewItem> removalQueue = null;
-                    foreach (PeerListViewItem item in peersListView.Items)
+                    peersListView.BeginUpdate();
+                    IComparer tmp = peersListView.ListViewItemSorter;
+                    peersListView.ListViewItemSorter = null;
+                    foreach (JsonObject peer in t.Peers)
                     {
-                        if (item.UpdateSerial != (int)peersListView.Tag)
+                        PeerListViewItem item = FindPeerItem((string)peer[ProtocolConstants.ADDRESS]);
+                        if (item == null)
                         {
-                            if (removalQueue == null)
-                                removalQueue = new Queue<ListViewItem>();
-                            removalQueue.Enqueue(item);
+                            item = new PeerListViewItem(peer);
+                            peersListView.Items.Add(item);
                         }
+                        else
+                        {
+                            item.Update(peer);
+                        }
+                        item.UpdateSerial = PeerListViewItem.CurrentUpdateSerial;
                     }
-                    if (removalQueue != null)
+                    PeerListViewItem[] peers = (PeerListViewItem[])new ArrayList(peersListView.Items).ToArray(typeof(PeerListViewItem));
+                    foreach (PeerListViewItem item in peers)
                     {
-                        foreach (ListViewItem item in removalQueue)
+                        if (item.UpdateSerial != PeerListViewItem.CurrentUpdateSerial)
                         {
                             peersListView.Items.Remove(item);
                         }
                     }
+                    peersListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(peersListView);
+                    peersListView.EndUpdate();
                 }
-                peersListView.Sort();
-                Toolbox.StripeListView(peersListView);
-                peersListView.ResumeLayout();
             }
         }
 
@@ -1609,7 +1750,7 @@ namespace TransmissionRemoteDotnet
                 if (torrentListView.SelectedItems.Count == 1)
                 {
                     Torrent t = (Torrent)torrentListView.SelectedItems[0];
-                    TimeSpan ts = DateTime.Now.ToUniversalTime().Subtract(t.Added);
+                    TimeSpan ts = DateTime.Now.Subtract(t.Added);
                     timeElapsedLabel.Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
                 }
                 else
@@ -1727,7 +1868,11 @@ namespace TransmissionRemoteDotnet
         {
             if (torrentListView.SelectedItems.Count > 0)
             {
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray())));
+                string question = torrentListView.SelectedItems.Count == 1 ? String.Format(OtherStrings.ConfirmSingleRecheck, torrentListView.SelectedItems[0].Text) : String.Format(OtherStrings.ConfirmMultipleRecheck, torrentListView.SelectedItems.Count);
+                if (MessageBox.Show(question, OtherStrings.Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTVERIFY, BuildIdArray())));
+                }
             }
         }
 
@@ -1750,16 +1895,31 @@ namespace TransmissionRemoteDotnet
                 this.WindowState = FormWindowState.Minimized;
                 e.Cancel = true;
             }
-            else if (this.WindowState != FormWindowState.Minimized)
+            else
             {
-                settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.WindowState;
-                if (this.WindowState != FormWindowState.Maximized)
+                if (this.WindowState != FormWindowState.Minimized)
+                    settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.WindowState;
+                else
+                    settings.Misc[CONFKEY_MAINWINDOW_STATE] = (int)this.notifyIcon.Tag;
+                if (this.WindowState.Equals(FormWindowState.Normal))
                 {
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_X, this.Location.X);
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_Y, this.Location.Y);
-                    settings.SetObject(CONFKEY_SPLITTERDISTANCE, this.torrentAndTabsSplitContainer.SplitterDistance);
                     settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.Size.Height);
                     settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.Size.Width);
+                }
+                else
+                {
+                    /* The value of the RestoreBounds property is valid only when 
+                       the WindowState property of the Form class is not equal to Normal. */
+                    settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_X, this.RestoreBounds.X);
+                    settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_Y, this.RestoreBounds.Y);
+                    settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.RestoreBounds.Height);
+                    settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.RestoreBounds.Width);
+                }
+                if (this.WindowState != FormWindowState.Maximized)
+                {
+                    settings.SetObject(CONFKEY_SPLITTERDISTANCE, this.torrentAndTabsSplitContainer.SplitterDistance);
                 }
             }
             SaveListViewProperties(torrentListView);
@@ -1963,11 +2123,8 @@ namespace TransmissionRemoteDotnet
 
         private void connectButton_DropDownOpening(object sender, EventArgs e)
         {
-            foreach (ToolStripMenuItem item in connectButton.DropDownItems)
-            {
-                item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
-            }
-            foreach (ToolStripMenuItem item in connectToolStripMenuItem.DropDownItems)
+            ToolStripDropDownItem connectitem = sender as ToolStripDropDownItem;
+            foreach (ToolStripMenuItem item in connectitem.DropDownItems)
             {
                 item.Checked = Program.Settings.CurrentProfile.Equals(item.ToString());
             }
@@ -2002,6 +2159,12 @@ namespace TransmissionRemoteDotnet
                         sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
                     }
                 };
+        }
+        class ToolStripBitmap
+        {
+            public string Name;
+            public Bitmap Image;
+            public ToolStripItem[] Controls;
         }
     }
 }

@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HttpError" xml:space="preserve">
+    <value>Daemon try to download something, but the http result is:{0}{1}</value>
+    <comment>{0} is the newline char</comment>
+  </data>
+  <data name="NoHostnameSet" xml:space="preserve">
+    <value>No hostname has been set.</value>
+  </data>
+  <data name="MappingSample" xml:space="preserve">
+    <value>Sample mapping:</value>
+  </data>
+  <data name="SambaShare" xml:space="preserve">
+    <value>Udział Samba:</value>
+  </data>
+  <data name="UnixPathPrefix" xml:space="preserve">
+    <value>Udział UNIXowy:</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Anuluj</value>
   </data>
@@ -143,7 +159,7 @@
     <value>Błąd inicjalizacji GeoIP ({0})</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
-    <value>Zarządzanie łączem</value>
+    <value>Wykorzystanie łącza</value>
   </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
     <value>Właściwości wielu torrentów</value>
@@ -248,7 +264,7 @@
     <value>Dane poprawne</value>
   </data>
   <data name="LatestVersion" xml:space="preserve">
-    <value>Używasz aktualnej wersji - ({0}.{1}).</value>
+    <value>Używasz aktualnej wersji - {0}.{1}</value>
   </data>
   <data name="LatestVersionCheckFailed" xml:space="preserve">
     <value>Sprawdzanie wersji nie powiodło się.</value>
@@ -450,7 +466,7 @@
     <value>Zmień folder docelowy wielu torrentów</value>
   </data>
   <data name="MoveTorrentData" xml:space="preserve">
-    <value>Zmień folder docelowy torrenta</value>
+    <value>Zmień folder docelowy</value>
   </data>
   <data name="MoveX" xml:space="preserve">
     <value>Przenieś {0}</value>

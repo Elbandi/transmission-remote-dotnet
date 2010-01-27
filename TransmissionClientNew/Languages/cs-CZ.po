@@ -1,7 +1,7 @@
 # Czech translation of transmission-remote-dotnet
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
-#
+# 
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 msgid ""
 msgstr ""
@@ -15,15 +15,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: AboutDialog~$this.Text
+#, csharp-format
+msgid "AboutDialog"
+msgstr "O aplikaci Transmission Remote"
+
+#: AboutDialog~labelCopyright.Text
+#, csharp-format
+msgid "Copyright"
+msgstr ""
+
+#: AboutDialog~labelCredits.Text
+#, csharp-format
+msgid "Credits && acknowledgements:"
+msgstr ""
+
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr "Developers:"
+msgstr ""
+
+#: AboutDialog~labelHomepageLink.Text
+#, csharp-format
+msgid "Homepage:"
+msgstr ""
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
 msgid "Product Name"
-msgstr "Product Name"
+msgstr ""
 
 #: AboutDialog~labelVersion.Text
 #: OtherStrings~Version
@@ -31,15 +51,10 @@ msgstr "Product Name"
 msgid "Version"
 msgstr "Verze"
 
-#: AboutDialog~labelCopyright.Text
+#: AboutDialog~okButton.Text
 #, csharp-format
-msgid "Copyright"
-msgstr "Copyright"
-
-#: AboutDialog~labelHomepageLink.Text
-#, csharp-format
-msgid "Homepage:"
-msgstr "Homepage:"
+msgid "&OK"
+msgstr ""
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -62,38 +77,29 @@ msgid ""
 "    * zeal.tsai for the Taiwanese translation.\r\n"
 "    * ikeblaster for the Czech translation."
 msgstr ""
-" * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/\r\n"
-" * Some icons were kindly contributed by liuzhiyi and benketom.\r\n"
-" * charles and the other Transmission developers for their great work.\r\n"
-" * The code for reading .torrent files was taken from Alan McGovern's MonoTorrent project.\r\n"
-" * Thank you to all the following users kind enough to translate this application:\r\n"
-"    * Romaric R. for the French translation.\r\n"
-"    * benba for the German translation.\r\n"
-"    * drphrozen for the Danish translation.\r\n"
-"    * András Első for the Hungarian translation.\r\n"
-"    * liuzhiyi for the Chinese translation.\r\n"
-"    * Woodzu and cichy for the Polish translation.\r\n"
-"    * RayTracer for the Turkish translation.\r\n"
-"    * Alexey Komarov for the Russian translation.\r\n"
-"    * huexxx for the Spanish translation.\r\n"
-"    * twohertz for the Korean translation.\r\n"
-"    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
 
-#: AboutDialog~labelCredits.Text
+#: ErrorLogWindow~$this.Text
 #, csharp-format
-msgid "Credits && acknowledgements:"
-msgstr "Credits && acknowledgements:"
+msgid "Error Log"
+msgstr "Záznam chyb"
 
-#: AboutDialog~okButton.Text
+#: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
-msgid "&OK"
-msgstr "&OK"
+msgid "Show debug logs"
+msgstr ""
 
-#: AboutDialog~$this.Text
+#: ErrorLogWindow~clearButton.Text
 #, csharp-format
-msgid "AboutDialog"
-msgstr "O aplikaci Transmission Remote"
+msgid "Clear"
+msgstr "Vyčistit"
+
+#: ErrorLogWindow~closeButton.Text
+#: MoveDataPrompt~button2.Text
+#: RemoteSettingsDialog~CloseFormButton.Text
+#: StatsDialog~CloseFormButton.Text
+#, csharp-format
+msgid "Close"
+msgstr "Zavřít"
 
 #: ErrorLogWindow~columnHeader1.Text
 #, csharp-format
@@ -110,238 +116,81 @@ msgstr "Chyba"
 msgid "Body"
 msgstr "Informace"
 
-#: ErrorLogWindow~clearButton.Text
-#, csharp-format
-msgid "Clear"
-msgstr "Vyčistit"
-
 #: ErrorLogWindow~label1.Text
 #, csharp-format
 msgid " You can copy the body of an error to the clipboard by double clicking it"
 msgstr "Můžete zkopírovat informace pomocí dvojkliku"
 
-#: ErrorLogWindow~closeButton.Text
-#: MoveDataPrompt~button2.Text
-#: RemoteSettingsDialog~CloseFormButton.Text
-#: StatsDialog~CloseFormButton.Text
+#: FindDialog~$this.Text
 #, csharp-format
-msgid "Close"
-msgstr "Zavřít"
-
-#: ErrorLogWindow~$this.Text
-#, csharp-format
-msgid "Error Log"
-msgstr "Záznam chyb"
-
-#: FindDialog~findButton.Text
-#, csharp-format
-msgid "Find"
-msgstr "Find"
+msgid "Find Torrent..."
+msgstr ""
 
 #: FindDialog~CaseSensitiveCheckBox.Text
 #, csharp-format
 msgid "Case insensitiv"
-msgstr "Case insensitiv"
+msgstr ""
 
-#: FindDialog~$this.Text
+#: FindDialog~findButton.Text
 #, csharp-format
-msgid "Find Torrent..."
-msgstr "Find Torrent..."
+msgid "Find"
+msgstr ""
 
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
-msgstr "Find what:"
+msgstr ""
 
-#: LocalSettingsDialog~SaveButton.Text
-#: RemoteSettingsDialog~SaveButton.Text
+#: LocalSettingsDialog~$this.Text
+#: MainWindow~localConfigureButton.Text
 #, csharp-format
-msgid "Save"
-msgstr "Uložit"
+msgid "Local Settings"
+msgstr "Místní nastavení"
+
+#: LocalSettingsDialog~AddShareButton.Text
+#, csharp-format
+msgid "Add"
+msgstr ""
+
+#: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
+#, csharp-format
+msgid "Check for update at startup"
+msgstr ""
+
+#: LocalSettingsDialog~ClearPasswordCheckBox.Text
+#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
+#, csharp-format
+msgid "Clear the password at save"
+msgstr ""
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
-#: TorrentLoadDialog~button2.Text
+#: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
 #: UriPromptWindow~button2.Text
 #, csharp-format
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: LocalSettingsDialog~SaveAndConnectButton.Text
+#: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
-msgid "Save and Connect"
-msgstr "Save and Connect"
-
-#: LocalSettingsDialog~groupAutoConnect.Text
-#, csharp-format
-msgid "Auto connect"
-msgstr "Auto connect"
-
-#: LocalSettingsDialog~groupCurrentProfile.Text
-#, csharp-format
-msgid "Current profile"
-msgstr "Current profile"
-
-#: LocalSettingsDialog~PlinkPathButton.Text
-#, csharp-format
-msgid "Browse"
-msgstr "Browse"
-
-#: LocalSettingsDialog~groupPlinkPath.Text
-#, csharp-format
-msgid "plink.exe:"
-msgstr "plink.exe:"
+msgid "Delete torrent when adding"
+msgstr ""
 
 #: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
 #, csharp-format
 msgid "Don't save passwords"
-msgstr "Don't save passwords"
-
-#: LocalSettingsDialog~defaultActionComboBox.Items
-#, csharp-format
-msgid "Torrent Properties"
-msgstr "Torrent Properties"
-
-#: LocalSettingsDialog~defaultActionComboBox.Items1
-#, csharp-format
-msgid "Open remote folder"
-msgstr "Open remote folder"
-
-#: LocalSettingsDialog~defaultActionComboBox.Items2
-#, csharp-format
-msgid "Start/Stop torrent"
-msgstr "Start/Stop torrent"
-
-#: LocalSettingsDialog~defaultActionLabel.Text
-#, csharp-format
-msgid "Default Action:"
-msgstr "Default Action:"
-
-#: LocalSettingsDialog~DeleteTorrentCheckBox.Text
-#, csharp-format
-msgid "Delete torrent when adding"
-msgstr "Delete torrent when adding"
-
-#: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
-#, csharp-format
-msgid "Notification on completion"
-msgstr "Upozornit po dokončení úlohy"
-
-#: LocalSettingsDialog~notificationOnAdditionCheckBox.Text
-#, csharp-format
-msgid "Notification on addition"
-msgstr "Upozornit po přidání úlohy"
-
-#: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
-#, csharp-format
-msgid "Minimize on close"
-msgstr "Minimalizovat při zavření"
-
-#: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
-#, csharp-format
-msgid "Check for update at startup"
-msgstr "Check for update at startup"
-
-#: LocalSettingsDialog~UploadPromptCheckBox.Text
-#, csharp-format
-msgid "Upload prompt"
-msgstr "Upload prompt"
-
-#: LocalSettingsDialog~MinToTrayCheckBox.Text
-#, csharp-format
-msgid "Enable tray icon"
-msgstr "Zobrazovat tray ikonu"
-
-#: LocalSettingsDialog~groupBehavior.Text
-#, csharp-format
-msgid "Behavior"
-msgstr "Behavior"
-
-#: LocalSettingsDialog~tabGlobalSettings.Text
-#, csharp-format
-msgid "Global Settings"
-msgstr "Global Settings"
-
-#: LocalSettingsDialog~StartPausedCheckBox.Text
-#, csharp-format
-msgid "Start torrents paused"
-msgstr "Nespouštět pro přidání"
-
-#: LocalSettingsDialog~SaveServerButton.Text
-#, csharp-format
-msgid "Save Server"
-msgstr "Save Server"
-
-#: LocalSettingsDialog~UseSSLCheckBox.Text
-#, csharp-format
-msgid "Secure (SSL)"
-msgstr "Zabezpečení (SSL)"
-
-#: LocalSettingsDialog~label1.Text
-#: LocalSettingsDialog~label6.Text
-#, csharp-format
-msgid "Host:"
-msgstr "Host:"
-
-#: LocalSettingsDialog~label10.Text
-#, csharp-format
-msgid "Retry limit:"
-msgstr "Počet pokusů o připojení:"
-
-#: LocalSettingsDialog~label2.Text
-#: LocalSettingsDialog~label7.Text
-#, csharp-format
-msgid "Port:"
-msgstr "Port:"
-
-#: LocalSettingsDialog~label3.Text
-#, csharp-format
-msgid "Refresh Rate:"
-msgstr "Aktualizace (sec):"
-
-#: LocalSettingsDialog~tabPage1.Text
-#, csharp-format
-msgid "Server"
-msgstr "Server"
-
-#: LocalSettingsDialog~ClearPasswordCheckBox.Text
-#: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
-#, csharp-format
-msgid "Clear the password at save"
-msgstr "Clear the password at save"
-
-#: LocalSettingsDialog~label5.Text
-#: LocalSettingsDialog~label9.Text
-#, csharp-format
-msgid "Password:"
-msgstr "Heslo:"
+msgstr ""
 
 #: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
 msgid "Enable authentication"
 msgstr "Zapnout autentizace"
 
-#: LocalSettingsDialog~label4.Text
-#: LocalSettingsDialog~label8.Text
-#, csharp-format
-msgid "User:"
-msgstr "Jméno:"
-
-#: LocalSettingsDialog~tabPage2.Text
-#, csharp-format
-msgid "Authentication"
-msgstr "Autentizace"
-
-#: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
-#, csharp-format
-msgid "Authenticate"
-msgstr "Autentizace"
-
 #: LocalSettingsDialog~EnableProxyCombo.Items
 #, csharp-format
 msgid "Auto"
-msgstr "Auto"
+msgstr ""
 
 #: LocalSettingsDialog~EnableProxyCombo.Items1
 #, csharp-format
@@ -353,70 +202,25 @@ msgstr "Zapnuto"
 msgid "Disabled"
 msgstr "Vypnuto"
 
-#: LocalSettingsDialog~tabPage3.Text
+#: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
-msgid "Proxy"
-msgstr "Proxy"
-
-#: LocalSettingsDialog~label15.Text
-#, csharp-format
-msgid "Help: "
-msgstr "Nápověda: "
-
-#: LocalSettingsDialog~linkLabel1.Text
-#, csharp-format
-msgid "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
-msgstr "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
-
-#: LocalSettingsDialog~label13.Text
-#, csharp-format
-msgid "Command: "
-msgstr "Příkaz: "
+msgid "Enable tray icon"
+msgstr "Zobrazovat tray ikonu"
 
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr "Display remote command button"
+msgstr ""
 
-#: LocalSettingsDialog~tabPage5.Text
+#: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
-msgid "SSH"
-msgstr "SSH"
+msgid "Browse"
+msgstr ""
 
-#: LocalSettingsDialog~label17.Text
+#: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
-msgid "Download limit menu items:"
-msgstr "Rychlosti download limitu:"
-
-#: LocalSettingsDialog~label16.Text
-#, csharp-format
-msgid "Upload limit menu items:"
-msgstr "Rychlosti upload limitu:"
-
-#: LocalSettingsDialog~tabPage6.Text
-#, csharp-format
-msgid "Misc"
-msgstr "Jiné"
-
-#: LocalSettingsDialog~label11.Text
-#, csharp-format
-msgid "UNIX path prefix:"
-msgstr "UNIX prefix cesty:"
-
-#: LocalSettingsDialog~AddShareButton.Text
-#, csharp-format
-msgid "Add"
-msgstr "Add"
-
-#: LocalSettingsDialog~label14.Text
-#, csharp-format
-msgid "Samba share:"
-msgstr "Samba - sdílená složka:"
-
-#: LocalSettingsDialog~groupBox1.Text
-#, csharp-format
-msgid "New mapping:"
-msgstr "Nové mapování:"
+msgid "Authenticate"
+msgstr "Autentizace"
 
 #: LocalSettingsDialog~RemoveShareButton.Text
 #: MainWindow~removeToolStripMenuItem.Text
@@ -425,10 +229,47 @@ msgstr "Nové mapování:"
 msgid "Remove"
 msgstr "Odstranit"
 
-#: LocalSettingsDialog~tabPage7.Text
+#: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
-msgid "Samba"
-msgstr "Samba"
+msgid "Save and Connect"
+msgstr ""
+
+#: LocalSettingsDialog~SaveButton.Text
+#: RemoteSettingsDialog~SaveButton.Text
+#, csharp-format
+msgid "Save"
+msgstr "Uložit"
+
+#: LocalSettingsDialog~SaveServerButton.Text
+#, csharp-format
+msgid "Save Server"
+msgstr ""
+
+#: LocalSettingsDialog~StartPausedCheckBox.Text
+#, csharp-format
+msgid "Start torrents paused"
+msgstr "Nespouštět pro přidání"
+
+#: LocalSettingsDialog~UploadPromptCheckBox.Text
+#, csharp-format
+msgid "Upload prompt"
+msgstr ""
+
+#: LocalSettingsDialog~UseSSLCheckBox.Text
+#, csharp-format
+msgid "Secure (SSL)"
+msgstr "Zabezpečení (SSL)"
+
+#: LocalSettingsDialog~addServerToolStripMenuItem.Text
+#, csharp-format
+msgid "Add Server"
+msgstr ""
+
+#: LocalSettingsDialog~columnHost.Text
+#: OtherStrings~Host
+#, csharp-format
+msgid "Host"
+msgstr ""
 
 #: LocalSettingsDialog~columnName.Text
 #: MainWindow~columnHeader6.Text
@@ -436,62 +277,274 @@ msgstr "Samba"
 msgid "Name"
 msgstr "Název"
 
-#: LocalSettingsDialog~columnHost.Text
-#: OtherStrings~Host
-#, csharp-format
-msgid "Host"
-msgstr "Host"
-
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
-#: LocalSettingsDialog~addServerToolStripMenuItem.Text
+#: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
-msgid "Add Server"
-msgstr "Add Server"
+msgid "Torrent Properties"
+msgstr ""
+
+#: LocalSettingsDialog~defaultActionComboBox.Items1
+#, csharp-format
+msgid "Open remote folder"
+msgstr ""
+
+#: LocalSettingsDialog~defaultActionComboBox.Items2
+#, csharp-format
+msgid "Start/Stop torrent"
+msgstr ""
+
+#: LocalSettingsDialog~defaultActionLabel.Text
+#, csharp-format
+msgid "Default Action:"
+msgstr ""
+
+#: LocalSettingsDialog~groupAutoConnect.Text
+#, csharp-format
+msgid "Auto connect"
+msgstr ""
+
+#: LocalSettingsDialog~groupBehavior.Text
+#, csharp-format
+msgid "Behavior"
+msgstr ""
+
+#: LocalSettingsDialog~groupBox1.Text
+#, csharp-format
+msgid "New mapping:"
+msgstr "Nové mapování:"
+
+#: LocalSettingsDialog~groupCurrentProfile.Text
+#, csharp-format
+msgid "Current profile"
+msgstr ""
+
+#: LocalSettingsDialog~groupPlinkPath.Text
+#, csharp-format
+msgid "plink.exe:"
+msgstr ""
+
+#: LocalSettingsDialog~label1.Text
+#: LocalSettingsDialog~label6.Text
+#, csharp-format
+msgid "Host:"
+msgstr ""
+
+#: LocalSettingsDialog~label10.Text
+#, csharp-format
+msgid "Retry limit:"
+msgstr "Počet pokusů o připojení:"
+
+#: LocalSettingsDialog~label11.Text
+#: OtherStrings~UnixPathPrefix
+#, csharp-format
+msgid "UNIX path prefix:"
+msgstr "UNIX prefix cesty:"
+
+#: LocalSettingsDialog~label12.Text
+#, csharp-format
+msgid "Custom rpc path:"
+msgstr ""
+
+#: LocalSettingsDialog~label13.Text
+#, csharp-format
+msgid "Command: "
+msgstr "Příkaz: "
+
+#: LocalSettingsDialog~label14.Text
+#: OtherStrings~SambaShare
+#, csharp-format
+msgid "Samba share:"
+msgstr "Samba - sdílená složka:"
+
+#: LocalSettingsDialog~label15.Text
+#, csharp-format
+msgid "Help: "
+msgstr "Nápověda: "
+
+#: LocalSettingsDialog~label16.Text
+#, csharp-format
+msgid "Upload limit menu items:"
+msgstr "Rychlosti upload limitu:"
+
+#: LocalSettingsDialog~label17.Text
+#, csharp-format
+msgid "Download limit menu items:"
+msgstr "Rychlosti download limitu:"
+
+#: LocalSettingsDialog~label2.Text
+#: LocalSettingsDialog~label7.Text
+#, csharp-format
+msgid "Port:"
+msgstr ""
+
+#: LocalSettingsDialog~label3.Text
+#, csharp-format
+msgid "Refresh Rate:"
+msgstr "Aktualizace (sec):"
+
+#: LocalSettingsDialog~label4.Text
+#: LocalSettingsDialog~label8.Text
+#, csharp-format
+msgid "User:"
+msgstr "Jméno:"
+
+#: LocalSettingsDialog~label5.Text
+#: LocalSettingsDialog~label9.Text
+#, csharp-format
+msgid "Password:"
+msgstr "Heslo:"
+
+#: LocalSettingsDialog~linkLabel1.Text
+#, csharp-format
+msgid "http://code.google.com/p/transmission-remote-dotnet/wiki/SSH"
+msgstr ""
+
+#: LocalSettingsDialog~minimizeOnCloseCheckBox.Text
+#, csharp-format
+msgid "Minimize on close"
+msgstr "Minimalizovat při zavření"
+
+#: LocalSettingsDialog~notificationOnAdditionCheckBox.Text
+#, csharp-format
+msgid "Notification on addition"
+msgstr "Upozornit po přidání úlohy"
+
+#: LocalSettingsDialog~notificationOnCompletionCheckBox.Text
+#, csharp-format
+msgid "Notification on completion"
+msgstr "Upozornit po dokončení úlohy"
 
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr "Remove Server"
+msgstr ""
+
+#: LocalSettingsDialog~tabGlobalSettings.Text
+#, csharp-format
+msgid "Global Settings"
+msgstr ""
+
+#: LocalSettingsDialog~tabPage1.Text
+#, csharp-format
+msgid "Server"
+msgstr ""
+
+#: LocalSettingsDialog~tabPage2.Text
+#, csharp-format
+msgid "Authentication"
+msgstr "Autentizace"
+
+#: LocalSettingsDialog~tabPage3.Text
+#, csharp-format
+msgid "Proxy"
+msgstr ""
+
+#: LocalSettingsDialog~tabPage5.Text
+#, csharp-format
+msgid "SSH"
+msgstr ""
+
+#: LocalSettingsDialog~tabPage6.Text
+#, csharp-format
+msgid "Misc"
+msgstr "Jiné"
+
+#: LocalSettingsDialog~tabPage7.Text
+#, csharp-format
+msgid "Samba"
+msgstr ""
 
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr "Servers Settings"
+msgstr ""
 
-#: LocalSettingsDialog~$this.Text
-#: MainWindow~localConfigureButton.Text
+#: LocalSettingsDialog~tabSkinSettings.Text
 #, csharp-format
-msgid "Local Settings"
-msgstr "Místní nastavení"
+msgid "Skin"
+msgstr ""
 
-#: MainWindow~columnHeader7.Text
-#: MainWindow~columnHeader2.Text
-#: TorrentLoadDialog~columnHeader5.Text
+#: MainWindow~$this.Text
+#: MainWindow~notifyIcon.Text
 #, csharp-format
-msgid "Size"
-msgstr "Velikost"
+msgid "Transmission Remote"
+msgstr ""
 
-#: MainWindow~columnHeader8.Text
-#: MainWindow~columnHeader3.Text
+#: MainWindow~AltSpeedButton.Text
 #, csharp-format
-msgid "Done"
-msgstr "Dokočeno"
+msgid "Alt Speed"
+msgstr ""
 
-#: MainWindow~columnHeader9.Text
+#: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
-msgid "Status"
-msgstr "Stav"
+msgid "About Transmission Remote"
+msgstr "O aplikaci Transmission Remote"
+
+#: MainWindow~addTorrentButton.Text
+#, csharp-format
+msgid "Add Torrent"
+msgstr "Přidat torrent"
+
+#: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
+#, csharp-format
+msgid "Add torrent from URL"
+msgstr "Přidat torrent z URL"
+
+#: MainWindow~addTorrentToolStripMenuItem.Text
+#, csharp-format
+msgid "Quick add torrent"
+msgstr "Přidat torrent"
+
+#: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
+#, csharp-format
+msgid "Add torrent with options"
+msgstr "Přidat torrent se změnou nastavení"
+
+#: MainWindow~addWebTorrentButton.Text
+#, csharp-format
+msgid "Add Torrent from URL"
+msgstr "Přidat torrent z URL"
+
+#: MainWindow~allToolStripMenuItem.Text
+#: OtherStrings~All
+#, csharp-format
+msgid "All"
+msgstr "Vše"
+
+#: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
+#: OtherStrings~CopyAsCSV
+#, csharp-format
+msgid "CSV info to clipboard"
+msgstr "CSV info do schránky"
+
+#: MainWindow~categoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr "Filtrování"
+
+#: MainWindow~checkForNewVersionToolStripMenuItem.Text
+#, csharp-format
+msgid "Check for new version"
+msgstr "Zjistit novější verzi"
+
+#: MainWindow~columnHeader1.Text
+#: TorrentLoadDialog~columnHeader1.Text
+#, csharp-format
+msgid "Path"
+msgstr "Cesta"
 
 #: MainWindow~columnHeader10.Text
+#: MainWindow~columnHeader34.Text
 #, csharp-format
 msgid "Seeds"
 msgstr "Seedů"
 
 #: MainWindow~columnHeader11.Text
+#: MainWindow~columnHeader35.Text
 #, csharp-format
 msgid "Leechers"
 msgstr "Peerů"
@@ -521,7 +574,13 @@ msgstr "Odesláno"
 #: MainWindow~columnHeader16.Text
 #, csharp-format
 msgid "Ratio"
-msgstr "Ratio"
+msgstr ""
+
+#: MainWindow~columnHeader17.Text
+#: OtherStrings~Skip
+#, csharp-format
+msgid "Skip"
+msgstr "Přeskočit"
 
 #: MainWindow~columnHeader18.Text
 #, csharp-format
@@ -533,178 +592,28 @@ msgstr "Přidáno"
 msgid "Completed At"
 msgstr "Dokočeno"
 
-#: MainWindow~columnHeader30.Text
+#: MainWindow~columnHeader2.Text
+#: MainWindow~columnHeader7.Text
+#: TorrentLoadDialog~columnHeader5.Text
 #, csharp-format
-msgid "Tracker"
-msgstr "Tracker"
+msgid "Size"
+msgstr "Velikost"
 
-#: MainWindow~downloadProgressLabel.Text
+#: MainWindow~columnHeader20.Text
 #, csharp-format
-msgid "Pieces: "
-msgstr "Části:"
+msgid "Announce URL"
+msgstr ""
 
-#: MainWindow~percentageLabel.Text
+#: MainWindow~columnHeader21.Text
+#: MainWindow~columnHeader9.Text
 #, csharp-format
-msgid "_"
-msgstr "Tento text je možné vybrat"
-
-#: MainWindow~piecesInfoLabelLabel.Text
-#, csharp-format
-msgid "Pieces:"
-msgstr "Části:"
-
-#: MainWindow~hashLabelLabel.Text
-#, csharp-format
-msgid "Hash:"
-msgstr "Hash:"
-
-#: MainWindow~label17.Text
-#, csharp-format
-msgid "Created by:"
-msgstr "Vytvořil:"
-
-#: MainWindow~label16.Text
-#, csharp-format
-msgid "Created at:"
-msgstr "Vytvořeno:"
-
-#: MainWindow~labelForErrorLabel.Text
-#, csharp-format
-msgid "Error:"
-msgstr "Chyba:"
-
-#: MainWindow~label15.Text
-#, csharp-format
-msgid "Comment:"
-msgstr "Komentář:"
-
-#: MainWindow~label14.Text
-#, csharp-format
-msgid "Ratio:"
-msgstr "Ratio:"
-
-#: MainWindow~label13.Text
-#, csharp-format
-msgid "Leechers:"
-msgstr "Peerů:"
-
-#: MainWindow~label10.Text
-#, csharp-format
-msgid "Seeds:"
-msgstr "Seedů:"
-
-#: MainWindow~label12.Text
-#, csharp-format
-msgid "Upload limit:"
-msgstr "Upload limit:"
-
-#: MainWindow~label8.Text
-#, csharp-format
-msgid "Upload speed:"
-msgstr "Rychlost Up:"
-
-#: MainWindow~label5.Text
-#, csharp-format
-msgid "Uploaded:"
-msgstr "Odesláno:"
-
-#: MainWindow~label4.Text
-#, csharp-format
-msgid "Remaining:"
-msgstr "Zbývá:"
-
-#: MainWindow~label11.Text
-#, csharp-format
-msgid "Status:"
-msgstr "Stav:"
-
-#: MainWindow~label9.Text
-#, csharp-format
-msgid "Download limit:"
-msgstr "Download limit:"
-
-#: MainWindow~label7.Text
-#, csharp-format
-msgid "Download speed:"
-msgstr "Rychlost Down:"
-
-#: MainWindow~label6.Text
-#, csharp-format
-msgid "Downloaded:"
-msgstr "Staženo:"
-
-#: MainWindow~label3.Text
-#, csharp-format
-msgid "Started At:"
-msgstr "Spuštěno:"
-
-#: MainWindow~timeElapsedLabelLabel.Text
-#, csharp-format
-msgid "Time elapsed:"
-msgstr "Uplynulý čas:"
-
-#: MainWindow~generalTabPage.Text
-#: RemoteSettingsDialog~tabPage1.Text
-#: TorrentPropertiesDialog~tabGeneral.Text
-#, csharp-format
-msgid "General"
-msgstr "Allgemein"
+msgid "Status"
+msgstr "Stav"
 
 #: MainWindow~columnHeader22.Text
 #, csharp-format
 msgid "Tier"
 msgstr "Úroveň"
-
-#: MainWindow~columnHeader20.Text
-#, csharp-format
-msgid "Announce URL"
-msgstr "Announce URL"
-
-#: MainWindow~columnHeader21.Text
-#, csharp-format
-msgid "Scrape URL"
-msgstr "Scrape URL"
-
-#: MainWindow~trackersTabPage.Text
-#: TorrentPropertiesDialog~tabTrackers.Text
-#, csharp-format
-msgid "Trackers"
-msgstr "Trackery"
-
-#: MainWindow~columnHeader1.Text
-#: TorrentLoadDialog~columnHeader1.Text
-#, csharp-format
-msgid "Path"
-msgstr "Cesta"
-
-#: MainWindow~columnHeader32.Text
-#: TorrentLoadDialog~columnHeader4.Text
-#, csharp-format
-msgid "Type"
-msgstr "Typ"
-
-#: MainWindow~columnHeader4.Text
-#, csharp-format
-msgid "%"
-msgstr "%"
-
-#: MainWindow~columnHeader17.Text
-#: OtherStrings~Skip
-#: TorrentLoadDialog~columnHeader2.Text
-#, csharp-format
-msgid "Skip"
-msgstr "Přeskočit"
-
-#: MainWindow~columnHeader5.Text
-#: TorrentLoadDialog~columnHeader3.Text
-#, csharp-format
-msgid "Priority"
-msgstr "Priorita"
-
-#: MainWindow~filesTabPage.Text
-#, csharp-format
-msgid "Files"
-msgstr "Soubory"
 
 #: MainWindow~columnHeader23.Text
 #, csharp-format
@@ -714,17 +623,12 @@ msgstr "IP"
 #: MainWindow~columnHeader24.Text
 #, csharp-format
 msgid "Hostname"
-msgstr "Hostname"
+msgstr ""
 
 #: MainWindow~columnHeader25.Text
 #, csharp-format
 msgid "Country"
 msgstr "Země"
-
-#: MainWindow~columnHeader31.Text
-#, csharp-format
-msgid "Flags"
-msgstr "Příznak"
 
 #: MainWindow~columnHeader26.Text
 #, csharp-format
@@ -737,54 +641,54 @@ msgstr "Klient"
 msgid "Progress"
 msgstr "Průběh"
 
-#: MainWindow~peersTabPage.Text
+#: MainWindow~columnHeader3.Text
+#: MainWindow~columnHeader8.Text
 #, csharp-format
-msgid "Peers"
-msgstr "Uživatelé"
+msgid "Done"
+msgstr "Dokočeno"
 
-#: MainWindow~label18.Text
+#: MainWindow~columnHeader30.Text
 #, csharp-format
-msgid "Resolution:"
-msgstr "Rozlišení:"
+msgid "Tracker"
+msgstr ""
 
-#: MainWindow~label20.Text
-#: OtherStrings~Down
+#: MainWindow~columnHeader31.Text
 #, csharp-format
-msgid "Down"
-msgstr "Down"
+msgid "Flags"
+msgstr "Příznak"
 
-#: MainWindow~label19.Text
-#: OtherStrings~Up
+#: MainWindow~columnHeader32.Text
+#: TorrentLoadDialog~columnHeader4.Text
 #, csharp-format
-msgid "Up"
-msgstr "Up"
+msgid "Type"
+msgstr "Typ"
 
-#: MainWindow~speedGraph.Text
+#: MainWindow~columnHeader33.Text
 #, csharp-format
-msgid "c2DPushGraph1"
-msgstr "c2DPushGraph1"
+msgid "Update In"
+msgstr ""
 
-#: MainWindow~groupBox1.Text
+#: MainWindow~columnHeader36.Text
 #, csharp-format
-msgid "Overall bandwidth utilisation"
-msgstr "Průměrené rychlost"
+msgid "Downloaded"
+msgstr ""
 
-#: MainWindow~speedTabPage.Text
+#: MainWindow~columnHeader4.Text
 #, csharp-format
-msgid "Speed"
-msgstr "Rychlost"
+msgid "%"
+msgstr ""
 
-#: MainWindow~statusStrip.Text
-#: TorrentLoadDialog~statusStrip1.Text
-#: UriPromptWindow~statusStrip1.Text
+#: MainWindow~columnHeader5.Text
+#: TorrentLoadDialog~columnHeader3.Text
 #, csharp-format
-msgid "statusStrip1"
-msgstr "statusStrip1"
+msgid "Priority"
+msgstr "Priorita"
 
-#: MainWindow~toolStripContainer1.Text
+#: MainWindow~configureTorrentButton.Text
+#: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
-msgid "toolStripContainer1"
-msgstr "toolStripContainer1"
+msgid "Set torrent(s) properties"
+msgstr "Nastavit vlastnosti torrent(ů)"
 
 #: MainWindow~connectButton.Text
 #: MainWindow~connectToolStripMenuItem.Text
@@ -800,105 +704,10 @@ msgstr "Připojit"
 msgid "Disconnect"
 msgstr "Odpojit"
 
-#: MainWindow~addTorrentButton.Text
+#: MainWindow~downloadProgressLabel.Text
 #, csharp-format
-msgid "Add Torrent"
-msgstr "Přidat torrent"
-
-#: MainWindow~addWebTorrentButton.Text
-#, csharp-format
-msgid "Add Torrent from URL"
-msgstr "Přidat torrent z URL"
-
-#: MainWindow~startTorrentButton.Text
-#: MainWindow~startTorrentButton.ToolTipText
-#, csharp-format
-msgid "Start torrent(s)"
-msgstr "Spustit"
-
-#: MainWindow~pauseTorrentButton.Text
-#, csharp-format
-msgid "Pause torrent(s)"
-msgstr "Zastavit"
-
-#: MainWindow~recheckTorrentButton.Text
-#: MainWindow~recheckTorrentButton.ToolTipText
-#, csharp-format
-msgid "Recheck torrent(s)"
-msgstr "Ověřit soubory"
-
-#: MainWindow~configureTorrentButton.Text
-#: MainWindow~configureTorrentButton.ToolTipText
-#, csharp-format
-msgid "Set torrent(s) properties"
-msgstr "Nastavit vlastnosti torrent(ů)"
-
-#: MainWindow~removeTorrentButton.Text
-#, csharp-format
-msgid "Remove torrent(s)"
-msgstr "Smazat"
-
-#: MainWindow~removeAndDeleteButton.Text
-#, csharp-format
-msgid "Remove and delete torrent(s)"
-msgstr "Odstranit a smazat torrent(y)"
-
-#: MainWindow~allToolStripMenuItem.Text
-#: OtherStrings~All
-#, csharp-format
-msgid "All"
-msgstr "Vše"
-
-#: MainWindow~recentlyActiveToolStripMenuItem.Text
-#, csharp-format
-msgid "Recently Active"
-msgstr "Poslední aktivita"
-
-#: MainWindow~reannounceButton.Text
-#: MainWindow~reannounceToolStripMenuItem.Text
-#: OtherStrings~Reannounce
-#, csharp-format
-msgid "Reannounce"
-msgstr "Aktualizovat tracker"
-
-#: MainWindow~openNetworkShareButton.Text
-#: MainWindow~openNetworkShareToolStripMenuItem.Text
-#, csharp-format
-msgid "Open on network share"
-msgstr "Otevřít ve sdílené složce"
-
-#: MainWindow~AltSpeedButton.Text
-#, csharp-format
-msgid "Alt Speed"
-msgstr "Alt Speed"
-
-#: MainWindow~remoteConfigureButton.Text
-#: RemoteSettingsDialog~$this.Text
-#, csharp-format
-msgid "Remote Settings"
-msgstr "Vzdálené nastavení"
-
-#: MainWindow~sessionStatsButton.Text
-#: MainWindow~statsToolStripMenuItem.Text
-#: OtherStrings~DisplayStatistics
-#, csharp-format
-msgid "Display statistics"
-msgstr "Zobrazit statistiky"
-
-#: MainWindow~addTorrentToolStripMenuItem.Text
-#, csharp-format
-msgid "Quick add torrent"
-msgstr "Přidat torrent"
-
-#: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
-#, csharp-format
-msgid "Add torrent with options"
-msgstr "Přidat torrent se změnou nastavení"
-
-#: MainWindow~addTorrentFromUrlToolStripMenuItem.Text
-#, csharp-format
-msgid "Add torrent from URL"
-msgstr "Přidat torrent z URL"
+msgid "Pieces: "
+msgstr "Části:"
 
 #: MainWindow~exitToolStripMenuItem.Text
 #: OtherStrings~Exit
@@ -911,60 +720,155 @@ msgstr "Ukončit"
 msgid "File"
 msgstr "Soubor"
 
-#: MainWindow~localSettingsToolStripMenuItem.Text
+#: MainWindow~filesTabPage.Text
 #, csharp-format
-msgid "Local settings"
-msgstr "Místní nastavení"
+msgid "Files"
+msgstr "Soubory"
 
-#: MainWindow~remoteSettingsToolStripMenuItem.Text
+#: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
-msgid "Remote settings"
-msgstr "Vzdálené nastavení"
+msgid "Find..."
+msgstr ""
+
+#: MainWindow~generalTabPage.Text
+#: RemoteSettingsDialog~tabPage1.Text
+#: TorrentPropertiesDialog~tabGeneral.Text
+#, csharp-format
+msgid "General"
+msgstr "Allgemein"
+
+#: MainWindow~groupBox1.Text
+#, csharp-format
+msgid "Overall bandwidth utilisation"
+msgstr "Průměrené rychlost"
+
+#: MainWindow~hashLabelLabel.Text
+#, csharp-format
+msgid "Hash:"
+msgstr ""
+
+#: MainWindow~helpToolStripMenuItem.Text
+#, csharp-format
+msgid "Help"
+msgstr "Nápověda"
+
+#: MainWindow~label10.Text
+#, csharp-format
+msgid "Seeds:"
+msgstr "Seedů:"
+
+#: MainWindow~label11.Text
+#, csharp-format
+msgid "Status:"
+msgstr "Stav:"
+
+#: MainWindow~label12.Text
+#, csharp-format
+msgid "Upload limit:"
+msgstr ""
+
+#: MainWindow~label13.Text
+#, csharp-format
+msgid "Leechers:"
+msgstr "Peerů:"
+
+#: MainWindow~label14.Text
+#, csharp-format
+msgid "Ratio:"
+msgstr ""
+
+#: MainWindow~label15.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
+#, csharp-format
+msgid "Comment:"
+msgstr "Komentář:"
+
+#: MainWindow~label16.Text
+#, csharp-format
+msgid "Created at:"
+msgstr "Vytvořeno:"
+
+#: MainWindow~label17.Text
+#, csharp-format
+msgid "Created by:"
+msgstr "Vytvořil:"
+
+#: MainWindow~label18.Text
+#, csharp-format
+msgid "Resolution:"
+msgstr "Rozlišení:"
+
+#: MainWindow~label19.Text
+#: OtherStrings~Up
+#, csharp-format
+msgid "Up"
+msgstr ""
+
+#: MainWindow~label20.Text
+#: OtherStrings~Down
+#, csharp-format
+msgid "Down"
+msgstr ""
+
+#: MainWindow~label3.Text
+#, csharp-format
+msgid "Started At:"
+msgstr "Spuštěno:"
+
+#: MainWindow~label4.Text
+#, csharp-format
+msgid "Remaining:"
+msgstr "Zbývá:"
+
+#: MainWindow~label5.Text
+#, csharp-format
+msgid "Uploaded:"
+msgstr "Odesláno:"
+
+#: MainWindow~label6.Text
+#, csharp-format
+msgid "Downloaded:"
+msgstr "Staženo:"
+
+#: MainWindow~label7.Text
+#, csharp-format
+msgid "Download speed:"
+msgstr "Rychlost Down:"
+
+#: MainWindow~label8.Text
+#, csharp-format
+msgid "Upload speed:"
+msgstr "Rychlost Up:"
+
+#: MainWindow~label9.Text
+#, csharp-format
+msgid "Download limit:"
+msgstr ""
+
+#: MainWindow~labelForErrorLabel.Text
+#, csharp-format
+msgid "Error:"
+msgstr "Chyba:"
 
 #: MainWindow~languageToolStripMenuItem.Text
 #, csharp-format
 msgid "Language"
 msgstr "Jazyk"
 
-#: MainWindow~optionsToolStripMenuItem.Text
+#: MainWindow~localSettingsToolStripMenuItem.Text
 #, csharp-format
-msgid "Options"
-msgstr "Nastavení"
+msgid "Local settings"
+msgstr "Místní nastavení"
 
-#: MainWindow~findToolStripMenuItem.Text
+#: MainWindow~locationLabelLabel.Text
 #, csharp-format
-msgid "Find..."
-msgstr "Find..."
+msgid "Location:"
+msgstr ""
 
-#: MainWindow~startToolStripMenuItem.Text
-#: OtherStrings~Start
+#: MainWindow~menuStrip.Text
 #, csharp-format
-msgid "Start"
-msgstr "Spustit"
-
-#: MainWindow~pauseToolStripMenuItem.Text
-#: OtherStrings~Pause
-#, csharp-format
-msgid "Pause"
-msgstr "Zastavit"
-
-#: MainWindow~recheckToolStripMenuItem.Text
-#: OtherStrings~Recheck
-#, csharp-format
-msgid "Recheck"
-msgstr "Ověřit soubory"
-
-#: MainWindow~propertiesToolStripMenuItem.Text
-#: OtherStrings~Properties
-#, csharp-format
-msgid "Properties"
-msgstr "Vlastnosti"
-
-#: MainWindow~removeDeleteToolStripMenuItem.Text
-#: OtherStrings~RemoveAndDelete
-#, csharp-format
-msgid "Remove and delete"
-msgstr "Odstranit a smazat"
+msgid "menuStrip1"
+msgstr ""
 
 #: MainWindow~moveTorrentDataToolStripMenuItem.Text
 #: OtherStrings~MoveTorrentData
@@ -972,17 +876,131 @@ msgstr "Odstranit a smazat"
 msgid "Move torrent data"
 msgstr "Přesunout data torrentu"
 
-#: MainWindow~copyInfoObjectToClipboardToolStripMenuItem.Text
-#: OtherStrings~InfoObjectToClipboard
+#: MainWindow~openNetworkShareButton.Text
+#: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
-msgid "Info object to clipboard"
-msgstr "Info objektu do schránky"
+msgid "Open on network share"
+msgstr "Otevřít ve sdílené složce"
 
-#: MainWindow~cSVInfoToClipboardToolStripMenuItem.Text
-#: OtherStrings~CopyAsCSV
+#: MainWindow~optionsToolStripMenuItem.Text
 #, csharp-format
-msgid "CSV info to clipboard"
-msgstr "CSV info do schránky"
+msgid "Options"
+msgstr "Nastavení"
+
+#: MainWindow~pauseToolStripMenuItem.Text
+#: OtherStrings~Pause
+#, csharp-format
+msgid "Pause"
+msgstr "Zastavit"
+
+#: MainWindow~pauseTorrentButton.Text
+#, csharp-format
+msgid "Pause torrent(s)"
+msgstr "Zastavit"
+
+#: MainWindow~peersTabPage.Text
+#, csharp-format
+msgid "Peers"
+msgstr "Uživatelé"
+
+#: MainWindow~percentageLabel.Text
+#, csharp-format
+msgid "_"
+msgstr "Tento text je možné vybrat"
+
+#: MainWindow~piecesInfoLabelLabel.Text
+#, csharp-format
+msgid "Pieces:"
+msgstr "Části:"
+
+#: MainWindow~projectSiteToolStripMenuItem.Text
+#, csharp-format
+msgid "Project site"
+msgstr "Stránka projektu"
+
+#: MainWindow~propertiesToolStripMenuItem.Text
+#: OtherStrings~Properties
+#, csharp-format
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: MainWindow~reannounceButton.Text
+#: MainWindow~reannounceToolStripMenuItem.Text
+#: OtherStrings~Reannounce
+#, csharp-format
+msgid "Reannounce"
+msgstr "Aktualizovat tracker"
+
+#: MainWindow~recentlyActiveToolStripMenuItem.Text
+#, csharp-format
+msgid "Recently Active"
+msgstr "Poslední aktivita"
+
+#: MainWindow~recheckToolStripMenuItem.Text
+#: OtherStrings~Recheck
+#, csharp-format
+msgid "Recheck"
+msgstr "Ověřit soubory"
+
+#: MainWindow~recheckTorrentButton.Text
+#: MainWindow~recheckTorrentButton.ToolTipText
+#, csharp-format
+msgid "Recheck torrent(s)"
+msgstr "Ověřit soubory"
+
+#: MainWindow~remoteConfigureButton.Text
+#: RemoteSettingsDialog~$this.Text
+#, csharp-format
+msgid "Remote Settings"
+msgstr "Vzdálené nastavení"
+
+#: MainWindow~remoteSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Remote settings"
+msgstr "Vzdálené nastavení"
+
+#: MainWindow~removeAndDeleteButton.Text
+#, csharp-format
+msgid "Remove and delete torrent(s)"
+msgstr "Odstranit a smazat torrent(y)"
+
+#: MainWindow~removeDeleteToolStripMenuItem.Text
+#: OtherStrings~RemoveAndDelete
+#, csharp-format
+msgid "Remove and delete"
+msgstr "Odstranit a smazat"
+
+#: MainWindow~removeTorrentButton.Text
+#, csharp-format
+msgid "Remove torrent(s)"
+msgstr "Smazat"
+
+#: MainWindow~sessionStatsButton.Text
+#: MainWindow~statsToolStripMenuItem.Text
+#: OtherStrings~DisplayStatistics
+#, csharp-format
+msgid "Display statistics"
+msgstr "Zobrazit statistiky"
+
+#: MainWindow~showDetailsPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Details panel"
+msgstr "Panel s detaily"
+
+#: MainWindow~showErrorLogToolStripMenuItem.Text
+#, csharp-format
+msgid "Show Error Log"
+msgstr "Zobrazit chybový log"
+
+#: MainWindow~speedGraph.Text
+#, csharp-format
+msgid "c2DPushGraph1"
+msgstr ""
+
+#: MainWindow~speedTabPage.Text
+#, csharp-format
+msgid "Speed"
+msgstr "Rychlost"
 
 #: MainWindow~startAllToolStripMenuItem.Text
 #: OtherStrings~StartAll
@@ -990,87 +1008,81 @@ msgstr "CSV info do schránky"
 msgid "Start all"
 msgstr "Spustit vše"
 
+#: MainWindow~startToolStripMenuItem.Text
+#: OtherStrings~Start
+#, csharp-format
+msgid "Start"
+msgstr "Spustit"
+
+#: MainWindow~startTorrentButton.Text
+#: MainWindow~startTorrentButton.ToolTipText
+#, csharp-format
+msgid "Start torrent(s)"
+msgstr "Spustit"
+
+#: MainWindow~statusStrip.Text
+#: TorrentLoadDialog~statusStrip1.Text
+#: UriPromptWindow~statusStrip1.Text
+#, csharp-format
+msgid "statusStrip1"
+msgstr ""
+
 #: MainWindow~stopAllToolStripMenuItem.Text
 #: OtherStrings~PauseAll
 #, csharp-format
 msgid "Pause all"
 msgstr "Zastavit vše"
 
+#: MainWindow~timeElapsedLabelLabel.Text
+#, csharp-format
+msgid "Time elapsed:"
+msgstr "Uplynulý čas:"
+
+#: MainWindow~toolStripContainer1.Text
+#, csharp-format
+msgid "toolStripContainer1"
+msgstr ""
+
 #: MainWindow~torrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Torrent"
-msgstr "Torrent"
+msgstr ""
 
-#: MainWindow~showDetailsPanelToolStripMenuItem.Text
+#: MainWindow~trackersTabPage.Text
+#: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
-msgid "Details panel"
-msgstr "Panel s detaily"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr "Filtrování"
+msgid "Trackers"
+msgstr "Trackery"
 
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
 msgid "View"
 msgstr "Zobrazit"
 
-#: MainWindow~showErrorLogToolStripMenuItem.Text
+#: MoveDataPrompt~$this.Text
 #, csharp-format
-msgid "Show Error Log"
-msgstr "Zobrazit chybový log"
-
-#: MainWindow~projectSiteToolStripMenuItem.Text
-#, csharp-format
-msgid "Project site"
-msgstr "Stránka projektu"
-
-#: MainWindow~checkForNewVersionToolStripMenuItem.Text
-#, csharp-format
-msgid "Check for new version"
-msgstr "Zjistit novější verzi"
-
-#: MainWindow~aboutToolStripMenuItem.Text
-#, csharp-format
-msgid "About Transmission Remote"
-msgstr "O aplikaci Transmission Remote"
-
-#: MainWindow~helpToolStripMenuItem.Text
-#, csharp-format
-msgid "Help"
-msgstr "Nápověda"
-
-#: MainWindow~menuStrip.Text
-#, csharp-format
-msgid "menuStrip1"
-msgstr "menuStrip1"
-
-#: MainWindow~notifyIcon.Text
-#: MainWindow~$this.Text
-#, csharp-format
-msgid "Transmission Remote"
-msgstr "Transmission Remote"
-
-#: MoveDataPrompt~label1.Text
-#, csharp-format
-msgid "Destination directory: "
-msgstr "Cílová složka:"
+msgid "MoveDataPrompt"
+msgstr ""
 
 #: MoveDataPrompt~button1.Text
 #, csharp-format
 msgid "Move"
 msgstr "Přesunout"
 
-#: MoveDataPrompt~$this.Text
+#: MoveDataPrompt~label1.Text
 #, csharp-format
-msgid "MoveDataPrompt"
-msgstr "MoveDataPrompt"
+msgid "Destination directory: "
+msgstr "Cílová složka:"
 
 #: OtherStrings~Author
 #, csharp-format
 msgid "Author"
 msgstr "Autor"
+
+#: OtherStrings~BandwidthAllocation
+#, csharp-format
+msgid "Bandwidth allocation"
+msgstr "Šířka pásma"
 
 #: OtherStrings~Broken
 #, csharp-format
@@ -1080,7 +1092,12 @@ msgstr "Chyba"
 #: OtherStrings~Build
 #, csharp-format
 msgid "Build"
-msgstr "Build"
+msgstr ""
+
+#: OtherStrings~Byte
+#, csharp-format
+msgid "Byte"
+msgstr ""
 
 #: OtherStrings~Checking
 #, csharp-format
@@ -1097,6 +1114,11 @@ msgstr "Dokončeno"
 msgid "Confirm"
 msgstr "Potvrdit"
 
+#: OtherStrings~ConfirmMultipleRecheck
+#, csharp-format
+msgid "You have selected {0} torrents for recheck. It may take a long time. Are you sure?"
+msgstr ""
+
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?"
@@ -1106,6 +1128,16 @@ msgstr "Vybral jste {0} torrentů k odstranění. Chcete pokračovat?"
 #, csharp-format
 msgid "You have selected {0} torrents for removal. Are you sure?{1}ALL THE DATA FROM THESE TORRENTS WILL BE REMOVED."
 msgstr "Vybral jste {0} torrentů k odstranění. Chcete pokračovat? {1}Všechna stažená data budou smazána"
+
+#: OtherStrings~ConfirmSaveServer
+#, csharp-format
+msgid "\"{0}\" server settings have been changed. Would you like to save it?"
+msgstr ""
+
+#: OtherStrings~ConfirmSingleRecheck
+#, csharp-format
+msgid "Do you want to recheck {0}? It may take a long time."
+msgstr ""
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1132,6 +1164,11 @@ msgstr "Připojen k"
 msgid "Connecting"
 msgstr "Připojuji"
 
+#: OtherStrings~Day
+#, csharp-format
+msgid "Day"
+msgstr "Den"
+
 #: OtherStrings~Disconnected
 #, csharp-format
 msgid "Disconnected"
@@ -1145,17 +1182,27 @@ msgstr "Odpojen. Překročet limit opakování při chybných požadavcích."
 #: OtherStrings~Download
 #, csharp-format
 msgid "Download"
-msgstr "Download"
+msgstr ""
+
+#: OtherStrings~DownloadLimit
+#, csharp-format
+msgid "Download Limit"
+msgstr "Download limit"
 
 #: OtherStrings~DownloadedValid
 #, csharp-format
 msgid "{0} ({1} valid)"
-msgstr "{0} ({1} valid)"
+msgstr ""
 
 #: OtherStrings~Downloading
 #, csharp-format
 msgid "Downloading"
 msgstr "Stahuji"
+
+#: OtherStrings~EmptyFile
+#, csharp-format
+msgid "Empty file"
+msgstr ""
 
 #: OtherStrings~Error
 #, csharp-format
@@ -1167,6 +1214,21 @@ msgstr "Chyba"
 msgid "Failed request"
 msgstr "Chybný požadavek"
 
+#: OtherStrings~GeoipInitError
+#, csharp-format
+msgid "GeoIP init error ({0})"
+msgstr ""
+
+#: OtherStrings~Gigabyte
+#, csharp-format
+msgid "Gigabyte"
+msgstr ""
+
+#: OtherStrings~GigabyteShort
+#, csharp-format
+msgid "GB"
+msgstr ""
+
 #: OtherStrings~High
 #, csharp-format
 msgid "High"
@@ -1177,15 +1239,45 @@ msgstr "Vysoký"
 msgid "High priority"
 msgstr "Vysoká priorita"
 
+#: OtherStrings~Hour
+#, csharp-format
+msgid "Hour"
+msgstr "Hodina"
+
+#: OtherStrings~HttpError
+#, csharp-format
+msgid "Daemon try to download something, but the http result is:{0}{1}"
+msgstr ""
+
+#: OtherStrings~Incomplete
+#, csharp-format
+msgid "Incomplete"
+msgstr "Nedokočeno"
+
 #: OtherStrings~Info
 #, csharp-format
 msgid "Info"
-msgstr "Info"
+msgstr ""
+
+#: OtherStrings~InfoObjectToClipboard
+#, csharp-format
+msgid "Info object to clipboard"
+msgstr "Info objektu do schránky"
 
 #: OtherStrings~InputAccepted
 #, csharp-format
 msgid "Input accepted"
 msgstr "Vstup přijat"
+
+#: OtherStrings~Kilobyte
+#, csharp-format
+msgid "Kilobyte"
+msgstr ""
+
+#: OtherStrings~KilobyteShort
+#, csharp-format
+msgid "KB"
+msgstr ""
 
 #: OtherStrings~LatestVersion
 #, csharp-format
@@ -1197,6 +1289,11 @@ msgstr "Používáte poslední verzi ({0}.{1})."
 msgid "Latest version check failed"
 msgstr "Ověření verze selhalo"
 
+#: OtherStrings~LoadingFile
+#, csharp-format
+msgid "Loading {0}..."
+msgstr "Načítám {0}..."
+
 #: OtherStrings~Low
 #, csharp-format
 msgid "Low"
@@ -1207,10 +1304,50 @@ msgstr "Nízký"
 msgid "Low priority"
 msgstr "Nízká priorita"
 
+#: OtherStrings~MappingSample
+#, csharp-format
+msgid "Sample mapping:"
+msgstr ""
+
+#: OtherStrings~Megabyte
+#, csharp-format
+msgid "Megabyte"
+msgstr ""
+
+#: OtherStrings~MegabyteShort
+#, csharp-format
+msgid "MB"
+msgstr ""
+
+#: OtherStrings~Minute
+#, csharp-format
+msgid "Minute"
+msgstr "Minuta"
+
+#: OtherStrings~MoveMultipleTorrents
+#, csharp-format
+msgid "Move multiple torrent data"
+msgstr "Přesunout data torrentů"
+
+#: OtherStrings~MoveX
+#, csharp-format
+msgid "Move {0}"
+msgstr "Přesunout {0}"
+
+#: OtherStrings~MultipleTorrentProperties
+#, csharp-format
+msgid "Multiple Torrent Properties"
+msgstr "Vlastnosti torrentů"
+
 #: OtherStrings~MustBeConnected
 #, csharp-format
 msgid "You must be connected to add torrents. Would you like to connect now?"
 msgstr "Musíte být připojený pro přidávání torrentů. Chcete se nyní připojit?"
+
+#: OtherStrings~NewTorrentIs
+#, csharp-format
+msgid "New torrent {0}."
+msgstr "Nový torrent {0}."
 
 #: OtherStrings~NewerVersion
 #, csharp-format
@@ -1221,6 +1358,16 @@ msgstr "Je k dispozici novější verze ({0}.{1}). Chcete navštívit stránku k
 #, csharp-format
 msgid "No"
 msgstr "Ne"
+
+#: OtherStrings~NoHostnameSet
+#, csharp-format
+msgid "No hostname has been set."
+msgstr ""
+
+#: OtherStrings~NoUpgradeAvailable
+#, csharp-format
+msgid "No upgrade available"
+msgstr "Není k dispozici žádná aktualizace"
 
 #: OtherStrings~Normal
 #, csharp-format
@@ -1237,155 +1384,40 @@ msgstr "Normální priorita"
 msgid "Not connected"
 msgstr "Nepřipojen"
 
-#: OtherStrings~NoUpgradeAvailable
-#, csharp-format
-msgid "No upgrade available"
-msgstr "Není k dispozici žádná aktualizace"
-
 #: OtherStrings~OpenFileFilter
 #, csharp-format
 msgid "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
-msgstr "BitTorrent Metafile (*.torrent)|*.torrent|All Files (*.*)|*.*"
+msgstr ""
+
+#: OtherStrings~OpenImageFilter
+#, csharp-format
+msgid "PNG Image|*.png"
+msgstr ""
+
+#: OtherStrings~OpenNetworkShare
+#, csharp-format
+msgid "Open on Network Share"
+msgstr "Otevřít sdílenou složku"
+
+#: OtherStrings~Password
+#, csharp-format
+msgid "Password"
+msgstr ""
 
 #: OtherStrings~Paused
 #, csharp-format
 msgid "Paused"
 msgstr "Zastaveno"
 
-#: OtherStrings~Revision
+#: OtherStrings~Pieces
 #, csharp-format
-msgid "Revision"
-msgstr "Revize"
+msgid "Pieces"
+msgstr "Části"
 
-#: OtherStrings~RpcVersion
+#: OtherStrings~PiecesInfo
 #, csharp-format
-msgid "RpcVersion"
-msgstr "RpcVersion"
-
-#: OtherStrings~RpcVersionMinimum
-#, csharp-format
-msgid "RpcVersionMinimum"
-msgstr "RpcVersionMinimum"
-
-#: OtherStrings~Seeding
-#, csharp-format
-msgid "Seeding"
-msgstr "Seeduji"
-
-#: OtherStrings~SelectAll
-#, csharp-format
-msgid "Select all"
-msgstr "Vybrat vše"
-
-#: OtherStrings~TheTorrentHasFinishedDownloading
-#, csharp-format
-msgid "This torrent is now complete"
-msgstr "Úloha dokončena"
-
-#: OtherStrings~Torrents
-#, csharp-format
-msgid "Torrents"
-msgstr "Torrentů"
-
-#: OtherStrings~UnableToParse
-#, csharp-format
-msgid "Unable to parse the server response"
-msgstr "Nelze zpracovat odpověď serveru"
-
-#: OtherStrings~UnknownNegativeResult
-#, csharp-format
-msgid "Unknown (negative)"
-msgstr "Neznámý (negative)"
-
-#: OtherStrings~UnsuccessfulRequest
-#, csharp-format
-msgid "Unsuccessful request"
-msgstr "Neúspěšný požadavek"
-
-#: OtherStrings~UpgradeAvailable
-#, csharp-format
-msgid "Upgrade available"
-msgstr "Dostupná aktualizace"
-
-#: OtherStrings~WaitingForInput
-#, csharp-format
-msgid "Waiting for input"
-msgstr "Čekám na vstup"
-
-#: OtherStrings~WaitingToCheck
-#, csharp-format
-msgid "Waiting to check"
-msgstr "Čekám na ověření"
-
-#: OtherStrings~XOfYConnected
-#, csharp-format
-msgid "{0} of {1} connected"
-msgstr "{0} z {1} připojeno"
-
-#: OtherStrings~Yes
-#, csharp-format
-msgid "Yes"
-msgstr "Ano"
-
-#: OtherStrings~Incomplete
-#, csharp-format
-msgid "Incomplete"
-msgstr "Nedokočeno"
-
-#: OtherStrings~Byte
-#, csharp-format
-msgid "Byte"
-msgstr "Byte"
-
-#: OtherStrings~Day
-#, csharp-format
-msgid "Day"
-msgstr "Den"
-
-#: OtherStrings~Gigabyte
-#, csharp-format
-msgid "Gigabyte"
-msgstr "Gigabyte"
-
-#: OtherStrings~GigabyteShort
-#, csharp-format
-msgid "GB"
-msgstr "GB"
-
-#: OtherStrings~Hour
-#, csharp-format
-msgid "Hour"
-msgstr "Hodina"
-
-#: OtherStrings~Kilobyte
-#, csharp-format
-msgid "Kilobyte"
-msgstr "Kilobyte"
-
-#: OtherStrings~KilobyteShort
-#, csharp-format
-msgid "KB"
-msgstr "KB"
-
-#: OtherStrings~Megabyte
-#, csharp-format
-msgid "Megabyte"
-msgstr "Megabyte"
-
-#: OtherStrings~MegabyteShort
-#, csharp-format
-msgid "MB"
-msgstr "MB"
-
-#: OtherStrings~Minute
-#, csharp-format
-msgid "Minute"
-msgstr "Minuta"
-
-#: OtherStrings~Second
-#, csharp-format
-msgid "Second"
-msgstr "Sekund"
+msgid "{0} x {1} (have {2})"
+msgstr ""
 
 #: OtherStrings~PortIsClosed
 #, csharp-format
@@ -1402,165 +1434,175 @@ msgstr "Příchozí port deamona je OTEVŘENÝ"
 msgid "Port test result"
 msgstr "Výsledek testu portu"
 
-#: OtherStrings~DownloadLimit
-#, csharp-format
-msgid "Download Limit"
-msgstr "Download limit"
-
-#: OtherStrings~Unlimited
-#, csharp-format
-msgid "Unlimited"
-msgstr "Neomezeno"
-
-#: OtherStrings~UploadLimit
-#, csharp-format
-msgid "Upload Limit"
-msgstr "Upload limit"
-
 #: OtherStrings~Querying
-#: StatsDialog~secondsActiveValue2.Text
-#: StatsDialog~sessionCountValue2.Text
-#: StatsDialog~filesAddedValue2.Text
-#: StatsDialog~uploadedBytesValue2.Text
-#: StatsDialog~downloadedBytesValue2.Text
-#: StatsDialog~secondsActiveValue1.Text
-#: StatsDialog~sessionCountValue1.Text
-#: StatsDialog~filesAddedValue1.Text
-#: StatsDialog~uploadedBytesValue1.Text
 #: StatsDialog~downloadedBytesValue1.Text
+#: StatsDialog~downloadedBytesValue2.Text
+#: StatsDialog~filesAddedValue1.Text
+#: StatsDialog~filesAddedValue2.Text
+#: StatsDialog~secondsActiveValue1.Text
+#: StatsDialog~secondsActiveValue2.Text
+#: StatsDialog~sessionCountValue1.Text
+#: StatsDialog~sessionCountValue2.Text
+#: StatsDialog~uploadedBytesValue1.Text
+#: StatsDialog~uploadedBytesValue2.Text
 #, csharp-format
 msgid "Querying..."
 msgstr "Získávám..."
 
-#: OtherStrings~Updating
+#: OtherStrings~Revision
 #, csharp-format
-msgid "Updating..."
-msgstr "Aktualizuji..."
+msgid "Revision"
+msgstr "Revize"
 
-#: OtherStrings~XInBlocklist
+#: OtherStrings~RpcVersion
 #, csharp-format
-msgid "{0} in blocklist."
-msgstr "{0} v blokaci"
+msgid "RpcVersion"
+msgstr ""
 
-#: OtherStrings~Pieces
+#: OtherStrings~RpcVersionMinimum
 #, csharp-format
-msgid "Pieces"
-msgstr "Části"
+msgid "RpcVersionMinimum"
+msgstr ""
 
-#: OtherStrings~OpenNetworkShare
+#: OtherStrings~Second
 #, csharp-format
-msgid "Open on Network Share"
-msgstr "Otevřít sdílenou složku"
+msgid "Second"
+msgstr "Sekund"
 
-#: OtherStrings~NewTorrentIs
+#: OtherStrings~Seeding
 #, csharp-format
-msgid "New torrent {0}."
-msgstr "Nový torrent {0}."
+msgid "Seeding"
+msgstr "Seeduji"
 
-#: OtherStrings~MoveMultipleTorrents
+#: OtherStrings~SelectAll
 #, csharp-format
-msgid "Move multiple torrent data"
-msgstr "Přesunout data torrentů"
+msgid "Select all"
+msgstr "Vybrat vše"
 
-#: OtherStrings~MoveX
+#: OtherStrings~SpeedResolutions
 #, csharp-format
-msgid "Move {0}"
-msgstr "Přesunout {0}"
+msgid "5 sec|10 sec|30 sec|5 min"
+msgstr ""
 
-#: OtherStrings~LoadingFile
+#: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
-msgid "Loading {0}..."
-msgstr "Načítám {0}..."
+msgid "This torrent is now complete"
+msgstr "Úloha dokončena"
 
-#: OtherStrings~BandwidthAllocation
+#: OtherStrings~TorrentFinished
 #, csharp-format
-msgid "Bandwidth allocation"
-msgstr "Šířka pásma"
+msgid "This torrent has finished downloading."
+msgstr ""
 
-#: OtherStrings~MultipleTorrentProperties
+#: OtherStrings~Torrents
 #, csharp-format
-msgid "Multiple Torrent Properties"
-msgstr "Vlastnosti torrentů"
-
-#: OtherStrings~Unknown
-#, csharp-format
-msgid "Unknown"
-msgstr "Neznámý"
+msgid "Torrents"
+msgstr "Torrentů"
 
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
 msgstr "Nelze otevřít"
 
-#: OtherStrings~EmptyFile
+#: OtherStrings~UnableToParse
 #, csharp-format
-msgid "Empty file"
-msgstr "Empty file"
+msgid "Unable to parse the server response"
+msgstr "Nelze zpracovat odpověď serveru"
 
-#: OtherStrings~GeoipInitError
+#: OtherStrings~Unknown
 #, csharp-format
-msgid "GeoIP init error ({0})"
-msgstr "GeoIP init error ({0})"
+msgid "Unknown"
+msgstr "Neznámý"
+
+#: OtherStrings~UnknownNegativeResult
+#, csharp-format
+msgid "Unknown (negative)"
+msgstr "Neznámý (negative)"
 
 #: OtherStrings~UnknownResponseTag
 #, csharp-format
 msgid "Unknown response tag"
-msgstr "Unknown response tag"
+msgstr ""
+
+#: OtherStrings~Unlimited
+#, csharp-format
+msgid "Unlimited"
+msgstr "Neomezeno"
+
+#: OtherStrings~UnsuccessfulRequest
+#, csharp-format
+msgid "Unsuccessful request"
+msgstr "Neúspěšný požadavek"
+
+#: OtherStrings~Updating
+#, csharp-format
+msgid "Updating..."
+msgstr "Aktualizuji..."
+
+#: OtherStrings~UpgradeAvailable
+#, csharp-format
+msgid "Upgrade available"
+msgstr "Dostupná aktualizace"
+
+#: OtherStrings~UploadLimit
+#, csharp-format
+msgid "Upload Limit"
+msgstr "Upload limit"
+
+#: OtherStrings~WaitingForInput
+#, csharp-format
+msgid "Waiting for input"
+msgstr "Čekám na vstup"
+
+#: OtherStrings~WaitingToCheck
+#, csharp-format
+msgid "Waiting to check"
+msgstr "Čekám na ověření"
 
 #: OtherStrings~XConnected
 #, csharp-format
 msgid "{0} connected"
-msgstr "{0} connected"
+msgstr ""
 
-#: OtherStrings~PiecesInfo
+#: OtherStrings~XInBlocklist
 #, csharp-format
-msgid "{0} x {1} (have {2})"
-msgstr "{0} x {1} (have {2})"
+msgid "{0} in blocklist."
+msgstr "{0} v blokaci"
 
-#: OtherStrings~SpeedResolutions
+#: OtherStrings~XOfYConnected
 #, csharp-format
-msgid "5 sec|10 sec|30 sec|5 min"
-msgstr "5 sec|10 sec|30 sec|5 min"
+msgid "{0} of {1} connected"
+msgstr "{0} z {1} připojeno"
 
-#: OtherStrings~Password
+#: OtherStrings~Yes
 #, csharp-format
-msgid "Password"
-msgstr "Password"
-
-#: RemoteSettingsDialog~label1.Text
-#, csharp-format
-msgid "Download To:"
-msgstr "Cílová složka:"
-
-#: RemoteSettingsDialog~limitUploadCheckBox.Text
-#, csharp-format
-msgid "Limit upload"
-msgstr "Upload limit"
-
-#: RemoteSettingsDialog~limitDownloadCheckBox.Text
-#, csharp-format
-msgid "Limit download"
-msgstr "Download limit"
-
-#: RemoteSettingsDialog~label2.Text
-#, csharp-format
-msgid "Incoming port:"
-msgstr "Příchozí port:"
+msgid "Yes"
+msgstr "Ano"
 
 #: RemoteSettingsDialog~PEXcheckBox.Text
 #, csharp-format
 msgid "Enable Peer Exchange"
 msgstr "Zapnout Peer Exchange"
 
-#: RemoteSettingsDialog~label4.Text
+#: RemoteSettingsDialog~altSpeedLimitEnable.Text
 #, csharp-format
-msgid "Peer Limit"
-msgstr "Limit peerů"
+msgid "Enable alternate speed limits"
+msgstr "Zapnout alternativní limity"
 
-#: RemoteSettingsDialog~portForwardCheckBox.Text
+#: RemoteSettingsDialog~altTimeConstraintEnabled.Text
 #, csharp-format
-msgid "Enable UPnP"
-msgstr "Zapnout UPnP"
+msgid "Time constraint"
+msgstr "Časové omezení"
+
+#: RemoteSettingsDialog~blocklistEnabledCheckBox.Text
+#, csharp-format
+msgid "Blocklist enabled"
+msgstr "Zapnout blocklist"
+
+#: RemoteSettingsDialog~dhtEnabled.Text
+#, csharp-format
+msgid "Enable Distributed Hash Table (DHT)"
+msgstr "Zapnout Distributed Hash Table (DHT)"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items
 #, csharp-format
@@ -1577,25 +1619,92 @@ msgstr "Povoleno"
 msgid "required"
 msgstr "Vynuceno"
 
+#: RemoteSettingsDialog~label1.Text
+#, csharp-format
+msgid "Download To:"
+msgstr "Cílová složka:"
+
+#: RemoteSettingsDialog~label10.Text
+#: RemoteSettingsDialog~label5.Text
+#: RemoteSettingsDialog~label6.Text
+#: RemoteSettingsDialog~label9.Text
+#: TorrentPropertiesDialog~label1.Text
+#: TorrentPropertiesDialog~label2.Text
+#, csharp-format
+msgid "KB/s"
+msgstr ""
+
+#: RemoteSettingsDialog~label11.Text
+#, csharp-format
+msgid "Down:"
+msgstr ""
+
+#: RemoteSettingsDialog~label12.Text
+#, csharp-format
+msgid "Up:"
+msgstr ""
+
+#: RemoteSettingsDialog~label13.Text
+#: RemoteSettingsDialog~label14.Text
+#, csharp-format
+msgid ":"
+msgstr ""
+
+#: RemoteSettingsDialog~label2.Text
+#, csharp-format
+msgid "Incoming port:"
+msgstr "Příchozí port:"
+
 #: RemoteSettingsDialog~label3.Text
 #, csharp-format
 msgid "Encryption:"
 msgstr "Šifrování:"
 
-#: RemoteSettingsDialog~label6.Text
-#: RemoteSettingsDialog~label5.Text
-#: RemoteSettingsDialog~label9.Text
-#: RemoteSettingsDialog~label10.Text
-#: TorrentPropertiesDialog~label1.Text
-#: TorrentPropertiesDialog~label2.Text
+#: RemoteSettingsDialog~label4.Text
 #, csharp-format
-msgid "KB/s"
-msgstr "KB/s"
+msgid "Peer Limit"
+msgstr "Limit peerů"
 
-#: RemoteSettingsDialog~dhtEnabled.Text
+#: RemoteSettingsDialog~label7.Text
+#: TorrentPropertiesDialog~label7.Text
 #, csharp-format
-msgid "Enable Distributed Hash Table (DHT)"
-msgstr "Zapnout Distributed Hash Table (DHT)"
+msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
+msgstr "Zpřístupnění některých možností možná vyžaduje aktualizaci daemona"
+
+#: RemoteSettingsDialog~label8.Text
+#, csharp-format
+msgid "to"
+msgstr "do"
+
+#: RemoteSettingsDialog~limitDownloadCheckBox.Text
+#, csharp-format
+msgid "Limit download"
+msgstr "Download limit"
+
+#: RemoteSettingsDialog~limitUploadCheckBox.Text
+#, csharp-format
+msgid "Limit upload"
+msgstr "Upload limit"
+
+#: RemoteSettingsDialog~portForwardCheckBox.Text
+#, csharp-format
+msgid "Enable UPnP"
+msgstr "Zapnout UPnP"
+
+#: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
+#, csharp-format
+msgid "Seed Ratio Limit"
+msgstr ""
+
+#: RemoteSettingsDialog~tabPage2.Text
+#, csharp-format
+msgid "Limits"
+msgstr "Limity"
+
+#: RemoteSettingsDialog~tabPage3.Text
+#, csharp-format
+msgid "Alternate limits"
+msgstr "Alternativní limity"
 
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
@@ -1607,92 +1716,10 @@ msgstr "Otestovat port"
 msgid "Update Blocklist"
 msgstr "Aktualizovat blocklist"
 
-#: RemoteSettingsDialog~blocklistEnabledCheckBox.Text
+#: StatsDialog~$this.Text
 #, csharp-format
-msgid "Blocklist enabled"
-msgstr "Zapnout blocklist"
-
-#: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
-#, csharp-format
-msgid "Seed Ratio Limit"
-msgstr "Seed Ratio Limit"
-
-#: RemoteSettingsDialog~tabPage2.Text
-#, csharp-format
-msgid "Limits"
-msgstr "Limity"
-
-#: RemoteSettingsDialog~label14.Text
-#: RemoteSettingsDialog~label13.Text
-#, csharp-format
-msgid ":"
-msgstr ":"
-
-#: RemoteSettingsDialog~label12.Text
-#, csharp-format
-msgid "Up:"
-msgstr "Up:"
-
-#: RemoteSettingsDialog~label11.Text
-#, csharp-format
-msgid "Down:"
-msgstr "Down:"
-
-#: RemoteSettingsDialog~label8.Text
-#, csharp-format
-msgid "to"
-msgstr "do"
-
-#: RemoteSettingsDialog~altTimeConstraintEnabled.Text
-#, csharp-format
-msgid "Time constraint"
-msgstr "Časové omezení"
-
-#: RemoteSettingsDialog~altSpeedLimitEnable.Text
-#, csharp-format
-msgid "Enable alternate speed limits"
-msgstr "Zapnout alternativní limity"
-
-#: RemoteSettingsDialog~tabPage3.Text
-#, csharp-format
-msgid "Alternate limits"
-msgstr "Alternativní limity"
-
-#: RemoteSettingsDialog~label7.Text
-#: TorrentPropertiesDialog~label7.Text
-#, csharp-format
-msgid "NOTE: Availability of some options may require a transmission-daemon upgrade."
-msgstr "Zpřístupnění některých možností možná vyžaduje aktualizaci daemona"
-
-#: StatsDialog~downloadedBytesLabel2.Text
-#: StatsDialog~downloadedBytesLabel1.Text
-#, csharp-format
-msgid "Downloaded bytes:"
-msgstr "Celkem staženo (byte):"
-
-#: StatsDialog~uploadedBytesLabel2.Text
-#: StatsDialog~uploadedBytesLabel1.Text
-#, csharp-format
-msgid "Uploaded bytes:"
-msgstr "Celkem odesláno:"
-
-#: StatsDialog~secondsActiveLabel2.Text
-#: StatsDialog~secondsActiveLabel1.Text
-#, csharp-format
-msgid "Seconds active"
-msgstr "Aktivní (sec)"
-
-#: StatsDialog~sessionCountLabel2.Text
-#: StatsDialog~sessionCountLabel1.Text
-#, csharp-format
-msgid "Session Count"
-msgstr "Počet relací"
-
-#: StatsDialog~filesAddedLabel2.Text
-#: StatsDialog~filesAddedLabel1.Text
-#, csharp-format
-msgid "Files added:"
-msgstr "Přidáno úloh:"
+msgid "Transmission Daemon Statistics"
+msgstr "Transmission Daemon Statistiky"
 
 #: StatsDialog~CumulativeGroupBox.Text
 #, csharp-format
@@ -1704,80 +1731,152 @@ msgstr "Celkové statistiky"
 msgid "Current Session Stats"
 msgstr "Statistiky relace"
 
-#: StatsDialog~$this.Text
+#: StatsDialog~downloadedBytesLabel1.Text
+#: StatsDialog~downloadedBytesLabel2.Text
 #, csharp-format
-msgid "Transmission Daemon Statistics"
-msgstr "Transmission Daemon Statistiky"
+msgid "Downloaded bytes:"
+msgstr "Celkem staženo (byte):"
 
-#: TorrentLoadDialog~toolStripStatusLabel1.Text
+#: StatsDialog~filesAddedLabel1.Text
+#: StatsDialog~filesAddedLabel2.Text
 #, csharp-format
-msgid "toolStripStatusLabel1"
-msgstr "toolStripStatusLabel1"
+msgid "Files added:"
+msgstr "Přidáno úloh:"
 
-#: TorrentLoadDialog~checkBox2.Text
+#: StatsDialog~secondsActiveLabel1.Text
+#: StatsDialog~secondsActiveLabel2.Text
 #, csharp-format
-msgid "Alternate peer limit: "
-msgstr "Alternativní peer limit"
+msgid "Seconds active"
+msgstr "Aktivní (sec)"
+
+#: StatsDialog~sessionCountLabel1.Text
+#: StatsDialog~sessionCountLabel2.Text
+#, csharp-format
+msgid "Session Count"
+msgstr "Počet relací"
+
+#: StatsDialog~uploadedBytesLabel1.Text
+#: StatsDialog~uploadedBytesLabel2.Text
+#, csharp-format
+msgid "Uploaded bytes:"
+msgstr "Celkem odesláno:"
+
+#: TorrentLoadDialog~$this.Text
+#, csharp-format
+msgid "TorrentLoadDialog"
+msgstr ""
+
+#: TorrentLoadDialog~DateLabelLabel.Text
+#, csharp-format
+msgid "Date:"
+msgstr ""
+
+#: TorrentLoadDialog~NameLabelLabel.Text
+#, csharp-format
+msgid "Name:"
+msgstr ""
+
+#: TorrentLoadDialog~OkButton.Text
+#: TorrentPropertiesDialog~button1.Text
+#: UriPromptWindow~button1.Text
+#, csharp-format
+msgid "OK"
+msgstr ""
+
+#: TorrentLoadDialog~PropertiesGroupBox.Text
+#, csharp-format
+msgid "Torrent properties"
+msgstr ""
+
+#: TorrentLoadDialog~SelectAllButton.Text
+#, csharp-format
+msgid "Select All"
+msgstr ""
+
+#: TorrentLoadDialog~SelectInvertButton.Text
+#, csharp-format
+msgid "Select Invert"
+msgstr ""
+
+#: TorrentLoadDialog~SelectNoneButton.Text
+#, csharp-format
+msgid "Select None"
+msgstr ""
+
+#: TorrentLoadDialog~SizelabelLabel.Text
+#, csharp-format
+msgid "Size:"
+msgstr ""
+
+#: TorrentLoadDialog~TorrentContentsGroupBox.Text
+#, csharp-format
+msgid "Torrent Contents"
+msgstr ""
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
 msgid "Alternate destination directory: "
 msgstr "Alternativní cílová složka:"
 
-#: TorrentLoadDialog~button1.Text
-#: TorrentPropertiesDialog~button1.Text
-#: UriPromptWindow~button1.Text
+#: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
-msgid "OK"
-msgstr "OK"
+msgid "Alternate peer limit: "
+msgstr "Alternativní peer limit"
 
-#: TorrentLoadDialog~$this.Text
+#: TorrentLoadDialog~checkBox3.Text
 #, csharp-format
-msgid "TorrentLoadDialog"
-msgstr "TorrentLoadDialog"
+msgid "Start torrent"
+msgstr ""
 
-#: TorrentPropertiesDialog~label4.Text
+#: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
-msgid "Bandwidth priority:"
-msgstr "Priorita:"
-
-#: TorrentPropertiesDialog~honorsSessionLimits.Text
-#, csharp-format
-msgid "Honors session limits"
-msgstr "Respektovat limity session"
-
-#: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
-#, csharp-format
-msgid "Limit seed ratio"
-msgstr "Limit seed ratio"
-
-#: TorrentPropertiesDialog~label3.Text
-#, csharp-format
-msgid "Maximum peers"
-msgstr "Maximum Peerů"
-
-#: TorrentPropertiesDialog~uploadLimitEnableField.Text
-#, csharp-format
-msgid "Limit upload rate"
-msgstr "Upload limit"
-
-#: TorrentPropertiesDialog~downloadLimitEnableField.Text
-#, csharp-format
-msgid "Limit download rate"
-msgstr "Download limit"
+msgid "toolStripStatusLabel1"
+msgstr ""
 
 #: TorrentPropertiesDialog~$this.Text
 #, csharp-format
 msgid "TorrentPropertiesDialog"
 msgstr "Vlastnosti torrentu"
 
-#: UriPromptWindow~toolStripStatusLabel1.Text
+#: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
-msgid "Waiting for URL..."
-msgstr "Čekám na URL..."
+msgid "Limit download rate"
+msgstr "Download limit"
+
+#: TorrentPropertiesDialog~honorsSessionLimits.Text
+#, csharp-format
+msgid "Honors session limits"
+msgstr "Respektovat limity session"
+
+#: TorrentPropertiesDialog~label3.Text
+#, csharp-format
+msgid "Maximum peers"
+msgstr "Maximum Peerů"
+
+#: TorrentPropertiesDialog~label4.Text
+#, csharp-format
+msgid "Bandwidth priority:"
+msgstr "Priorita:"
+
+#: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
+#, csharp-format
+msgid "Limit seed ratio"
+msgstr ""
+
+#: TorrentPropertiesDialog~uploadLimitEnableField.Text
+#, csharp-format
+msgid "Limit upload rate"
+msgstr "Upload limit"
 
 #: UriPromptWindow~$this.Text
 #, csharp-format
 msgid "Upload by URL"
 msgstr "Přidat torrent z URL"
 
+#: UriPromptWindow~toolStripStatusLabel1.Text
+#, csharp-format
+msgid "Waiting for URL..."
+msgstr "Čekám na URL..."
+
+#~ msgid "Scrape URL"
+#~ msgstr "Scrape URL"

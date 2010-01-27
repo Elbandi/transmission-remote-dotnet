@@ -94,7 +94,7 @@ namespace TransmissionRemoteDotnet
         private void TorrentPropertiesDialog_Load(object sender, EventArgs e)
         {
             Torrent firstTorrent = (Torrent)selections[0];
-            this.Text = selections.Count == 1 ? firstTorrent.Name : OtherStrings.MultipleTorrentProperties;
+            this.Text = selections.Count == 1 ? firstTorrent.TorrentName : OtherStrings.MultipleTorrentProperties;
             uploadLimitField.Value = firstTorrent.SpeedLimitUp >= 0 && firstTorrent.SpeedLimitUp <= uploadLimitField.Maximum ? firstTorrent.SpeedLimitUp : 0;
             downloadLimitField.Value = firstTorrent.SpeedLimitDown >= 0 && firstTorrent.SpeedLimitDown <= downloadLimitField.Maximum ? firstTorrent.SpeedLimitDown : 0;
             uploadLimitField.Enabled = uploadLimitEnableField.Checked = firstTorrent.SpeedLimitUpEnabled;

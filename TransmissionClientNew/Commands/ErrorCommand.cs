@@ -71,6 +71,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 {
                     form.toolStripStatusLabel.Text = this.StatusBarMessage;
                     Program.Connected = false;
+                    form.connectButton.Enabled = form.connectToolStripMenuItem.Enabled = true;
                     ShowErrorBox(this.title, this.body);
                 }
                 else if (showDontCount)

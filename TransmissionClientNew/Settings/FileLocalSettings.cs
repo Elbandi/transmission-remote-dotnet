@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 using Jayrock.Json;
@@ -8,7 +7,7 @@ using Jayrock.Json.Conversion;
 
 namespace TransmissionRemoteDotnet.Settings
 {
-    public class FileLocalSettings : ILocalSettingsStore
+    public class FileLocalSettingsStore : ILocalSettingsStore
     {
         private const string CONF_FILE = @"settings.json";
         public override JsonObject Load()

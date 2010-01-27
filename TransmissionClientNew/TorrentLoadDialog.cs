@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
@@ -23,11 +22,21 @@ namespace TransmissionRemoteDotnet
             Toolbox.SelectAll(listView1);
         }
 
+        private void SelectNoneHandler(object sender, EventArgs e)
+        {
+            Toolbox.SelectNone(listView1);
+        }
+
+        private void SelectInvertHandler(object sender, EventArgs e)
+        {
+            Toolbox.SelectInvert(listView1);
+        }
+
         private void HighPriorityHandler(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.High;
+                item.SubItems[3].Text = OtherStrings.High;
             }
         }
 
@@ -35,7 +44,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.Low;
+                item.SubItems[3].Text = OtherStrings.Low;
             }
         }
 
@@ -43,7 +52,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[4].Text = OtherStrings.Normal;
+                item.SubItems[3].Text = OtherStrings.Normal;
             }
         }
 
@@ -51,7 +60,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[3].Text = OtherStrings.No;
+                item.Checked = true;
             }
         }
 
@@ -59,7 +68,7 @@ namespace TransmissionRemoteDotnet
         {
             foreach (ListViewItem item in listView1.SelectedItems)
             {
-                item.SubItems[3].Text = OtherStrings.Yes;
+                item.Checked = false;
             }
         }
 
@@ -82,10 +91,15 @@ namespace TransmissionRemoteDotnet
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
             this.path = path;
             this.toolStripStatusLabel1.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
+            checkBox3.Checked = !Program.Settings.Current.StartPaused;
             foreach (string s in Program.Settings.Current.DestPathHistory)
             {
                 comboBox1.Items.Add(s);
             }
+            JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+            string ddir = (string)session[ProtocolConstants.DOWNLOAD_DIR];
+            if (!comboBox1.Items.Contains(ddir))
+                comboBox1.Items.Insert(0, ddir);
             if (comboBox1.Items.Count > 0)
                 comboBox1.SelectedIndex = 0;
         }
@@ -93,6 +107,7 @@ namespace TransmissionRemoteDotnet
         private void TorrentLoadDialog_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
+            this.OkButton.Select();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -123,8 +138,8 @@ namespace TransmissionRemoteDotnet
                     item.SubItems.Add("");
 #endif
                     item.SubItems.Add(Toolbox.GetFileSize(file.Length));
-                    item.SubItems.Add(OtherStrings.No);
                     item.SubItems.Add(OtherStrings.Normal);
+                    item.Checked = true;
                     items.Add(item);
                 }
                 e.Result = items;
@@ -139,14 +154,18 @@ namespace TransmissionRemoteDotnet
         {
             if (e.Result.GetType().Equals(typeof(List<ListViewItem>)))
             {
-                listView1.SuspendLayout();
+                listView1.BeginUpdate();
                 foreach (ListViewItem item in (List<ListViewItem>)e.Result)
                 {
                     listView1.Items.Add(item);
                 }
                 Toolbox.StripeListView(listView1);
-                listView1.Enabled = button1.Enabled = checkBox1.Enabled = checkBox2.Enabled = true;
-                listView1.ResumeLayout();
+                listView1.Enabled = OkButton.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
+                listView1.EndUpdate();
+                NameLabel.Text = torrent.Name;
+                CommentLabel.Text = torrent.Comment;
+                SizeLabel.Text = string.Format("{0} ({1} x {2})", Toolbox.GetFileSize(torrent.Size), torrent.Pieces.Count, Toolbox.GetFileSize(torrent.PieceLength));
+                DateLabel.Text = torrent.CreationDate.ToString();
                 this.Text = torrent.Name;
                 this.toolStripStatusLabel1.Text = "";
             }
@@ -192,7 +211,7 @@ namespace TransmissionRemoteDotnet
             JsonArray low = new JsonArray();
             foreach (ListViewItem item in listView1.Items)
             {
-                if (item.SubItems[3].Text.Equals(OtherStrings.Yes))
+                if (!item.Checked)
                 {
                     unwanted.Add(item.Index);
                 }
@@ -200,11 +219,11 @@ namespace TransmissionRemoteDotnet
                 {
                     wanted.Add(item.Index);
                 }
-                if (item.SubItems[4].Text.Equals(OtherStrings.High))
+                if (item.SubItems[3].Text.Equals(OtherStrings.High))
                 {
                     high.Add(item.Index);
                 }
-                else if (item.SubItems[4].Text.Equals(OtherStrings.Low))
+                else if (item.SubItems[3].Text.Equals(OtherStrings.Low))
                 {
                     low.Add(item.Index);
                 }
@@ -222,7 +241,8 @@ namespace TransmissionRemoteDotnet
                 wanted.Count > 0 ? wanted : null,
                 unwanted.Count > 0 ? unwanted : null,
                 checkBox1.Checked ? comboBox1.Text : null,
-                checkBox2.Checked ? (int)numericUpDown1.Value : -1
+                checkBox2.Checked ? (int)numericUpDown1.Value : -1,
+                checkBox3.Checked
             );
             Program.Settings.Current.AddDestinationPath(comboBox1.Text);
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));

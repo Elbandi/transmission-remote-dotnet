@@ -27,8 +27,8 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using System.Security.Cryptography;
-using System.Linq;
 using Microsoft.Win32;
+using System.Collections.Specialized;
 
 namespace TransmissionRemoteDotnet
 {
@@ -178,10 +178,9 @@ namespace TransmissionRemoteDotnet
         public static JsonArray ListViewSelectionToIdArray(ListView.SelectedListViewItemCollection selections)
         {
             JsonArray ids = new JsonArray();
-            foreach (ListViewItem item in selections)
+            foreach (Torrent item in selections)
             {
-                Torrent t = (Torrent)item.Tag;
-                ids.Put(t.Id);
+                ids.Put(item.Id);
             }
             return ids;
         }
@@ -231,7 +230,7 @@ namespace TransmissionRemoteDotnet
             Color window = SystemColors.Window;
             lock (list)
             {
-                list.SuspendLayout();
+                list.BeginUpdate();
                 foreach (ListViewItem item in list.Items)
                 {
                     item.BackColor = item.Index % 2 == 1 ?
@@ -240,7 +239,7 @@ namespace TransmissionRemoteDotnet
                             window.B - STRIPE_OFFSET)
                         : window;
                 }
-                list.ResumeLayout();
+                list.EndUpdate();
             }
         }
 
@@ -405,7 +404,17 @@ namespace TransmissionRemoteDotnet
 
         public static string[] Split(string str, int chunkSize)
         {
-            return Enumerable.ToArray<string>(Enumerable.Range(0, str.Length / chunkSize).Select(i => str.Substring(i * chunkSize, chunkSize)));
+            if (chunkSize < 1)
+                throw new ArgumentOutOfRangeException("chunkSize");
+            int stringLength = str.Length;
+            int n = (stringLength + chunkSize - 1) / chunkSize;
+            string[] strings = new string[n];
+            for (int i = 0, s = 0; i < n; i++, s += chunkSize)
+            {
+                if (s + chunkSize > stringLength) chunkSize = stringLength - s;
+                strings[i] = str.Substring(s, chunkSize);
+            }
+            return strings;
         }
 
         public static int BitCount(byte[] bitmap)
@@ -422,15 +431,89 @@ namespace TransmissionRemoteDotnet
         {
             lock (lv)
             {
-                lv.SuspendLayout();
+                lv.BeginUpdate();
                 foreach (ListViewItem item in lv.Items)
                 {
                     item.Selected = true;
                 }
-                lv.ResumeLayout();
+                lv.EndUpdate();
             }
         }
 
+        public static void SelectNone(ListView lv)
+        {
+            lock (lv)
+            {
+                lv.BeginUpdate();
+                foreach (ListViewItem item in lv.Items)
+                {
+                    item.Selected = false;
+                }
+                lv.EndUpdate();
+            }
+        }
+
+        public static void SelectInvert(ListView lv)
+        {
+            lock (lv)
+            {
+                lv.BeginUpdate();
+                foreach (ListViewItem item in lv.Items)
+                {
+                    item.Selected ^= true;
+                }
+                lv.EndUpdate();
+            }
+        }
+
+        public static Bitmap LoadSkinImage(string FileName, int MinHeight, int MaxHeight, int ImageNumber)
+        {
+            try
+            {
+                if (File.Exists(FileName))
+                {
+                    Bitmap b = new Bitmap(FileName);
+                    if (MinHeight <= b.Height && b.Height <= MaxHeight && b.Width == b.Height * ImageNumber)
+                    {
+                        return b;
+                    }
+                    b.Dispose();
+                }
+            }
+            catch { }
+            return null;
+        }
+
+        public static void LoadSkinToImagelist(string FileName, int MinHeight, int MaxHeight, ImageList imageList, List<Bitmap> Default)
+        {
+            StringCollection keys = imageList.Images.Keys;
+            imageList.Images.Clear();
+            Bitmap skin = Toolbox.LoadSkinImage(FileName, MinHeight, MaxHeight, Default.Count);
+            if (skin != null)
+            {
+                imageList.ImageSize = new Size(skin.Height, skin.Height);
+                imageList.Images.AddStrip(skin);
+            }
+            else
+            {
+                if (Default.Count > 0)
+                    imageList.ImageSize = new Size(Default[0].Height, Default[0].Height);
+                imageList.Images.AddRange(Default.ToArray());
+            }
+            System.Diagnostics.Trace.Assert(imageList.Images.Count <= keys.Count, "Imagelist has more image than image keys!");
+            for (int i = 0; i < imageList.Images.Count; i++)
+                imageList.Images.SetKeyName(i, keys[i]);
+        }
+
+        public static bool ScreenExists(Point p)
+        {
+            foreach (Screen s in Screen.AllScreens)
+            {
+                if (s.Bounds.Contains(p))
+                    return true;
+            }
+            return false;
+        }
         /// <summary>
         /// Renames a subkey of the passed in registry key since 
         /// the Framework totally forgot to include such a handy feature.

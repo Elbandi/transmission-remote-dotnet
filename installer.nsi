@@ -3,12 +3,14 @@
 !include "ProtocolAssociation.nsh"
 !include "x64.nsh"
 
+!ifndef NOBUILD
 ;Rebuild Release
 !system "%Windir%\Microsoft.NET\Framework\v3.5\MSBuild.exe /nologo /verbosity:m /t:Rebuild /p:Configuration=Release"
+!endif
 
 
 !system 'GetVersion.exe "TransmissionClientNew\bin\Release\Transmission Remote.exe" > verinclude.nsh' = 0
-!define /file VERSION verinclude.nsh
+!define /file REV verinclude.nsh
 
 ;--------------------------------
 
@@ -16,7 +18,11 @@
 Name "Transmission Remote"
 
 ; The file to write
-OutFile "transmission-remote-dotnet-${VERSION}-installer.exe"
+!ifndef REV
+OutFile "transmission-remote-dotnet-3.13-installer.exe"
+!else
+OutFile "transmission-remote-dotnet-${REV}-installer.exe"
+!endif
 
 ; The default installation directory
 !define ProgramFilesDir "Transmission Remote"
