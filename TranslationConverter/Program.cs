@@ -150,8 +150,8 @@ namespace TranslationConverter
                                         tw.WriteLine("#: {0}", t.Key);
                                 }
                                 tw.WriteLine("#, csharp-format");
-                                tw.WriteLine("msgid \"{0}\"", printlines(item.Key));
-                                tw.WriteLine("msgstr \"{0}\"", printlines(item.Value));
+                                tw.WriteLine("msgid \"{0}\"", printlines(item.Key.Replace("\"", "\\\"")));
+                                tw.WriteLine("msgstr \"{0}\"", printlines(item.Value.Replace("\"", "\\\"")));
                                 tw.WriteLine();
                             }
                         }
