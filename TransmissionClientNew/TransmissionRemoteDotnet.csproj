@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TransmissionRemoteDotnet</RootNamespace>
     <AssemblyName>Transmission Remote</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>transmission_large.ico</ApplicationIcon>
     <SignManifests>false</SignManifests>
@@ -64,9 +64,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -105,6 +102,12 @@
     <Compile Include="Comparers\ListViewTextComparer.cs" />
     <Compile Include="Comparers\ListViewTextInsensitiveReverseComparer.cs" />
     <Compile Include="Comparers\ListViewItemInt32Comparer.cs" />
+    <Compile Include="CustomControls\FileBrowseTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\USButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ErrorLogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +144,7 @@
     <Compile Include="LocalSettingsDialog.Designer.cs">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogListViewItem.cs" />
     <Compile Include="MonoTorrent\BEncodedDictionary.cs" />
     <Compile Include="MonoTorrent\BEncodedList.cs" />
     <Compile Include="MonoTorrent\BEncodedNumber.cs" />
@@ -928,8 +932,9 @@
     <None Include="Resources\player_pause_all.png" />
     <None Include="Resources\player_play_all.png" />
     <None Include="Resources\error16.png" />
-    <None Include="Resources\xmag16.png" />
+    <None Include="Resources\xmag.png" />
     <None Include="Resources\welcomefinish.png" />
+    <None Include="Resources\help14.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>

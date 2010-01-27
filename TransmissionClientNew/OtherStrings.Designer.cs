@@ -151,6 +151,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have selected {0} torrents for recheck. It may take a long time. Are you sure?.
+        /// </summary>
+        internal static string ConfirmMultipleRecheck {
+            get {
+                return ResourceManager.GetString("ConfirmMultipleRecheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have selected {0} torrents for removal. Are you sure?.
         /// </summary>
         internal static string ConfirmMultipleRemove {
@@ -165,6 +174,24 @@ namespace TransmissionRemoteDotnet {
         internal static string ConfirmMultipleRemoveAndDelete {
             get {
                 return ResourceManager.GetString("ConfirmMultipleRemoveAndDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;{0}&quot; server settings have been changed. Would you like to save it?.
+        /// </summary>
+        internal static string ConfirmSaveServer {
+            get {
+                return ResourceManager.GetString("ConfirmSaveServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to recheck {0}? It may take a long time..
+        /// </summary>
+        internal static string ConfirmSingleRecheck {
+            get {
+                return ResourceManager.GetString("ConfirmSingleRecheck", resourceCulture);
             }
         }
         
@@ -421,6 +448,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Daemon try to download something, but the http result is:{0}{1}.
+        /// </summary>
+        internal static string HttpError {
+            get {
+                return ResourceManager.GetString("HttpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incomplete.
         /// </summary>
         internal static string Incomplete {
@@ -516,6 +552,15 @@ namespace TransmissionRemoteDotnet {
         internal static string LowPriority {
             get {
                 return ResourceManager.GetString("LowPriority", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sample mapping:.
+        /// </summary>
+        internal static string MappingSample {
+            get {
+                return ResourceManager.GetString("MappingSample", resourceCulture);
             }
         }
         
@@ -619,6 +664,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No hostname has been set..
+        /// </summary>
+        internal static string NoHostnameSet {
+            get {
+                return ResourceManager.GetString("NoHostnameSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Normal.
         /// </summary>
         internal static string Normal {
@@ -660,6 +714,15 @@ namespace TransmissionRemoteDotnet {
         internal static string OpenFileFilter {
             get {
                 return ResourceManager.GetString("OpenFileFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PNG Image|*.png.
+        /// </summary>
+        internal static string OpenImageFilter {
+            get {
+                return ResourceManager.GetString("OpenImageFilter", resourceCulture);
             }
         }
         
@@ -844,6 +907,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Samba share:.
+        /// </summary>
+        internal static string SambaShare {
+            get {
+                return ResourceManager.GetString("SambaShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Second.
         /// </summary>
         internal static string Second {
@@ -916,6 +988,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This torrent has finished downloading..
+        /// </summary>
+        internal static string TorrentFinished {
+            get {
+                return ResourceManager.GetString("TorrentFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Torrents.
         /// </summary>
         internal static string Torrents {
@@ -939,6 +1020,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToParse {
             get {
                 return ResourceManager.GetString("UnableToParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UNIX path prefix:.
+        /// </summary>
+        internal static string UnixPathPrefix {
+            get {
+                return ResourceManager.GetString("UnixPathPrefix", resourceCulture);
             }
         }
         

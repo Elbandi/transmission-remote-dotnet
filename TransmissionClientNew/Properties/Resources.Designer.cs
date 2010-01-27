@@ -60,23 +60,16 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap _16x16_add {
+        internal static System.Drawing.Bitmap add16 {
             get {
-                object obj = ResourceManager.GetObject("_16x16_add", resourceCulture);
+                object obj = ResourceManager.GetObject("add16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap _16x16_ledpurple {
+        internal static System.Drawing.Bitmap all16 {
             get {
-                object obj = ResourceManager.GetObject("_16x16_ledpurple", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap _16x16_remove {
-            get {
-                object obj = ResourceManager.GetObject("_16x16_remove", resourceCulture);
+                object obj = ResourceManager.GetObject("all16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -102,13 +95,6 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap button_cancel1 {
-            get {
-                object obj = ResourceManager.GetObject("button_cancel1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap configure {
             get {
                 object obj = ResourceManager.GetObject("configure", resourceCulture);
@@ -116,16 +102,16 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap connect_creating {
+        internal static System.Drawing.Bitmap connect {
             get {
-                object obj = ResourceManager.GetObject("connect_creating", resourceCulture);
+                object obj = ResourceManager.GetObject("connect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap connect_no {
+        internal static System.Drawing.Bitmap disconnect {
             get {
-                object obj = ResourceManager.GetObject("connect_no", resourceCulture);
+                object obj = ResourceManager.GetObject("disconnect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -144,9 +130,23 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap find {
+            get {
+                object obj = ResourceManager.GetObject("find", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap folder16 {
             get {
                 object obj = ResourceManager.GetObject("folder16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap help14 {
+            get {
+                object obj = ResourceManager.GetObject("help14", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -158,9 +158,9 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap incomplete {
+        internal static System.Drawing.Bitmap incomplete16 {
             get {
-                object obj = ResourceManager.GetObject("incomplete", resourceCulture);
+                object obj = ResourceManager.GetObject("incomplete16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -168,13 +168,6 @@ namespace TransmissionRemoteDotnet.Properties {
         internal static System.Drawing.Bitmap info16 {
             get {
                 object obj = ResourceManager.GetObject("info16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap kgpg_edit {
-            get {
-                object obj = ResourceManager.GetObject("kgpg_edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -235,16 +228,16 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap player_play_all {
+        internal static System.Drawing.Bitmap player_play {
             get {
-                object obj = ResourceManager.GetObject("player_play_all", resourceCulture);
+                object obj = ResourceManager.GetObject("player_play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap player_play1 {
+        internal static System.Drawing.Bitmap player_play_all {
             get {
-                object obj = ResourceManager.GetObject("player_play1", resourceCulture);
+                object obj = ResourceManager.GetObject("player_play_all", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +256,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap properties {
+            get {
+                object obj = ResourceManager.GetObject("properties", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap reannounce {
             get {
                 object obj = ResourceManager.GetObject("reannounce", resourceCulture);
@@ -270,9 +270,23 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap remove {
+            get {
+                object obj = ResourceManager.GetObject("remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap remove_and_delete {
             get {
                 object obj = ResourceManager.GetObject("remove_and_delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap remove16 {
+            get {
+                object obj = ResourceManager.GetObject("remove16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -298,9 +312,9 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap warning {
+        internal static System.Drawing.Bitmap warning16 {
             get {
-                object obj = ResourceManager.GetObject("warning", resourceCulture);
+                object obj = ResourceManager.GetObject("warning16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -308,13 +322,6 @@ namespace TransmissionRemoteDotnet.Properties {
         internal static System.Drawing.Bitmap welcomefinish {
             get {
                 object obj = ResourceManager.GetObject("welcomefinish", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap xmag16 {
-            get {
-                object obj = ResourceManager.GetObject("xmag16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

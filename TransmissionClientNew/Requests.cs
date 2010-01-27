@@ -128,6 +128,13 @@ namespace TransmissionRemoteDotnet
             JsonArray high, JsonArray normal, JsonArray low, JsonArray wanted,
             JsonArray unwanted, string destination, int peerLimit)
         {
+            return TorrentAddByFile(file, deleteAfter, high, normal, low, wanted, unwanted, destination, peerLimit, !Program.Settings.Current.StartPaused);
+        }
+
+        public static JsonObject TorrentAddByFile(string file, bool deleteAfter,
+            JsonArray high, JsonArray normal, JsonArray low, JsonArray wanted,
+            JsonArray unwanted, string destination, int peerLimit, bool startTorrent)
+        {
             FileStream inFile = new FileStream(file, FileMode.Open, FileAccess.Read);
             byte[] binaryData = new Byte[inFile.Length];
             if (inFile.Read(binaryData, 0, (int)inFile.Length) < 1)
@@ -138,7 +145,7 @@ namespace TransmissionRemoteDotnet
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTADD);
             JsonObject arguments = GetArgObject(request);
             arguments.Put(ProtocolConstants.FIELD_METAINFO, Convert.ToBase64String(binaryData, 0, binaryData.Length));
-            arguments.Put(ProtocolConstants.FIELD_PAUSED, Program.Settings.Current.StartPaused);
+            arguments.Put(ProtocolConstants.FIELD_PAUSED, !startTorrent);
             if (high != null)
                 arguments.Put(ProtocolConstants.PRIORITY_HIGH, high);
             if (normal != null)

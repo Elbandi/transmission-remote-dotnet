@@ -47,7 +47,7 @@ namespace CustomUIControls
 
                     m_Line = (Line)line;
                     m_Owner = owner;
-                    m_Line.m_Thickness = 5;
+                    m_Line.m_Thickness = 3;
                 }
 
                 // ===================================================================
