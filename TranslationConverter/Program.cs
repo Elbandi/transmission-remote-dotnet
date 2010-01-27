@@ -116,8 +116,15 @@ namespace TranslationConverter
                         using (TextWriter tw = new StreamWriter(pofile))
                         {
                             CultureInfo ci = new CultureInfo(l.Key);
-                            string tlang = !ci.Parent.Name.Equals("") ? ci.Parent.EnglishName : ci.EnglishName;
-                            tw.WriteLine("# {0} translation of transmission-remote-dotnet", tlang);
+                            if (l.Key.Equals("en-US"))
+                            {
+                                tw.WriteLine("# SOME DESCRIPTIVE TITLE.");
+                            }
+                            else
+                            {
+                                string tlang = !ci.Parent.Name.Equals("") ? ci.Parent.EnglishName : ci.EnglishName;
+                                tw.WriteLine("# {0} translation of transmission-remote-dotnet", tlang);
+                            }
                             tw.WriteLine("# Copyright (C) 2009 Alan F");
                             tw.WriteLine("# This file is distributed under the same license as the transmission-remote-dotnet package.");
                             tw.WriteLine("#");
