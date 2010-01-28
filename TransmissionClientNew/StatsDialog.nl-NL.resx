@@ -108,49 +108,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label4.Text" xml:space="preserve">
-    <value>Prioridade de Banda:</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="downloadedBytesLabel2.Text" xml:space="preserve">
+    <value>Gedownloade bytes:</value>
   </data>
-  <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Preferir os limites globais</value>
+  <data name="uploadedBytesLabel2.Text" xml:space="preserve">
+    <value>Geuploade bytes:</value>
   </data>
-  <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
-    <value>Limite de ratio para sements</value>
+  <data name="CloseFormButton.Text" xml:space="preserve">
+    <value>Sluiten</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Máximo de peers</value>
+  <data name="secondsActiveValue2.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
-  <data name="uploadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de envio</value>
+  <data name="sessionCountValue2.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>KB/s</value>
+  <data name="filesAddedValue2.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>KB/s</value>
+  <data name="uploadedBytesValue2.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
-  <data name="downloadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de download</value>
+  <data name="downloadedBytesValue2.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
-  <data name="tabGeneral.Text" xml:space="preserve">
-    <value>Geral</value>
+  <data name="secondsActiveLabel2.Text" xml:space="preserve">
+    <value>Aantal seconden actief</value>
   </data>
-  <data name="tabTrackers.Text" xml:space="preserve">
-    <value>Rastreadores</value>
+  <data name="sessionCountLabel2.Text" xml:space="preserve">
+    <value>Sessie telling</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="filesAddedLabel2.Text" xml:space="preserve">
+    <value>Bestanden toegevoegd:</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="CumulativeGroupBox.Text" xml:space="preserve">
+    <value>Cumulatieve Statistieken</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon.</value>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <data name="secondsActiveValue1.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
   </data>
+  <data name="sessionCountValue1.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
+  </data>
+  <data name="filesAddedValue1.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
+  </data>
+  <data name="uploadedBytesValue1.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
+  </data>
+  <data name="downloadedBytesValue1.Text" xml:space="preserve">
+    <value>Aanvragen...</value>
+  </data>
+  <data name="secondsActiveLabel1.Text" xml:space="preserve">
+    <value>Aantal seconden actief</value>
+  </data>
+  <data name="sessionCountLabel1.Text" xml:space="preserve">
+    <value>Sessie telling</value>
+  </data>
+  <data name="filesAddedLabel1.Text" xml:space="preserve">
+    <value>Bestanden toegevoegd:</value>
+  </data>
+  <data name="downloadedBytesLabel1.Text" xml:space="preserve">
+    <value>Gedownloade bytes:</value>
+  </data>
+  <data name="uploadedBytesLabel1.Text" xml:space="preserve">
+    <value>Geuploade bytes:</value>
+  </data>
+  <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
+    <value>Huidige sessie statistieken</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
-    <value>TorrentPropertiesDialog</value>
+    <value>Transmission Daemon Statistieken</value>
   </data>
 </root>

@@ -111,6 +111,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabSkinSettings.Text" xml:space="preserve">
+    <value>Skin</value>
+  </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Salvar</value>
   </data>
@@ -208,7 +211,7 @@
     <value>Procurar atualizações ao iniciar</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
-    <value>Upload prompt</value>
+    <value>Habilitar opções no carregamento</value>
   </data>
   <data name="MinToTrayCheckBox.Text" xml:space="preserve">
     <value>Ícone na barra de tarefas</value>

@@ -108,49 +108,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Map</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Prioriteit</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label4.Text" xml:space="preserve">
-    <value>Prioridade de Banda:</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Annuleren</value>
   </data>
-  <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Preferir os limites globais</value>
+  <data name="OkButton.Text" xml:space="preserve">
+    <value>Bevestigen</value>
   </data>
-  <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
-    <value>Limite de ratio para sements</value>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Start met torrent</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Máximo de peers</value>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 417</value>
+  </metadata>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
   </data>
-  <data name="uploadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de envio</value>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>KB/s</value>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Afwisselende peer limiet: </value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>KB/s</value>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Afwisselende bestemmingsmap: </value>
   </data>
-  <data name="downloadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de download</value>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="DateLabelLabel.Text" xml:space="preserve">
+    <value>Datum:</value>
   </data>
-  <data name="tabGeneral.Text" xml:space="preserve">
-    <value>Geral</value>
+  <data name="SizelabelLabel.Text" xml:space="preserve">
+    <value>Size:</value>
   </data>
-  <data name="tabTrackers.Text" xml:space="preserve">
-    <value>Rastreadores</value>
+  <data name="CommentLabelLabel.Text" xml:space="preserve">
+    <value>Opmerking:</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="NameLabelLabel.Text" xml:space="preserve">
+    <value>Naam:</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="SelectNoneButton.Text" xml:space="preserve">
+    <value>Selecteer niets</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon.</value>
+  <data name="SelectInvertButton.Text" xml:space="preserve">
+    <value>Draai selectie om</value>
   </data>
+  <data name="SelectAllButton.Text" xml:space="preserve">
+    <value>Selecteer alles</value>
+  </data>
+  <data name="TorrentContentsGroupBox.Text" xml:space="preserve">
+    <value>Torrent inhoud</value>
+  </data>
+  <data name="PropertiesGroupBox.Text" xml:space="preserve">
+    <value>Torrent eigenschappen</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
-    <value>TorrentPropertiesDialog</value>
+    <value>TorrentLoadDialog</value>
   </data>
 </root>
