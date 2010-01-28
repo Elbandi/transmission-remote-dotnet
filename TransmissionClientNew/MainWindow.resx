@@ -133,6 +133,9 @@
   <data name="torrentAndTabsSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="torrentAndTabsSplitContainer.IsSplitterFixed" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="torrentAndTabsSplitContainer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -447,14 +450,14 @@
   <data name="&gt;&gt;progressOrPiecesPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="percentageLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="percentageLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="percentageLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="percentageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>883, 3</value>
+    <value>883, 9</value>
   </data>
   <data name="percentageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -464,6 +467,9 @@
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>_</value>
+  </data>
+  <data name="percentageLabel.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="percentageLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
