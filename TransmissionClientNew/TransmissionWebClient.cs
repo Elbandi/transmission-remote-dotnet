@@ -95,7 +95,11 @@ namespace TransmissionRemoteDotnet
                 request.Proxy = new WebProxy(settings.Proxy.Host, settings.Proxy.Port);
                 if (settings.Proxy.AuthEnabled)
                 {
-                    request.Proxy.Credentials = new NetworkCredential(settings.Proxy.Username, settings.Proxy.ValidPassword);
+                    string[] user = settings.Proxy.Username.Split("\\".ToCharArray(), 2);
+                    if (user.Length > 1)
+                        request.Proxy.Credentials = new NetworkCredential(user[1], settings.Proxy.ValidPassword, user[0]);
+                    else
+                        request.Proxy.Credentials = new NetworkCredential(settings.Proxy.Username, settings.Proxy.ValidPassword);
                 }
             }
             else if (settings.Proxy.ProxyMode == ProxyMode.Disabled)
