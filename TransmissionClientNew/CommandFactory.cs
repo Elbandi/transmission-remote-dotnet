@@ -34,6 +34,7 @@ namespace TransmissionRemoteDotnet
     public class CommandFactory
     {
         private static Encoding TransmissionEncoding = Encoding.UTF8;
+        private static int requestid = 0;
         /* 
          * If this doesnt good, we should write a own converter like T:
          * libtransmission/bencode.c:1308
@@ -56,8 +57,10 @@ namespace TransmissionRemoteDotnet
         {
             TransmissionWebClient wc = new TransmissionWebClient(true);
             byte[] bdata = GetBytes(data.ToString());
+            int r = requestid++;
+            Program.LogDebug("RPC request: " + r, data.ToString());
             wc.UploadDataCompleted += new UploadDataCompletedEventHandler(wc_UploadDataCompleted);
-            wc.UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, bdata, new TransmissonRequest(bdata, allowRecursion));
+            wc.UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, bdata, new TransmissonRequest(r, bdata, allowRecursion));
             return wc;
         }
 
@@ -80,7 +83,7 @@ namespace TransmissionRemoteDotnet
                                 if (sessionid != null && sessionid.Length > 0)
                                 {
                                     TransmissionWebClient.X_transmission_session_id = sessionid;
-                                    (sender as TransmissionWebClient).UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, ((TransmissonRequest)e.UserState).data, new TransmissonRequest(((TransmissonRequest)e.UserState).data, false));
+                                    (sender as TransmissionWebClient).UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, ((TransmissonRequest)e.UserState).data, new TransmissonRequest(((TransmissonRequest)e.UserState).requestid, ((TransmissonRequest)e.UserState).data, false));
                                     return;
                                 }
                             }
@@ -93,6 +96,7 @@ namespace TransmissionRemoteDotnet
                 {
                     try
                     {
+                        Program.LogDebug("RPC response: " + ((TransmissonRequest)e.UserState).requestid, GetString(e.Result));
                         JsonObject jsonResponse = (JsonObject)JsonConvert.Import(GetString(e.Result));
                         if ((string)jsonResponse["result"] != "success")
                         {
@@ -171,8 +175,10 @@ namespace TransmissionRemoteDotnet
     {
         public byte[] data;
         public bool allowRecursion;
-        public TransmissonRequest(byte[] data, bool allowRecursion)
+        public int requestid;
+        public TransmissonRequest(int requestid, byte[] data, bool allowRecursion)
         {
+            this.requestid = requestid;
             this.data = data;
             this.allowRecursion = allowRecursion;
         }
