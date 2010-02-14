@@ -110,21 +110,20 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label4.Text" xml:space="preserve">
-    <value>Prioridade de Banda:</value>
+    <value>Bandbreedte prioriteit:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Preferir os limites globais</value>
+    <value>Kom de sessie limieten na</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
-    <value>Limite de ratio para sements</value>
+    <value>Limiteer seed ratio</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Máximo de peers</value>
+    <value>Maximaal aantal verbonden peers</value>
   </data>
   <data name="uploadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de envio</value>
+    <value>Limiteer upload snelheid</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>KB/s</value>
@@ -133,23 +132,27 @@
     <value>KB/s</value>
   </data>
   <data name="downloadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de download</value>
+    <value>Limiteer download snelheid</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabGeneral.Text" xml:space="preserve">
-    <value>Geral</value>
+    <value>Algemeen</value>
   </data>
   <data name="tabTrackers.Text" xml:space="preserve">
-    <value>Rastreadores</value>
+    <value>Trackers</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Annuleren</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Bevestigen</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon.</value>
+    <value>LET OP: De beschikbaarheid van sommige opties vereisen een deamon upgrade</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentPropertiesDialog</value>
   </data>

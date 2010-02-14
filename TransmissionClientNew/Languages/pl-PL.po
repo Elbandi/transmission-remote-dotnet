@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2010-01-21 13:48+0100\n"
+"PO-Revision-Date: 2010-01-24 20:56+0100\n"
 "Last-Translator: Marcin Cichoń <ml.cichy@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr "Log błędów"
 #: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
 msgid "Show debug logs"
-msgstr "Pokaż log błędów"
+msgstr "Pokaż log debugowania"
 
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
@@ -483,7 +483,7 @@ msgstr "Serwera"
 #: LocalSettingsDialog~tabSkinSettings.Text
 #, csharp-format
 msgid "Skin"
-msgstr ""
+msgstr "Skórka"
 
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
@@ -662,7 +662,7 @@ msgstr "Postęp"
 #: MainWindow~columnHeader8.Text
 #, csharp-format
 msgid "Done"
-msgstr "Pobrano"
+msgstr "Ukończono"
 
 #: MainWindow~columnHeader30.Text
 #, csharp-format
@@ -683,7 +683,7 @@ msgstr "Typ"
 #: MainWindow~columnHeader33.Text
 #, csharp-format
 msgid "Update In"
-msgstr "Uaktualniony"
+msgstr "Uaktualniono"
 
 #: MainWindow~columnHeader36.Text
 #, csharp-format
@@ -933,7 +933,7 @@ msgstr "Części:"
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
 msgid "Project site"
-msgstr "Strona domowa"
+msgstr "Strona projektu"
 
 #: MainWindow~propertiesToolStripMenuItem.Text
 #: OtherStrings~Properties
@@ -979,7 +979,7 @@ msgstr "Zdalne"
 #: MainWindow~removeAndDeleteButton.Text
 #, csharp-format
 msgid "Remove and delete torrent(s)"
-msgstr "Usuń i skasuj dane"
+msgstr "Usuń i skasuj dane torrenta(ów)"
 
 #: MainWindow~removeDeleteToolStripMenuItem.Text
 #: OtherStrings~RemoveAndDelete
@@ -1134,7 +1134,7 @@ msgstr "Potwierdzenie"
 #: OtherStrings~ConfirmMultipleRecheck
 #, csharp-format
 msgid "You have selected {0} torrents for recheck. It may take a long time. Are you sure?"
-msgstr ""
+msgstr "Zaznaczyłeś {0} torrent(ów) do ponownego sprawdzenia. Może to zająć trochę czasu. Czy chcesz kontynuować?"
 
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
@@ -1149,12 +1149,12 @@ msgstr "Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?{1}WSZYSTKI
 #: OtherStrings~ConfirmSaveServer
 #, csharp-format
 msgid "\"{0}\" server settings have been changed. Would you like to save it?"
-msgstr ""
+msgstr "\"{0}\" ustawienia serwera zostały zmienione. Czy chcesz je zapisać?"
 
 #: OtherStrings~ConfirmSingleRecheck
 #, csharp-format
 msgid "Do you want to recheck {0}? It may take a long time."
-msgstr ""
+msgstr "Czy chcesz sprawdzić {0}? Może to zająć trochę czasu."
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
@@ -1179,7 +1179,7 @@ msgstr "Połączono z "
 #: OtherStrings~Connecting
 #, csharp-format
 msgid "Connecting"
-msgstr "Łączenie..."
+msgstr "Łączenie"
 
 #: OtherStrings~Day
 #, csharp-format
@@ -1299,7 +1299,7 @@ msgstr ""
 #: OtherStrings~LatestVersion
 #, csharp-format
 msgid "You are using the latest version ({0}.{1})."
-msgstr "Używasz aktualnej wersji - {0}.{1}"
+msgstr "Wersja {0}.{1} jest aktualna."
 
 #: OtherStrings~LatestVersionCheckFailed
 #, csharp-format
@@ -1409,7 +1409,7 @@ msgstr "Pliki BitTorrenta (*.torrent)|*.torrent|Wszystkie pliki (*.*)|*.*"
 #: OtherStrings~OpenImageFilter
 #, csharp-format
 msgid "PNG Image|*.png"
-msgstr ""
+msgstr "Obraz PNG|*.png"
 
 #: OtherStrings~OpenNetworkShare
 #, csharp-format
@@ -1439,12 +1439,12 @@ msgstr "{0} x {1} (ukończono {2})"
 #: OtherStrings~PortIsClosed
 #, csharp-format
 msgid "The incoming port on your daemon is CLOSED."
-msgstr "Port pobierania danych jest ZAMKNIĘTY."
+msgstr "Port nasluchu połączeń jest ZAMKNIĘTY."
 
 #: OtherStrings~PortIsOpen
 #, csharp-format
 msgid "The incoming port on your daemon is OPEN."
-msgstr "Port pobierania danych jest OTWARTY."
+msgstr "Port nasluchu połączeń jest OTWARTY."
 
 #: OtherStrings~PortTestResult
 #, csharp-format
@@ -1764,13 +1764,13 @@ msgstr "Dodanych plików:"
 #: StatsDialog~secondsActiveLabel2.Text
 #, csharp-format
 msgid "Seconds active"
-msgstr "On-line"
+msgstr "On-line:"
 
 #: StatsDialog~sessionCountLabel1.Text
 #: StatsDialog~sessionCountLabel2.Text
 #, csharp-format
 msgid "Session Count"
-msgstr "Liczba sesji"
+msgstr "Liczba sesji:"
 
 #: StatsDialog~uploadedBytesLabel1.Text
 #: StatsDialog~uploadedBytesLabel2.Text

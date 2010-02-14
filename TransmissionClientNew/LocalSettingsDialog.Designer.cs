@@ -284,6 +284,7 @@ namespace TransmissionRemoteDotnet
             // defaultActionComboBox
             // 
             this.defaultActionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.defaultActionComboBox.DropDownWidth = 160;
             this.defaultActionComboBox.FormattingEnabled = true;
             this.defaultActionComboBox.Items.AddRange(new object[] {
             resources.GetString("defaultActionComboBox.Items"),

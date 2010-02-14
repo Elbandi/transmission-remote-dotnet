@@ -29,6 +29,7 @@ namespace TransmissionRemoteDotnet
     public partial class ErrorLogWindow : CultureForm
     {
         private ErrorsListViewColumnSorter lvwColumnSorter;
+        private int lastlogitemscount;
 
         private EventHandler onErrorDelegate;
 
@@ -52,6 +53,7 @@ namespace TransmissionRemoteDotnet
                         if (!item.Debug || showdebug)
                             errorListView.Items.Add((ListViewItem)item.Clone());
                     }
+                    lastlogitemscount = Program.LogItems.Count;
                 }
             }
             errorListView.Sort();
@@ -95,13 +97,14 @@ namespace TransmissionRemoteDotnet
                     lock (errorListView)
                     {
                         List<LogListViewItem> logItems = Program.LogItems;
-                        if (logItems.Count > errorListView.Items.Count)
+                        if (logItems.Count > lastlogitemscount)
                         {
-                            for (int i = errorListView.Items.Count; i < logItems.Count; i++)
+                            for (int i = lastlogitemscount; i < logItems.Count; i++)
                             {
                                 if (!logItems[i].Debug || showdebug)
                                     errorListView.Items.Add((ListViewItem)logItems[i].Clone());
                             }
+                            lastlogitemscount = Program.LogItems.Count;
                         }
                     }
                 }

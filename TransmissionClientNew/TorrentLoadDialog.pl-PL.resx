@@ -136,10 +136,10 @@
     <value>statusStrip1</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
-    <value>Alternatywny limit peerów: </value>
+    <value>Alt. limit peerów: </value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
-    <value>Alternatywny folder docelowy: </value>
+    <value>Alt. folder docelowy: </value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Anuluj</value>

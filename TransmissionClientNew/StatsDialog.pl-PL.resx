@@ -135,10 +135,10 @@
     <value>Sprawdzanie...</value>
   </data>
   <data name="secondsActiveLabel2.Text" xml:space="preserve">
-    <value>On-line</value>
+    <value>On-line:</value>
   </data>
   <data name="sessionCountLabel2.Text" xml:space="preserve">
-    <value>Liczba sesji</value>
+    <value>Liczba sesji:</value>
   </data>
   <data name="filesAddedLabel2.Text" xml:space="preserve">
     <value>Dodanych plików:</value>
@@ -162,10 +162,10 @@
     <value>Sprawdzanie...</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">
-    <value>On-line</value>
+    <value>On-line:</value>
   </data>
   <data name="sessionCountLabel1.Text" xml:space="preserve">
-    <value>Liczba sesji</value>
+    <value>Liczba sesji:</value>
   </data>
   <data name="filesAddedLabel1.Text" xml:space="preserve">
     <value>Dodanych plików:</value>

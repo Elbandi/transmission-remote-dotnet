@@ -117,15 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="OpenImageFilter" xml:space="preserve">
+    <value>Obraz PNG|*.png</value>
+  </data>
+  <data name="ConfirmSaveServer" xml:space="preserve">
+    <value>"{0}" ustawienia serwera zostały zmienione. Czy chcesz je zapisać?</value>
+  </data>
+  <data name="ConfirmMultipleRecheck" xml:space="preserve">
+    <value>Zaznaczyłeś {0} torrent(ów) do ponownego sprawdzenia. Może to zająć trochę czasu. Czy chcesz kontynuować?</value>
+  </data>
+  <data name="ConfirmSingleRecheck" xml:space="preserve">
+    <value>Czy chcesz sprawdzić {0}? Może to zająć trochę czasu.</value>
+  </data>
+  <data name="TorrentFinished" xml:space="preserve">
+    <value>This torrent has finished downloading.</value>
+  </data>
   <data name="HttpError" xml:space="preserve">
-    <value>Daemon try to download something, but the http result is:{0}{1}</value>
+    <value>Błędna próba pobierania, rezultat z http: {0}{1}</value>
     <comment>{0} is the newline char</comment>
   </data>
   <data name="NoHostnameSet" xml:space="preserve">
-    <value>No hostname has been set.</value>
+    <value>Nie wpisano nazwy hosta.</value>
   </data>
   <data name="MappingSample" xml:space="preserve">
-    <value>Sample mapping:</value>
+    <value>Przykładowe mapowanie:</value>
   </data>
   <data name="SambaShare" xml:space="preserve">
     <value>Udział Samba:</value>
@@ -213,7 +228,7 @@
     <value>Połączono z </value>
   </data>
   <data name="Connecting" xml:space="preserve">
-    <value>Łączenie...</value>
+    <value>Łączenie</value>
   </data>
   <data name="CopyAsCSV" xml:space="preserve">
     <value>Kopiuj do CSV</value>
@@ -264,7 +279,7 @@
     <value>Dane poprawne</value>
   </data>
   <data name="LatestVersion" xml:space="preserve">
-    <value>Używasz aktualnej wersji - {0}.{1}</value>
+    <value>Wersja {0}.{1} jest aktualna.</value>
   </data>
   <data name="LatestVersionCheckFailed" xml:space="preserve">
     <value>Sprawdzanie wersji nie powiodło się.</value>
@@ -418,13 +433,13 @@
     <value>Sekunda</value>
   </data>
   <data name="PortIsClosed" xml:space="preserve">
-    <value>Port nasłuchu danych jest ZAMKNIĘTY.</value>
+    <value>Port nasluchu połączeń jest ZAMKNIĘTY.</value>
   </data>
   <data name="PortIsOpen" xml:space="preserve">
-    <value>Port nasłuchu danych jest OTWARTY.</value>
+    <value>Port nasluchu połączeń jest OTWARTY.</value>
   </data>
   <data name="PortTestResult" xml:space="preserve">
-    <value>Wyniki testu</value>
+    <value>Wyniki testu portów</value>
   </data>
   <data name="DownloadLimit" xml:space="preserve">
     <value>Limit pobierania</value>
