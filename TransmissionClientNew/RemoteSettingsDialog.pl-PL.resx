@@ -160,7 +160,7 @@
     <value>Włącz DHT (Distributed Hash Table)</value>
   </data>
   <data name="testPortButton.Text" xml:space="preserve">
-    <value>Testuj</value>
+    <value>Sprawdź</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
     <value>Uaktualnij Blocklist</value>

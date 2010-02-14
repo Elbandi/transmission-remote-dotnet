@@ -163,10 +163,10 @@
     <value>Testar Porta</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
-    <value>Atualizar lista</value>
+    <value>Atualizar blocklist</value>
   </data>
   <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
-    <value>Lista habilitada</value>
+    <value>Blockist habilitada</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Geral</value>

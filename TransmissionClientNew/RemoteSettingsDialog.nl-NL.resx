@@ -108,49 +108,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label4.Text" xml:space="preserve">
-    <value>Prioridade de Banda:</value>
-  </data>
-  <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Preferir os limites globais</value>
-  </data>
-  <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
-    <value>Limite de ratio para sements</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Máximo de peers</value>
-  </data>
-  <data name="uploadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de envio</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Text" xml:space="preserve">
-    <value>KB/s</value>
+    <value>Downloaden Naar:</value>
+  </data>
+  <data name="limitUploadCheckBox.Text" xml:space="preserve">
+    <value>Uploadlimiet</value>
+  </data>
+  <data name="limitDownloadCheckBox.Text" xml:space="preserve">
+    <value>Downloadlimiet</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
+    <value>Binnen komende poort:</value>
+  </data>
+  <data name="SaveButton.Text" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="CloseFormButton.Text" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PEXcheckBox.Text" xml:space="preserve">
+    <value>Zet Peer Exchange aan</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Peer Limiet</value>
+  </data>
+  <data name="portForwardCheckBox.Text" xml:space="preserve">
+    <value>UPnP inschakelen</value>
+  </data>
+  <data name="encryptionCombobox.Items" xml:space="preserve">
+    <value>Getoloreerd</value>
+  </data>
+  <data name="encryptionCombobox.Items1" xml:space="preserve">
+    <value>Voorkeur</value>
+  </data>
+  <data name="encryptionCombobox.Items2" xml:space="preserve">
+    <value>Verplicht</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Versleuteling:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="downloadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite de ratio de download</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>KB/s</value>
   </data>
-  <data name="tabGeneral.Text" xml:space="preserve">
-    <value>Geral</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dhtEnabled.Text" xml:space="preserve">
+    <value>Zet Distributed Hash Table (DHT) aan</value>
   </data>
-  <data name="tabTrackers.Text" xml:space="preserve">
-    <value>Rastreadores</value>
+  <data name="testPortButton.Text" xml:space="preserve">
+    <value>Test Poort</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="updateBlocklistButton.Text" xml:space="preserve">
+    <value>Blocklist bijwerken</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
+    <value>Blocklist aangezet</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
+    <value>Seed Ratio Limiet</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Limieten</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Omhoog:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Beneden:</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>KB/s</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>tot</value>
+  </data>
+  <data name="altTimeConstraintEnabled.Text" xml:space="preserve">
+    <value>Tijdsbeperking</value>
+  </data>
+  <data name="altSpeedLimitEnable.Text" xml:space="preserve">
+    <value>Zet alternatieve snelheden aan</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Alternatieve snelheden</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon.</value>
+    <value>LET OP: De beschikbaarheid van sommige opties vereisen een deamon upgrade</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
-    <value>TorrentPropertiesDialog</value>
+    <value>Server instellingen</value>
   </data>
 </root>

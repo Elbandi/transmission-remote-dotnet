@@ -111,205 +111,220 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SaveButton.Text" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="CloseDialogButton.Text" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="SaveAndConnectButton.Text" xml:space="preserve">
+    <value>Opslaan en verbinden</value>
+  </data>
+  <metadata name="PlinkPathOpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="tabGlobalSettings.Text" xml:space="preserve">
+    <value>Algemene instellingen</value>
+  </data>
+  <data name="tabServersSettings.Text" xml:space="preserve">
+    <value>Servers Instellingen</value>
+  </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skin</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Custom rpc path:</value>
-  </data>
-  <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
-  </data>
-  <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
-  </data>
-  <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
-    <value>Don't save passwords</value>
-  </data>
-  <data name="defaultActionComboBox.Items" xml:space="preserve">
-    <value>Torrent Properties</value>
-  </data>
-  <data name="defaultActionComboBox.Items1" xml:space="preserve">
-    <value>Open remote folder</value>
-  </data>
-  <data name="defaultActionComboBox.Items2" xml:space="preserve">
-    <value>Start/Stop torrent</value>
-  </data>
-  <data name="defaultActionLabel.Text" xml:space="preserve">
-    <value>Default Action:</value>
-  </data>
-  <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
-    <value>Delete torrent when adding</value>
-  </data>
-  <data name="SaveAndConnectButton.Text" xml:space="preserve">
-    <value>Save and Connect</value>
-  </data>
   <data name="groupAutoConnect.Text" xml:space="preserve">
-    <value>Auto connect</value>
+    <value>Automatisch verbinden</value>
   </data>
   <data name="groupCurrentProfile.Text" xml:space="preserve">
-    <value>Current profile</value>
-  </data>
-  <data name="PlinkPathButton.Text" xml:space="preserve">
-    <value>Browse</value>
+    <value>Huidige profiel</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
     <value>plink.exe:</value>
   </data>
+  <data name="PlinkPathButton.Text" xml:space="preserve">
+    <value>Bladeren</value>
+  </data>
+  <data name="groupBehavior.Text" xml:space="preserve">
+    <value>Gedrag</value>
+  </data>
+  <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
+    <value>Sla wachtwoorden niet op</value>
+  </data>
+  <data name="defaultActionComboBox.Items" xml:space="preserve">
+    <value>Torrent Eigenschappen</value>
+  </data>
+  <data name="defaultActionComboBox.Items1" xml:space="preserve">
+    <value>Open server map</value>
+  </data>
+  <data name="defaultActionComboBox.Items2" xml:space="preserve">
+    <value>Starten/Stoppen torrent</value>
+  </data>
+  <data name="defaultActionLabel.Text" xml:space="preserve">
+    <value>Standaard aktie:</value>
+  </data>
+  <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
+    <value>Verwijder torrent bij het toevoegen</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
+    <value>Notificatie bij afronden</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
+    <value>Notificatie bij toevoegen</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
+    <value>Minimaliseer bij sluiten</value>
+  </data>
+  <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
+    <value>Controleer op updates bij het opstarten</value>
+  </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>
   </data>
-  <data name="groupBehavior.Text" xml:space="preserve">
-    <value>Behavior</value>
+  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
+    <value>Maak pictogram bij het afsluiten</value>
   </data>
-  <data name="tabGlobalSettings.Text" xml:space="preserve">
-    <value>Global Settings</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="StartPausedCheckBox.Text" xml:space="preserve">
+    <value>Voeg torrents gepauzeerd toe</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
-    <value>Save Server</value>
+    <value>Sla Server gegevens op</value>
+  </data>
+  <data name="UseSSLCheckBox.Text" xml:space="preserve">
+    <value>Beveiligde verbinding (SSL)</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Maximaal aantal pogingen:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Poort:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Verversingsfrequentie:</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Authenticatie</value>
+  </data>
+  <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
+    <value>Maak wachtwoord leeg bij het opslaan</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Wachtwoord:</value>
+  </data>
+  <data name="EnableAuthCheckBox.Text" xml:space="preserve">
+    <value>Zet authenticatie aan</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Gebruiker:</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
+    <value>Maak wachtwoord leeg bij het opslaan</value>
+  </data>
+  <data name="ProxyAuthEnableCheckBox.Text" xml:space="preserve">
+    <value>Authenticatie</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Gebruiker:</value>
+  </data>
+  <data name="EnableProxyCombo.Items" xml:space="preserve">
+    <value>Automatich</value>
+  </data>
+  <data name="EnableProxyCombo.Items1" xml:space="preserve">
+    <value>Ingeschakeld</value>
+  </data>
+  <data name="EnableProxyCombo.Items2" xml:space="preserve">
+    <value>Uitgeschakeld</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Wachtwoord:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Poort:</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>SSH</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Hulp: </value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>http://code.google.com/p/transmission-remote-dotnet/wiki/SSH</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Opdracht: </value>
   </data>
   <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
-    <value>Display remote command button</value>
+    <value>Geef Server Commando knop weer</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>Overig</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Gebruikers rpc pad:</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Download limiet menu onderdelen:</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Upload limiet menu onderdelen:</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Samba</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Nieuwe map:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>UNIX path voorvoegsel:</value>
   </data>
   <data name="AddShareButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>Toevoegen</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Samba share:</value>
   </data>
   <data name="RemoveShareButton.Text" xml:space="preserve">
-    <value>Удалить</value>
+    <value>Verwijder uit de lijst</value>
   </data>
   <data name="columnName.Text" xml:space="preserve">
-    <value>Название</value>
+    <value>Naam</value>
   </data>
   <data name="columnHost.Text" xml:space="preserve">
     <value>Host</value>
   </data>
   <data name="columnPort.Text" xml:space="preserve">
-    <value>Port</value>
+    <value>Poort</value>
   </data>
+  <metadata name="ServersMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>203, 17</value>
+  </metadata>
   <data name="addServerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>Server toevoegen</value>
   </data>
   <data name="removeServerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>Verwijder Server</value>
   </data>
-  <data name="tabServersSettings.Text" xml:space="preserve">
-    <value>Servers Settings</value>
-  </data>
-  <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
-    <value>Check for update at startup</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>UNIX path prefix:</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Samba share:</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>New mapping:</value>
-  </data>
-  <data name="tabPage7.Text" xml:space="preserve">
-    <value>Samba</value>
-  </data>
-  <data name="EnableProxyCombo.Items" xml:space="preserve">
-    <value>Auto</value>
-  </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>SSH</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://code.google.com/p/transmission-remote-dotnet/wiki/SSH</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Хост:</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Порт:</value>
-  </data>
-  <data name="SaveButton.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="CloseDialogButton.Text" xml:space="preserve">
-    <value>Отмена</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Период обновления:</value>
-  </data>
-  <data name="UseSSLCheckBox.Text" xml:space="preserve">
-    <value>Безопасный (SSL)</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Попыток подключения:</value>
-  </data>
-  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
-    <value>Иконка в трее</value>
-  </data>
-  <data name="ProxyAuthEnableCheckBox.Text" xml:space="preserve">
-    <value>Авторизовать</value>
-  </data>
-  <data name="EnableProxyCombo.Items1" xml:space="preserve">
-    <value>Разрешить</value>
-  </data>
-  <data name="EnableProxyCombo.Items2" xml:space="preserve">
-    <value>Запретить</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Порт:</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Пароль:</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Имя:</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Хост:</value>
-  </data>
-  <data name="StartPausedCheckBox.Text" xml:space="preserve">
-    <value>Добавлять торренты остановленными</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Сервер</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Авторизация</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Прокси</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>Справка: </value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Команда: </value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>Ограничения скорости скачивания:</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Ограничения скорости отдачи:</value>
-  </data>
-  <data name="tabPage6.Text" xml:space="preserve">
-    <value>Прочие</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
-    <value>Минимизировать при закрытии</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
-    <value>Уведомление о добавлении</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
-    <value>Уведомление о завершении</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Пароль:</value>
-  </data>
-  <data name="EnableAuthCheckBox.Text" xml:space="preserve">
-    <value>Разрешить авторизацию</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Имя:</value>
-  </data>
+  <metadata name="openImageFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>342, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>48</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
-    <value>Настройки клиента</value>
+    <value>Lokale instellingen</value>
   </data>
 </root>

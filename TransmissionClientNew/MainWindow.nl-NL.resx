@@ -110,388 +110,430 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <metadata name="stateListBoxImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 37</value>
+  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Uaktualniono</value>
-  </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
-    <value>Seedów</value>
-  </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
-    <value>Pobierających</value>
-  </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
-    <value>Pobrano</value>
-  </data>
-  <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>Położenie:</value>
-  </data>
-  <data name="AltSpeedButton.Text" xml:space="preserve">
-    <value>Alternatywna prędkość</value>
-  </data>
-  <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>Części:</value>
-  </data>
-  <data name="hashLabelLabel.Text" xml:space="preserve">
-    <value>Hash:</value>
-  </data>
-  <data name="findToolStripMenuItem.Text" xml:space="preserve">
-    <value>Znajdź...</value>
-  </data>
-  <data name="percentageLabel.Text" xml:space="preserve">
-    <value>Ten tekst jest zaznaczalny</value>
-  </data>
-  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Uruchom torrent(y)</value>
-  </data>
-  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Sprawdź torrent(y)</value>
-  </data>
-  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
-    <value>Ustaw właściwości torrent(ów)</value>
-  </data>
   <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Nazwa</value>
+    <value>Naam</value>
   </data>
   <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Rozmiar</value>
+    <value>Grootte</value>
   </data>
   <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Ukończono</value>
+    <value>Afgerond</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Status</value>
   </data>
   <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Seedów</value>
+    <value>Seeds</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Pobierających</value>
+    <value>Leechers</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Pobieranie</value>
+    <value>Download Snelheid</value>
   </data>
   <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Wysyłanie</value>
+    <value>Upload Snelheid</value>
   </data>
   <data name="columnHeader14.Text" xml:space="preserve">
-    <value>ETA</value>
+    <value>Resterend</value>
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Wysłano</value>
+    <value>Ge-upload</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>Ratio</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Dodano</value>
+    <value>Toegevoegd op</value>
   </data>
   <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Ukończono</value>
+    <value>Afgerond op</value>
   </data>
   <data name="columnHeader30.Text" xml:space="preserve">
     <value>Tracker</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
-    <value>Części:</value>
+    <value>Onderdelen: </value>
+  </data>
+  <data name="percentageLabel.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="locationLabelLabel.Text" xml:space="preserve">
+    <value>Locatie:</value>
+  </data>
+  <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
+    <value>Onderdelen:</value>
+  </data>
+  <data name="hashLabelLabel.Text" xml:space="preserve">
+    <value>Hash:</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>Utworzony w:</value>
+    <value>Aangemaakt door:</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>Utworzono:</value>
+    <value>Aangemaakt op:</value>
   </data>
   <data name="labelForErrorLabel.Text" xml:space="preserve">
-    <value>Błąd:</value>
+    <value>Fout:</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>Komentarz:</value>
+    <value>Opmerking:</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Ratio:</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>Pobierających:</value>
+    <value>Leechers:</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Seedów:</value>
+    <value>Seeds:</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Limit wysyłania:</value>
+    <value>Upload limiet:</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Wysyłanie:</value>
+    <value>Upload snelheid:</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Wysłano:</value>
+    <value>Geupload:</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Pozostało:</value>
+    <value>Resterend:</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Status:</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Limit pobierania:</value>
+    <value>Download limiet:</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Pobieranie:</value>
+    <value>Download snelheid:</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>Pobrano:</value>
+    <value>Gedownload:</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Rozpoczęto:</value>
+    <value>Begonnen op:</value>
   </data>
   <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
-    <value>Upłynęło:</value>
+    <value>Verstreken tijd:</value>
   </data>
   <data name="generalTabPage.Text" xml:space="preserve">
-    <value>Ogólne</value>
+    <value>Algemeen</value>
   </data>
   <data name="columnHeader22.Text" xml:space="preserve">
-    <value>#</value>
+    <value>Laag</value>
   </data>
   <data name="columnHeader20.Text" xml:space="preserve">
-    <value>Adres announce</value>
+    <value>Aankondigings URL</value>
   </data>
   <data name="columnHeader21.Text" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="columnHeader33.Text" xml:space="preserve">
+    <value>Bijgewerkt op</value>
+  </data>
+  <data name="columnHeader34.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="columnHeader35.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="columnHeader36.Text" xml:space="preserve">
+    <value>Gedownload</value>
+  </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
-    <value>Trackery</value>
+    <value>Trackers</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Folder docelowy</value>
+    <value>Map</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Typ</value>
+    <value>Type</value>
   </data>
   <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Rozmiar</value>
+    <value>Grootte</value>
   </data>
   <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Ukończono</value>
+    <value>Afgerond</value>
   </data>
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>%</value>
   </data>
   <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Pomiń</value>
+    <value>Overslaan</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Priorytet</value>
+    <value>Prioriteit</value>
   </data>
+  <metadata name="fileIconImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 0</value>
+  </metadata>
   <data name="filesTabPage.Text" xml:space="preserve">
-    <value>Pliki</value>
+    <value>Bestanden</value>
   </data>
   <data name="columnHeader23.Text" xml:space="preserve">
-    <value>Adres IP</value>
+    <value>IP Adres</value>
   </data>
   <data name="columnHeader24.Text" xml:space="preserve">
-    <value>Host</value>
+    <value>Hostnaam</value>
   </data>
   <data name="columnHeader25.Text" xml:space="preserve">
-    <value>Kraj</value>
+    <value>Land</value>
   </data>
   <data name="columnHeader31.Text" xml:space="preserve">
-    <value>Flagi</value>
+    <value>Vlaggen</value>
   </data>
   <data name="columnHeader26.Text" xml:space="preserve">
-    <value>Klient</value>
+    <value>Klant</value>
   </data>
   <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Postęp</value>
+    <value>Voortgang</value>
   </data>
   <data name="columnHeader28.Text" xml:space="preserve">
-    <value>Pobieranie</value>
+    <value>Download Snelheid</value>
   </data>
   <data name="columnHeader29.Text" xml:space="preserve">
-    <value>Wysyłanie</value>
+    <value>Upload Snelheid</value>
   </data>
   <data name="peersTabPage.Text" xml:space="preserve">
-    <value>Peerów</value>
+    <value>Peers</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Odśwież co:</value>
+    <value>Oplossing:</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>Pobieranie</value>
+    <value>Omlaag</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Wysyłanie</value>
+    <value>Omhoog</value>
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>Uśrednione zużycie łącza</value>
+    <value>Totale bandbreedte gebruik</value>
   </data>
   <data name="speedTabPage.Text" xml:space="preserve">
-    <value>Prędkość</value>
+    <value>Snelheid</value>
   </data>
+  <metadata name="tabControlImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>702, 0</value>
+  </metadata>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 519</value>
+  </metadata>
   <data name="statusStrip.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
   <data name="toolStripContainer1.Text" xml:space="preserve">
     <value>toolStripContainer1</value>
   </data>
+  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>3, 0</value>
+  </metadata>
   <data name="connectButton.Text" xml:space="preserve">
-    <value>Połącz</value>
+    <value>Verbinden</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>Rozłącz</value>
+    <value>Verbinding verbreken</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>Dodaj torrent...</value>
+    <value>Torrent toevoegen</value>
   </data>
   <data name="addWebTorrentButton.Text" xml:space="preserve">
-    <value>Dodaj torrent z adresu...</value>
+    <value>Torrent toevoegen via een URL</value>
   </data>
   <data name="startTorrentButton.Text" xml:space="preserve">
-    <value>Uruchom torrent(y)</value>
+    <value>Start torrent(s)</value>
+  </data>
+  <data name="startTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Start torrent(s)</value>
   </data>
   <data name="pauseTorrentButton.Text" xml:space="preserve">
-    <value>Wstrzymaj torrent(y)</value>
+    <value>Pauzeer torrent(s)</value>
   </data>
   <data name="recheckTorrentButton.Text" xml:space="preserve">
-    <value>Sprawdź torrent(y)</value>
+    <value>Hercontroleer torrent(s)</value>
+  </data>
+  <data name="recheckTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Hercontroleer torrent(s)</value>
   </data>
   <data name="configureTorrentButton.Text" xml:space="preserve">
-    <value>Ustaw właściwości torrent(ów)</value>
+    <value>Set torrent(s) eigenschappen</value>
+  </data>
+  <data name="configureTorrentButton.ToolTipText" xml:space="preserve">
+    <value>Set torrent(s) eigenschappen</value>
   </data>
   <data name="removeTorrentButton.Text" xml:space="preserve">
-    <value>Usuń torrent(y)</value>
+    <value>Verwijder torrent(s) uit de lijst</value>
   </data>
   <data name="removeAndDeleteButton.Text" xml:space="preserve">
-    <value>Usuń i skasuj dane torrenta(ów)</value>
+    <value>Verwijder torrent(s) uit lijst en van de harde schijf</value>
   </data>
   <data name="allToolStripMenuItem.Text" xml:space="preserve">
-    <value>Wszystkie</value>
+    <value>Alles</value>
   </data>
   <data name="recentlyActiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ostatnio aktywne</value>
+    <value>Pas aktief</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Aktualizuj tracker</value>
+    <value>Heraankondigen</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Otwórz folder sieciowy</value>
+    <value>Open op network map</value>
+  </data>
+  <data name="AltSpeedButton.Text" xml:space="preserve">
+    <value>Alt Snelheid</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
-    <value>Ustawienia lokalne</value>
+    <value>Lokale instellingen</value>
   </data>
   <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>Ustawienia zdalne</value>
+    <value>Server instellingen</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Pokaż statystyki</value>
+    <value>Laat statistieken zien</value>
   </data>
-  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pokaż statystyki</value>
-  </data>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Połącz</value>
+    <value>Verbinden</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rozłącz</value>
+    <value>Verbinding verbreken</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj torrent...</value>
+    <value>Snel toevoegen</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj torrent z opcjami...</value>
+    <value>Torrent toevoegen met opties</value>
   </data>
   <data name="addTorrentFromUrlToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj torrent z adresu...</value>
+    <value>Voeg een torrent toe via een URL</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zamknij</value>
+    <value>Afsluiten</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Plik</value>
+    <value>Bestand</value>
   </data>
   <data name="localSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Lokalne</value>
+    <value>Lokale instellingen</value>
   </data>
   <data name="remoteSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zdalne</value>
+    <value>Server instellingen</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Język:</value>
+    <value>Taal</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ustawienia</value>
+    <value>Opties</value>
+  </data>
+  <data name="findToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zoeken...</value>
   </data>
   <data name="startToolStripMenuItem.Text" xml:space="preserve">
-    <value>Uruchom</value>
+    <value>Start</value>
   </data>
   <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pauza</value>
+    <value>Pauze</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprawdź ponownie</value>
+    <value>Hercontroleren</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Właściwości</value>
+    <value>Onderdelen</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuń</value>
+    <value>Verwijder uit de lijst</value>
   </data>
   <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuń i skasuj dane</value>
+    <value>Verwijder uit lijst en van de harde schijf</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Aktualizuj tracker</value>
+    <value>Heraankondigen</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zmień folder docelowy</value>
+    <value>Verplaats torrent gegevens</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Otwórz folder sieciowy</value>
+    <value>Open op network map</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kopiuj do CSV</value>
+    <value>Kopieër CSV informatie naar het klembord</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Uruchom wszystkie</value>
+    <value>Begonnen op</value>
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Wstrzymaj wszystkie</value>
+    <value>Pauseer all</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>
   </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Szczegóły</value>
+    <value>Details paneel</value>
   </data>
   <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Filtr kategorii</value>
+    <value>Categorie filter paneel</value>
+  </data>
+  <data name="statsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Laat statistieken zien</value>
   </data>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Widok</value>
+    <value>Bekijken</value>
   </data>
   <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pokaż log błędów</value>
+    <value>Laat foutenlogboek zien</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Strona projektu</value>
+    <value>Projekt lokatie</value>
   </data>
   <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprawdź uaktualnienia</value>
+    <value>Controleer op nieuwe versie</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>O Transmission Remote</value>
+    <value>Over Transmission Remote</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pomoc</value>
+    <value>Hulp</value>
   </data>
   <data name="menuStrip.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
+  <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 0</value>
+  </metadata>
   <data name="notifyIcon.Text" xml:space="preserve">
     <value>Transmission Remote</value>
   </data>
+  <metadata name="refreshTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>334, 0</value>
+  </metadata>
+  <metadata name="filesTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 0</value>
+  </metadata>
+  <metadata name="refreshElapsedTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>549, 0</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
+  </metadata>
+  <metadata name="toolStripImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>411, 37</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>114</value>
+  </metadata>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote</value>
   </data>

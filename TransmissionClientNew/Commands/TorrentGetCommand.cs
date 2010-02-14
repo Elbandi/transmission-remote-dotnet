@@ -121,7 +121,8 @@ namespace TransmissionRemoteDotnet.Commmands
                 }
             }
             UpdateTorrents.Clear();
-            foreach (string key in Program.TorrentIndex.Keys)
+            string[] keys = (string[])new ArrayList(Program.TorrentIndex.Keys).ToArray(typeof(string));
+            foreach (string key in keys)
             {
                 Torrent t = Program.TorrentIndex[key];
                 if (t.UpdateSerial != Program.DaemonDescriptor.UpdateSerial)

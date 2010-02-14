@@ -153,7 +153,8 @@ namespace TransmissionRemoteDotnet
 
         public static void Log(string title, string body, long UpdateSerial, bool debug)
         {
-            LogListViewItem logItem = new LogListViewItem(DateTime.Now.ToString());
+            DateTime dt = DateTime.Now;
+            LogListViewItem logItem = new LogListViewItem(dt.ToString() + "." + dt.Millisecond);
             logItem.UpdateSerial = UpdateSerial;
             logItem.Debug = debug;
             logItem.SubItems.Add(title);
