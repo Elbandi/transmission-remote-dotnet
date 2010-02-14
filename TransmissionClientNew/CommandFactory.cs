@@ -58,7 +58,9 @@ namespace TransmissionRemoteDotnet
             TransmissionWebClient wc = new TransmissionWebClient(true);
             byte[] bdata = GetBytes(data.ToString());
             int r = requestid++;
+#if LOGRPC
             Program.LogDebug("RPC request: " + r, data.ToString());
+#endif
             wc.UploadDataCompleted += new UploadDataCompletedEventHandler(wc_UploadDataCompleted);
             wc.UploadDataAsync(new Uri(Program.Settings.Current.RpcUrl), null, bdata, new TransmissonRequest(r, bdata, allowRecursion));
             return wc;
@@ -96,7 +98,9 @@ namespace TransmissionRemoteDotnet
                 {
                     try
                     {
+#if LOGRPC
                         Program.LogDebug("RPC response: " + ((TransmissonRequest)e.UserState).requestid, GetString(e.Result));
+#endif
                         JsonObject jsonResponse = (JsonObject)JsonConvert.Import(GetString(e.Result));
                         if ((string)jsonResponse["result"] != "success")
                         {
