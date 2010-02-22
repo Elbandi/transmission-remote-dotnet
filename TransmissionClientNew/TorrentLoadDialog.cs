@@ -134,6 +134,10 @@ namespace TransmissionRemoteDotnet
                             item.SubItems.Add("");
                         }
                     }
+                    else
+                    {
+                        item.SubItems.Add("");
+                    }
 #else
                     item.SubItems.Add("");
 #endif
