@@ -58,11 +58,11 @@ namespace Instedd.GeoChat.Gettext
                     if (firstQuote == -1)
                         continue;
 
-                    int secondQuote = line.IndexOf('"', firstQuote + 1);
+                    int secondQuote = line.LastIndexOf('"');
                     if (secondQuote == -1)
                         continue;
 
-                    var piece = line.Substring(firstQuote + 1, secondQuote - firstQuote - 1);
+                    var piece = line.Substring(firstQuote + 1, secondQuote - firstQuote - 1).Replace("\\\"", "\"");
                     if (isMsgId)
                     {
                         currentKey = new StringBuilder();
