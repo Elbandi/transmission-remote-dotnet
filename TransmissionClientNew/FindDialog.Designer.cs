@@ -37,58 +37,38 @@ namespace TransmissionRemoteDotnet
             // 
             // findButton
             // 
-            this.findButton.AccessibleDescription = null;
-            this.findButton.AccessibleName = null;
             resources.ApplyResources(this.findButton, "findButton");
-            this.findButton.BackgroundImage = null;
-            this.findButton.Font = null;
             this.findButton.Name = "findButton";
             this.findButton.UseVisualStyleBackColor = true;
             this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // findTextbox
             // 
-            this.findTextbox.AccessibleDescription = null;
-            this.findTextbox.AccessibleName = null;
             resources.ApplyResources(this.findTextbox, "findTextbox");
-            this.findTextbox.BackgroundImage = null;
-            this.findTextbox.Font = null;
             this.findTextbox.Name = "findTextbox";
             // 
             // findLabel
             // 
-            this.findLabel.AccessibleDescription = null;
-            this.findLabel.AccessibleName = null;
             resources.ApplyResources(this.findLabel, "findLabel");
-            this.findLabel.Font = null;
             this.findLabel.Name = "findLabel";
             // 
             // CaseSensitiveCheckBox
             // 
-            this.CaseSensitiveCheckBox.AccessibleDescription = null;
-            this.CaseSensitiveCheckBox.AccessibleName = null;
             resources.ApplyResources(this.CaseSensitiveCheckBox, "CaseSensitiveCheckBox");
-            this.CaseSensitiveCheckBox.BackgroundImage = null;
-            this.CaseSensitiveCheckBox.Font = null;
             this.CaseSensitiveCheckBox.Name = "CaseSensitiveCheckBox";
             this.CaseSensitiveCheckBox.UseVisualStyleBackColor = true;
             // 
             // FindDialog
             // 
             this.AcceptButton = this.findButton;
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
             this.Controls.Add(this.CaseSensitiveCheckBox);
             this.Controls.Add(this.findLabel);
             this.Controls.Add(this.findTextbox);
             this.Controls.Add(this.findButton);
             this.DoubleBuffered = true;
-            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Icon = null;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FindDialog";

@@ -133,6 +133,7 @@
   <data name="torrentAndTabsSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="torrentAndTabsSplitContainer.IsSplitterFixed" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -161,7 +162,6 @@
   <data name="stateListBoxImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="stateListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
@@ -178,7 +178,7 @@
     <value>stateListBox</value>
   </data>
   <data name="&gt;&gt;stateListBox.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.GListBox, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.GListBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stateListBox.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel1</value>
@@ -277,7 +277,7 @@
     <value>torrentListView</value>
   </data>
   <data name="&gt;&gt;torrentListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;torrentListView.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel2</value>
@@ -385,7 +385,7 @@
     <value>piecesGraph</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.PiecesGraph, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.PiecesGraph, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Parent" xml:space="preserve">
     <value>progressOrPiecesPanel</value>
@@ -478,7 +478,7 @@
     <value>percentageLabel</value>
   </data>
   <data name="&gt;&gt;percentageLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;percentageLabel.Parent" xml:space="preserve">
     <value>generalTableLayoutPanel</value>
@@ -538,7 +538,7 @@
     <value>locationLabel</value>
   </data>
   <data name="&gt;&gt;locationLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3654.37577, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;locationLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -562,7 +562,7 @@
     <value>piecesInfoLabel</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -619,7 +619,7 @@
     <value>hashLabel</value>
   </data>
   <data name="&gt;&gt;hashLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hashLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -679,7 +679,7 @@
     <value>timeElapsedLabel</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -703,7 +703,7 @@
     <value>startedAtLabel</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -727,7 +727,7 @@
     <value>uploadLimitLabel</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -751,7 +751,7 @@
     <value>uploadRateLabel</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -775,7 +775,7 @@
     <value>uploadedLabel</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -799,7 +799,7 @@
     <value>remainingLabel</value>
   </data>
   <data name="&gt;&gt;remainingLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;remainingLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -823,7 +823,7 @@
     <value>downloadedLabel</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -847,7 +847,7 @@
     <value>downloadSpeedLabel</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -871,7 +871,7 @@
     <value>downloadLimitLabel</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -895,7 +895,7 @@
     <value>statusLabel</value>
   </data>
   <data name="&gt;&gt;statusLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -919,7 +919,7 @@
     <value>commentLabel</value>
   </data>
   <data name="&gt;&gt;commentLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;commentLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -943,7 +943,7 @@
     <value>errorLabel</value>
   </data>
   <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;errorLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -967,7 +967,7 @@
     <value>createdByLabel</value>
   </data>
   <data name="&gt;&gt;createdByLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;createdByLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -991,7 +991,7 @@
     <value>createdAtLabel</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -1015,7 +1015,7 @@
     <value>leechersLabel</value>
   </data>
   <data name="&gt;&gt;leechersLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;leechersLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -1039,7 +1039,7 @@
     <value>ratioLabel</value>
   </data>
   <data name="&gt;&gt;ratioLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ratioLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -1063,7 +1063,7 @@
     <value>seedersLabel</value>
   </data>
   <data name="&gt;&gt;seedersLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;seedersLabel.Parent" xml:space="preserve">
     <value>generalTorrentNameGroupBox</value>
@@ -1786,7 +1786,7 @@
     <value>trackersListView</value>
   </data>
   <data name="&gt;&gt;trackersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;trackersListView.Parent" xml:space="preserve">
     <value>trackersTorrentNameGroupBox</value>
@@ -1903,7 +1903,7 @@
     <value>filesListView</value>
   </data>
   <data name="&gt;&gt;filesListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesListView.Parent" xml:space="preserve">
     <value>filesTorrentNameGroupBox</value>
@@ -2023,7 +2023,7 @@
     <value>peersListView</value>
   </data>
   <data name="&gt;&gt;peersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;peersListView.Parent" xml:space="preserve">
     <value>peersTorrentNameGroupBox</value>
@@ -2296,7 +2296,7 @@
     <value>speedGraph</value>
   </data>
   <data name="&gt;&gt;speedGraph.Type" xml:space="preserve">
-    <value>CustomUIControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>CustomUIControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;speedGraph.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -2449,7 +2449,7 @@
     <value>torrentAndTabsSplitContainer</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SplitContainerFix, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SplitContainerFix, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -4265,6 +4265,6 @@
     <value>MainWindow</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.13.3648.4991, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
