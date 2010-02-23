@@ -110,6 +110,7 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.Text" xml:space="preserve">
     <value>Downloaden Naar:</value>
   </data>
@@ -155,7 +156,6 @@
   <data name="label5.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dhtEnabled.Text" xml:space="preserve">
     <value>Zet Distributed Hash Table (DHT) aan</value>
   </data>
@@ -210,9 +210,6 @@
   <data name="label7.Text" xml:space="preserve">
     <value>LET OP: De beschikbaarheid van sommige opties vereisen een deamon upgrade</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Text" xml:space="preserve">
     <value>Server instellingen</value>
   </data>

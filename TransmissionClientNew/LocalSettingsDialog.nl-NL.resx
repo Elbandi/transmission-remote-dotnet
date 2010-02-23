@@ -120,9 +120,6 @@
   <data name="SaveAndConnectButton.Text" xml:space="preserve">
     <value>Opslaan en verbinden</value>
   </data>
-  <metadata name="PlinkPathOpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="tabGlobalSettings.Text" xml:space="preserve">
     <value>Algemene instellingen</value>
   </data>
@@ -306,24 +303,12 @@
   <data name="columnPort.Text" xml:space="preserve">
     <value>Poort</value>
   </data>
-  <metadata name="ServersMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>203, 17</value>
-  </metadata>
   <data name="addServerToolStripMenuItem.Text" xml:space="preserve">
     <value>Server toevoegen</value>
   </data>
   <data name="removeServerToolStripMenuItem.Text" xml:space="preserve">
     <value>Verwijder Server</value>
   </data>
-  <metadata name="openImageFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>342, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>48</value>
-  </metadata>
   <data name="$this.Text" xml:space="preserve">
     <value>Lokale instellingen</value>
   </data>
