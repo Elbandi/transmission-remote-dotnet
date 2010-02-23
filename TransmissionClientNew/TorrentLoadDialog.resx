@@ -289,7 +289,7 @@
     <value>1</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 417</value>
+    <value>181, 17</value>
   </metadata>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 17</value>
@@ -427,7 +427,7 @@
     <value>DateLabel</value>
   </data>
   <data name="&gt;&gt;DateLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3664.8932, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DateLabel.Parent" xml:space="preserve">
     <value>TorrentContentsPanel</value>
@@ -451,7 +451,7 @@
     <value>SizeLabel</value>
   </data>
   <data name="&gt;&gt;SizeLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3664.8932, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SizeLabel.Parent" xml:space="preserve">
     <value>TorrentContentsPanel</value>
@@ -475,7 +475,7 @@
     <value>CommentLabel</value>
   </data>
   <data name="&gt;&gt;CommentLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3664.8932, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CommentLabel.Parent" xml:space="preserve">
     <value>TorrentContentsPanel</value>
@@ -502,7 +502,7 @@
     <value>NameLabel</value>
   </data>
   <data name="&gt;&gt;NameLabel.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.13.3664.8932, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;NameLabel.Parent" xml:space="preserve">
     <value>TorrentContentsPanel</value>
@@ -1034,6 +1034,6 @@
     <value>TorrentLoadDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.13.3664.8932, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
