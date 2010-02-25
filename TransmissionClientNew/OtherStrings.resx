@@ -492,4 +492,7 @@
   <data name="TorrentFinished" xml:space="preserve">
     <value>This torrent has finished downloading.</value>
   </data>
+  <data name="UnixPathExists" xml:space="preserve">
+    <value>Unix path exists</value>
+  </data>
 </root>

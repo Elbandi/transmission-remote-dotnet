@@ -270,10 +270,11 @@ namespace TransmissionRemoteDotnet
 
         private void AddShareButton_Click(object sender, EventArgs e)
         {
-            if (!listSambaShareMappings.Items.Contains(UnixPathPrefixTextBox.Text))
-                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPathPrefixTextBox.Text, SambaShareTextBox.Text));
+            string UnixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/").Replace(Path.DirectorySeparatorChar, '/');
+            if (!listSambaShareMappings.Items.Contains(UnixPath))
+                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShareTextBox.Text));
             else
-                MessageBox.Show("Unix path exists", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listSambaShareMappings_DoubleClick(object sender, EventArgs e)
@@ -408,7 +409,7 @@ namespace TransmissionRemoteDotnet
         private void MappingHelpButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                string.Format(@"{0}{1}{1}{2} /storage/torrent/{1}{3} \\sambaserver\torrentshare",
+                string.Format(@"{0}{1}{1}{2} /storage/torrent{1}{3} \\sambaserver\torrentshare",
                     OtherStrings.MappingSample, Environment.NewLine, OtherStrings.UnixPathPrefix, OtherStrings.SambaShare),
                 OtherStrings.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

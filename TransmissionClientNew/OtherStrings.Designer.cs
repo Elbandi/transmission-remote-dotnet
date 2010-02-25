@@ -1024,6 +1024,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unix path exists.
+        /// </summary>
+        internal static string UnixPathExists {
+            get {
+                return ResourceManager.GetString("UnixPathExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UNIX path prefix:.
         /// </summary>
         internal static string UnixPathPrefix {
