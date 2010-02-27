@@ -17,6 +17,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Jayrock.Json;
 using System.Net;
@@ -36,6 +37,7 @@ namespace TransmissionRemoteDotnet
         public static event EventHandler OnError;
 
         private static Boolean connected = false;
+        private static DateTime startupTime;
 
         private static UICultureChanger culturechanger = new UICultureChanger();
         public static UICultureChanger CultureChanger
@@ -85,6 +87,15 @@ namespace TransmissionRemoteDotnet
         [STAThread]
         static void Main(string[] args)
         {
+            startupTime = DateTime.Now;
+#if DEBUG
+             // In debug builds we'd prefer to have it dump us into the debugger
+#else
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.Automatic);
+            Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+#endif
+
             culturechanger.ApplyHelp = culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
             culturechanger.ApplyLocation = culturechanger.ApplySize = false;
             settings = LocalSettings.TryLoad();
@@ -221,6 +232,42 @@ namespace TransmissionRemoteDotnet
             {
                 return connected;
             }
+        }
+
+        private static void UnhandledException(Exception ex)
+        {
+            UnhandledException el = new UnhandledException(ex, startupTime);
+            System.Threading.Thread t = new System.Threading.Thread(el.DoLog);
+            t.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+            t.Start();
+            string errorFormat;
+            string errorText;
+
+            try
+            {
+                errorFormat = "There was an unhandled error, and transmission-remote-dotnet must be closed. Refer to the file '{0}', which has been placed on your desktop, for more information.";
+                // <comment>{0} is a filename</comment>
+            }
+
+            catch (Exception)
+            {
+                errorFormat = "There was an unhandled error, and transmission-remote-dotnet must be closed. Refer to the file '{0}', which has been placed on your desktop, for more information.";
+            }
+
+            errorText = string.Format(errorFormat, el.FileName);
+            MessageBox.Show(errorText, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            UnhandledException((Exception)e.ExceptionObject);
+            Process.GetCurrentProcess().Kill();
+        }
+
+        private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            UnhandledException(e.Exception);
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
