@@ -1035,6 +1035,7 @@ namespace TransmissionRemoteDotnet
                 connectButton.DropDownItems.Clear();
                 connectToolStripMenuItem.DropDownItems.Clear();
                 CreateProfileMenu();
+                SetRemoteCmdButtonVisible(Program.Connected);
                 refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
                 filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
                 LoadSkins();

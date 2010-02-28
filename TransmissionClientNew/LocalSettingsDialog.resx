@@ -208,7 +208,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="PlinkPathOpenFileDialog.Filter" xml:space="preserve">
-    <value>plink.exe|plink.exe</value>
+    <value>plink.exe|plink.exe|ssh.exe|ssh.exe</value>
   </data>
   <data name="AutoConnectComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 23</value>
@@ -358,7 +358,7 @@
     <value>1</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="&gt;&gt;groupPlinkPath.Name" xml:space="preserve">
     <value>groupPlinkPath</value>
