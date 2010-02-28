@@ -493,6 +493,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid RPC location.
+        /// </summary>
+        internal static string InvalidRPCLocation {
+            get {
+                return ResourceManager.GetString("InvalidRPCLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kilobyte.
         /// </summary>
         internal static string Kilobyte {

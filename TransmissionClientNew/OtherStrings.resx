@@ -495,4 +495,7 @@
   <data name="UnixPathExists" xml:space="preserve">
     <value>Unix path exists</value>
   </data>
+  <data name="InvalidRPCLocation" xml:space="preserve">
+    <value>Invalid RPC location</value>
+  </data>
 </root>
