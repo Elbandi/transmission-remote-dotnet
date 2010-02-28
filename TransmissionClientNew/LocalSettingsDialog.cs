@@ -413,5 +413,10 @@ namespace TransmissionRemoteDotnet
                     OtherStrings.MappingSample, Environment.NewLine, OtherStrings.UnixPathPrefix, OtherStrings.SambaShare),
                 OtherStrings.Info, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void CurrentProfileComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SaveAndConnectButton.Enabled = CurrentProfileComboBox.SelectedIndex != -1;
+        }
     }
 }
