@@ -36,7 +36,7 @@ namespace TransmissionRemoteDotnet
         {
             InitializeComponent();
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,9 +44,10 @@ namespace TransmissionRemoteDotnet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Program.DaemonDescriptor.Revision >= 7744)
+            bool withoption = UseTorrentLoadDialogCheckBox.Enabled ? UseTorrentLoadDialogCheckBox.Checked : false;
+            if (Program.DaemonDescriptor.Revision >= 7744 && !withoption)
             {
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(textBox1.Text)));
+                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(UrlTextBox.Text)));
                 this.Close();
             }
             else
@@ -54,10 +55,10 @@ namespace TransmissionRemoteDotnet
                 try
                 {
                     string target = Path.GetTempFileName();
-                    toolStripStatusLabel1.Text = OtherStrings.Downloading+"...";
-                    toolStripProgressBar1.Value = 0;
-                    toolStripProgressBar1.Visible = true;
-                    button1.Enabled = false;
+                    toolStripStatusLabel.Text = OtherStrings.Downloading + "...";
+                    DownloadProgressBar.Value = 0;
+                    DownloadProgressBar.Visible = true;
+                    OkButton.Enabled = false;
                     WebClient webClient = new TransmissionWebClient(false);
                     webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(webClient_DownloadProgressChanged);
                     webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(webClient_DownloadFileCompleted);
@@ -72,31 +73,32 @@ namespace TransmissionRemoteDotnet
 
         private void HandleException(Exception ex)
         {
-            toolStripProgressBar1.Visible = false;
-            toolStripStatusLabel1.Text = ex.Message;
+            DownloadProgressBar.Visible = false;
+            toolStripStatusLabel.Text = ex.Message;
             MessageBox.Show(ex.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 0)
+            if (UrlTextBox.Text.Length > 0)
             {
                 try
                 {
-                    this.currentUri = new Uri(textBox1.Text);
-                    toolStripStatusLabel1.Text = OtherStrings.InputAccepted;
-                    button1.Enabled = true;
+                    this.currentUri = new Uri(UrlTextBox.Text);
+                    UseTorrentLoadDialogCheckBox.Enabled = !currentUri.Scheme.Equals("magnet");
+                    toolStripStatusLabel.Text = OtherStrings.InputAccepted;
+                    OkButton.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    button1.Enabled = false;
-                    toolStripStatusLabel1.Text = ex.Message;
+                    OkButton.Enabled = false;
+                    toolStripStatusLabel.Text = ex.Message;
                 }
             }
             else
             {
-                toolStripStatusLabel1.Text = OtherStrings.WaitingForInput+"...";
-                button1.Enabled = false;
+                toolStripStatusLabel.Text = OtherStrings.WaitingForInput + "...";
+                OkButton.Enabled = false;
             }
         }
 
@@ -105,19 +107,26 @@ namespace TransmissionRemoteDotnet
             if (e.Error != null)
             {
                 HandleException(e.Error);
-                button1.Enabled = true;
+                OkButton.Enabled = true;
             }
             else
             {
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile((string)e.UserState, true)));
+                bool withoption = UseTorrentLoadDialogCheckBox.Enabled ? UseTorrentLoadDialogCheckBox.Checked : false;
+                if (withoption)
+                {
+                    TorrentLoadDialog dialog = new TorrentLoadDialog((string)e.UserState);
+                    dialog.ShowDialog();
+                }
+                else
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile((string)e.UserState, true)));
                 this.Close();
             }
         }
 
         private void webClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            toolStripProgressBar1.Value = e.ProgressPercentage;
-            toolStripStatusLabel1.Text = String.Format("{0} ({1}%)...", OtherStrings.Downloading, e.ProgressPercentage);
+            DownloadProgressBar.Value = e.ProgressPercentage;
+            toolStripStatusLabel.Text = String.Format("{0} ({1}%)...", OtherStrings.Downloading, e.ProgressPercentage);
         }
 
         private void UriPromptWindow_Load(object sender, EventArgs e)
@@ -125,7 +134,7 @@ namespace TransmissionRemoteDotnet
             try
             {
                 Uri uri = new Uri(Clipboard.GetText());
-                textBox1.Text = uri.ToString();
+                UrlTextBox.Text = uri.ToString();
             }
             catch
             { }
