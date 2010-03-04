@@ -991,6 +991,16 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
+                if (Program.Settings.Current.Host.Equals(""))
+                {
+                    MessageBox.Show(OtherStrings.NoHostnameSet, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (!Uri.IsWellFormedUriString(Program.Settings.Current.RpcUrl, UriKind.Absolute))
+                {
+                    MessageBox.Show(OtherStrings.InvalidRPCLocation, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (Program.Connected)
                     Program.Connected = false;
                 connectButton.Enabled = connectToolStripMenuItem.Enabled = false;
@@ -1025,6 +1035,7 @@ namespace TransmissionRemoteDotnet
                 connectButton.DropDownItems.Clear();
                 connectToolStripMenuItem.DropDownItems.Clear();
                 CreateProfileMenu();
+                SetRemoteCmdButtonVisible(Program.Connected);
                 refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
                 filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
                 LoadSkins();
@@ -1290,11 +1301,6 @@ namespace TransmissionRemoteDotnet
         public void connectButton_Click(object sender, EventArgs e)
         {
             fileToolStripMenuItem.DropDown.Close();
-            if (Program.Settings.Current.Host.Equals(""))
-            {
-                MessageBox.Show(OtherStrings.NoHostnameSet, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             if (!Program.Connected)
                 Connect();
         }

@@ -236,6 +236,7 @@ namespace TransmissionRemoteDotnet
             this.CurrentProfileComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.CurrentProfileComboBox, "CurrentProfileComboBox");
             this.CurrentProfileComboBox.Name = "CurrentProfileComboBox";
+            this.CurrentProfileComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentProfileComboBox_SelectedIndexChanged);
             // 
             // groupPlinkPath
             // 

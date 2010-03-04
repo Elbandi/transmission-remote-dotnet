@@ -493,6 +493,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid RPC location.
+        /// </summary>
+        internal static string InvalidRPCLocation {
+            get {
+                return ResourceManager.GetString("InvalidRPCLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kilobyte.
         /// </summary>
         internal static string Kilobyte {
@@ -1020,6 +1029,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToParse {
             get {
                 return ResourceManager.GetString("UnableToParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unix path exists.
+        /// </summary>
+        internal static string UnixPathExists {
+            get {
+                return ResourceManager.GetString("UnixPathExists", resourceCulture);
             }
         }
         

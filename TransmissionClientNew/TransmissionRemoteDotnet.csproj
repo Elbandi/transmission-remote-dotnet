@@ -42,6 +42,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,6 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>false</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Jayrock, Version=0.9.8316.0, Culture=neutral">
@@ -105,6 +107,24 @@
     <Compile Include="CustomControls\FileBrowseTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CustomControls\PaintDotNet\Memory.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeConstants.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeDelegates.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeErrors.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeInterfaces.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeMethods.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeStructs.cs" />
+    <Compile Include="CustomControls\PaintDotNet\OS.cs" />
+    <Compile Include="CustomControls\PaintDotNet\OSType.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Processor.cs" />
+    <Compile Include="CustomControls\PaintDotNet\ProcessorArchitecture.cs" />
+    <Compile Include="CustomControls\PaintDotNet\ProcessorFeature.cs" />
+    <Compile Include="CustomControls\PaintDotNet\SafeNativeMethods.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Set.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Set`1.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Timing.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Tracing.cs" />
+    <Compile Include="CustomControls\PaintDotNet\UI.cs" />
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -889,6 +909,7 @@
     <Compile Include="CustomControls\UICultureChanger.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UnhandledException.cs" />
     <Compile Include="UriPromptWindow.cs">
       <SubType>Form</SubType>
     </Compile>
