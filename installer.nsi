@@ -100,6 +100,7 @@ Section $(NAME_SecTransmissionRemote) SecTransmissionRemote
   File "TransmissionClientNew\bin\Release\Transmission Remote.exe"
   File "TransmissionClientNew\Jayrock\Release\Jayrock.dll"
   File "TransmissionClientNew\Jayrock\Release\Jayrock.Json.dll"
+  File "TransmissionClientNew\Jayrock\Release\Raccoom.Xml.dll"
   File "README.txt"
   File "LICENCE.txt"
   
@@ -245,6 +246,7 @@ Section "Uninstall"
 
   ; Remove files and uninstaller
   Delete "$INSTDIR\Transmission Remote.exe"
+  Delete "$INSTDIR\Raccoom.Xml.dll"
   Delete "$INSTDIR\Jayrock.dll"
   Delete "$INSTDIR\Jayrock.Json.dll"
   Delete "$INSTDIR\uninstall.exe"
