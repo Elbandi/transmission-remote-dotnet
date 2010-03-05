@@ -97,7 +97,7 @@ namespace TransmissionRemoteDotnet
             FIELD_WANTED = "wanted",
             FIELD_TRACKERS = "trackers",
             FIELD_TRACKERSTATS = "trackerStats",
-            FIELD_IDENTIFIER = "identifier",
+            FIELD_IDENTIFIER = "id",
             FIELD_PEERS = "peers",
             FIELD_SIZEWHENDONE = "sizeWhenDone",
             FIELD_PEERLIMIT = "peer-limit",
