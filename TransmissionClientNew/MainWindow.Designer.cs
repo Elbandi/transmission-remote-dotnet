@@ -167,6 +167,8 @@ namespace TransmissionRemoteDotnet
             this.localConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.remoteConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
+            this.toolbarToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.RssButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1075,7 +1077,9 @@ namespace TransmissionRemoteDotnet
             this.toolbarToolStripSeparator4,
             this.localConfigureButton,
             this.remoteConfigureButton,
-            this.sessionStatsButton});
+            this.sessionStatsButton,
+            this.toolbarToolStripSeparator5,
+            this.RssButton});
             this.toolStrip.Name = "toolStrip";
             // 
             // connectButton
@@ -1249,6 +1253,19 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.sessionStatsButton, "sessionStatsButton");
             this.sessionStatsButton.Name = "sessionStatsButton";
             this.sessionStatsButton.Click += new System.EventHandler(this.sessionStatsButton_Click);
+            // 
+            // toolbarToolStripSeparator5
+            // 
+            this.toolbarToolStripSeparator5.Name = "toolbarToolStripSeparator5";
+            resources.ApplyResources(this.toolbarToolStripSeparator5, "toolbarToolStripSeparator5");
+            // 
+            // RssButton
+            // 
+            this.RssButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RssButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.feed_icon;
+            resources.ApplyResources(this.RssButton, "RssButton");
+            this.RssButton.Name = "RssButton";
+            this.RssButton.Click += new System.EventHandler(this.RssButton_Click);
             // 
             // menuStrip
             // 
@@ -1801,6 +1818,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem moveTorrentDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cSVInfoToClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTorrentWithOptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton RssButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private SelectableLabel seedersLabel;
         private SelectableLabel createdByLabel;

@@ -466,6 +466,19 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static string MD5(string input)
+        {
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] data = Encoding.ASCII.GetBytes(input);
+            data = md5.ComputeHash(data);
+            StringBuilder s = new StringBuilder();
+            foreach (byte b in data)
+            {
+                s.Append(b.ToString("x2").ToLower());
+            }
+            return s.ToString();
+        }
+
         public static Bitmap LoadSkinImage(string FileName, int MinHeight, int MaxHeight, int ImageNumber)
         {
             try

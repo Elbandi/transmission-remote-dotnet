@@ -105,6 +105,11 @@ namespace TransmissionRemoteDotnet
                 if (s.Key.Equals(sett.CurrentProfile))
                     CurrentProfileComboBox.SelectedIndex = c;
             }
+            listRssFeeds.Items.Clear();
+            foreach (KeyValuePair<string, string> s in sett.RssFeeds)
+            {
+                listRssFeeds.Items.Add(new ListViewItem(new string[] { s.Key, s.Value })).Name = s.Key;
+            }
             try { defaultActionComboBox.SelectedIndex = sett.DefaultDoubleClickAction; }
             catch { }
             notificationOnCompletionCheckBox.Enabled = notificationOnAdditionCheckBox.Enabled
@@ -163,6 +168,11 @@ namespace TransmissionRemoteDotnet
             else
                 sett.CurrentProfile = "";
             sett.DontSavePasswords = DontSavePasswordsCheckBox.Checked;
+            sett.RssFeeds.Clear();
+            foreach (ListViewItem lvi in listRssFeeds.Items)
+            {
+                sett.RssFeeds.Add(lvi.Name, lvi.SubItems[1].Text);
+            }
             sett.Commit();
         }
 
@@ -264,7 +274,6 @@ namespace TransmissionRemoteDotnet
 
         private void RemoveShareButton_Click(object sender, EventArgs e)
         {
-            string itemText = listSambaShareMappings.SelectedItem.ToString();
             listSambaShareMappings.Items.RemoveAt(listSambaShareMappings.SelectedIndex);
         }
 
@@ -417,6 +426,47 @@ namespace TransmissionRemoteDotnet
         private void CurrentProfileComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SaveAndConnectButton.Enabled = CurrentProfileComboBox.SelectedIndex != -1;
+        }
+
+        private void FeedNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Uri u = new Uri(FeedUrlTextBox.Text);
+                AddFeedButton.Enabled = FeedNameTextBox.Text.Length > 0;
+            }
+            catch {
+                AddFeedButton.Enabled = false;
+            }
+        }
+
+        private void AddFeedButton_Click(object sender, EventArgs e)
+        {
+            string FeedName = FeedNameTextBox.Text;
+            if (!listRssFeeds.Items.ContainsKey(FeedName))
+                listRssFeeds.Items.Add(new ListViewItem(new string[] { FeedName, FeedUrlTextBox.Text})).Name = FeedName;
+            else
+                MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void listRssFeeds_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RemoveFeedButton.Enabled = listRssFeeds.SelectedItems.Count > 0;
+        }
+
+        private void listRssFeeds_DoubleClick(object sender, EventArgs e)
+        {
+            if (listRssFeeds.SelectedItems.Count > 0)
+            {
+                ListViewItem l = listRssFeeds.SelectedItems[0];
+                FeedNameTextBox.Text = l.Text;
+                FeedUrlTextBox.Text = l.SubItems[1].Text;
+            }
+        }
+
+        private void RemoveFeedButton_Click(object sender, EventArgs e)
+        {
+            listRssFeeds.Items.Remove(listRssFeeds.SelectedItems[0]);
         }
     }
 }

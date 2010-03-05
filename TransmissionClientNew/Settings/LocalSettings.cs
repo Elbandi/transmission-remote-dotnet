@@ -69,6 +69,7 @@ namespace TransmissionRemoteDotnet.Settings
         }
 
         public Dictionary<string, TransmissionServer> Servers = new Dictionary<string, TransmissionServer>();
+        public Dictionary<string, string> RssFeeds = new Dictionary<string, string>();
         public Dictionary<string, object> Misc = new Dictionary<string, object>();
 
         public JsonObject SaveToJson()
@@ -96,6 +97,12 @@ namespace TransmissionRemoteDotnet.Settings
                 ja.Put(s.Key, s.Value.SaveToJson());
             }
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PROFILES, ja);
+            ja = new JsonObject();
+            foreach (KeyValuePair<string, string> s in RssFeeds)
+            {
+                ja.Put(s.Key, s.Value);
+            }
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_RSSFEEDS, ja);
             ja = new JsonObject();
             foreach (KeyValuePair<string, object> s in Misc)
             {
@@ -134,6 +141,14 @@ namespace TransmissionRemoteDotnet.Settings
             DontSavePasswords = dsp;
             if (!Servers.ContainsKey(currentprofile))
                 currentprofile = "";
+            ja = (JsonObject)o[SettingsKey.REGKEY_RSSFEEDS];
+            if (ja != null)
+            {
+                foreach (string n in ja.Names)
+                {
+                    RssFeeds.Add(n, ja[n] as string);
+                }
+            }
             ja = (JsonObject)o[SettingsKey.REGKEY_MISC];
             if (ja != null)
             {
@@ -508,6 +523,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
             REGKEY_DELETETORRENT = "deleteTorrentWhenAdding",
             REGKEY_DEFAULTACTION = "defaultDoubleClickAction",
+            REGKEY_RSSFEEDS = "rssFeeds",
             REGKEY_USER = "user",
             REGKEY_PASS = "pass",
             REGKEY_AUTHENABLED = "authEnabled",

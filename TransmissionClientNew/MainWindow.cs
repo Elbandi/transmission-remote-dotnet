@@ -136,6 +136,7 @@ namespace TransmissionRemoteDotnet
                 new ToolStripBitmap() { Name = "netconfigure", Image = global::TransmissionRemoteDotnet.Properties.Resources.netconfigure, Controls = new ToolStripItem[]{remoteConfigureButton, remoteSettingsToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "hwinfo", Image = global::TransmissionRemoteDotnet.Properties.Resources.hwinfo, Controls = new ToolStripItem[]{sessionStatsButton, statsToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "find", Image = global::TransmissionRemoteDotnet.Properties.Resources.find, Controls = new ToolStripItem[]{findToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "rss", Image = global::TransmissionRemoteDotnet.Properties.Resources.feed_icon, Controls = new ToolStripItem[]{RssButton} },
             };
             defaulttoolbarimages = new List<Bitmap>();
             foreach (ToolStripBitmap tsb in initialimages)
@@ -739,7 +740,7 @@ namespace TransmissionRemoteDotnet
             {
                 if (Program.UploadArgs != null && Program.UploadArgs.Length > 0)
                 {
-                    ShowMustBeConnectedDialog(Program.UploadArgs);
+                    ShowMustBeConnectedDialog(Program.UploadArgs, Program.Settings.UploadPrompt);
                 }
             }
         }
@@ -863,19 +864,20 @@ namespace TransmissionRemoteDotnet
         {
             if (Program.Connected)
             {
-                Upload((string[])e.Data.GetData(DataFormats.FileDrop));
+                Upload((string[])e.Data.GetData(DataFormats.FileDrop), Program.Settings.UploadPrompt);
             }
             else
             {
-                ShowMustBeConnectedDialog((string[])e.Data.GetData(DataFormats.FileDrop));
+                ShowMustBeConnectedDialog((string[])e.Data.GetData(DataFormats.FileDrop), Program.Settings.UploadPrompt);
             }
         }
 
-        public void ShowMustBeConnectedDialog(string[] args)
+        public void ShowMustBeConnectedDialog(string[] args, bool uploadPrompt)
         {
             if (MessageBox.Show(OtherStrings.MustBeConnected, OtherStrings.NotConnected, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Program.UploadArgs = args;
+                Program.UploadPrompt = uploadPrompt;
                 Connect();
             }
             else
@@ -1038,6 +1040,7 @@ namespace TransmissionRemoteDotnet
                 SetRemoteCmdButtonVisible(Program.Connected);
                 refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
                 filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
+                Program.UploadPrompt = Program.Settings.UploadPrompt;
                 LoadSkins();
             }
         }
@@ -1231,12 +1234,12 @@ namespace TransmissionRemoteDotnet
                 openFile.Multiselect = true;
                 if (openFile.ShowDialog() == DialogResult.OK)
                 {
-                    Upload(openFile.FileNames);
+                    Upload(openFile.FileNames, Program.Settings.UploadPrompt);
                 }
             }
         }
 
-        public void Upload(string[] args)
+        public void Upload(string[] args, bool uploadprompt)
         {
             foreach (string s in args)
             {
@@ -1244,7 +1247,7 @@ namespace TransmissionRemoteDotnet
                     continue;
                 if (File.Exists(s))
                 {
-                    if (Program.Settings.UploadPrompt)
+                    if (uploadprompt)
                     {
                         TorrentLoadDialog dialog = new TorrentLoadDialog(s);
                         dialog.ShowDialog();
@@ -1893,6 +1896,12 @@ namespace TransmissionRemoteDotnet
             ClassSingleton<StatsDialog>.Instance.BringToFront();
         }
 
+        private void RssButton_Click(object sender, EventArgs e)
+        {
+            ClassSingleton<RssForm>.Instance.Show();
+            ClassSingleton<RssForm>.Instance.BringToFront();
+        }
+
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             LocalSettings settings = Program.Settings;
@@ -1982,7 +1991,7 @@ namespace TransmissionRemoteDotnet
 
         private void checkVersionWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            TransmissionWebClient client = new TransmissionWebClient(false);
+            TransmissionWebClient client = new TransmissionWebClient(false, false);
             string response = client.DownloadString(LATEST_VERSION);
             if (!response.StartsWith("#LATESTVERSION#"))
                 throw new FormatException("Response didn't contain the identification prefix.");

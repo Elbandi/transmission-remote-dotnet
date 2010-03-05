@@ -2268,6 +2268,246 @@
   <data name="&gt;&gt;tabServersSettings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="columnFeedName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnFeedName.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="columnFeedUrl.Text" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="columnFeedUrl.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="listRssFeeds.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listRssFeeds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listRssFeeds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 205</value>
+  </data>
+  <data name="listRssFeeds.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Name" xml:space="preserve">
+    <value>listRssFeeds</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Parent" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RemoveFeedButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RemoveFeedButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 16</value>
+  </data>
+  <data name="RemoveFeedButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="RemoveFeedButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RemoveFeedButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Name" xml:space="preserve">
+    <value>RemoveFeedButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddFeedButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="AddFeedButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="AddFeedButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="AddFeedButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="AddFeedButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Name" xml:space="preserve">
+    <value>AddFeedButton</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FeedNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 19</value>
+  </data>
+  <data name="FeedNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="FeedNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Name" xml:space="preserve">
+    <value>FeedNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FeedUrlLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FeedUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="FeedUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="FeedUrlLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="FeedUrlLabel.Text" xml:space="preserve">
+    <value>Feed url:</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Name" xml:space="preserve">
+    <value>FeedUrlLabel</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="FeedUrlTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 45</value>
+  </data>
+  <data name="FeedUrlTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 20</value>
+  </data>
+  <data name="FeedUrlTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Name" xml:space="preserve">
+    <value>FeedUrlTextBox</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="FeedNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FeedNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="FeedNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="FeedNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FeedNameLabel.Text" xml:space="preserve">
+    <value>Feed name:</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Name" xml:space="preserve">
+    <value>FeedNameLabel</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupFeed.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="groupFeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 208</value>
+  </data>
+  <data name="groupFeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 84</value>
+  </data>
+  <data name="groupFeed.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupFeed.Text" xml:space="preserve">
+    <value>Feed</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Name" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Parent" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabRssSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabRssSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabRssSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 295</value>
+  </data>
+  <data name="tabRssSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabRssSettings.Text" xml:space="preserve">
+    <value>Rss Feeds</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Name" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Parent" xml:space="preserve">
+    <value>tabSettings</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="toolbarImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
@@ -2356,7 +2596,7 @@
     <value>tabSettings</value>
   </data>
   <data name="&gt;&gt;tabSkinSettings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -2459,6 +2699,18 @@
   </data>
   <data name="&gt;&gt;removeServerToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnFeedName.Name" xml:space="preserve">
+    <value>columnFeedName</value>
+  </data>
+  <data name="&gt;&gt;columnFeedName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnFeedUrl.Name" xml:space="preserve">
+    <value>columnFeedUrl</value>
+  </data>
+  <data name="&gt;&gt;columnFeedUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openImageFileDialog.Name" xml:space="preserve">
     <value>openImageFileDialog</value>

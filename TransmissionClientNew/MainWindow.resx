@@ -2859,6 +2859,21 @@
   <data name="sessionStatsButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolbarToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="RssButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="RssButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RssButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 36</value>
+  </data>
+  <data name="RssButton.Text" xml:space="preserve">
+    <value>Rss</value>
+  </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
@@ -3977,6 +3992,18 @@
     <value>sessionStatsButton</value>
   </data>
   <data name="&gt;&gt;sessionStatsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolbarToolStripSeparator5.Name" xml:space="preserve">
+    <value>toolbarToolStripSeparator5</value>
+  </data>
+  <data name="&gt;&gt;toolbarToolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RssButton.Name" xml:space="preserve">
+    <value>RssButton</value>
+  </data>
+  <data name="&gt;&gt;RssButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">

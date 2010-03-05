@@ -104,7 +104,7 @@ namespace TransmissionRemoteDotnet.Commmands
                     form.RefreshIfNotRefreshing();
                     if (Program.UploadArgs != null)
                     {
-                        form.Upload(Program.UploadArgs);
+                        form.Upload(Program.UploadArgs, Program.UploadPrompt);
                         Program.UploadArgs = null;
                     }
                 }

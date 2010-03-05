@@ -134,6 +134,17 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabRssSettings = new System.Windows.Forms.TabPage();
+            this.listRssFeeds = new System.Windows.Forms.ListView();
+            this.columnFeedName = new System.Windows.Forms.ColumnHeader();
+            this.columnFeedUrl = new System.Windows.Forms.ColumnHeader();
+            this.groupFeed = new System.Windows.Forms.GroupBox();
+            this.RemoveFeedButton = new System.Windows.Forms.Button();
+            this.AddFeedButton = new System.Windows.Forms.Button();
+            this.FeedNameTextBox = new System.Windows.Forms.TextBox();
+            this.FeedUrlLabel = new System.Windows.Forms.Label();
+            this.FeedUrlTextBox = new System.Windows.Forms.TextBox();
+            this.FeedNameLabel = new System.Windows.Forms.Label();
             this.tabSkinSettings = new System.Windows.Forms.TabPage();
             this.toolbarImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
@@ -159,6 +170,8 @@ namespace TransmissionRemoteDotnet
             this.tabPage7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ServersMenuStrip.SuspendLayout();
+            this.tabRssSettings.SuspendLayout();
+            this.groupFeed.SuspendLayout();
             this.tabSkinSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,6 +207,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.tabSettings.Controls.Add(this.tabGlobalSettings);
             this.tabSettings.Controls.Add(this.tabServersSettings);
+            this.tabSettings.Controls.Add(this.tabRssSettings);
             this.tabSettings.Controls.Add(this.tabSkinSettings);
             resources.ApplyResources(this.tabSettings, "tabSettings");
             this.tabSettings.Name = "tabSettings";
@@ -828,6 +842,86 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
+            // tabRssSettings
+            // 
+            this.tabRssSettings.Controls.Add(this.listRssFeeds);
+            this.tabRssSettings.Controls.Add(this.groupFeed);
+            resources.ApplyResources(this.tabRssSettings, "tabRssSettings");
+            this.tabRssSettings.Name = "tabRssSettings";
+            this.tabRssSettings.UseVisualStyleBackColor = true;
+            // 
+            // listRssFeeds
+            // 
+            this.listRssFeeds.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnFeedName,
+            this.columnFeedUrl});
+            resources.ApplyResources(this.listRssFeeds, "listRssFeeds");
+            this.listRssFeeds.FullRowSelect = true;
+            this.listRssFeeds.HideSelection = false;
+            this.listRssFeeds.MultiSelect = false;
+            this.listRssFeeds.Name = "listRssFeeds";
+            this.listRssFeeds.ShowGroups = false;
+            this.listRssFeeds.UseCompatibleStateImageBehavior = false;
+            this.listRssFeeds.View = System.Windows.Forms.View.Details;
+            this.listRssFeeds.SelectedIndexChanged += new System.EventHandler(this.listRssFeeds_SelectedIndexChanged);
+            this.listRssFeeds.DoubleClick += new System.EventHandler(this.listRssFeeds_DoubleClick);
+            // 
+            // columnFeedName
+            // 
+            resources.ApplyResources(this.columnFeedName, "columnFeedName");
+            // 
+            // columnFeedUrl
+            // 
+            resources.ApplyResources(this.columnFeedUrl, "columnFeedUrl");
+            // 
+            // groupFeed
+            // 
+            this.groupFeed.Controls.Add(this.RemoveFeedButton);
+            this.groupFeed.Controls.Add(this.AddFeedButton);
+            this.groupFeed.Controls.Add(this.FeedNameTextBox);
+            this.groupFeed.Controls.Add(this.FeedUrlLabel);
+            this.groupFeed.Controls.Add(this.FeedUrlTextBox);
+            this.groupFeed.Controls.Add(this.FeedNameLabel);
+            resources.ApplyResources(this.groupFeed, "groupFeed");
+            this.groupFeed.Name = "groupFeed";
+            this.groupFeed.TabStop = false;
+            // 
+            // RemoveFeedButton
+            // 
+            resources.ApplyResources(this.RemoveFeedButton, "RemoveFeedButton");
+            this.RemoveFeedButton.Name = "RemoveFeedButton";
+            this.RemoveFeedButton.UseVisualStyleBackColor = true;
+            this.RemoveFeedButton.Click += new System.EventHandler(this.RemoveFeedButton_Click);
+            // 
+            // AddFeedButton
+            // 
+            resources.ApplyResources(this.AddFeedButton, "AddFeedButton");
+            this.AddFeedButton.Name = "AddFeedButton";
+            this.AddFeedButton.UseVisualStyleBackColor = true;
+            this.AddFeedButton.Click += new System.EventHandler(this.AddFeedButton_Click);
+            // 
+            // FeedNameTextBox
+            // 
+            resources.ApplyResources(this.FeedNameTextBox, "FeedNameTextBox");
+            this.FeedNameTextBox.Name = "FeedNameTextBox";
+            this.FeedNameTextBox.TextChanged += new System.EventHandler(this.FeedNameTextBox_TextChanged);
+            // 
+            // FeedUrlLabel
+            // 
+            resources.ApplyResources(this.FeedUrlLabel, "FeedUrlLabel");
+            this.FeedUrlLabel.Name = "FeedUrlLabel";
+            // 
+            // FeedUrlTextBox
+            // 
+            resources.ApplyResources(this.FeedUrlTextBox, "FeedUrlTextBox");
+            this.FeedUrlTextBox.Name = "FeedUrlTextBox";
+            this.FeedUrlTextBox.TextChanged += new System.EventHandler(this.FeedNameTextBox_TextChanged);
+            // 
+            // FeedNameLabel
+            // 
+            resources.ApplyResources(this.FeedNameLabel, "FeedNameLabel");
+            this.FeedNameLabel.Name = "FeedNameLabel";
+            // 
             // tabSkinSettings
             // 
             this.tabSkinSettings.Controls.Add(this.toolbarImageBrowse);
@@ -919,6 +1013,9 @@ namespace TransmissionRemoteDotnet
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ServersMenuStrip.ResumeLayout(false);
+            this.tabRssSettings.ResumeLayout(false);
+            this.groupFeed.ResumeLayout(false);
+            this.groupFeed.PerformLayout();
             this.tabSkinSettings.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1018,5 +1115,16 @@ namespace TransmissionRemoteDotnet
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox stateImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox infopanelImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox toolbarImageBrowse;
+        private System.Windows.Forms.ListView listRssFeeds;
+        private System.Windows.Forms.ColumnHeader columnFeedName;
+        private System.Windows.Forms.ColumnHeader columnFeedUrl;
+        private System.Windows.Forms.TabPage tabRssSettings;
+        private System.Windows.Forms.GroupBox groupFeed;
+        private System.Windows.Forms.Label FeedNameLabel;
+        private System.Windows.Forms.TextBox FeedNameTextBox;
+        private System.Windows.Forms.Label FeedUrlLabel;
+        private System.Windows.Forms.TextBox FeedUrlTextBox;
+        private System.Windows.Forms.Button AddFeedButton;
+        private System.Windows.Forms.Button RemoveFeedButton;
     }
 }
