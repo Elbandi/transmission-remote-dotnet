@@ -749,8 +749,8 @@ namespace TransmissionRemoteDotnet
         {
             ToolStripMenuItem englishItem = new ToolStripMenuItem("English");
             englishItem.Click += new EventHandler(this.ChangeUICulture);
-            englishItem.Tag = new CultureInfo("en-GB");
-            englishItem.Checked = Program.Settings.Locale.Equals("en-GB");
+            englishItem.Tag = new CultureInfo("en-US");
+            englishItem.Checked = Program.Settings.Locale.Equals("en-US");
             languageToolStripMenuItem.DropDownItems.Add(englishItem);
             languageToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
             DirectoryInfo di = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));

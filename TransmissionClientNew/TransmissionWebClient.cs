@@ -83,7 +83,7 @@ namespace TransmissionRemoteDotnet
             request.KeepAlive = false;
             request.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip, deflate");
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-            request.UserAgent = "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042523 Ubuntu/9.04 (jaunty) Firefox/3.0.10";
+            request.UserAgent = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.10) Gecko/2009042523 Ubuntu/9.04 (jaunty) Firefox/3.0.10";
             if (x_transmission_session_id != null && authenticate && rpc)
                 request.Headers["X-Transmission-Session-Id"] = x_transmission_session_id;
             if (!rpc)

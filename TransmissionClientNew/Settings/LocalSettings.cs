@@ -26,7 +26,7 @@ namespace TransmissionRemoteDotnet.Settings
         public string StateImagePath = "";
         public string InfopanelImagePath = "";
         public string ToolbarImagePath = "";
-        public string Locale = "en-GB";
+        public string Locale = "en-US";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
         public string AutoConnect = "";
