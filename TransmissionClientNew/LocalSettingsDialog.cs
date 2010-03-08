@@ -89,7 +89,7 @@ namespace TransmissionRemoteDotnet
         private void LoadSettings()
         {
             LocalSettings sett = Program.Settings;
-            removeServerToolStripMenuItem.Enabled = tabServerSettings.Enabled = false;
+            removeServerToolStripMenuItem.Enabled = removeServerButton.Enabled = tabServerSettings.Enabled = false;
             listServers.Items.Clear();
             AutoConnectComboBox.Items.Clear();
             AutoConnectComboBox.Items.Add("-");
@@ -335,7 +335,7 @@ namespace TransmissionRemoteDotnet
                 AskToSaveServerIfNeed();
             }
             serversettingschanged = false;
-            removeServerToolStripMenuItem.Enabled = tabServerSettings.Enabled = (listServers.SelectedItems.Count > 0);
+            removeServerToolStripMenuItem.Enabled = removeServerButton.Enabled = tabServerSettings.Enabled = (listServers.SelectedItems.Count > 0);
         }
 
         private void AskToSaveServerIfNeed()
@@ -435,7 +435,8 @@ namespace TransmissionRemoteDotnet
                 Uri u = new Uri(FeedUrlTextBox.Text);
                 AddFeedButton.Enabled = FeedNameTextBox.Text.Length > 0;
             }
-            catch {
+            catch
+            {
                 AddFeedButton.Enabled = false;
             }
         }
@@ -444,7 +445,7 @@ namespace TransmissionRemoteDotnet
         {
             string FeedName = FeedNameTextBox.Text;
             if (!listRssFeeds.Items.ContainsKey(FeedName))
-                listRssFeeds.Items.Add(new ListViewItem(new string[] { FeedName, FeedUrlTextBox.Text})).Name = FeedName;
+                listRssFeeds.Items.Add(new ListViewItem(new string[] { FeedName, FeedUrlTextBox.Text })).Name = FeedName;
             else
                 MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

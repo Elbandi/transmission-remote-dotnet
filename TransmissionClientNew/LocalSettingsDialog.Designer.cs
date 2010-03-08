@@ -72,6 +72,8 @@ namespace TransmissionRemoteDotnet
             this.UploadPromptCheckBox = new System.Windows.Forms.CheckBox();
             this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.tabServersSettings = new System.Windows.Forms.TabPage();
+            this.removeServerButton = new System.Windows.Forms.Button();
+            this.addServerButton = new System.Windows.Forms.Button();
             this.tabServerSettings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
@@ -358,11 +360,29 @@ namespace TransmissionRemoteDotnet
             // 
             // tabServersSettings
             // 
+            this.tabServersSettings.Controls.Add(this.removeServerButton);
+            this.tabServersSettings.Controls.Add(this.addServerButton);
             this.tabServersSettings.Controls.Add(this.tabServerSettings);
             this.tabServersSettings.Controls.Add(this.listServers);
             resources.ApplyResources(this.tabServersSettings, "tabServersSettings");
             this.tabServersSettings.Name = "tabServersSettings";
             this.tabServersSettings.UseVisualStyleBackColor = true;
+            // 
+            // removeServerButton
+            // 
+            resources.ApplyResources(this.removeServerButton, "removeServerButton");
+            this.removeServerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
+            this.removeServerButton.Name = "removeServerButton";
+            this.removeServerButton.UseVisualStyleBackColor = true;
+            this.removeServerButton.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
+            // 
+            // addServerButton
+            // 
+            resources.ApplyResources(this.addServerButton, "addServerButton");
+            this.addServerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
+            this.addServerButton.Name = "addServerButton";
+            this.addServerButton.UseVisualStyleBackColor = true;
+            this.addServerButton.Click += new System.EventHandler(this.addServerToolStripMenuItem_Click);
             // 
             // tabServerSettings
             // 
@@ -1099,6 +1119,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ContextMenuStrip ServersMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem addServerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeServerToolStripMenuItem;
+        private System.Windows.Forms.Button addServerButton;
+        private System.Windows.Forms.Button removeServerButton;
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
