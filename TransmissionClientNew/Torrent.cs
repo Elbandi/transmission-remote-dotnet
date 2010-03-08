@@ -146,8 +146,10 @@ namespace TransmissionRemoteDotnet
             this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
             this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
+            this.Downloaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_DOWNLOADEDEVER]);
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
-            this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, this.HaveTotal);
+            long downloadedForRatio = this.Downloaded > 0 ? this.Downloaded : this.HaveValid;
+            this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, downloadedForRatio);
 
             if (info.Contains(ProtocolConstants.FIELD_DONEDATE))
             {
@@ -645,6 +647,12 @@ namespace TransmissionRemoteDotnet
         }
 
         public long Uploaded
+        {
+            get;
+            set;
+        }
+
+        public long Downloaded
         {
             get;
             set;

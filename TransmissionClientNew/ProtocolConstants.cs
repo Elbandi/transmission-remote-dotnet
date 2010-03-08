@@ -87,6 +87,7 @@ namespace TransmissionRemoteDotnet
             FIELD_RATEUPLOAD = "rateUpload",
             FIELD_TOTALSIZE = "totalSize",
             FIELD_HAVEVALID = "haveValid",
+            FIELD_DOWNLOADEDEVER = "downloadedEver",
             FIELD_UPLOADEDEVER = "uploadedEver",
             FIELD_LEECHERS = "leechers",
             FIELD_SEEDERS = "seeders",

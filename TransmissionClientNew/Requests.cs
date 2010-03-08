@@ -231,6 +231,7 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_RATEUPLOAD,
                 ProtocolConstants.FIELD_SEEDERS,
                 ProtocolConstants.FIELD_TOTALSIZE,
+                ProtocolConstants.FIELD_DOWNLOADEDEVER,
                 ProtocolConstants.FIELD_UPLOADEDEVER,
                 ProtocolConstants.FIELD_STATUS,
                 ProtocolConstants.FIELD_LEFTUNTILDONE,
