@@ -464,12 +464,12 @@ namespace TransmissionRemoteDotnet
             get
             {
                 string downloadDir = this.DownloadDir;
-                string name = this.TorrentName;
+                string name = this.Files.Count > 1 ? this.TorrentName : "";
                 Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
                 foreach (string key in mappings.Keys)
                 {
                     if (downloadDir.StartsWith(key))
-                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.TorrentName);
+                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, name);
                 }
                 return null;
             }
