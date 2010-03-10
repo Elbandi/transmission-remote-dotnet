@@ -1059,8 +1059,7 @@ namespace TransmissionRemoteDotnet
                 = recheckToolStripMenuItem.Enabled = propertiesToolStripMenuItem.Enabled
                 = removeDeleteToolStripMenuItem.Enabled = removeToolStripMenuItem.Enabled
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
-                = moveTorrentDataToolStripMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled
-                = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
+                = moveTorrentDataToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
             moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
             pauseTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_pause") : toolStripImageList.Images.IndexOfKey("player_pause_all");
             startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_play") : toolStripImageList.Images.IndexOfKey("player_play_all");
@@ -1131,9 +1130,10 @@ namespace TransmissionRemoteDotnet
                     = downloadProgressLabel.Enabled = refreshElapsedTimer.Enabled
                     = filesTimer.Enabled = downloadProgressLabel.Enabled
                     = generalTorrentNameGroupBox.Enabled
-                    = remoteCmdButton.Enabled
-                    = openNetworkShareButton.Enabled = one;
-            openNetworkShareButton.Enabled = openNetworkShareToolStripMenuItem.Enabled = one && t.SambaLocation != null;
+                    = remoteCmdButton.Enabled = one;
+            openNetworkShareButton.Enabled = openNetworkShareToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
+            if (openNetworkShareMenuItem != null)
+                openNetworkShareMenuItem.Enabled = openNetworkShareButton.Enabled;
         }
 
         private void torrentListView_SelectedIndexChanged(object sender, EventArgs e)
