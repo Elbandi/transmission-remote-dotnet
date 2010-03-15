@@ -1226,10 +1226,11 @@ namespace TransmissionRemoteDotnet
             speedGraph.UpdateGraph();
         }
 
-        public void UpdateStatus(string text)
+        public void UpdateStatus(string text, bool updatenotify)
         {
             toolStripStatusLabel.Text = text;
-            notifyIcon.Text = text.Length < 64 ? text : text.Substring(0, 63);
+            if (updatenotify)
+                notifyIcon.Text = text.Length < 64 ? text : text.Substring(0, 63);
         }
 
         private void addTorrentButton_Click(object sender, EventArgs e)

@@ -1722,7 +1722,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.ToolStripSplitButton connectButton;
         public System.Windows.Forms.Timer refreshTimer;
-        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripVersionLabel;
         public System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator1;

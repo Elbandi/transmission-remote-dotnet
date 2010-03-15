@@ -51,7 +51,7 @@ namespace TransmissionRemoteDotnet.Commmands
         public SessionCommand(JsonObject response, WebHeaderCollection headers)
         {
             TransmissionDaemonDescriptor descriptor = new TransmissionDaemonDescriptor();
-            JsonObject arguments = (JsonObject)response["arguments"];
+            JsonObject arguments = (JsonObject)response[ProtocolConstants.KEY_ARGUMENTS];
             if (arguments.Contains("version"))
             {
                 ParseVersionAndRevisionResponse((string)arguments["version"], descriptor);
