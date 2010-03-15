@@ -143,6 +143,7 @@ namespace TransmissionRemoteDotnet
             this.tabControlImageList = new System.Windows.Forms.ImageList(this.components);
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.connectButton = new System.Windows.Forms.ToolStripSplitButton();
             this.disconnectButton = new System.Windows.Forms.ToolStripButton();
@@ -1043,14 +1044,26 @@ namespace TransmissionRemoteDotnet
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel,
+            this.toolStripVersionLabel});
             resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
             // 
             // toolStripStatusLabel
             // 
+            this.toolStripStatusLabel.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             resources.ApplyResources(this.toolStripStatusLabel, "toolStripStatusLabel");
+            this.toolStripStatusLabel.Spring = true;
+            // 
+            // toolStripVersionLabel
+            // 
+            this.toolStripVersionLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.toolStripVersionLabel.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripVersionLabel.Name = "toolStripVersionLabel";
+            resources.ApplyResources(this.toolStripVersionLabel, "toolStripVersionLabel");
             // 
             // toolStrip
             // 
@@ -1710,6 +1723,7 @@ namespace TransmissionRemoteDotnet
         public System.Windows.Forms.ToolStripSplitButton connectButton;
         public System.Windows.Forms.Timer refreshTimer;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripVersionLabel;
         public System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator1;
         public ListViewNF torrentListView;

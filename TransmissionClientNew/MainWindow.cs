@@ -521,8 +521,15 @@ namespace TransmissionRemoteDotnet
             CreateTrayContextMenu();
             if (connected)
             {
+                JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
                 CreateTorrentSelectionContextMenu();
                 this.toolStripStatusLabel.Text = OtherStrings.ConnectedGettingInfo;
+                if (session.Contains("version"))
+                {
+                    this.toolStripVersionLabel.Visible = true;
+                    this.toolStripVersionLabel.Text = (string)session["version"];
+                    this.toolStripStatusLabel.Width = 0;
+                }
                 lvwColumnSorter.SetupColumn(Program.DaemonDescriptor.RpcVersion);
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE + " - " + Program.Settings.Current.Host;
                 speedGraph.MaxPeekMagnitude = 100;
@@ -544,6 +551,7 @@ namespace TransmissionRemoteDotnet
                 OneOrMoreTorrentsSelected(false);
                 OneTorrentsSelected(false, null);
                 this.toolStripStatusLabel.Text = OtherStrings.Disconnected;
+                this.toolStripVersionLabel.Visible = false;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE;
                 speedGraph.RemoveLine("Download");
                 speedGraph.RemoveLine("Upload");
