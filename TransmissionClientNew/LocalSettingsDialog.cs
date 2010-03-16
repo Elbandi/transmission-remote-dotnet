@@ -281,7 +281,11 @@ namespace TransmissionRemoteDotnet
         {
             string UnixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/").Replace(Path.DirectorySeparatorChar, '/');
             if (!listSambaShareMappings.Items.Contains(UnixPath))
+            {
                 listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShareTextBox.Text));
+                UnixPathPrefixTextBox.Clear();
+                SambaShareTextBox.Clear();
+            }
             else
                 MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -445,7 +449,11 @@ namespace TransmissionRemoteDotnet
         {
             string FeedName = FeedNameTextBox.Text;
             if (!listRssFeeds.Items.ContainsKey(FeedName))
+            {
                 listRssFeeds.Items.Add(new ListViewItem(new string[] { FeedName, FeedUrlTextBox.Text })).Name = FeedName;
+                FeedNameTextBox.Clear();
+                FeedUrlTextBox.Clear();
+            }
             else
                 MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
