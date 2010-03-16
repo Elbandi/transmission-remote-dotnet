@@ -64,6 +64,7 @@ namespace TransmissionRemoteDotnet
             try
             {
                 RssListViewItem r = rssFeedsListView.SelectedItems[0] as RssListViewItem;
+                rssWebClient.CancelAsync();
                 rssWebClient.DownloadDataAsync(new Uri(r.Url), r);
             }
             catch (Exception ex)
@@ -89,6 +90,7 @@ namespace TransmissionRemoteDotnet
                         r.channel = new RssChannel(new MemoryStream(e.Result));
                         if (r.channel.Image.Url != null && !FeedImageList.Images.ContainsKey(r.Name))
                         {
+                            imageWebClient.CancelAsync();
                             imageWebClient.DownloadDataAsync(new Uri(r.channel.Image.Url), r);
                         }
                         FillListView(r.channel);
