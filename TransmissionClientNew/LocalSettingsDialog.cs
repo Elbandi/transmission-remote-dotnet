@@ -455,7 +455,7 @@ namespace TransmissionRemoteDotnet
                 FeedUrlTextBox.Clear();
             }
             else
-                MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(OtherStrings.FeedExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listRssFeeds_SelectedIndexChanged(object sender, EventArgs e)
