@@ -413,6 +413,24 @@ namespace TransmissionRemoteDotnet
                 if (categoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
+                int seedcount = 0, downloadcount = 0;
+                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
+                {
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_DOWNLOADING))
+                        downloadcount++;
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_SEEDING))
+                        seedcount++;
+                }
+                if (seedcount == 0 && downloadcount == 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_blue;
+                else if (seedcount > 0 && downloadcount > 0)
+                        notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_yellow;
+                else if (seedcount > 0 )
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_red;
+                else if (downloadcount > 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_green;
+                else
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
             }
         }
 
@@ -569,6 +587,7 @@ namespace TransmissionRemoteDotnet
                         }
                     }
                 }
+                notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
             }
             connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;

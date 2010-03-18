@@ -165,6 +165,41 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Icon icon_blue {
+            get {
+                object obj = ResourceManager.GetObject("icon_blue", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon icon_green {
+            get {
+                object obj = ResourceManager.GetObject("icon_green", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon icon_red {
+            get {
+                object obj = ResourceManager.GetObject("icon_red", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon icon_transmission {
+            get {
+                object obj = ResourceManager.GetObject("icon_transmission", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon icon_yellow {
+            get {
+                object obj = ResourceManager.GetObject("icon_yellow", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap incomplete16 {
             get {
                 object obj = ResourceManager.GetObject("incomplete16", resourceCulture);

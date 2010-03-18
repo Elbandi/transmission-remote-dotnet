@@ -1002,6 +1002,10 @@
     <None Include="Resources\welcomefinish.png" />
     <None Include="Resources\help14.png" />
     <None Include="Resources\feed-icon-28x28.png" />
+    <None Include="Resources\blue.ico" />
+    <None Include="Resources\yellow.ico" />
+    <None Include="Resources\red.ico" />
+    <None Include="Resources\green.ico" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
