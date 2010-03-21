@@ -111,7 +111,7 @@ namespace TransmissionRemoteDotnet
                         form.stateListBox.Items.Add(new GListBoxItem(this.FirstTrackerTrimmed, 8));
                     }
                 }
-                if (Program.Settings.StartedBalloon && this.updateSerial > 2)
+                if (Program.Settings.MinToTray && Program.Settings.StartedBalloon && this.updateSerial > 2)
                 {
                     Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
                 }
@@ -166,12 +166,11 @@ namespace TransmissionRemoteDotnet
 
             bool statusChange = (this.StatusCode != statusCode) || (this.HasError != IsErrorString(errorString));
 
-            if (this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon
-                && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
-                && this.LeftUntilDone > 0
-                && (leftUntilDone == 0))
+            if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
+                && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
                 this.DoneDate = DateTime.Now;
+                this.CompletionPopupPending = !first && Program.Settings.MinToTray && Program.Settings.CompletedBaloon;
             }
 
             this.LeftUntilDone = leftUntilDone;
