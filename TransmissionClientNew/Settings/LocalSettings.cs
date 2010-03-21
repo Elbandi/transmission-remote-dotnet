@@ -18,6 +18,7 @@ namespace TransmissionRemoteDotnet.Settings
         public bool CompletedBaloon = true;
         public bool MinOnClose = false;
         public bool MinToTray = false;
+        public bool ColorTray = false;
         public bool AutoCheckupdate = false;
         public bool DeleteTorrentWhenAdding = false;
         public int DefaultDoubleClickAction = 0;
@@ -78,6 +79,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_COMPLETEDBALLOON, CompletedBaloon);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINONCLOSE, MinOnClose);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINTOTRAY, MinToTray);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_COLORTRAY, ColorTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTEDBALLOON, StartedBalloon);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DONTSAVEPASSWORDS, DontSavePasswords);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
@@ -116,6 +118,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref CompletedBaloon, o[SettingsKey.REGKEY_COMPLETEDBALLOON]);
             Toolbox.JsonGet(ref MinOnClose, o[SettingsKey.REGKEY_MINONCLOSE]);
             Toolbox.JsonGet(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
+            Toolbox.JsonGet(ref ColorTray, o[SettingsKey.REGKEY_COLORTRAY]);
             Toolbox.JsonGet(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
@@ -537,6 +540,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_STARTPAUSED = "startPaused",
             REGKEY_RETRYLIMIT = "retryLimit",
             REGKEY_MINTOTRAY = "minToTray",
+            REGKEY_COLORTRAY = "colorTray",
             REGKEY_REFRESHRATE = "refreshRate",
             REGKEY_CURRENTPROFILE = "currentProfile",
             REGKEY_STATEIMAGE = "stateImage",

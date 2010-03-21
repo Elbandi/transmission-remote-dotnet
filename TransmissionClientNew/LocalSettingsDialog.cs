@@ -113,10 +113,11 @@ namespace TransmissionRemoteDotnet
             try { defaultActionComboBox.SelectedIndex = sett.DefaultDoubleClickAction; }
             catch { }
             notificationOnCompletionCheckBox.Enabled = notificationOnAdditionCheckBox.Enabled
-                = minimizeOnCloseCheckBox.Enabled = MinToTrayCheckBox.Checked
-                = sett.MinToTray;
+                = minimizeOnCloseCheckBox.Enabled = ColorTrayIconCheckBox.Enabled
+                = MinToTrayCheckBox.Checked = sett.MinToTray;
             notificationOnAdditionCheckBox.Checked = sett.StartedBalloon;
             notificationOnCompletionCheckBox.Checked = sett.CompletedBaloon;
+            ColorTrayIconCheckBox.Checked = sett.ColorTray;
             minimizeOnCloseCheckBox.Checked = sett.MinOnClose;
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
@@ -144,6 +145,7 @@ namespace TransmissionRemoteDotnet
             Program.Form.notifyIcon.Visible = sett.MinToTray = MinToTrayCheckBox.Checked;
             sett.StartedBalloon = notificationOnAdditionCheckBox.Checked;
             sett.CompletedBaloon = notificationOnCompletionCheckBox.Checked;
+            sett.ColorTray = ColorTrayIconCheckBox.Checked;
             sett.MinOnClose = minimizeOnCloseCheckBox.Checked;
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
@@ -222,7 +224,7 @@ namespace TransmissionRemoteDotnet
         private void MinToTrayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             notificationOnAdditionCheckBox.Enabled = notificationOnCompletionCheckBox.Enabled
-                = minimizeOnCloseCheckBox.Enabled = MinToTrayCheckBox.Checked;
+                = minimizeOnCloseCheckBox.Enabled = ColorTrayIconCheckBox.Enabled = MinToTrayCheckBox.Checked;
         }
 
         private void PlinkPathButton_Click(object sender, EventArgs e)

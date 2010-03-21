@@ -61,6 +61,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.ColorTrayIconCheckBox = new System.Windows.Forms.CheckBox();
             this.DontSavePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
             this.defaultActionLabel = new System.Windows.Forms.Label();
@@ -278,6 +279,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.ColorTrayIconCheckBox);
             this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
             this.groupBehavior.Controls.Add(this.defaultActionLabel);
@@ -291,6 +293,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // ColorTrayIconCheckBox
+            // 
+            resources.ApplyResources(this.ColorTrayIconCheckBox, "ColorTrayIconCheckBox");
+            this.ColorTrayIconCheckBox.Name = "ColorTrayIconCheckBox";
+            this.ColorTrayIconCheckBox.UseVisualStyleBackColor = true;
             // 
             // DontSavePasswordsCheckBox
             // 
@@ -1056,6 +1064,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox notificationOnAdditionCheckBox;
         private System.Windows.Forms.CheckBox notificationOnCompletionCheckBox;
         private System.Windows.Forms.CheckBox MinToTrayCheckBox;
+        private System.Windows.Forms.CheckBox ColorTrayIconCheckBox;
         private System.Windows.Forms.Button PlinkPathButton;
         private System.Windows.Forms.TextBox PlinkPathTextBox;
         private System.Windows.Forms.TabControl tabServerSettings;

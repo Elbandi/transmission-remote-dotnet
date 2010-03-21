@@ -413,24 +413,7 @@ namespace TransmissionRemoteDotnet
                 if (categoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
-                int seedcount = 0, downloadcount = 0;
-                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
-                {
-                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_DOWNLOADING))
-                        downloadcount++;
-                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_SEEDING))
-                        seedcount++;
-                }
-                if (seedcount == 0 && downloadcount == 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_blue;
-                else if (seedcount > 0 && downloadcount > 0)
-                        notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_yellow;
-                else if (seedcount > 0 )
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_red;
-                else if (downloadcount > 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_green;
-                else
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
+                UpdateTrayIcon();
             }
         }
 
@@ -625,6 +608,37 @@ namespace TransmissionRemoteDotnet
             openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && settings.Current.SambaShareMappings.Count > 0;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
+        }
+
+        private void UpdateTrayIcon()
+        {
+            int seedcount = 0, downloadcount = 0;
+            lock (Program.TorrentIndex)
+            {
+                foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
+                {
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_DOWNLOADING))
+                        downloadcount++;
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_SEEDING))
+                        seedcount++;
+                }
+            }
+
+            if (Program.Settings.ColorTray)
+            {
+                if (seedcount == 0 && downloadcount == 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_blue;
+                else if (seedcount > 0 && downloadcount > 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_yellow;
+                else if (seedcount > 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_red;
+                else if (downloadcount > 0)
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_green;
+                else
+                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
+            }
+            else
+                notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
         }
 
         public void TorrentsToClipboardHandler(object sender, EventArgs e)
@@ -1069,6 +1083,7 @@ namespace TransmissionRemoteDotnet
                 filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
                 Program.UploadPrompt = Program.Settings.UploadPrompt;
                 LoadSkins();
+                UpdateTrayIcon();
             }
         }
 
