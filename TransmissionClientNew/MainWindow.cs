@@ -610,6 +610,11 @@ namespace TransmissionRemoteDotnet
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
         }
 
+        public void ShowTrayTip(int timeout, string tipTitle, string tipText, ToolTipIcon tipIcon)
+        {
+            this.notifyIcon.ShowBalloonTip(timeout, tipTitle, tipText, tipIcon);
+        }
+
         private void UpdateTrayIcon()
         {
             int seedcount = 0, downloadcount = 0;
@@ -1075,6 +1080,7 @@ namespace TransmissionRemoteDotnet
             ls.SetImageNumbers(defaulttoolbarimages.Count, defaultstateimages.Count, defaultinfopanelimages.Count);
             if (ls.ShowDialog() == DialogResult.OK)
             {
+                notifyIcon.Visible = Program.Settings.MinToTray;
                 connectButton.DropDownItems.Clear();
                 connectToolStripMenuItem.DropDownItems.Clear();
                 CreateProfileMenu();

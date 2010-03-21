@@ -1724,7 +1724,7 @@ namespace TransmissionRemoteDotnet
         public System.Windows.Forms.Timer refreshTimer;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripVersionLabel;
-        public System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator1;
         public ListViewNF torrentListView;
         private System.Windows.Forms.ToolStripMenuItem localSettingsToolStripMenuItem;

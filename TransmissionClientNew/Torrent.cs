@@ -113,13 +113,13 @@ namespace TransmissionRemoteDotnet
                 }
                 if (Program.Settings.MinToTray && Program.Settings.StartedBalloon && this.updateSerial > 2)
                 {
-                    Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
+                    form.ShowTrayTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
                 }
                 LogError();
             }
-            else if (this.CompletionPopupPending && form.notifyIcon.Visible)
+            else if (Program.Settings.MinToTray && this.CompletionPopupPending)
             {
-                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
+                form.ShowTrayTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
             }
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
             UpdateIcon();
@@ -170,7 +170,7 @@ namespace TransmissionRemoteDotnet
                 && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
                 this.DoneDate = DateTime.Now;
-                this.CompletionPopupPending = !first && Program.Settings.MinToTray && Program.Settings.CompletedBaloon;
+                this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon;
             }
 
             this.LeftUntilDone = leftUntilDone;

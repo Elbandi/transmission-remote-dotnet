@@ -142,7 +142,7 @@ namespace TransmissionRemoteDotnet
         private void SaveSettings()
         {
             LocalSettings sett = Program.Settings;
-            Program.Form.notifyIcon.Visible = sett.MinToTray = MinToTrayCheckBox.Checked;
+            sett.MinToTray = MinToTrayCheckBox.Checked;
             sett.StartedBalloon = notificationOnAdditionCheckBox.Checked;
             sett.CompletedBaloon = notificationOnCompletionCheckBox.Checked;
             sett.ColorTray = ColorTrayIconCheckBox.Checked;
