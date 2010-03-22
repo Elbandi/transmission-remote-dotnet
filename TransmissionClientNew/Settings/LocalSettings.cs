@@ -27,6 +27,7 @@ namespace TransmissionRemoteDotnet.Settings
         public string StateImagePath = "";
         public string InfopanelImagePath = "";
         public string ToolbarImagePath = "";
+        public string TrayImagePath = "";
         public string Locale = "en-US";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
@@ -91,6 +92,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_TABIMAGE, InfopanelImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STATEIMAGE, StateImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_TOOLBARIMAGE, ToolbarImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TRAYIMAGE, TrayImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
             JsonObject ja = new JsonObject();
@@ -126,6 +128,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref StateImagePath, o[SettingsKey.REGKEY_STATEIMAGE]);
             Toolbox.JsonGet(ref InfopanelImagePath, o[SettingsKey.REGKEY_TABIMAGE]);
             Toolbox.JsonGet(ref ToolbarImagePath, o[SettingsKey.REGKEY_TOOLBARIMAGE]);
+            Toolbox.JsonGet(ref TrayImagePath, o[SettingsKey.REGKEY_TRAYIMAGE]);
             Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
@@ -546,6 +549,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_STATEIMAGE = "stateImage",
             REGKEY_TABIMAGE = "tabImage",
             REGKEY_TOOLBARIMAGE = "toolbarImage",
+            REGKEY_TRAYIMAGE = "trayImage",
             REGKEY_STARTEDBALLOON = "startedBalloon",
             REGKEY_DONTSAVEPASSWORDS = "dontSavePasswords",
             REGKEY_COMPLETEDBALLOON = "completedBalloon",

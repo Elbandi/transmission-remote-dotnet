@@ -64,11 +64,12 @@ namespace TransmissionRemoteDotnet
             RemoveShareButton.Click += new EventHandler(Field_ValueChanged);
         }
 
-        public void SetImageNumbers(int toolbar, int state, int infopanel)
+        public void SetImageNumbers(int toolbar, int state, int infopanel, int tray)
         {
             toolbarImageBrowse.ImageNumber = toolbar;
             stateImageBrowse.ImageNumber = state;
             infopanelImageBrowse.ImageNumber = infopanel;
+            trayImageBrowse.ImageNumber = tray;
         }
 
         private void LocalSettingsDialog_Load(object sender, EventArgs e)
@@ -127,6 +128,7 @@ namespace TransmissionRemoteDotnet
             stateImageBrowse.FileName = sett.StateImagePath;
             infopanelImageBrowse.FileName = sett.InfopanelImagePath;
             toolbarImageBrowse.FileName = sett.ToolbarImagePath;
+            trayImageBrowse.FileName = sett.TrayImagePath;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -155,6 +157,7 @@ namespace TransmissionRemoteDotnet
             sett.StateImagePath = stateImageBrowse.FileName;
             sett.InfopanelImagePath = infopanelImageBrowse.FileName;
             sett.ToolbarImagePath = toolbarImageBrowse.FileName;
+            sett.TrayImagePath = trayImageBrowse.FileName;
             sett.Servers.Clear();
             foreach (ListViewItem lvi in listServers.Items)
             {

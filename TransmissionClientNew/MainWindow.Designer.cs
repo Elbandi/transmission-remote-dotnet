@@ -218,6 +218,7 @@ namespace TransmissionRemoteDotnet
             this.refreshElapsedTimer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStripImageList = new System.Windows.Forms.ImageList(this.components);
+            this.trayIconImageList = new System.Windows.Forms.ImageList(this.components);
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -1615,6 +1616,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.toolStripImageList, "toolStripImageList");
             this.toolStripImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // trayIconImageList
+            // 
+            this.trayIconImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.trayIconImageList, "trayIconImageList");
+            this.trayIconImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // MainWindow
             // 
             this.AllowDrop = true;
@@ -1865,5 +1872,6 @@ namespace TransmissionRemoteDotnet
         public System.Windows.Forms.ImageList fileIconImageList;
         private System.Windows.Forms.ImageList stateListBoxImageList;
         private System.Windows.Forms.ImageList toolStripImageList;
+        private System.Windows.Forms.ImageList trayIconImageList;
     }
 }

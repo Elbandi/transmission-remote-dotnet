@@ -149,6 +149,7 @@ namespace TransmissionRemoteDotnet
             this.FeedUrlTextBox = new System.Windows.Forms.TextBox();
             this.FeedNameLabel = new System.Windows.Forms.Label();
             this.tabSkinSettings = new System.Windows.Forms.TabPage();
+            this.trayImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.toolbarImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.infopanelImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
@@ -952,12 +953,24 @@ namespace TransmissionRemoteDotnet
             // 
             // tabSkinSettings
             // 
+            this.tabSkinSettings.Controls.Add(this.trayImageBrowse);
             this.tabSkinSettings.Controls.Add(this.toolbarImageBrowse);
             this.tabSkinSettings.Controls.Add(this.stateImageBrowse);
             this.tabSkinSettings.Controls.Add(this.infopanelImageBrowse);
             resources.ApplyResources(this.tabSkinSettings, "tabSkinSettings");
             this.tabSkinSettings.Name = "tabSkinSettings";
             this.tabSkinSettings.UseVisualStyleBackColor = true;
+            // 
+            // trayImageBrowse
+            // 
+            this.trayImageBrowse.FileName = "";
+            this.trayImageBrowse.ImageNumber = 5;
+            resources.ApplyResources(this.trayImageBrowse, "trayImageBrowse");
+            this.trayImageBrowse.MaxHeight = 48;
+            this.trayImageBrowse.MinHeight = 48;
+            this.trayImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
+            this.trayImageBrowse.Name = "trayImageBrowse";
+            this.trayImageBrowse.Title = "Tray icon Images";
             // 
             // toolbarImageBrowse
             // 
@@ -977,7 +990,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.stateImageBrowse, "stateImageBrowse");
             this.stateImageBrowse.MaxHeight = 16;
             this.stateImageBrowse.MinHeight = 16;
-            this.stateImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.stateImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
             this.stateImageBrowse.Name = "stateImageBrowse";
             this.stateImageBrowse.Title = "State Images";
             // 
@@ -988,7 +1001,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.infopanelImageBrowse, "infopanelImageBrowse");
             this.infopanelImageBrowse.MaxHeight = 16;
             this.infopanelImageBrowse.MinHeight = 16;
-            this.infopanelImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.infopanelImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
             this.infopanelImageBrowse.Name = "infopanelImageBrowse";
             this.infopanelImageBrowse.Title = "Torrent Infopanel Images";
             // 
@@ -1146,6 +1159,7 @@ namespace TransmissionRemoteDotnet
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox stateImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox infopanelImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox toolbarImageBrowse;
+        private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox trayImageBrowse;
         private System.Windows.Forms.ListView listRssFeeds;
         private System.Windows.Forms.ColumnHeader columnFeedName;
         private System.Windows.Forms.ColumnHeader columnFeedUrl;

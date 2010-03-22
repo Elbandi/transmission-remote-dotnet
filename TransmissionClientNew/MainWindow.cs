@@ -70,7 +70,7 @@ namespace TransmissionRemoteDotnet
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
         private static FindDialog FindDialog;
-        private List<Bitmap> defaulttoolbarimages, defaultstateimages, defaultinfopanelimages;
+        private List<Bitmap> defaulttoolbarimages, defaultstateimages, defaultinfopanelimages, defaulttrayimages;
 
         public MainWindow()
         {
@@ -106,6 +106,22 @@ namespace TransmissionRemoteDotnet
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete16);
             stateListBoxImageList.Images.AddRange(defaultstateimages.ToArray());
             stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
+            List<ToolStripBitmap> initialtrayicons = new List<ToolStripBitmap>()
+            {
+                new ToolStripBitmap() { Name = "transmission", Image = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission.ToBitmap()},
+                new ToolStripBitmap() { Name = "notransfer", Image = global::TransmissionRemoteDotnet.Properties.Resources.icon_blue.ToBitmap()},
+                new ToolStripBitmap() { Name = "seed", Image = global::TransmissionRemoteDotnet.Properties.Resources.icon_red.ToBitmap()},
+                new ToolStripBitmap() { Name = "downloadseed", Image = global::TransmissionRemoteDotnet.Properties.Resources.icon_yellow.ToBitmap()},
+                new ToolStripBitmap() { Name = "download", Image = global::TransmissionRemoteDotnet.Properties.Resources.icon_green.ToBitmap()},
+            };
+            defaulttrayimages = new List<Bitmap>();
+            foreach (ToolStripBitmap tsb in initialtrayicons)
+            {
+                defaulttrayimages.Add(tsb.Image);
+                trayIconImageList.Images.Add(tsb.Image);
+                int idx = defaulttrayimages.IndexOf(tsb.Image);
+                trayIconImageList.Images.SetKeyName(idx, tsb.Name);
+            }
             LocalSettings settings = Program.Settings;
             /* 
              * ToolStrips havent got ImageList field in design time.
@@ -185,6 +201,7 @@ namespace TransmissionRemoteDotnet
             Toolbox.LoadSkinToImagelist(Program.Settings.ToolbarImagePath, 16, 32, toolStripImageList, defaulttoolbarimages);
             Toolbox.LoadSkinToImagelist(Program.Settings.StateImagePath, 16, 16, stateListBoxImageList, defaultstateimages);
             Toolbox.LoadSkinToImagelist(Program.Settings.InfopanelImagePath, 16, 16, tabControlImageList, defaultinfopanelimages);
+            Toolbox.LoadSkinToImagelist(Program.Settings.TrayImagePath, 48, 48, trayIconImageList, defaulttrayimages);
             stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
             toolStrip.ImageList = menuStrip.ImageList =
                 fileToolStripMenuItem.DropDown.ImageList = optionsToolStripMenuItem.DropDown.ImageList =
@@ -570,7 +587,7 @@ namespace TransmissionRemoteDotnet
                         }
                     }
                 }
-                notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
+                notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
             }
             connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
@@ -632,18 +649,18 @@ namespace TransmissionRemoteDotnet
             if (Program.Settings.ColorTray)
             {
                 if (seedcount == 0 && downloadcount == 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_blue;
+                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["notransfer"] as Bitmap).GetHicon());
                 else if (seedcount > 0 && downloadcount > 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_yellow;
+                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["downloadseed"] as Bitmap).GetHicon());
                 else if (seedcount > 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_red;
+                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["seed"] as Bitmap).GetHicon());
                 else if (downloadcount > 0)
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_green;
+                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["download"] as Bitmap).GetHicon());
                 else
-                    notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
+                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
             }
             else
-                notifyIcon.Icon = global::TransmissionRemoteDotnet.Properties.Resources.icon_transmission;
+                notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
         }
 
         public void TorrentsToClipboardHandler(object sender, EventArgs e)
@@ -1077,7 +1094,7 @@ namespace TransmissionRemoteDotnet
         private void localConfigureButton_Click(object sender, EventArgs e)
         {
             LocalSettingsDialog ls = new LocalSettingsDialog();
-            ls.SetImageNumbers(defaulttoolbarimages.Count, defaultstateimages.Count, defaultinfopanelimages.Count);
+            ls.SetImageNumbers(defaulttoolbarimages.Count, defaultstateimages.Count, defaultinfopanelimages.Count, defaulttrayimages.Count);
             if (ls.ShowDialog() == DialogResult.OK)
             {
                 notifyIcon.Visible = Program.Settings.MinToTray;

@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 339</value>
+    <value>13, 419</value>
   </data>
   <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -151,7 +151,7 @@
     <value>NoControl</value>
   </data>
   <data name="CloseDialogButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 339</value>
+    <value>305, 419</value>
   </data>
   <data name="CloseDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -181,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="SaveAndConnectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 339</value>
+    <value>159, 419</value>
   </data>
   <data name="SaveAndConnectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -232,7 +232,7 @@
     <value>0</value>
   </data>
   <data name="groupAutoConnect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 222</value>
+    <value>223, 302</value>
   </data>
   <data name="groupAutoConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 67</value>
@@ -277,7 +277,7 @@
     <value>0</value>
   </data>
   <data name="groupCurrentProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 222</value>
+    <value>6, 302</value>
   </data>
   <data name="groupCurrentProfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 67</value>
@@ -349,7 +349,7 @@
     <value>1</value>
   </data>
   <data name="groupPlinkPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 168</value>
+    <value>6, 248</value>
   </data>
   <data name="groupPlinkPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>429, 48</value>
@@ -703,7 +703,7 @@
     <value>6, 6</value>
   </data>
   <data name="groupBehavior.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 156</value>
+    <value>429, 236</value>
   </data>
   <data name="groupBehavior.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -730,7 +730,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabGlobalSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabGlobalSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2257,7 +2257,7 @@
     <value>5</value>
   </data>
   <data name="tabServerSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 126</value>
+    <value>6, 212</value>
   </data>
   <data name="tabServerSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>433, 160</value>
@@ -2323,7 +2323,7 @@
     <value>6, 35</value>
   </data>
   <data name="listServers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 85</value>
+    <value>433, 171</value>
   </data>
   <data name="listServers.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2347,7 +2347,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabServersSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabServersSettings.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2386,7 +2386,7 @@
     <value>3, 3</value>
   </data>
   <data name="listRssFeeds.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 205</value>
+    <value>439, 285</value>
   </data>
   <data name="listRssFeeds.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2557,7 +2557,7 @@
     <value>Bottom</value>
   </data>
   <data name="groupFeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 208</value>
+    <value>3, 288</value>
   </data>
   <data name="groupFeed.Size" type="System.Drawing.Size, System.Drawing">
     <value>439, 84</value>
@@ -2587,7 +2587,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabRssSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabRssSettings.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2607,11 +2607,32 @@
   <data name="&gt;&gt;tabRssSettings.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="trayImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 260</value>
+  </data>
+  <data name="trayImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 108</value>
+  </data>
+  <data name="trayImageBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Name" xml:space="preserve">
+    <value>trayImageBrowse</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Parent" xml:space="preserve">
+    <value>tabSkinSettings</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="toolbarImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
   <data name="toolbarImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 122</value>
+    <value>433, 100</value>
   </data>
   <data name="toolbarImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2629,10 +2650,10 @@
     <value>0</value>
   </data>
   <data name="stateImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 112</value>
   </data>
   <data name="stateImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 76</value>
+    <value>433, 68</value>
   </data>
   <data name="stateImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2650,10 +2671,10 @@
     <value>1</value>
   </data>
   <data name="infopanelImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 216</value>
+    <value>6, 186</value>
   </data>
   <data name="infopanelImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 76</value>
+    <value>433, 68</value>
   </data>
   <data name="infopanelImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2677,7 +2698,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabSkinSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabSkinSettings.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2701,7 +2722,7 @@
     <value>12, 12</value>
   </data>
   <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 321</value>
+    <value>453, 401</value>
   </data>
   <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2734,7 +2755,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>477, 374</value>
+    <value>477, 454</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
