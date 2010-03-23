@@ -119,6 +119,7 @@ namespace TransmissionRemoteDotnet
             }
             else if (Program.Settings.MinToTray && this.CompletionPopupPending)
             {
+                this.CompletionPopupPending = false;
                 form.ShowTrayTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
             }
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
