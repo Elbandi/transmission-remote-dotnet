@@ -166,6 +166,7 @@ msgstr "Suche nach:"
 msgid "Local Settings"
 msgstr "Lokale Einstellungen"
 
+#: LocalSettingsDialog~AddFeedButton.Text
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
@@ -186,10 +187,15 @@ msgstr "Beim Speichern Passwort löschen"
 #: OtherStrings~Cancel
 #: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
-#: UriPromptWindow~button2.Text
+#: UriPromptWindow~CancelBtn.Text
 #, csharp-format
 msgid "Cancel"
 msgstr "Abbrechen"
+
+#: LocalSettingsDialog~ColorTrayIconCheckBox.Text
+#, csharp-format
+msgid "Color tray icon"
+msgstr ""
 
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
@@ -221,6 +227,16 @@ msgstr "Aktiviert"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
+#: LocalSettingsDialog~FeedNameLabel.Text
+#, csharp-format
+msgid "Feed name:"
+msgstr ""
+
+#: LocalSettingsDialog~FeedUrlLabel.Text
+#, csharp-format
+msgid "Feed url:"
+msgstr ""
+
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
 msgid "Enable tray icon"
@@ -241,6 +257,7 @@ msgstr "Durchsuchen"
 msgid "Authenticate"
 msgstr "Authentifizierung"
 
+#: LocalSettingsDialog~RemoveFeedButton.Text
 #: LocalSettingsDialog~RemoveShareButton.Text
 #: MainWindow~removeToolStripMenuItem.Text
 #: OtherStrings~Remove
@@ -279,22 +296,29 @@ msgstr "Upload Prompt"
 msgid "Secure (SSL)"
 msgstr "Sicher (SSL)"
 
+#: LocalSettingsDialog~addServerButton.Text
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
 msgstr "Server hinzufügen"
+
+#: LocalSettingsDialog~columnFeedName.Text
+#: LocalSettingsDialog~columnName.Text
+#: MainWindow~columnHeader6.Text
+#, csharp-format
+msgid "Name"
+msgstr "Name"
+
+#: LocalSettingsDialog~columnFeedUrl.Text
+#, csharp-format
+msgid "Url"
+msgstr ""
 
 #: LocalSettingsDialog~columnHost.Text
 #: OtherStrings~Host
 #, csharp-format
 msgid "Host"
 msgstr "Host"
-
-#: LocalSettingsDialog~columnName.Text
-#: MainWindow~columnHeader6.Text
-#, csharp-format
-msgid "Name"
-msgstr "Name"
 
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
@@ -341,10 +365,15 @@ msgstr "Neues Mapping:"
 msgid "Current profile"
 msgstr "akutelles Profil"
 
+#: LocalSettingsDialog~groupFeed.Text
+#, csharp-format
+msgid "Feed"
+msgstr ""
+
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
-msgid "plink.exe:"
-msgstr "plink.exe:"
+msgid "plink.exe or ssh.exe:"
+msgstr ""
 
 #: LocalSettingsDialog~label1.Text
 #: LocalSettingsDialog~label6.Text
@@ -437,6 +466,7 @@ msgstr "Beim Hinzufügen benachrichtigen"
 msgid "Notification on completion"
 msgstr "Beim Fertigstellen benachrichtigen"
 
+#: LocalSettingsDialog~removeServerButton.Text
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
@@ -477,6 +507,11 @@ msgstr "Verschiedenes"
 msgid "Samba"
 msgstr "Samba"
 
+#: LocalSettingsDialog~tabRssSettings.Text
+#, csharp-format
+msgid "Rss Feeds"
+msgstr ""
+
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
@@ -497,6 +532,11 @@ msgstr "Transmission Remote"
 #, csharp-format
 msgid "Alt Speed"
 msgstr "Bandbreiten-Limit (de)aktivieren"
+
+#: MainWindow~RssButton.Text
+#, csharp-format
+msgid "Rss"
+msgstr ""
 
 #: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
@@ -1233,6 +1273,11 @@ msgstr "Fehler"
 msgid "Failed request"
 msgstr "Anfrage fehlgeschlagen"
 
+#: OtherStrings~FeedExists
+#, csharp-format
+msgid "Feed exists"
+msgstr ""
+
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
@@ -1287,6 +1332,11 @@ msgstr "Torrenteigenschaften in die Zwischenablage kopieren"
 #, csharp-format
 msgid "Input accepted"
 msgstr "Eingabe akzeptiert"
+
+#: OtherStrings~InvalidRPCLocation
+#, csharp-format
+msgid "Invalid RPC location"
+msgstr ""
 
 #: OtherStrings~Kilobyte
 #, csharp-format
@@ -1527,6 +1577,11 @@ msgstr "Konnte nicht geöffnet werden"
 #, csharp-format
 msgid "Unable to parse the server response"
 msgstr "Serverantwort konnte nicht geparst werden."
+
+#: OtherStrings~UnixPathExists
+#, csharp-format
+msgid "Unix path exists"
+msgstr ""
 
 #: OtherStrings~Unknown
 #, csharp-format
@@ -1797,7 +1852,7 @@ msgstr "Name:"
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
-#: UriPromptWindow~button1.Text
+#: UriPromptWindow~OkButton.Text
 #, csharp-format
 msgid "OK"
 msgstr "OK"
@@ -1892,10 +1947,18 @@ msgstr "Limitiere Upload-Rate"
 msgid "Upload by URL"
 msgstr "Upload mittels URL"
 
-#: UriPromptWindow~toolStripStatusLabel1.Text
+#: UriPromptWindow~UseTorrentLoadDialogCheckBox.Text
+#, csharp-format
+msgid "Set torrent options before upload"
+msgstr ""
+
+#: UriPromptWindow~toolStripStatusLabel.Text
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Warte auf URL..."
+
+#~ msgid "plink.exe:"
+#~ msgstr "plink.exe:"
 
 #~ msgid "Scrape URL"
 #~ msgstr "Scrape URL"
