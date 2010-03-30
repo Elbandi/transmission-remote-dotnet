@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: RayTracer <EMAIL@ADDRESS>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,27 +23,27 @@ msgstr "Transmission Remote Hakkında"
 #: AboutDialog~labelCopyright.Text
 #, csharp-format
 msgid "Copyright"
-msgstr ""
+msgstr "Telif Hakkı"
 
 #: AboutDialog~labelCredits.Text
 #, csharp-format
 msgid "Credits && acknowledgements:"
-msgstr ""
+msgstr "Katkıda Bulunanlar & Teşekkür"
 
 #: AboutDialog~labelDevelopers.Text
 #, csharp-format
 msgid "Developers:"
-msgstr ""
+msgstr "Geliştiriciler:"
 
 #: AboutDialog~labelHomepageLink.Text
 #, csharp-format
 msgid "Homepage:"
-msgstr ""
+msgstr "Web Sayfası"
 
 #: AboutDialog~labelProductName.Text
 #, csharp-format
 msgid "Product Name"
-msgstr ""
+msgstr "Ürün Adı"
 
 #: AboutDialog~labelVersion.Text
 #: OtherStrings~Version
@@ -54,7 +54,7 @@ msgstr "Versiyon"
 #: AboutDialog~okButton.Text
 #, csharp-format
 msgid "&OK"
-msgstr ""
+msgstr "Tamam"
 
 #: AboutDialog~textBoxDescription.Text
 #, csharp-format
@@ -86,7 +86,7 @@ msgstr "Hata Geçmişi"
 #: ErrorLogWindow~DebugCheckBox.Text
 #, csharp-format
 msgid "Show debug logs"
-msgstr ""
+msgstr "Hata Kayıtlarını Göster"
 
 #: ErrorLogWindow~clearButton.Text
 #, csharp-format
@@ -124,22 +124,22 @@ msgstr " Hata mesajını kopyalamak için ilgili satıra çift tıklayın"
 #: FindDialog~$this.Text
 #, csharp-format
 msgid "Find Torrent..."
-msgstr ""
+msgstr "Torrent'ı Bul"
 
 #: FindDialog~CaseSensitiveCheckBox.Text
 #, csharp-format
 msgid "Case insensitiv"
-msgstr ""
+msgstr "Harf duyarlılığı yok"
 
 #: FindDialog~findButton.Text
 #, csharp-format
 msgid "Find"
-msgstr ""
+msgstr "Bul"
 
 #: FindDialog~findLabel.Text
 #, csharp-format
 msgid "Find what:"
-msgstr ""
+msgstr "Bunu Bul"
 
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
@@ -150,18 +150,18 @@ msgstr "İstemci ayarları"
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 #: LocalSettingsDialog~AutoCheckUpdateCheckBox.Text
 #, csharp-format
 msgid "Check for update at startup"
-msgstr ""
+msgstr "Başlangıçta güncelleme kontrolü yap"
 
 #: LocalSettingsDialog~ClearPasswordCheckBox.Text
 #: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
 #, csharp-format
 msgid "Clear the password at save"
-msgstr ""
+msgstr "Kaydedince şifreyi sil"
 
 #: LocalSettingsDialog~CloseDialogButton.Text
 #: OtherStrings~Cancel
@@ -175,12 +175,12 @@ msgstr "İptal"
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
 msgid "Delete torrent when adding"
-msgstr ""
+msgstr "Eklenince Torrent'ı sil"
 
 #: LocalSettingsDialog~DontSavePasswordsCheckBox.Text
 #, csharp-format
 msgid "Don't save passwords"
-msgstr ""
+msgstr "Şifreleri kaydetme"
 
 #: LocalSettingsDialog~EnableAuthCheckBox.Text
 #, csharp-format
@@ -190,7 +190,7 @@ msgstr "Kimlik onaylama etkin"
 #: LocalSettingsDialog~EnableProxyCombo.Items
 #, csharp-format
 msgid "Auto"
-msgstr ""
+msgstr "Otomatik"
 
 #: LocalSettingsDialog~EnableProxyCombo.Items1
 #, csharp-format
@@ -210,12 +210,12 @@ msgstr "Sistem çekmecesi simgesi"
 #: LocalSettingsDialog~PlinkEnableCheckBox.Text
 #, csharp-format
 msgid "Display remote command button"
-msgstr ""
+msgstr "Uzak yönetim butonunu göster"
 
 #: LocalSettingsDialog~PlinkPathButton.Text
 #, csharp-format
 msgid "Browse"
-msgstr ""
+msgstr "Gözat"
 
 #: LocalSettingsDialog~ProxyAuthEnableCheckBox.Text
 #, csharp-format
@@ -232,7 +232,7 @@ msgstr "Kaldır"
 #: LocalSettingsDialog~SaveAndConnectButton.Text
 #, csharp-format
 msgid "Save and Connect"
-msgstr ""
+msgstr "Kaydet ve Bağlan"
 
 #: LocalSettingsDialog~SaveButton.Text
 #: RemoteSettingsDialog~SaveButton.Text
@@ -243,7 +243,7 @@ msgstr "Kaydet"
 #: LocalSettingsDialog~SaveServerButton.Text
 #, csharp-format
 msgid "Save Server"
-msgstr ""
+msgstr "Sunucuyu Kaydet"
 
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
@@ -263,7 +263,7 @@ msgstr "Şifreleme (SSL)"
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
-msgstr ""
+msgstr "Sunucu Ekle"
 
 #: LocalSettingsDialog~columnHost.Text
 #: OtherStrings~Host
@@ -280,37 +280,37 @@ msgstr "Torrent İsmi"
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items
 #, csharp-format
 msgid "Torrent Properties"
-msgstr ""
+msgstr "Torrent Özellikleri"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items1
 #, csharp-format
 msgid "Open remote folder"
-msgstr ""
+msgstr "İndirme Klasörünü Aç"
 
 #: LocalSettingsDialog~defaultActionComboBox.Items2
 #, csharp-format
 msgid "Start/Stop torrent"
-msgstr ""
+msgstr "Torrent Başlat/Durdur"
 
 #: LocalSettingsDialog~defaultActionLabel.Text
 #, csharp-format
 msgid "Default Action:"
-msgstr ""
+msgstr "Varsayılan Eylem"
 
 #: LocalSettingsDialog~groupAutoConnect.Text
 #, csharp-format
 msgid "Auto connect"
-msgstr ""
+msgstr "Otomatik Bağlan"
 
 #: LocalSettingsDialog~groupBehavior.Text
 #, csharp-format
 msgid "Behavior"
-msgstr ""
+msgstr "Eylem"
 
 #: LocalSettingsDialog~groupBox1.Text
 #, csharp-format
@@ -320,7 +320,7 @@ msgstr ""
 #: LocalSettingsDialog~groupCurrentProfile.Text
 #, csharp-format
 msgid "Current profile"
-msgstr ""
+msgstr "Mevcut Profil"
 
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
@@ -347,7 +347,7 @@ msgstr ""
 #: LocalSettingsDialog~label12.Text
 #, csharp-format
 msgid "Custom rpc path:"
-msgstr ""
+msgstr "Alternatif rpc yolu:"
 
 #: LocalSettingsDialog~label13.Text
 #, csharp-format
@@ -358,7 +358,7 @@ msgstr "Komut : "
 #: OtherStrings~SambaShare
 #, csharp-format
 msgid "Samba share:"
-msgstr ""
+msgstr "Samba Paylaşımı:"
 
 #: LocalSettingsDialog~label15.Text
 #, csharp-format
@@ -368,18 +368,18 @@ msgstr "Destek : "
 #: LocalSettingsDialog~label16.Text
 #, csharp-format
 msgid "Upload limit menu items:"
-msgstr ""
+msgstr "Gönderme Limiti Seçenekleri"
 
 #: LocalSettingsDialog~label17.Text
 #, csharp-format
 msgid "Download limit menu items:"
-msgstr ""
+msgstr "İndirme Limiti Seçenekleri"
 
 #: LocalSettingsDialog~label2.Text
 #: LocalSettingsDialog~label7.Text
 #, csharp-format
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: LocalSettingsDialog~label3.Text
 #, csharp-format
@@ -421,12 +421,12 @@ msgstr "Tamamlandığında Uyar"
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
-msgstr ""
+msgstr "Sunucu Kaldır"
 
 #: LocalSettingsDialog~tabGlobalSettings.Text
 #, csharp-format
 msgid "Global Settings"
-msgstr ""
+msgstr "Genel Ayarlar"
 
 #: LocalSettingsDialog~tabPage1.Text
 #, csharp-format
@@ -441,12 +441,12 @@ msgstr "Kullanıcı Ayarı"
 #: LocalSettingsDialog~tabPage3.Text
 #, csharp-format
 msgid "Proxy"
-msgstr ""
+msgstr "Vekil Sunucu"
 
 #: LocalSettingsDialog~tabPage5.Text
 #, csharp-format
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: LocalSettingsDialog~tabPage6.Text
 #, csharp-format
@@ -456,28 +456,28 @@ msgstr "Diğer"
 #: LocalSettingsDialog~tabPage7.Text
 #, csharp-format
 msgid "Samba"
-msgstr ""
+msgstr "Samba"
 
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
-msgstr ""
+msgstr "Sunucu Ayarları"
 
 #: LocalSettingsDialog~tabSkinSettings.Text
 #, csharp-format
 msgid "Skin"
-msgstr ""
+msgstr "Kabuk"
 
 #: MainWindow~$this.Text
 #: MainWindow~notifyIcon.Text
 #, csharp-format
 msgid "Transmission Remote"
-msgstr ""
+msgstr "Transmission Remote"
 
 #: MainWindow~AltSpeedButton.Text
 #, csharp-format
 msgid "Alt Speed"
-msgstr ""
+msgstr "Alt Hız"
 
 #: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
@@ -502,7 +502,7 @@ msgstr "Torrent Ekle"
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
 #, csharp-format
 msgid "Add torrent with options"
-msgstr ""
+msgstr "Parametrelerle Torrent Ekle"
 
 #: MainWindow~addWebTorrentButton.Text
 #, csharp-format
@@ -524,7 +524,7 @@ msgstr "CSV olarak kopyala"
 #: MainWindow~categoriesPanelToolStripMenuItem.Text
 #, csharp-format
 msgid "Category filter panel"
-msgstr ""
+msgstr "Kategori Filtreleme Paneli"
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
@@ -574,7 +574,7 @@ msgstr "Gönderilmiş"
 #: MainWindow~columnHeader16.Text
 #, csharp-format
 msgid "Ratio"
-msgstr ""
+msgstr "Oran(Ratio)"
 
 #: MainWindow~columnHeader17.Text
 #: OtherStrings~Skip
@@ -661,17 +661,17 @@ msgstr "Bayraklar"
 #: TorrentLoadDialog~columnHeader4.Text
 #, csharp-format
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: MainWindow~columnHeader33.Text
 #, csharp-format
 msgid "Update In"
-msgstr ""
+msgstr "Güncelleme"
 
 #: MainWindow~columnHeader36.Text
 #, csharp-format
 msgid "Downloaded"
-msgstr ""
+msgstr "İndirildi"
 
 #: MainWindow~columnHeader4.Text
 #, csharp-format
@@ -723,12 +723,12 @@ msgstr "Dosya"
 #: MainWindow~filesTabPage.Text
 #, csharp-format
 msgid "Files"
-msgstr ""
+msgstr "Dosyalar"
 
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
 msgid "Find..."
-msgstr ""
+msgstr "Bul"
 
 #: MainWindow~generalTabPage.Text
 #: RemoteSettingsDialog~tabPage1.Text
@@ -740,7 +740,7 @@ msgstr "Genel"
 #: MainWindow~groupBox1.Text
 #, csharp-format
 msgid "Overall bandwidth utilisation"
-msgstr ""
+msgstr "Tüm bant genişliği kullanımı"
 
 #: MainWindow~hashLabelLabel.Text
 #, csharp-format
@@ -775,7 +775,7 @@ msgstr "İndiren :"
 #: MainWindow~label14.Text
 #, csharp-format
 msgid "Ratio:"
-msgstr ""
+msgstr "Oran(Ratio):"
 
 #: MainWindow~label15.Text
 #: TorrentLoadDialog~CommentLabelLabel.Text
@@ -802,13 +802,13 @@ msgstr "Hassasiyet :"
 #: OtherStrings~Up
 #, csharp-format
 msgid "Up"
-msgstr "Yükselt"
+msgstr "Yükleme"
 
 #: MainWindow~label20.Text
 #: OtherStrings~Down
 #, csharp-format
 msgid "Down"
-msgstr "İndir"
+msgstr "İndirme"
 
 #: MainWindow~label3.Text
 #, csharp-format
@@ -863,7 +863,7 @@ msgstr "İstemci Ayarları"
 #: MainWindow~locationLabelLabel.Text
 #, csharp-format
 msgid "Location:"
-msgstr ""
+msgstr "Yer:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -874,13 +874,13 @@ msgstr ""
 #: OtherStrings~MoveTorrentData
 #, csharp-format
 msgid "Move torrent data"
-msgstr ""
+msgstr "Torrent Verisini Değiştir"
 
 #: MainWindow~openNetworkShareButton.Text
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
 msgid "Open on network share"
-msgstr "Open on Network Share"
+msgstr "Ağda aç"
 
 #: MainWindow~optionsToolStripMenuItem.Text
 #, csharp-format
@@ -911,7 +911,7 @@ msgstr "This is selectable text"
 #: MainWindow~piecesInfoLabelLabel.Text
 #, csharp-format
 msgid "Pieces:"
-msgstr ""
+msgstr "Parça:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
@@ -1067,12 +1067,12 @@ msgstr ""
 #: MoveDataPrompt~button1.Text
 #, csharp-format
 msgid "Move"
-msgstr ""
+msgstr "Taşı"
 
 #: MoveDataPrompt~label1.Text
 #, csharp-format
 msgid "Destination directory: "
-msgstr ""
+msgstr "Hedef Klasör"
 
 #: OtherStrings~Author
 #, csharp-format
@@ -1082,7 +1082,7 @@ msgstr "Oluşturan"
 #: OtherStrings~BandwidthAllocation
 #, csharp-format
 msgid "Bandwidth allocation"
-msgstr ""
+msgstr "Bantgenişliği Payı"
 
 #: OtherStrings~Broken
 #, csharp-format
@@ -1117,7 +1117,7 @@ msgstr "Onayla"
 #: OtherStrings~ConfirmMultipleRecheck
 #, csharp-format
 msgid "You have selected {0} torrents for recheck. It may take a long time. Are you sure?"
-msgstr ""
+msgstr "Kontrol için {0} adet torrent seçtiniz. Bu uzun sürebilir. Emin misiniz?"
 
 #: OtherStrings~ConfirmMultipleRemove
 #, csharp-format
@@ -1132,17 +1132,17 @@ msgstr "Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT T�
 #: OtherStrings~ConfirmSaveServer
 #, csharp-format
 msgid "\"{0}\" server settings have been changed. Would you like to save it?"
-msgstr ""
+msgstr "\"{0}" sunucu ayarları değiştirildi. Kaydetmek ister misiniz?"
 
 #: OtherStrings~ConfirmSingleRecheck
 #, csharp-format
 msgid "Do you want to recheck {0}? It may take a long time."
-msgstr ""
+msgstr "{0} adet torrent kontrol etmek istiyorsunuz. Emin Misiniz?"
 
 #: OtherStrings~ConfirmSingleRemove
 #, csharp-format
 msgid "Do you want to remove {0}?"
-msgstr ""
+msgstr "{0} adlı torrentı silmek mi istiyorsunuz?"
 
 #: OtherStrings~ConfirmSingleRemoveAndDelete
 #, csharp-format
@@ -1202,7 +1202,7 @@ msgstr "İndiriliyor"
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
-msgstr ""
+msgstr "Boş dosya"
 
 #: OtherStrings~Error
 #, csharp-format
@@ -1217,7 +1217,7 @@ msgstr "Sorguda hata"
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
-msgstr ""
+msgstr "GeoIP belirleme hatası ({0})"
 
 #: OtherStrings~Gigabyte
 #, csharp-format
@@ -1247,7 +1247,7 @@ msgstr "Saat"
 #: OtherStrings~HttpError
 #, csharp-format
 msgid "Daemon try to download something, but the http result is:{0}{1}"
-msgstr ""
+msgstr "Daemon birşeyler indirmeye çalışıyor ve http mesajı : {0}{1}"
 
 #: OtherStrings~Incomplete
 #, csharp-format
@@ -1262,7 +1262,7 @@ msgstr "Bilgi"
 #: OtherStrings~InfoObjectToClipboard
 #, csharp-format
 msgid "Info object to clipboard"
-msgstr ""
+msgstr "Bilgiyi panoya kopyala"
 
 #: OtherStrings~InputAccepted
 #, csharp-format
@@ -1292,7 +1292,7 @@ msgstr "Versiyon kontrolü başarısız"
 #: OtherStrings~LoadingFile
 #, csharp-format
 msgid "Loading {0}..."
-msgstr ""
+msgstr "Yükleniyor {0}..."
 
 #: OtherStrings~Low
 #, csharp-format
@@ -1307,7 +1307,7 @@ msgstr "Düşük Öncelik"
 #: OtherStrings~MappingSample
 #, csharp-format
 msgid "Sample mapping:"
-msgstr ""
+msgstr "Örnek haritalama:"
 
 #: OtherStrings~Megabyte
 #, csharp-format
@@ -1327,17 +1327,17 @@ msgstr "Dakika"
 #: OtherStrings~MoveMultipleTorrents
 #, csharp-format
 msgid "Move multiple torrent data"
-msgstr ""
+msgstr "Birçok torrent dosyasını taşı"
 
 #: OtherStrings~MoveX
 #, csharp-format
 msgid "Move {0}"
-msgstr ""
+msgstr "Taşı {0}"
 
 #: OtherStrings~MultipleTorrentProperties
 #, csharp-format
 msgid "Multiple Torrent Properties"
-msgstr ""
+msgstr "Çoklu Torrent Özelliği"
 
 #: OtherStrings~MustBeConnected
 #, csharp-format
@@ -1347,7 +1347,7 @@ msgstr "Torrent eklemek için bağlı olmalısınız. Şimdi bağlanmak ister mi
 #: OtherStrings~NewTorrentIs
 #, csharp-format
 msgid "New torrent {0}."
-msgstr ""
+msgstr "Yeni Torrent {0}."
 
 #: OtherStrings~NewerVersion
 #, csharp-format
@@ -1362,7 +1362,7 @@ msgstr "Hayır"
 #: OtherStrings~NoHostnameSet
 #, csharp-format
 msgid "No hostname has been set."
-msgstr ""
+msgstr "Sunucu adı ayarlanmadı."
 
 #: OtherStrings~NoUpgradeAvailable
 #, csharp-format
@@ -1397,12 +1397,12 @@ msgstr ""
 #: OtherStrings~OpenNetworkShare
 #, csharp-format
 msgid "Open on Network Share"
-msgstr ""
+msgstr "Ağda aç"
 
 #: OtherStrings~Password
 #, csharp-format
 msgid "Password"
-msgstr ""
+msgstr "Şifre"
 
 #: OtherStrings~Paused
 #, csharp-format
@@ -1412,7 +1412,7 @@ msgstr "Durduruldu"
 #: OtherStrings~Pieces
 #, csharp-format
 msgid "Pieces"
-msgstr ""
+msgstr "Parçalar"
 
 #: OtherStrings~PiecesInfo
 #, csharp-format
@@ -1482,7 +1482,7 @@ msgstr "Tümünü seç"
 #: OtherStrings~SpeedResolutions
 #, csharp-format
 msgid "5 sec|10 sec|30 sec|5 min"
-msgstr ""
+msgstr "5 sn|10 sn|30 sn|5 dk"
 
 #: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
@@ -1492,7 +1492,7 @@ msgstr "Torrent tamamlandı"
 #: OtherStrings~TorrentFinished
 #, csharp-format
 msgid "This torrent has finished downloading."
-msgstr ""
+msgstr "Bu torrentın indirme işlemi bitti."
 
 #: OtherStrings~Torrents
 #, csharp-format
@@ -1502,7 +1502,7 @@ msgstr "Torrentlar"
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
-msgstr ""
+msgstr "Açılamaz"
 
 #: OtherStrings~UnableToParse
 #, csharp-format
@@ -1512,7 +1512,7 @@ msgstr "Sunucu yanıtı geçersiz"
 #: OtherStrings~Unknown
 #, csharp-format
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmiyor"
 
 #: OtherStrings~UnknownNegativeResult
 #, csharp-format
@@ -1522,7 +1522,7 @@ msgstr "Bilinmeyen (negatif)"
 #: OtherStrings~UnknownResponseTag
 #, csharp-format
 msgid "Unknown response tag"
-msgstr ""
+msgstr "Bilinmeyen yanıt"
 
 #: OtherStrings~Unlimited
 #, csharp-format
@@ -1607,17 +1607,17 @@ msgstr ""
 #: RemoteSettingsDialog~encryptionCombobox.Items
 #, csharp-format
 msgid "tolerated"
-msgstr ""
+msgstr "farketmez"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items1
 #, csharp-format
 msgid "preferred"
-msgstr ""
+msgstr "tercihen"
 
 #: RemoteSettingsDialog~encryptionCombobox.Items2
 #, csharp-format
 msgid "required"
-msgstr ""
+msgstr "gerekli"
 
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
@@ -1658,7 +1658,7 @@ msgstr "Gelen portu:"
 #: RemoteSettingsDialog~label3.Text
 #, csharp-format
 msgid "Encryption:"
-msgstr ""
+msgstr "Şifreleme:"
 
 #: RemoteSettingsDialog~label4.Text
 #, csharp-format
@@ -1684,12 +1684,12 @@ msgstr ""
 #: RemoteSettingsDialog~limitUploadCheckBox.Text
 #, csharp-format
 msgid "Limit upload"
-msgstr ""
+msgstr "Gönderme Limiti"
 
 #: RemoteSettingsDialog~portForwardCheckBox.Text
 #, csharp-format
 msgid "Enable UPnP"
-msgstr ""
+msgstr "UPnP etkin"
 
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
@@ -1769,12 +1769,12 @@ msgstr ""
 #: TorrentLoadDialog~DateLabelLabel.Text
 #, csharp-format
 msgid "Date:"
-msgstr ""
+msgstr "Tarih:"
 
 #: TorrentLoadDialog~NameLabelLabel.Text
 #, csharp-format
 msgid "Name:"
-msgstr ""
+msgstr "Ad:"
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
@@ -1786,47 +1786,47 @@ msgstr "Tamam"
 #: TorrentLoadDialog~PropertiesGroupBox.Text
 #, csharp-format
 msgid "Torrent properties"
-msgstr ""
+msgstr "Torrent Özellikleri"
 
 #: TorrentLoadDialog~SelectAllButton.Text
 #, csharp-format
 msgid "Select All"
-msgstr ""
+msgstr "Tümünü Seç"
 
 #: TorrentLoadDialog~SelectInvertButton.Text
 #, csharp-format
 msgid "Select Invert"
-msgstr ""
+msgstr "Seçimi ters çevir"
 
 #: TorrentLoadDialog~SelectNoneButton.Text
 #, csharp-format
 msgid "Select None"
-msgstr ""
+msgstr "Seçimleri kaldır"
 
 #: TorrentLoadDialog~SizelabelLabel.Text
 #, csharp-format
 msgid "Size:"
-msgstr ""
+msgstr "Boyut:"
 
 #: TorrentLoadDialog~TorrentContentsGroupBox.Text
 #, csharp-format
 msgid "Torrent Contents"
-msgstr ""
+msgstr "Torrent İçerikleri"
 
 #: TorrentLoadDialog~checkBox1.Text
 #, csharp-format
 msgid "Alternate destination directory: "
-msgstr ""
+msgstr "Alternatif hedef klasör:"
 
 #: TorrentLoadDialog~checkBox2.Text
 #, csharp-format
 msgid "Alternate peer limit: "
-msgstr ""
+msgstr "Alternatif eş limiti:"
 
 #: TorrentLoadDialog~checkBox3.Text
 #, csharp-format
 msgid "Start torrent"
-msgstr ""
+msgstr "Torrent başlat"
 
 #: TorrentLoadDialog~toolStripStatusLabel1.Text
 #, csharp-format
@@ -1846,7 +1846,7 @@ msgstr "İndirme oranı limiti"
 #: TorrentPropertiesDialog~honorsSessionLimits.Text
 #, csharp-format
 msgid "Honors session limits"
-msgstr ""
+msgstr "Değerli oturum limitleri"
 
 #: TorrentPropertiesDialog~label3.Text
 #, csharp-format
