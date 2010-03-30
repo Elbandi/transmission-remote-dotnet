@@ -2887,7 +2887,7 @@
     <value>36, 36</value>
   </data>
   <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss</value>
+    <value>Rss Downloader</value>
   </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
