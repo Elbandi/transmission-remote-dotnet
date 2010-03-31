@@ -157,6 +157,12 @@ SubSectionEnd
 
 SectionGroup $(NAME_SecLanguages) SecLanguages
 
+  Section /o "Brazilian Portuguese" SecLanguagesBrazilianPortuguese
+    CreateDirectory "$INSTDIR\pt-BR"
+    SetOutPath "$INSTDIR\pt-BR"
+    File "TransmissionClientNew\bin\Release\pt-BR\Transmission Remote.resources.dll"
+  SectionEnd
+
   Section /o "Chinese" SecLanguagesChinese
     CreateDirectory "$INSTDIR\zh-CN"
     SetOutPath "$INSTDIR\zh-CN"
@@ -173,6 +179,12 @@ SectionGroup $(NAME_SecLanguages) SecLanguages
     CreateDirectory "$INSTDIR\da-DK"
     SetOutPath "$INSTDIR\da-DK"
     File "TransmissionClientNew\bin\Release\da-DK\Transmission Remote.resources.dll"
+  SectionEnd
+  
+  Section /o "Dutch" SecLanguagesDutch
+    CreateDirectory "$INSTDIR\nl-NL"
+    SetOutPath "$INSTDIR\nl-NL"
+    File "TransmissionClientNew\bin\Release\nl-NL\Transmission Remote.resources.dll"
   SectionEnd
   
   Section /o "French" SecLanguagesFrench
@@ -253,18 +265,20 @@ Section "Uninstall"
   Delete "$INSTDIR\GeoIP.dat"
   Delete "$INSTDIR\README.txt"
   Delete "$INSTDIR\LICENCE.txt"
-  Delete "$INSTDIR\de-DE\Transmission Remote.resources.dll"
-  Delete "$INSTDIR\fr-FR\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\cs-CZ\Transmission Remote.resources.dll"
   Delete "$INSTDIR\da-DK\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\de-DE\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\es-ES\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\fr-FR\Transmission Remote.resources.dll"
   Delete "$INSTDIR\hu-HU\Transmission Remote.resources.dll"
-  Delete "$INSTDIR\zh-CN\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\ko-KR\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\nl-NL\Transmission Remote.resources.dll"
   Delete "$INSTDIR\pl-PL\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\pt-BR\Transmission Remote.resources.dll"
   Delete "$INSTDIR\ru-RU\Transmission Remote.resources.dll"
   Delete "$INSTDIR\tr-TR\Transmission Remote.resources.dll"
-  Delete "$INSTDIR\es-ES\Transmission Remote.resources.dll"
-  Delete "$INSTDIR\ko-KR\Transmission Remote.resources.dll"
+  Delete "$INSTDIR\zh-CN\Transmission Remote.resources.dll"
   Delete "$INSTDIR\zh-TW\Transmission Remote.resources.dll"
-  Delete "$INSTDIR\cs-CZ\Transmission Remote.resources.dll"
 
   ; Remove shortcuts, if any
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
@@ -276,18 +290,20 @@ Section "Uninstall"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
 
   ; Remove directories used
+  RMDir "$INSTDIR\cs-CZ"
   RMDir "$INSTDIR\da-DK"
   RMDir "$INSTDIR\de-DE"
-  RMDir "$INSTDIR\fr-FR"
-  RMDir "$INSTDIR\zh-CN"
-  RMDir "$INSTDIR\hu-HU"
-  RMDir "$INSTDIR\ru-RU"
-  RMDir "$INSTDIR\pl-PL"
-  RMDir "$INSTDIR\tr-TR"
   RMDir "$INSTDIR\es-ES"
+  RMDir "$INSTDIR\fr-FR"
+  RMDir "$INSTDIR\hu-HU"
   RMDir "$INSTDIR\ko-KR"
+  RMDir "$INSTDIR\nl-NL"
+  RMDir "$INSTDIR\pl-PL"
+  RMDir "$INSTDIR\pt-BR"
+  RMDir "$INSTDIR\ru-RU"
+  RMDir "$INSTDIR\tr-TR"
+  RMDir "$INSTDIR\zh-CN"
   RMDir "$INSTDIR\zh-TW"
-  RMDir "$INSTDIR\cs-CZ"
   RMDir "$INSTDIR"
 
   DeleteRegKey /ifempty HKCU "Software\TransmissionRemote"
