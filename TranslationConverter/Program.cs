@@ -87,6 +87,7 @@ namespace TranslationConverter
                     }
                 #endregion
 
+#if !ONLY_TRANSLATE
                 Dictionary<string, string> template = trd_language["en-US"];
                 foreach (KeyValuePair<string, StringsList> l in trd_language)
                 {
@@ -158,6 +159,7 @@ namespace TranslationConverter
                     }
                     #endregion
                 }
+#endif
                 PoParser poparser = new PoParser();
                 XmlDocument resx = new XmlDocument();
                 Dictionary<string, StringsList> podatas = new Dictionary<string, Dictionary<string, string>>();
@@ -193,10 +195,12 @@ namespace TranslationConverter
                             string name = data.Attributes["name"].Value;
                             string value, value_eng, value_new;
                             value = value_eng = value_new = data["value"].InnerText;
+#if !ONLY_TRANSLATE
                             if (template.ContainsKey(cat + "~" + name))
                             {
                                 value_eng = template[cat + "~" + name];
                             }
+#endif
                             if (podata.ContainsKey(value_eng))
                             {
                                 string s = podata[value_eng];
