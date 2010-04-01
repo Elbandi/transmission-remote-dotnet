@@ -83,7 +83,7 @@ namespace TranslationConverter
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("Error: " + e.Message);
+                        Console.WriteLine("Error: " + e.ToString());
                     }
                 #endregion
 
@@ -215,13 +215,13 @@ namespace TranslationConverter
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("Error: " + e.Message);
+                        Console.WriteLine("Error: " + e.ToString());
                     }
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Source + ": " + e.Message);
+                Console.WriteLine(e.ToString());
             }
             Console.ReadLine();
         }
