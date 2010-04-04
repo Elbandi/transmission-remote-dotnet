@@ -106,8 +106,16 @@ namespace TransmissionRemoteDotnet
         private Image byteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
+            Image returnImage;
+            try
+            {
+                returnImage = Image.FromStream(ms);
+                return new Bitmap(returnImage);
+            }
+            finally
+            {
+                ms.Close();
+            }
         }
 
         void webClient_DownloadImageCompleted(object sender, DownloadDataCompletedEventArgs e)
