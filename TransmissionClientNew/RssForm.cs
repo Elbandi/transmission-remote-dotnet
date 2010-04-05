@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 using Raccoom.Xml;
+using System.Drawing.Imaging;
 
 namespace TransmissionRemoteDotnet
 {
@@ -45,7 +46,9 @@ namespace TransmissionRemoteDotnet
                 {
                     using (IsolatedStorageFileStream iStream = new IsolatedStorageFileStream(Toolbox.MD5(r.Name), FileMode.Open, isoStore))
                     {
-                        i = new Bitmap(iStream);
+                        Image img = new Bitmap(iStream);
+                        i = new Bitmap(img);
+                        img.Dispose();
                     }
                 }
                 catch { }
@@ -133,7 +136,7 @@ namespace TransmissionRemoteDotnet
                         {
                             using (IsolatedStorageFileStream oStream = new IsolatedStorageFileStream(Toolbox.MD5(r.Name), FileMode.Create, isoStore))
                             {
-                                i.Save(oStream, i.RawFormat);
+                                i.Save(oStream, ImageFormat.Png);
                             }
                         }
                         catch { }
