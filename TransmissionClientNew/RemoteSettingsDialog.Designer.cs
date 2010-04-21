@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
+            this.incompleteToField = new System.Windows.Forms.TextBox();
             this.dhtEnabled = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.testPortButton = new System.Windows.Forms.Button();
@@ -246,6 +248,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.incompleteToCheckBox);
+            this.tabPage1.Controls.Add(this.incompleteToField);
             this.tabPage1.Controls.Add(this.dhtEnabled);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.testPortButton);
@@ -262,6 +266,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // incompleteToCheckBox
+            // 
+            resources.ApplyResources(this.incompleteToCheckBox, "incompleteToCheckBox");
+            this.incompleteToCheckBox.Name = "incompleteToCheckBox";
+            this.incompleteToCheckBox.UseVisualStyleBackColor = true;
+            this.incompleteToCheckBox.CheckedChanged += new System.EventHandler(this.incompleteToCheckBox_CheckedChanged);
+            // 
+            // incompleteToField
+            // 
+            resources.ApplyResources(this.incompleteToField, "incompleteToField");
+            this.incompleteToField.Name = "incompleteToField";
             // 
             // dhtEnabled
             // 
@@ -500,6 +516,8 @@ namespace TransmissionRemoteDotnet
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox downloadToField;
+        private System.Windows.Forms.CheckBox incompleteToCheckBox;
+        private System.Windows.Forms.TextBox incompleteToField;
         private System.Windows.Forms.CheckBox limitUploadCheckBox;
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;
