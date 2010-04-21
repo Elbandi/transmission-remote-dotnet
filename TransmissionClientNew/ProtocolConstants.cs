@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             FIELD_PEERSGETTINGFROMUS = "peersGettingFromUs",
             FIELD_FLAGSTR = "flagStr",
             FIELD_HONORSSESSIONLIMITS = "honorsSessionLimits",
+            FIELD_INCOMPLETE_DIR = "incomplete-dir",
+            FIELD_INCOMPLETE_DIR_ENABLED = "incomplete-dir-enabled",
             FIELD_METAINFO = "metainfo",
             FIELD_CLIENTNAME = "clientName",
             FIELD_HAVEUNCHECKED = "haveUnchecked",
