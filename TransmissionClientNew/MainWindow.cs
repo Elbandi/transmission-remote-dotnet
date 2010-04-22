@@ -36,6 +36,7 @@ using System.Globalization;
 using System.Threading;
 using Jayrock.Json.Conversion;
 using System.Collections;
+using Etier.IconHelper;
 
 namespace TransmissionRemoteDotnet
 {
@@ -587,7 +588,7 @@ namespace TransmissionRemoteDotnet
                         }
                     }
                 }
-                notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
+                UpdateNotifyIcon("transmission");
             }
             connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
                 = mainVerticalSplitContainer.Panel1Collapsed = !connected;
@@ -632,6 +633,18 @@ namespace TransmissionRemoteDotnet
             this.notifyIcon.ShowBalloonTip(timeout, tipTitle, tipText, tipIcon);
         }
 
+        private string LastTrayIcon = "";
+        private void UpdateNotifyIcon(string name)
+        {
+            if (!name.Equals(LastTrayIcon))
+            {
+                IntPtr Hicon = (trayIconImageList.Images[name] as Bitmap).GetHicon();
+                notifyIcon.Icon = (Icon)Icon.FromHandle(Hicon).Clone();
+                User32.DestroyIcon(Hicon);
+                LastTrayIcon = name;
+            }
+        }
+
         private void UpdateTrayIcon()
         {
             int seedcount = 0, downloadcount = 0;
@@ -649,18 +662,18 @@ namespace TransmissionRemoteDotnet
             if (Program.Settings.ColorTray)
             {
                 if (seedcount == 0 && downloadcount == 0)
-                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["notransfer"] as Bitmap).GetHicon());
+                    UpdateNotifyIcon("notransfer");
                 else if (seedcount > 0 && downloadcount > 0)
-                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["downloadseed"] as Bitmap).GetHicon());
+                    UpdateNotifyIcon("downloadseed");
                 else if (seedcount > 0)
-                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["seed"] as Bitmap).GetHicon());
+                    UpdateNotifyIcon("seed");
                 else if (downloadcount > 0)
-                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["download"] as Bitmap).GetHicon());
+                    UpdateNotifyIcon("download");
                 else
-                    notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
+                    UpdateNotifyIcon("transmission");
             }
             else
-                notifyIcon.Icon = Icon.FromHandle((trayIconImageList.Images["transmission"] as Bitmap).GetHicon());
+                UpdateNotifyIcon("transmission");
         }
 
         public void TorrentsToClipboardHandler(object sender, EventArgs e)
