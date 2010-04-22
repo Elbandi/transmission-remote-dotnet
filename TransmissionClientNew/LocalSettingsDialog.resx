@@ -372,6 +372,177 @@
   <data name="&gt;&gt;groupPlinkPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ColorTrayIconCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 46</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
+    <value>Color tray icon</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Name" xml:space="preserve">
+    <value>ColorTrayIconCheckBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 46</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 17</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
+    <value>Notification on completion</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Name" xml:space="preserve">
+    <value>notificationOnCompletionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 23</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
+    <value>Notification on addition</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Name" xml:space="preserve">
+    <value>notificationOnAdditionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 23</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 17</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
+    <value>Minimize on close</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Name" xml:space="preserve">
+    <value>minimizeOnCloseCheckBox</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MinToTrayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MinToTrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 0</value>
+  </data>
+  <data name="MinToTrayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="MinToTrayCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
+    <value>Enable tray icon</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Name" xml:space="preserve">
+    <value>MinToTrayCheckBox</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TrayGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
+  <data name="TrayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 69</value>
+  </data>
+  <data name="TrayGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Name" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="StartOnSystemCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -379,13 +550,13 @@
     <value>NoControl</value>
   </data>
   <data name="StartOnSystemCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 134</value>
+    <value>15, 19</value>
   </data>
   <data name="StartOnSystemCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
   </data>
   <data name="StartOnSystemCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>0</value>
   </data>
   <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
     <value>Start on system startup</value>
@@ -400,36 +571,6 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;StartOnSystemCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 88</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
-  </data>
-  <data name="&gt;&gt;ColorTrayIconCheckBox.Name" xml:space="preserve">
-    <value>ColorTrayIconCheckBox</value>
-  </data>
-  <data name="&gt;&gt;ColorTrayIconCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColorTrayIconCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;ColorTrayIconCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="DontSavePasswordsCheckBox.AutoSize" type="System.Boolean, mscorlib">
@@ -439,13 +580,13 @@
     <value>NoControl</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 111</value>
+    <value>210, 44</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 17</value>
   </data>
   <data name="DontSavePasswordsCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
     <value>Don't save passwords</value>
@@ -472,13 +613,13 @@
     <value>Start/Stop torrent</value>
   </data>
   <data name="defaultActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 109</value>
+    <value>290, 17</value>
   </data>
   <data name="defaultActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
   </data>
   <data name="defaultActionComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;defaultActionComboBox.Name" xml:space="preserve">
     <value>defaultActionComboBox</value>
@@ -496,13 +637,13 @@
     <value>True</value>
   </data>
   <data name="defaultActionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 112</value>
+    <value>207, 20</value>
   </data>
   <data name="defaultActionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 13</value>
   </data>
   <data name="defaultActionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>2</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
     <value>Default Action:</value>
@@ -549,96 +690,6 @@
   <data name="&gt;&gt;DeleteTorrentCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 65</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 17</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
-    <value>Notification on completion</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Name" xml:space="preserve">
-    <value>notificationOnCompletionCheckBox</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 42</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
-    <value>Notification on addition</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Name" xml:space="preserve">
-    <value>notificationOnAdditionCheckBox</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 19</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 17</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
-    <value>Minimize on close</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Name" xml:space="preserve">
-    <value>minimizeOnCloseCheckBox</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -646,13 +697,13 @@
     <value>NoControl</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 65</value>
+    <value>15, 42</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 17</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
     <value>Check for update at startup</value>
@@ -667,7 +718,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="UploadPromptCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -676,13 +727,13 @@
     <value>NoControl</value>
   </data>
   <data name="UploadPromptCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 42</value>
+    <value>15, 65</value>
   </data>
   <data name="UploadPromptCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
   </data>
   <data name="UploadPromptCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>
@@ -697,37 +748,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;UploadPromptCheckBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MinToTrayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MinToTrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 19</value>
-  </data>
-  <data name="MinToTrayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
-  </data>
-  <data name="MinToTrayCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
-    <value>Enable tray icon</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Name" xml:space="preserve">
-    <value>MinToTrayCheckBox</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="groupBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>

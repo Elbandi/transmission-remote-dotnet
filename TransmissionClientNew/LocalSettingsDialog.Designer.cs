@@ -61,17 +61,19 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.TrayGroupBox = new System.Windows.Forms.GroupBox();
             this.ColorTrayIconCheckBox = new System.Windows.Forms.CheckBox();
+            this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
+            this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
+            this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
+            this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
+            this.StartOnSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.DontSavePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
             this.defaultActionLabel = new System.Windows.Forms.Label();
             this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
-            this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
-            this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
-            this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.AutoCheckUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.UploadPromptCheckBox = new System.Windows.Forms.CheckBox();
-            this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.tabServersSettings = new System.Windows.Forms.TabPage();
             this.removeServerButton = new System.Windows.Forms.Button();
             this.addServerButton = new System.Windows.Forms.Button();
@@ -154,13 +156,13 @@ namespace TransmissionRemoteDotnet
             this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.infopanelImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.StartOnSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
             this.groupCurrentProfile.SuspendLayout();
             this.groupPlinkPath.SuspendLayout();
             this.groupBehavior.SuspendLayout();
+            this.TrayGroupBox.SuspendLayout();
             this.tabServersSettings.SuspendLayout();
             this.tabServerSettings.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -281,27 +283,65 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.TrayGroupBox);
             this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
-            this.groupBehavior.Controls.Add(this.ColorTrayIconCheckBox);
             this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
             this.groupBehavior.Controls.Add(this.defaultActionLabel);
             this.groupBehavior.Controls.Add(this.DeleteTorrentCheckBox);
-            this.groupBehavior.Controls.Add(this.notificationOnCompletionCheckBox);
-            this.groupBehavior.Controls.Add(this.notificationOnAdditionCheckBox);
-            this.groupBehavior.Controls.Add(this.minimizeOnCloseCheckBox);
             this.groupBehavior.Controls.Add(this.AutoCheckUpdateCheckBox);
             this.groupBehavior.Controls.Add(this.UploadPromptCheckBox);
-            this.groupBehavior.Controls.Add(this.MinToTrayCheckBox);
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // TrayGroupBox
+            // 
+            this.TrayGroupBox.Controls.Add(this.ColorTrayIconCheckBox);
+            this.TrayGroupBox.Controls.Add(this.notificationOnCompletionCheckBox);
+            this.TrayGroupBox.Controls.Add(this.notificationOnAdditionCheckBox);
+            this.TrayGroupBox.Controls.Add(this.minimizeOnCloseCheckBox);
+            this.TrayGroupBox.Controls.Add(this.MinToTrayCheckBox);
+            resources.ApplyResources(this.TrayGroupBox, "TrayGroupBox");
+            this.TrayGroupBox.Name = "TrayGroupBox";
+            this.TrayGroupBox.TabStop = false;
             // 
             // ColorTrayIconCheckBox
             // 
             resources.ApplyResources(this.ColorTrayIconCheckBox, "ColorTrayIconCheckBox");
             this.ColorTrayIconCheckBox.Name = "ColorTrayIconCheckBox";
             this.ColorTrayIconCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // notificationOnCompletionCheckBox
+            // 
+            resources.ApplyResources(this.notificationOnCompletionCheckBox, "notificationOnCompletionCheckBox");
+            this.notificationOnCompletionCheckBox.Name = "notificationOnCompletionCheckBox";
+            this.notificationOnCompletionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // notificationOnAdditionCheckBox
+            // 
+            resources.ApplyResources(this.notificationOnAdditionCheckBox, "notificationOnAdditionCheckBox");
+            this.notificationOnAdditionCheckBox.Name = "notificationOnAdditionCheckBox";
+            this.notificationOnAdditionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // minimizeOnCloseCheckBox
+            // 
+            resources.ApplyResources(this.minimizeOnCloseCheckBox, "minimizeOnCloseCheckBox");
+            this.minimizeOnCloseCheckBox.Name = "minimizeOnCloseCheckBox";
+            this.minimizeOnCloseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MinToTrayCheckBox
+            // 
+            resources.ApplyResources(this.MinToTrayCheckBox, "MinToTrayCheckBox");
+            this.MinToTrayCheckBox.Name = "MinToTrayCheckBox";
+            this.MinToTrayCheckBox.UseVisualStyleBackColor = true;
+            this.MinToTrayCheckBox.CheckedChanged += new System.EventHandler(this.MinToTrayCheckBox_CheckedChanged);
+            // 
+            // StartOnSystemCheckBox
+            // 
+            resources.ApplyResources(this.StartOnSystemCheckBox, "StartOnSystemCheckBox");
+            this.StartOnSystemCheckBox.Name = "StartOnSystemCheckBox";
+            this.StartOnSystemCheckBox.UseVisualStyleBackColor = true;
             // 
             // DontSavePasswordsCheckBox
             // 
@@ -332,24 +372,6 @@ namespace TransmissionRemoteDotnet
             this.DeleteTorrentCheckBox.Name = "DeleteTorrentCheckBox";
             this.DeleteTorrentCheckBox.UseVisualStyleBackColor = true;
             // 
-            // notificationOnCompletionCheckBox
-            // 
-            resources.ApplyResources(this.notificationOnCompletionCheckBox, "notificationOnCompletionCheckBox");
-            this.notificationOnCompletionCheckBox.Name = "notificationOnCompletionCheckBox";
-            this.notificationOnCompletionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // notificationOnAdditionCheckBox
-            // 
-            resources.ApplyResources(this.notificationOnAdditionCheckBox, "notificationOnAdditionCheckBox");
-            this.notificationOnAdditionCheckBox.Name = "notificationOnAdditionCheckBox";
-            this.notificationOnAdditionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // minimizeOnCloseCheckBox
-            // 
-            resources.ApplyResources(this.minimizeOnCloseCheckBox, "minimizeOnCloseCheckBox");
-            this.minimizeOnCloseCheckBox.Name = "minimizeOnCloseCheckBox";
-            this.minimizeOnCloseCheckBox.UseVisualStyleBackColor = true;
-            // 
             // AutoCheckUpdateCheckBox
             // 
             resources.ApplyResources(this.AutoCheckUpdateCheckBox, "AutoCheckUpdateCheckBox");
@@ -361,13 +383,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.UploadPromptCheckBox, "UploadPromptCheckBox");
             this.UploadPromptCheckBox.Name = "UploadPromptCheckBox";
             this.UploadPromptCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // MinToTrayCheckBox
-            // 
-            resources.ApplyResources(this.MinToTrayCheckBox, "MinToTrayCheckBox");
-            this.MinToTrayCheckBox.Name = "MinToTrayCheckBox";
-            this.MinToTrayCheckBox.UseVisualStyleBackColor = true;
-            this.MinToTrayCheckBox.CheckedChanged += new System.EventHandler(this.MinToTrayCheckBox_CheckedChanged);
             // 
             // tabServersSettings
             // 
@@ -1013,12 +1028,6 @@ namespace TransmissionRemoteDotnet
             this.openImageFileDialog.FileName = "openFileDialog1";
             resources.ApplyResources(this.openImageFileDialog, "openImageFileDialog");
             // 
-            // StartOnSystemCheckBox
-            // 
-            resources.ApplyResources(this.StartOnSystemCheckBox, "StartOnSystemCheckBox");
-            this.StartOnSystemCheckBox.Name = "StartOnSystemCheckBox";
-            this.StartOnSystemCheckBox.UseVisualStyleBackColor = true;
-            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -1042,6 +1051,8 @@ namespace TransmissionRemoteDotnet
             this.groupPlinkPath.PerformLayout();
             this.groupBehavior.ResumeLayout(false);
             this.groupBehavior.PerformLayout();
+            this.TrayGroupBox.ResumeLayout(false);
+            this.TrayGroupBox.PerformLayout();
             this.tabServersSettings.ResumeLayout(false);
             this.tabServerSettings.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1080,6 +1091,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TabPage tabGlobalSettings;
         private System.Windows.Forms.TabPage tabServersSettings;
         private System.Windows.Forms.GroupBox groupBehavior;
+        private System.Windows.Forms.GroupBox TrayGroupBox;
         private System.Windows.Forms.CheckBox UploadPromptCheckBox;
         private System.Windows.Forms.CheckBox minimizeOnCloseCheckBox;
         private System.Windows.Forms.CheckBox notificationOnAdditionCheckBox;

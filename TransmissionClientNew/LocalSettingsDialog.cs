@@ -64,6 +64,8 @@ namespace TransmissionRemoteDotnet
 
             AddShareButton.Click += new EventHandler(Field_ValueChanged);
             RemoveShareButton.Click += new EventHandler(Field_ValueChanged);
+            for (int i = 0; i < MinToTrayCheckBox.Text.Length; i++)
+                TrayGroupBox.Text += "  ";
         }
 
         public void SetImageNumbers(int toolbar, int state, int infopanel, int tray)
