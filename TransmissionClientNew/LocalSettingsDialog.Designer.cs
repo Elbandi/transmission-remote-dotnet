@@ -154,6 +154,7 @@ namespace TransmissionRemoteDotnet
             this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.infopanelImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.openImageFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.StartOnSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.tabSettings.SuspendLayout();
             this.tabGlobalSettings.SuspendLayout();
             this.groupAutoConnect.SuspendLayout();
@@ -280,6 +281,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
             this.groupBehavior.Controls.Add(this.ColorTrayIconCheckBox);
             this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
@@ -1011,6 +1013,12 @@ namespace TransmissionRemoteDotnet
             this.openImageFileDialog.FileName = "openFileDialog1";
             resources.ApplyResources(this.openImageFileDialog, "openImageFileDialog");
             // 
+            // StartOnSystemCheckBox
+            // 
+            resources.ApplyResources(this.StartOnSystemCheckBox, "StartOnSystemCheckBox");
+            this.StartOnSystemCheckBox.Name = "StartOnSystemCheckBox";
+            this.StartOnSystemCheckBox.UseVisualStyleBackColor = true;
+            // 
             // LocalSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -1171,5 +1179,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TextBox FeedUrlTextBox;
         private System.Windows.Forms.Button AddFeedButton;
         private System.Windows.Forms.Button RemoveFeedButton;
+        private System.Windows.Forms.CheckBox StartOnSystemCheckBox;
     }
 }

@@ -20,11 +20,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using Jayrock.Json;
+using TransmissionRemoteDotnet.CustomControls;
 using TransmissionRemoteDotnet.Settings;
-using System.IO;
 
 namespace TransmissionRemoteDotnet
 {
@@ -129,6 +131,7 @@ namespace TransmissionRemoteDotnet
             infopanelImageBrowse.FileName = sett.InfopanelImagePath;
             toolbarImageBrowse.FileName = sett.ToolbarImagePath;
             trayImageBrowse.FileName = sett.TrayImagePath;
+            StartOnSystemCheckBox.Checked = Util.IsAutoStartEnabled(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -179,6 +182,10 @@ namespace TransmissionRemoteDotnet
                 sett.RssFeeds.Add(lvi.Name, lvi.SubItems[1].Text);
             }
             sett.Commit();
+            if (StartOnSystemCheckBox.Checked)
+                Util.SetAutoStart(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
+            else
+                Util.UnSetAutoStart(AboutDialog.AssemblyTitle);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)

@@ -129,6 +129,7 @@
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControls\Util.cs" />
     <Compile Include="ErrorLogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
