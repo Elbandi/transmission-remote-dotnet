@@ -48,7 +48,7 @@ namespace TransmissionRemoteDotnet.CustomControls
         public static void UnSetAutoStart(string keyName)
         {
             RegistryKey key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
-            key.DeleteValue(keyName);
+            key.DeleteValue(keyName, false);
         }
     }
 }
