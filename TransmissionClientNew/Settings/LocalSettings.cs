@@ -248,6 +248,7 @@ namespace TransmissionRemoteDotnet.Settings
                         ts.PlinkEnable = oldsettings.PlinkEnable;
                         ts.Port = oldsettings.Port;
                         ts.RefreshRate = oldsettings.RefreshRate;
+                        ts.RefreshRateTray = oldsettings.RefreshRate * 10;
                         ts.StartPaused = oldsettings.StartPaused;
                         ts.Username = oldsettings.User;
                         ts.UseSSL = oldsettings.UseSSL;
@@ -353,6 +354,7 @@ namespace TransmissionRemoteDotnet.Settings
         public string CustomPath = null;
         public bool StartPaused = false;
         public int RefreshRate = 3;
+        public int RefreshRateTray = 30;
         public int RetryLimit = 3;
         public Dictionary<string, string> SambaShareMappings = new Dictionary<string, string>();
         public string DownLimit = "10,50,100,200,300,400,500,700,1000,1500,2000,3000,5000";
@@ -367,6 +369,7 @@ namespace TransmissionRemoteDotnet.Settings
             JsonObject jo = base.SaveToJson();
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_USESSL, UseSSL);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_REFRESHRATE, RefreshRate);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_REFRESHRATETRAY, RefreshRateTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CUSTOMPATH, CustomPath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_RETRYLIMIT, RetryLimit);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DOWNLIMIT, DownLimit);
@@ -390,6 +393,7 @@ namespace TransmissionRemoteDotnet.Settings
             base.LoadFromJson(o);
             Toolbox.JsonGet(ref UseSSL, o[SettingsKey.REGKEY_USESSL]);
             Toolbox.JsonGet(ref RefreshRate, o[SettingsKey.REGKEY_REFRESHRATE]);
+            Toolbox.JsonGet(ref RefreshRateTray, o[SettingsKey.REGKEY_REFRESHRATETRAY]);
             Toolbox.JsonGet(ref CustomPath, o[SettingsKey.REGKEY_CUSTOMPATH]);
             Toolbox.JsonGet(ref RetryLimit, o[SettingsKey.REGKEY_RETRYLIMIT]);
             Toolbox.JsonGet(ref DownLimit, o[SettingsKey.REGKEY_DOWNLIMIT]);
@@ -545,6 +549,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_MINTOTRAY = "minToTray",
             REGKEY_COLORTRAY = "colorTray",
             REGKEY_REFRESHRATE = "refreshRate",
+            REGKEY_REFRESHRATETRAY = "refreshRateTray",
             REGKEY_CURRENTPROFILE = "currentProfile",
             REGKEY_STATEIMAGE = "stateImage",
             REGKEY_TABIMAGE = "tabImage",

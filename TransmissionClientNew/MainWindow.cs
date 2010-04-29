@@ -2023,6 +2023,20 @@ namespace TransmissionRemoteDotnet
             settings.Commit();
         }
 
+        private void MainWindow_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                refreshTimer.Interval = Program.Settings.Current.RefreshRate * 1000;
+                filesTimer.Interval = Program.Settings.Current.RefreshRate * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
+            }
+            else
+            {
+                refreshTimer.Interval = Program.Settings.Current.RefreshRateTray * 1000;
+                filesTimer.Interval = Program.Settings.Current.RefreshRateTray * 1000 * LocalSettingsSingleton.FILES_REFRESH_MULTIPLICANT;
+            }
+        }
+
         private void checkForNewVersionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DoCheckVersion(true);

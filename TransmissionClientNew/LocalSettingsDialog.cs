@@ -53,6 +53,7 @@ namespace TransmissionRemoteDotnet
 
             PortField.ValueChanged += new EventHandler(Field_ValueChanged);
             RefreshRateValue.ValueChanged += new EventHandler(Field_ValueChanged);
+            RefreshRateTrayValue.ValueChanged += new EventHandler(Field_ValueChanged);
             RetryLimitValue.ValueChanged += new EventHandler(Field_ValueChanged);
             ProxyPortField.ValueChanged += new EventHandler(Field_ValueChanged);
 
@@ -324,6 +325,7 @@ namespace TransmissionRemoteDotnet
                 HostField.Text = ts.Host;
                 PortField.Value = ts.Port;
                 RefreshRateValue.Value = ts.RefreshRate;
+                RefreshRateTrayValue.Value = ts.RefreshRateTray;
                 UseSSLCheckBox.Checked = ts.UseSSL;
                 PassField.Enabled = UserField.Enabled = EnableAuthCheckBox.Checked = ts.AuthEnabled;
                 UserField.Text = ts.Username;
@@ -380,6 +382,7 @@ namespace TransmissionRemoteDotnet
             ts.Port = (int)PortField.Value;
             current.SubItems[2].Text = ts.Port.ToString();
             ts.RefreshRate = (int)RefreshRateValue.Value;
+            ts.RefreshRateTray = (int)RefreshRateTrayValue.Value;
             ts.UseSSL = UseSSLCheckBox.Checked;
             ts.Username = UserField.Text;
             ts.Password = !ClearPasswordCheckBox.Checked ? PassField.Text : null;

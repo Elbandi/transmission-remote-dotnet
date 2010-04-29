@@ -814,7 +814,7 @@
     <value>213, 23</value>
   </data>
   <data name="removeServerButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
     <value>Remove Server</value>
@@ -847,7 +847,7 @@
     <value>214, 23</value>
   </data>
   <data name="addServerButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
     <value>Add Server</value>
@@ -870,35 +870,56 @@
   <data name="&gt;&gt;addServerButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="StartPausedCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="StartPausedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="StartPausedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 73</value>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 74</value>
   </data>
-  <data name="StartPausedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 17</value>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 13</value>
   </data>
-  <data name="StartPausedCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="StartPausedCheckBox.Text" xml:space="preserve">
-    <value>Start torrents paused</value>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Refresh rate when hidden:</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Name" xml:space="preserve">
-    <value>StartPausedCheckBox</value>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="RefreshRateTrayValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 72</value>
+  </data>
+  <data name="RefreshRateTrayValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="RefreshRateTrayValue.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Name" xml:space="preserve">
+    <value>RefreshRateTrayValue</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="SaveServerButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 100</value>
@@ -907,7 +928,7 @@
     <value>128, 23</value>
   </data>
   <data name="SaveServerButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
     <value>Save Server</value>
@@ -922,7 +943,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SaveServerButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="UseSSLCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -931,7 +952,7 @@
     <value>NoControl</value>
   </data>
   <data name="UseSSLCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 47</value>
+    <value>216, 45</value>
   </data>
   <data name="UseSSLCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -952,7 +973,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;UseSSLCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -982,10 +1003,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="HostField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 18</value>
+    <value>128, 18</value>
   </data>
   <data name="HostField.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 20</value>
@@ -1003,7 +1024,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;HostField.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1018,7 +1039,7 @@
     <value>55, 13</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Retry limit:</value>
@@ -1033,7 +1054,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1063,7 +1084,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1093,16 +1114,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="RetryLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 100</value>
+    <value>128, 100</value>
   </data>
   <data name="RetryLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
   </data>
   <data name="RetryLimitValue.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RetryLimitValue.Name" xml:space="preserve">
     <value>RetryLimitValue</value>
@@ -1114,10 +1135,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;RetryLimitValue.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="PortField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 44</value>
+    <value>128, 44</value>
   </data>
   <data name="PortField.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1135,10 +1156,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;PortField.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="RefreshRateValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 72</value>
+    <value>128, 72</value>
   </data>
   <data name="RefreshRateValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1156,7 +1177,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;RefreshRateValue.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1869,6 +1890,36 @@
   <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="StartPausedCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StartPausedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="StartPausedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 88</value>
+  </data>
+  <data name="StartPausedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="StartPausedCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="StartPausedCheckBox.Text" xml:space="preserve">
+    <value>Start torrents paused</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Name" xml:space="preserve">
+    <value>StartPausedCheckBox</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="customPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 62</value>
   </data>
@@ -1888,7 +1939,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;customPathTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1915,7 +1966,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1945,7 +1996,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1975,7 +2026,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="downloadLimitItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 36</value>
@@ -1996,7 +2047,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;downloadLimitItems.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="uploadLimitItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 10</value>
@@ -2017,7 +2068,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;uploadLimitItems.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tabPage6.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2314,7 +2365,7 @@
     <value>433, 160</value>
   </data>
   <data name="tabServerSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tabServerSettings.Name" xml:space="preserve">
     <value>tabServerSettings</value>
@@ -2377,7 +2428,7 @@
     <value>433, 171</value>
   </data>
   <data name="listServers.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;listServers.Name" xml:space="preserve">
     <value>listServers</value>

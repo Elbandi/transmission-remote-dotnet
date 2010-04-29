@@ -1634,6 +1634,7 @@ namespace TransmissionRemoteDotnet
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.Shown += new System.EventHandler(this.MainWindow_Shown);
+            this.VisibleChanged += new System.EventHandler(this.MainWindow_VisibleChanged);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainWindow_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainWindow_DragEnter);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);

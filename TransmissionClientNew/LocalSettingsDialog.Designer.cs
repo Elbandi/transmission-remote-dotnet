@@ -79,7 +79,8 @@ namespace TransmissionRemoteDotnet
             this.addServerButton = new System.Windows.Forms.Button();
             this.tabServerSettings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.RefreshRateTrayValue = new System.Windows.Forms.NumericUpDown();
             this.SaveServerButton = new System.Windows.Forms.Button();
             this.UseSSLCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkCmdTextBox = new System.Windows.Forms.TextBox();
             this.PlinkEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
             this.customPathTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -166,6 +168,7 @@ namespace TransmissionRemoteDotnet
             this.tabServersSettings.SuspendLayout();
             this.tabServerSettings.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshRateTrayValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RetryLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshRateValue)).BeginInit();
@@ -424,7 +427,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.StartPausedCheckBox);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.RefreshRateTrayValue);
             this.tabPage1.Controls.Add(this.SaveServerButton);
             this.tabPage1.Controls.Add(this.UseSSLCheckBox);
             this.tabPage1.Controls.Add(this.label1);
@@ -439,11 +443,30 @@ namespace TransmissionRemoteDotnet
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // StartPausedCheckBox
+            // label18
             // 
-            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
-            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
-            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // RefreshRateTrayValue
+            // 
+            resources.ApplyResources(this.RefreshRateTrayValue, "RefreshRateTrayValue");
+            this.RefreshRateTrayValue.Maximum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.RefreshRateTrayValue.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RefreshRateTrayValue.Name = "RefreshRateTrayValue";
+            this.RefreshRateTrayValue.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // SaveServerButton
             // 
@@ -718,6 +741,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.StartPausedCheckBox);
             this.tabPage6.Controls.Add(this.customPathTextBox);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.label17);
@@ -727,6 +751,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // StartPausedCheckBox
+            // 
+            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
+            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
+            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
             // 
             // customPathTextBox
             // 
@@ -1057,6 +1087,7 @@ namespace TransmissionRemoteDotnet
             this.tabServerSettings.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshRateTrayValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RetryLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshRateValue)).EndInit();
@@ -1111,6 +1142,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown RetryLimitValue;
         private System.Windows.Forms.NumericUpDown PortField;
         private System.Windows.Forms.NumericUpDown RefreshRateValue;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown RefreshRateTrayValue;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox EnableAuthCheckBox;
