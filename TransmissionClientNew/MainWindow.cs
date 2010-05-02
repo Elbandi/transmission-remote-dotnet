@@ -1333,7 +1333,14 @@ namespace TransmissionRemoteDotnet
                     }
                     else
                     {
-                        Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile(s, false)));
+                        try
+                        {
+                            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByFile(s, false)));
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
