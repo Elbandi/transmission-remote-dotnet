@@ -134,6 +134,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
             Toolbox.JsonGet(ref AutoConnect, o[SettingsKey.REGKEY_AUTOCONNECT]);
             JsonObject ja = (JsonObject)o[SettingsKey.REGKEY_PROFILES];
+            Servers.Clear();
             if (ja != null)
             {
                 foreach (string n in ja.Names)
@@ -147,6 +148,7 @@ namespace TransmissionRemoteDotnet.Settings
             DontSavePasswords = dsp;
             if (!Servers.ContainsKey(currentprofile))
                 currentprofile = "";
+            RssFeeds.Clear();
             ja = (JsonObject)o[SettingsKey.REGKEY_RSSFEEDS];
             if (ja != null)
             {
@@ -155,6 +157,7 @@ namespace TransmissionRemoteDotnet.Settings
                     RssFeeds.Add(n, ja[n] as string);
                 }
             }
+            Misc.Clear();
             ja = (JsonObject)o[SettingsKey.REGKEY_MISC];
             if (ja != null)
             {
@@ -402,7 +405,11 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref PlinkEnable, o[SettingsKey.REGKEY_PLINKENABLE]);
             Toolbox.JsonGet(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
 
-            JsonArray ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
+            JsonArray ja;
+            if (o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY] is string)
+                ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
+            else
+                ja = (JsonArray)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY];
             foreach (string s in ja.ToArray())
             {
                 if (s.Length > 0)
