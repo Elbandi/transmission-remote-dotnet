@@ -714,8 +714,6 @@ namespace TransmissionRemoteDotnet
                     if (Toolbox.ScreenExists(p))
                         this.Location = p;
                 }
-                if (settings.Misc.ContainsKey(CONFKEY_SPLITTERDISTANCE))
-                    this.torrentAndTabsSplitContainer.SplitterDistance = (int)settings.GetObject(CONFKEY_SPLITTERDISTANCE);
                 this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
@@ -2017,10 +2015,6 @@ namespace TransmissionRemoteDotnet
                     settings.SetObject(CONFKEY_MAINWINDOW_LOCATION_Y, this.RestoreBounds.Y);
                     settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.RestoreBounds.Height);
                     settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.RestoreBounds.Width);
-                }
-                if (this.WindowState != FormWindowState.Maximized)
-                {
-                    settings.SetObject(CONFKEY_SPLITTERDISTANCE, this.torrentAndTabsSplitContainer.SplitterDistance);
                 }
             }
             SaveListViewProperties(torrentListView);
