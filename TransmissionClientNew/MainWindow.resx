@@ -3090,6 +3090,21 @@
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="optionsMenuToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 6</value>
+  </data>
+  <data name="importLocalSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 22</value>
+  </data>
+  <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Import local settings...</value>
+  </data>
+  <data name="exportLocalSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 22</value>
+  </data>
+  <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Export local settings...</value>
+  </data>
   <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
   </data>
@@ -3393,10 +3408,10 @@
   <metadata name="refreshElapsedTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>696, 17</value>
   </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="openTorrentFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>179, 56</value>
   </metadata>
-  <data name="openFileDialog1.Filter" xml:space="preserve">
+  <data name="openTorrentFileDialog.Filter" xml:space="preserve">
     <value>BitTorrent metadata|*.torrent</value>
   </data>
   <metadata name="toolStripImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -3410,6 +3425,24 @@
   </metadata>
   <data name="trayIconImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
+  </data>
+  <metadata name="saveSettingsFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>194, 56</value>
+  </metadata>
+  <data name="saveSettingsFileDialog.Filter" xml:space="preserve">
+    <value>Transmission Remote Settings|*.json|All files|*.*</value>
+  </data>
+  <data name="saveSettingsFileDialog.Title" xml:space="preserve">
+    <value>Export local settings...</value>
+  </data>
+  <metadata name="openSettingsFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="openSettingsFileDialog.Filter" xml:space="preserve">
+    <value>Transmission Remote Settings|*.json|All files|*.*</value>
+  </data>
+  <data name="openSettingsFileDialog.Title" xml:space="preserve">
+    <value>Import local settings...</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4171,6 +4204,24 @@
   <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;optionsMenuToolStripSeparator2.Name" xml:space="preserve">
+    <value>optionsMenuToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;optionsMenuToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;importLocalSettingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>importLocalSettingsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;importLocalSettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportLocalSettingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>exportLocalSettingsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exportLocalSettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;torrentToolStripMenuItem.Name" xml:space="preserve">
     <value>torrentToolStripMenuItem</value>
   </data>
@@ -4357,10 +4408,10 @@
   <data name="&gt;&gt;refreshElapsedTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
+  <data name="&gt;&gt;openTorrentFileDialog.Name" xml:space="preserve">
+    <value>openTorrentFileDialog</value>
   </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+  <data name="&gt;&gt;openTorrentFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripImageList.Name" xml:space="preserve">
@@ -4374,6 +4425,18 @@
   </data>
   <data name="&gt;&gt;trayIconImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsFileDialog.Name" xml:space="preserve">
+    <value>saveSettingsFileDialog</value>
+  </data>
+  <data name="&gt;&gt;saveSettingsFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openSettingsFileDialog.Name" xml:space="preserve">
+    <value>openSettingsFileDialog</value>
+  </data>
+  <data name="&gt;&gt;openSettingsFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainWindow</value>

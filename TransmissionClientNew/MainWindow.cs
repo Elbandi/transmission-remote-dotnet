@@ -2187,9 +2187,9 @@ namespace TransmissionRemoteDotnet
             /* This crashes 1.6x */
             if (Program.Connected && (Program.DaemonDescriptor.Version < 1.60 || Program.DaemonDescriptor.Version >= 1.7))
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openTorrentFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    foreach (string fileName in openFileDialog1.FileNames)
+                    foreach (string fileName in openTorrentFileDialog.FileNames)
                     {
                         (new TorrentLoadDialog(fileName)).ShowDialog();
                     }
@@ -2280,6 +2280,41 @@ namespace TransmissionRemoteDotnet
             public string Name;
             public Bitmap Image;
             public ToolStripItem[] Controls;
+        }
+
+        private void exportLocalSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveSettingsFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileLocalSettingsStore store = new FileLocalSettingsStore();
+                store.Save(saveSettingsFileDialog.FileName, Program.Settings.SaveToJson());
+            }
+        }
+
+        private void importLocalSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openSettingsFileDialog.ShowDialog() == DialogResult.OK)
+                try
+                {
+                    LocalSettings sett = Program.Settings;
+                    string originalHost = sett.Current.Host;
+                    int originalPort = sett.Current.Port;
+                    FileLocalSettingsStore store = new FileLocalSettingsStore();
+                    JsonObject jo = store.Load(openSettingsFileDialog.FileName);
+                    LocalSettings newsettings = new LocalSettings(jo);
+
+                    // if no error, load to right place
+                    Program.Settings.LoadFromJson(jo);
+                    if (Program.Connected && (sett.Current.Host != originalHost || sett.Current.Port != originalPort))
+                    {
+                        Program.Connected = false;
+                        Connect();
+                    }
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                };
         }
     }
 }
