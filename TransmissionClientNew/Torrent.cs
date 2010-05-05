@@ -96,6 +96,7 @@ namespace TransmissionRemoteDotnet
             base.SubItems[11].Tag = this.Added;
             SetText(11, this.Added.ToString());
             SetText(13, this.FirstTrackerTrimmed);
+            base.SubItems[14].Tag = this.Id;
 			SetText(14, this.Id.ToString());
 
             if (first)
