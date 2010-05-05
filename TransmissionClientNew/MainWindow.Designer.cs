@@ -50,6 +50,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader30 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader37 = new System.Windows.Forms.ColumnHeader();
             this.torrentTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
             this.generalTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -330,7 +331,8 @@ namespace TransmissionRemoteDotnet
             this.columnHeader16,
             this.columnHeader18,
             this.columnHeader19,
-            this.columnHeader30});
+            this.columnHeader30,
+            this.columnHeader37});
             resources.ApplyResources(this.torrentListView, "torrentListView");
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.HideSelection = false;
@@ -399,6 +401,10 @@ namespace TransmissionRemoteDotnet
             // columnHeader30
             // 
             resources.ApplyResources(this.columnHeader30, "columnHeader30");
+            // 
+            // columnHeader37
+            // 
+            resources.ApplyResources(this.columnHeader37, "columnHeader37");
             // 
             // torrentTabControl
             // 
@@ -1806,6 +1812,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ImageList tabControlImageList;
         private System.Windows.Forms.ToolStripButton recheckTorrentButton;
         private System.Windows.Forms.ColumnHeader columnHeader30;
+        private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ToolStripButton removeAndDeleteButton;
         private System.Windows.Forms.ToolStripSeparator viewMenuToolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem statsToolStripMenuItem;

@@ -204,23 +204,41 @@
   <data name="columnHeader6.Width" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
+  <data name="columnHeader7.DisplayIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="columnHeader7.Text" xml:space="preserve">
     <value>Size</value>
   </data>
   <data name="columnHeader7.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
+  <data name="columnHeader8.DisplayIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="columnHeader8.Text" xml:space="preserve">
     <value>Done</value>
+  </data>
+  <data name="columnHeader9.DisplayIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="columnHeader10.DisplayIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="columnHeader10.Text" xml:space="preserve">
     <value>Seeds</value>
   </data>
+  <data name="columnHeader11.DisplayIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Leechers</value>
+  </data>
+  <data name="columnHeader12.DisplayIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
     <value>Down Speed</value>
@@ -228,14 +246,23 @@
   <data name="columnHeader12.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
+  <data name="columnHeader13.DisplayIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="columnHeader13.Text" xml:space="preserve">
     <value>Up Speed</value>
   </data>
   <data name="columnHeader13.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
+  <data name="columnHeader14.DisplayIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>ETA</value>
+  </data>
+  <data name="columnHeader15.DisplayIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
     <value>Uploaded</value>
@@ -243,20 +270,41 @@
   <data name="columnHeader15.Width" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
+  <data name="columnHeader16.DisplayIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>Ratio</value>
+  </data>
+  <data name="columnHeader18.DisplayIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
     <value>Added At</value>
   </data>
+  <data name="columnHeader19.DisplayIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="columnHeader19.Text" xml:space="preserve">
     <value>Completed At</value>
+  </data>
+  <data name="columnHeader30.DisplayIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="columnHeader30.Text" xml:space="preserve">
     <value>Tracker</value>
   </data>
   <data name="columnHeader30.Width" type="System.Int32, mscorlib">
     <value>140</value>
+  </data>
+  <data name="columnHeader37.DisplayIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="columnHeader37.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="columnHeader37.Width" type="System.Int32, mscorlib">
+    <value>32</value>
   </data>
   <data name="torrentListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3725,6 +3773,12 @@
     <value>columnHeader30</value>
   </data>
   <data name="&gt;&gt;columnHeader30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader37.Name" xml:space="preserve">
+    <value>columnHeader37</value>
+  </data>
+  <data name="&gt;&gt;columnHeader37.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">

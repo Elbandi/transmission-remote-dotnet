@@ -96,6 +96,7 @@ namespace TransmissionRemoteDotnet
             base.SubItems[11].Tag = this.Added;
             SetText(11, this.Added.ToString());
             SetText(13, this.FirstTrackerTrimmed);
+			SetText(14, this.Id.ToString());
 
             if (first)
             {
@@ -222,7 +223,7 @@ namespace TransmissionRemoteDotnet
             : base((string)info[ProtocolConstants.FIELD_NAME])
         {
             this.Id = Toolbox.ToInt(info[ProtocolConstants.FIELD_ID]);
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 14; i++)
                 base.SubItems.Add("");
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
