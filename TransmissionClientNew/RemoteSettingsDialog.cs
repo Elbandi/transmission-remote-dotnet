@@ -166,9 +166,9 @@ namespace TransmissionRemoteDotnet
                 {
                     dhtEnabled.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
                 }
-                if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LDSENABLED))
+                if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
                 {
-                    LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LDSENABLED]);
+                    LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
                 }
                 testPortButton.Enabled = Program.DaemonDescriptor.RpcVersion >= 5;
             }
@@ -263,7 +263,7 @@ namespace TransmissionRemoteDotnet
             }
             if (LpdEnabledCheckBox.Enabled)
             {
-                arguments.Put(ProtocolConstants.FIELD_LDSENABLED, LpdEnabledCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
             }
             arguments.Put(ProtocolConstants.DOWNLOAD_DIR, downloadToField.Text);
             CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
