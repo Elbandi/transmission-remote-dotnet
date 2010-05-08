@@ -572,7 +572,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return rootConfMap.ContainsKey(REGKEY_LOCALE) ? (string)rootConfMap[REGKEY_LOCALE] : "en-GB";
+                return rootConfMap.ContainsKey(REGKEY_LOCALE) ? (string)rootConfMap[REGKEY_LOCALE] : "en-US";
             }
             set
             {

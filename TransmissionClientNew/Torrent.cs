@@ -96,6 +96,8 @@ namespace TransmissionRemoteDotnet
             base.SubItems[11].Tag = this.Added;
             SetText(11, this.Added.ToString());
             SetText(13, this.FirstTrackerTrimmed);
+            base.SubItems[14].Tag = this.Id;
+			SetText(14, this.Id.ToString());
 
             if (first)
             {
@@ -111,15 +113,16 @@ namespace TransmissionRemoteDotnet
                         form.stateListBox.Items.Add(new GListBoxItem(this.FirstTrackerTrimmed, 8));
                     }
                 }
-                if (Program.Settings.StartedBalloon && this.updateSerial > 2)
+                if (Program.Settings.MinToTray && Program.Settings.StartedBalloon && this.updateSerial > 2)
                 {
-                    Program.Form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
+                    form.ShowTrayTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, String.Format(OtherStrings.NewTorrentIs, this.Status.ToLower()), ToolTipIcon.Info);
                 }
                 LogError();
             }
-            else if (this.CompletionPopupPending && form.notifyIcon.Visible)
+            else if (Program.Settings.MinToTray && this.CompletionPopupPending)
             {
-                form.notifyIcon.ShowBalloonTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
+                this.CompletionPopupPending = false;
+                form.ShowTrayTip(LocalSettingsSingleton.BALLOON_TIMEOUT, this.TorrentName, OtherStrings.TorrentFinished, ToolTipIcon.Info);
             }
             base.ForeColor = this.HasError ? Color.Red : SystemColors.WindowText;
             UpdateIcon();
@@ -146,8 +149,10 @@ namespace TransmissionRemoteDotnet
             this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
             this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
+            this.Downloaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_DOWNLOADEDEVER]);
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
-            this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, this.HaveTotal);
+            long downloadedForRatio = this.Downloaded > 0 ? this.Downloaded : this.HaveValid;
+            this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, downloadedForRatio);
 
             if (info.Contains(ProtocolConstants.FIELD_DONEDATE))
             {
@@ -164,12 +169,11 @@ namespace TransmissionRemoteDotnet
 
             bool statusChange = (this.StatusCode != statusCode) || (this.HasError != IsErrorString(errorString));
 
-            if (this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon
-                && this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
-                && this.LeftUntilDone > 0
-                && (leftUntilDone == 0))
+            if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
+                && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
                 this.DoneDate = DateTime.Now;
+                this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon;
             }
 
             this.LeftUntilDone = leftUntilDone;
@@ -220,7 +224,7 @@ namespace TransmissionRemoteDotnet
             : base((string)info[ProtocolConstants.FIELD_NAME])
         {
             this.Id = Toolbox.ToInt(info[ProtocolConstants.FIELD_ID]);
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 14; i++)
                 base.SubItems.Add("");
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
@@ -462,12 +466,12 @@ namespace TransmissionRemoteDotnet
             get
             {
                 string downloadDir = this.DownloadDir;
-                string name = this.TorrentName;
+                string name = this.Files.Count > 1 ? this.TorrentName : "";
                 Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
                 foreach (string key in mappings.Keys)
                 {
                     if (downloadDir.StartsWith(key))
-                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, this.TorrentName);
+                        return String.Format(@"{0}\{1}{2}", (string)mappings[key], downloadDir.Length > key.Length ? downloadDir.Substring(key.Length + 1).Replace(@"/", @"\") + @"\" : null, name);
                 }
                 return null;
             }
@@ -645,6 +649,12 @@ namespace TransmissionRemoteDotnet
         }
 
         public long Uploaded
+        {
+            get;
+            set;
+        }
+
+        public long Downloaded
         {
             get;
             set;

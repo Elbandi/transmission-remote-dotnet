@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://purl.org/atom/ns#" xmlns:atom="http://purl.org/atom/ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+	<xs:element name="feed" type="atom:feedType">
+		<xs:annotation>
+			<xs:documentation><![CDATA[ 
+The top-level element is <feed>.
+			]]></xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="feedType">
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+The top-level element is <feed>. It has several <entry> children. If a property says it can apply to entries, that means that if it’s put in <feed> then it’s a default value for each <entry>. If it can also apply to <entry>, then the value in an <entry> can override the default entries value.
+
+Required children of feed:
+
+title: Equivalent to dc:title. If this feed describes a website, SHOULD be the title of the website. 
+link: The link to the website described by this feed. If this feed describes a website, SHOULD be a link to the homepage of the website. 
+modified: W3DTF. Equivalent to dcterms:modified. The modification date of the feed, including any changes to any of the listed entries. SHOULD be UTC. 
+author: [defined below] 
+One of these MUST be true: 
+
+feed contains author (if so, it’s inherited by all the entries); 
+every entry contains author (overrides any inherited one). 
+Optional children of feed:
+
+tagline: Subproperty of dc:description. A short human-readable tagline for this feed. Examples: "All the news that’s fit to print" (tagline of NYT). 
+id: A URI. Permanent, globally unique ID of this feed. MUST NOT change, ever, even if the feed is moved to a new server. For this reason, it probably shouldn’t be the same as feed/link, although it MAY be. We’re currently discussing options, including tag: URIs and GUID in the COM/CORBA sense. 
+generator: [defined below] 
+entry*: [defined below] 
+contributor*: [defined below] 
+copyright: Equivalent to dc:rights. Human-readable copyright statement for this feed. For machine-readable licensing information, producers SHOULD use the <license> element (to be defined). Note that omission of this element does not mean the feed isn’t copyrighted. 
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="link" type="xs:anyURI"/>
+				<xs:element name="modified" type="atom:iso8601dataTime"/>
+				<xs:element name="author" type="atom:authorType" minOccurs="0"/>
+				<xs:element name="tagline" type="xs:string" minOccurs="0"/>
+				<xs:element name="id" type="xs:anyURI" minOccurs="0"/>
+				<xs:element name="generator" type="atom:generatorType" minOccurs="0"/>
+				<xs:element name="contributor" type="atom:authorType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation><![CDATA[
+Same required and optional elements as author. Suproperty of "dc:contributor".
+						]]></xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="copyright" type="xs:string" minOccurs="0"/>
+				<xs:element name="entry" type="atom:entryType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="version" type="atom:versionType" use="required"/>
+		<xs:attribute ref="xml:lang" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="authorType">
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+Required children:
+
+name: Equivalent to dc:creator of feed or entry (depending on where author element is). MAY be name of corporation, if there are no individual authors or publisher does not wish to make their names available. See Authors on the other wiki. 
+Optional children:
+
+url*: A URI. The URL of this author. 
+email*: An email address, including plus signs and other allowable weird characters. The email address of this author. 
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="url" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="email" type="atom:emailType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="generatorType" >
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+Required children:
+
+link: A URI. URI of the toolkit that generated this feed. SHOULD be home page of toolkit/program/hosting provider, like http://www.movabletype.org/. MAY include version number, like: http://www.movabletype.org/?v=2.64. 
+name: human-readable name of the toolkit that generated this feed, like "Movable Type". 
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:anyURI" >
+				<xs:attribute name="name" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="entryType">
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+Required children:
+
+title: Eqivalent to dc:title. 
+link: A URI. Permanent link to a representation of this entry. Is NOT defined as "link to an external resource described in the content of this entry". MUST be permanent. MUST be globally unique. MUST be clickable (not sure how to express this, perhaps "use an IANA-registered protocol and point to a resource that is viewable by ... uh, something) 
+id: A URI. Subproperty of to dc:identifier. Permanent globally unique ID of this entry. MUST be permanent, MUST be globally unique. MAY be same as link. Current recommendations are under active discussion, same issues as feed/id. 
+issued: W3DTF minus timezone requirement. Subproperty of dcterms:issued. SHOULD include timezone. SHOULD be expressed in publisher’s local timezone. MAY skip timezone (LiveJournal requirement). 
+modified: W3DTF. Subproperty of dcterms:modified. SHOULD be UTC. 
+Optional children:
+
+created W3DTF. Subproperty of dcterms:created. SHOULD be UTC. If not present, its value is presumed to be identical to modified. 
+summary: Subproperty of dc:description. Short summary, blurb, or excerpt about this entry. MUST be plain text (i.e. no escaped HTML). Examples of use: lead on first page of news site. 
+author: [defined above] 
+contributor*: [defined below] 
+content*: [defined below] 
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice minOccurs="4" maxOccurs="unbounded">
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="link" type="xs:anyURI"/>
+				<xs:element name="id" type="xs:string"/>
+				<xs:element name="issued" type="atom:iso8601dataTime"/>
+				<xs:element name="modified" type="atom:iso8601dataTime"/>
+				<xs:element name="created" type="atom:iso8601dataTime" minOccurs="0"/>
+				<xs:element name="summary" type="xs:string" minOccurs="0"/>
+				<xs:element name="author" type="atom:authorType" minOccurs="0"/>
+				<xs:element name="contributor" type="atom:authorType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="content" type="atom:contentType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute ref="xml:lang" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="contentType" >
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+Required children:
+
+type: MIME type. Format of this content. 
+And at most one mode of:
+
+xml: Inline XML. (Probably namespaced XHTML.) 
+escaped: Consumers must unescape and treat as its type. 
+base64: base64-encoded string. Consumers must decode and treat as its type. 
+If content type is "multipart/alternative", then instead of any of the above, the content element MUST contain 1 or more content elements. These content elements MUST NOT specify type="multipart/alternative" (i.e. only one level of nesting is allowed). Consumers SHOULD look at all alternative content elements and determine which one is most suitable, based on which type and mode the consumer supports, and preferences specified by the end user (if any). Consumers SHOULD NOT render more than one content alternative.
+			]]></xs:documentation>
+			<xs:documentation>
+				I took this group and the next one from Tim Bray's Atom XSD.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="true">
+			<xs:restriction base="xs:string" >
+				<xs:choice>
+					<xs:element name="content" type="atom:contentType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:sequence>
+						<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:choice>
+				<xs:attribute name="type" use="required"/>
+				<xs:attribute name="mode">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="xml"/>
+							<xs:enumeration value="escaped"/>
+							<xs:enumeration value="base64"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute ref="xml:lang" use="optional"/>
+			</xs:restriction >
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="iso8601dataTime">
+		<xs:union memberTypes="xs:dateTime xs:date"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="versionType">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d+\.\d+" /> 
+		</xs:restriction>
+  	</xs:simpleType>
+
+	<xs:simpleType name="emailType">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\w+@(\w+\.)+\w+"/> 
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

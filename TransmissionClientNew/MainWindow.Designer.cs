@@ -50,6 +50,7 @@ namespace TransmissionRemoteDotnet
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader30 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader37 = new System.Windows.Forms.ColumnHeader();
             this.torrentTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
             this.generalTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -143,6 +144,7 @@ namespace TransmissionRemoteDotnet
             this.tabControlImageList = new System.Windows.Forms.ImageList(this.components);
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.connectButton = new System.Windows.Forms.ToolStripSplitButton();
             this.disconnectButton = new System.Windows.Forms.ToolStripButton();
@@ -167,6 +169,8 @@ namespace TransmissionRemoteDotnet
             this.localConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.remoteConfigureButton = new System.Windows.Forms.ToolStripButton();
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
+            this.toolbarToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.RssButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -182,6 +186,9 @@ namespace TransmissionRemoteDotnet
             this.remoteSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsMenuToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsMenuToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.importLocalSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportLocalSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentMenuToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -213,8 +220,11 @@ namespace TransmissionRemoteDotnet
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.filesTimer = new System.Windows.Forms.Timer(this.components);
             this.refreshElapsedTimer = new System.Windows.Forms.Timer(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openTorrentFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStripImageList = new System.Windows.Forms.ImageList(this.components);
+            this.trayIconImageList = new System.Windows.Forms.ImageList(this.components);
+            this.saveSettingsFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openSettingsFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -326,7 +336,8 @@ namespace TransmissionRemoteDotnet
             this.columnHeader16,
             this.columnHeader18,
             this.columnHeader19,
-            this.columnHeader30});
+            this.columnHeader30,
+            this.columnHeader37});
             resources.ApplyResources(this.torrentListView, "torrentListView");
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.HideSelection = false;
@@ -395,6 +406,10 @@ namespace TransmissionRemoteDotnet
             // columnHeader30
             // 
             resources.ApplyResources(this.columnHeader30, "columnHeader30");
+            // 
+            // columnHeader37
+            // 
+            resources.ApplyResources(this.columnHeader37, "columnHeader37");
             // 
             // torrentTabControl
             // 
@@ -1041,14 +1056,26 @@ namespace TransmissionRemoteDotnet
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel,
+            this.toolStripVersionLabel});
             resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
             // 
             // toolStripStatusLabel
             // 
+            this.toolStripStatusLabel.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             resources.ApplyResources(this.toolStripStatusLabel, "toolStripStatusLabel");
+            this.toolStripStatusLabel.Spring = true;
+            // 
+            // toolStripVersionLabel
+            // 
+            this.toolStripVersionLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.toolStripVersionLabel.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripVersionLabel.Name = "toolStripVersionLabel";
+            resources.ApplyResources(this.toolStripVersionLabel, "toolStripVersionLabel");
             // 
             // toolStrip
             // 
@@ -1075,7 +1102,9 @@ namespace TransmissionRemoteDotnet
             this.toolbarToolStripSeparator4,
             this.localConfigureButton,
             this.remoteConfigureButton,
-            this.sessionStatsButton});
+            this.sessionStatsButton,
+            this.toolbarToolStripSeparator5,
+            this.RssButton});
             this.toolStrip.Name = "toolStrip";
             // 
             // connectButton
@@ -1250,6 +1279,19 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton.Name = "sessionStatsButton";
             this.sessionStatsButton.Click += new System.EventHandler(this.sessionStatsButton_Click);
             // 
+            // toolbarToolStripSeparator5
+            // 
+            this.toolbarToolStripSeparator5.Name = "toolbarToolStripSeparator5";
+            resources.ApplyResources(this.toolbarToolStripSeparator5, "toolbarToolStripSeparator5");
+            // 
+            // RssButton
+            // 
+            this.RssButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RssButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.feed_icon;
+            resources.ApplyResources(this.RssButton, "RssButton");
+            this.RssButton.Name = "RssButton";
+            this.RssButton.Click += new System.EventHandler(this.RssButton_Click);
+            // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1333,7 +1375,10 @@ namespace TransmissionRemoteDotnet
             this.localSettingsToolStripMenuItem,
             this.remoteSettingsToolStripMenuItem,
             this.optionsMenuToolStripSeparator1,
-            this.languageToolStripMenuItem});
+            this.languageToolStripMenuItem,
+            this.optionsMenuToolStripSeparator2,
+            this.importLocalSettingsToolStripMenuItem,
+            this.exportLocalSettingsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
             // 
@@ -1360,6 +1405,23 @@ namespace TransmissionRemoteDotnet
             // 
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
             resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            // 
+            // optionsMenuToolStripSeparator2
+            // 
+            this.optionsMenuToolStripSeparator2.Name = "optionsMenuToolStripSeparator2";
+            resources.ApplyResources(this.optionsMenuToolStripSeparator2, "optionsMenuToolStripSeparator2");
+            // 
+            // importLocalSettingsToolStripMenuItem
+            // 
+            this.importLocalSettingsToolStripMenuItem.Name = "importLocalSettingsToolStripMenuItem";
+            resources.ApplyResources(this.importLocalSettingsToolStripMenuItem, "importLocalSettingsToolStripMenuItem");
+            this.importLocalSettingsToolStripMenuItem.Click += new System.EventHandler(this.importLocalSettingsToolStripMenuItem_Click);
+            // 
+            // exportLocalSettingsToolStripMenuItem
+            // 
+            this.exportLocalSettingsToolStripMenuItem.Name = "exportLocalSettingsToolStripMenuItem";
+            resources.ApplyResources(this.exportLocalSettingsToolStripMenuItem, "exportLocalSettingsToolStripMenuItem");
+            this.exportLocalSettingsToolStripMenuItem.Click += new System.EventHandler(this.exportLocalSettingsToolStripMenuItem_Click);
             // 
             // torrentToolStripMenuItem
             // 
@@ -1574,16 +1636,34 @@ namespace TransmissionRemoteDotnet
             this.refreshElapsedTimer.Interval = 1000;
             this.refreshElapsedTimer.Tick += new System.EventHandler(this.refreshElapsedTimer_Tick);
             // 
-            // openFileDialog1
+            // openTorrentFileDialog
             // 
-            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
-            this.openFileDialog1.Multiselect = true;
+            resources.ApplyResources(this.openTorrentFileDialog, "openTorrentFileDialog");
+            this.openTorrentFileDialog.Multiselect = true;
             // 
             // toolStripImageList
             // 
             this.toolStripImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.toolStripImageList, "toolStripImageList");
             this.toolStripImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // trayIconImageList
+            // 
+            this.trayIconImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.trayIconImageList, "trayIconImageList");
+            this.trayIconImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // saveSettingsFileDialog
+            // 
+            this.saveSettingsFileDialog.DefaultExt = "json";
+            this.saveSettingsFileDialog.FileName = "settings.json";
+            resources.ApplyResources(this.saveSettingsFileDialog, "saveSettingsFileDialog");
+            // 
+            // openSettingsFileDialog
+            // 
+            this.openSettingsFileDialog.DefaultExt = "json";
+            this.openSettingsFileDialog.FileName = "settings.json";
+            resources.ApplyResources(this.openSettingsFileDialog, "openSettingsFileDialog");
             // 
             // MainWindow
             // 
@@ -1597,6 +1677,7 @@ namespace TransmissionRemoteDotnet
             this.Name = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.Shown += new System.EventHandler(this.MainWindow_Shown);
+            this.VisibleChanged += new System.EventHandler(this.MainWindow_VisibleChanged);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainWindow_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainWindow_DragEnter);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
@@ -1692,8 +1773,9 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.ToolStripSplitButton connectButton;
         public System.Windows.Forms.Timer refreshTimer;
-        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        public System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripVersionLabel;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator1;
         public ListViewNF torrentListView;
         private System.Windows.Forms.ToolStripMenuItem localSettingsToolStripMenuItem;
@@ -1767,6 +1849,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ImageList tabControlImageList;
         private System.Windows.Forms.ToolStripButton recheckTorrentButton;
         private System.Windows.Forms.ColumnHeader columnHeader30;
+        private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ToolStripButton removeAndDeleteButton;
         private System.Windows.Forms.ToolStripSeparator viewMenuToolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem statsToolStripMenuItem;
@@ -1789,6 +1872,11 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showDetailsPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator optionsMenuToolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator optionsMenuToolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem importLocalSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportLocalSettingsToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveSettingsFileDialog;
+        private System.Windows.Forms.OpenFileDialog openSettingsFileDialog;
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton reannounceButton;
         private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
@@ -1801,7 +1889,9 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem moveTorrentDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cSVInfoToClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTorrentWithOptionsToolStripMenuItem;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton RssButton;
+        private System.Windows.Forms.OpenFileDialog openTorrentFileDialog;
         private SelectableLabel seedersLabel;
         private SelectableLabel createdByLabel;
         private SelectableLabel createdAtLabel;
@@ -1832,5 +1922,6 @@ namespace TransmissionRemoteDotnet
         public System.Windows.Forms.ImageList fileIconImageList;
         private System.Windows.Forms.ImageList stateListBoxImageList;
         private System.Windows.Forms.ImageList toolStripImageList;
+        private System.Windows.Forms.ImageList trayIconImageList;
     }
 }

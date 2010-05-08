@@ -841,7 +841,7 @@ namespace CustomUIControls
 
                     Point lastPoint = new Point();
                     lastPoint.X = OffsetX;
-                    lastPoint.Y = Height - ((line.m_MagnitudeList[0] *
+                    lastPoint.Y = Height - (int)(((long)line.m_MagnitudeList[0] *
                        (Height - 10)) / (m_MaxPeek - m_MinPeek));
 
                     for (int n = 0; n < line.m_MagnitudeList.Count; ++n)
@@ -856,7 +856,7 @@ namespace CustomUIControls
                             // Weird hack because BarRect.Location.* causes error
                             Point p = barRect.Location;
                             p.X = OffsetX + (int)(n * m_LineInterval) + 1;
-                            p.Y = Height - ((line.m_MagnitudeList[n] * (Height - 10)) /
+                            p.Y = Height - (int)(((long)line.m_MagnitudeList[n] * (Height - 10)) /
                                                 (m_MaxPeek - m_MinPeek));
                             barRect.Location = p;
 
@@ -870,7 +870,7 @@ namespace CustomUIControls
                             /* Draw a line */
 
                             int newX = OffsetX + (int)(n * m_LineInterval);
-                            int newY = Height - ((line.m_MagnitudeList[n] * (Height - 10)) /
+                            int newY = Height - (int)(((long)line.m_MagnitudeList[n] * (Height - 10)) /
                                 (m_MaxPeek - m_MinPeek));
 
                             g.DrawLine(linePen, lastPoint.X, lastPoint.Y, newX, newY);

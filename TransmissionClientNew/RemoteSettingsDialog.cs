@@ -157,9 +157,18 @@ namespace TransmissionRemoteDotnet
                     SetNumeric(seedLimitUpDown, Toolbox.ToDecimal(session[ProtocolConstants.FIELD_SEEDRATIOLIMIT]), 1);
                     seedLimitUpDown.Enabled = seedRatioEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_SEEDRATIOLIMITED]);
                 }
+                if (incompleteToCheckBox.Enabled = incompleteToField.Enabled = session.Contains(ProtocolConstants.FIELD_INCOMPLETE_DIR))
+                {
+                    incompleteToField.Text = (string)session[ProtocolConstants.FIELD_INCOMPLETE_DIR];
+                    incompleteToField.Enabled = incompleteToCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED]);
+                }
                 if (dhtEnabled.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
                 {
                     dhtEnabled.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
+                }
+                if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
+                {
+                    LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
                 }
                 testPortButton.Enabled = Program.DaemonDescriptor.RpcVersion >= 5;
             }
@@ -243,9 +252,18 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMITED, seedRatioEnabledCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMIT, seedLimitUpDown.Value);
             }
+            if (incompleteToCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED, incompleteToCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR, incompleteToField.Text);
+            }
             if (dhtEnabled.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
+            }
+            if (LpdEnabledCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
             }
             arguments.Put(ProtocolConstants.DOWNLOAD_DIR, downloadToField.Text);
             CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
@@ -316,6 +334,11 @@ namespace TransmissionRemoteDotnet
             testPortButton.Tag = testPortButton.Text;
             testPortButton.Text = OtherStrings.Querying;
             Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.PortTest()));
+        }
+
+        private void incompleteToCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            incompleteToField.Enabled = incompleteToCheckBox.Checked;
         }
     }
 }

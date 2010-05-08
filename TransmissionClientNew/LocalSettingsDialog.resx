@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 339</value>
+    <value>13, 419</value>
   </data>
   <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -151,7 +151,7 @@
     <value>NoControl</value>
   </data>
   <data name="CloseDialogButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 339</value>
+    <value>305, 419</value>
   </data>
   <data name="CloseDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -181,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="SaveAndConnectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 339</value>
+    <value>159, 419</value>
   </data>
   <data name="SaveAndConnectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
@@ -232,7 +232,7 @@
     <value>0</value>
   </data>
   <data name="groupAutoConnect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 222</value>
+    <value>223, 302</value>
   </data>
   <data name="groupAutoConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 67</value>
@@ -277,7 +277,7 @@
     <value>0</value>
   </data>
   <data name="groupCurrentProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 222</value>
+    <value>6, 302</value>
   </data>
   <data name="groupCurrentProfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 67</value>
@@ -349,7 +349,7 @@
     <value>1</value>
   </data>
   <data name="groupPlinkPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 168</value>
+    <value>6, 248</value>
   </data>
   <data name="groupPlinkPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>429, 48</value>
@@ -372,6 +372,207 @@
   <data name="&gt;&gt;groupPlinkPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ColorTrayIconCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 46</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
+    <value>Color tray icon</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Name" xml:space="preserve">
+    <value>ColorTrayIconCheckBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTrayIconCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 46</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 17</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
+    <value>Notification on completion</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Name" xml:space="preserve">
+    <value>notificationOnCompletionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 23</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
+    <value>Notification on addition</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Name" xml:space="preserve">
+    <value>notificationOnAdditionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 23</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 17</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
+    <value>Minimize on close</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Name" xml:space="preserve">
+    <value>minimizeOnCloseCheckBox</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MinToTrayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MinToTrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 0</value>
+  </data>
+  <data name="MinToTrayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="MinToTrayCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
+    <value>Enable tray icon</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Name" xml:space="preserve">
+    <value>MinToTrayCheckBox</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.Parent" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TrayGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
+  <data name="TrayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 69</value>
+  </data>
+  <data name="TrayGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Name" xml:space="preserve">
+    <value>TrayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;TrayGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StartOnSystemCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StartOnSystemCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="StartOnSystemCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 19</value>
+  </data>
+  <data name="StartOnSystemCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="StartOnSystemCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
+    <value>Start on system startup</value>
+  </data>
+  <data name="&gt;&gt;StartOnSystemCheckBox.Name" xml:space="preserve">
+    <value>StartOnSystemCheckBox</value>
+  </data>
+  <data name="&gt;&gt;StartOnSystemCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartOnSystemCheckBox.Parent" xml:space="preserve">
+    <value>groupBehavior</value>
+  </data>
+  <data name="&gt;&gt;StartOnSystemCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="DontSavePasswordsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -379,13 +580,13 @@
     <value>NoControl</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 111</value>
+    <value>210, 44</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 17</value>
   </data>
   <data name="DontSavePasswordsCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
     <value>Don't save passwords</value>
@@ -400,7 +601,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;DontSavePasswordsCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="defaultActionComboBox.Items" xml:space="preserve">
     <value>Torrent Properties</value>
@@ -412,13 +613,13 @@
     <value>Start/Stop torrent</value>
   </data>
   <data name="defaultActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 86</value>
+    <value>290, 17</value>
   </data>
   <data name="defaultActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
   </data>
   <data name="defaultActionComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;defaultActionComboBox.Name" xml:space="preserve">
     <value>defaultActionComboBox</value>
@@ -430,19 +631,19 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;defaultActionComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="defaultActionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="defaultActionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 89</value>
+    <value>207, 20</value>
   </data>
   <data name="defaultActionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 13</value>
   </data>
   <data name="defaultActionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
     <value>Default Action:</value>
@@ -457,7 +658,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;defaultActionLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="DeleteTorrentCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -487,97 +688,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;DeleteTorrentCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 65</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 17</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="notificationOnCompletionCheckBox.Text" xml:space="preserve">
-    <value>Notification on completion</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Name" xml:space="preserve">
-    <value>notificationOnCompletionCheckBox</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;notificationOnCompletionCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 42</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="notificationOnAdditionCheckBox.Text" xml:space="preserve">
-    <value>Notification on addition</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Name" xml:space="preserve">
-    <value>notificationOnAdditionCheckBox</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;notificationOnAdditionCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 19</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 17</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="minimizeOnCloseCheckBox.Text" xml:space="preserve">
-    <value>Minimize on close</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Name" xml:space="preserve">
-    <value>minimizeOnCloseCheckBox</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;minimizeOnCloseCheckBox.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -586,13 +697,13 @@
     <value>NoControl</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 65</value>
+    <value>15, 42</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 17</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
     <value>Check for update at startup</value>
@@ -607,7 +718,7 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;AutoCheckUpdateCheckBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="UploadPromptCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -616,13 +727,13 @@
     <value>NoControl</value>
   </data>
   <data name="UploadPromptCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 42</value>
+    <value>15, 65</value>
   </data>
   <data name="UploadPromptCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
   </data>
   <data name="UploadPromptCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>
@@ -637,43 +748,13 @@
     <value>groupBehavior</value>
   </data>
   <data name="&gt;&gt;UploadPromptCheckBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="MinToTrayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MinToTrayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MinToTrayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 19</value>
-  </data>
-  <data name="MinToTrayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
-  </data>
-  <data name="MinToTrayCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MinToTrayCheckBox.Text" xml:space="preserve">
-    <value>Enable tray icon</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Name" xml:space="preserve">
-    <value>MinToTrayCheckBox</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.Parent" xml:space="preserve">
-    <value>groupBehavior</value>
-  </data>
-  <data name="&gt;&gt;MinToTrayCheckBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="groupBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
   <data name="groupBehavior.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 156</value>
+    <value>429, 236</value>
   </data>
   <data name="groupBehavior.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -700,7 +781,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabGlobalSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabGlobalSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -720,35 +801,125 @@
   <data name="&gt;&gt;tabGlobalSettings.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="StartPausedCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="removeServerButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="StartPausedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="removeServerButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="StartPausedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 73</value>
+  <data name="removeServerButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 6</value>
   </data>
-  <data name="StartPausedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 17</value>
+  <data name="removeServerButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 23</value>
   </data>
-  <data name="StartPausedCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="removeServerButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="StartPausedCheckBox.Text" xml:space="preserve">
-    <value>Start torrents paused</value>
+  <data name="removeServerButton.Text" xml:space="preserve">
+    <value>Remove Server</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Name" xml:space="preserve">
-    <value>StartPausedCheckBox</value>
+  <data name="removeServerButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="removeServerButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;removeServerButton.Name" xml:space="preserve">
+    <value>removeServerButton</value>
+  </data>
+  <data name="&gt;&gt;removeServerButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeServerButton.Parent" xml:space="preserve">
+    <value>tabServersSettings</value>
+  </data>
+  <data name="&gt;&gt;removeServerButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="addServerButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="addServerButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="addServerButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 23</value>
+  </data>
+  <data name="addServerButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="addServerButton.Text" xml:space="preserve">
+    <value>Add Server</value>
+  </data>
+  <data name="addServerButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="addServerButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;addServerButton.Name" xml:space="preserve">
+    <value>addServerButton</value>
+  </data>
+  <data name="&gt;&gt;addServerButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addServerButton.Parent" xml:space="preserve">
+    <value>tabServersSettings</value>
+  </data>
+  <data name="&gt;&gt;addServerButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 74</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 13</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Refresh rate when hidden:</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;StartPausedCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="RefreshRateTrayValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 72</value>
+  </data>
+  <data name="RefreshRateTrayValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="RefreshRateTrayValue.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Name" xml:space="preserve">
+    <value>RefreshRateTrayValue</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;RefreshRateTrayValue.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="SaveServerButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 100</value>
@@ -757,7 +928,7 @@
     <value>128, 23</value>
   </data>
   <data name="SaveServerButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
     <value>Save Server</value>
@@ -772,7 +943,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SaveServerButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="UseSSLCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -781,7 +952,7 @@
     <value>NoControl</value>
   </data>
   <data name="UseSSLCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 47</value>
+    <value>216, 45</value>
   </data>
   <data name="UseSSLCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -802,7 +973,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;UseSSLCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -832,10 +1003,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="HostField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 18</value>
+    <value>128, 18</value>
   </data>
   <data name="HostField.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 20</value>
@@ -853,7 +1024,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;HostField.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -868,7 +1039,7 @@
     <value>55, 13</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Retry limit:</value>
@@ -883,7 +1054,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -913,7 +1084,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -943,16 +1114,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="RetryLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 100</value>
+    <value>128, 100</value>
   </data>
   <data name="RetryLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
   </data>
   <data name="RetryLimitValue.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RetryLimitValue.Name" xml:space="preserve">
     <value>RetryLimitValue</value>
@@ -964,10 +1135,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;RetryLimitValue.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="PortField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 44</value>
+    <value>128, 44</value>
   </data>
   <data name="PortField.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -985,10 +1156,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;PortField.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="RefreshRateValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 72</value>
+    <value>128, 72</value>
   </data>
   <data name="RefreshRateValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1006,7 +1177,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;RefreshRateValue.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1719,6 +1890,36 @@
   <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="StartPausedCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StartPausedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="StartPausedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 88</value>
+  </data>
+  <data name="StartPausedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="StartPausedCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="StartPausedCheckBox.Text" xml:space="preserve">
+    <value>Start torrents paused</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Name" xml:space="preserve">
+    <value>StartPausedCheckBox</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;StartPausedCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="customPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 62</value>
   </data>
@@ -1738,7 +1939,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;customPathTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1765,7 +1966,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1795,7 +1996,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1825,7 +2026,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="downloadLimitItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 36</value>
@@ -1846,7 +2047,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;downloadLimitItems.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="uploadLimitItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 10</value>
@@ -1867,7 +2068,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;uploadLimitItems.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tabPage6.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2158,13 +2359,13 @@
     <value>5</value>
   </data>
   <data name="tabServerSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 126</value>
+    <value>6, 212</value>
   </data>
   <data name="tabServerSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>433, 160</value>
   </data>
   <data name="tabServerSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tabServerSettings.Name" xml:space="preserve">
     <value>tabServerSettings</value>
@@ -2176,7 +2377,7 @@
     <value>tabServersSettings</value>
   </data>
   <data name="&gt;&gt;tabServerSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="columnName.Text" xml:space="preserve">
     <value>Name</value>
@@ -2221,13 +2422,13 @@
     <value>False</value>
   </data>
   <data name="listServers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>6, 35</value>
   </data>
   <data name="listServers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 114</value>
+    <value>433, 171</value>
   </data>
   <data name="listServers.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;listServers.Name" xml:space="preserve">
     <value>listServers</value>
@@ -2239,7 +2440,7 @@
     <value>tabServersSettings</value>
   </data>
   <data name="&gt;&gt;listServers.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="tabServersSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2248,7 +2449,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabServersSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabServersSettings.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2268,11 +2469,272 @@
   <data name="&gt;&gt;tabServersSettings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="columnFeedName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnFeedName.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="columnFeedUrl.Text" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="columnFeedUrl.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="listRssFeeds.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listRssFeeds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listRssFeeds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 285</value>
+  </data>
+  <data name="listRssFeeds.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Name" xml:space="preserve">
+    <value>listRssFeeds</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.Parent" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;listRssFeeds.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RemoveFeedButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RemoveFeedButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 16</value>
+  </data>
+  <data name="RemoveFeedButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="RemoveFeedButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RemoveFeedButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Name" xml:space="preserve">
+    <value>RemoveFeedButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;RemoveFeedButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddFeedButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="AddFeedButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 16</value>
+  </data>
+  <data name="AddFeedButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="AddFeedButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="AddFeedButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Name" xml:space="preserve">
+    <value>AddFeedButton</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;AddFeedButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FeedNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 19</value>
+  </data>
+  <data name="FeedNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="FeedNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Name" xml:space="preserve">
+    <value>FeedNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedNameTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FeedUrlLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FeedUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="FeedUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="FeedUrlLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="FeedUrlLabel.Text" xml:space="preserve">
+    <value>Feed url:</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Name" xml:space="preserve">
+    <value>FeedUrlLabel</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="FeedUrlTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 45</value>
+  </data>
+  <data name="FeedUrlTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 20</value>
+  </data>
+  <data name="FeedUrlTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Name" xml:space="preserve">
+    <value>FeedUrlTextBox</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedUrlTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="FeedNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FeedNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="FeedNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="FeedNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FeedNameLabel.Text" xml:space="preserve">
+    <value>Feed name:</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Name" xml:space="preserve">
+    <value>FeedNameLabel</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.Parent" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;FeedNameLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupFeed.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="groupFeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 288</value>
+  </data>
+  <data name="groupFeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 84</value>
+  </data>
+  <data name="groupFeed.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupFeed.Text" xml:space="preserve">
+    <value>Feed</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Name" xml:space="preserve">
+    <value>groupFeed</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.Parent" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;groupFeed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabRssSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabRssSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabRssSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 375</value>
+  </data>
+  <data name="tabRssSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabRssSettings.Text" xml:space="preserve">
+    <value>Rss Feeds</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Name" xml:space="preserve">
+    <value>tabRssSettings</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.Parent" xml:space="preserve">
+    <value>tabSettings</value>
+  </data>
+  <data name="&gt;&gt;tabRssSettings.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="trayImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 260</value>
+  </data>
+  <data name="trayImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 108</value>
+  </data>
+  <data name="trayImageBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Name" xml:space="preserve">
+    <value>trayImageBrowse</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.Parent" xml:space="preserve">
+    <value>tabSkinSettings</value>
+  </data>
+  <data name="&gt;&gt;trayImageBrowse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="toolbarImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
   <data name="toolbarImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 122</value>
+    <value>433, 100</value>
   </data>
   <data name="toolbarImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2287,13 +2749,13 @@
     <value>tabSkinSettings</value>
   </data>
   <data name="&gt;&gt;toolbarImageBrowse.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="stateImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 112</value>
   </data>
   <data name="stateImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 76</value>
+    <value>433, 68</value>
   </data>
   <data name="stateImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2308,13 +2770,13 @@
     <value>tabSkinSettings</value>
   </data>
   <data name="&gt;&gt;stateImageBrowse.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="infopanelImageBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 216</value>
+    <value>6, 186</value>
   </data>
   <data name="infopanelImageBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 76</value>
+    <value>433, 68</value>
   </data>
   <data name="infopanelImageBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2329,7 +2791,7 @@
     <value>tabSkinSettings</value>
   </data>
   <data name="&gt;&gt;infopanelImageBrowse.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabSkinSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2338,7 +2800,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabSkinSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 295</value>
+    <value>445, 375</value>
   </data>
   <data name="tabSkinSettings.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2356,13 +2818,13 @@
     <value>tabSettings</value>
   </data>
   <data name="&gt;&gt;tabSkinSettings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 321</value>
+    <value>453, 401</value>
   </data>
   <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2395,7 +2857,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>477, 374</value>
+    <value>477, 454</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2459,6 +2921,18 @@
   </data>
   <data name="&gt;&gt;removeServerToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnFeedName.Name" xml:space="preserve">
+    <value>columnFeedName</value>
+  </data>
+  <data name="&gt;&gt;columnFeedName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnFeedUrl.Name" xml:space="preserve">
+    <value>columnFeedUrl</value>
+  </data>
+  <data name="&gt;&gt;columnFeedUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openImageFileDialog.Name" xml:space="preserve">
     <value>openImageFileDialog</value>

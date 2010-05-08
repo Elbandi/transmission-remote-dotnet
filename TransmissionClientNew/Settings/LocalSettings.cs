@@ -18,6 +18,7 @@ namespace TransmissionRemoteDotnet.Settings
         public bool CompletedBaloon = true;
         public bool MinOnClose = false;
         public bool MinToTray = false;
+        public bool ColorTray = false;
         public bool AutoCheckupdate = false;
         public bool DeleteTorrentWhenAdding = false;
         public int DefaultDoubleClickAction = 0;
@@ -26,7 +27,8 @@ namespace TransmissionRemoteDotnet.Settings
         public string StateImagePath = "";
         public string InfopanelImagePath = "";
         public string ToolbarImagePath = "";
-        public string Locale = "en-GB";
+        public string TrayImagePath = "";
+        public string Locale = "en-US";
         public string PlinkPath = null;
         public bool UploadPrompt = false;
         public string AutoConnect = "";
@@ -69,6 +71,7 @@ namespace TransmissionRemoteDotnet.Settings
         }
 
         public Dictionary<string, TransmissionServer> Servers = new Dictionary<string, TransmissionServer>();
+        public Dictionary<string, string> RssFeeds = new Dictionary<string, string>();
         public Dictionary<string, object> Misc = new Dictionary<string, object>();
 
         public JsonObject SaveToJson()
@@ -77,6 +80,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_COMPLETEDBALLOON, CompletedBaloon);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINONCLOSE, MinOnClose);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_MINTOTRAY, MinToTray);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_COLORTRAY, ColorTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STARTEDBALLOON, StartedBalloon);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DONTSAVEPASSWORDS, DontSavePasswords);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
@@ -88,6 +92,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_TABIMAGE, InfopanelImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_STATEIMAGE, StateImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_TOOLBARIMAGE, ToolbarImagePath);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_TRAYIMAGE, TrayImagePath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCONNECT, AutoConnect);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CURRENTPROFILE, CurrentProfile);
             JsonObject ja = new JsonObject();
@@ -96,6 +101,12 @@ namespace TransmissionRemoteDotnet.Settings
                 ja.Put(s.Key, s.Value.SaveToJson());
             }
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PROFILES, ja);
+            ja = new JsonObject();
+            foreach (KeyValuePair<string, string> s in RssFeeds)
+            {
+                ja.Put(s.Key, s.Value);
+            }
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_RSSFEEDS, ja);
             ja = new JsonObject();
             foreach (KeyValuePair<string, object> s in Misc)
             {
@@ -109,6 +120,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref CompletedBaloon, o[SettingsKey.REGKEY_COMPLETEDBALLOON]);
             Toolbox.JsonGet(ref MinOnClose, o[SettingsKey.REGKEY_MINONCLOSE]);
             Toolbox.JsonGet(ref MinToTray, o[SettingsKey.REGKEY_MINTOTRAY]);
+            Toolbox.JsonGet(ref ColorTray, o[SettingsKey.REGKEY_COLORTRAY]);
             Toolbox.JsonGet(ref StartedBalloon, o[SettingsKey.REGKEY_STARTEDBALLOON]);
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
@@ -116,11 +128,13 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref StateImagePath, o[SettingsKey.REGKEY_STATEIMAGE]);
             Toolbox.JsonGet(ref InfopanelImagePath, o[SettingsKey.REGKEY_TABIMAGE]);
             Toolbox.JsonGet(ref ToolbarImagePath, o[SettingsKey.REGKEY_TOOLBARIMAGE]);
+            Toolbox.JsonGet(ref TrayImagePath, o[SettingsKey.REGKEY_TRAYIMAGE]);
             Toolbox.JsonGet(ref Locale, o[SettingsKey.REGKEY_LOCALE]);
             Toolbox.JsonGet(ref PlinkPath, o[SettingsKey.REGKEY_PLINKPATH]);
             Toolbox.JsonGet(ref UploadPrompt, o[SettingsKey.REGKEY_UPLOADPROMPT]);
             Toolbox.JsonGet(ref AutoConnect, o[SettingsKey.REGKEY_AUTOCONNECT]);
             JsonObject ja = (JsonObject)o[SettingsKey.REGKEY_PROFILES];
+            Servers.Clear();
             if (ja != null)
             {
                 foreach (string n in ja.Names)
@@ -134,6 +148,16 @@ namespace TransmissionRemoteDotnet.Settings
             DontSavePasswords = dsp;
             if (!Servers.ContainsKey(currentprofile))
                 currentprofile = "";
+            RssFeeds.Clear();
+            ja = (JsonObject)o[SettingsKey.REGKEY_RSSFEEDS];
+            if (ja != null)
+            {
+                foreach (string n in ja.Names)
+                {
+                    RssFeeds.Add(n, ja[n] as string);
+                }
+            }
+            Misc.Clear();
             ja = (JsonObject)o[SettingsKey.REGKEY_MISC];
             if (ja != null)
             {
@@ -227,6 +251,7 @@ namespace TransmissionRemoteDotnet.Settings
                         ts.PlinkEnable = oldsettings.PlinkEnable;
                         ts.Port = oldsettings.Port;
                         ts.RefreshRate = oldsettings.RefreshRate;
+                        ts.RefreshRateTray = oldsettings.RefreshRate * 10;
                         ts.StartPaused = oldsettings.StartPaused;
                         ts.Username = oldsettings.User;
                         ts.UseSSL = oldsettings.UseSSL;
@@ -332,6 +357,7 @@ namespace TransmissionRemoteDotnet.Settings
         public string CustomPath = null;
         public bool StartPaused = false;
         public int RefreshRate = 3;
+        public int RefreshRateTray = 30;
         public int RetryLimit = 3;
         public Dictionary<string, string> SambaShareMappings = new Dictionary<string, string>();
         public string DownLimit = "10,50,100,200,300,400,500,700,1000,1500,2000,3000,5000";
@@ -346,6 +372,7 @@ namespace TransmissionRemoteDotnet.Settings
             JsonObject jo = base.SaveToJson();
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_USESSL, UseSSL);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_REFRESHRATE, RefreshRate);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_REFRESHRATETRAY, RefreshRateTray);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_CUSTOMPATH, CustomPath);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_RETRYLIMIT, RetryLimit);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DOWNLIMIT, DownLimit);
@@ -369,6 +396,7 @@ namespace TransmissionRemoteDotnet.Settings
             base.LoadFromJson(o);
             Toolbox.JsonGet(ref UseSSL, o[SettingsKey.REGKEY_USESSL]);
             Toolbox.JsonGet(ref RefreshRate, o[SettingsKey.REGKEY_REFRESHRATE]);
+            Toolbox.JsonGet(ref RefreshRateTray, o[SettingsKey.REGKEY_REFRESHRATETRAY]);
             Toolbox.JsonGet(ref CustomPath, o[SettingsKey.REGKEY_CUSTOMPATH]);
             Toolbox.JsonGet(ref RetryLimit, o[SettingsKey.REGKEY_RETRYLIMIT]);
             Toolbox.JsonGet(ref DownLimit, o[SettingsKey.REGKEY_DOWNLIMIT]);
@@ -377,7 +405,11 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref PlinkEnable, o[SettingsKey.REGKEY_PLINKENABLE]);
             Toolbox.JsonGet(ref PlinkCmd, o[SettingsKey.REGKEY_PLINKCMD]);
 
-            JsonArray ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
+            JsonArray ja;
+            if (o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY] is string)
+                ja = (JsonArray)JsonConvert.Import((string)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY]);
+            else
+                ja = (JsonArray)o[SettingsKey.REGKEY_DESTINATION_PATH_HISTORY];
             foreach (string s in ja.ToArray())
             {
                 if (s.Length > 0)
@@ -508,6 +540,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
             REGKEY_DELETETORRENT = "deleteTorrentWhenAdding",
             REGKEY_DEFAULTACTION = "defaultDoubleClickAction",
+            REGKEY_RSSFEEDS = "rssFeeds",
             REGKEY_USER = "user",
             REGKEY_PASS = "pass",
             REGKEY_AUTHENABLED = "authEnabled",
@@ -521,11 +554,14 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_STARTPAUSED = "startPaused",
             REGKEY_RETRYLIMIT = "retryLimit",
             REGKEY_MINTOTRAY = "minToTray",
+            REGKEY_COLORTRAY = "colorTray",
             REGKEY_REFRESHRATE = "refreshRate",
+            REGKEY_REFRESHRATETRAY = "refreshRateTray",
             REGKEY_CURRENTPROFILE = "currentProfile",
             REGKEY_STATEIMAGE = "stateImage",
             REGKEY_TABIMAGE = "tabImage",
             REGKEY_TOOLBARIMAGE = "toolbarImage",
+            REGKEY_TRAYIMAGE = "trayImage",
             REGKEY_STARTEDBALLOON = "startedBalloon",
             REGKEY_DONTSAVEPASSWORDS = "dontSavePasswords",
             REGKEY_COMPLETEDBALLOON = "completedBalloon",

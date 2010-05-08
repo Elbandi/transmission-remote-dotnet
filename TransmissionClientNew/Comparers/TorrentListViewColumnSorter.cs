@@ -102,6 +102,9 @@ namespace TransmissionRemoteDotnet.Comparers
                     case 12:
                         objectCompare = new ListViewDateTimeComparer(columnToSort);
                         break;
+                    case 14:
+                        objectCompare = new ListViewItemInt32Comparer(columnToSort);
+                        break;
                     default:
                         objectCompare = new ListViewTextComparer(columnToSort, true);
                         break;

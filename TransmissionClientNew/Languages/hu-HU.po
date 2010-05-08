@@ -148,6 +148,7 @@ msgstr "Ke&resendő:"
 msgid "Local Settings"
 msgstr "Helyi beállítások"
 
+#: LocalSettingsDialog~AddFeedButton.Text
 #: LocalSettingsDialog~AddShareButton.Text
 #, csharp-format
 msgid "Add"
@@ -168,10 +169,15 @@ msgstr ""
 #: OtherStrings~Cancel
 #: TorrentLoadDialog~CancelBtn.Text
 #: TorrentPropertiesDialog~button2.Text
-#: UriPromptWindow~button2.Text
+#: UriPromptWindow~CancelBtn.Text
 #, csharp-format
 msgid "Cancel"
 msgstr "Mégse"
+
+#: LocalSettingsDialog~ColorTrayIconCheckBox.Text
+#, csharp-format
+msgid "Color tray icon"
+msgstr ""
 
 #: LocalSettingsDialog~DeleteTorrentCheckBox.Text
 #, csharp-format
@@ -203,6 +209,16 @@ msgstr "Bekapcsolva"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
+#: LocalSettingsDialog~FeedNameLabel.Text
+#, csharp-format
+msgid "Feed name:"
+msgstr ""
+
+#: LocalSettingsDialog~FeedUrlLabel.Text
+#, csharp-format
+msgid "Feed url:"
+msgstr ""
+
 #: LocalSettingsDialog~MinToTrayCheckBox.Text
 #, csharp-format
 msgid "Enable tray icon"
@@ -223,6 +239,7 @@ msgstr "Tallóz"
 msgid "Authenticate"
 msgstr "Hitelesítés"
 
+#: LocalSettingsDialog~RemoveFeedButton.Text
 #: LocalSettingsDialog~RemoveShareButton.Text
 #: MainWindow~removeToolStripMenuItem.Text
 #: OtherStrings~Remove
@@ -261,22 +278,29 @@ msgstr ""
 msgid "Secure (SSL)"
 msgstr "Biztonságos (SSL)"
 
+#: LocalSettingsDialog~addServerButton.Text
 #: LocalSettingsDialog~addServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Add Server"
 msgstr "Kiszolgáló hozzáadása"
+
+#: LocalSettingsDialog~columnFeedName.Text
+#: LocalSettingsDialog~columnName.Text
+#: MainWindow~columnHeader6.Text
+#, csharp-format
+msgid "Name"
+msgstr "Név"
+
+#: LocalSettingsDialog~columnFeedUrl.Text
+#, csharp-format
+msgid "Url"
+msgstr ""
 
 #: LocalSettingsDialog~columnHost.Text
 #: OtherStrings~Host
 #, csharp-format
 msgid "Host"
 msgstr ""
-
-#: LocalSettingsDialog~columnName.Text
-#: MainWindow~columnHeader6.Text
-#, csharp-format
-msgid "Name"
-msgstr "Név"
 
 #: LocalSettingsDialog~columnPort.Text
 #, csharp-format
@@ -323,9 +347,14 @@ msgstr "Új összerendelés:"
 msgid "Current profile"
 msgstr "Aktuális profil"
 
+#: LocalSettingsDialog~groupFeed.Text
+#, csharp-format
+msgid "Feed"
+msgstr ""
+
 #: LocalSettingsDialog~groupPlinkPath.Text
 #, csharp-format
-msgid "plink.exe:"
+msgid "plink.exe or ssh.exe:"
 msgstr ""
 
 #: LocalSettingsDialog~label1.Text
@@ -419,6 +448,7 @@ msgstr "Figyelmeztetés hozzáadáskor"
 msgid "Notification on completion"
 msgstr "Figyelmeztetés befejezéskor"
 
+#: LocalSettingsDialog~removeServerButton.Text
 #: LocalSettingsDialog~removeServerToolStripMenuItem.Text
 #, csharp-format
 msgid "Remove Server"
@@ -459,6 +489,11 @@ msgstr "Egyéb"
 msgid "Samba"
 msgstr ""
 
+#: LocalSettingsDialog~tabRssSettings.Text
+#, csharp-format
+msgid "Rss Feeds"
+msgstr ""
+
 #: LocalSettingsDialog~tabServersSettings.Text
 #, csharp-format
 msgid "Servers Settings"
@@ -479,6 +514,11 @@ msgstr ""
 #, csharp-format
 msgid "Alt Speed"
 msgstr "Alternatív sebesség"
+
+#: MainWindow~RssButton.Text
+#, csharp-format
+msgid "Rss"
+msgstr ""
 
 #: MainWindow~aboutToolStripMenuItem.Text
 #, csharp-format
@@ -1215,6 +1255,11 @@ msgstr "Hiba"
 msgid "Failed request"
 msgstr "Hibás kérés"
 
+#: OtherStrings~FeedExists
+#, csharp-format
+msgid "Feed exists"
+msgstr ""
+
 #: OtherStrings~GeoipInitError
 #, csharp-format
 msgid "GeoIP init error ({0})"
@@ -1269,6 +1314,11 @@ msgstr "Info object vágólapra másolása"
 #, csharp-format
 msgid "Input accepted"
 msgstr "Bemenet elfogadva"
+
+#: OtherStrings~InvalidRPCLocation
+#, csharp-format
+msgid "Invalid RPC location"
+msgstr ""
 
 #: OtherStrings~Kilobyte
 #, csharp-format
@@ -1509,6 +1559,11 @@ msgstr "Megnyítás sikertelen"
 #, csharp-format
 msgid "Unable to parse the server response"
 msgstr "Hiba a kiszolgáló válasz feldolgozásakor"
+
+#: OtherStrings~UnixPathExists
+#, csharp-format
+msgid "Unix path exists"
+msgstr ""
 
 #: OtherStrings~Unknown
 #, csharp-format
@@ -1779,7 +1834,7 @@ msgstr "Név:"
 
 #: TorrentLoadDialog~OkButton.Text
 #: TorrentPropertiesDialog~button1.Text
-#: UriPromptWindow~button1.Text
+#: UriPromptWindow~OkButton.Text
 #, csharp-format
 msgid "OK"
 msgstr ""
@@ -1874,7 +1929,12 @@ msgstr "Maximum feltöltési sebesség"
 msgid "Upload by URL"
 msgstr "Torrent hozzáadása URL-ből"
 
-#: UriPromptWindow~toolStripStatusLabel1.Text
+#: UriPromptWindow~UseTorrentLoadDialogCheckBox.Text
+#, csharp-format
+msgid "Set torrent options before upload"
+msgstr ""
+
+#: UriPromptWindow~toolStripStatusLabel.Text
 #, csharp-format
 msgid "Waiting for URL..."
 msgstr "Várakozás az URL-re..."

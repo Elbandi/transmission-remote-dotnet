@@ -61,20 +61,26 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.TrayGroupBox = new System.Windows.Forms.GroupBox();
+            this.ColorTrayIconCheckBox = new System.Windows.Forms.CheckBox();
+            this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
+            this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
+            this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
+            this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
+            this.StartOnSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.DontSavePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
             this.defaultActionLabel = new System.Windows.Forms.Label();
             this.DeleteTorrentCheckBox = new System.Windows.Forms.CheckBox();
-            this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
-            this.notificationOnAdditionCheckBox = new System.Windows.Forms.CheckBox();
-            this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.AutoCheckUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.UploadPromptCheckBox = new System.Windows.Forms.CheckBox();
-            this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.tabServersSettings = new System.Windows.Forms.TabPage();
+            this.removeServerButton = new System.Windows.Forms.Button();
+            this.addServerButton = new System.Windows.Forms.Button();
             this.tabServerSettings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.RefreshRateTrayValue = new System.Windows.Forms.NumericUpDown();
             this.SaveServerButton = new System.Windows.Forms.Button();
             this.UseSSLCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,6 +117,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkCmdTextBox = new System.Windows.Forms.TextBox();
             this.PlinkEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
             this.customPathTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -134,7 +141,19 @@ namespace TransmissionRemoteDotnet
             this.ServersMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabRssSettings = new System.Windows.Forms.TabPage();
+            this.listRssFeeds = new System.Windows.Forms.ListView();
+            this.columnFeedName = new System.Windows.Forms.ColumnHeader();
+            this.columnFeedUrl = new System.Windows.Forms.ColumnHeader();
+            this.groupFeed = new System.Windows.Forms.GroupBox();
+            this.RemoveFeedButton = new System.Windows.Forms.Button();
+            this.AddFeedButton = new System.Windows.Forms.Button();
+            this.FeedNameTextBox = new System.Windows.Forms.TextBox();
+            this.FeedUrlLabel = new System.Windows.Forms.Label();
+            this.FeedUrlTextBox = new System.Windows.Forms.TextBox();
+            this.FeedNameLabel = new System.Windows.Forms.Label();
             this.tabSkinSettings = new System.Windows.Forms.TabPage();
+            this.trayImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.toolbarImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.stateImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
             this.infopanelImageBrowse = new TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox();
@@ -145,9 +164,11 @@ namespace TransmissionRemoteDotnet
             this.groupCurrentProfile.SuspendLayout();
             this.groupPlinkPath.SuspendLayout();
             this.groupBehavior.SuspendLayout();
+            this.TrayGroupBox.SuspendLayout();
             this.tabServersSettings.SuspendLayout();
             this.tabServerSettings.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshRateTrayValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RetryLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshRateValue)).BeginInit();
@@ -159,6 +180,8 @@ namespace TransmissionRemoteDotnet
             this.tabPage7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ServersMenuStrip.SuspendLayout();
+            this.tabRssSettings.SuspendLayout();
+            this.groupFeed.SuspendLayout();
             this.tabSkinSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,6 +217,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.tabSettings.Controls.Add(this.tabGlobalSettings);
             this.tabSettings.Controls.Add(this.tabServersSettings);
+            this.tabSettings.Controls.Add(this.tabRssSettings);
             this.tabSettings.Controls.Add(this.tabSkinSettings);
             resources.ApplyResources(this.tabSettings, "tabSettings");
             this.tabSettings.Name = "tabSettings";
@@ -262,19 +286,65 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.TrayGroupBox);
+            this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
             this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
             this.groupBehavior.Controls.Add(this.defaultActionLabel);
             this.groupBehavior.Controls.Add(this.DeleteTorrentCheckBox);
-            this.groupBehavior.Controls.Add(this.notificationOnCompletionCheckBox);
-            this.groupBehavior.Controls.Add(this.notificationOnAdditionCheckBox);
-            this.groupBehavior.Controls.Add(this.minimizeOnCloseCheckBox);
             this.groupBehavior.Controls.Add(this.AutoCheckUpdateCheckBox);
             this.groupBehavior.Controls.Add(this.UploadPromptCheckBox);
-            this.groupBehavior.Controls.Add(this.MinToTrayCheckBox);
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // TrayGroupBox
+            // 
+            this.TrayGroupBox.Controls.Add(this.ColorTrayIconCheckBox);
+            this.TrayGroupBox.Controls.Add(this.notificationOnCompletionCheckBox);
+            this.TrayGroupBox.Controls.Add(this.notificationOnAdditionCheckBox);
+            this.TrayGroupBox.Controls.Add(this.minimizeOnCloseCheckBox);
+            this.TrayGroupBox.Controls.Add(this.MinToTrayCheckBox);
+            resources.ApplyResources(this.TrayGroupBox, "TrayGroupBox");
+            this.TrayGroupBox.Name = "TrayGroupBox";
+            this.TrayGroupBox.TabStop = false;
+            // 
+            // ColorTrayIconCheckBox
+            // 
+            resources.ApplyResources(this.ColorTrayIconCheckBox, "ColorTrayIconCheckBox");
+            this.ColorTrayIconCheckBox.Name = "ColorTrayIconCheckBox";
+            this.ColorTrayIconCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // notificationOnCompletionCheckBox
+            // 
+            resources.ApplyResources(this.notificationOnCompletionCheckBox, "notificationOnCompletionCheckBox");
+            this.notificationOnCompletionCheckBox.Name = "notificationOnCompletionCheckBox";
+            this.notificationOnCompletionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // notificationOnAdditionCheckBox
+            // 
+            resources.ApplyResources(this.notificationOnAdditionCheckBox, "notificationOnAdditionCheckBox");
+            this.notificationOnAdditionCheckBox.Name = "notificationOnAdditionCheckBox";
+            this.notificationOnAdditionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // minimizeOnCloseCheckBox
+            // 
+            resources.ApplyResources(this.minimizeOnCloseCheckBox, "minimizeOnCloseCheckBox");
+            this.minimizeOnCloseCheckBox.Name = "minimizeOnCloseCheckBox";
+            this.minimizeOnCloseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MinToTrayCheckBox
+            // 
+            resources.ApplyResources(this.MinToTrayCheckBox, "MinToTrayCheckBox");
+            this.MinToTrayCheckBox.Name = "MinToTrayCheckBox";
+            this.MinToTrayCheckBox.UseVisualStyleBackColor = true;
+            this.MinToTrayCheckBox.CheckedChanged += new System.EventHandler(this.MinToTrayCheckBox_CheckedChanged);
+            // 
+            // StartOnSystemCheckBox
+            // 
+            resources.ApplyResources(this.StartOnSystemCheckBox, "StartOnSystemCheckBox");
+            this.StartOnSystemCheckBox.Name = "StartOnSystemCheckBox";
+            this.StartOnSystemCheckBox.UseVisualStyleBackColor = true;
             // 
             // DontSavePasswordsCheckBox
             // 
@@ -305,24 +375,6 @@ namespace TransmissionRemoteDotnet
             this.DeleteTorrentCheckBox.Name = "DeleteTorrentCheckBox";
             this.DeleteTorrentCheckBox.UseVisualStyleBackColor = true;
             // 
-            // notificationOnCompletionCheckBox
-            // 
-            resources.ApplyResources(this.notificationOnCompletionCheckBox, "notificationOnCompletionCheckBox");
-            this.notificationOnCompletionCheckBox.Name = "notificationOnCompletionCheckBox";
-            this.notificationOnCompletionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // notificationOnAdditionCheckBox
-            // 
-            resources.ApplyResources(this.notificationOnAdditionCheckBox, "notificationOnAdditionCheckBox");
-            this.notificationOnAdditionCheckBox.Name = "notificationOnAdditionCheckBox";
-            this.notificationOnAdditionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // minimizeOnCloseCheckBox
-            // 
-            resources.ApplyResources(this.minimizeOnCloseCheckBox, "minimizeOnCloseCheckBox");
-            this.minimizeOnCloseCheckBox.Name = "minimizeOnCloseCheckBox";
-            this.minimizeOnCloseCheckBox.UseVisualStyleBackColor = true;
-            // 
             // AutoCheckUpdateCheckBox
             // 
             resources.ApplyResources(this.AutoCheckUpdateCheckBox, "AutoCheckUpdateCheckBox");
@@ -335,20 +387,31 @@ namespace TransmissionRemoteDotnet
             this.UploadPromptCheckBox.Name = "UploadPromptCheckBox";
             this.UploadPromptCheckBox.UseVisualStyleBackColor = true;
             // 
-            // MinToTrayCheckBox
-            // 
-            resources.ApplyResources(this.MinToTrayCheckBox, "MinToTrayCheckBox");
-            this.MinToTrayCheckBox.Name = "MinToTrayCheckBox";
-            this.MinToTrayCheckBox.UseVisualStyleBackColor = true;
-            this.MinToTrayCheckBox.CheckedChanged += new System.EventHandler(this.MinToTrayCheckBox_CheckedChanged);
-            // 
             // tabServersSettings
             // 
+            this.tabServersSettings.Controls.Add(this.removeServerButton);
+            this.tabServersSettings.Controls.Add(this.addServerButton);
             this.tabServersSettings.Controls.Add(this.tabServerSettings);
             this.tabServersSettings.Controls.Add(this.listServers);
             resources.ApplyResources(this.tabServersSettings, "tabServersSettings");
             this.tabServersSettings.Name = "tabServersSettings";
             this.tabServersSettings.UseVisualStyleBackColor = true;
+            // 
+            // removeServerButton
+            // 
+            resources.ApplyResources(this.removeServerButton, "removeServerButton");
+            this.removeServerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
+            this.removeServerButton.Name = "removeServerButton";
+            this.removeServerButton.UseVisualStyleBackColor = true;
+            this.removeServerButton.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
+            // 
+            // addServerButton
+            // 
+            resources.ApplyResources(this.addServerButton, "addServerButton");
+            this.addServerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
+            this.addServerButton.Name = "addServerButton";
+            this.addServerButton.UseVisualStyleBackColor = true;
+            this.addServerButton.Click += new System.EventHandler(this.addServerToolStripMenuItem_Click);
             // 
             // tabServerSettings
             // 
@@ -364,7 +427,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.StartPausedCheckBox);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.RefreshRateTrayValue);
             this.tabPage1.Controls.Add(this.SaveServerButton);
             this.tabPage1.Controls.Add(this.UseSSLCheckBox);
             this.tabPage1.Controls.Add(this.label1);
@@ -379,11 +443,30 @@ namespace TransmissionRemoteDotnet
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // StartPausedCheckBox
+            // label18
             // 
-            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
-            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
-            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // RefreshRateTrayValue
+            // 
+            resources.ApplyResources(this.RefreshRateTrayValue, "RefreshRateTrayValue");
+            this.RefreshRateTrayValue.Maximum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.RefreshRateTrayValue.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RefreshRateTrayValue.Name = "RefreshRateTrayValue";
+            this.RefreshRateTrayValue.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // SaveServerButton
             // 
@@ -658,6 +741,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.StartPausedCheckBox);
             this.tabPage6.Controls.Add(this.customPathTextBox);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.label17);
@@ -667,6 +751,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // StartPausedCheckBox
+            // 
+            resources.ApplyResources(this.StartPausedCheckBox, "StartPausedCheckBox");
+            this.StartPausedCheckBox.Name = "StartPausedCheckBox";
+            this.StartPausedCheckBox.UseVisualStyleBackColor = true;
             // 
             // customPathTextBox
             // 
@@ -828,14 +918,106 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.removeServerToolStripMenuItem, "removeServerToolStripMenuItem");
             this.removeServerToolStripMenuItem.Click += new System.EventHandler(this.removeServerToolStripMenuItem_Click);
             // 
+            // tabRssSettings
+            // 
+            this.tabRssSettings.Controls.Add(this.listRssFeeds);
+            this.tabRssSettings.Controls.Add(this.groupFeed);
+            resources.ApplyResources(this.tabRssSettings, "tabRssSettings");
+            this.tabRssSettings.Name = "tabRssSettings";
+            this.tabRssSettings.UseVisualStyleBackColor = true;
+            // 
+            // listRssFeeds
+            // 
+            this.listRssFeeds.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnFeedName,
+            this.columnFeedUrl});
+            resources.ApplyResources(this.listRssFeeds, "listRssFeeds");
+            this.listRssFeeds.FullRowSelect = true;
+            this.listRssFeeds.HideSelection = false;
+            this.listRssFeeds.MultiSelect = false;
+            this.listRssFeeds.Name = "listRssFeeds";
+            this.listRssFeeds.ShowGroups = false;
+            this.listRssFeeds.UseCompatibleStateImageBehavior = false;
+            this.listRssFeeds.View = System.Windows.Forms.View.Details;
+            this.listRssFeeds.SelectedIndexChanged += new System.EventHandler(this.listRssFeeds_SelectedIndexChanged);
+            this.listRssFeeds.DoubleClick += new System.EventHandler(this.listRssFeeds_DoubleClick);
+            // 
+            // columnFeedName
+            // 
+            resources.ApplyResources(this.columnFeedName, "columnFeedName");
+            // 
+            // columnFeedUrl
+            // 
+            resources.ApplyResources(this.columnFeedUrl, "columnFeedUrl");
+            // 
+            // groupFeed
+            // 
+            this.groupFeed.Controls.Add(this.RemoveFeedButton);
+            this.groupFeed.Controls.Add(this.AddFeedButton);
+            this.groupFeed.Controls.Add(this.FeedNameTextBox);
+            this.groupFeed.Controls.Add(this.FeedUrlLabel);
+            this.groupFeed.Controls.Add(this.FeedUrlTextBox);
+            this.groupFeed.Controls.Add(this.FeedNameLabel);
+            resources.ApplyResources(this.groupFeed, "groupFeed");
+            this.groupFeed.Name = "groupFeed";
+            this.groupFeed.TabStop = false;
+            // 
+            // RemoveFeedButton
+            // 
+            resources.ApplyResources(this.RemoveFeedButton, "RemoveFeedButton");
+            this.RemoveFeedButton.Name = "RemoveFeedButton";
+            this.RemoveFeedButton.UseVisualStyleBackColor = true;
+            this.RemoveFeedButton.Click += new System.EventHandler(this.RemoveFeedButton_Click);
+            // 
+            // AddFeedButton
+            // 
+            resources.ApplyResources(this.AddFeedButton, "AddFeedButton");
+            this.AddFeedButton.Name = "AddFeedButton";
+            this.AddFeedButton.UseVisualStyleBackColor = true;
+            this.AddFeedButton.Click += new System.EventHandler(this.AddFeedButton_Click);
+            // 
+            // FeedNameTextBox
+            // 
+            resources.ApplyResources(this.FeedNameTextBox, "FeedNameTextBox");
+            this.FeedNameTextBox.Name = "FeedNameTextBox";
+            this.FeedNameTextBox.TextChanged += new System.EventHandler(this.FeedNameTextBox_TextChanged);
+            // 
+            // FeedUrlLabel
+            // 
+            resources.ApplyResources(this.FeedUrlLabel, "FeedUrlLabel");
+            this.FeedUrlLabel.Name = "FeedUrlLabel";
+            // 
+            // FeedUrlTextBox
+            // 
+            resources.ApplyResources(this.FeedUrlTextBox, "FeedUrlTextBox");
+            this.FeedUrlTextBox.Name = "FeedUrlTextBox";
+            this.FeedUrlTextBox.TextChanged += new System.EventHandler(this.FeedNameTextBox_TextChanged);
+            // 
+            // FeedNameLabel
+            // 
+            resources.ApplyResources(this.FeedNameLabel, "FeedNameLabel");
+            this.FeedNameLabel.Name = "FeedNameLabel";
+            // 
             // tabSkinSettings
             // 
+            this.tabSkinSettings.Controls.Add(this.trayImageBrowse);
             this.tabSkinSettings.Controls.Add(this.toolbarImageBrowse);
             this.tabSkinSettings.Controls.Add(this.stateImageBrowse);
             this.tabSkinSettings.Controls.Add(this.infopanelImageBrowse);
             resources.ApplyResources(this.tabSkinSettings, "tabSkinSettings");
             this.tabSkinSettings.Name = "tabSkinSettings";
             this.tabSkinSettings.UseVisualStyleBackColor = true;
+            // 
+            // trayImageBrowse
+            // 
+            this.trayImageBrowse.FileName = "";
+            this.trayImageBrowse.ImageNumber = 5;
+            resources.ApplyResources(this.trayImageBrowse, "trayImageBrowse");
+            this.trayImageBrowse.MaxHeight = 48;
+            this.trayImageBrowse.MinHeight = 48;
+            this.trayImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
+            this.trayImageBrowse.Name = "trayImageBrowse";
+            this.trayImageBrowse.Title = "Tray icon Images";
             // 
             // toolbarImageBrowse
             // 
@@ -855,7 +1037,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.stateImageBrowse, "stateImageBrowse");
             this.stateImageBrowse.MaxHeight = 16;
             this.stateImageBrowse.MinHeight = 16;
-            this.stateImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.stateImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
             this.stateImageBrowse.Name = "stateImageBrowse";
             this.stateImageBrowse.Title = "State Images";
             // 
@@ -866,7 +1048,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.infopanelImageBrowse, "infopanelImageBrowse");
             this.infopanelImageBrowse.MaxHeight = 16;
             this.infopanelImageBrowse.MinHeight = 16;
-            this.infopanelImageBrowse.MinimumSize = new System.Drawing.Size(0, 76);
+            this.infopanelImageBrowse.MinimumSize = new System.Drawing.Size(0, 68);
             this.infopanelImageBrowse.Name = "infopanelImageBrowse";
             this.infopanelImageBrowse.Title = "Torrent Infopanel Images";
             // 
@@ -899,10 +1081,13 @@ namespace TransmissionRemoteDotnet
             this.groupPlinkPath.PerformLayout();
             this.groupBehavior.ResumeLayout(false);
             this.groupBehavior.PerformLayout();
+            this.TrayGroupBox.ResumeLayout(false);
+            this.TrayGroupBox.PerformLayout();
             this.tabServersSettings.ResumeLayout(false);
             this.tabServerSettings.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshRateTrayValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RetryLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshRateValue)).EndInit();
@@ -919,6 +1104,9 @@ namespace TransmissionRemoteDotnet
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ServersMenuStrip.ResumeLayout(false);
+            this.tabRssSettings.ResumeLayout(false);
+            this.groupFeed.ResumeLayout(false);
+            this.groupFeed.PerformLayout();
             this.tabSkinSettings.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -934,11 +1122,13 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TabPage tabGlobalSettings;
         private System.Windows.Forms.TabPage tabServersSettings;
         private System.Windows.Forms.GroupBox groupBehavior;
+        private System.Windows.Forms.GroupBox TrayGroupBox;
         private System.Windows.Forms.CheckBox UploadPromptCheckBox;
         private System.Windows.Forms.CheckBox minimizeOnCloseCheckBox;
         private System.Windows.Forms.CheckBox notificationOnAdditionCheckBox;
         private System.Windows.Forms.CheckBox notificationOnCompletionCheckBox;
         private System.Windows.Forms.CheckBox MinToTrayCheckBox;
+        private System.Windows.Forms.CheckBox ColorTrayIconCheckBox;
         private System.Windows.Forms.Button PlinkPathButton;
         private System.Windows.Forms.TextBox PlinkPathTextBox;
         private System.Windows.Forms.TabControl tabServerSettings;
@@ -952,6 +1142,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown RetryLimitValue;
         private System.Windows.Forms.NumericUpDown PortField;
         private System.Windows.Forms.NumericUpDown RefreshRateValue;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown RefreshRateTrayValue;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox EnableAuthCheckBox;
@@ -1002,6 +1194,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ContextMenuStrip ServersMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem addServerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeServerToolStripMenuItem;
+        private System.Windows.Forms.Button addServerButton;
+        private System.Windows.Forms.Button removeServerButton;
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
@@ -1018,5 +1212,18 @@ namespace TransmissionRemoteDotnet
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox stateImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox infopanelImageBrowse;
         private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox toolbarImageBrowse;
+        private TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox trayImageBrowse;
+        private System.Windows.Forms.ListView listRssFeeds;
+        private System.Windows.Forms.ColumnHeader columnFeedName;
+        private System.Windows.Forms.ColumnHeader columnFeedUrl;
+        private System.Windows.Forms.TabPage tabRssSettings;
+        private System.Windows.Forms.GroupBox groupFeed;
+        private System.Windows.Forms.Label FeedNameLabel;
+        private System.Windows.Forms.TextBox FeedNameTextBox;
+        private System.Windows.Forms.Label FeedUrlLabel;
+        private System.Windows.Forms.TextBox FeedUrlTextBox;
+        private System.Windows.Forms.Button AddFeedButton;
+        private System.Windows.Forms.Button RemoveFeedButton;
+        private System.Windows.Forms.CheckBox StartOnSystemCheckBox;
     }
 }

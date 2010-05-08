@@ -53,7 +53,14 @@ namespace TransmissionRemoteDotnet.Comparers
             {
                 double dx = (double)tx.SubItems[column].Tag;
                 double dy = (double)ty.SubItems[column].Tag;
-                return dx.CompareTo(dy);
+                if (dx == -1 && dy == -1)
+                    return 0;
+                else if (dx == -1)
+                    return 1;
+                else if (dy == -1)
+                    return -1;
+                else
+                    return dx.CompareTo(dy);
             }
         }
     }
