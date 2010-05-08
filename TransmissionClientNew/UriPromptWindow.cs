@@ -59,7 +59,7 @@ namespace TransmissionRemoteDotnet
                     DownloadProgressBar.Value = 0;
                     DownloadProgressBar.Visible = true;
                     OkButton.Enabled = false;
-                    WebClient webClient = new TransmissionWebClient(false);
+                    WebClient webClient = new TransmissionWebClient(false, false);
                     webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(webClient_DownloadProgressChanged);
                     webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(webClient_DownloadFileCompleted);
                     webClient.DownloadFileAsync(this.currentUri, target, target);

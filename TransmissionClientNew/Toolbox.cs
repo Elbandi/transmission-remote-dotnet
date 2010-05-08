@@ -35,7 +35,7 @@ namespace TransmissionRemoteDotnet
     public class Toolbox
     {
         private const int STRIPE_OFFSET = 15;
-        public static readonly IFormatProvider NUMBER_FORMAT = (new CultureInfo("en-GB")).NumberFormat;
+        public static readonly IFormatProvider NUMBER_FORMAT = (new CultureInfo("en-US")).NumberFormat;
         static byte[] trueBitCount = new byte[] {
             0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
             1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
@@ -464,6 +464,19 @@ namespace TransmissionRemoteDotnet
                 }
                 lv.EndUpdate();
             }
+        }
+
+        public static string MD5(string input)
+        {
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] data = Encoding.ASCII.GetBytes(input);
+            data = md5.ComputeHash(data);
+            StringBuilder s = new StringBuilder();
+            foreach (byte b in data)
+            {
+                s.Append(b.ToString("x2").ToLower());
+            }
+            return s.ToString();
         }
 
         public static Bitmap LoadSkinImage(string FileName, int MinHeight, int MaxHeight, int ImageNumber)

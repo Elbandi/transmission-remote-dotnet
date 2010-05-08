@@ -117,7 +117,7 @@ namespace TransmissionRemoteDotnet.CustomControls
             // SkinImageBrowseTextBox
             // 
             this.Controls.Add(this.groupBox);
-            this.MinimumSize = new System.Drawing.Size(0, 76);
+            this.MinimumSize = new System.Drawing.Size(0, 68);
             this.Name = "SkinImageBrowseTextBox";
             this.Size = new System.Drawing.Size(300, 100);
             this.groupBox.ResumeLayout(false);

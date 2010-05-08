@@ -84,6 +84,14 @@ namespace TransmissionRemoteDotnet
             set { Program.uploadArgs = value; }
         }
 
+        private static bool uploadPrompt;
+        public static bool UploadPrompt
+        {
+            get { return Program.uploadPrompt; }
+            set { Program.uploadPrompt = value; }
+        }
+        
+
         [STAThread]
         static void Main(string[] args)
         {
@@ -99,6 +107,7 @@ namespace TransmissionRemoteDotnet
             culturechanger.ApplyHelp = culturechanger.ApplyText = culturechanger.ApplyToolTip = true;
             culturechanger.ApplyLocation = culturechanger.ApplySize = false;
             settings = LocalSettings.TryLoad();
+            uploadPrompt = settings.UploadPrompt;
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(settings.Locale);
 #if DOTNET35
             using (NamedPipeSingleInstance singleInstance = new TCPSingleInstance(TCP_SINGLE_INSTANCE_PORT))
@@ -188,11 +197,11 @@ namespace TransmissionRemoteDotnet
                 {
                     if (connected)
                     {
-                        form.Upload(e.Args);
+                        form.Upload(e.Args, UploadPrompt);
                     }
                     else
                     {
-                        form.ShowMustBeConnectedDialog(uploadArgs = e.Args);
+                        form.ShowMustBeConnectedDialog(uploadArgs = e.Args, UploadPrompt);
                     }
                 }
                 else

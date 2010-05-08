@@ -110,14 +110,17 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.Text" xml:space="preserve">
-    <value>Bevestigen</value>
+  <data name="OkButton.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Annuleren</value>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>Wacht op URL...</value>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>Waiting for URL...</value>
+  </data>
+  <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
+    <value>Set torrent options before upload</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>

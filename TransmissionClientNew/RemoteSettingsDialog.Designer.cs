@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
+            this.incompleteToField = new System.Windows.Forms.TextBox();
             this.dhtEnabled = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.testPortButton = new System.Windows.Forms.Button();
@@ -91,6 +93,7 @@ namespace TransmissionRemoteDotnet
             this.altTimeConstraintEnabled = new System.Windows.Forms.CheckBox();
             this.altSpeedLimitEnable = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.limitUploadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).BeginInit();
@@ -246,6 +249,9 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.LpdEnabledCheckBox);
+            this.tabPage1.Controls.Add(this.incompleteToCheckBox);
+            this.tabPage1.Controls.Add(this.incompleteToField);
             this.tabPage1.Controls.Add(this.dhtEnabled);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.testPortButton);
@@ -262,6 +268,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // incompleteToCheckBox
+            // 
+            resources.ApplyResources(this.incompleteToCheckBox, "incompleteToCheckBox");
+            this.incompleteToCheckBox.Name = "incompleteToCheckBox";
+            this.incompleteToCheckBox.UseVisualStyleBackColor = true;
+            this.incompleteToCheckBox.CheckedChanged += new System.EventHandler(this.incompleteToCheckBox_CheckedChanged);
+            // 
+            // incompleteToField
+            // 
+            resources.ApplyResources(this.incompleteToField, "incompleteToField");
+            this.incompleteToField.Name = "incompleteToField";
             // 
             // dhtEnabled
             // 
@@ -459,6 +477,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
+            // LpdEnabledCheckBox
+            // 
+            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
+            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
+            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
+            // 
             // RemoteSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -500,6 +524,8 @@ namespace TransmissionRemoteDotnet
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox downloadToField;
+        private System.Windows.Forms.CheckBox incompleteToCheckBox;
+        private System.Windows.Forms.TextBox incompleteToField;
         private System.Windows.Forms.CheckBox limitUploadCheckBox;
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;
@@ -543,5 +569,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox dhtEnabled;
+        private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
     }
 }

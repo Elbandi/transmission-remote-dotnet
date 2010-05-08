@@ -385,6 +385,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Feed exists.
+        /// </summary>
+        internal static string FeedExists {
+            get {
+                return ResourceManager.GetString("FeedExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GeoIP init error ({0}).
         /// </summary>
         internal static string GeoipInitError {

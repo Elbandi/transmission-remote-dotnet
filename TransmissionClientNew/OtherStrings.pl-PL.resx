@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="UnixPathExists" xml:space="preserve">
+    <value>Unix path exists</value>
+  </data>
+  <data name="InvalidRPCLocation" xml:space="preserve">
+    <value>Invalid RPC location</value>
+  </data>
+  <data name="FeedExists" xml:space="preserve">
+    <value>Feed exists</value>
+  </data>
   <data name="OpenImageFilter" xml:space="preserve">
     <value>Obraz PNG|*.png</value>
   </data>

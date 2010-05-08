@@ -498,4 +498,7 @@
   <data name="InvalidRPCLocation" xml:space="preserve">
     <value>Invalid RPC location</value>
   </data>
+  <data name="FeedExists" xml:space="preserve">
+    <value>Feed exists</value>
+  </data>
 </root>
