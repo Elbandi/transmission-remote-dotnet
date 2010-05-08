@@ -93,7 +93,7 @@ namespace TransmissionRemoteDotnet
             this.altTimeConstraintEnabled = new System.Windows.Forms.CheckBox();
             this.altSpeedLimitEnable = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.LdsEnabledCheckBox = new System.Windows.Forms.CheckBox();
+            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.limitUploadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).BeginInit();
@@ -249,7 +249,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.LdsEnabledCheckBox);
+            this.tabPage1.Controls.Add(this.LpdEnabledCheckBox);
             this.tabPage1.Controls.Add(this.incompleteToCheckBox);
             this.tabPage1.Controls.Add(this.incompleteToField);
             this.tabPage1.Controls.Add(this.dhtEnabled);
@@ -477,11 +477,11 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
-            // LdsEnabledCheckBox
+            // LpdEnabledCheckBox
             // 
-            resources.ApplyResources(this.LdsEnabledCheckBox, "LdsEnabledCheckBox");
-            this.LdsEnabledCheckBox.Name = "LdsEnabledCheckBox";
-            this.LdsEnabledCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
+            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
+            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // RemoteSettingsDialog
             // 
@@ -569,6 +569,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox dhtEnabled;
-        private System.Windows.Forms.CheckBox LdsEnabledCheckBox;
+        private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
     }
 }
