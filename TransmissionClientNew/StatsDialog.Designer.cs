@@ -59,7 +59,7 @@ namespace TransmissionRemoteDotnet
             this.secondsActiveLabel2 = new System.Windows.Forms.Label();
             this.sessionCountLabel2 = new System.Windows.Forms.Label();
             this.filesAddedLabel2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SessionStatsTimer = new System.Windows.Forms.Timer(this.components);
             this.CurrentSessionGroupBox = new System.Windows.Forms.GroupBox();
             this.secondsActiveValue1 = new System.Windows.Forms.Label();
             this.sessionCountValue1 = new System.Windows.Forms.Label();
@@ -151,10 +151,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.filesAddedLabel2, "filesAddedLabel2");
             this.filesAddedLabel2.Name = "filesAddedLabel2";
             // 
-            // timer1
+            // SessionStatsTimer
             // 
-            this.timer1.Interval = 3000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.SessionStatsTimer.Interval = 3000;
+            this.SessionStatsTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CurrentSessionGroupBox
             // 
@@ -262,7 +262,7 @@ namespace TransmissionRemoteDotnet
         #endregion
 
         private System.Windows.Forms.Button CloseFormButton;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer SessionStatsTimer;
         private System.Windows.Forms.GroupBox CumulativeGroupBox;
         private System.Windows.Forms.Label secondsActiveValue1;
         private System.Windows.Forms.Label sessionCountValue1;

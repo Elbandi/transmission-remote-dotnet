@@ -997,6 +997,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TB.
+        /// </summary>
+        internal static string TerabyteShort {
+            get {
+                return ResourceManager.GetString("TerabyteShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This torrent is now complete.
         /// </summary>
         internal static string TheTorrentHasFinishedDownloading {
@@ -1038,6 +1047,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToParse {
             get {
                 return ResourceManager.GetString("UnableToParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Byte|Kilobyte|Metabyte|Gigabyte|Terabyte.
+        /// </summary>
+        internal static string UnitFactors {
+            get {
+                return ResourceManager.GetString("UnitFactors", resourceCulture);
             }
         }
         

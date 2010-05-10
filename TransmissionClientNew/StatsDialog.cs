@@ -101,13 +101,13 @@ namespace TransmissionRemoteDotnet
 
         private void StatsDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer1.Enabled = false;
+            SessionStatsTimer.Enabled = false;
         }
 
         private void StatsDialog_Load(object sender, EventArgs e)
         {
             wc = CommandFactory.RequestAsync(Requests.SessionStats());
-            timer1.Enabled = true;
+            SessionStatsTimer.Enabled = true;
         }
     }
 }
