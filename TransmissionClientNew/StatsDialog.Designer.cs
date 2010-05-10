@@ -71,6 +71,8 @@ namespace TransmissionRemoteDotnet
             this.filesAddedLabel1 = new System.Windows.Forms.Label();
             this.downloadedBytesLabel1 = new System.Windows.Forms.Label();
             this.uploadedBytesLabel1 = new System.Windows.Forms.Label();
+            this.unitFactorLabel = new System.Windows.Forms.Label();
+            this.unitFactorComboBox = new System.Windows.Forms.ComboBox();
             this.CumulativeGroupBox.SuspendLayout();
             this.CurrentSessionGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -220,12 +222,26 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.uploadedBytesLabel1, "uploadedBytesLabel1");
             this.uploadedBytesLabel1.Name = "uploadedBytesLabel1";
             // 
+            // unitFactorLabel
+            // 
+            resources.ApplyResources(this.unitFactorLabel, "unitFactorLabel");
+            this.unitFactorLabel.Name = "unitFactorLabel";
+            // 
+            // unitFactorComboBox
+            // 
+            this.unitFactorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.unitFactorComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.unitFactorComboBox, "unitFactorComboBox");
+            this.unitFactorComboBox.Name = "unitFactorComboBox";
+            // 
             // StatsDialog
             // 
             this.AcceptButton = this.CloseFormButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseFormButton;
+            this.Controls.Add(this.unitFactorComboBox);
+            this.Controls.Add(this.unitFactorLabel);
             this.Controls.Add(this.CurrentSessionGroupBox);
             this.Controls.Add(this.CumulativeGroupBox);
             this.Controls.Add(this.CloseFormButton);
@@ -239,6 +255,7 @@ namespace TransmissionRemoteDotnet
             this.CurrentSessionGroupBox.ResumeLayout(false);
             this.CurrentSessionGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -268,5 +285,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label downloadedBytesValue2;
         private System.Windows.Forms.Label downloadedBytesLabel2;
         private System.Windows.Forms.Label uploadedBytesLabel2;
+        private System.Windows.Forms.Label unitFactorLabel;
+        private System.Windows.Forms.ComboBox unitFactorComboBox;
     }
 }

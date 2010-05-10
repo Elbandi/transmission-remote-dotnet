@@ -180,7 +180,7 @@
     <value>106, 23</value>
   </data>
   <data name="CloseFormButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Close</value>
@@ -195,7 +195,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CloseFormButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="secondsActiveValue2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -420,7 +420,7 @@
     <value>228, 167</value>
   </data>
   <data name="CumulativeGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="CumulativeGroupBox.Text" xml:space="preserve">
     <value>Cumulative Stats</value>
@@ -435,7 +435,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CumulativeGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>134, 17</value>
@@ -717,7 +717,7 @@
     <value>228, 167</value>
   </data>
   <data name="CurrentSessionGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Current Session Stats</value>
@@ -732,6 +732,54 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CurrentSessionGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="unitFactorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="unitFactorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 183</value>
+  </data>
+  <data name="unitFactorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="unitFactorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="unitFactorLabel.Text" xml:space="preserve">
+    <value>Unit factor:</value>
+  </data>
+  <data name="&gt;&gt;unitFactorLabel.Name" xml:space="preserve">
+    <value>unitFactorLabel</value>
+  </data>
+  <data name="&gt;&gt;unitFactorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unitFactorLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;unitFactorLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="unitFactorComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 180</value>
+  </data>
+  <data name="unitFactorComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 21</value>
+  </data>
+  <data name="unitFactorComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;unitFactorComboBox.Name" xml:space="preserve">
+    <value>unitFactorComboBox</value>
+  </data>
+  <data name="&gt;&gt;unitFactorComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unitFactorComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;unitFactorComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

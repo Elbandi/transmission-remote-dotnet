@@ -34,6 +34,8 @@ namespace TransmissionRemoteDotnet
         private StatsDialog()
         {
             InitializeComponent();
+            unitFactorComboBox.Items.AddRange(OtherStrings.UnitFactors.Split('|'));
+            unitFactorComboBox.SelectedIndex = Math.Min((int)Toolbox.MaxSize.msGiga - 1, unitFactorComboBox.Items.Count - 1);
         }
 
         private void CloseFormButton_Click(object sender, EventArgs e)
@@ -67,17 +69,18 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
+                Toolbox.MaxSize ms = (Toolbox.MaxSize)(unitFactorComboBox.SelectedIndex + 1);
                 JsonObject sessionstats = (JsonObject)stats["current-stats"];
                 JsonObject cumulativestats = (JsonObject)stats["cumulative-stats"];
                 TimeSpan ts = TimeSpan.FromSeconds(Toolbox.ToLong(sessionstats["secondsActive"]));
-                downloadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["downloadedBytes"]));
-                uploadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["uploadedBytes"]));
+                downloadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["downloadedBytes"]), ms);
+                uploadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["uploadedBytes"]), ms);
                 filesAddedValue1.Text = ((JsonNumber)sessionstats["filesAdded"]).ToString();
                 sessionCountValue1.Text = ((JsonNumber)sessionstats["sessionCount"]).ToString();
                 secondsActiveValue1.Text = Toolbox.FormatTimespanLong(ts);
                 ts = TimeSpan.FromSeconds(Toolbox.ToLong(cumulativestats["secondsActive"]));
-                downloadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["downloadedBytes"]));
-                uploadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["uploadedBytes"]));
+                downloadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["downloadedBytes"]), ms);
+                uploadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["uploadedBytes"]), ms);
                 filesAddedValue2.Text = ((JsonNumber)cumulativestats["filesAdded"]).ToString();
                 sessionCountValue2.Text = ((JsonNumber)cumulativestats["sessionCount"]).ToString();
                 secondsActiveValue2.Text = ts.Ticks < 0 ? OtherStrings.UnknownNegativeResult : Toolbox.FormatTimespanLong(ts);
