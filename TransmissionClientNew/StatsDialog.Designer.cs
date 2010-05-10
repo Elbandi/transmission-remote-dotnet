@@ -233,6 +233,7 @@ namespace TransmissionRemoteDotnet
             this.unitFactorComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.unitFactorComboBox, "unitFactorComboBox");
             this.unitFactorComboBox.Name = "unitFactorComboBox";
+            this.unitFactorComboBox.SelectedIndexChanged += new System.EventHandler(this.unitFactorComboBox_SelectedIndexChanged);
             // 
             // StatsDialog
             // 
