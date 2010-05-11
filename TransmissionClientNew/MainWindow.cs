@@ -56,6 +56,7 @@ namespace TransmissionRemoteDotnet
             CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED = "mainwindow-detailspanel-collapsed",
             PROJECT_SITE = "http://code.google.com/p/transmission-remote-dotnet/",
             LATEST_VERSION = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version.txt",
+            LATEST_VERSION_BETA = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version_beta.txt",
             DOWNLOADS_PAGE = "http://code.google.com/p/transmission-remote-dotnet/downloads/list";
 
         private Boolean minimise = false;
@@ -2086,7 +2087,7 @@ namespace TransmissionRemoteDotnet
         private void checkVersionWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             TransmissionWebClient client = new TransmissionWebClient(false, false);
-            string response = client.DownloadString(LATEST_VERSION);
+            string response = client.DownloadString(Program.Settings.UpdateToBeta ? LATEST_VERSION_BETA : LATEST_VERSION);
             if (!response.StartsWith("#LATESTVERSION#"))
                 throw new FormatException("Response didn't contain the identification prefix.");
             string[] latestVersion = response.Remove(0, 15).Split('.');

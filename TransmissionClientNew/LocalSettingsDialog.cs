@@ -127,6 +127,7 @@ namespace TransmissionRemoteDotnet
             minimizeOnCloseCheckBox.Checked = sett.MinOnClose;
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
+            UpdateToBetaCheckBox.Checked = sett.UpdateToBeta;
             DeleteTorrentCheckBox.Checked = sett.DeleteTorrentWhenAdding;
             DontSavePasswordsCheckBox.Checked = sett.DontSavePasswords;
             PlinkPathTextBox.Text = sett.PlinkPath;
@@ -157,6 +158,7 @@ namespace TransmissionRemoteDotnet
             sett.MinOnClose = minimizeOnCloseCheckBox.Checked;
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
+            sett.UpdateToBeta = UpdateToBetaCheckBox.Checked;
             sett.DeleteTorrentWhenAdding = DeleteTorrentCheckBox.Checked;
             sett.DefaultDoubleClickAction = defaultActionComboBox.SelectedIndex;
             sett.PlinkPath = PlinkPathTextBox.Text;

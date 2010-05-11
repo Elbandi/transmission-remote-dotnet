@@ -68,6 +68,7 @@ namespace TransmissionRemoteDotnet
             this.minimizeOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.MinToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.StartOnSystemCheckBox = new System.Windows.Forms.CheckBox();
+            this.UpdateToBetaCheckBox = new System.Windows.Forms.CheckBox();
             this.DontSavePasswordsCheckBox = new System.Windows.Forms.CheckBox();
             this.defaultActionComboBox = new System.Windows.Forms.ComboBox();
             this.defaultActionLabel = new System.Windows.Forms.Label();
@@ -288,6 +289,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.groupBehavior.Controls.Add(this.TrayGroupBox);
             this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
+            this.groupBehavior.Controls.Add(this.UpdateToBetaCheckBox);
             this.groupBehavior.Controls.Add(this.DontSavePasswordsCheckBox);
             this.groupBehavior.Controls.Add(this.defaultActionComboBox);
             this.groupBehavior.Controls.Add(this.defaultActionLabel);
@@ -345,6 +347,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.StartOnSystemCheckBox, "StartOnSystemCheckBox");
             this.StartOnSystemCheckBox.Name = "StartOnSystemCheckBox";
             this.StartOnSystemCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // UpdateToBetaCheckBox
+            // 
+            resources.ApplyResources(this.UpdateToBetaCheckBox, "UpdateToBetaCheckBox");
+            this.UpdateToBetaCheckBox.Name = "UpdateToBetaCheckBox";
+            this.UpdateToBetaCheckBox.UseVisualStyleBackColor = true;
             // 
             // DontSavePasswordsCheckBox
             // 
@@ -1198,6 +1206,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button removeServerButton;
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
+        private System.Windows.Forms.CheckBox UpdateToBetaCheckBox;
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
         private System.Windows.Forms.ComboBox defaultActionComboBox;
         private System.Windows.Forms.Label defaultActionLabel;
