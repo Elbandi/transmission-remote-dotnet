@@ -45,7 +45,7 @@ namespace TransmissionRemoteDotnet
         private void button1_Click(object sender, EventArgs e)
         {
             bool withoption = UseTorrentLoadDialogCheckBox.Enabled ? UseTorrentLoadDialogCheckBox.Checked : false;
-            if (Program.DaemonDescriptor.Revision >= 7744 && !withoption)
+            if (Program.DaemonDescriptor.Version >= 1.50 && !withoption)
             {
                 Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(UrlTextBox.Text)));
                 this.Close();

@@ -1136,7 +1136,7 @@ namespace TransmissionRemoteDotnet
                 = removeDeleteToolStripMenuItem.Enabled = removeToolStripMenuItem.Enabled
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
                 = moveTorrentDataToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
-            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
+            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Version >= 1.7;
             pauseTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_pause") : toolStripImageList.Images.IndexOfKey("player_pause_all");
             startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_play") : toolStripImageList.Images.IndexOfKey("player_play_all");
         }
