@@ -501,4 +501,7 @@
   <data name="FeedExists" xml:space="preserve">
     <value>Feed exists</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
 </root>

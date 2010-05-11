@@ -69,7 +69,7 @@ namespace TransmissionRemoteDotnet
         private ContextMenu currentTorrentSelectionMenu;
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
-        private ContextMenu torrentListHeadersMenu;
+        private ContextMenu torrentListHeaderMenu;
         private MenuItem openNetworkShareMenuItem;
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
@@ -189,8 +189,9 @@ namespace TransmissionRemoteDotnet
             speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
             speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
-            foreach (MenuItem m in this.torrentListHeadersMenu.MenuItems)
+            foreach (MenuItem m in this.torrentListHeaderMenu.MenuItems)
             {
+                if (m.Tag == null) continue;
                 ColumnHeader ch = m.Tag as ColumnHeader;
                 m.Checked = ch.Width > 0;
             }
@@ -275,17 +276,19 @@ namespace TransmissionRemoteDotnet
             this.noFileSelectionMenu = this.filesListView.ContextMenu = new ContextMenu(new MenuItem[] {
                 new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllFilesHandler))
             });
-            this.torrentListHeadersMenu = new ContextMenu();
+            this.torrentListHeaderMenu = new ContextMenu();
             foreach (ColumnHeader ch in torrentListView.Columns)
             {
-                MenuItem m = this.torrentListHeadersMenu.MenuItems.Add(ch.Text);
+                MenuItem m = this.torrentListHeaderMenu.MenuItems.Add(ch.Text);
                 m.Tag = ch;
                 m.Checked = ch.Width > 0;
-                m.Click += new EventHandler(m_Click);
+                m.Click += new EventHandler(HeaderMenuItem_Click);
             }
+            this.torrentListHeaderMenu.MenuItems.Add("-");
+            this.torrentListHeaderMenu.MenuItems.Add(OtherStrings.Reset).Click += new EventHandler(ResetMenuItem_Click);
         }
 
-        void m_Click(object sender, EventArgs e)
+        void HeaderMenuItem_Click(object sender, EventArgs e)
         {
             MenuItem m = sender as MenuItem;
             ColumnHeader ch = m.Tag as ColumnHeader;
@@ -299,6 +302,15 @@ namespace TransmissionRemoteDotnet
                 ch.Width = (int)ch.Tag;
             }
             m.Checked = !m.Checked;
+        }
+
+        void ResetMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (MenuItem m in this.torrentListHeaderMenu.MenuItems)
+            {
+                if (m.Tag != null && !m.Checked)
+                    m.PerformClick();
+            }
         }
 
         private void CreateTorrentSelectionContextMenu()
@@ -2363,7 +2375,7 @@ namespace TransmissionRemoteDotnet
 
         private void torrentListView_ContextMenuPopupEvent(object sender, ContextMenuPopupEventHandlerArgs e)
         {
-            torrentListView.ContextMenu = e.Header ? torrentListHeadersMenu : currentTorrentSelectionMenu;
+            torrentListView.ContextMenu = e.Header ? torrentListHeaderMenu : currentTorrentSelectionMenu;
         }
 
         private void torrentListView_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
