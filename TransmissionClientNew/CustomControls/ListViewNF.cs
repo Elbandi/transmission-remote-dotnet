@@ -26,6 +26,7 @@ namespace TransmissionRemoteDotnet
 {
     public class ListViewNF : ListView
     {
+        private const int Msg_ContextMenu = 0x7b;
         public ListViewNF()
         {
             //Activate double buffering
@@ -34,6 +35,19 @@ namespace TransmissionRemoteDotnet
             //Enable the OnNotifyMessage event so we get a chance to filter out 
             // Windows messages before they get to the form's WndProc
             this.SetStyle(ControlStyles.EnableNotifyMessage, true);
+        }
+
+        public delegate void ContextMenuPopupEventHandler(object sender, ContextMenuPopupEventHandlerArgs e);
+        public event ContextMenuPopupEventHandler ContextMenuPopupEvent;
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == Msg_ContextMenu)
+                if (ContextMenuPopupEvent != null)
+                {
+                    ContextMenuPopupEvent(this, new ContextMenuPopupEventHandlerArgs(m.WParam != this.Handle));
+                }
+            base.WndProc(ref m);
         }
 
         protected override void OnNotifyMessage(Message m)
@@ -108,5 +122,14 @@ namespace TransmissionRemoteDotnet
             }
         }
 #endif
+    }
+
+    public class ContextMenuPopupEventHandlerArgs : EventArgs
+    {
+        public bool Header { get; set; }
+        public ContextMenuPopupEventHandlerArgs(bool header)
+        {
+            this.Header = header;
+        }
     }
 }
