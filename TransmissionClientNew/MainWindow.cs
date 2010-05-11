@@ -53,6 +53,7 @@ namespace TransmissionRemoteDotnet
             CONFKEYPREFIX_LISTVIEW_WIDTHS = "listview-width-",
             CONFKEYPREFIX_LISTVIEW_INDEXES = "listview-indexes-",
             CONFKEYPREFIX_LISTVIEW_SORTINDEX = "listview-sortindex-",
+            CONFKEYPREFIX_LISTVIEW_VISIBLE = "listview-visible-",
             CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED = "mainwindow-detailspanel-collapsed",
             PROJECT_SITE = "http://code.google.com/p/transmission-remote-dotnet/",
             LATEST_VERSION = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version.txt",
@@ -62,10 +63,13 @@ namespace TransmissionRemoteDotnet
         private ListViewItemSorter lvwColumnSorter;
         private FilesListViewItemSorter filesLvwColumnSorter;
         private PeersListViewItemSorter peersLvwColumnSorter;
+        private ListViewHeader lvh;
         private ContextMenu torrentSelectionMenu;
         private ContextMenu noTorrentSelectionMenu;
+        private ContextMenu currentTorrentSelectionMenu;
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
+        private ContextMenu torrentListHeadersMenu;
         private MenuItem openNetworkShareMenuItem;
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
@@ -122,6 +126,7 @@ namespace TransmissionRemoteDotnet
                 trayIconImageList.Images.Add(tsb.Image);
                 int idx = defaulttrayimages.IndexOf(tsb.Image);
                 trayIconImageList.Images.SetKeyName(idx, tsb.Name);
+                lvh = new ListViewHeader(torrentListView);
             }
             LocalSettings settings = Program.Settings;
             /* 
@@ -184,6 +189,11 @@ namespace TransmissionRemoteDotnet
             speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
             speedResComboBox.SelectedIndex = Math.Min(2, speedResComboBox.Items.Count - 1);
             RestoreFormProperties();
+            foreach (MenuItem m in this.torrentListHeadersMenu.MenuItems)
+            {
+                ColumnHeader ch = m.Tag as ColumnHeader;
+                m.Checked = ch.Width > 0;
+            }
             CreateProfileMenu();
             //OpenGeoipDatabase();
             LoadSkins();
@@ -265,6 +275,30 @@ namespace TransmissionRemoteDotnet
             this.noFileSelectionMenu = this.filesListView.ContextMenu = new ContextMenu(new MenuItem[] {
                 new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllFilesHandler))
             });
+            this.torrentListHeadersMenu = new ContextMenu();
+            foreach (ColumnHeader ch in torrentListView.Columns)
+            {
+                MenuItem m = this.torrentListHeadersMenu.MenuItems.Add(ch.Text);
+                m.Tag = ch;
+                m.Checked = ch.Width > 0;
+                m.Click += new EventHandler(m_Click);
+            }
+        }
+
+        void m_Click(object sender, EventArgs e)
+        {
+            MenuItem m = sender as MenuItem;
+            ColumnHeader ch = m.Tag as ColumnHeader;
+            if (m.Checked)
+            {
+                ch.Tag = ch.Width;
+                ch.Width = 0;
+            }
+            else
+            {
+                ch.Width = (int)ch.Tag;
+            }
+            m.Checked = !m.Checked;
         }
 
         private void CreateTorrentSelectionContextMenu()
@@ -562,7 +596,7 @@ namespace TransmissionRemoteDotnet
                 StatsDialog.CloseIfOpen();
                 RemoteSettingsDialog.CloseIfOpen();
                 torrentListView.Enabled = false;
-                torrentListView.ContextMenu = this.torrentSelectionMenu = null;
+                torrentListView.ContextMenu = this.currentTorrentSelectionMenu = this.torrentSelectionMenu = null;
                 lock (this.torrentListView)
                 {
                     this.torrentListView.Items.Clear();
@@ -735,14 +769,17 @@ namespace TransmissionRemoteDotnet
         public void SaveListViewProperties(ListView listView)
         {
             JsonArray widths = new JsonArray();
+            JsonArray visibles = new JsonArray();
             JsonArray indexes = new JsonArray();
             foreach (ColumnHeader column in listView.Columns)
             {
-                widths.Add(column.Width);
+                widths.Add(column.Width == 0 && column.Tag != null ? (int)column.Tag : column.Width);
+                visibles.Add(column.Width > 0 ? 1 : 0);
                 indexes.Add(column.DisplayIndex);
             }
             LocalSettings settings = Program.Settings;
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name, widths.ToString());
+            settings.SetObject(CONFKEYPREFIX_LISTVIEW_VISIBLE + listView.Name, visibles.ToString());
             settings.SetObject(CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name, indexes.ToString());
             lock (listView)
             {
@@ -756,6 +793,7 @@ namespace TransmissionRemoteDotnet
             LocalSettings settings = Program.Settings;
             string widthsConfKey = CONFKEYPREFIX_LISTVIEW_WIDTHS + listView.Name,
               indexesConfKey = CONFKEYPREFIX_LISTVIEW_INDEXES + listView.Name,
+              visiblesConfKey = CONFKEYPREFIX_LISTVIEW_VISIBLE + listView.Name,
               sortIndexConfKey = CONFKEYPREFIX_LISTVIEW_SORTINDEX + listView.Name;
 
             if (settings.ContainsKey(widthsConfKey))
@@ -764,6 +802,18 @@ namespace TransmissionRemoteDotnet
                 for (int i = 0; i < widths.Count; i++)
                 {
                     listView.Columns[i].Width = Toolbox.ToInt(widths[i]);
+                }
+            }
+            if (settings.ContainsKey(visiblesConfKey))
+            {
+                JsonArray visibles = GetListViewPropertyArray(visiblesConfKey);
+                for (int i = 0; i < visibles.Count; i++)
+                {
+                    if (Toolbox.ToInt(visibles[i]) == 0)
+                    {
+                        listView.Columns[i].Tag = listView.Columns[i].Width;
+                        listView.Columns[i].Width = 0;
+                    }
                 }
             }
             if (settings.ContainsKey(indexesConfKey))
@@ -1222,7 +1272,7 @@ namespace TransmissionRemoteDotnet
                     t = (Torrent)torrentListView.SelectedItems[0];
                 one = torrentListView.SelectedItems.Count == 1;
             }
-            torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
+            torrentListView.ContextMenu = this.currentTorrentSelectionMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
         }
@@ -2309,6 +2359,20 @@ namespace TransmissionRemoteDotnet
                 {
                     MessageBox.Show(ee.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 };
+        }
+
+        private void torrentListView_ContextMenuPopupEvent(object sender, ContextMenuPopupEventHandlerArgs e)
+        {
+            torrentListView.ContextMenu = e.Header ? torrentListHeadersMenu : currentTorrentSelectionMenu;
+        }
+
+        private void torrentListView_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            if (e.NewWidth < 1)
+            {
+                e.Cancel = true;
+                e.NewWidth = 1;
+            }
         }
     }
 }

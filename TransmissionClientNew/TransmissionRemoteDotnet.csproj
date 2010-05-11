@@ -160,6 +160,7 @@
     <Compile Include="CustomControls\CultureForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListViewHeader.cs" />
     <Compile Include="LocalSettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
