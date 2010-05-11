@@ -24,16 +24,24 @@ using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using Jayrock.Json;
+using TransmissionRemoteDotnet.Settings;
 
 namespace TransmissionRemoteDotnet
 {
     public partial class StatsDialog : CultureForm
     {
+        private const string
+            CONFKEY_UNIT_FACTOR = "statdialog-unitfactor";
+
         private static WebClient wc;
 
         private StatsDialog()
         {
+            LocalSettings settings = Program.Settings;
             InitializeComponent();
+            unitFactorComboBox.Items.AddRange(OtherStrings.UnitFactors.Split('|'));
+            int defms = (int)(settings.Misc.ContainsKey(CONFKEY_UNIT_FACTOR) ? settings.GetObject(CONFKEY_UNIT_FACTOR) : Toolbox.MaxSize.msGiga);
+            unitFactorComboBox.SelectedIndex = Math.Min(defms, unitFactorComboBox.Items.Count) - 1;
         }
 
         private void CloseFormButton_Click(object sender, EventArgs e)
@@ -67,17 +75,18 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
+                Toolbox.MaxSize ms = (Toolbox.MaxSize)(unitFactorComboBox.SelectedIndex + 1);
                 JsonObject sessionstats = (JsonObject)stats["current-stats"];
                 JsonObject cumulativestats = (JsonObject)stats["cumulative-stats"];
                 TimeSpan ts = TimeSpan.FromSeconds(Toolbox.ToLong(sessionstats["secondsActive"]));
-                downloadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["downloadedBytes"]));
-                uploadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["uploadedBytes"]));
+                downloadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["downloadedBytes"]), ms);
+                uploadedBytesValue1.Text = Toolbox.GetFileSize(Toolbox.ToLong(sessionstats["uploadedBytes"]), ms);
                 filesAddedValue1.Text = ((JsonNumber)sessionstats["filesAdded"]).ToString();
                 sessionCountValue1.Text = ((JsonNumber)sessionstats["sessionCount"]).ToString();
                 secondsActiveValue1.Text = Toolbox.FormatTimespanLong(ts);
                 ts = TimeSpan.FromSeconds(Toolbox.ToLong(cumulativestats["secondsActive"]));
-                downloadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["downloadedBytes"]));
-                uploadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["uploadedBytes"]));
+                downloadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["downloadedBytes"]), ms);
+                uploadedBytesValue2.Text = Toolbox.GetFileSize(Toolbox.ToLong(cumulativestats["uploadedBytes"]), ms);
                 filesAddedValue2.Text = ((JsonNumber)cumulativestats["filesAdded"]).ToString();
                 sessionCountValue2.Text = ((JsonNumber)cumulativestats["sessionCount"]).ToString();
                 secondsActiveValue2.Text = ts.Ticks < 0 ? OtherStrings.UnknownNegativeResult : Toolbox.FormatTimespanLong(ts);
@@ -98,13 +107,18 @@ namespace TransmissionRemoteDotnet
 
         private void StatsDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer1.Enabled = false;
+            SessionStatsTimer.Enabled = false;
         }
 
         private void StatsDialog_Load(object sender, EventArgs e)
         {
             wc = CommandFactory.RequestAsync(Requests.SessionStats());
-            timer1.Enabled = true;
+            SessionStatsTimer.Enabled = true;
+        }
+
+        private void unitFactorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program.Settings.SetObject(CONFKEY_UNIT_FACTOR, unitFactorComboBox.SelectedIndex + 1);
         }
     }
 }

@@ -56,6 +56,7 @@ namespace TransmissionRemoteDotnet
             CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED = "mainwindow-detailspanel-collapsed",
             PROJECT_SITE = "http://code.google.com/p/transmission-remote-dotnet/",
             LATEST_VERSION = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version.txt",
+            LATEST_VERSION_BETA = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version_beta.txt",
             DOWNLOADS_PAGE = "http://code.google.com/p/transmission-remote-dotnet/downloads/list";
 
         private Boolean minimise = false;
@@ -1136,7 +1137,7 @@ namespace TransmissionRemoteDotnet
                 = removeDeleteToolStripMenuItem.Enabled = removeToolStripMenuItem.Enabled
                 = reannounceButton.Enabled = reannounceToolStripMenuItem.Enabled
                 = moveTorrentDataToolStripMenuItem.Enabled = cSVInfoToClipboardToolStripMenuItem.Enabled = oneOrMore;
-            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Revision >= 8385;
+            moveTorrentDataToolStripMenuItem.Enabled = oneOrMore && Program.DaemonDescriptor.Version >= 1.7;
             pauseTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_pause") : toolStripImageList.Images.IndexOfKey("player_pause_all");
             startTorrentButton.ImageIndex = oneOrMore && torrentListView.SelectedItems.Count != torrentListView.Items.Count ? toolStripImageList.Images.IndexOfKey("player_play") : toolStripImageList.Images.IndexOfKey("player_play_all");
         }
@@ -1748,7 +1749,7 @@ namespace TransmissionRemoteDotnet
                 trackersListView.EndUpdate();
             }
             remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
-            label4.Text = (t.IsFinished ? columnHeader19.Text : columnHeader14.Text) + ":";
+            label4.Text = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
             uploadRateLabel.Text = t.UploadRateString;
@@ -2086,7 +2087,7 @@ namespace TransmissionRemoteDotnet
         private void checkVersionWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             TransmissionWebClient client = new TransmissionWebClient(false, false);
-            string response = client.DownloadString(LATEST_VERSION);
+            string response = client.DownloadString(Program.Settings.UpdateToBeta ? LATEST_VERSION_BETA : LATEST_VERSION);
             if (!response.StartsWith("#LATESTVERSION#"))
                 throw new FormatException("Response didn't contain the identification prefix.");
             string[] latestVersion = response.Remove(0, 15).Split('.');

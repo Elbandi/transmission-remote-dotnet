@@ -501,4 +501,11 @@
   <data name="FeedExists" xml:space="preserve">
     <value>Feed exists</value>
   </data>
+  <data name="TerabyteShort" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitFactors" xml:space="preserve">
+    <value>Byte|Kilobyte|Metabyte|Gigabyte|Terabyte</value>
+    <comment>delim with | char!!</comment>
+  </data>
 </root>

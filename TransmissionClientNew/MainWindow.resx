@@ -198,113 +198,71 @@
   <data name="&gt;&gt;mainVerticalSplitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
+  <data name="torrentNameCol.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+  <data name="torrentNameCol.Width" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
-  <data name="columnHeader7.DisplayIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader8.DisplayIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Done</value>
-  </data>
-  <data name="columnHeader9.DisplayIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="columnHeader10.DisplayIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Seeds</value>
-  </data>
-  <data name="columnHeader11.DisplayIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Leechers</value>
-  </data>
-  <data name="columnHeader12.DisplayIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Down Speed</value>
-  </data>
-  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader13.DisplayIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Up Speed</value>
-  </data>
-  <data name="columnHeader13.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader14.DisplayIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>ETA</value>
-  </data>
-  <data name="columnHeader15.DisplayIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Uploaded</value>
-  </data>
-  <data name="columnHeader15.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="columnHeader16.DisplayIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Ratio</value>
-  </data>
-  <data name="columnHeader18.DisplayIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Added At</value>
-  </data>
-  <data name="columnHeader19.DisplayIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Completed At</value>
-  </data>
-  <data name="columnHeader30.DisplayIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
-    <value>Tracker</value>
-  </data>
-  <data name="columnHeader30.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="columnHeader37.DisplayIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="columnHeader37.Text" xml:space="preserve">
+  <data name="torrentNoCol.Text" xml:space="preserve">
     <value>#</value>
   </data>
-  <data name="columnHeader37.Width" type="System.Int32, mscorlib">
+  <data name="torrentNoCol.Width" type="System.Int32, mscorlib">
     <value>32</value>
+  </data>
+  <data name="torrentSizeCol.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="torrentSizeCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentDoneCol.Text" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="torrentStatusCol.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="torrentSeedsCol.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="torrentLeechersCol.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="torrentDownSpeedCol.Text" xml:space="preserve">
+    <value>Down Speed</value>
+  </data>
+  <data name="torrentDownSpeedCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentUpSpeedCol.Text" xml:space="preserve">
+    <value>Up Speed</value>
+  </data>
+  <data name="torrentUpSpeedCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentEtaCol.Text" xml:space="preserve">
+    <value>ETA</value>
+  </data>
+  <data name="torrentUploadedCol.Text" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="torrentUploadedCol.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="torrentRatioCol.Text" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="torrentAddedAt.Text" xml:space="preserve">
+    <value>Added At</value>
+  </data>
+  <data name="torrentCompletedAtCol.Text" xml:space="preserve">
+    <value>Completed At</value>
+  </data>
+  <data name="torrentTrackerCol.Text" xml:space="preserve">
+    <value>Tracker</value>
+  </data>
+  <data name="torrentTrackerCol.Width" type="System.Int32, mscorlib">
+    <value>140</value>
   </data>
   <data name="torrentListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1773,49 +1731,49 @@
   <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
+  <data name="trackersTierCol.Text" xml:space="preserve">
     <value>Tier</value>
   </data>
-  <data name="columnHeader22.Width" type="System.Int32, mscorlib">
+  <data name="trackersTierCol.Width" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
+  <data name="trackersAnnounceUrlCol.Text" xml:space="preserve">
     <value>Announce URL</value>
   </data>
-  <data name="columnHeader20.Width" type="System.Int32, mscorlib">
+  <data name="trackersAnnounceUrlCol.Width" type="System.Int32, mscorlib">
     <value>300</value>
   </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
+  <data name="trackersStatusCol.Text" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="columnHeader21.Width" type="System.Int32, mscorlib">
+  <data name="trackersStatusCol.Width" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="columnHeader33.Text" xml:space="preserve">
+  <data name="trackersUpdateInCol.Text" xml:space="preserve">
     <value>Update In</value>
   </data>
-  <data name="columnHeader33.Width" type="System.Int32, mscorlib">
+  <data name="trackersUpdateInCol.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
+  <data name="trackersSeedsCol.Text" xml:space="preserve">
     <value>Seeds</value>
   </data>
-  <data name="columnHeader34.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersSeedsCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
+  <data name="trackersLeechersCol.Text" xml:space="preserve">
     <value>Leechers</value>
   </data>
-  <data name="columnHeader35.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersLeechersCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
+  <data name="trackersDownloadedCol.Text" xml:space="preserve">
     <value>Downloaded</value>
   </data>
-  <data name="columnHeader36.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersDownloadedCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="columnHeader36.Width" type="System.Int32, mscorlib">
+  <data name="trackersDownloadedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="trackersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1893,40 +1851,40 @@
   <data name="&gt;&gt;trackersTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
+  <data name="filesPathCol.Text" xml:space="preserve">
     <value>Path</value>
   </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+  <data name="filesPathCol.Width" type="System.Int32, mscorlib">
     <value>444</value>
   </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
+  <data name="filesTypeCol.Text" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
+  <data name="filesSizeCol.Text" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+  <data name="filesSizeCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
+  <data name="filesDoneCol.Text" xml:space="preserve">
     <value>Done</value>
   </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+  <data name="filesDoneCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
+  <data name="filesPercentCol.Text" xml:space="preserve">
     <value>%</value>
   </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
+  <data name="filesSkipCol.Text" xml:space="preserve">
     <value>Skip</value>
   </data>
-  <data name="columnHeader17.Width" type="System.Int32, mscorlib">
+  <data name="filesSkipCol.Width" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
+  <data name="filesPriorityCol.Text" xml:space="preserve">
     <value>Priority</value>
   </data>
-  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+  <data name="filesPriorityCol.Width" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="filesListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -2010,49 +1968,49 @@
   <data name="&gt;&gt;filesTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
+  <data name="peersIpAddressCol.Text" xml:space="preserve">
     <value>IP Address</value>
   </data>
-  <data name="columnHeader23.Width" type="System.Int32, mscorlib">
+  <data name="peersIpAddressCol.Width" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
+  <data name="peersHostnameCol.Text" xml:space="preserve">
     <value>Hostname</value>
   </data>
-  <data name="columnHeader24.Width" type="System.Int32, mscorlib">
+  <data name="peersHostnameCol.Width" type="System.Int32, mscorlib">
     <value>280</value>
   </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
+  <data name="peersCountryCol.Text" xml:space="preserve">
     <value>Country</value>
   </data>
-  <data name="columnHeader25.Width" type="System.Int32, mscorlib">
+  <data name="peersCountryCol.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
+  <data name="peersFlagsCol.Text" xml:space="preserve">
     <value>Flags</value>
   </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
+  <data name="peersClientCol.Text" xml:space="preserve">
     <value>Client</value>
   </data>
-  <data name="columnHeader26.Width" type="System.Int32, mscorlib">
+  <data name="peersClientCol.Width" type="System.Int32, mscorlib">
     <value>130</value>
   </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
+  <data name="peersProgressCol.Text" xml:space="preserve">
     <value>Progress</value>
   </data>
-  <data name="columnHeader27.Width" type="System.Int32, mscorlib">
+  <data name="peersProgressCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
+  <data name="peersDownSpeedCol.Text" xml:space="preserve">
     <value>Down Speed</value>
   </data>
-  <data name="columnHeader28.Width" type="System.Int32, mscorlib">
+  <data name="peersDownSpeedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
+  <data name="peersUpSpeedCol.Text" xml:space="preserve">
     <value>Up Speed</value>
   </data>
-  <data name="columnHeader29.Width" type="System.Int32, mscorlib">
+  <data name="peersUpSpeedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="peersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3727,178 +3685,178 @@
   <data name="&gt;&gt;stateListBoxImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
-    <value>columnHeader6</value>
+  <data name="&gt;&gt;torrentNameCol.Name" xml:space="preserve">
+    <value>torrentNameCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentNameCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
-    <value>columnHeader7</value>
+  <data name="&gt;&gt;torrentNoCol.Name" xml:space="preserve">
+    <value>torrentNoCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentNoCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
-    <value>columnHeader8</value>
+  <data name="&gt;&gt;torrentSizeCol.Name" xml:space="preserve">
+    <value>torrentSizeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentSizeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
-    <value>columnHeader9</value>
+  <data name="&gt;&gt;torrentDoneCol.Name" xml:space="preserve">
+    <value>torrentDoneCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentDoneCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
-    <value>columnHeader10</value>
+  <data name="&gt;&gt;torrentStatusCol.Name" xml:space="preserve">
+    <value>torrentStatusCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentStatusCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
-    <value>columnHeader11</value>
+  <data name="&gt;&gt;torrentSeedsCol.Name" xml:space="preserve">
+    <value>torrentSeedsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentSeedsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
-    <value>columnHeader12</value>
+  <data name="&gt;&gt;torrentLeechersCol.Name" xml:space="preserve">
+    <value>torrentLeechersCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentLeechersCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Name" xml:space="preserve">
-    <value>columnHeader13</value>
+  <data name="&gt;&gt;torrentDownSpeedCol.Name" xml:space="preserve">
+    <value>torrentDownSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentDownSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Name" xml:space="preserve">
-    <value>columnHeader14</value>
+  <data name="&gt;&gt;torrentUpSpeedCol.Name" xml:space="preserve">
+    <value>torrentUpSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentUpSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
-    <value>columnHeader15</value>
+  <data name="&gt;&gt;torrentEtaCol.Name" xml:space="preserve">
+    <value>torrentEtaCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentEtaCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Name" xml:space="preserve">
-    <value>columnHeader16</value>
+  <data name="&gt;&gt;torrentUploadedCol.Name" xml:space="preserve">
+    <value>torrentUploadedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentUploadedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Name" xml:space="preserve">
-    <value>columnHeader18</value>
+  <data name="&gt;&gt;torrentRatioCol.Name" xml:space="preserve">
+    <value>torrentRatioCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentRatioCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Name" xml:space="preserve">
-    <value>columnHeader19</value>
+  <data name="&gt;&gt;torrentAddedAt.Name" xml:space="preserve">
+    <value>torrentAddedAt</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentAddedAt.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader30.Name" xml:space="preserve">
-    <value>columnHeader30</value>
+  <data name="&gt;&gt;torrentCompletedAtCol.Name" xml:space="preserve">
+    <value>torrentCompletedAtCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader30.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentCompletedAtCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader37.Name" xml:space="preserve">
-    <value>columnHeader37</value>
+  <data name="&gt;&gt;torrentTrackerCol.Name" xml:space="preserve">
+    <value>torrentTrackerCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader37.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentTrackerCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
-    <value>columnHeader22</value>
+  <data name="&gt;&gt;trackersTierCol.Name" xml:space="preserve">
+    <value>trackersTierCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersTierCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Name" xml:space="preserve">
-    <value>columnHeader20</value>
+  <data name="&gt;&gt;trackersAnnounceUrlCol.Name" xml:space="preserve">
+    <value>trackersAnnounceUrlCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersAnnounceUrlCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Name" xml:space="preserve">
-    <value>columnHeader21</value>
+  <data name="&gt;&gt;trackersStatusCol.Name" xml:space="preserve">
+    <value>trackersStatusCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersStatusCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader33.Name" xml:space="preserve">
-    <value>columnHeader33</value>
+  <data name="&gt;&gt;trackersUpdateInCol.Name" xml:space="preserve">
+    <value>trackersUpdateInCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader33.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersUpdateInCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader34.Name" xml:space="preserve">
-    <value>columnHeader34</value>
+  <data name="&gt;&gt;trackersSeedsCol.Name" xml:space="preserve">
+    <value>trackersSeedsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader34.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersSeedsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader35.Name" xml:space="preserve">
-    <value>columnHeader35</value>
+  <data name="&gt;&gt;trackersLeechersCol.Name" xml:space="preserve">
+    <value>trackersLeechersCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader35.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersLeechersCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader36.Name" xml:space="preserve">
-    <value>columnHeader36</value>
+  <data name="&gt;&gt;trackersDownloadedCol.Name" xml:space="preserve">
+    <value>trackersDownloadedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader36.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersDownloadedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
-    <value>columnHeader1</value>
+  <data name="&gt;&gt;filesPathCol.Name" xml:space="preserve">
+    <value>filesPathCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPathCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader32.Name" xml:space="preserve">
-    <value>columnHeader32</value>
+  <data name="&gt;&gt;filesTypeCol.Name" xml:space="preserve">
+    <value>filesTypeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader32.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesTypeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
+  <data name="&gt;&gt;filesSizeCol.Name" xml:space="preserve">
+    <value>filesSizeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSizeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
+  <data name="&gt;&gt;filesDoneCol.Name" xml:space="preserve">
+    <value>filesDoneCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesDoneCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
+  <data name="&gt;&gt;filesPercentCol.Name" xml:space="preserve">
+    <value>filesPercentCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPercentCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Name" xml:space="preserve">
-    <value>columnHeader17</value>
+  <data name="&gt;&gt;filesSkipCol.Name" xml:space="preserve">
+    <value>filesSkipCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSkipCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
-    <value>columnHeader5</value>
+  <data name="&gt;&gt;filesPriorityCol.Name" xml:space="preserve">
+    <value>filesPriorityCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPriorityCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileIconImageList.Name" xml:space="preserve">
@@ -3907,52 +3865,52 @@
   <data name="&gt;&gt;fileIconImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
-    <value>columnHeader23</value>
+  <data name="&gt;&gt;peersIpAddressCol.Name" xml:space="preserve">
+    <value>peersIpAddressCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersIpAddressCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Name" xml:space="preserve">
-    <value>columnHeader24</value>
+  <data name="&gt;&gt;peersHostnameCol.Name" xml:space="preserve">
+    <value>peersHostnameCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersHostnameCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader25.Name" xml:space="preserve">
-    <value>columnHeader25</value>
+  <data name="&gt;&gt;peersCountryCol.Name" xml:space="preserve">
+    <value>peersCountryCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader25.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersCountryCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader31.Name" xml:space="preserve">
-    <value>columnHeader31</value>
+  <data name="&gt;&gt;peersFlagsCol.Name" xml:space="preserve">
+    <value>peersFlagsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader31.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersFlagsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader26.Name" xml:space="preserve">
-    <value>columnHeader26</value>
+  <data name="&gt;&gt;peersClientCol.Name" xml:space="preserve">
+    <value>peersClientCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader26.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersClientCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader27.Name" xml:space="preserve">
-    <value>columnHeader27</value>
+  <data name="&gt;&gt;peersProgressCol.Name" xml:space="preserve">
+    <value>peersProgressCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader27.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersProgressCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader28.Name" xml:space="preserve">
-    <value>columnHeader28</value>
+  <data name="&gt;&gt;peersDownSpeedCol.Name" xml:space="preserve">
+    <value>peersDownSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader28.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersDownSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader29.Name" xml:space="preserve">
-    <value>columnHeader29</value>
+  <data name="&gt;&gt;peersUpSpeedCol.Name" xml:space="preserve">
+    <value>peersUpSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader29.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersUpSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabControlImageList.Name" xml:space="preserve">
