@@ -82,7 +82,7 @@ namespace TransmissionRemoteDotnet
         {
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTREMOVE);
             JsonObject arguments = GetArgObject(request);
-            if (delete && Program.DaemonDescriptor.Revision >= 7331)
+            if (delete && Program.DaemonDescriptor.Version >= 1.5)
             {
                 arguments.Put(ProtocolConstants.FIELD_DELETELOCALDATA, true);
             }

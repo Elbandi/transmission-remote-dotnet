@@ -34,6 +34,14 @@ namespace TransmissionRemoteDotnet
 {
     public class Toolbox
     {
+        public enum MaxSize
+        {
+            msByte = 1,
+            msKilo,
+            msMega,
+            msGiga,
+            msTera
+        }
         private const int STRIPE_OFFSET = 15;
         public static readonly IFormatProvider NUMBER_FORMAT = (new CultureInfo("en-US")).NumberFormat;
         static byte[] trueBitCount = new byte[] {
@@ -371,22 +379,32 @@ namespace TransmissionRemoteDotnet
 
         public static string GetFileSize(long bytes)
         {
-            if (bytes >= 1073741824)
+            return GetFileSize(bytes, MaxSize.msGiga);
+        }
+
+        public static string GetFileSize(long bytes, MaxSize maxsize)
+        {
+            if (bytes >= 1099511627776 && maxsize >= MaxSize.msTera)
+            {
+                Decimal size = Decimal.Divide(bytes, 1099511627776);
+                return String.Format("{0:##.##} {1}", size, OtherStrings.TerabyteShort);
+            }
+            else if (bytes >= 1073741824 && maxsize >= MaxSize.msGiga)
             {
                 Decimal size = Decimal.Divide(bytes, 1073741824);
                 return String.Format("{0:##.##} {1}", size, OtherStrings.GigabyteShort);
             }
-            else if (bytes >= 1048576)
+            else if (bytes >= 1048576 && maxsize >= MaxSize.msMega)
             {
                 Decimal size = Decimal.Divide(bytes, 1048576);
                 return String.Format("{0:##.##} {1}", size, OtherStrings.MegabyteShort);
             }
-            else if (bytes >= 1024)
+            else if (bytes >= 1024 && maxsize >= MaxSize.msKilo)
             {
                 Decimal size = Decimal.Divide(bytes, 1024);
                 return String.Format("{0:##.##} {1}", size, OtherStrings.KilobyteShort);
             }
-            else if (bytes > 0 & bytes < 1024)
+            else if ((bytes > 0) && maxsize >= MaxSize.msByte)
             {
                 Decimal size = bytes;
                 return String.Format("{0:##.##} {1}", size, OtherStrings.Byte[0]);
