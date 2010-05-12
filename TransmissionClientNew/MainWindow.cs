@@ -1193,7 +1193,7 @@ namespace TransmissionRemoteDotnet
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
                     = hashLabel.Text = piecesInfoLabel.Text = locationLabel.Text
-                    = generalTorrentNameGroupBox.Text = "";
+                    = generalTorrentNameGroupBox.Text = totalSizeLabel.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
                    = "N/A";
@@ -1766,14 +1766,16 @@ namespace TransmissionRemoteDotnet
                 piecesInfoLabel.Text = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
             locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
-            if (t.IsFinished)
+            if (t.TotalSize == t.SizeWhenDone)
             {
-                downloadedLabel.Text = t.HaveTotalString;
+                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             }
             else
             {
-                downloadedLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
+                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidTotalSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid), Toolbox.GetFileSize(t.TotalSize));
             }
+            //totalSizeLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
+            downloadedLabel.Text = Toolbox.GetFileSize(t.Downloaded);
             downloadSpeedLabel.Text = t.DownloadRateString;
             downloadLimitLabel.Text = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
             statusLabel.Text = t.Status;

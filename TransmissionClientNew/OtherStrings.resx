@@ -508,4 +508,10 @@
     <value>Byte|Kilobyte|Metabyte|Gigabyte|Terabyte</value>
     <comment>delim with | char!!</comment>
   </data>
+  <data name="TotalDoneValidSize" xml:space="preserve">
+    <value>{0} ({1} done) ({2} valid)</value>
+  </data>
+  <data name="TotalDoneValidTotalSize" xml:space="preserve">
+    <value>{0} ({1} done) ({2} valid) ({3} total)</value>
+  </data>
 </root>

@@ -666,6 +666,14 @@ namespace TransmissionRemoteDotnet
             set;
         }
 
+        public string HaveTotalString
+        {
+            get
+            {
+                return Toolbox.GetFileSize(this.HaveTotal);
+            }
+        }
+
         public long HaveValid
         {
             get;
@@ -684,14 +692,6 @@ namespace TransmissionRemoteDotnet
         {
             get;
             set;
-        }
-
-        public string HaveTotalString
-        {
-            get
-            {
-                return Toolbox.GetFileSize(this.HaveTotal);
-            }
         }
 
         public long DownloadRate

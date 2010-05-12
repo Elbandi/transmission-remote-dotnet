@@ -60,6 +60,8 @@ namespace TransmissionRemoteDotnet
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.generalTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
+            this.totalSizeLabel = new TransmissionRemoteDotnet.SelectableLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.locationLabelLabel = new System.Windows.Forms.Label();
             this.locationLabel = new TransmissionRemoteDotnet.SelectableLabel();
             this.piecesInfoLabel = new TransmissionRemoteDotnet.SelectableLabel();
@@ -474,6 +476,8 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.generalTorrentNameGroupBox, "generalTorrentNameGroupBox");
             this.generalTableLayoutPanel.SetColumnSpan(this.generalTorrentNameGroupBox, 3);
+            this.generalTorrentNameGroupBox.Controls.Add(this.totalSizeLabel);
+            this.generalTorrentNameGroupBox.Controls.Add(this.label1);
             this.generalTorrentNameGroupBox.Controls.Add(this.locationLabelLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.locationLabel);
             this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabel);
@@ -516,6 +520,18 @@ namespace TransmissionRemoteDotnet
             this.generalTorrentNameGroupBox.Controls.Add(this.timeElapsedLabelLabel);
             this.generalTorrentNameGroupBox.Name = "generalTorrentNameGroupBox";
             this.generalTorrentNameGroupBox.TabStop = false;
+            // 
+            // totalSizeLabel
+            // 
+            this.totalSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.totalSizeLabel, "totalSizeLabel");
+            this.totalSizeLabel.Name = "totalSizeLabel";
+            this.totalSizeLabel.ReadOnly = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // locationLabelLabel
             // 
@@ -1923,5 +1939,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ImageList stateListBoxImageList;
         private System.Windows.Forms.ImageList toolStripImageList;
         private System.Windows.Forms.ImageList trayIconImageList;
+        private SelectableLabel totalSizeLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

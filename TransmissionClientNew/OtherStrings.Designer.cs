@@ -1033,6 +1033,24 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} ({1} done) ({2} valid).
+        /// </summary>
+        internal static string TotalDoneValidSize {
+            get {
+                return ResourceManager.GetString("TotalDoneValidSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} ({1} done) ({2} valid) ({3} total).
+        /// </summary>
+        internal static string TotalDoneValidTotalSize {
+            get {
+                return ResourceManager.GetString("TotalDoneValidTotalSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to open.
         /// </summary>
         internal static string UnableToOpen {
