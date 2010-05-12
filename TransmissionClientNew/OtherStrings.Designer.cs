@@ -1069,7 +1069,7 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Byte|Kilobyte|Metabyte|Gigabyte|Terabyte.
+        ///   Looks up a localized string similar to Byte|Kilobyte|Megabyte|Gigabyte|Terabyte.
         /// </summary>
         internal static string UnitFactors {
             get {

@@ -505,7 +505,7 @@
     <value>TB</value>
   </data>
   <data name="UnitFactors" xml:space="preserve">
-    <value>Byte|Kilobyte|Metabyte|Gigabyte|Terabyte</value>
+    <value>Byte|Kilobyte|Megabyte|Gigabyte|Terabyte</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="TotalDoneValidSize" xml:space="preserve">
