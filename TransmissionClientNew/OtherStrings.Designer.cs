@@ -1051,6 +1051,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to run plink.
+        /// </summary>
+        internal static string UnableRunPlink {
+            get {
+                return ResourceManager.GetString("UnableRunPlink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to open.
         /// </summary>
         internal static string UnableToOpen {

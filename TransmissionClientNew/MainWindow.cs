@@ -2114,7 +2114,7 @@ namespace TransmissionRemoteDotnet
                     Process.Start(
                         Program.Settings.PlinkPath,
                         String.Format(
-                            "\"{0}\" \"{1}\"",
+                            "-t \"{0}\" \"{1}\"",
                             Program.Settings.Current.Host,
                             String.Format(
                                 Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
@@ -2123,7 +2123,7 @@ namespace TransmissionRemoteDotnet
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Unable to run plink", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, OtherStrings.UnableRunPlink, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
