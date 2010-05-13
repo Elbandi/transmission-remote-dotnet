@@ -1748,7 +1748,7 @@ namespace TransmissionRemoteDotnet
                 }
                 trackersListView.EndUpdate();
             }
-            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : (t.Eta > 0 ? t.LongEta : "");
             label4.Text = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
