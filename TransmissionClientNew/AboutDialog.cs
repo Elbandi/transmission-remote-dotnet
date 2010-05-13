@@ -43,7 +43,7 @@ namespace TransmissionRemoteDotnet
             this.tableLayoutPanel.ColumnStyles[0].Width = this.labelProductName.Width + 8;
             LinkLabel.Link hl = new LinkLabel.Link();
             hl.Description = "desc";
-            hl.LinkData = hl.Name  = "http://code.google.com/p/transmission-remote-dotnet";
+            hl.LinkData = hl.Name = "http://code.google.com/p/transmission-remote-dotnet";
             hl.Start = labelHomepageLink.Text.Length + 1;
             hl.Length = hl.Name.Length;
             labelHomepageLink.Text += " " + hl.Name;
@@ -113,7 +113,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public Version AssemblyVersion
+        public static Version AssemblyVersion
         {
             get
             {
@@ -121,7 +121,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public string AssemblyDescription
+        public static string AssemblyDescription
         {
             get
             {
@@ -134,7 +134,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public string AssemblyProduct
+        public static string AssemblyProduct
         {
             get
             {
@@ -147,7 +147,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public string AssemblyCopyright
+        public static string AssemblyCopyright
         {
             get
             {
@@ -160,7 +160,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public string AssemblyCompany
+        public static string AssemblyCompany
         {
             get
             {
