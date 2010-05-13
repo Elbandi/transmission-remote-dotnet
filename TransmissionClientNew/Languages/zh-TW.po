@@ -262,10 +262,20 @@ msgstr "保存"
 msgid "Save Server"
 msgstr ""
 
+#: LocalSettingsDialog~StartOnSystemCheckBox.Text
+#, csharp-format
+msgid "Start on system startup"
+msgstr ""
+
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
 msgid "Start torrents paused"
 msgstr "開始時暫停任務"
+
+#: LocalSettingsDialog~UpdateToBetaCheckBox.Text
+#, csharp-format
+msgid "Update to beta versions"
+msgstr ""
 
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
@@ -285,7 +295,7 @@ msgstr ""
 
 #: LocalSettingsDialog~columnFeedName.Text
 #: LocalSettingsDialog~columnName.Text
-#: MainWindow~columnHeader6.Text
+#: MainWindow~torrentNameCol.Text
 #, csharp-format
 msgid "Name"
 msgstr "名稱"
@@ -404,6 +414,11 @@ msgstr "上傳上限菜單項:"
 msgid "Download limit menu items:"
 msgstr "下載上限菜單項:"
 
+#: LocalSettingsDialog~label18.Text
+#, csharp-format
+msgid "Refresh rate when hidden:"
+msgstr ""
+
 #: LocalSettingsDialog~label2.Text
 #: LocalSettingsDialog~label7.Text
 #, csharp-format
@@ -516,7 +531,7 @@ msgstr ""
 
 #: MainWindow~RssButton.Text
 #, csharp-format
-msgid "Rss"
+msgid "Rss Downloader"
 msgstr ""
 
 #: MainWindow~aboutToolStripMenuItem.Text
@@ -571,159 +586,6 @@ msgstr "分類過濾面板"
 msgid "Check for new version"
 msgstr "檢查版本更新"
 
-#: MainWindow~columnHeader1.Text
-#: TorrentLoadDialog~columnHeader1.Text
-#, csharp-format
-msgid "Path"
-msgstr "路徑"
-
-#: MainWindow~columnHeader10.Text
-#: MainWindow~columnHeader34.Text
-#, csharp-format
-msgid "Seeds"
-msgstr "做種者"
-
-#: MainWindow~columnHeader11.Text
-#: MainWindow~columnHeader35.Text
-#, csharp-format
-msgid "Leechers"
-msgstr "下載者"
-
-#: MainWindow~columnHeader12.Text
-#: MainWindow~columnHeader28.Text
-#, csharp-format
-msgid "Down Speed"
-msgstr "下載速率"
-
-#: MainWindow~columnHeader13.Text
-#: MainWindow~columnHeader29.Text
-#, csharp-format
-msgid "Up Speed"
-msgstr "上傳速率"
-
-#: MainWindow~columnHeader14.Text
-#, csharp-format
-msgid "ETA"
-msgstr "剩餘時間"
-
-#: MainWindow~columnHeader15.Text
-#, csharp-format
-msgid "Uploaded"
-msgstr "已上傳"
-
-#: MainWindow~columnHeader16.Text
-#, csharp-format
-msgid "Ratio"
-msgstr "分享率"
-
-#: MainWindow~columnHeader17.Text
-#: OtherStrings~Skip
-#, csharp-format
-msgid "Skip"
-msgstr "忽略"
-
-#: MainWindow~columnHeader18.Text
-#, csharp-format
-msgid "Added At"
-msgstr "添加於"
-
-#: MainWindow~columnHeader19.Text
-#, csharp-format
-msgid "Completed At"
-msgstr "完成於"
-
-#: MainWindow~columnHeader2.Text
-#: MainWindow~columnHeader7.Text
-#: TorrentLoadDialog~columnHeader5.Text
-#, csharp-format
-msgid "Size"
-msgstr "大小"
-
-#: MainWindow~columnHeader20.Text
-#, csharp-format
-msgid "Announce URL"
-msgstr "通知 URL"
-
-#: MainWindow~columnHeader21.Text
-#: MainWindow~columnHeader9.Text
-#, csharp-format
-msgid "Status"
-msgstr "狀態"
-
-#: MainWindow~columnHeader22.Text
-#, csharp-format
-msgid "Tier"
-msgstr "層"
-
-#: MainWindow~columnHeader23.Text
-#, csharp-format
-msgid "IP Address"
-msgstr "IP地址"
-
-#: MainWindow~columnHeader24.Text
-#, csharp-format
-msgid "Hostname"
-msgstr "主機名"
-
-#: MainWindow~columnHeader25.Text
-#, csharp-format
-msgid "Country"
-msgstr "國家"
-
-#: MainWindow~columnHeader26.Text
-#, csharp-format
-msgid "Client"
-msgstr "用戶端"
-
-#: MainWindow~columnHeader27.Text
-#: OtherStrings~Progress
-#, csharp-format
-msgid "Progress"
-msgstr "進度"
-
-#: MainWindow~columnHeader3.Text
-#: MainWindow~columnHeader8.Text
-#, csharp-format
-msgid "Done"
-msgstr "完成"
-
-#: MainWindow~columnHeader30.Text
-#, csharp-format
-msgid "Tracker"
-msgstr "伺服器"
-
-#: MainWindow~columnHeader31.Text
-#, csharp-format
-msgid "Flags"
-msgstr "標誌"
-
-#: MainWindow~columnHeader32.Text
-#: TorrentLoadDialog~columnHeader4.Text
-#, csharp-format
-msgid "Type"
-msgstr "類型"
-
-#: MainWindow~columnHeader33.Text
-#, csharp-format
-msgid "Update In"
-msgstr ""
-
-#: MainWindow~columnHeader36.Text
-#, csharp-format
-msgid "Downloaded"
-msgstr ""
-
-#: MainWindow~columnHeader4.Text
-#, csharp-format
-msgid "%"
-msgstr ""
-
-#: MainWindow~columnHeader5.Text
-#: TorrentLoadDialog~columnHeader3.Text
-#, csharp-format
-msgid "Priority"
-msgstr "優先順序"
-
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
@@ -755,15 +617,62 @@ msgstr "已下載:"
 msgid "Exit"
 msgstr "退出"
 
+#: MainWindow~exportLocalSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Export local settings..."
+msgstr ""
+
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format
 msgid "File"
 msgstr "文件"
 
+#: MainWindow~filesDoneCol.Text
+#: MainWindow~torrentDoneCol.Text
+#, csharp-format
+msgid "Done"
+msgstr "完成"
+
+#: MainWindow~filesPathCol.Text
+#: TorrentLoadDialog~columnHeader1.Text
+#, csharp-format
+msgid "Path"
+msgstr "路徑"
+
+#: MainWindow~filesPercentCol.Text
+#, csharp-format
+msgid "%"
+msgstr ""
+
+#: MainWindow~filesPriorityCol.Text
+#: TorrentLoadDialog~columnHeader3.Text
+#, csharp-format
+msgid "Priority"
+msgstr "優先順序"
+
+#: MainWindow~filesSizeCol.Text
+#: MainWindow~torrentSizeCol.Text
+#: TorrentLoadDialog~columnHeader5.Text
+#, csharp-format
+msgid "Size"
+msgstr "大小"
+
+#: MainWindow~filesSkipCol.Text
+#: OtherStrings~Skip
+#, csharp-format
+msgid "Skip"
+msgstr "忽略"
+
 #: MainWindow~filesTabPage.Text
 #, csharp-format
 msgid "Files"
 msgstr "文件"
+
+#: MainWindow~filesTypeCol.Text
+#: TorrentLoadDialog~columnHeader4.Text
+#, csharp-format
+msgid "Type"
+msgstr "類型"
 
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
@@ -791,6 +700,16 @@ msgstr ""
 #, csharp-format
 msgid "Help"
 msgstr "説明"
+
+#: MainWindow~importLocalSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Import local settings..."
+msgstr ""
+
+#: MainWindow~label1.Text
+#, csharp-format
+msgid "Total size:"
+msgstr ""
 
 #: MainWindow~label10.Text
 #, csharp-format
@@ -938,10 +857,53 @@ msgstr "暫停"
 msgid "Pause torrent(s)"
 msgstr "暫停任務"
 
+#: MainWindow~peersClientCol.Text
+#, csharp-format
+msgid "Client"
+msgstr "用戶端"
+
+#: MainWindow~peersCountryCol.Text
+#, csharp-format
+msgid "Country"
+msgstr "國家"
+
+#: MainWindow~peersDownSpeedCol.Text
+#: MainWindow~torrentDownSpeedCol.Text
+#, csharp-format
+msgid "Down Speed"
+msgstr "下載速率"
+
+#: MainWindow~peersFlagsCol.Text
+#, csharp-format
+msgid "Flags"
+msgstr "標誌"
+
+#: MainWindow~peersHostnameCol.Text
+#, csharp-format
+msgid "Hostname"
+msgstr "主機名"
+
+#: MainWindow~peersIpAddressCol.Text
+#, csharp-format
+msgid "IP Address"
+msgstr "IP地址"
+
+#: MainWindow~peersProgressCol.Text
+#: OtherStrings~Progress
+#, csharp-format
+msgid "Progress"
+msgstr "進度"
+
 #: MainWindow~peersTabPage.Text
 #, csharp-format
 msgid "Peers"
 msgstr "用戶"
+
+#: MainWindow~peersUpSpeedCol.Text
+#: MainWindow~torrentUpSpeedCol.Text
+#, csharp-format
+msgid "Up Speed"
+msgstr "上傳速率"
 
 #: MainWindow~percentageLabel.Text
 #, csharp-format
@@ -1083,16 +1045,89 @@ msgstr "運行時間:"
 msgid "toolStripContainer1"
 msgstr ""
 
+#: MainWindow~torrentAddedAt.Text
+#, csharp-format
+msgid "Added At"
+msgstr "添加於"
+
+#: MainWindow~torrentCompletedAtCol.Text
+#, csharp-format
+msgid "Completed At"
+msgstr "完成於"
+
+#: MainWindow~torrentEtaCol.Text
+#, csharp-format
+msgid "ETA"
+msgstr "剩餘時間"
+
+#: MainWindow~torrentLeechersCol.Text
+#: MainWindow~trackersLeechersCol.Text
+#, csharp-format
+msgid "Leechers"
+msgstr "下載者"
+
+#: MainWindow~torrentNoCol.Text
+#, csharp-format
+msgid "#"
+msgstr ""
+
+#: MainWindow~torrentRatioCol.Text
+#, csharp-format
+msgid "Ratio"
+msgstr "分享率"
+
+#: MainWindow~torrentSeedsCol.Text
+#: MainWindow~trackersSeedsCol.Text
+#, csharp-format
+msgid "Seeds"
+msgstr "做種者"
+
+#: MainWindow~torrentStatusCol.Text
+#: MainWindow~trackersStatusCol.Text
+#, csharp-format
+msgid "Status"
+msgstr "狀態"
+
 #: MainWindow~torrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Torrent"
 msgstr "任務"
+
+#: MainWindow~torrentTrackerCol.Text
+#, csharp-format
+msgid "Tracker"
+msgstr "伺服器"
+
+#: MainWindow~torrentUploadedCol.Text
+#, csharp-format
+msgid "Uploaded"
+msgstr "已上傳"
+
+#: MainWindow~trackersAnnounceUrlCol.Text
+#, csharp-format
+msgid "Announce URL"
+msgstr "通知 URL"
+
+#: MainWindow~trackersDownloadedCol.Text
+#, csharp-format
+msgid "Downloaded"
+msgstr ""
 
 #: MainWindow~trackersTabPage.Text
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
 msgstr "伺服器"
+
+#: MainWindow~trackersTierCol.Text
+#, csharp-format
+msgid "Tier"
+msgstr "層"
+
+#: MainWindow~trackersUpdateInCol.Text
+#, csharp-format
+msgid "Update In"
+msgstr ""
 
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
@@ -1534,6 +1569,11 @@ msgstr "選擇所有"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr ""
 
+#: OtherStrings~TerabyteShort
+#, csharp-format
+msgid "TB"
+msgstr ""
+
 #: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
 msgid "This torrent is now complete"
@@ -1549,6 +1589,21 @@ msgstr ""
 msgid "Torrents"
 msgstr "任務"
 
+#: OtherStrings~TotalDoneValidSize
+#, csharp-format
+msgid "{0} ({1} done) ({2} valid)"
+msgstr ""
+
+#: OtherStrings~TotalDoneValidTotalSize
+#, csharp-format
+msgid "{0} ({1} done) ({2} valid) ({3} total)"
+msgstr ""
+
+#: OtherStrings~UnableRunPlink
+#, csharp-format
+msgid "Unable to run plink"
+msgstr ""
+
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
@@ -1558,6 +1613,11 @@ msgstr ""
 #, csharp-format
 msgid "Unable to parse the server response"
 msgstr "無法解析伺服器回應"
+
+#: OtherStrings~UnitFactors
+#, csharp-format
+msgid "Byte|Kilobyte|Megabyte|Gigabyte|Terabyte"
+msgstr ""
 
 #: OtherStrings~UnixPathExists
 #, csharp-format
@@ -1634,6 +1694,11 @@ msgstr "{1}個中的{0}個 已連接"
 msgid "Yes"
 msgstr ""
 
+#: RemoteSettingsDialog~LpdEnabledCheckBox.Text
+#, csharp-format
+msgid "Enable Local Peer Discovery"
+msgstr ""
+
 #: RemoteSettingsDialog~PEXcheckBox.Text
 #, csharp-format
 msgid "Enable Peer Exchange"
@@ -1673,6 +1738,11 @@ msgstr "優先"
 #, csharp-format
 msgid "required"
 msgstr "必須"
+
+#: RemoteSettingsDialog~incompleteToCheckBox.Text
+#, csharp-format
+msgid "Incomplete download to:"
+msgstr ""
 
 #: RemoteSettingsDialog~label1.Text
 #, csharp-format
@@ -1809,6 +1879,11 @@ msgstr "活動時間:"
 #, csharp-format
 msgid "Session Count"
 msgstr "會話次數:"
+
+#: StatsDialog~unitFactorLabel.Text
+#, csharp-format
+msgid "Unit factor:"
+msgstr ""
 
 #: StatsDialog~uploadedBytesLabel1.Text
 #: StatsDialog~uploadedBytesLabel2.Text

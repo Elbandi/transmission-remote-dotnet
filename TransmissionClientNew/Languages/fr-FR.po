@@ -262,10 +262,20 @@ msgstr "Sauvegarder"
 msgid "Save Server"
 msgstr ""
 
+#: LocalSettingsDialog~StartOnSystemCheckBox.Text
+#, csharp-format
+msgid "Start on system startup"
+msgstr ""
+
 #: LocalSettingsDialog~StartPausedCheckBox.Text
 #, csharp-format
 msgid "Start torrents paused"
 msgstr "Démarrer les torrents en pause"
+
+#: LocalSettingsDialog~UpdateToBetaCheckBox.Text
+#, csharp-format
+msgid "Update to beta versions"
+msgstr ""
 
 #: LocalSettingsDialog~UploadPromptCheckBox.Text
 #, csharp-format
@@ -285,7 +295,7 @@ msgstr ""
 
 #: LocalSettingsDialog~columnFeedName.Text
 #: LocalSettingsDialog~columnName.Text
-#: MainWindow~columnHeader6.Text
+#: MainWindow~torrentNameCol.Text
 #, csharp-format
 msgid "Name"
 msgstr "Nom"
@@ -404,6 +414,11 @@ msgstr ""
 msgid "Download limit menu items:"
 msgstr ""
 
+#: LocalSettingsDialog~label18.Text
+#, csharp-format
+msgid "Refresh rate when hidden:"
+msgstr ""
+
 #: LocalSettingsDialog~label2.Text
 #: LocalSettingsDialog~label7.Text
 #, csharp-format
@@ -516,7 +531,7 @@ msgstr ""
 
 #: MainWindow~RssButton.Text
 #, csharp-format
-msgid "Rss"
+msgid "Rss Downloader"
 msgstr ""
 
 #: MainWindow~aboutToolStripMenuItem.Text
@@ -571,159 +586,6 @@ msgstr ""
 msgid "Check for new version"
 msgstr "Vérifier les mises à jour"
 
-#: MainWindow~columnHeader1.Text
-#: TorrentLoadDialog~columnHeader1.Text
-#, csharp-format
-msgid "Path"
-msgstr "Chemin"
-
-#: MainWindow~columnHeader10.Text
-#: MainWindow~columnHeader34.Text
-#, csharp-format
-msgid "Seeds"
-msgstr "Sources"
-
-#: MainWindow~columnHeader11.Text
-#: MainWindow~columnHeader35.Text
-#, csharp-format
-msgid "Leechers"
-msgstr "Clients"
-
-#: MainWindow~columnHeader12.Text
-#: MainWindow~columnHeader28.Text
-#, csharp-format
-msgid "Down Speed"
-msgstr "Taux de réception"
-
-#: MainWindow~columnHeader13.Text
-#: MainWindow~columnHeader29.Text
-#, csharp-format
-msgid "Up Speed"
-msgstr "Taux d'émission"
-
-#: MainWindow~columnHeader14.Text
-#, csharp-format
-msgid "ETA"
-msgstr "Estimé"
-
-#: MainWindow~columnHeader15.Text
-#, csharp-format
-msgid "Uploaded"
-msgstr "Envoyé"
-
-#: MainWindow~columnHeader16.Text
-#, csharp-format
-msgid "Ratio"
-msgstr ""
-
-#: MainWindow~columnHeader17.Text
-#: OtherStrings~Skip
-#, csharp-format
-msgid "Skip"
-msgstr "Passer"
-
-#: MainWindow~columnHeader18.Text
-#, csharp-format
-msgid "Added At"
-msgstr "Ajouté le"
-
-#: MainWindow~columnHeader19.Text
-#, csharp-format
-msgid "Completed At"
-msgstr "Complété le"
-
-#: MainWindow~columnHeader2.Text
-#: MainWindow~columnHeader7.Text
-#: TorrentLoadDialog~columnHeader5.Text
-#, csharp-format
-msgid "Size"
-msgstr "Taille"
-
-#: MainWindow~columnHeader20.Text
-#, csharp-format
-msgid "Announce URL"
-msgstr "URL d'annonce"
-
-#: MainWindow~columnHeader21.Text
-#: MainWindow~columnHeader9.Text
-#, csharp-format
-msgid "Status"
-msgstr "Etat"
-
-#: MainWindow~columnHeader22.Text
-#, csharp-format
-msgid "Tier"
-msgstr "Tiers"
-
-#: MainWindow~columnHeader23.Text
-#, csharp-format
-msgid "IP Address"
-msgstr "Adresse IP"
-
-#: MainWindow~columnHeader24.Text
-#, csharp-format
-msgid "Hostname"
-msgstr "Nom d'hôte"
-
-#: MainWindow~columnHeader25.Text
-#, csharp-format
-msgid "Country"
-msgstr "Pays"
-
-#: MainWindow~columnHeader26.Text
-#, csharp-format
-msgid "Client"
-msgstr ""
-
-#: MainWindow~columnHeader27.Text
-#: OtherStrings~Progress
-#, csharp-format
-msgid "Progress"
-msgstr "Avancement"
-
-#: MainWindow~columnHeader3.Text
-#: MainWindow~columnHeader8.Text
-#, csharp-format
-msgid "Done"
-msgstr "Terminé"
-
-#: MainWindow~columnHeader30.Text
-#, csharp-format
-msgid "Tracker"
-msgstr ""
-
-#: MainWindow~columnHeader31.Text
-#, csharp-format
-msgid "Flags"
-msgstr ""
-
-#: MainWindow~columnHeader32.Text
-#: TorrentLoadDialog~columnHeader4.Text
-#, csharp-format
-msgid "Type"
-msgstr ""
-
-#: MainWindow~columnHeader33.Text
-#, csharp-format
-msgid "Update In"
-msgstr ""
-
-#: MainWindow~columnHeader36.Text
-#, csharp-format
-msgid "Downloaded"
-msgstr ""
-
-#: MainWindow~columnHeader4.Text
-#, csharp-format
-msgid "%"
-msgstr ""
-
-#: MainWindow~columnHeader5.Text
-#: TorrentLoadDialog~columnHeader3.Text
-#, csharp-format
-msgid "Priority"
-msgstr "Priorité"
-
 #: MainWindow~configureTorrentButton.Text
 #: MainWindow~configureTorrentButton.ToolTipText
 #, csharp-format
@@ -755,15 +617,62 @@ msgstr "Téléchargé :"
 msgid "Exit"
 msgstr "Sortir"
 
+#: MainWindow~exportLocalSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Export local settings..."
+msgstr ""
+
 #: MainWindow~fileToolStripMenuItem.Text
 #, csharp-format
 msgid "File"
 msgstr "Fichier"
 
+#: MainWindow~filesDoneCol.Text
+#: MainWindow~torrentDoneCol.Text
+#, csharp-format
+msgid "Done"
+msgstr "Terminé"
+
+#: MainWindow~filesPathCol.Text
+#: TorrentLoadDialog~columnHeader1.Text
+#, csharp-format
+msgid "Path"
+msgstr "Chemin"
+
+#: MainWindow~filesPercentCol.Text
+#, csharp-format
+msgid "%"
+msgstr ""
+
+#: MainWindow~filesPriorityCol.Text
+#: TorrentLoadDialog~columnHeader3.Text
+#, csharp-format
+msgid "Priority"
+msgstr "Priorité"
+
+#: MainWindow~filesSizeCol.Text
+#: MainWindow~torrentSizeCol.Text
+#: TorrentLoadDialog~columnHeader5.Text
+#, csharp-format
+msgid "Size"
+msgstr "Taille"
+
+#: MainWindow~filesSkipCol.Text
+#: OtherStrings~Skip
+#, csharp-format
+msgid "Skip"
+msgstr "Passer"
+
 #: MainWindow~filesTabPage.Text
 #, csharp-format
 msgid "Files"
 msgstr "Fichiers"
+
+#: MainWindow~filesTypeCol.Text
+#: TorrentLoadDialog~columnHeader4.Text
+#, csharp-format
+msgid "Type"
+msgstr ""
 
 #: MainWindow~findToolStripMenuItem.Text
 #, csharp-format
@@ -791,6 +700,16 @@ msgstr ""
 #, csharp-format
 msgid "Help"
 msgstr "Aide"
+
+#: MainWindow~importLocalSettingsToolStripMenuItem.Text
+#, csharp-format
+msgid "Import local settings..."
+msgstr ""
+
+#: MainWindow~label1.Text
+#, csharp-format
+msgid "Total size:"
+msgstr ""
 
 #: MainWindow~label10.Text
 #, csharp-format
@@ -938,10 +857,53 @@ msgstr ""
 msgid "Pause torrent(s)"
 msgstr "Pause le(s) torrent(s)"
 
+#: MainWindow~peersClientCol.Text
+#, csharp-format
+msgid "Client"
+msgstr ""
+
+#: MainWindow~peersCountryCol.Text
+#, csharp-format
+msgid "Country"
+msgstr "Pays"
+
+#: MainWindow~peersDownSpeedCol.Text
+#: MainWindow~torrentDownSpeedCol.Text
+#, csharp-format
+msgid "Down Speed"
+msgstr "Taux de réception"
+
+#: MainWindow~peersFlagsCol.Text
+#, csharp-format
+msgid "Flags"
+msgstr ""
+
+#: MainWindow~peersHostnameCol.Text
+#, csharp-format
+msgid "Hostname"
+msgstr "Nom d'hôte"
+
+#: MainWindow~peersIpAddressCol.Text
+#, csharp-format
+msgid "IP Address"
+msgstr "Adresse IP"
+
+#: MainWindow~peersProgressCol.Text
+#: OtherStrings~Progress
+#, csharp-format
+msgid "Progress"
+msgstr "Avancement"
+
 #: MainWindow~peersTabPage.Text
 #, csharp-format
 msgid "Peers"
 msgstr "Sources"
+
+#: MainWindow~peersUpSpeedCol.Text
+#: MainWindow~torrentUpSpeedCol.Text
+#, csharp-format
+msgid "Up Speed"
+msgstr "Taux d'émission"
 
 #: MainWindow~percentageLabel.Text
 #, csharp-format
@@ -1083,15 +1045,88 @@ msgstr "Temps écoulé :"
 msgid "toolStripContainer1"
 msgstr ""
 
+#: MainWindow~torrentAddedAt.Text
+#, csharp-format
+msgid "Added At"
+msgstr "Ajouté le"
+
+#: MainWindow~torrentCompletedAtCol.Text
+#, csharp-format
+msgid "Completed At"
+msgstr "Complété le"
+
+#: MainWindow~torrentEtaCol.Text
+#, csharp-format
+msgid "ETA"
+msgstr "Estimé"
+
+#: MainWindow~torrentLeechersCol.Text
+#: MainWindow~trackersLeechersCol.Text
+#, csharp-format
+msgid "Leechers"
+msgstr "Clients"
+
+#: MainWindow~torrentNoCol.Text
+#, csharp-format
+msgid "#"
+msgstr ""
+
+#: MainWindow~torrentRatioCol.Text
+#, csharp-format
+msgid "Ratio"
+msgstr ""
+
+#: MainWindow~torrentSeedsCol.Text
+#: MainWindow~trackersSeedsCol.Text
+#, csharp-format
+msgid "Seeds"
+msgstr "Sources"
+
+#: MainWindow~torrentStatusCol.Text
+#: MainWindow~trackersStatusCol.Text
+#, csharp-format
+msgid "Status"
+msgstr "Etat"
+
 #: MainWindow~torrentToolStripMenuItem.Text
 #, csharp-format
 msgid "Torrent"
+msgstr ""
+
+#: MainWindow~torrentTrackerCol.Text
+#, csharp-format
+msgid "Tracker"
+msgstr ""
+
+#: MainWindow~torrentUploadedCol.Text
+#, csharp-format
+msgid "Uploaded"
+msgstr "Envoyé"
+
+#: MainWindow~trackersAnnounceUrlCol.Text
+#, csharp-format
+msgid "Announce URL"
+msgstr "URL d'annonce"
+
+#: MainWindow~trackersDownloadedCol.Text
+#, csharp-format
+msgid "Downloaded"
 msgstr ""
 
 #: MainWindow~trackersTabPage.Text
 #: TorrentPropertiesDialog~tabTrackers.Text
 #, csharp-format
 msgid "Trackers"
+msgstr ""
+
+#: MainWindow~trackersTierCol.Text
+#, csharp-format
+msgid "Tier"
+msgstr "Tiers"
+
+#: MainWindow~trackersUpdateInCol.Text
+#, csharp-format
+msgid "Update In"
 msgstr ""
 
 #: MainWindow~viewToolStripMenuItem.Text
@@ -1534,6 +1569,11 @@ msgstr "Tout selectionner"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr ""
 
+#: OtherStrings~TerabyteShort
+#, csharp-format
+msgid "TB"
+msgstr ""
+
 #: OtherStrings~TheTorrentHasFinishedDownloading
 #, csharp-format
 msgid "This torrent is now complete"
@@ -1549,6 +1589,21 @@ msgstr ""
 msgid "Torrents"
 msgstr ""
 
+#: OtherStrings~TotalDoneValidSize
+#, csharp-format
+msgid "{0} ({1} done) ({2} valid)"
+msgstr ""
+
+#: OtherStrings~TotalDoneValidTotalSize
+#, csharp-format
+msgid "{0} ({1} done) ({2} valid) ({3} total)"
+msgstr ""
+
+#: OtherStrings~UnableRunPlink
+#, csharp-format
+msgid "Unable to run plink"
+msgstr ""
+
 #: OtherStrings~UnableToOpen
 #, csharp-format
 msgid "Unable to open"
@@ -1558,6 +1613,11 @@ msgstr ""
 #, csharp-format
 msgid "Unable to parse the server response"
 msgstr "Impossible d'analyser la réponse du serveur"
+
+#: OtherStrings~UnitFactors
+#, csharp-format
+msgid "Byte|Kilobyte|Megabyte|Gigabyte|Terabyte"
+msgstr ""
 
 #: OtherStrings~UnixPathExists
 #, csharp-format
@@ -1634,6 +1694,11 @@ msgstr "{0} sur {1} est connecté"
 msgid "Yes"
 msgstr "Oui"
 
+#: RemoteSettingsDialog~LpdEnabledCheckBox.Text
+#, csharp-format
+msgid "Enable Local Peer Discovery"
+msgstr ""
+
 #: RemoteSettingsDialog~PEXcheckBox.Text
 #, csharp-format
 msgid "Enable Peer Exchange"
@@ -1672,6 +1737,11 @@ msgstr ""
 #: RemoteSettingsDialog~encryptionCombobox.Items2
 #, csharp-format
 msgid "required"
+msgstr ""
+
+#: RemoteSettingsDialog~incompleteToCheckBox.Text
+#, csharp-format
+msgid "Incomplete download to:"
 msgstr ""
 
 #: RemoteSettingsDialog~label1.Text
@@ -1809,6 +1879,11 @@ msgstr "Secondes d'activité"
 #, csharp-format
 msgid "Session Count"
 msgstr "Nombre de session(s)"
+
+#: StatsDialog~unitFactorLabel.Text
+#, csharp-format
+msgid "Unit factor:"
+msgstr ""
 
 #: StatsDialog~uploadedBytesLabel1.Text
 #: StatsDialog~uploadedBytesLabel2.Text
