@@ -603,6 +603,7 @@ namespace TransmissionRemoteDotnet
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
+                = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
                 = categoriesPanelToolStripMenuItem.Checked = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
@@ -1407,6 +1408,11 @@ namespace TransmissionRemoteDotnet
             FilterByStateOrTracker();
         }
 
+        private void FilterTorrentTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilterByStateOrTracker();
+        }
+
         static bool FilteringProcess = false;
         private void FilterByStateOrTracker()
         {
@@ -1472,9 +1478,10 @@ namespace TransmissionRemoteDotnet
         {
             lock (Program.TorrentIndex)
             {
+                string filterstring = FilterTorrentTextBox.Text.ToLower();
                 foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    if (fc(pair.Value, param))
+                    if (fc(pair.Value, param) && (filterstring.Length == 0 || pair.Value.TorrentName.ToLower().Contains(filterstring)))
                     {
                         pair.Value.Show();
                     }

@@ -173,6 +173,8 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
             this.toolbarToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.RssButton = new System.Windows.Forms.ToolStripButton();
+            this.FilterTorrentTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.FilterTorrentLabel = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1120,8 +1122,11 @@ namespace TransmissionRemoteDotnet
             this.remoteConfigureButton,
             this.sessionStatsButton,
             this.toolbarToolStripSeparator5,
-            this.RssButton});
+            this.RssButton,
+            this.FilterTorrentTextBox,
+            this.FilterTorrentLabel});
             this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Stretch = true;
             // 
             // connectButton
             // 
@@ -1307,6 +1312,22 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.RssButton, "RssButton");
             this.RssButton.Name = "RssButton";
             this.RssButton.Click += new System.EventHandler(this.RssButton_Click);
+            // 
+            // FilterTorrentTextBox
+            // 
+            this.FilterTorrentTextBox.AcceptsTab = true;
+            this.FilterTorrentTextBox.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.FilterTorrentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FilterTorrentTextBox.Margin = new System.Windows.Forms.Padding(1, 0, 4, 0);
+            resources.ApplyResources(this.FilterTorrentTextBox, "FilterTorrentTextBox");
+            this.FilterTorrentTextBox.Name = "FilterTorrentTextBox";
+            this.FilterTorrentTextBox.TextChanged += new System.EventHandler(this.FilterTorrentTextBox_TextChanged);
+            // 
+            // FilterTorrentLabel
+            // 
+            this.FilterTorrentLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.FilterTorrentLabel.Name = "FilterTorrentLabel";
+            resources.ApplyResources(this.FilterTorrentLabel, "FilterTorrentLabel");
             // 
             // menuStrip
             // 
@@ -1907,6 +1928,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem addTorrentWithOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator5;
         private System.Windows.Forms.ToolStripButton RssButton;
+        private System.Windows.Forms.ToolStripTextBox FilterTorrentTextBox;
+        private System.Windows.Forms.ToolStripLabel FilterTorrentLabel;
         private System.Windows.Forms.OpenFileDialog openTorrentFileDialog;
         private SelectableLabel seedersLabel;
         private SelectableLabel createdByLabel;

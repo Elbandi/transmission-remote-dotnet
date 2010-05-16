@@ -2952,11 +2952,29 @@
   <data name="RssButton.Text" xml:space="preserve">
     <value>Rss Downloader</value>
   </data>
+  <data name="FilterTorrentTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="FilterTorrentTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 39</value>
+  </data>
+  <data name="FilterTorrentTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FilterTorrentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 36</value>
+  </data>
+  <data name="FilterTorrentLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="FilterTorrentLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 39</value>
+    <value>974, 39</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4137,6 +4155,18 @@
   </data>
   <data name="&gt;&gt;RssButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentTextBox.Name" xml:space="preserve">
+    <value>FilterTorrentTextBox</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentLabel.Name" xml:space="preserve">
+    <value>FilterTorrentLabel</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
