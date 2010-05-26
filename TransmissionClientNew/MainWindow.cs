@@ -709,17 +709,17 @@ namespace TransmissionRemoteDotnet
             {
                 LocalSettings settings = Program.Settings;
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
-                    this.Size = new Size((int)settings.Misc[CONFKEY_MAINWINDOW_WIDTH], (int)settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]);
+                    this.Size = new Size(Toolbox.ToInt(settings.Misc[CONFKEY_MAINWINDOW_WIDTH]), Toolbox.ToInt(settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]));
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
                 {
-                    Point p = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                    Point p = new Point(Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X)), Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y)));
                     if (Toolbox.ScreenExists(p))
                         this.Location = p;
                 }
-                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
+                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED)) == 1);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
-                    FormWindowState _mainWindowState = (FormWindowState)((int)settings.GetObject(CONFKEY_MAINWINDOW_STATE));
+                    FormWindowState _mainWindowState = (FormWindowState)(Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_STATE)));
                     if (_mainWindowState != FormWindowState.Minimized)
                     {
                         this.notifyIcon.Tag = this.WindowState = _mainWindowState;
@@ -779,7 +779,7 @@ namespace TransmissionRemoteDotnet
             if (settings.ContainsKey(sortIndexConfKey))
             {
                 IListViewItemSorter sorter = (IListViewItemSorter)listView.ListViewItemSorter;
-                int sortIndex = (int)settings.GetObject(sortIndexConfKey);
+                int sortIndex = Toolbox.ToInt(settings.GetObject(sortIndexConfKey));
                 sorter.Order = sortIndex < 0 ? SortOrder.Descending : SortOrder.Ascending;
                 sorter.SortColumn = sortIndex < 0 ? -sortIndex : sortIndex;
             }
