@@ -2124,7 +2124,7 @@ namespace TransmissionRemoteDotnet
                             "-t \"{0}\" \"{1}\"",
                             Program.Settings.Current.Host,
                             String.Format(
-                                Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
+                                Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}").Replace("$TORRENTID", t.Id.ToString()),
                                 String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.TorrentName))
                         ));
                 }
