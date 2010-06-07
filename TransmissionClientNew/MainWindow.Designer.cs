@@ -211,7 +211,7 @@ namespace TransmissionRemoteDotnet
             this.stopAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDetailsPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoriesPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showCategoriesPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenuToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.statsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1585,7 +1585,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDetailsPanelToolStripMenuItem,
-            this.categoriesPanelToolStripMenuItem,
+            this.showCategoriesPanelToolStripMenuItem,
             this.viewMenuToolStripSeparator,
             this.statsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
@@ -1597,11 +1597,11 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.showDetailsPanelToolStripMenuItem, "showDetailsPanelToolStripMenuItem");
             this.showDetailsPanelToolStripMenuItem.Click += new System.EventHandler(this.showDetailsPanelToolStripMenuItem_Click);
             // 
-            // categoriesPanelToolStripMenuItem
+            // showCategoriesPanelToolStripMenuItem
             // 
-            this.categoriesPanelToolStripMenuItem.Name = "categoriesPanelToolStripMenuItem";
-            resources.ApplyResources(this.categoriesPanelToolStripMenuItem, "categoriesPanelToolStripMenuItem");
-            this.categoriesPanelToolStripMenuItem.Click += new System.EventHandler(this.categoriesPanelToolStripMenuItem_Click);
+            this.showCategoriesPanelToolStripMenuItem.Name = "showCategoriesPanelToolStripMenuItem";
+            resources.ApplyResources(this.showCategoriesPanelToolStripMenuItem, "showCategoriesPanelToolStripMenuItem");
+            this.showCategoriesPanelToolStripMenuItem.Click += new System.EventHandler(this.categoriesPanelToolStripMenuItem_Click);
             // 
             // viewMenuToolStripSeparator
             // 
@@ -1920,7 +1920,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recentlyActiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton openNetworkShareButton;
-        private System.Windows.Forms.ToolStripMenuItem categoriesPanelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showCategoriesPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reannounceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openNetworkShareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moveTorrentDataToolStripMenuItem;

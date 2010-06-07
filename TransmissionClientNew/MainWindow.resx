@@ -3315,13 +3315,13 @@
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Details panel</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+  <data name="showCategoriesPanelToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F7</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="showCategoriesPanelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 22</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+  <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Category filter panel</value>
   </data>
   <data name="viewMenuToolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
@@ -4378,10 +4378,10 @@
   <data name="&gt;&gt;showDetailsPanelToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;categoriesPanelToolStripMenuItem.Name" xml:space="preserve">
-    <value>categoriesPanelToolStripMenuItem</value>
+  <data name="&gt;&gt;showCategoriesPanelToolStripMenuItem.Name" xml:space="preserve">
+    <value>showCategoriesPanelToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;categoriesPanelToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;showCategoriesPanelToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;viewMenuToolStripSeparator.Name" xml:space="preserve">

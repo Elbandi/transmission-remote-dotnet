@@ -431,7 +431,7 @@ namespace TransmissionRemoteDotnet
                 if (t != null)
                     UpdateInfoPanel(false, t);
                 refreshTimer.Enabled = torrentListView.Enabled = true;
-                if (categoriesPanelToolStripMenuItem.Checked)
+                if (showCategoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
                 UpdateTrayIcon();
@@ -721,7 +721,7 @@ namespace TransmissionRemoteDotnet
                 }
                 if (settings.Misc.ContainsKey(CONFKEY_FILTER_SPLITTERDISTANCE))
                     this.mainVerticalSplitContainer.SplitterDistance = Toolbox.ToInt(settings.GetObject(CONFKEY_FILTER_SPLITTERDISTANCE));
-                this.categoriesPanelToolStripMenuItem.Checked = settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED) && Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED)) == 0;
+                this.showCategoriesPanelToolStripMenuItem.Checked = settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED) && Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED)) == 0;
                 this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED)) == 1);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
@@ -2037,7 +2037,7 @@ namespace TransmissionRemoteDotnet
             SaveListViewProperties(torrentListView);
             SaveListViewProperties(filesListView);
             SaveListViewProperties(peersListView);
-            settings.SetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED, this.categoriesPanelToolStripMenuItem.Checked ? 0 : 1);
+            settings.SetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED, this.showCategoriesPanelToolStripMenuItem.Checked ? 0 : 1);
             settings.SetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED, this.torrentAndTabsSplitContainer.Panel2Collapsed ? 1 : 0);
             settings.Commit();
         }
@@ -2185,8 +2185,8 @@ namespace TransmissionRemoteDotnet
 
         private void categoriesPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            categoriesPanelToolStripMenuItem.Checked = !categoriesPanelToolStripMenuItem.Checked;
-            mainVerticalSplitContainer.Panel1Collapsed = !categoriesPanelToolStripMenuItem.Checked || !Program.Connected;
+            showCategoriesPanelToolStripMenuItem.Checked = !showCategoriesPanelToolStripMenuItem.Checked;
+            mainVerticalSplitContainer.Panel1Collapsed = !showCategoriesPanelToolStripMenuItem.Checked || !Program.Connected;
         }
 
         private void moveTorrentDataToolStripMenuItem_Click(object sender, EventArgs e)
