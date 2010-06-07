@@ -118,7 +118,7 @@
     <value>Sávszélesség prioritás:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Honors session limits</value>
+    <value>Session határok betartása</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
     <value>Feltöltési arány</value>

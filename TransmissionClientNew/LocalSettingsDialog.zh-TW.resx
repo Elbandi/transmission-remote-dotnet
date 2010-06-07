@@ -121,13 +121,13 @@
     <value>Add Server</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>名稱</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
     <value>Url</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>移除</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
     <value>Add</value>

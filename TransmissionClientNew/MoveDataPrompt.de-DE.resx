@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -112,7 +112,7 @@
     <value>Ziel-Verzeichnis:</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>Vrschieben</value>
+    <value>Verschieben</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Schließen</value>

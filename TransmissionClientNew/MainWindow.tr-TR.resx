@@ -115,7 +115,7 @@
     <value>Rss Downloader</value>
   </data>
   <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Update In</value>
+    <value>Güncelleme</value>
   </data>
   <data name="columnHeader34.Text" xml:space="preserve">
     <value>Gönderen</value>
@@ -124,22 +124,22 @@
     <value>İndiren</value>
   </data>
   <data name="columnHeader36.Text" xml:space="preserve">
-    <value>Downloaded</value>
+    <value>İndirildi</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>Location:</value>
+    <value>Yer:</value>
   </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
-    <value>Alt Speed</value>
+    <value>Alt Hız</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>Pieces:</value>
+    <value>Parça:</value>
   </data>
   <data name="hashLabelLabel.Text" xml:space="preserve">
     <value>Hash:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Bul</value>
   </data>
   <data name="percentageLabel.Text" xml:space="preserve">
     <value>This is selectable text</value>
@@ -154,25 +154,25 @@
     <value>Torrent Özellikleri</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add torrent with options</value>
+    <value>Parametrelerle Torrent Ekle</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>CSV olarak kopyala</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Torrent Verisini Değiştir</value>
   </data>
   <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>Tip</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
     <value>Tekrar Anonsla</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Ağda aç</value>
   </data>
   <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Category filter panel</value>
+    <value>Kategori Filtreleme Paneli</value>
   </data>
   <data name="columnHeader6.Text" xml:space="preserve">
     <value>Torrent İsmi</value>
@@ -205,7 +205,7 @@
     <value>Gönderilmiş</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Ratio</value>
+    <value>Oran(Ratio)</value>
   </data>
   <data name="columnHeader18.Text" xml:space="preserve">
     <value>Eklenme Tarihi</value>
@@ -232,7 +232,7 @@
     <value>Yorum :</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Ratio:</value>
+    <value>Oran(Ratio):</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>İndiren :</value>
@@ -304,7 +304,7 @@
     <value>Öncelik</value>
   </data>
   <data name="filesTabPage.Text" xml:space="preserve">
-    <value>Files</value>
+    <value>Dosyalar</value>
   </data>
   <data name="columnHeader23.Text" xml:space="preserve">
     <value>IP Adresi</value>
@@ -337,16 +337,16 @@
     <value>Hassasiyet :</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>İndir</value>
+    <value>İndirme</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
-    <value>Yükselt</value>
+    <value>Yükleme</value>
   </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>Overall bandwidth utilisation</value>
+    <value>Tüm bant genişliği kullanımı</value>
   </data>
   <data name="speedTabPage.Text" xml:space="preserve">
     <value>Hız</value>
@@ -397,7 +397,7 @@
     <value>Tekrar Anonsla</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Ağda aç</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>İstemci ayarları</value>

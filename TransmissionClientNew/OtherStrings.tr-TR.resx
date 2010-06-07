@@ -130,29 +130,29 @@
     <value>PNG Image|*.png</value>
   </data>
   <data name="ConfirmSaveServer" xml:space="preserve">
-    <value>"{0}" server settings have been changed. Would you like to save it?</value>
+    <value>"{0}" sunucu ayarları değiştirildi. Kaydetmek ister misiniz?</value>
   </data>
   <data name="ConfirmMultipleRecheck" xml:space="preserve">
-    <value>You have selected {0} torrents for recheck. It may take a long time. Are you sure?</value>
+    <value>Kontrol için {0} adet torrent seçtiniz. Bu uzun sürebilir. Emin misiniz?</value>
   </data>
   <data name="ConfirmSingleRecheck" xml:space="preserve">
-    <value>Do you want to recheck {0}? It may take a long time.</value>
+    <value>{0} adet torrent kontrol etmek istiyorsunuz. Emin Misiniz?</value>
   </data>
   <data name="TorrentFinished" xml:space="preserve">
-    <value>This torrent has finished downloading.</value>
+    <value>Bu torrentın indirme işlemi bitti.</value>
   </data>
   <data name="HttpError" xml:space="preserve">
-    <value>Daemon try to download something, but the http result is:{0}{1}</value>
+    <value>Daemon birşeyler indirmeye çalışıyor ve http mesajı : {0}{1}</value>
     <comment>{0} is the newline char</comment>
   </data>
   <data name="NoHostnameSet" xml:space="preserve">
-    <value>No hostname has been set.</value>
+    <value>Sunucu adı ayarlanmadı.</value>
   </data>
   <data name="MappingSample" xml:space="preserve">
-    <value>Sample mapping:</value>
+    <value>Örnek haritalama:</value>
   </data>
   <data name="SambaShare" xml:space="preserve">
-    <value>Samba share:</value>
+    <value>Samba Paylaşımı:</value>
   </data>
   <data name="UnixPathPrefix" xml:space="preserve">
     <value>UNIX path prefix:</value>
@@ -161,10 +161,10 @@
     <value>İptal</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Şifre</value>
   </data>
   <data name="SpeedResolutions" xml:space="preserve">
-    <value>5 sec|10 sec|30 sec|5 min</value>
+    <value>5 sn|10 sn|30 sn|5 dk</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="PiecesInfo" xml:space="preserve">
@@ -174,49 +174,49 @@
     <value>{0} e bağlanıldı</value>
   </data>
   <data name="EmptyFile" xml:space="preserve">
-    <value>Empty file</value>
+    <value>Boş dosya</value>
   </data>
   <data name="UnknownResponseTag" xml:space="preserve">
-    <value>Unknown response tag</value>
+    <value>Bilinmeyen yanıt</value>
   </data>
   <data name="GeoipInitError" xml:space="preserve">
-    <value>GeoIP init error ({0})</value>
+    <value>GeoIP belirleme hatası ({0})</value>
   </data>
   <data name="BandwidthAllocation" xml:space="preserve">
-    <value>Bandwidth allocation</value>
+    <value>Bantgenişliği Payı</value>
   </data>
   <data name="MultipleTorrentProperties" xml:space="preserve">
-    <value>Multiple Torrent Properties</value>
+    <value>Çoklu Torrent Özelliği</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Bilinmiyor</value>
   </data>
   <data name="UnableToOpen" xml:space="preserve">
-    <value>Unable to open</value>
+    <value>Açılamaz</value>
   </data>
   <data name="LoadingFile" xml:space="preserve">
-    <value>Loading {0}...</value>
+    <value>Yükleniyor {0}...</value>
   </data>
   <data name="InfoObjectToClipboard" xml:space="preserve">
-    <value>Info object to clipboard</value>
+    <value>Bilgiyi panoya kopyala</value>
   </data>
   <data name="MoveMultipleTorrents" xml:space="preserve">
-    <value>Move multiple torrent data</value>
+    <value>Birçok torrent dosyasını taşı</value>
   </data>
   <data name="MoveTorrentData" xml:space="preserve">
-    <value>Move torrent data</value>
+    <value>Torrent Verisini Değiştir</value>
   </data>
   <data name="MoveX" xml:space="preserve">
-    <value>Move {0}</value>
+    <value>Taşı {0}</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>Çıkış</value>
   </data>
   <data name="NewTorrentIs" xml:space="preserve">
-    <value>New torrent {0}.</value>
+    <value>Yeni Torrent {0}.</value>
   </data>
   <data name="Pieces" xml:space="preserve">
-    <value>Pieces</value>
+    <value>Parçalar</value>
   </data>
   <data name="Progress" xml:space="preserve">
     <value>İşlemler</value>
@@ -225,7 +225,7 @@
     <value>Tekrar Anonsla</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
-    <value>Open on Network Share</value>
+    <value>Ağda aç</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Tümü</value>
@@ -255,7 +255,7 @@
     <value>Silmek için {0} torrent seçtiniz. Emin misiniz?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
-    <value>Do you want to remove {0}?</value>
+    <value>{0} adlı torrentı silmek mi istiyorsunuz?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
     <value>Torrentı kaldırmayı gerçekten istiyor musunuz {0}?{1}BU TORRENT'A AİT TÜM VERİLER SİLİNECEK.</value>
@@ -288,7 +288,7 @@
     <value>İstatistikleri Göster</value>
   </data>
   <data name="Down" xml:space="preserve">
-    <value>İndir</value>
+    <value>İndirme</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>İndirme</value>
@@ -417,7 +417,7 @@
     <value>İstek tamamlanamadı</value>
   </data>
   <data name="Up" xml:space="preserve">
-    <value>Yükselt</value>
+    <value>Yükleme</value>
   </data>
   <data name="UpgradeAvailable" xml:space="preserve">
     <value>Güncelleme Mevcut</value>

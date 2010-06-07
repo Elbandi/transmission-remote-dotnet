@@ -112,19 +112,19 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelDevelopers.Text" xml:space="preserve">
-    <value>Developers:</value>
+    <value>Geliştiriciler:</value>
   </data>
   <data name="labelProductName.Text" xml:space="preserve">
-    <value>Product Name</value>
+    <value>Ürün Adı</value>
   </data>
   <data name="labelVersion.Text" xml:space="preserve">
     <value>Versiyon</value>
   </data>
   <data name="labelCopyright.Text" xml:space="preserve">
-    <value>Copyright</value>
+    <value>Telif Hakkı</value>
   </data>
   <data name="labelHomepageLink.Text" xml:space="preserve">
-    <value>Homepage:</value>
+    <value>Web Sayfası</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value> * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/
@@ -146,10 +146,10 @@
     * IkE Blaster for the Czech translation.</value>
   </data>
   <data name="labelCredits.Text" xml:space="preserve">
-    <value>Credits &amp;&amp; acknowledgements:</value>
+    <value>Katkıda Bulunanlar &amp; Teşekkür</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
-    <value>&amp;OK</value>
+    <value>Tamam</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote Hakkında</value>

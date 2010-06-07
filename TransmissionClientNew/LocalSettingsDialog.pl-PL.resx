@@ -115,22 +115,22 @@
     <value>Color tray icon</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>Usuń serwer</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>Dodaj serwer</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Nazwa</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
     <value>Url</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>Usuń</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>Dodaj</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
     <value>Feed url:</value>

@@ -112,37 +112,37 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>Színes tálca ikon</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>Kiszolgáló eltávolítása</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>Kiszolgáló hozzáadása</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Név</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
     <value>Url</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>Eltávolítás</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>Hozzáad</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>Feed címe:</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
-    <value>Feed name:</value>
+    <value>Feed neve:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
     <value>Feed</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>Rss Feedek</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skin</value>
@@ -151,13 +151,13 @@
     <value>Egyéni rpc útvonal:</value>
   </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
+    <value>Jelszó törlése mentéskor</value>
   </data>
   <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
+    <value>Jelszó törlése mentéskor</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
-    <value>Don't save passwords</value>
+    <value>Ne mentse a jelszavakat</value>
   </data>
   <data name="defaultActionComboBox.Items" xml:space="preserve">
     <value>Torrent tulajdonságok</value>
@@ -187,7 +187,7 @@
     <value>Tallóz</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe vagy ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>

@@ -127,35 +127,35 @@
     <value>Feed exists</value>
   </data>
   <data name="OpenImageFilter" xml:space="preserve">
-    <value>PNG Image|*.png</value>
+    <value>PNG Bild|*.png</value>
   </data>
   <data name="ConfirmSaveServer" xml:space="preserve">
-    <value>"{0}" server settings have been changed. Would you like to save it?</value>
+    <value>"{0}" Die Server Einstellungen wurden geändert. Änderungen speichern?</value>
   </data>
   <data name="ConfirmMultipleRecheck" xml:space="preserve">
-    <value>You have selected {0} torrents for recheck. It may take a long time. Are you sure?</value>
+    <value>Es wurden {0} Torrents zur Überprüfung ausgewählt. Dies kann lange dauern. Sind Sie sicher?</value>
   </data>
   <data name="ConfirmSingleRecheck" xml:space="preserve">
-    <value>Do you want to recheck {0}? It may take a long time.</value>
+    <value>{0} Überprüfen? Dies kann lange dauern.</value>
   </data>
   <data name="TorrentFinished" xml:space="preserve">
-    <value>This torrent has finished downloading.</value>
+    <value>Dieser Torrent wurde fertiggestellt.</value>
   </data>
   <data name="HttpError" xml:space="preserve">
-    <value>Daemon try to download something, but the http result is:{0}{1}</value>
+    <value>Dämon versucht etwas herunterzuladen, aber das HTTP Resultat ist:{0}{1}</value>
     <comment>{0} is the newline char</comment>
   </data>
   <data name="NoHostnameSet" xml:space="preserve">
-    <value>No hostname has been set.</value>
+    <value>Kein Hostname eingetragen</value>
   </data>
   <data name="MappingSample" xml:space="preserve">
-    <value>Sample mapping:</value>
+    <value>Beispiel Mapping:</value>
   </data>
   <data name="SambaShare" xml:space="preserve">
-    <value>Samba share:</value>
+    <value>Samba </value>
   </data>
   <data name="UnixPathPrefix" xml:space="preserve">
-    <value>UNIX path prefix:</value>
+    <value>UNIX Pfad Prefix:</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
@@ -216,10 +216,10 @@
     <value>Neuer Torrent {0}.</value>
   </data>
   <data name="PortIsClosed" xml:space="preserve">
-    <value>Incoming Port des Daemons ist CLOSED.</value>
+    <value>Incoming Port des Daemons ist GESCHLOSSEN.</value>
   </data>
   <data name="PortIsOpen" xml:space="preserve">
-    <value>Incoming Port des Daemons ist OPEN.</value>
+    <value>Incoming Port des Daemons ist OFFEN.</value>
   </data>
   <data name="PortTestResult" xml:space="preserve">
     <value>Port-Test Ergebnis</value>
@@ -237,10 +237,10 @@
     <value>Anfrage läuft...</value>
   </data>
   <data name="Updating" xml:space="preserve">
-    <value>Updating...</value>
+    <value>Update...</value>
   </data>
   <data name="XInBlocklist" xml:space="preserve">
-    <value>{0} in blocklist.</value>
+    <value>{0} in Blockliste.</value>
   </data>
   <data name="Pieces" xml:space="preserve">
     <value>Teile</value>

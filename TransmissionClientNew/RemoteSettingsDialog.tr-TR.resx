@@ -112,22 +112,22 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="encryptionCombobox.Items" xml:space="preserve">
-    <value>tolerated</value>
+    <value>farketmez</value>
   </data>
   <data name="limitUploadCheckBox.Text" xml:space="preserve">
-    <value>Limit upload</value>
+    <value>Gönderme Limiti</value>
   </data>
   <data name="limitDownloadCheckBox.Text" xml:space="preserve">
     <value>Limit download</value>
   </data>
   <data name="portForwardCheckBox.Text" xml:space="preserve">
-    <value>Enable UPnP</value>
+    <value>UPnP etkin</value>
   </data>
   <data name="encryptionCombobox.Items1" xml:space="preserve">
-    <value>preferred</value>
+    <value>tercihen</value>
   </data>
   <data name="encryptionCombobox.Items2" xml:space="preserve">
-    <value>required</value>
+    <value>gerekli</value>
   </data>
   <data name="dhtEnabled.Text" xml:space="preserve">
     <value>Enable Distributed Hash Table (DHT)</value>
@@ -151,7 +151,7 @@
     <value>Eş limiti</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Encryption:</value>
+    <value>Şifreleme:</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>KB/s</value>

@@ -115,10 +115,10 @@
     <value>Color tray icon</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>Server löschen</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>Server hinzufügen</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
     <value>Name</value>
@@ -127,10 +127,10 @@
     <value>Url</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>Entferne Torrent(s)</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>Hinzufügen</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
     <value>Feed url:</value>
@@ -148,7 +148,7 @@
     <value>Skin</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Custom rpc path:</value>
+    <value>Angepasster RPC Pfad:</value>
   </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
     <value>Beim Speichern Passwort löschen</value>
@@ -232,13 +232,13 @@
     <value>Beim Start auf Updates überprüfen</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>UNIX path prefix:</value>
+    <value>UNIX Pfad Prefix:</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Samba share:</value>
+    <value>Samba </value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>New mapping:</value>
+    <value>Neues Mapping:</value>
   </data>
   <data name="tabPage7.Text" xml:space="preserve">
     <value>Samba</value>

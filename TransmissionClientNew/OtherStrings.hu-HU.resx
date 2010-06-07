@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="UnixPathExists" xml:space="preserve">
-    <value>Unix path exists</value>
+    <value>Unix útvonal létezik</value>
   </data>
   <data name="InvalidRPCLocation" xml:space="preserve">
-    <value>Invalid RPC location</value>
+    <value>Érvénytelen RPC cím</value>
   </data>
   <data name="FeedExists" xml:space="preserve">
-    <value>Feed exists</value>
+    <value>Feed létezik</value>
   </data>
   <data name="OpenImageFilter" xml:space="preserve">
     <value>PNG képfájl|*.png</value>
@@ -139,7 +139,7 @@
     <value>Biztos benne, hogy újraellenőrzi a {0} torrenteket? Ez hosszú ideig is eltarthat.</value>
   </data>
   <data name="TorrentFinished" xml:space="preserve">
-    <value>This torrent has finished downloading.</value>
+    <value>Ez a torrent befejezte a letöltést.</value>
   </data>
   <data name="HttpError" xml:space="preserve">
     <value>Daemon valamit probált letölteni, de a http valasz:{0}{1}</value>
@@ -161,7 +161,7 @@
     <value>Mégse</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Jelszó</value>
   </data>
   <data name="SpeedResolutions" xml:space="preserve">
     <value>5 sec|10 sec|30 sec|5 min</value>
@@ -429,7 +429,7 @@
     <value>Ismeretlen (negatív)</value>
   </data>
   <data name="UnsuccessfulRequest" xml:space="preserve">
-    <value>Unsuccessful request</value>
+    <value>Sikertelen kérés</value>
   </data>
   <data name="Up" xml:space="preserve">
     <value>Fel</value>

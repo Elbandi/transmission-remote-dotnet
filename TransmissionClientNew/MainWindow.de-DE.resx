@@ -115,7 +115,7 @@
     <value>Rss Downloader</value>
   </data>
   <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Update In</value>
+    <value>Update in</value>
   </data>
   <data name="columnHeader34.Text" xml:space="preserve">
     <value>Seeder</value>
@@ -124,10 +124,10 @@
     <value>Leecher</value>
   </data>
   <data name="columnHeader36.Text" xml:space="preserve">
-    <value>Downloaded</value>
+    <value>Fertiggestellt</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>Location:</value>
+    <value>Speicherort:</value>
   </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
     <value>Bandbreiten-Limit (de)aktivieren</value>
@@ -319,7 +319,7 @@
     <value>Land</value>
   </data>
   <data name="columnHeader31.Text" xml:space="preserve">
-    <value>Flags</value>
+    <value>Flaggen</value>
   </data>
   <data name="columnHeader26.Text" xml:space="preserve">
     <value>Client</value>
