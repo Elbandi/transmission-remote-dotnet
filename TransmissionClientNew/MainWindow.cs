@@ -53,6 +53,8 @@ namespace TransmissionRemoteDotnet
             CONFKEYPREFIX_LISTVIEW_WIDTHS = "listview-width-",
             CONFKEYPREFIX_LISTVIEW_INDEXES = "listview-indexes-",
             CONFKEYPREFIX_LISTVIEW_SORTINDEX = "listview-sortindex-",
+            CONFKEY_FILTER_SPLITTERDISTANCE = "mainwindow-filter-splitterdistance",
+            CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED = "mainwindow-filterspanel-collapsed",
             CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED = "mainwindow-detailspanel-collapsed",
             PROJECT_SITE = "http://code.google.com/p/transmission-remote-dotnet/",
             LATEST_VERSION = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version.txt",
@@ -716,6 +718,9 @@ namespace TransmissionRemoteDotnet
                     if (Toolbox.ScreenExists(p))
                         this.Location = p;
                 }
+                if (settings.Misc.ContainsKey(CONFKEY_FILTER_SPLITTERDISTANCE))
+                    this.mainVerticalSplitContainer.SplitterDistance = Toolbox.ToInt(settings.GetObject(CONFKEY_FILTER_SPLITTERDISTANCE));
+                this.categoriesPanelToolStripMenuItem.Checked = settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED) && Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED)) == 0;
                 this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED)) == 1);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
@@ -2026,10 +2031,12 @@ namespace TransmissionRemoteDotnet
                     settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.RestoreBounds.Height);
                     settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.RestoreBounds.Width);
                 }
+                settings.SetObject(CONFKEY_FILTER_SPLITTERDISTANCE, this.mainVerticalSplitContainer.SplitterDistance);
             }
             SaveListViewProperties(torrentListView);
             SaveListViewProperties(filesListView);
             SaveListViewProperties(peersListView);
+            settings.SetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED, this.categoriesPanelToolStripMenuItem.Checked ? 0 : 1);
             settings.SetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED, this.torrentAndTabsSplitContainer.Panel2Collapsed ? 1 : 0);
             settings.Commit();
         }
