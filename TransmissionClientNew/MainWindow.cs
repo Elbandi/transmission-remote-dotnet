@@ -574,6 +574,7 @@ namespace TransmissionRemoteDotnet
                 OneTorrentsSelected(false, null);
                 this.toolStripStatusLabel.Text = OtherStrings.Disconnected;
                 this.toolStripVersionLabel.Visible = false;
+                this.mainVerticalSplitContainer.Panel1Collapsed = true;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE;
                 speedGraph.RemoveLine("Download");
                 speedGraph.RemoveLine("Upload");
@@ -594,7 +595,7 @@ namespace TransmissionRemoteDotnet
                 UpdateNotifyIcon("transmission");
             }
             connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
-                = mainVerticalSplitContainer.Panel1Collapsed = !connected;
+                = !connected;
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
@@ -606,7 +607,7 @@ namespace TransmissionRemoteDotnet
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
-                = categoriesPanelToolStripMenuItem.Checked = connected;
+                = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
@@ -2184,8 +2185,8 @@ namespace TransmissionRemoteDotnet
 
         private void categoriesPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainVerticalSplitContainer.Panel1Collapsed = !mainVerticalSplitContainer.Panel1Collapsed;
-            categoriesPanelToolStripMenuItem.Checked = !mainVerticalSplitContainer.Panel1Collapsed;
+            categoriesPanelToolStripMenuItem.Checked = !categoriesPanelToolStripMenuItem.Checked;
+            mainVerticalSplitContainer.Panel1Collapsed = !categoriesPanelToolStripMenuItem.Checked || !Program.Connected;
         }
 
         private void moveTorrentDataToolStripMenuItem_Click(object sender, EventArgs e)
