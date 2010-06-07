@@ -97,15 +97,15 @@ namespace TransmissionRemoteDotnet
             base.SubItems[11].Tag = this.LocalRatio;
             SetText(12, this.Added.ToString());
             base.SubItems[12].Tag = this.Added;
+            if (this.DoneDate != null)
+            {
+                base.SubItems[13].Tag = this.DoneDate;
+                SetText(13, this.DoneDate.ToString());
+            }
             SetText(14, this.FirstTrackerTrimmed);
 
             if (first)
             {
-                if (this.DoneDate != null)
-                {
-                    base.SubItems[13].Tag = this.DoneDate;
-                    SetText(13, this.DoneDate.ToString());
-                }
                 lock (form.stateListBox)
                 {
                     if (this.FirstTrackerTrimmed.Length > 0 && form.stateListBox.FindItem(this.FirstTrackerTrimmed) == null)
@@ -172,7 +172,6 @@ namespace TransmissionRemoteDotnet
             if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
                 && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
-                this.DoneDate = DateTime.Now;
                 this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon;
             }
 
