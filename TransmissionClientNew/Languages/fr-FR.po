@@ -75,7 +75,7 @@ msgid ""
 "    * huexxx for the Spanish translation.\r\n"
 "    * twohertz for the Korean translation.\r\n"
 "    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
+"    * IkE Blaster for the Czech translation."
 msgstr ""
 
 #: ErrorLogWindow~$this.Text
@@ -529,6 +529,11 @@ msgstr ""
 msgid "Alt Speed"
 msgstr ""
 
+#: MainWindow~FilterTorrentLabel.Text
+#, csharp-format
+msgid "Filter:"
+msgstr ""
+
 #: MainWindow~RssButton.Text
 #, csharp-format
 msgid "Rss Downloader"
@@ -575,11 +580,6 @@ msgstr "Tous"
 #, csharp-format
 msgid "CSV info to clipboard"
 msgstr "Copier en tant que CSV"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr ""
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
@@ -983,6 +983,11 @@ msgstr "Retirer le(s) torrent(s)"
 #, csharp-format
 msgid "Display statistics"
 msgstr "Afficher les statistiques"
+
+#: MainWindow~showCategoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr ""
 
 #: MainWindow~showDetailsPanelToolStripMenuItem.Text
 #, csharp-format

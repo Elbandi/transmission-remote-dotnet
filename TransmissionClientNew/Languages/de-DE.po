@@ -75,7 +75,7 @@ msgid ""
 "    * huexxx for the Spanish translation.\r\n"
 "    * twohertz for the Korean translation.\r\n"
 "    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
+"    * IkE Blaster for the Czech translation."
 msgstr ""
 "* Die meisten Icons sind die Kreation von David Vignoni aus seinem Nuvola Icon \r\n"
 "\tTheme. http://www.icon-king.com/\r\n"
@@ -95,7 +95,7 @@ msgstr ""
 "  * [spanisch]\thuexxx\r\n"
 "  * [koreanisch]\ttwohertz\r\n"
 "  * [taiwanesisch]\tzeal.tsai\r\n"
-"  * [tschechisch]\tikeblaster       "
+"  * [tschechisch]\tIkE Blaster       "
 
 #: ErrorLogWindow~$this.Text
 #, csharp-format
@@ -548,6 +548,11 @@ msgstr "Transmission Remote"
 msgid "Alt Speed"
 msgstr "Bandbreiten-Limit (de)aktivieren"
 
+#: MainWindow~FilterTorrentLabel.Text
+#, csharp-format
+msgid "Filter:"
+msgstr ""
+
 #: MainWindow~RssButton.Text
 #, csharp-format
 msgid "Rss Downloader"
@@ -594,11 +599,6 @@ msgstr "Alle"
 #, csharp-format
 msgid "CSV info to clipboard"
 msgstr "Speichern als CSV"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr "Kategorie-Filter ein-/ausblenden"
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
@@ -1002,6 +1002,11 @@ msgstr "Entferne Torrent(s)"
 #, csharp-format
 msgid "Display statistics"
 msgstr "Zeige Statistik"
+
+#: MainWindow~showCategoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr "Kategorie-Filter ein-/ausblenden"
 
 #: MainWindow~showDetailsPanelToolStripMenuItem.Text
 #, csharp-format
@@ -2032,8 +2037,8 @@ msgstr ""
 msgid "Waiting for URL..."
 msgstr "Warte auf URL..."
 
-#~ msgid "plink.exe:"
-#~ msgstr "plink.exe:"
-
 #~ msgid "Scrape URL"
 #~ msgstr "Scrape URL"
+
+#~ msgid "plink.exe:"
+#~ msgstr "plink.exe:"

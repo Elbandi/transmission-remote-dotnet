@@ -75,7 +75,7 @@ msgid ""
 "    * huexxx for the Spanish translation.\r\n"
 "    * twohertz for the Korean translation.\r\n"
 "    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
+"    * IkE Blaster for the Czech translation."
 msgstr ""
 
 #: ErrorLogWindow~$this.Text
@@ -529,6 +529,11 @@ msgstr "트랜스미션 리모트"
 msgid "Alt Speed"
 msgstr "선택적 속도 제한"
 
+#: MainWindow~FilterTorrentLabel.Text
+#, csharp-format
+msgid "Filter:"
+msgstr ""
+
 #: MainWindow~RssButton.Text
 #, csharp-format
 msgid "Rss Downloader"
@@ -575,11 +580,6 @@ msgstr "전체"
 #, csharp-format
 msgid "CSV info to clipboard"
 msgstr "클립보드로 CSV 정보 복사"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr "카테고리 보기"
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
@@ -983,6 +983,11 @@ msgstr "토런트 파일 삭제"
 #, csharp-format
 msgid "Display statistics"
 msgstr "통계 표시"
+
+#: MainWindow~showCategoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr "카테고리 보기"
 
 #: MainWindow~showDetailsPanelToolStripMenuItem.Text
 #, csharp-format

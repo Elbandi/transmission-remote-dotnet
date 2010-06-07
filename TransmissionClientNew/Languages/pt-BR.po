@@ -78,7 +78,7 @@ msgid ""
 "    * huexxx for the Spanish translation.\r\n"
 "    * twohertz for the Korean translation.\r\n"
 "    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation."
+"    * IkE Blaster for the Czech translation."
 msgstr ""
 " * A maior parte dos ícones são criação de David Vignoni no seu tema Nuvola. http://www.icon-king.com/\r\n"
 " * Alguns ícones são gentis contribuições de liuzhiyi e benketom.\r\n"
@@ -96,7 +96,7 @@ msgstr ""
 "    * huexxx for the Spanish translation.\r\n"
 "    * twohertz for the Korean translation.\r\n"
 "    * zeal.tsai for the Taiwanese translation.\r\n"
-"    * ikeblaster for the Czech translation.\r\n"
+"    * IkE Blaster for the Czech translation.\r\n"
 "    * KaduLeite for the Brazilian Portuguese translation."
 
 #: ErrorLogWindow~$this.Text
@@ -550,6 +550,11 @@ msgstr ""
 msgid "Alt Speed"
 msgstr "Alt Velocidade"
 
+#: MainWindow~FilterTorrentLabel.Text
+#, csharp-format
+msgid "Filter:"
+msgstr ""
+
 #: MainWindow~RssButton.Text
 #, csharp-format
 msgid "Rss Downloader"
@@ -596,11 +601,6 @@ msgstr "Tudo"
 #, csharp-format
 msgid "CSV info to clipboard"
 msgstr "Copiar informação CSV para área de transferência"
-
-#: MainWindow~categoriesPanelToolStripMenuItem.Text
-#, csharp-format
-msgid "Category filter panel"
-msgstr "Painel Filtro de Categorias"
 
 #: MainWindow~checkForNewVersionToolStripMenuItem.Text
 #, csharp-format
@@ -1004,6 +1004,11 @@ msgstr "Remover torrent(s)"
 #, csharp-format
 msgid "Display statistics"
 msgstr "Mostrar estatísticas"
+
+#: MainWindow~showCategoriesPanelToolStripMenuItem.Text
+#, csharp-format
+msgid "Category filter panel"
+msgstr "Painel Filtro de Categorias"
 
 #: MainWindow~showDetailsPanelToolStripMenuItem.Text
 #, csharp-format
