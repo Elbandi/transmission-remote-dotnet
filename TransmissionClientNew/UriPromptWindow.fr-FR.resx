@@ -117,7 +117,7 @@
     <value>Annuler</value>
   </data>
   <data name="toolStripStatusLabel.Text" xml:space="preserve">
-    <value>En attente d'une URL...</value>
+    <value>En attente de l'URL...</value>
   </data>
   <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
     <value>Set torrent options before upload</value>
@@ -126,6 +126,6 @@
     <value>statusStrip1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Ajouter un Torrent à partir d'une URL</value>
+    <value>Ajouter à partir d'une URL</value>
   </data>
 </root>

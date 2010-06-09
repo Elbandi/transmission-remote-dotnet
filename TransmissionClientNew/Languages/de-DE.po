@@ -2037,8 +2037,8 @@ msgstr ""
 msgid "Waiting for URL..."
 msgstr "Warte auf URL..."
 
-#~ msgid "Scrape URL"
-#~ msgstr "Scrape URL"
-
 #~ msgid "plink.exe:"
 #~ msgstr "plink.exe:"
+
+#~ msgid "Scrape URL"
+#~ msgstr "Scrape URL"

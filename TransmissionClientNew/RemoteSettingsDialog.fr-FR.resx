@@ -111,44 +111,50 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
+    <value>Enable Local Peer Discovery</value>
+  </data>
+  <data name="incompleteToCheckBox.Text" xml:space="preserve">
+    <value>Incomplete download to:</value>
+  </data>
   <data name="encryptionCombobox.Items" xml:space="preserve">
-    <value>tolerated</value>
+    <value>toleré</value>
   </data>
   <data name="limitUploadCheckBox.Text" xml:space="preserve">
-    <value>Limit upload</value>
+    <value>Limiter l'envoi</value>
   </data>
   <data name="limitDownloadCheckBox.Text" xml:space="preserve">
-    <value>Limit download</value>
+    <value>Limiter la réception</value>
   </data>
   <data name="portForwardCheckBox.Text" xml:space="preserve">
-    <value>Enable UPnP</value>
+    <value>Activer UPnP</value>
   </data>
   <data name="encryptionCombobox.Items1" xml:space="preserve">
-    <value>preferred</value>
+    <value>preferé</value>
   </data>
   <data name="encryptionCombobox.Items2" xml:space="preserve">
-    <value>required</value>
+    <value>requis</value>
   </data>
   <data name="dhtEnabled.Text" xml:space="preserve">
-    <value>Enable Distributed Hash Table (DHT)</value>
+    <value>Activier Distributed Hash Table (DHT)</value>
   </data>
   <data name="testPortButton.Text" xml:space="preserve">
-    <value>Test Port</value>
+    <value>Tester Port</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
-    <value>Update Blocklist</value>
+    <value>Mettre à jour Blocklist</value>
   </data>
   <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
-    <value>Blocklist enabled</value>
+    <value>Blocklist activée</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Général</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
-    <value>Seed Ratio Limit</value>
+    <value>Limite du ratio d'envoi</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
-    <value>Limits</value>
+    <value>Limites</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>:</value>
@@ -157,10 +163,10 @@
     <value>:</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Up:</value>
+    <value>Emission:</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>Down:</value>
+    <value>Réception:</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Ko/s</value>
@@ -169,25 +175,25 @@
     <value>Ko/s</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>to</value>
+    <value>vers</value>
   </data>
   <data name="altTimeConstraintEnabled.Text" xml:space="preserve">
-    <value>Time constraint</value>
+    <value>Limite de temps</value>
   </data>
   <data name="altSpeedLimitEnable.Text" xml:space="preserve">
-    <value>Enable alternate speed limits</value>
+    <value>Activer vitesse limite alternative</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Alternate limits</value>
+    <value>Alterner limites</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTE: Availability of some options may require a transmission-daemon upgrade.</value>
+    <value>NOTE: Certaines options peuvent nécessiter une MAJ du daemon Transmission.</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Télécharger vers :</value>
+    <value>Télécharger dans :</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Port entrant :</value>
+    <value>Port entrant:</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Sauvegarder</value>
@@ -196,10 +202,10 @@
     <value>Fermer</value>
   </data>
   <data name="PEXcheckBox.Text" xml:space="preserve">
-    <value>Autoriser l'échange de sources</value>
+    <value>Autoriser échange de sources</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Limite du nombre de sources :</value>
+    <value>Limite de sources</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Encryption :</value>

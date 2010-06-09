@@ -115,22 +115,22 @@
     <value>Trackers</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Bandwidth priority:</value>
+    <value>Priorité de bande passante:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Honors session limits</value>
+    <value>Respecter limites de session</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
-    <value>Limit seed ratio</value>
+    <value>Limiter ratio d'envoi</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>NOTE: Availability of some options may require a transmission-daemon upgrade.</value>
+    <value>NOTE: Certaines options peuvent nécessiter une MAJ du daemon Transmission.</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Nb max de sources</value>
+    <value>Sources maximum</value>
   </data>
   <data name="uploadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite le taux d'émission</value>
+    <value>Limite taux d'émission</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Ko/s</value>
@@ -139,7 +139,7 @@
     <value>Ko/s</value>
   </data>
   <data name="downloadLimitEnableField.Text" xml:space="preserve">
-    <value>Limite le taux de réception</value>
+    <value>Limite taux de réception</value>
   </data>
   <data name="tabGeneral.Text" xml:space="preserve">
     <value>Général</value>

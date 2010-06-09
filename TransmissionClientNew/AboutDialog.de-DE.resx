@@ -128,24 +128,24 @@
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value>* Die meisten Icons sind die Kreation von David Vignoni aus seinem Nuvola Icon 
-	Theme. http://www.icon-king.com/
+\tTheme. http://www.icon-king.com/
 * Einige Icons wurden freundlicherweise von liuzhiyi und benketom beigesteuert.
 * charles und den anderen Transmission Entwicklern für ihre großartige Arbeit.
 * Der Quellcode für das Auslesen von .torrent Dateien wurde von Alan McGovern's
-	MonoTorrent Projekt übernommen.
+\tMonoTorrent Projekt übernommen.
 * Ein Dank an die Übersetzer:
-  * [französisch]	Romaric R.
-  * [deutsch]	benba
-  * [dänisch]	drphrozen
-  * [ungarisch]	András Elso
-  * [chinesisch]	liuzhiyi
-  * [polnisch]	Woodzu and cichy
-  * [türkisch]	RayTracer
-  * [russisch]	Alexey Komarov
-  * [spanisch]	huexxx
-  * [koreanisch]	twohertz
-  * [taiwanesisch]	zeal.tsai
-  * [tschechisch]	IkE Blaster       </value>
+  * [französisch]\tRomaric R.
+  * [deutsch]\tbenba
+  * [dänisch]\tdrphrozen
+  * [ungarisch]\tAndrás Elso
+  * [chinesisch]\tliuzhiyi
+  * [polnisch]\tWoodzu and cichy
+  * [türkisch]\tRayTracer
+  * [russisch]\tAlexey Komarov
+  * [spanisch]\thuexxx
+  * [koreanisch]\ttwohertz
+  * [taiwanesisch]\tzeal.tsai
+  * [tschechisch]\tIkE Blaster       </value>
   </data>
   <data name="labelCredits.Text" xml:space="preserve">
     <value>Verdienst &amp;&amp; Danksagung:</value>

@@ -112,10 +112,10 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelDevelopers.Text" xml:space="preserve">
-    <value>Developers:</value>
+    <value>Développeurs:</value>
   </data>
   <data name="labelProductName.Text" xml:space="preserve">
-    <value>Product Name</value>
+    <value>Désignation Produit</value>
   </data>
   <data name="labelVersion.Text" xml:space="preserve">
     <value>Version</value>
@@ -124,15 +124,15 @@
     <value>Copyright</value>
   </data>
   <data name="labelHomepageLink.Text" xml:space="preserve">
-    <value>Homepage:</value>
+    <value>Page internet:</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
-    <value> * Most icons are the creation of David Vignoni in his Nuvola theme. http://www.icon-king.com/
- * Some icons were kindly contributed by liuzhiyi and benketom.
- * charles and the other Transmission developers for their great work.
- * The code for reading .torrent files was taken from Alan McGovern's MonoTorrent project.
- * Thank you to all the following users kind enough to translate this application:
-    * Romaric R. for the French translation.
+    <value> * La plupart des icônes sont issues du thème Nuvola créé par David Vignoni. http://www.icon-king.com/
+ * D'autres icônes furent gracieusement offertes par Liuzhiyi et Benketom.
+ * Charles et les autres dévloppeurs de Transmission pour leur superbe travail.
+ * Le code pour lire les .torrent est celui du projet MonoTorrent d'Alan McGovern.
+ * Merci à tous les utilisateurs suivants pour nous avoir proposé de traduire cette application:
+    * Romaric R. &amp; Nicola R. for the French translation.
     * benba for the German translation.
     * drphrozen for the Danish translation.
     * András Első for the Hungarian translation.
@@ -146,7 +146,7 @@
     * IkE Blaster for the Czech translation.</value>
   </data>
   <data name="labelCredits.Text" xml:space="preserve">
-    <value>Credits &amp;&amp; acknowledgements:</value>
+    <value>Credits &amp;&amp; remerciements:</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
     <value>&amp;OK</value>
