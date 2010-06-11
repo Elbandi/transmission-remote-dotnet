@@ -120,7 +120,7 @@
     <value>Warte auf URL...</value>
   </data>
   <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
-    <value>Set torrent options before upload</value>
+    <value>Setze Torrent Optionen vor dem Upload</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>

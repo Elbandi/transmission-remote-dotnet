@@ -112,7 +112,7 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>Farbiges Tray Icon</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
     <value>Server löschen</value>
@@ -124,7 +124,7 @@
     <value>Name</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
-    <value>Url</value>
+    <value>URL:</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
     <value>Entferne Torrent(s)</value>
@@ -133,16 +133,16 @@
     <value>Hinzufügen</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>Feed URL:</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
-    <value>Feed name:</value>
+    <value>Feed Name:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
     <value>Feed</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>RSS Feeds</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skin</value>
@@ -166,7 +166,7 @@
     <value>Öffne Remote-Ordner</value>
   </data>
   <data name="defaultActionComboBox.Items2" xml:space="preserve">
-    <value>Start/Stopp Torrent</value>
+    <value>Starte/Stoppe Torrent</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
     <value>Doppel-Klick:</value>
@@ -187,7 +187,7 @@
     <value>Durchsuchen</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe oder ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload Prompt</value>
