@@ -111,20 +111,134 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss Letöltés</value>
+  <data name="torrentNameCol.Text" xml:space="preserve">
+    <value>Név</value>
   </data>
-  <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Következő frissítés</value>
+  <data name="torrentNoCol.Text" xml:space="preserve">
+    <value>#</value>
   </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
+  <data name="torrentSizeCol.Text" xml:space="preserve">
+    <value>Méret</value>
+  </data>
+  <data name="torrentDoneCol.Text" xml:space="preserve">
+    <value>Kész</value>
+  </data>
+  <data name="torrentStatusCol.Text" xml:space="preserve">
+    <value>Állapot</value>
+  </data>
+  <data name="torrentSeedsCol.Text" xml:space="preserve">
     <value>Megosztók</value>
   </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
+  <data name="torrentLeechersCol.Text" xml:space="preserve">
     <value>Letöltők</value>
   </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
+  <data name="torrentDownSpeedCol.Text" xml:space="preserve">
+    <value>Letöltés</value>
+  </data>
+  <data name="torrentUpSpeedCol.Text" xml:space="preserve">
+    <value>Feltöltés</value>
+  </data>
+  <data name="torrentEtaCol.Text" xml:space="preserve">
+    <value>Hátravan</value>
+  </data>
+  <data name="torrentUploadedCol.Text" xml:space="preserve">
+    <value>Feltöltve</value>
+  </data>
+  <data name="torrentRatioCol.Text" xml:space="preserve">
+    <value>Arány</value>
+  </data>
+  <data name="torrentAddedAt.Text" xml:space="preserve">
+    <value>Hozzáadva</value>
+  </data>
+  <data name="torrentCompletedAtCol.Text" xml:space="preserve">
+    <value>Elkészült</value>
+  </data>
+  <data name="torrentTrackerCol.Text" xml:space="preserve">
+    <value>Tracker-ek</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Teljes méret:</value>
+  </data>
+  <data name="trackersTierCol.Text" xml:space="preserve">
+    <value>Szint</value>
+  </data>
+  <data name="trackersAnnounceUrlCol.Text" xml:space="preserve">
+    <value>Announce URL</value>
+  </data>
+  <data name="trackersStatusCol.Text" xml:space="preserve">
+    <value>Állapot</value>
+  </data>
+  <data name="trackersUpdateInCol.Text" xml:space="preserve">
+    <value>Következő frissítés</value>
+  </data>
+  <data name="trackersSeedsCol.Text" xml:space="preserve">
+    <value>Megosztók</value>
+  </data>
+  <data name="trackersLeechersCol.Text" xml:space="preserve">
+    <value>Letöltők</value>
+  </data>
+  <data name="trackersDownloadedCol.Text" xml:space="preserve">
     <value>Letöltve</value>
+  </data>
+  <data name="filesPathCol.Text" xml:space="preserve">
+    <value>Útvonal</value>
+  </data>
+  <data name="filesTypeCol.Text" xml:space="preserve">
+    <value>Típus</value>
+  </data>
+  <data name="filesSizeCol.Text" xml:space="preserve">
+    <value>Méret</value>
+  </data>
+  <data name="filesDoneCol.Text" xml:space="preserve">
+    <value>Kész</value>
+  </data>
+  <data name="filesPercentCol.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="filesSkipCol.Text" xml:space="preserve">
+    <value>Kihagyás</value>
+  </data>
+  <data name="filesPriorityCol.Text" xml:space="preserve">
+    <value>Prioritás</value>
+  </data>
+  <data name="peersIpAddressCol.Text" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="peersHostnameCol.Text" xml:space="preserve">
+    <value>Hostnév</value>
+  </data>
+  <data name="peersCountryCol.Text" xml:space="preserve">
+    <value>Ország</value>
+  </data>
+  <data name="peersFlagsCol.Text" xml:space="preserve">
+    <value>Jelzők</value>
+  </data>
+  <data name="peersClientCol.Text" xml:space="preserve">
+    <value>Kliens</value>
+  </data>
+  <data name="peersProgressCol.Text" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="peersDownSpeedCol.Text" xml:space="preserve">
+    <value>Letöltés</value>
+  </data>
+  <data name="peersUpSpeedCol.Text" xml:space="preserve">
+    <value>Feltöltés</value>
+  </data>
+  <data name="FilterTorrentLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Helyi beállítások importálása...</value>
+  </data>
+  <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Helyi beállítások exportálása...</value>
+  </data>
+  <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kategória lista mutatása</value>
+  </data>
+  <data name="RssButton.Text" xml:space="preserve">
+    <value>Rss Letöltés</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>Mentés helye:</value>
@@ -162,9 +276,6 @@
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent adat áthelyezése</value>
   </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Típus</value>
-  </data>
   <data name="speedGraph.Text" xml:space="preserve">
     <value>c2DPushGraph1</value>
   </data>
@@ -183,9 +294,6 @@
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Hálózati megosztás megnyitása</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kategória lista mutatása</value>
-  </data>
   <data name="menuStrip.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
@@ -194,48 +302,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Transmission Remote</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Név</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Méret</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Kész</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>Állapot</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Megosztók</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Letöltők</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Letöltés</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Feltöltés</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>Hátravan</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Feltöltve</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Arány</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Hozzáadva</value>
-  </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Elkészült</value>
-  </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
-    <value>Tracker-ek</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Letöltve:</value>
@@ -294,62 +360,11 @@
   <data name="generalTabPage.Text" xml:space="preserve">
     <value>Általános</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
-    <value>Szint</value>
-  </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
-    <value>Announce URL</value>
-  </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Állapot</value>
-  </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
     <value>Tracker-ek</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Útvonal</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Méret</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Kész</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>%</value>
-  </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Kihagyás</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Prioritás</value>
-  </data>
   <data name="filesTabPage.Text" xml:space="preserve">
     <value>Fájlok</value>
-  </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
-    <value>IP</value>
-  </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
-    <value>Hostnév</value>
-  </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
-    <value>Ország</value>
-  </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
-    <value>Jelzők</value>
-  </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
-    <value>Kliens</value>
-  </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Progress</value>
-  </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
-    <value>Letöltés</value>
-  </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
-    <value>Feltöltés</value>
   </data>
   <data name="peersTabPage.Text" xml:space="preserve">
     <value>Peer-ek</value>

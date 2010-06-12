@@ -111,6 +111,15 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
+    <value>Mit dem Systemstart starten</value>
+  </data>
+  <data name="UpdateToBetaCheckBox.Text" xml:space="preserve">
+    <value>Auf Beta Versionen updaten.</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Aktualisierungsrate wenn verborgen</value>
+  </data>
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
     <value>Farbiges Tray Icon</value>
   </data>

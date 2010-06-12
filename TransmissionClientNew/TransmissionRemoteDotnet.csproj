@@ -481,12 +481,18 @@
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.da-DK.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.de-DE.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.es-ES.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.fr-FR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.hu-HU.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
@@ -508,6 +514,12 @@
     <EmbeddedResource Include="MoveDataPrompt.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.ru-RU.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.tr-TR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.zh-CN.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
@@ -626,7 +638,49 @@
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.cs-CZ.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.da-DK.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.de-DE.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.es-ES.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.fr-FR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.hu-HU.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.ko-KR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.nl-NL.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.pl-PL.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.pt-BR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RssForm.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.ru-RU.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.tr-TR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.zh-CN.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.zh-TW.resx">
       <DependentUpon>RssForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StatsDialog.cs-CZ.resx">
@@ -691,12 +745,18 @@
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.da-DK.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.de-DE.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.es-ES.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.fr-FR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.hu-HU.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
@@ -719,6 +779,12 @@
     <EmbeddedResource Include="TorrentLoadDialog.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.ru-RU.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.tr-TR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.zh-CN.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>

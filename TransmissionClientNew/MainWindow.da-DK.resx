@@ -111,20 +111,134 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss Downloader</value>
+  <data name="torrentNameCol.Text" xml:space="preserve">
+    <value>Navn</value>
   </data>
-  <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Update In</value>
+  <data name="torrentNoCol.Text" xml:space="preserve">
+    <value>#</value>
   </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
+  <data name="torrentSizeCol.Text" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="torrentDoneCol.Text" xml:space="preserve">
+    <value>Færdig</value>
+  </data>
+  <data name="torrentStatusCol.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="torrentSeedsCol.Text" xml:space="preserve">
     <value>Seeds</value>
   </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
+  <data name="torrentLeechersCol.Text" xml:space="preserve">
     <value>Leechers</value>
   </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
+  <data name="torrentDownSpeedCol.Text" xml:space="preserve">
+    <value>Download hastighed</value>
+  </data>
+  <data name="torrentUpSpeedCol.Text" xml:space="preserve">
+    <value>Upload hastighed</value>
+  </data>
+  <data name="torrentEtaCol.Text" xml:space="preserve">
+    <value>ETA</value>
+  </data>
+  <data name="torrentUploadedCol.Text" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="torrentRatioCol.Text" xml:space="preserve">
+    <value>Forholdet</value>
+  </data>
+  <data name="torrentAddedAt.Text" xml:space="preserve">
+    <value>Tilføjet den</value>
+  </data>
+  <data name="torrentCompletedAtCol.Text" xml:space="preserve">
+    <value>Fuldført den</value>
+  </data>
+  <data name="torrentTrackerCol.Text" xml:space="preserve">
+    <value>Tracker</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Total size:</value>
+  </data>
+  <data name="trackersTierCol.Text" xml:space="preserve">
+    <value>Lag</value>
+  </data>
+  <data name="trackersAnnounceUrlCol.Text" xml:space="preserve">
+    <value>Announce URL</value>
+  </data>
+  <data name="trackersStatusCol.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="trackersUpdateInCol.Text" xml:space="preserve">
+    <value>Update In</value>
+  </data>
+  <data name="trackersSeedsCol.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="trackersLeechersCol.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="trackersDownloadedCol.Text" xml:space="preserve">
     <value>Downloaded</value>
+  </data>
+  <data name="filesPathCol.Text" xml:space="preserve">
+    <value>Sti</value>
+  </data>
+  <data name="filesTypeCol.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="filesSizeCol.Text" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="filesDoneCol.Text" xml:space="preserve">
+    <value>Færdig</value>
+  </data>
+  <data name="filesPercentCol.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="filesSkipCol.Text" xml:space="preserve">
+    <value>Spring over</value>
+  </data>
+  <data name="filesPriorityCol.Text" xml:space="preserve">
+    <value>Prioritet</value>
+  </data>
+  <data name="peersIpAddressCol.Text" xml:space="preserve">
+    <value>IP Addresse</value>
+  </data>
+  <data name="peersHostnameCol.Text" xml:space="preserve">
+    <value>Værts navn</value>
+  </data>
+  <data name="peersCountryCol.Text" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="peersFlagsCol.Text" xml:space="preserve">
+    <value>Flag</value>
+  </data>
+  <data name="peersClientCol.Text" xml:space="preserve">
+    <value>Klient</value>
+  </data>
+  <data name="peersProgressCol.Text" xml:space="preserve">
+    <value>Fremskridt</value>
+  </data>
+  <data name="peersDownSpeedCol.Text" xml:space="preserve">
+    <value>Download hastighed</value>
+  </data>
+  <data name="peersUpSpeedCol.Text" xml:space="preserve">
+    <value>Upload hastighed</value>
+  </data>
+  <data name="FilterTorrentLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Import local settings...</value>
+  </data>
+  <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Export local settings...</value>
+  </data>
+  <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Category filter panel</value>
+  </data>
+  <data name="RssButton.Text" xml:space="preserve">
+    <value>Rss Downloader</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>Location:</value>
@@ -162,9 +276,6 @@
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
     <value>Move torrent data</value>
   </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
     <value>Open on Network Share</value>
   </data>
@@ -173,51 +284,6 @@
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Open on Network Share</value>
-  </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Category filter panel</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Navn</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Størrelse</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Færdig</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Seeds</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Leechers</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Download hastighed</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Upload hastighed</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>ETA</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Uploaded</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Forholdet</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Tilføjet den</value>
-  </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Fuldført den</value>
-  </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
-    <value>Tracker</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Hentet:</value>
@@ -276,62 +342,11 @@
   <data name="generalTabPage.Text" xml:space="preserve">
     <value>Generelt</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
-    <value>Lag</value>
-  </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
-    <value>Announce URL</value>
-  </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
     <value>Trackers</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Sti</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Størrelse</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Færdig</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>%</value>
-  </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Spring over</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Prioritet</value>
-  </data>
   <data name="filesTabPage.Text" xml:space="preserve">
     <value>Filer</value>
-  </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
-    <value>IP Addresse</value>
-  </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
-    <value>Værts navn</value>
-  </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
-    <value>Flag</value>
-  </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
-    <value>Klient</value>
-  </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Fremskridt</value>
-  </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
-    <value>Download hastighed</value>
-  </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
-    <value>Upload hastighed</value>
   </data>
   <data name="peersTabPage.Text" xml:space="preserve">
     <value>Peers</value>
