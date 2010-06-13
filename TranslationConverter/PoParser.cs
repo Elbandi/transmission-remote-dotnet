@@ -30,8 +30,8 @@ namespace Instedd.GeoChat.Gettext
                         currentKey != null &&
                         currentValue != null)
                     {
-                        result[currentKey.ToString().Replace("\\n", "\n")] =
-                            currentValue.ToString().Replace("\\n", "\n");
+                        result[currentKey.ToString().Replace("\\n", "\n").Replace("\\r", "\r")] =
+                            currentValue.ToString().Replace("\\n", "\n").Replace("\\r", "\r");
                         currentKey = null;
                         currentValue = null;
                     }
