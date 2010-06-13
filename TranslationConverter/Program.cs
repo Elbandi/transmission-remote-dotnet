@@ -87,6 +87,10 @@ namespace TranslationConverter
                     }
                 #endregion
 
+                if (!trd_language.ContainsKey("en-US"))
+                {
+                    throw new Exception("No en-US language files found! (this is the template for translations)");
+                }
                 Dictionary<string, string> template = trd_language["en-US"];
 #if !ONLY_TRANSLATE
                 foreach (KeyValuePair<string, StringsList> l in trd_language)
