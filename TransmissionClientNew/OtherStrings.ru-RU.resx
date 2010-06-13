@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TerabyteShort" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitFactors" xml:space="preserve">
+    <value>Byte|Kilobyte|Megabyte|Gigabyte|Terabyte</value>
+    <comment>delim with | char!!</comment>
+  </data>
+  <data name="TotalDoneValidSize" xml:space="preserve">
+    <value>{0} ({1} done) ({2} valid)</value>
+  </data>
+  <data name="TotalDoneValidTotalSize" xml:space="preserve">
+    <value>{0} ({1} done) ({2} valid) ({3} total)</value>
+  </data>
+  <data name="UnableRunPlink" xml:space="preserve">
+    <value>Unable to run plink</value>
+  </data>
   <data name="UnixPathExists" xml:space="preserve">
     <value>Unix path exists</value>
   </data>

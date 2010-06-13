@@ -54,6 +54,8 @@ namespace TransmissionRemoteDotnet
             CONFKEYPREFIX_LISTVIEW_INDEXES = "listview-indexes-",
             CONFKEYPREFIX_LISTVIEW_SORTINDEX = "listview-sortindex-",
             CONFKEYPREFIX_LISTVIEW_VISIBLE = "listview-visible-",
+            CONFKEY_FILTER_SPLITTERDISTANCE = "mainwindow-filter-splitterdistance",
+            CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED = "mainwindow-filterspanel-collapsed",
             CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED = "mainwindow-detailspanel-collapsed",
             PROJECT_SITE = "http://code.google.com/p/transmission-remote-dotnet/",
             LATEST_VERSION = "http://transmission-remote-dotnet.googlecode.com/svn/wiki/latest_version.txt",
@@ -475,7 +477,7 @@ namespace TransmissionRemoteDotnet
                 if (t != null)
                     UpdateInfoPanel(false, t);
                 refreshTimer.Enabled = torrentListView.Enabled = true;
-                if (categoriesPanelToolStripMenuItem.Checked)
+                if (showCategoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
                 FilterByStateOrTracker();
                 UpdateTrayIcon();
@@ -618,6 +620,7 @@ namespace TransmissionRemoteDotnet
                 OneTorrentsSelected(false, null);
                 this.toolStripStatusLabel.Text = OtherStrings.Disconnected;
                 this.toolStripVersionLabel.Visible = false;
+                this.mainVerticalSplitContainer.Panel1Collapsed = true;
                 this.Text = MainWindow.DEFAULT_WINDOW_TITLE;
                 speedGraph.RemoveLine("Download");
                 speedGraph.RemoveLine("Upload");
@@ -638,7 +641,7 @@ namespace TransmissionRemoteDotnet
                 UpdateNotifyIcon("transmission");
             }
             connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
-                = mainVerticalSplitContainer.Panel1Collapsed = !connected;
+                = !connected;
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
@@ -649,7 +652,8 @@ namespace TransmissionRemoteDotnet
                 = addTorrentFromUrlToolStripMenuItem.Enabled = startTorrentButton.Visible
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
-                = categoriesPanelToolStripMenuItem.Checked = connected;
+                = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
+                = connected;
             SetRemoteCmdButtonVisible(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
@@ -754,17 +758,20 @@ namespace TransmissionRemoteDotnet
             {
                 LocalSettings settings = Program.Settings;
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_HEIGHT) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_WIDTH))
-                    this.Size = new Size((int)settings.Misc[CONFKEY_MAINWINDOW_WIDTH], (int)settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]);
+                    this.Size = new Size(Toolbox.ToInt(settings.Misc[CONFKEY_MAINWINDOW_WIDTH]), Toolbox.ToInt(settings.Misc[CONFKEY_MAINWINDOW_HEIGHT]));
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_X) && settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_LOCATION_Y))
                 {
-                    Point p = new Point((int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X), (int)settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y));
+                    Point p = new Point(Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_X)), Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_LOCATION_Y)));
                     if (Toolbox.ScreenExists(p))
                         this.Location = p;
                 }
-                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || (int)settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) == 1);
+                if (settings.Misc.ContainsKey(CONFKEY_FILTER_SPLITTERDISTANCE))
+                    this.mainVerticalSplitContainer.SplitterDistance = Toolbox.ToInt(settings.GetObject(CONFKEY_FILTER_SPLITTERDISTANCE));
+                this.showCategoriesPanelToolStripMenuItem.Checked = settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED) && Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED)) == 0;
+                this.showDetailsPanelToolStripMenuItem.Checked = !(this.torrentAndTabsSplitContainer.Panel2Collapsed = !settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED) || Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED)) == 1);
                 if (settings.Misc.ContainsKey(CONFKEY_MAINWINDOW_STATE))
                 {
-                    FormWindowState _mainWindowState = (FormWindowState)((int)settings.GetObject(CONFKEY_MAINWINDOW_STATE));
+                    FormWindowState _mainWindowState = (FormWindowState)(Toolbox.ToInt(settings.GetObject(CONFKEY_MAINWINDOW_STATE)));
                     if (_mainWindowState != FormWindowState.Minimized)
                     {
                         this.notifyIcon.Tag = this.WindowState = _mainWindowState;
@@ -840,7 +847,7 @@ namespace TransmissionRemoteDotnet
             if (settings.ContainsKey(sortIndexConfKey))
             {
                 IListViewItemSorter sorter = (IListViewItemSorter)listView.ListViewItemSorter;
-                int sortIndex = (int)settings.GetObject(sortIndexConfKey);
+                int sortIndex = Toolbox.ToInt(settings.GetObject(sortIndexConfKey));
                 sorter.Order = sortIndex < 0 ? SortOrder.Descending : SortOrder.Ascending;
                 sorter.SortColumn = sortIndex < 0 ? -sortIndex : sortIndex;
             }
@@ -1255,7 +1262,7 @@ namespace TransmissionRemoteDotnet
                     = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
                     = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
                     = hashLabel.Text = piecesInfoLabel.Text = locationLabel.Text
-                    = generalTorrentNameGroupBox.Text = "";
+                    = generalTorrentNameGroupBox.Text = totalSizeLabel.Text = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
                    = "N/A";
@@ -1469,6 +1476,11 @@ namespace TransmissionRemoteDotnet
             FilterByStateOrTracker();
         }
 
+        private void FilterTorrentTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilterByStateOrTracker();
+        }
+
         static bool FilteringProcess = false;
         private void FilterByStateOrTracker()
         {
@@ -1534,9 +1546,10 @@ namespace TransmissionRemoteDotnet
         {
             lock (Program.TorrentIndex)
             {
+                string filterstring = FilterTorrentTextBox.Text.ToLower();
                 foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    if (fc(pair.Value, param))
+                    if (fc(pair.Value, param) && (filterstring.Length == 0 || pair.Value.TorrentName.ToLower().Contains(filterstring)))
                     {
                         pair.Value.Show();
                     }
@@ -1810,7 +1823,7 @@ namespace TransmissionRemoteDotnet
                 }
                 trackersListView.EndUpdate();
             }
-            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : t.LongEta;
+            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : (t.Eta > 0 ? t.LongEta : "");
             label4.Text = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
             uploadedLabel.Text = t.UploadedString;
             uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
@@ -1828,14 +1841,16 @@ namespace TransmissionRemoteDotnet
                 piecesInfoLabel.Text = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
             locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
-            if (t.IsFinished)
+            if (t.TotalSize == t.SizeWhenDone)
             {
-                downloadedLabel.Text = t.HaveTotalString;
+                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             }
             else
             {
-                downloadedLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
+                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidTotalSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid), Toolbox.GetFileSize(t.TotalSize));
             }
+            //totalSizeLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
+            downloadedLabel.Text = Toolbox.GetFileSize(t.Downloaded);
             downloadSpeedLabel.Text = t.DownloadRateString;
             downloadLimitLabel.Text = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
             statusLabel.Text = t.Status;
@@ -2079,10 +2094,12 @@ namespace TransmissionRemoteDotnet
                     settings.SetObject(CONFKEY_MAINWINDOW_HEIGHT, this.RestoreBounds.Height);
                     settings.SetObject(CONFKEY_MAINWINDOW_WIDTH, this.RestoreBounds.Width);
                 }
+                settings.SetObject(CONFKEY_FILTER_SPLITTERDISTANCE, this.mainVerticalSplitContainer.SplitterDistance);
             }
             SaveListViewProperties(torrentListView);
             SaveListViewProperties(filesListView);
             SaveListViewProperties(peersListView);
+            settings.SetObject(CONFKEY_MAINWINDOW_FILTERSPANEL_COLLAPSED, this.showCategoriesPanelToolStripMenuItem.Checked ? 0 : 1);
             settings.SetObject(CONFKEY_MAINWINDOW_DETAILSPANEL_COLLAPSED, this.torrentAndTabsSplitContainer.Panel2Collapsed ? 1 : 0);
             settings.Commit();
         }
@@ -2174,16 +2191,16 @@ namespace TransmissionRemoteDotnet
                     Process.Start(
                         Program.Settings.PlinkPath,
                         String.Format(
-                            "\"{0}\" \"{1}\"",
+                            "-t \"{0}\" \"{1}\"",
                             Program.Settings.Current.Host,
                             String.Format(
-                                Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}"),
+                                Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}").Replace("$TORRENTID", t.Id.ToString()),
                                 String.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.TorrentName))
                         ));
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Unable to run plink", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, OtherStrings.UnableRunPlink, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -2230,8 +2247,8 @@ namespace TransmissionRemoteDotnet
 
         private void categoriesPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainVerticalSplitContainer.Panel1Collapsed = !mainVerticalSplitContainer.Panel1Collapsed;
-            categoriesPanelToolStripMenuItem.Checked = !mainVerticalSplitContainer.Panel1Collapsed;
+            showCategoriesPanelToolStripMenuItem.Checked = !showCategoriesPanelToolStripMenuItem.Checked;
+            mainVerticalSplitContainer.Panel1Collapsed = !showCategoriesPanelToolStripMenuItem.Checked || !Program.Connected;
         }
 
         private void moveTorrentDataToolStripMenuItem_Click(object sender, EventArgs e)

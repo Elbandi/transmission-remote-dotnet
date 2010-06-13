@@ -110,35 +110,38 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="unitFactorLabel.Text" xml:space="preserve">
+    <value>Unit factor:</value>
+  </data>
   <data name="downloadedBytesLabel2.Text" xml:space="preserve">
-    <value>Octets téléchargés :</value>
+    <value>Octets téléchargés:</value>
   </data>
   <data name="uploadedBytesLabel2.Text" xml:space="preserve">
-    <value>Octets envoyés :</value>
+    <value>Octets envoyés:</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Fermer</value>
   </data>
   <data name="secondsActiveValue2.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="sessionCountValue2.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="filesAddedValue2.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="uploadedBytesValue2.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="downloadedBytesValue2.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="secondsActiveLabel2.Text" xml:space="preserve">
     <value>Secondes d'activité</value>
   </data>
   <data name="sessionCountLabel2.Text" xml:space="preserve">
-    <value>Nombre de session(s)</value>
+    <value>Nombre de sessions</value>
   </data>
   <data name="filesAddedLabel2.Text" xml:space="preserve">
     <value>Fichiers ajoutés:</value>
@@ -147,39 +150,39 @@
     <value>Stats cumulatives</value>
   </data>
   <data name="secondsActiveValue1.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="sessionCountValue1.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="filesAddedValue1.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="uploadedBytesValue1.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="downloadedBytesValue1.Text" xml:space="preserve">
-    <value>En cours d'interrogation...</value>
+    <value>Requête...</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">
     <value>Secondes d'activité</value>
   </data>
   <data name="sessionCountLabel1.Text" xml:space="preserve">
-    <value>Nombre de session(s)</value>
+    <value>Nombre de sessions</value>
   </data>
   <data name="filesAddedLabel1.Text" xml:space="preserve">
     <value>Fichiers ajoutés:</value>
   </data>
   <data name="downloadedBytesLabel1.Text" xml:space="preserve">
-    <value>Octets téléchargés :</value>
+    <value>Octets téléchargés:</value>
   </data>
   <data name="uploadedBytesLabel1.Text" xml:space="preserve">
-    <value>Octets envoyés :</value>
+    <value>Octets envoyés:</value>
   </data>
   <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Stats de la session en cours</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Statistiques du démon de Transmission</value>
+    <value>Statistiques daemon de Transmission</value>
   </data>
 </root>
