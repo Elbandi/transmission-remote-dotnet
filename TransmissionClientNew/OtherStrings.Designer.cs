@@ -1033,6 +1033,33 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} ({1} done) ({2} valid).
+        /// </summary>
+        internal static string TotalDoneValidSize {
+            get {
+                return ResourceManager.GetString("TotalDoneValidSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} ({1} done) ({2} valid) ({3} total).
+        /// </summary>
+        internal static string TotalDoneValidTotalSize {
+            get {
+                return ResourceManager.GetString("TotalDoneValidTotalSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to run plink.
+        /// </summary>
+        internal static string UnableRunPlink {
+            get {
+                return ResourceManager.GetString("UnableRunPlink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to open.
         /// </summary>
         internal static string UnableToOpen {
@@ -1051,7 +1078,7 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Byte|Kilobyte|Metabyte|Gigabyte|Terabyte.
+        ///   Looks up a localized string similar to Byte|Kilobyte|Megabyte|Gigabyte|Terabyte.
         /// </summary>
         internal static string UnitFactors {
             get {

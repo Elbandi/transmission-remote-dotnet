@@ -74,38 +74,38 @@ namespace TransmissionRemoteDotnet
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
-            base.SubItems[1].Tag = this.SizeWhenDone;
-            SetText(1, Toolbox.GetFileSize(this.SizeWhenDone));
-            base.SubItems[2].Tag = this.Percentage;
-            SetText(2, this.Percentage + "%");
-            SetText(3, this.Status);
-            SetText(4, string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs));
-            this.SubItems[4].Tag = this.Seeders;
-            SetText(5, string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs));
-            this.SubItems[5].Tag = this.Leechers;
-            base.SubItems[6].Tag = this.DownloadRate;
-            SetText(6, this.DownloadRate > 0 ? Toolbox.GetSpeed(this.DownloadRate) : "");
-            base.SubItems[7].Tag = this.UploadRate;
-            SetText(7, this.UploadRate > 0 ? Toolbox.GetSpeed(this.UploadRate) : "");
-            SetText(8, this.Eta > 0 ? TimeSpan.FromSeconds(this.Eta).ToString() : "");
-            base.SubItems[8].Tag = this.Eta;
-            base.SubItems[9].Tag = this.Uploaded;
-            SetText(9, Toolbox.GetFileSize(this.Uploaded));
-            base.SubItems[10].Tag = this.LocalRatio;
-            SetText(10, this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString());
-            base.SubItems[11].Tag = this.Added;
-            SetText(11, this.Added.ToString());
-            SetText(13, this.FirstTrackerTrimmed);
-            base.SubItems[14].Tag = this.Id;
-			SetText(14, this.Id.ToString());
+            SetText(1, this.Id.ToString());
+            base.SubItems[1].Tag = this.Id;
+            SetText(2, Toolbox.GetFileSize(this.SizeWhenDone));
+            base.SubItems[2].Tag = this.SizeWhenDone;
+            SetText(3, this.Percentage + "%");
+            base.SubItems[3].Tag = this.Percentage;
+            SetText(4, this.Status);
+            SetText(5, string.Format(SeedersColumnFormat, (this.Seeders < 0 ? "?" : this.Seeders.ToString()), this.PeersSendingToUs));
+            this.SubItems[5].Tag = this.Seeders;
+            SetText(6, string.Format(SeedersColumnFormat, (this.Leechers < 0 ? "?" : this.Leechers.ToString()), this.PeersGettingFromUs));
+            this.SubItems[6].Tag = this.Leechers;
+            SetText(7, this.DownloadRate > 0 ? Toolbox.GetSpeed(this.DownloadRate) : "");
+            base.SubItems[7].Tag = this.DownloadRate;
+            SetText(8, this.UploadRate > 0 ? Toolbox.GetSpeed(this.UploadRate) : "");
+            base.SubItems[8].Tag = this.UploadRate;
+            SetText(9, this.Eta > 0 ? TimeSpan.FromSeconds(this.Eta).ToString() : "");
+            base.SubItems[9].Tag = this.Eta;
+            SetText(10, Toolbox.GetFileSize(this.Uploaded));
+            base.SubItems[10].Tag = this.Uploaded;
+            SetText(11, this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString());
+            base.SubItems[11].Tag = this.LocalRatio;
+            SetText(12, this.Added.ToString());
+            base.SubItems[12].Tag = this.Added;
+            if (this.DoneDate != null)
+            {
+                base.SubItems[13].Tag = this.DoneDate;
+                SetText(13, this.DoneDate.ToString());
+            }
+            SetText(14, this.FirstTrackerTrimmed);
 
             if (first)
             {
-                if (this.DoneDate != null)
-                {
-                    base.SubItems[12].Tag = this.DoneDate;
-                    SetText(12, this.DoneDate.ToString());
-                }
                 lock (form.stateListBox)
                 {
                     if (this.FirstTrackerTrimmed.Length > 0 && form.stateListBox.FindItem(this.FirstTrackerTrimmed) == null)
@@ -172,7 +172,6 @@ namespace TransmissionRemoteDotnet
             if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
                 && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
-                this.DoneDate = DateTime.Now;
                 this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon;
             }
 
@@ -644,7 +643,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[9].Text;
+                return base.SubItems[10].Text;
             }
         }
 
@@ -664,6 +663,14 @@ namespace TransmissionRemoteDotnet
         {
             get;
             set;
+        }
+
+        public string HaveTotalString
+        {
+            get
+            {
+                return Toolbox.GetFileSize(this.HaveTotal);
+            }
         }
 
         public long HaveValid
@@ -686,14 +693,6 @@ namespace TransmissionRemoteDotnet
             set;
         }
 
-        public string HaveTotalString
-        {
-            get
-            {
-                return Toolbox.GetFileSize(this.HaveTotal);
-            }
-        }
-
         public long DownloadRate
         {
             get;
@@ -704,7 +703,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[6].Text;
+                return base.SubItems[7].Text;
             }
         }
 
@@ -718,7 +717,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[7].Text;
+                return base.SubItems[8].Text;
             }
         }
 
@@ -732,7 +731,7 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[10].Text;
+                return base.SubItems[11].Text;
             }
         }
 

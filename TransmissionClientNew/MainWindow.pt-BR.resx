@@ -111,62 +111,134 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss Downloader</value>
-  </data>
-  <data name="columnHeader33.Text" xml:space="preserve">
-    <value>Update In</value>
-  </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
-    <value>Seeds</value>
-  </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
-    <value>Leechers</value>
-  </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
-    <value>Downloaded</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
+  <data name="torrentNameCol.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
+  <data name="torrentNoCol.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="torrentSizeCol.Text" xml:space="preserve">
     <value>Tamanho</value>
   </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
+  <data name="torrentDoneCol.Text" xml:space="preserve">
     <value>Concluído</value>
   </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
+  <data name="torrentStatusCol.Text" xml:space="preserve">
     <value>Situação</value>
   </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
+  <data name="torrentSeedsCol.Text" xml:space="preserve">
     <value>Seeds</value>
   </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
+  <data name="torrentLeechersCol.Text" xml:space="preserve">
     <value>Leechers</value>
   </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
+  <data name="torrentDownSpeedCol.Text" xml:space="preserve">
     <value>Vel Down</value>
   </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
+  <data name="torrentUpSpeedCol.Text" xml:space="preserve">
     <value>Vel Up</value>
   </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
+  <data name="torrentEtaCol.Text" xml:space="preserve">
     <value>Conclusão em</value>
   </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
+  <data name="torrentUploadedCol.Text" xml:space="preserve">
     <value>Enviado</value>
   </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
+  <data name="torrentRatioCol.Text" xml:space="preserve">
     <value>Ratio</value>
   </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
+  <data name="torrentAddedAt.Text" xml:space="preserve">
     <value>Adicionado em</value>
   </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
+  <data name="torrentCompletedAtCol.Text" xml:space="preserve">
     <value>Concluído em</value>
   </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
+  <data name="torrentTrackerCol.Text" xml:space="preserve">
     <value>Rastreador</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Total size:</value>
+  </data>
+  <data name="trackersTierCol.Text" xml:space="preserve">
+    <value>Fila</value>
+  </data>
+  <data name="trackersAnnounceUrlCol.Text" xml:space="preserve">
+    <value>URL de Anúncio</value>
+  </data>
+  <data name="trackersStatusCol.Text" xml:space="preserve">
+    <value>Situação</value>
+  </data>
+  <data name="trackersUpdateInCol.Text" xml:space="preserve">
+    <value>Update In</value>
+  </data>
+  <data name="trackersSeedsCol.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="trackersLeechersCol.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="trackersDownloadedCol.Text" xml:space="preserve">
+    <value>Downloaded</value>
+  </data>
+  <data name="filesPathCol.Text" xml:space="preserve">
+    <value>Caminho</value>
+  </data>
+  <data name="filesTypeCol.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="filesSizeCol.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="filesDoneCol.Text" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="filesPercentCol.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="filesSkipCol.Text" xml:space="preserve">
+    <value>Ignorar</value>
+  </data>
+  <data name="filesPriorityCol.Text" xml:space="preserve">
+    <value>Prioridade</value>
+  </data>
+  <data name="peersIpAddressCol.Text" xml:space="preserve">
+    <value>Endereço IP</value>
+  </data>
+  <data name="peersHostnameCol.Text" xml:space="preserve">
+    <value>Hostname</value>
+  </data>
+  <data name="peersCountryCol.Text" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="peersFlagsCol.Text" xml:space="preserve">
+    <value>Bandeira</value>
+  </data>
+  <data name="peersClientCol.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="peersProgressCol.Text" xml:space="preserve">
+    <value>Progresso</value>
+  </data>
+  <data name="peersDownSpeedCol.Text" xml:space="preserve">
+    <value>Vel Down</value>
+  </data>
+  <data name="peersUpSpeedCol.Text" xml:space="preserve">
+    <value>Vel Up</value>
+  </data>
+  <data name="FilterTorrentLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Import local settings...</value>
+  </data>
+  <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Export local settings...</value>
+  </data>
+  <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Painel Filtro de Categorias</value>
+  </data>
+  <data name="RssButton.Text" xml:space="preserve">
+    <value>Rss Downloader</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Partes: </value>
@@ -237,65 +309,11 @@
   <data name="generalTabPage.Text" xml:space="preserve">
     <value>Geral</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
-    <value>Fila</value>
-  </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
-    <value>URL de Anúncio</value>
-  </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
-    <value>Situação</value>
-  </data>
   <data name="trackersTabPage.Text" xml:space="preserve">
     <value>Rastreadores</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Caminho</value>
-  </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
-    <value>Tipo</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Tamanho</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Concluído</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>%</value>
-  </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Ignorar</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Prioridade</value>
-  </data>
   <data name="filesTabPage.Text" xml:space="preserve">
     <value>Arquivos</value>
-  </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
-    <value>Endereço IP</value>
-  </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
-    <value>Hostname</value>
-  </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
-    <value>País</value>
-  </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
-    <value>Bandeira</value>
-  </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
-    <value>Cliente</value>
-  </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
-    <value>Progresso</value>
-  </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
-    <value>Vel Down</value>
-  </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
-    <value>Vel Up</value>
   </data>
   <data name="peersTabPage.Text" xml:space="preserve">
     <value>Peers</value>
@@ -464,9 +482,6 @@
   </data>
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Painel de Detalhes</value>
-  </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Painel Filtro de Categorias</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
     <value>Mostrar estatísticas</value>
