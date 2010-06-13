@@ -111,44 +111,53 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
+    <value>Mit dem Systemstart starten</value>
+  </data>
+  <data name="UpdateToBetaCheckBox.Text" xml:space="preserve">
+    <value>Auf Beta Versionen updaten.</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Aktualisierungsrate wenn verborgen</value>
+  </data>
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>Farbiges Tray Icon</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>Server löschen</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>Server hinzufügen</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
-    <value>Url</value>
+    <value>URL:</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Remove</value>
+    <value>Entferne Torrent(s)</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>Hinzufügen</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>Feed URL:</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
-    <value>Feed name:</value>
+    <value>Feed Name:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
     <value>Feed</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>RSS Feeds</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skin</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Custom rpc path:</value>
+    <value>Angepasster RPC Pfad:</value>
   </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
     <value>Beim Speichern Passwort löschen</value>
@@ -166,7 +175,7 @@
     <value>Öffne Remote-Ordner</value>
   </data>
   <data name="defaultActionComboBox.Items2" xml:space="preserve">
-    <value>Start/Stopp Torrent</value>
+    <value>Starte/Stoppe Torrent</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
     <value>Doppel-Klick:</value>
@@ -187,7 +196,7 @@
     <value>Durchsuchen</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe oder ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload Prompt</value>
@@ -232,13 +241,13 @@
     <value>Beim Start auf Updates überprüfen</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>UNIX path prefix:</value>
+    <value>UNIX Pfad Prefix:</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Samba share:</value>
+    <value>Samba </value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>New mapping:</value>
+    <value>Neues Mapping:</value>
   </data>
   <data name="tabPage7.Text" xml:space="preserve">
     <value>Samba</value>

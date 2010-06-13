@@ -59,7 +59,7 @@ namespace TransmissionRemoteDotnet
             this.secondsActiveLabel2 = new System.Windows.Forms.Label();
             this.sessionCountLabel2 = new System.Windows.Forms.Label();
             this.filesAddedLabel2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SessionStatsTimer = new System.Windows.Forms.Timer(this.components);
             this.CurrentSessionGroupBox = new System.Windows.Forms.GroupBox();
             this.secondsActiveValue1 = new System.Windows.Forms.Label();
             this.sessionCountValue1 = new System.Windows.Forms.Label();
@@ -71,6 +71,8 @@ namespace TransmissionRemoteDotnet
             this.filesAddedLabel1 = new System.Windows.Forms.Label();
             this.downloadedBytesLabel1 = new System.Windows.Forms.Label();
             this.uploadedBytesLabel1 = new System.Windows.Forms.Label();
+            this.unitFactorLabel = new System.Windows.Forms.Label();
+            this.unitFactorComboBox = new System.Windows.Forms.ComboBox();
             this.CumulativeGroupBox.SuspendLayout();
             this.CurrentSessionGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -149,10 +151,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.filesAddedLabel2, "filesAddedLabel2");
             this.filesAddedLabel2.Name = "filesAddedLabel2";
             // 
-            // timer1
+            // SessionStatsTimer
             // 
-            this.timer1.Interval = 3000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.SessionStatsTimer.Interval = 3000;
+            this.SessionStatsTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CurrentSessionGroupBox
             // 
@@ -220,12 +222,27 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.uploadedBytesLabel1, "uploadedBytesLabel1");
             this.uploadedBytesLabel1.Name = "uploadedBytesLabel1";
             // 
+            // unitFactorLabel
+            // 
+            resources.ApplyResources(this.unitFactorLabel, "unitFactorLabel");
+            this.unitFactorLabel.Name = "unitFactorLabel";
+            // 
+            // unitFactorComboBox
+            // 
+            this.unitFactorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.unitFactorComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.unitFactorComboBox, "unitFactorComboBox");
+            this.unitFactorComboBox.Name = "unitFactorComboBox";
+            this.unitFactorComboBox.SelectedIndexChanged += new System.EventHandler(this.unitFactorComboBox_SelectedIndexChanged);
+            // 
             // StatsDialog
             // 
             this.AcceptButton = this.CloseFormButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseFormButton;
+            this.Controls.Add(this.unitFactorComboBox);
+            this.Controls.Add(this.unitFactorLabel);
             this.Controls.Add(this.CurrentSessionGroupBox);
             this.Controls.Add(this.CumulativeGroupBox);
             this.Controls.Add(this.CloseFormButton);
@@ -239,13 +256,14 @@ namespace TransmissionRemoteDotnet
             this.CurrentSessionGroupBox.ResumeLayout(false);
             this.CurrentSessionGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button CloseFormButton;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer SessionStatsTimer;
         private System.Windows.Forms.GroupBox CumulativeGroupBox;
         private System.Windows.Forms.Label secondsActiveValue1;
         private System.Windows.Forms.Label sessionCountValue1;
@@ -268,5 +286,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label downloadedBytesValue2;
         private System.Windows.Forms.Label downloadedBytesLabel2;
         private System.Windows.Forms.Label uploadedBytesLabel2;
+        private System.Windows.Forms.Label unitFactorLabel;
+        private System.Windows.Forms.ComboBox unitFactorComboBox;
     }
 }

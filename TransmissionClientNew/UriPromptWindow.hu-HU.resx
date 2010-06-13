@@ -114,13 +114,13 @@
     <value>OK</value>
   </data>
   <data name="CancelBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Mégse</value>
   </data>
   <data name="toolStripStatusLabel.Text" xml:space="preserve">
-    <value>Waiting for URL...</value>
+    <value>Várakozás az URL-re...</value>
   </data>
   <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
-    <value>Set torrent options before upload</value>
+    <value>Torrent beállítások feltöltés előtt</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>

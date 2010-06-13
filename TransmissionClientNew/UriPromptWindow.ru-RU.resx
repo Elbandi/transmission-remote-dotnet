@@ -114,10 +114,10 @@
     <value>OK</value>
   </data>
   <data name="CancelBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Отмена</value>
   </data>
   <data name="toolStripStatusLabel.Text" xml:space="preserve">
-    <value>Waiting for URL...</value>
+    <value>Ожидание ссылки...</value>
   </data>
   <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
     <value>Set torrent options before upload</value>

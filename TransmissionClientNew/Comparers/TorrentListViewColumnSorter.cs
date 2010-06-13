@@ -70,41 +70,45 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewTextComparer(0, false);
                         break;
                     case 1:
-                        objectCompare = new ListViewItemInt64Comparer(columnToSort);
+                        objectCompare = new ListViewItemInt32Comparer(columnToSort);
                         break;
                     case 2:
+                        objectCompare = new ListViewItemInt64Comparer(columnToSort);
+                        break;
+                    case 3:
                         objectCompare = new ListViewItemDecimalComparer(columnToSort);
                         break;
                     case 4:
-                        objectCompare = new ListViewItemInt32Comparer(columnToSort);
-                        break;
+                        goto default;
                     case 5:
                         objectCompare = new ListViewItemInt32Comparer(columnToSort);
                         break;
                     case 6:
-                        objectCompare = new ListViewItemInt64Comparer(columnToSort);
+                        objectCompare = new ListViewItemInt32Comparer(columnToSort);
                         break;
                     case 7:
                         objectCompare = new ListViewItemInt64Comparer(columnToSort);
                         break;
                     case 8:
-                        objectCompare = new ListViewItemDoubleComparer(columnToSort);
-                        break;
-                    case 9:
                         objectCompare = new ListViewItemInt64Comparer(columnToSort);
                         break;
+                    case 9:
+                        objectCompare = new ListViewItemDoubleComparer(columnToSort);
+                        break;
                     case 10:
-                        objectCompare = new ListViewItemDecimalComparer(columnToSort);
+                        objectCompare = new ListViewItemInt64Comparer(columnToSort);
                         break;
                     case 11:
-                        objectCompare = new ListViewDateTimeComparer(columnToSort);
+                        objectCompare = new ListViewItemDecimalComparer(columnToSort);
                         break;
                     case 12:
                         objectCompare = new ListViewDateTimeComparer(columnToSort);
                         break;
-                    case 14:
-                        objectCompare = new ListViewItemInt32Comparer(columnToSort);
+                    case 13:
+                        objectCompare = new ListViewDateTimeComparer(columnToSort);
                         break;
+                    case 14:
+                        goto default;
                     default:
                         objectCompare = new ListViewTextComparer(columnToSort, true);
                         break;

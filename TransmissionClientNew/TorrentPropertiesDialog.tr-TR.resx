@@ -118,7 +118,7 @@
     <value>Bantgenişliği Önceliği :</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
-    <value>Honors session limits</value>
+    <value>Değerli oturum limitleri</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
     <value>Gönderme oranı limiti</value>

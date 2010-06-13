@@ -198,113 +198,71 @@
   <data name="&gt;&gt;mainVerticalSplitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
+  <data name="torrentNameCol.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+  <data name="torrentNameCol.Width" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
-  <data name="columnHeader7.DisplayIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader8.DisplayIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>Done</value>
-  </data>
-  <data name="columnHeader9.DisplayIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="columnHeader10.DisplayIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Seeds</value>
-  </data>
-  <data name="columnHeader11.DisplayIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Leechers</value>
-  </data>
-  <data name="columnHeader12.DisplayIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Down Speed</value>
-  </data>
-  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader13.DisplayIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Up Speed</value>
-  </data>
-  <data name="columnHeader13.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="columnHeader14.DisplayIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>ETA</value>
-  </data>
-  <data name="columnHeader15.DisplayIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Uploaded</value>
-  </data>
-  <data name="columnHeader15.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="columnHeader16.DisplayIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>Ratio</value>
-  </data>
-  <data name="columnHeader18.DisplayIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Added At</value>
-  </data>
-  <data name="columnHeader19.DisplayIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
-    <value>Completed At</value>
-  </data>
-  <data name="columnHeader30.DisplayIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="columnHeader30.Text" xml:space="preserve">
-    <value>Tracker</value>
-  </data>
-  <data name="columnHeader30.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="columnHeader37.DisplayIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="columnHeader37.Text" xml:space="preserve">
+  <data name="torrentNoCol.Text" xml:space="preserve">
     <value>#</value>
   </data>
-  <data name="columnHeader37.Width" type="System.Int32, mscorlib">
+  <data name="torrentNoCol.Width" type="System.Int32, mscorlib">
     <value>32</value>
+  </data>
+  <data name="torrentSizeCol.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="torrentSizeCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentDoneCol.Text" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="torrentStatusCol.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="torrentSeedsCol.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="torrentLeechersCol.Text" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="torrentDownSpeedCol.Text" xml:space="preserve">
+    <value>Down Speed</value>
+  </data>
+  <data name="torrentDownSpeedCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentUpSpeedCol.Text" xml:space="preserve">
+    <value>Up Speed</value>
+  </data>
+  <data name="torrentUpSpeedCol.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="torrentEtaCol.Text" xml:space="preserve">
+    <value>ETA</value>
+  </data>
+  <data name="torrentUploadedCol.Text" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="torrentUploadedCol.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="torrentRatioCol.Text" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="torrentAddedAt.Text" xml:space="preserve">
+    <value>Added At</value>
+  </data>
+  <data name="torrentCompletedAtCol.Text" xml:space="preserve">
+    <value>Completed At</value>
+  </data>
+  <data name="torrentTrackerCol.Text" xml:space="preserve">
+    <value>Tracker</value>
+  </data>
+  <data name="torrentTrackerCol.Width" type="System.Int32, mscorlib">
+    <value>140</value>
   </data>
   <data name="torrentListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -537,6 +495,63 @@
   <data name="generalTorrentNameGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="totalSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 130</value>
+  </data>
+  <data name="totalSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="totalSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="totalSizeLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Name" xml:space="preserve">
+    <value>totalSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Parent" xml:space="preserve">
+    <value>generalTorrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 130</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Total size:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>generalTorrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="locationLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -547,13 +562,13 @@
     <value>NoControl</value>
   </data>
   <data name="locationLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 184</value>
+    <value>6, 111</value>
   </data>
   <data name="locationLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
   </data>
   <data name="locationLabelLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>28</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>Location:</value>
@@ -568,16 +583,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;locationLabelLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="locationLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 184</value>
+    <value>104, 111</value>
   </data>
   <data name="locationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>440, 13</value>
   </data>
   <data name="locationLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>29</value>
   </data>
   <data name="locationLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -592,16 +607,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;locationLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="piecesInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 136</value>
+    <value>664, 16</value>
   </data>
   <data name="piecesInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="piecesInfoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>5</value>
   </data>
   <data name="piecesInfoLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -616,7 +631,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="piecesInfoLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -628,13 +643,13 @@
     <value>NoControl</value>
   </data>
   <data name="piecesInfoLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 136</value>
+    <value>568, 16</value>
   </data>
   <data name="piecesInfoLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
   </data>
   <data name="piecesInfoLabelLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>4</value>
   </data>
   <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
     <value>Pieces:</value>
@@ -649,16 +664,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabelLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="hashLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 136</value>
+    <value>104, 149</value>
   </data>
   <data name="hashLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>440, 13</value>
   </data>
   <data name="hashLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+    <value>37</value>
   </data>
   <data name="hashLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -673,7 +688,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;hashLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="hashLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -685,13 +700,13 @@
     <value>NoControl</value>
   </data>
   <data name="hashLabelLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 136</value>
+    <value>6, 149</value>
   </data>
   <data name="hashLabelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
   </data>
   <data name="hashLabelLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>36</value>
   </data>
   <data name="hashLabelLabel.Text" xml:space="preserve">
     <value>Hash:</value>
@@ -706,7 +721,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;hashLabelLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="timeElapsedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -733,10 +748,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 112</value>
+    <value>664, 92</value>
   </data>
   <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -757,10 +772,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="uploadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 88</value>
+    <value>384, 73</value>
   </data>
   <data name="uploadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -781,10 +796,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="uploadRateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 64</value>
+    <value>384, 54</value>
   </data>
   <data name="uploadRateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -805,10 +820,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadRateLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="uploadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 40</value>
+    <value>384, 35</value>
   </data>
   <data name="uploadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -829,7 +844,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="remainingLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>384, 16</value>
@@ -853,10 +868,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;remainingLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="downloadedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 40</value>
+    <value>104, 35</value>
   </data>
   <data name="downloadedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -877,10 +892,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="downloadSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 64</value>
+    <value>104, 54</value>
   </data>
   <data name="downloadSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -901,10 +916,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="downloadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 88</value>
+    <value>104, 73</value>
   </data>
   <data name="downloadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -925,10 +940,10 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 112</value>
+    <value>104, 92</value>
   </data>
   <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
@@ -949,16 +964,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 160</value>
+    <value>104, 168</value>
   </data>
   <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>440, 13</value>
   </data>
   <data name="commentLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>41</value>
   </data>
   <data name="commentLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -973,16 +988,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 160</value>
+    <value>664, 149</value>
   </data>
   <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>39</value>
   </data>
   <data name="errorLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -997,16 +1012,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 112</value>
+    <value>664, 130</value>
   </data>
   <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="createdByLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>35</value>
   </data>
   <data name="createdByLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1021,16 +1036,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 88</value>
+    <value>664, 111</value>
   </data>
   <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="createdAtLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>31</value>
   </data>
   <data name="createdAtLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1045,16 +1060,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="leechersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 40</value>
+    <value>664, 54</value>
   </data>
   <data name="leechersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="leechersLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="leechersLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1069,16 +1084,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;leechersLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="ratioLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 64</value>
+    <value>664, 73</value>
   </data>
   <data name="ratioLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="ratioLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="ratioLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1093,16 +1108,16 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;ratioLabel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="seedersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 16</value>
+    <value>664, 35</value>
   </data>
   <data name="seedersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 13</value>
   </data>
   <data name="seedersLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="seedersLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1117,7 +1132,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;seedersLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1129,13 +1144,13 @@
     <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 112</value>
+    <value>568, 130</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>34</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>Created by:</value>
@@ -1150,7 +1165,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1162,13 +1177,13 @@
     <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 88</value>
+    <value>568, 111</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>30</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Created at:</value>
@@ -1183,7 +1198,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="labelForErrorLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1195,13 +1210,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelForErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 160</value>
+    <value>568, 149</value>
   </data>
   <data name="labelForErrorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
   </data>
   <data name="labelForErrorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>38</value>
   </data>
   <data name="labelForErrorLabel.Text" xml:space="preserve">
     <value>Error:</value>
@@ -1219,7 +1234,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;labelForErrorLabel.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1231,13 +1246,13 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 160</value>
+    <value>6, 168</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>40</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Comment:</value>
@@ -1252,7 +1267,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1264,13 +1279,13 @@
     <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 64</value>
+    <value>568, 73</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Ratio:</value>
@@ -1285,7 +1300,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1297,13 +1312,13 @@
     <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 40</value>
+    <value>568, 54</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Leechers:</value>
@@ -1318,7 +1333,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1330,13 +1345,13 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 16</value>
+    <value>568, 35</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Seeds:</value>
@@ -1351,7 +1366,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>31</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1363,7 +1378,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 88</value>
+    <value>288, 73</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -1384,7 +1399,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1396,7 +1411,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 64</value>
+    <value>288, 54</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -1417,7 +1432,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1429,7 +1444,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 40</value>
+    <value>288, 35</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1450,7 +1465,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1483,7 +1498,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>35</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1495,7 +1510,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 112</value>
+    <value>6, 92</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1516,7 +1531,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1528,7 +1543,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 88</value>
+    <value>6, 73</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -1549,7 +1564,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1561,7 +1576,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 64</value>
+    <value>6, 54</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 13</value>
@@ -1582,7 +1597,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>38</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1594,7 +1609,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 40</value>
+    <value>6, 35</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -1615,7 +1630,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>39</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1627,7 +1642,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 112</value>
+    <value>568, 92</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 13</value>
@@ -1648,7 +1663,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>40</value>
   </data>
   <data name="timeElapsedLabelLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1681,7 +1696,7 @@
     <value>generalTorrentNameGroupBox</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabelLabel.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>41</value>
   </data>
   <data name="generalTorrentNameGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1773,49 +1788,49 @@
   <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
+  <data name="trackersTierCol.Text" xml:space="preserve">
     <value>Tier</value>
   </data>
-  <data name="columnHeader22.Width" type="System.Int32, mscorlib">
+  <data name="trackersTierCol.Width" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
+  <data name="trackersAnnounceUrlCol.Text" xml:space="preserve">
     <value>Announce URL</value>
   </data>
-  <data name="columnHeader20.Width" type="System.Int32, mscorlib">
+  <data name="trackersAnnounceUrlCol.Width" type="System.Int32, mscorlib">
     <value>300</value>
   </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
+  <data name="trackersStatusCol.Text" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="columnHeader21.Width" type="System.Int32, mscorlib">
+  <data name="trackersStatusCol.Width" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="columnHeader33.Text" xml:space="preserve">
+  <data name="trackersUpdateInCol.Text" xml:space="preserve">
     <value>Update In</value>
   </data>
-  <data name="columnHeader33.Width" type="System.Int32, mscorlib">
+  <data name="trackersUpdateInCol.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="columnHeader34.Text" xml:space="preserve">
+  <data name="trackersSeedsCol.Text" xml:space="preserve">
     <value>Seeds</value>
   </data>
-  <data name="columnHeader34.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersSeedsCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="columnHeader35.Text" xml:space="preserve">
+  <data name="trackersLeechersCol.Text" xml:space="preserve">
     <value>Leechers</value>
   </data>
-  <data name="columnHeader35.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersLeechersCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="columnHeader36.Text" xml:space="preserve">
+  <data name="trackersDownloadedCol.Text" xml:space="preserve">
     <value>Downloaded</value>
   </data>
-  <data name="columnHeader36.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="trackersDownloadedCol.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="columnHeader36.Width" type="System.Int32, mscorlib">
+  <data name="trackersDownloadedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="trackersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1893,40 +1908,40 @@
   <data name="&gt;&gt;trackersTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
+  <data name="filesPathCol.Text" xml:space="preserve">
     <value>Path</value>
   </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+  <data name="filesPathCol.Width" type="System.Int32, mscorlib">
     <value>444</value>
   </data>
-  <data name="columnHeader32.Text" xml:space="preserve">
+  <data name="filesTypeCol.Text" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
+  <data name="filesSizeCol.Text" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+  <data name="filesSizeCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
+  <data name="filesDoneCol.Text" xml:space="preserve">
     <value>Done</value>
   </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+  <data name="filesDoneCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
+  <data name="filesPercentCol.Text" xml:space="preserve">
     <value>%</value>
   </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
+  <data name="filesSkipCol.Text" xml:space="preserve">
     <value>Skip</value>
   </data>
-  <data name="columnHeader17.Width" type="System.Int32, mscorlib">
+  <data name="filesSkipCol.Width" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
+  <data name="filesPriorityCol.Text" xml:space="preserve">
     <value>Priority</value>
   </data>
-  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+  <data name="filesPriorityCol.Width" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="filesListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -2010,49 +2025,49 @@
   <data name="&gt;&gt;filesTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
+  <data name="peersIpAddressCol.Text" xml:space="preserve">
     <value>IP Address</value>
   </data>
-  <data name="columnHeader23.Width" type="System.Int32, mscorlib">
+  <data name="peersIpAddressCol.Width" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
+  <data name="peersHostnameCol.Text" xml:space="preserve">
     <value>Hostname</value>
   </data>
-  <data name="columnHeader24.Width" type="System.Int32, mscorlib">
+  <data name="peersHostnameCol.Width" type="System.Int32, mscorlib">
     <value>280</value>
   </data>
-  <data name="columnHeader25.Text" xml:space="preserve">
+  <data name="peersCountryCol.Text" xml:space="preserve">
     <value>Country</value>
   </data>
-  <data name="columnHeader25.Width" type="System.Int32, mscorlib">
+  <data name="peersCountryCol.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="columnHeader31.Text" xml:space="preserve">
+  <data name="peersFlagsCol.Text" xml:space="preserve">
     <value>Flags</value>
   </data>
-  <data name="columnHeader26.Text" xml:space="preserve">
+  <data name="peersClientCol.Text" xml:space="preserve">
     <value>Client</value>
   </data>
-  <data name="columnHeader26.Width" type="System.Int32, mscorlib">
+  <data name="peersClientCol.Width" type="System.Int32, mscorlib">
     <value>130</value>
   </data>
-  <data name="columnHeader27.Text" xml:space="preserve">
+  <data name="peersProgressCol.Text" xml:space="preserve">
     <value>Progress</value>
   </data>
-  <data name="columnHeader27.Width" type="System.Int32, mscorlib">
+  <data name="peersProgressCol.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="columnHeader28.Text" xml:space="preserve">
+  <data name="peersDownSpeedCol.Text" xml:space="preserve">
     <value>Down Speed</value>
   </data>
-  <data name="columnHeader28.Width" type="System.Int32, mscorlib">
+  <data name="peersDownSpeedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="columnHeader29.Text" xml:space="preserve">
+  <data name="peersUpSpeedCol.Text" xml:space="preserve">
     <value>Up Speed</value>
   </data>
-  <data name="columnHeader29.Width" type="System.Int32, mscorlib">
+  <data name="peersUpSpeedCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="peersListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -2937,11 +2952,29 @@
   <data name="RssButton.Text" xml:space="preserve">
     <value>Rss Downloader</value>
   </data>
+  <data name="FilterTorrentTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="FilterTorrentTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 39</value>
+  </data>
+  <data name="FilterTorrentTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FilterTorrentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 36</value>
+  </data>
+  <data name="FilterTorrentLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="FilterTorrentLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 39</value>
+    <value>974, 39</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3282,13 +3315,13 @@
   <data name="showDetailsPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Details panel</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+  <data name="showCategoriesPanelToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F7</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="showCategoriesPanelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 22</value>
   </data>
-  <data name="categoriesPanelToolStripMenuItem.Text" xml:space="preserve">
+  <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Category filter panel</value>
   </data>
   <data name="viewMenuToolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
@@ -3727,178 +3760,178 @@
   <data name="&gt;&gt;stateListBoxImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
-    <value>columnHeader6</value>
+  <data name="&gt;&gt;torrentNameCol.Name" xml:space="preserve">
+    <value>torrentNameCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentNameCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
-    <value>columnHeader7</value>
+  <data name="&gt;&gt;torrentNoCol.Name" xml:space="preserve">
+    <value>torrentNoCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentNoCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
-    <value>columnHeader8</value>
+  <data name="&gt;&gt;torrentSizeCol.Name" xml:space="preserve">
+    <value>torrentSizeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentSizeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
-    <value>columnHeader9</value>
+  <data name="&gt;&gt;torrentDoneCol.Name" xml:space="preserve">
+    <value>torrentDoneCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentDoneCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
-    <value>columnHeader10</value>
+  <data name="&gt;&gt;torrentStatusCol.Name" xml:space="preserve">
+    <value>torrentStatusCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentStatusCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
-    <value>columnHeader11</value>
+  <data name="&gt;&gt;torrentSeedsCol.Name" xml:space="preserve">
+    <value>torrentSeedsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentSeedsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
-    <value>columnHeader12</value>
+  <data name="&gt;&gt;torrentLeechersCol.Name" xml:space="preserve">
+    <value>torrentLeechersCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentLeechersCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Name" xml:space="preserve">
-    <value>columnHeader13</value>
+  <data name="&gt;&gt;torrentDownSpeedCol.Name" xml:space="preserve">
+    <value>torrentDownSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentDownSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Name" xml:space="preserve">
-    <value>columnHeader14</value>
+  <data name="&gt;&gt;torrentUpSpeedCol.Name" xml:space="preserve">
+    <value>torrentUpSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentUpSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
-    <value>columnHeader15</value>
+  <data name="&gt;&gt;torrentEtaCol.Name" xml:space="preserve">
+    <value>torrentEtaCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentEtaCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Name" xml:space="preserve">
-    <value>columnHeader16</value>
+  <data name="&gt;&gt;torrentUploadedCol.Name" xml:space="preserve">
+    <value>torrentUploadedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentUploadedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Name" xml:space="preserve">
-    <value>columnHeader18</value>
+  <data name="&gt;&gt;torrentRatioCol.Name" xml:space="preserve">
+    <value>torrentRatioCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentRatioCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Name" xml:space="preserve">
-    <value>columnHeader19</value>
+  <data name="&gt;&gt;torrentAddedAt.Name" xml:space="preserve">
+    <value>torrentAddedAt</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentAddedAt.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader30.Name" xml:space="preserve">
-    <value>columnHeader30</value>
+  <data name="&gt;&gt;torrentCompletedAtCol.Name" xml:space="preserve">
+    <value>torrentCompletedAtCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader30.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentCompletedAtCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader37.Name" xml:space="preserve">
-    <value>columnHeader37</value>
+  <data name="&gt;&gt;torrentTrackerCol.Name" xml:space="preserve">
+    <value>torrentTrackerCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader37.Type" xml:space="preserve">
+  <data name="&gt;&gt;torrentTrackerCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
-    <value>columnHeader22</value>
+  <data name="&gt;&gt;trackersTierCol.Name" xml:space="preserve">
+    <value>trackersTierCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersTierCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Name" xml:space="preserve">
-    <value>columnHeader20</value>
+  <data name="&gt;&gt;trackersAnnounceUrlCol.Name" xml:space="preserve">
+    <value>trackersAnnounceUrlCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersAnnounceUrlCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Name" xml:space="preserve">
-    <value>columnHeader21</value>
+  <data name="&gt;&gt;trackersStatusCol.Name" xml:space="preserve">
+    <value>trackersStatusCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersStatusCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader33.Name" xml:space="preserve">
-    <value>columnHeader33</value>
+  <data name="&gt;&gt;trackersUpdateInCol.Name" xml:space="preserve">
+    <value>trackersUpdateInCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader33.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersUpdateInCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader34.Name" xml:space="preserve">
-    <value>columnHeader34</value>
+  <data name="&gt;&gt;trackersSeedsCol.Name" xml:space="preserve">
+    <value>trackersSeedsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader34.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersSeedsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader35.Name" xml:space="preserve">
-    <value>columnHeader35</value>
+  <data name="&gt;&gt;trackersLeechersCol.Name" xml:space="preserve">
+    <value>trackersLeechersCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader35.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersLeechersCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader36.Name" xml:space="preserve">
-    <value>columnHeader36</value>
+  <data name="&gt;&gt;trackersDownloadedCol.Name" xml:space="preserve">
+    <value>trackersDownloadedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader36.Type" xml:space="preserve">
+  <data name="&gt;&gt;trackersDownloadedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
-    <value>columnHeader1</value>
+  <data name="&gt;&gt;filesPathCol.Name" xml:space="preserve">
+    <value>filesPathCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPathCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader32.Name" xml:space="preserve">
-    <value>columnHeader32</value>
+  <data name="&gt;&gt;filesTypeCol.Name" xml:space="preserve">
+    <value>filesTypeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader32.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesTypeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
+  <data name="&gt;&gt;filesSizeCol.Name" xml:space="preserve">
+    <value>filesSizeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSizeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
+  <data name="&gt;&gt;filesDoneCol.Name" xml:space="preserve">
+    <value>filesDoneCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesDoneCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
+  <data name="&gt;&gt;filesPercentCol.Name" xml:space="preserve">
+    <value>filesPercentCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPercentCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Name" xml:space="preserve">
-    <value>columnHeader17</value>
+  <data name="&gt;&gt;filesSkipCol.Name" xml:space="preserve">
+    <value>filesSkipCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSkipCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
-    <value>columnHeader5</value>
+  <data name="&gt;&gt;filesPriorityCol.Name" xml:space="preserve">
+    <value>filesPriorityCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPriorityCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileIconImageList.Name" xml:space="preserve">
@@ -3907,52 +3940,52 @@
   <data name="&gt;&gt;fileIconImageList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
-    <value>columnHeader23</value>
+  <data name="&gt;&gt;peersIpAddressCol.Name" xml:space="preserve">
+    <value>peersIpAddressCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersIpAddressCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Name" xml:space="preserve">
-    <value>columnHeader24</value>
+  <data name="&gt;&gt;peersHostnameCol.Name" xml:space="preserve">
+    <value>peersHostnameCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersHostnameCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader25.Name" xml:space="preserve">
-    <value>columnHeader25</value>
+  <data name="&gt;&gt;peersCountryCol.Name" xml:space="preserve">
+    <value>peersCountryCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader25.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersCountryCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader31.Name" xml:space="preserve">
-    <value>columnHeader31</value>
+  <data name="&gt;&gt;peersFlagsCol.Name" xml:space="preserve">
+    <value>peersFlagsCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader31.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersFlagsCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader26.Name" xml:space="preserve">
-    <value>columnHeader26</value>
+  <data name="&gt;&gt;peersClientCol.Name" xml:space="preserve">
+    <value>peersClientCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader26.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersClientCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader27.Name" xml:space="preserve">
-    <value>columnHeader27</value>
+  <data name="&gt;&gt;peersProgressCol.Name" xml:space="preserve">
+    <value>peersProgressCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader27.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersProgressCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader28.Name" xml:space="preserve">
-    <value>columnHeader28</value>
+  <data name="&gt;&gt;peersDownSpeedCol.Name" xml:space="preserve">
+    <value>peersDownSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader28.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersDownSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader29.Name" xml:space="preserve">
-    <value>columnHeader29</value>
+  <data name="&gt;&gt;peersUpSpeedCol.Name" xml:space="preserve">
+    <value>peersUpSpeedCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader29.Type" xml:space="preserve">
+  <data name="&gt;&gt;peersUpSpeedCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabControlImageList.Name" xml:space="preserve">
@@ -4122,6 +4155,18 @@
   </data>
   <data name="&gt;&gt;RssButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentTextBox.Name" xml:space="preserve">
+    <value>FilterTorrentTextBox</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentLabel.Name" xml:space="preserve">
+    <value>FilterTorrentLabel</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
@@ -4333,10 +4378,10 @@
   <data name="&gt;&gt;showDetailsPanelToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;categoriesPanelToolStripMenuItem.Name" xml:space="preserve">
-    <value>categoriesPanelToolStripMenuItem</value>
+  <data name="&gt;&gt;showCategoriesPanelToolStripMenuItem.Name" xml:space="preserve">
+    <value>showCategoriesPanelToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;categoriesPanelToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;showCategoriesPanelToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;viewMenuToolStripSeparator.Name" xml:space="preserve">
