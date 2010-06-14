@@ -511,6 +511,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to items selected.
+        /// </summary>
+        internal static string ItemsSelected {
+            get {
+                return ResourceManager.GetString("ItemsSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kilobyte.
         /// </summary>
         internal static string Kilobyte {

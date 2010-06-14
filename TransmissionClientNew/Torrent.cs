@@ -225,6 +225,7 @@ namespace TransmissionRemoteDotnet
             this.Id = Toolbox.ToInt(info[ProtocolConstants.FIELD_ID]);
             for (int i = 0; i < 14; i++)
                 base.SubItems.Add("");
+            this.UseItemStyleForSubItems = false;
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
             this.Created = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DATECREATED])).ToLocalTime().ToString();

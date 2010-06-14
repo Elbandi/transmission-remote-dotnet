@@ -27,9 +27,8 @@ namespace TransmissionRemoteDotnet.Commmands
     public class TorrentGetCommand : ICommand
     {
         private int oldCount;
-        private string statusBarUpdate;
         private bool stateChange = false;
-        private int totalUploadInt, totalDownloadInt;
+        private long totalUpload = 0, totalDownload = 0;
         private List<Torrent> UpdateTorrents = new List<Torrent>();
 
         public TorrentGetCommand(JsonObject response)
@@ -39,13 +38,6 @@ namespace TransmissionRemoteDotnet.Commmands
             {
                 return;
             }
-            long totalUpload = 0;
-            long totalDownload = 0;
-            int totalTorrents = 0;
-            int totalSeeding = 0;
-            int totalDownloading = 0;
-            long totalSize = 0;
-            long totalDownloadedSize = 0;
             JsonObject arguments = (JsonObject)response[ProtocolConstants.KEY_ARGUMENTS];
             JsonArray torrents = (JsonArray)arguments[ProtocolConstants.KEY_TORRENTS];
             Program.DaemonDescriptor.UpdateSerial++;
@@ -55,7 +47,6 @@ namespace TransmissionRemoteDotnet.Commmands
             {
                 JsonObject torrent = (JsonObject)torrents[i];
                 string hash = (string)torrent[ProtocolConstants.FIELD_HASHSTRING];
-                totalTorrents++;
                 Torrent t = null;
                 lock (Program.TorrentIndex)
                 {
@@ -73,37 +64,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 }
                 totalUpload += t.UploadRate;
                 totalDownload += t.DownloadRate;
-                totalSize += t.TotalSize;
-                totalDownloadedSize += t.HaveTotal;
-                if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
-                {
-                    totalDownloading++;
-                }
-                else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
-                {
-                    totalSeeding++;
-                }
             }
-            this.totalDownloadInt = (int)totalDownload;
-            this.totalUploadInt = (int)totalUpload;
-
-            this.statusBarUpdate = String.Format(
-                "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {10} / {11}",
-                new object[] {
-                        Toolbox.GetSpeed(totalDownload),
-                        OtherStrings.Down.ToLower(),
-                        Toolbox.GetSpeed(totalUpload),
-                        OtherStrings.Up.ToLower(),
-                        totalTorrents,
-                        OtherStrings.Torrents.ToLower(),
-                        totalDownloading,
-                        OtherStrings.Downloading.ToLower(),
-                        totalSeeding,
-                        OtherStrings.Seeding.ToLower(),
-                        Toolbox.GetFileSize(totalDownloadedSize),
-                        Toolbox.GetFileSize(totalSize)
-                    }
-            );
         }
 
         public void Execute()
@@ -137,8 +98,8 @@ namespace TransmissionRemoteDotnet.Commmands
 
             if (stateChange)
                 form.SetAllStateCounters();
-            form.UpdateStatus(this.statusBarUpdate, true);
-            form.UpdateGraph(totalDownloadInt, totalUploadInt);
+            form.UpdateStatus(true);
+            form.UpdateGraph((int)totalDownload, (int)totalUpload);
             Program.RaisePostUpdateEvent();
         }
     }
