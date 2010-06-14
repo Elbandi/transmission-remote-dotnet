@@ -246,6 +246,11 @@ namespace TransmissionRemoteDotnet
                             window.G - STRIPE_OFFSET,
                             window.B - STRIPE_OFFSET)
                         : window;
+                    if (!item.UseItemStyleForSubItems)
+                        foreach (ListViewItem.ListViewSubItem lvs in item.SubItems)
+                        {
+                            lvs.BackColor = item.BackColor;
+                        }
                 }
                 list.EndUpdate();
             }

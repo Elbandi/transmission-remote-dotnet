@@ -16,27 +16,27 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Globalization;
+using System.IO;
 using System.Net;
+using System.Reflection;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using Etier.IconHelper;
+using Jayrock.Json;
+using Jayrock.Json.Conversion;
+using MaxMind;
 using TransmissionRemoteDotnet.Commmands;
 using TransmissionRemoteDotnet.Comparers;
 using TransmissionRemoteDotnet.Settings;
-using Jayrock.Json;
-using MaxMind;
-using System.IO;
-using System.Diagnostics;
-using System.Net.Sockets;
-using System.Reflection;
-using System.Globalization;
-using System.Threading;
-using Jayrock.Json.Conversion;
-using System.Collections;
-using Etier.IconHelper;
 
 namespace TransmissionRemoteDotnet
 {
@@ -2327,6 +2327,57 @@ namespace TransmissionRemoteDotnet
                 {
                     MessageBox.Show(ee.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 };
+        }
+
+        private void torrentListView_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        private void torrentListView_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            e.DrawDefault = false;
+        }
+
+        Pen LightLightGray = new Pen(Color.FromArgb(-1447447));
+        private void torrentListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 3)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[3].Tag;
+                Rectangle rect, origrect = e.Bounds;
+                if (((e.ItemState & ListViewItemStates.Focused) != 0) && (torrentListView.SelectedItems.Count > 0))
+                {
+                    // Draw the background and focus rectangle for a selected item.
+                    e.Graphics.FillRectangle(SystemBrushes.Highlight, origrect);
+                }
+                else
+                {
+                    // Draw the background for an unselected item.
+                    e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), origrect);
+                }
+                origrect.X += 1;
+                origrect.Y += 1;
+                origrect.Height -= 3;
+                origrect.Width -= 3;
+                rect = origrect;
+                e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), rect);
+                rect.Width = (int)((double)width / 100.0 * origrect.Width);
+
+                if (rect.Width > 0 && rect.Height > 0)
+                {
+                    Brush br = new LinearGradientBrush(rect,
+                        Color.ForestGreen,
+                        Color.LightGreen,
+                        LinearGradientMode.Horizontal);
+                    e.Graphics.FillRectangle(br, rect);
+                }
+                e.Graphics.DrawRectangle(LightLightGray, origrect);
+
+                e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter);
+            }
         }
     }
 }

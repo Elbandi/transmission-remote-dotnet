@@ -346,14 +346,18 @@ namespace TransmissionRemoteDotnet
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.HideSelection = false;
             this.torrentListView.Name = "torrentListView";
+            this.torrentListView.OwnerDraw = true;
             this.torrentListView.ShowItemToolTips = true;
             this.torrentListView.SmallImageList = this.stateListBoxImageList;
             this.torrentListView.UseCompatibleStateImageBehavior = false;
             this.torrentListView.View = System.Windows.Forms.View.Details;
+            this.torrentListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.torrentListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.torrentListView.SelectedIndexChanged += new System.EventHandler(this.torrentListView_SelectedIndexChanged);
             this.torrentListView.DoubleClick += new System.EventHandler(this.torrentListView_DoubleClick);
             this.torrentListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.torrentListView_ColumnClick);
             this.torrentListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentListView_KeyDown);
+            this.torrentListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.torrentListView_DrawSubItem);
             // 
             // torrentNameCol
             // 
