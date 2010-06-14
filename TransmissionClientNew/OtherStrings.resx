@@ -517,6 +517,9 @@
   <data name="UnableRunPlink" xml:space="preserve">
     <value>Unable to run plink</value>
   </data>
+  <data name="ItemsSelected" xml:space="preserve">
+    <value>items selected</value>
+  </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
   </data>
