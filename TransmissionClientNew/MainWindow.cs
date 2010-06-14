@@ -1233,6 +1233,7 @@ namespace TransmissionRemoteDotnet
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
+            UpdateStatus(true);
         }
 
         private void torrentListView_DoubleClick(object sender, EventArgs e)
@@ -1300,6 +1301,68 @@ namespace TransmissionRemoteDotnet
             speedGraph.Push(downspeed, "Download");
             speedGraph.Push(upspeed, "Upload");
             speedGraph.UpdateGraph();
+        }
+
+        public void UpdateStatus(bool updatenotify)
+        {
+            long totalUpload = 0;
+            long totalDownload = 0;
+            int totalTorrents = 0;
+            int totalSeeding = 0;
+            int totalDownloading = 0;
+            long totalSize = 0;
+            long totalDownloadedSize = 0;
+            long selectedSize = 0;
+            long selectedDownloadedSize = 0;
+            int selected = 0;
+
+            lock (torrentListView)
+            {
+                foreach (Torrent t in torrentListView.Items)
+                {
+                    totalTorrents++;
+                    totalUpload += t.UploadRate;
+                    totalDownload += t.DownloadRate;
+                    totalSize += t.TotalSize;
+                    totalDownloadedSize += t.HaveTotal;
+                    if (t.Selected)
+                    {
+                        selected++;
+                        selectedSize += t.TotalSize;
+                        selectedDownloadedSize += t.HaveTotal;
+                    }
+                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
+                    {
+                        totalDownloading++;
+                    }
+                    else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
+                    {
+                        totalSeeding++;
+                    }
+                }
+            }
+
+            UpdateStatus(String.Format(
+                selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
+                      : "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {10} / {11}",
+                new object[] {
+                        Toolbox.GetSpeed(totalDownload),
+                        OtherStrings.Down.ToLower(),
+                        Toolbox.GetSpeed(totalUpload),
+                        OtherStrings.Up.ToLower(),
+                        totalTorrents,
+                        OtherStrings.Torrents.ToLower(),
+                        totalDownloading,
+                        OtherStrings.Downloading.ToLower(),
+                        totalSeeding,
+                        OtherStrings.Seeding.ToLower(),
+                        Toolbox.GetFileSize(totalDownloadedSize),
+                        Toolbox.GetFileSize(totalSize),
+                        selected, OtherStrings.ItemsSelected,
+                        Toolbox.GetFileSize(selectedDownloadedSize),
+                        Toolbox.GetFileSize(selectedSize),
+                    }
+                ), updatenotify);
         }
 
         public void UpdateStatus(string text, bool updatenotify)
