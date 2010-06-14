@@ -71,6 +71,33 @@ namespace TransmissionRemoteDotnet
                 base.SubItems[idx].Text = str;
         }
 
+        public Color GetRatioColor()
+        {
+            double seedratio;
+            if (this.SeedRatioMode == ProtocolConstants.TR_RATIOLIMIT_UNLIMITED)
+                seedratio = -1;
+            else
+            {
+                if (this.SeedRatioMode == ProtocolConstants.TR_RATIOLIMIT_SINGLE)
+                {
+                    seedratio = this.SeedRatioLimit;
+                }
+                else
+                {
+                    JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+                    seedratio = Toolbox.ToBool(session[ProtocolConstants.FIELD_SEEDRATIOLIMITED]) ? Toolbox.ToDouble(session[ProtocolConstants.FIELD_SEEDRATIOLIMIT]) : -1;
+                }
+            }
+            if (this.LocalRatio < 0 || seedratio < 0)
+                return SystemColors.WindowText;
+            if (this.LocalRatio > seedratio)
+                return Color.Green;
+            if (this.LocalRatio > seedratio * 0.9)
+                return Color.Gold;
+            else
+                return Color.Red;
+        }
+
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
@@ -95,6 +122,7 @@ namespace TransmissionRemoteDotnet
             base.SubItems[10].Tag = this.Uploaded;
             SetText(11, this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString());
             base.SubItems[11].Tag = this.LocalRatio;
+            this.SubItems[11].ForeColor = GetRatioColor();
             SetText(12, this.Added.ToString());
             base.SubItems[12].Tag = this.Added;
             if (this.DoneDate != null)
@@ -722,7 +750,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public decimal LocalRatio
+        public double LocalRatio
         {
             get;
             set;
