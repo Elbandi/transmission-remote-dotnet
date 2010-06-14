@@ -1233,7 +1233,7 @@ namespace TransmissionRemoteDotnet
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
-            UpdateStatus(true);
+            UpdateStatus(GetSummaryStatus(), true);
         }
 
         private void torrentListView_DoubleClick(object sender, EventArgs e)
@@ -1303,7 +1303,7 @@ namespace TransmissionRemoteDotnet
             speedGraph.UpdateGraph();
         }
 
-        public void UpdateStatus(bool updatenotify)
+        public string GetSummaryStatus()
         {
             long totalUpload = 0;
             long totalDownload = 0;
@@ -1342,7 +1342,7 @@ namespace TransmissionRemoteDotnet
                 }
             }
 
-            UpdateStatus(String.Format(
+            return String.Format(
                 selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
                       : "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {10} / {11}",
                 new object[] {
@@ -1362,7 +1362,7 @@ namespace TransmissionRemoteDotnet
                         Toolbox.GetFileSize(selectedDownloadedSize),
                         Toolbox.GetFileSize(selectedSize),
                     }
-                ), updatenotify);
+                );
         }
 
         public void UpdateStatus(string text, bool updatenotify)
