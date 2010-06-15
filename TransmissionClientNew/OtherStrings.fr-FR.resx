@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TerabyteShort" xml:space="preserve">
-    <value>TB</value>
+    <value>To</value>
   </data>
   <data name="UnitFactors" xml:space="preserve">
-    <value>Byte|Kilobyte|Megabyte|Gigabyte|Terabyte</value>
+    <value>Octet|Kilooctet|Mégaoctet|Gigaoctet|Téraoctet</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="TotalDoneValidSize" xml:space="preserve">
@@ -131,22 +131,22 @@
     <value>{0} ({1} done) ({2} valid) ({3} total)</value>
   </data>
   <data name="UnableRunPlink" xml:space="preserve">
-    <value>Unable to run plink</value>
+    <value>plink introuvable</value>
   </data>
   <data name="UnixPathExists" xml:space="preserve">
-    <value>Unix path exists</value>
+    <value>Chemin UNIX existant</value>
   </data>
   <data name="InvalidRPCLocation" xml:space="preserve">
-    <value>Invalid RPC location</value>
+    <value>Location RPC invalide</value>
   </data>
   <data name="FeedExists" xml:space="preserve">
-    <value>Feed exists</value>
+    <value>Flux existant</value>
   </data>
   <data name="OpenImageFilter" xml:space="preserve">
     <value>Image PNG|*.png</value>
   </data>
   <data name="ConfirmSaveServer" xml:space="preserve">
-    <value>Réglages du serveur "{0}" changés. Enregistrer ?</value>
+    <value>Réglages du serveur "{0}" changés. Appliquer ?</value>
   </data>
   <data name="ConfirmMultipleRecheck" xml:space="preserve">
     <value>Vous allez vérifier {0} torrents. Cela peut être long. Etes-vous sûr(e) ?</value>
@@ -171,7 +171,7 @@
     <value>Partage SAMBA:</value>
   </data>
   <data name="UnixPathPrefix" xml:space="preserve">
-    <value>Préfixe du chemin UNIX:</value>
+    <value>Préfixe chemin UNIX:</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Annuler</value>
@@ -247,7 +247,7 @@
     <value>Seconde</value>
   </data>
   <data name="PortIsClosed" xml:space="preserve">
-    <value>Port d'entrée de votre daemon FERME.</value>
+    <value>Port d'entrée du daemon FERME.</value>
   </data>
   <data name="PortIsOpen" xml:space="preserve">
     <value>Port d'entrée de votre daemon OUVERT.</value>
@@ -283,7 +283,7 @@
     <value>Réannoncer</value>
   </data>
   <data name="OpenNetworkShare" xml:space="preserve">
-    <value>Ouvrir sur le Partage Réseau</value>
+    <value>Ouvrir dans dossier distant</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Tous</value>
@@ -418,7 +418,7 @@
     <value>Pauser</value>
   </data>
   <data name="PauseAll" xml:space="preserve">
-    <value>Tous en pause</value>
+    <value>Tout pauser</value>
   </data>
   <data name="Paused" xml:space="preserve">
     <value>Pause</value>
@@ -430,7 +430,7 @@
     <value>Vérifier</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Retirer</value>
+    <value>Supprimer</value>
   </data>
   <data name="RemoveAndDelete" xml:space="preserve">
     <value>Retirer et effacer</value>
@@ -448,7 +448,7 @@
     <value>Partage</value>
   </data>
   <data name="SelectAll" xml:space="preserve">
-    <value>Tout selectionner</value>
+    <value>Tout</value>
   </data>
   <data name="Skip" xml:space="preserve">
     <value>Ignorer</value>
@@ -502,18 +502,18 @@
     <value>Gigaoctet</value>
   </data>
   <data name="GigabyteShort" xml:space="preserve">
-    <value>Gb</value>
+    <value>Go</value>
   </data>
   <data name="Kilobyte" xml:space="preserve">
     <value>Kilooctet</value>
   </data>
   <data name="KilobyteShort" xml:space="preserve">
-    <value>Kb</value>
+    <value>Ko</value>
   </data>
   <data name="Megabyte" xml:space="preserve">
     <value>Mégaoctet</value>
   </data>
   <data name="MegabyteShort" xml:space="preserve">
-    <value>Mb</value>
+    <value>Mo</value>
   </data>
 </root>

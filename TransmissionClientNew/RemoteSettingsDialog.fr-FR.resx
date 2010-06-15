@@ -112,10 +112,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
-    <value>Enable Local Peer Discovery</value>
+    <value>Activer Local Peer Discovery</value>
   </data>
   <data name="incompleteToCheckBox.Text" xml:space="preserve">
-    <value>Incomplete download to:</value>
+    <value>Downloads incomplets vers:</value>
   </data>
   <data name="encryptionCombobox.Items" xml:space="preserve">
     <value>toleré</value>
@@ -196,7 +196,7 @@
     <value>Port entrant:</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Appliquer</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Fermer</value>

@@ -142,10 +142,10 @@
     <value>statusStrip1</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
-    <value>Limite de clients alternative:</value>
+    <value>Limite clients alternative:</value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
-    <value>Repertoire de déstination alternatif:</value>
+    <value>Repertoire destination alternatif:</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -163,10 +163,10 @@
     <value>Nom:</value>
   </data>
   <data name="SelectNoneButton.Text" xml:space="preserve">
-    <value>Tout Déselectionner</value>
+    <value>Déselect.</value>
   </data>
   <data name="SelectInvertButton.Text" xml:space="preserve">
-    <value>Tout Inverser</value>
+    <value>Inverser Selec.</value>
   </data>
   <data name="SelectAllButton.Text" xml:space="preserve">
     <value>Tout Sélectionner</value>

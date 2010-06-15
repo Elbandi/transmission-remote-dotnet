@@ -111,13 +111,13 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="unitFactorLabel.Text" xml:space="preserve">
-    <value>Unit factor:</value>
+    <value>Unité choisie:</value>
   </data>
   <data name="downloadedBytesLabel2.Text" xml:space="preserve">
-    <value>Octets téléchargés:</value>
+    <value>Téléchargé:</value>
   </data>
   <data name="uploadedBytesLabel2.Text" xml:space="preserve">
-    <value>Octets envoyés:</value>
+    <value>Envoyé:</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Fermer</value>
@@ -138,7 +138,7 @@
     <value>Requête...</value>
   </data>
   <data name="secondsActiveLabel2.Text" xml:space="preserve">
-    <value>Secondes d'activité</value>
+    <value>Durée d'activité</value>
   </data>
   <data name="sessionCountLabel2.Text" xml:space="preserve">
     <value>Nombre de sessions</value>
@@ -165,7 +165,7 @@
     <value>Requête...</value>
   </data>
   <data name="secondsActiveLabel1.Text" xml:space="preserve">
-    <value>Secondes d'activité</value>
+    <value>Durée d'activité</value>
   </data>
   <data name="sessionCountLabel1.Text" xml:space="preserve">
     <value>Nombre de sessions</value>
@@ -174,10 +174,10 @@
     <value>Fichiers ajoutés:</value>
   </data>
   <data name="downloadedBytesLabel1.Text" xml:space="preserve">
-    <value>Octets téléchargés:</value>
+    <value>Téléchargé:</value>
   </data>
   <data name="uploadedBytesLabel1.Text" xml:space="preserve">
-    <value>Octets envoyés:</value>
+    <value>Envoyé:</value>
   </data>
   <data name="CurrentSessionGroupBox.Text" xml:space="preserve">
     <value>Stats de la session en cours</value>
