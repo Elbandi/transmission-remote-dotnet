@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ItemsSelected" xml:space="preserve">
+    <value>items selected</value>
+  </data>
   <data name="TerabyteShort" xml:space="preserve">
     <value>TB</value>
   </data>
@@ -481,7 +484,7 @@
     <value>Ja</value>
   </data>
   <data name="Incomplete" xml:space="preserve">
-    <value>Nicht komplett</value>
+    <value>Unvollständig</value>
   </data>
   <data name="Byte" xml:space="preserve">
     <value>Byte</value>

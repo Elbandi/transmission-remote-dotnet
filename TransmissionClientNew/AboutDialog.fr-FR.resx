@@ -136,14 +136,17 @@
     * benba for the German translation.
     * drphrozen for the Danish translation.
     * András Első for the Hungarian translation.
-    * liuzhiyi for the Chinese translation.
+    * liuzhiyi for the Chinese (Simplified) translation.
     * Woodzu and cichy for the Polish translation.
     * RayTracer for the Turkish translation.
     * Alexey Komarov for the Russian translation.
     * huexxx for the Spanish translation.
     * twohertz for the Korean translation.
     * zeal.tsai for the Taiwanese translation.
-    * IkE Blaster for the Czech translation.</value>
+    * IkE Blaster for the Czech translation.
+    * Ingmar Hoogendoorn for the Dutch translation.
+    * Kadu Leite for the Brazilian Portuguese translation.
+    * zeal.tsai for the Chinese (Traditional) translation.</value>
   </data>
   <data name="labelCredits.Text" xml:space="preserve">
     <value>Credits &amp;&amp; remerciements:</value>
