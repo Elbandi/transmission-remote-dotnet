@@ -655,7 +655,7 @@ namespace CustomUIControls
                 SizeF peekSize = g.MeasureString(PeekStr, Font);
 
                 int textWidth = (int)Math.Max(Math.Max(maxSize.Width, minSize.Width),
-                                        peekSize.Width)+ 6;
+                                        peekSize.Width)+ 56;
 
                 SolidBrush textBrush = new SolidBrush(m_TextColor);
 

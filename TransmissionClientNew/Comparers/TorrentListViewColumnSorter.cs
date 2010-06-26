@@ -99,7 +99,7 @@ namespace TransmissionRemoteDotnet.Comparers
                         objectCompare = new ListViewItemInt64Comparer(columnToSort);
                         break;
                     case 11:
-                        objectCompare = new ListViewItemDecimalComparer(columnToSort);
+                        objectCompare = new ListViewItemDoubleComparer(columnToSort);
                         break;
                     case 12:
                         objectCompare = new ListViewDateTimeComparer(columnToSort);

@@ -112,19 +112,19 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
-    <value>Start on system startup</value>
+    <value>Démarrer avec le système</value>
   </data>
   <data name="UpdateToBetaCheckBox.Text" xml:space="preserve">
-    <value>Update to beta versions</value>
+    <value>Accepter MAJ Bêta</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Refresh rate when hidden:</value>
+    <value>Rafraîchissement minimisé:</value>
   </data>
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>Coloriser îcone</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Serveur distant</value>
+    <value>Supprimer Serveur</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
     <value>Ajouter Serveur</value>
@@ -133,25 +133,25 @@
     <value>Nom</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
-    <value>Url</value>
+    <value>URL</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
-    <value>Retirer</value>
+    <value>Supprimer</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
     <value>Ajouter</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>URL du flux:</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
-    <value>Feed name:</value>
+    <value>Nom du flux:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
-    <value>Feed</value>
+    <value>Flux</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>Flux RSS</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skin</value>
@@ -160,13 +160,13 @@
     <value>Chemin RPC perso:</value>
   </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
-    <value>Effacer password à l'enregistrement</value>
+    <value>Ne pas mémoriser password</value>
   </data>
   <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
-    <value>Effacer password à l'enregistrement</value>
+    <value>Ne pas mémoriser password</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
-    <value>Ne pas sauvegarder passwords</value>
+    <value>Ne pas sauver passwords</value>
   </data>
   <data name="defaultActionComboBox.Items" xml:space="preserve">
     <value>Proprietés du Torrent</value>
@@ -178,13 +178,13 @@
     <value>Démarrer/Arrêter torrent</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
-    <value>Action par défaut:</value>
+    <value>Action princip.:</value>
   </data>
   <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
     <value>Effacer torrent à l'ajout</value>
   </data>
   <data name="SaveAndConnectButton.Text" xml:space="preserve">
-    <value>Enregistrer et Connecter</value>
+    <value>Appliquer et Connecter</value>
   </data>
   <data name="groupAutoConnect.Text" xml:space="preserve">
     <value>Connexion auto</value>
@@ -196,7 +196,7 @@
     <value>Parcourir</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe ou ssh.exe</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Invite d'Upload</value>
@@ -208,16 +208,16 @@
     <value>Réglages globaux</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
-    <value>Enregistrer Serveur</value>
+    <value>Suuver Serveur</value>
   </data>
   <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
-    <value>Display remote command button</value>
+    <value>Montrer bouton Remote Command</value>
   </data>
   <data name="AddShareButton.Text" xml:space="preserve">
     <value>Ajouter</value>
   </data>
   <data name="RemoveShareButton.Text" xml:space="preserve">
-    <value>Retirer</value>
+    <value>Supprimer</value>
   </data>
   <data name="columnName.Text" xml:space="preserve">
     <value>Nom</value>
@@ -232,7 +232,7 @@
     <value>Ajouter Serveur</value>
   </data>
   <data name="removeServerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Serveur distant</value>
+    <value>Supprimer Serveur</value>
   </data>
   <data name="tabServersSettings.Text" xml:space="preserve">
     <value>Réglages Serveurs</value>
@@ -241,7 +241,7 @@
     <value>Vérifier MAJ au lancement</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>Préfixe du chemin UNIX:</value>
+    <value>Préfixe chemin UNIX:</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Partage SAMBA:</value>
@@ -271,13 +271,13 @@
     <value>Port :</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Appliquer</value>
   </data>
   <data name="CloseDialogButton.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Taux de Rafraîchissement :</value>
+    <value>Rafraîchissement :</value>
   </data>
   <data name="UseSSLCheckBox.Text" xml:space="preserve">
     <value>Sécurisé (SSL)</value>
@@ -301,10 +301,10 @@
     <value>Port :</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Mot de passe :</value>
+    <value>Password:</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Utilisateur :</value>
+    <value>Utilisateur:</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Hôte :</value>
@@ -325,13 +325,13 @@
     <value>Notifier à la complétion</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Mot de passe :</value>
+    <value>Password:</value>
   </data>
   <data name="EnableAuthCheckBox.Text" xml:space="preserve">
     <value>Activer l'authentification</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Utilisateur :</value>
+    <value>Utilisateur:</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Authentification</value>

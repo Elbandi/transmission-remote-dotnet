@@ -1295,7 +1295,7 @@ namespace TransmissionRemoteDotnet
             torrentListView.ContextMenu = this.currentTorrentSelectionMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
-            UpdateStatus(true);
+            UpdateStatus(GetSummaryStatus(), true);
         }
 
         private void torrentListView_DoubleClick(object sender, EventArgs e)
@@ -1365,7 +1365,7 @@ namespace TransmissionRemoteDotnet
             speedGraph.UpdateGraph();
         }
 
-        public void UpdateStatus(bool updatenotify)
+        public string GetSummaryStatus()
         {
             long totalUpload = 0;
             long totalDownload = 0;
@@ -1404,7 +1404,7 @@ namespace TransmissionRemoteDotnet
                 }
             }
 
-            UpdateStatus(String.Format(
+            return String.Format(
                 selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
                       : "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {10} / {11}",
                 new object[] {
@@ -1424,7 +1424,7 @@ namespace TransmissionRemoteDotnet
                         Toolbox.GetFileSize(selectedDownloadedSize),
                         Toolbox.GetFileSize(selectedSize),
                     }
-                ), updatenotify);
+                );
         }
 
         public void UpdateStatus(string text, bool updatenotify)
@@ -2461,10 +2461,44 @@ namespace TransmissionRemoteDotnet
 
         private void torrentListView_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            e.DrawDefault = false;
+            e.DrawDefault = true;
         }
 
         Pen LightLightGray = new Pen(Color.FromArgb(-1447447));
+        private void DrawSubItem(DrawListViewSubItemEventArgs e, decimal Width, bool Focused)
+        {
+            Rectangle rect, origrect = e.Bounds;
+            if (Focused)
+            {
+                // Draw the background and focus rectangle for a selected item.
+                e.Graphics.FillRectangle(SystemBrushes.Highlight, origrect);
+            }
+            else
+            {
+                // Draw the background for an unselected item.
+                e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), origrect);
+            }
+            origrect.X += 1;
+            origrect.Y += 1;
+            origrect.Height -= 3;
+            origrect.Width -= 3;
+            rect = origrect;
+            e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), rect);
+            rect.Width = (int)((double)Width / 100.0 * origrect.Width);
+
+            if (rect.Width > 0 && rect.Height > 0)
+            {
+                Brush br = new LinearGradientBrush(rect,
+                    Color.ForestGreen,
+                    Color.LightGreen,
+                    LinearGradientMode.Horizontal);
+                e.Graphics.FillRectangle(br, rect);
+            }
+            e.Graphics.DrawRectangle(LightLightGray, origrect);
+
+            e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter);
+        }
+
         private void torrentListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
             if (e.ColumnIndex != 3)
@@ -2472,36 +2506,29 @@ namespace TransmissionRemoteDotnet
             else
             {
                 decimal width = (decimal)e.Item.SubItems[3].Tag;
-                Rectangle rect, origrect = e.Bounds;
-                if (((e.ItemState & ListViewItemStates.Focused) != 0) && (torrentListView.SelectedItems.Count > 0))
-                {
-                    // Draw the background and focus rectangle for a selected item.
-                    e.Graphics.FillRectangle(SystemBrushes.Highlight, origrect);
-                }
-                else
-                {
-                    // Draw the background for an unselected item.
-                    e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), origrect);
-                }
-                origrect.X += 1;
-                origrect.Y += 1;
-                origrect.Height -= 3;
-                origrect.Width -= 3;
-                rect = origrect;
-                e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), rect);
-                rect.Width = (int)((double)width / 100.0 * origrect.Width);
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (torrentListView.SelectedItems.Count > 0));
+            }
+        }
 
-                if (rect.Width > 0 && rect.Height > 0)
-                {
-                    Brush br = new LinearGradientBrush(rect,
-                        Color.ForestGreen,
-                        Color.LightGreen,
-                        LinearGradientMode.Horizontal);
-                    e.Graphics.FillRectangle(br, rect);
-                }
-                e.Graphics.DrawRectangle(LightLightGray, origrect);
+        private void filesListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 4)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[4].Tag;
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (filesListView.SelectedItems.Count > 0));
+            }
+        }
 
-                e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter);
+        private void peersListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 5)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[5].Tag;
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (peersListView.SelectedItems.Count > 0));
             }
         }
 

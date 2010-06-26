@@ -35,6 +35,11 @@ namespace TransmissionRemoteDotnet
             BANDWIDTH_NORMAL = 0,
             BANDWIDTH_HIGH = 1;
 
+        public const int
+            TR_RATIOLIMIT_GLOBAL = 0, /* follow the global settings */
+            TR_RATIOLIMIT_SINGLE = 1, /* override the global settings, seeding until a certain ratio */
+            TR_RATIOLIMIT_UNLIMITED = 2;  /* override the global settings, seeding regardless of ratio */
+
         public const string
             KEY_TAG = "tag",
             KEY_METHOD = "method",
