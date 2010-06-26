@@ -334,7 +334,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public static decimal CalcRatio(long upload_total, long download_total)
+        public static double CalcRatio(long upload_total, long download_total)
         {
             if (download_total <= 0 || upload_total <= 0)
             {
@@ -342,7 +342,7 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
-                return Math.Round((decimal)upload_total / download_total, 3);
+                return Math.Round((double)upload_total / download_total, 3);
             }
         }
 

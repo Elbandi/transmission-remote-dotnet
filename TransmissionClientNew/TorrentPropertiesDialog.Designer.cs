@@ -124,8 +124,9 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.seedRatioLimitedCheckBox, "seedRatioLimitedCheckBox");
             this.seedRatioLimitedCheckBox.Name = "seedRatioLimitedCheckBox";
+            this.seedRatioLimitedCheckBox.ThreeState = true;
             this.seedRatioLimitedCheckBox.UseVisualStyleBackColor = true;
-            this.seedRatioLimitedCheckBox.CheckedChanged += new System.EventHandler(this.seedRatioLimitedCheckBox_CheckedChanged);
+            this.seedRatioLimitedCheckBox.CheckStateChanged += new System.EventHandler(this.seedRatioLimitedCheckBox_CheckStateChanged);
             // 
             // seedRatioLimitValue
             // 

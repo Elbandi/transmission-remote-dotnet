@@ -115,7 +115,7 @@
     <value>Trackers</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Priorité de bande passante:</value>
+    <value>Priorité bande passante:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
     <value>Respecter limites de session</value>

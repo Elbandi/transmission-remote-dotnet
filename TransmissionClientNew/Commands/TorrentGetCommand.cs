@@ -27,6 +27,7 @@ namespace TransmissionRemoteDotnet.Commmands
     public class TorrentGetCommand : ICommand
     {
         private int oldCount;
+        private string statusBarUpdate;
         private bool stateChange = false;
         private long totalUpload = 0, totalDownload = 0;
         private List<Torrent> UpdateTorrents = new List<Torrent>();
@@ -65,6 +66,7 @@ namespace TransmissionRemoteDotnet.Commmands
                 totalUpload += t.UploadRate;
                 totalDownload += t.DownloadRate;
             }
+            this.statusBarUpdate = Program.Form.GetSummaryStatus();
         }
 
         public void Execute()
@@ -98,7 +100,7 @@ namespace TransmissionRemoteDotnet.Commmands
 
             if (stateChange)
                 form.SetAllStateCounters();
-            form.UpdateStatus(true);
+            form.UpdateStatus(this.statusBarUpdate, true);
             form.UpdateGraph((int)totalDownload, (int)totalUpload);
             Program.RaisePostUpdateEvent();
         }

@@ -871,14 +871,18 @@ namespace TransmissionRemoteDotnet
             this.filesListView.FullRowSelect = true;
             this.filesListView.HideSelection = false;
             this.filesListView.Name = "filesListView";
+            this.filesListView.OwnerDraw = true;
             this.filesListView.ShowItemToolTips = true;
             this.filesListView.SmallImageList = this.fileIconImageList;
             this.filesListView.UseCompatibleStateImageBehavior = false;
             this.filesListView.View = System.Windows.Forms.View.Details;
+            this.filesListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.filesListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.filesListView.SelectedIndexChanged += new System.EventHandler(this.filesListView_SelectedIndexChanged);
             this.filesListView.DoubleClick += new System.EventHandler(this.filesListView_DoubleClick);
             this.filesListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.filesListView_ColumnClick);
             this.filesListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentDetailsTabListView_KeyDown);
+            this.filesListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.filesListView_DrawSubItem);
             // 
             // filesPathCol
             // 
@@ -944,11 +948,15 @@ namespace TransmissionRemoteDotnet
             this.peersListView.FullRowSelect = true;
             this.peersListView.HideSelection = false;
             this.peersListView.Name = "peersListView";
+            this.peersListView.OwnerDraw = true;
             this.peersListView.ShowItemToolTips = true;
             this.peersListView.UseCompatibleStateImageBehavior = false;
             this.peersListView.View = System.Windows.Forms.View.Details;
+            this.peersListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.peersListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.peersListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.peersListView_ColumnClick);
             this.peersListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentDetailsTabListView_KeyDown);
+            this.peersListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.peersListView_DrawSubItem);
             // 
             // peersIpAddressCol
             // 
