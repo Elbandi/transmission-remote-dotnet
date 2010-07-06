@@ -115,6 +115,10 @@ namespace TransmissionRemoteDotnet
                     SetNumeric(peerLimitValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_PEERLIMITGLOBAL]), 100);
                     peerLimitValue.Tag = ProtocolConstants.FIELD_PEERLIMITGLOBAL;
                 }
+                if (session.Contains(ProtocolConstants.FIELD_PEERLIMITPERTORRENT))
+                {
+                    SetNumeric(peerLimitTorrentValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_PEERLIMITPERTORRENT]), 100);
+                }
                 // pex
                 if (session.Contains(ProtocolConstants.FIELD_PEXALLOWED))
                 {
@@ -215,6 +219,7 @@ namespace TransmissionRemoteDotnet
             arguments.Put(ProtocolConstants.FIELD_PORTFORWARDINGENABLED, portForwardCheckBox.Checked);
             arguments.Put((string)PEXcheckBox.Tag, PEXcheckBox.Checked);
             arguments.Put((string)peerLimitValue.Tag, peerLimitValue.Value);
+            arguments.Put(ProtocolConstants.FIELD_PEERLIMITPERTORRENT, peerLimitTorrentValue.Value);
             switch (encryptionCombobox.SelectedIndex)
             {
                 case 1:

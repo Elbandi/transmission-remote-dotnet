@@ -192,7 +192,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;limitUploadCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="limitUploadValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 10</value>
@@ -213,7 +213,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;limitUploadValue.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="limitDownloadCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -240,7 +240,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;limitDownloadCheckBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="limitDownloadValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 36</value>
@@ -261,7 +261,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;limitDownloadValue.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -378,7 +378,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;peerLimitValue.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="PEXcheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -432,7 +432,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="portForwardCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -543,7 +543,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -570,7 +570,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="LpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -819,17 +819,68 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 90</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Peer limit per torrent</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="peerLimitTorrentValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 90</value>
+  </data>
+  <data name="peerLimitTorrentValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="peerLimitTorrentValue.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;peerLimitTorrentValue.Name" xml:space="preserve">
+    <value>peerLimitTorrentValue</value>
+  </data>
+  <data name="&gt;&gt;peerLimitTorrentValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;peerLimitTorrentValue.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;peerLimitTorrentValue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="seedLimitUpDown.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="seedLimitUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 90</value>
+    <value>170, 117</value>
   </data>
   <data name="seedLimitUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
   </data>
   <data name="seedLimitUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;seedLimitUpDown.Name" xml:space="preserve">
     <value>seedLimitUpDown</value>
@@ -841,7 +892,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;seedLimitUpDown.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="seedRatioEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -850,13 +901,13 @@
     <value>False</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 90</value>
+    <value>6, 117</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
   </data>
   <data name="seedRatioEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
     <value>Seed Ratio Limit</value>
@@ -871,7 +922,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;seedRatioEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

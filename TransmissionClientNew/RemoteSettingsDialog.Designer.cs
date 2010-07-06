@@ -66,6 +66,7 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToField = new System.Windows.Forms.TextBox();
             this.dhtEnabled = new System.Windows.Forms.CheckBox();
@@ -74,6 +75,8 @@ namespace TransmissionRemoteDotnet
             this.updateBlocklistButton = new System.Windows.Forms.Button();
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.peerLimitTorrentValue = new System.Windows.Forms.NumericUpDown();
             this.seedLimitUpDown = new System.Windows.Forms.NumericUpDown();
             this.seedRatioEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -93,7 +96,6 @@ namespace TransmissionRemoteDotnet
             this.altTimeConstraintEnabled = new System.Windows.Forms.CheckBox();
             this.altSpeedLimitEnable = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.limitUploadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).BeginInit();
@@ -101,6 +103,7 @@ namespace TransmissionRemoteDotnet
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstaintEndMinutes)).BeginInit();
@@ -269,6 +272,12 @@ namespace TransmissionRemoteDotnet
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // LpdEnabledCheckBox
+            // 
+            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
+            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
+            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
+            // 
             // incompleteToCheckBox
             // 
             resources.ApplyResources(this.incompleteToCheckBox, "incompleteToCheckBox");
@@ -315,6 +324,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.peerLimitTorrentValue);
             this.tabPage2.Controls.Add(this.seedLimitUpDown);
             this.tabPage2.Controls.Add(this.seedRatioEnabledCheckBox);
             this.tabPage2.Controls.Add(this.label6);
@@ -328,6 +339,21 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // peerLimitTorrentValue
+            // 
+            resources.ApplyResources(this.peerLimitTorrentValue, "peerLimitTorrentValue");
+            this.peerLimitTorrentValue.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.peerLimitTorrentValue.Name = "peerLimitTorrentValue";
             // 
             // seedLimitUpDown
             // 
@@ -477,12 +503,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
-            // LpdEnabledCheckBox
-            // 
-            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
-            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
-            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
-            // 
             // RemoteSettingsDialog
             // 
             this.AcceptButton = this.SaveButton;
@@ -507,6 +527,7 @@ namespace TransmissionRemoteDotnet
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -538,8 +559,10 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ComboBox encryptionCombobox;
         private System.Windows.Forms.CheckBox portForwardCheckBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox PEXcheckBox;
         private System.Windows.Forms.NumericUpDown peerLimitValue;
+        private System.Windows.Forms.NumericUpDown peerLimitTorrentValue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabControl tabControl1;
