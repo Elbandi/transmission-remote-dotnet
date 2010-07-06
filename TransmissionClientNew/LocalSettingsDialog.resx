@@ -907,7 +907,7 @@
     <value>NoControl</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 74</value>
+    <value>7, 74</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 13</value>
@@ -931,7 +931,7 @@
     <value>0</value>
   </data>
   <data name="RefreshRateTrayValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 72</value>
+    <value>180, 72</value>
   </data>
   <data name="RefreshRateTrayValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -952,7 +952,7 @@
     <value>1</value>
   </data>
   <data name="SaveServerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 100</value>
+    <value>291, 105</value>
   </data>
   <data name="SaveServerButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 23</value>
@@ -982,7 +982,7 @@
     <value>NoControl</value>
   </data>
   <data name="UseSSLCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 45</value>
+    <value>309, 47</value>
   </data>
   <data name="UseSSLCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1093,16 +1093,16 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 46</value>
+    <value>293, 20</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+    <value>10, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Port:</value>
+    <value>:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -1123,7 +1123,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 74</value>
+    <value>7, 46</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 13</value>
@@ -1147,7 +1147,7 @@
     <value>8</value>
   </data>
   <data name="RetryLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 100</value>
+    <value>180, 100</value>
   </data>
   <data name="RetryLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1168,7 +1168,7 @@
     <value>9</value>
   </data>
   <data name="PortField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 44</value>
+    <value>309, 18</value>
   </data>
   <data name="PortField.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1189,7 +1189,7 @@
     <value>10</value>
   </data>
   <data name="RefreshRateValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 72</value>
+    <value>180, 44</value>
   </data>
   <data name="RefreshRateValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
