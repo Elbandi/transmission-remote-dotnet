@@ -178,7 +178,7 @@
     <value>Huidige profiel</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="PlinkPathButton.Text" xml:space="preserve">
     <value>Bladeren</value>
@@ -241,7 +241,7 @@
     <value>Maximaal aantal pogingen:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Poort:</value>
+    <value>:</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Verversingsfrequentie:</value>

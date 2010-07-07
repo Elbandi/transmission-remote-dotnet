@@ -196,7 +196,7 @@
     <value>Browse</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>Upload prompt</value>
@@ -259,7 +259,7 @@
     <value>Equipo:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Puerto:</value>
+    <value>:</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Guardar</value>

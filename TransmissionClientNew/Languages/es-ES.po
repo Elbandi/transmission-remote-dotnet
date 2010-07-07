@@ -423,10 +423,11 @@ msgid "Refresh rate when hidden:"
 msgstr ""
 
 #: LocalSettingsDialog~label2.Text
-#: LocalSettingsDialog~label7.Text
+#: RemoteSettingsDialog~label13.Text
+#: RemoteSettingsDialog~label14.Text
 #, csharp-format
-msgid "Port:"
-msgstr "Puerto:"
+msgid ":"
+msgstr ""
 
 #: LocalSettingsDialog~label3.Text
 #, csharp-format
@@ -444,6 +445,11 @@ msgstr "Usuario:"
 #, csharp-format
 msgid "Password:"
 msgstr "Contraseña:"
+
+#: LocalSettingsDialog~label7.Text
+#, csharp-format
+msgid "Port:"
+msgstr "Puerto:"
 
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
@@ -1362,6 +1368,11 @@ msgstr "URL aceptada"
 msgid "Invalid RPC location"
 msgstr ""
 
+#: OtherStrings~ItemsSelected
+#, csharp-format
+msgid "items selected"
+msgstr ""
+
 #: OtherStrings~Kilobyte
 #, csharp-format
 msgid "Kilobyte"
@@ -1777,10 +1788,9 @@ msgstr "Bajada:"
 msgid "Up:"
 msgstr "Subida:"
 
-#: RemoteSettingsDialog~label13.Text
-#: RemoteSettingsDialog~label14.Text
+#: RemoteSettingsDialog~label16.Text
 #, csharp-format
-msgid ":"
+msgid "Peer limit per torrent"
 msgstr ""
 
 #: RemoteSettingsDialog~label2.Text

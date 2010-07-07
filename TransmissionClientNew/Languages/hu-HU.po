@@ -424,9 +424,10 @@ msgid "Refresh rate when hidden:"
 msgstr "Frissítés gyakorisága, ha rejtett:"
 
 #: LocalSettingsDialog~label2.Text
-#: LocalSettingsDialog~label7.Text
+#: RemoteSettingsDialog~label13.Text
+#: RemoteSettingsDialog~label14.Text
 #, csharp-format
-msgid "Port:"
+msgid ":"
 msgstr ""
 
 #: LocalSettingsDialog~label3.Text
@@ -445,6 +446,11 @@ msgstr "Felhasználó:"
 #, csharp-format
 msgid "Password:"
 msgstr "Jelszó:"
+
+#: LocalSettingsDialog~label7.Text
+#, csharp-format
+msgid "Port:"
+msgstr ""
 
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
@@ -1363,6 +1369,11 @@ msgstr "Bemenet elfogadva"
 msgid "Invalid RPC location"
 msgstr "Érvénytelen RPC cím"
 
+#: OtherStrings~ItemsSelected
+#, csharp-format
+msgid "items selected"
+msgstr ""
+
 #: OtherStrings~Kilobyte
 #, csharp-format
 msgid "Kilobyte"
@@ -1778,10 +1789,9 @@ msgstr "Le:"
 msgid "Up:"
 msgstr "Fel:"
 
-#: RemoteSettingsDialog~label13.Text
-#: RemoteSettingsDialog~label14.Text
+#: RemoteSettingsDialog~label16.Text
 #, csharp-format
-msgid ":"
+msgid "Peer limit per torrent"
 msgstr ""
 
 #: RemoteSettingsDialog~label2.Text
