@@ -108,27 +108,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="OkButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Starte Torrent</value>
+  </data>
+  <data name="DateLabelLabel.Text" xml:space="preserve">
+    <value>Datum:</value>
+  </data>
+  <data name="SizelabelLabel.Text" xml:space="preserve">
+    <value>Größe:</value>
+  </data>
+  <data name="CommentLabelLabel.Text" xml:space="preserve">
+    <value>Kommentar:</value>
+  </data>
+  <data name="NameLabelLabel.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="SelectNoneButton.Text" xml:space="preserve">
+    <value>Nichts auswählen</value>
+  </data>
+  <data name="SelectInvertButton.Text" xml:space="preserve">
+    <value>Auswahl invertieren</value>
+  </data>
+  <data name="SelectAllButton.Text" xml:space="preserve">
+    <value>Alle auswählen</value>
+  </data>
+  <data name="TorrentContentsGroupBox.Text" xml:space="preserve">
+    <value>Torrent Inhalt</value>
+  </data>
+  <data name="PropertiesGroupBox.Text" xml:space="preserve">
+    <value>Torrent Eigenschaften</value>
+  </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Pfad</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Typ</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Größe</value>
   </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Auslassen</value>
-  </data>
   <data name="columnHeader3.Text" xml:space="preserve">
     <value>Priorität</value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 67</value>
-  </metadata>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>toolStripStatusLabel1</value>
   </data>
@@ -141,18 +171,6 @@
   <data name="checkBox1.Text" xml:space="preserve">
     <value>Alternatives Zielverzeichnis: </value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentLoadDialog</value>
   </data>
