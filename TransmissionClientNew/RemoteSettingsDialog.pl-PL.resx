@@ -115,10 +115,10 @@
     <value>Peer limit per torrent</value>
   </data>
   <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
-    <value>Enable Local Peer Discovery</value>
+    <value>Włącz Wykrywanie Lokalnych Peerów (LPD)</value>
   </data>
   <data name="incompleteToCheckBox.Text" xml:space="preserve">
-    <value>Incomplete download to:</value>
+    <value>Folder plików tymczasowych:</value>
   </data>
   <data name="encryptionCombobox.Items" xml:space="preserve">
     <value>Tolerowane</value>
@@ -142,7 +142,7 @@
     <value>Zamknij</value>
   </data>
   <data name="PEXcheckBox.Text" xml:space="preserve">
-    <value>Włącz wymianę Peerów</value>
+    <value>Włącz Wymianę Peerów (PEX)</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Limit Peerów:</value>

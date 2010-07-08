@@ -112,16 +112,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
-    <value>Start on system startup</value>
+    <value>Uruchom z systemem</value>
   </data>
   <data name="UpdateToBetaCheckBox.Text" xml:space="preserve">
-    <value>Update to beta versions</value>
+    <value>Uaktualniaj do wersji beta</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Refresh rate when hidden:</value>
+    <value>Odświeżanie gdy ukryte:</value>
   </data>
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>Koloruj ikonę</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
     <value>Usuń serwer</value>
@@ -133,7 +133,7 @@
     <value>Nazwa</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
-    <value>Url</value>
+    <value>URL</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
     <value>Usuń</value>
@@ -142,16 +142,16 @@
     <value>Dodaj</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>URL wątku:</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
-    <value>Feed name:</value>
+    <value>Nazwa wątku:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
-    <value>Feed</value>
+    <value>Wątek</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>Wątki RSS</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
     <value>Skórka</value>
@@ -196,10 +196,10 @@
     <value>Przeglądaj</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe or ssh.exe:</value>
+    <value>plink.exe lub ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
-    <value>Powiadom o udostępnianiu</value>
+    <value>Powiadom o wysyłaniu</value>
   </data>
   <data name="groupBehavior.Text" xml:space="preserve">
     <value>Zachowanie</value>
@@ -277,7 +277,7 @@
     <value>Ilość prób:</value>
   </data>
   <data name="MinToTrayCheckBox.Text" xml:space="preserve">
-    <value>Ikona w trayu</value>
+    <value>Ikona w zasobniku</value>
   </data>
   <data name="ProxyAuthEnableCheckBox.Text" xml:space="preserve">
     <value>Autoryzacja</value>
