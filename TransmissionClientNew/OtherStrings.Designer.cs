@@ -1078,6 +1078,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to open network share.
+        /// </summary>
+        internal static string UnableToOpenNetworkShare {
+            get {
+                return ResourceManager.GetString("UnableToOpenNetworkShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to parse the server response.
         /// </summary>
         internal static string UnableToParse {

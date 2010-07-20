@@ -2240,7 +2240,7 @@ namespace TransmissionRemoteDotnet
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Unable to open network share", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, OtherStrings.UnableToOpenNetworkShare, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

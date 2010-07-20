@@ -520,4 +520,7 @@
   <data name="ItemsSelected" xml:space="preserve">
     <value>items selected</value>
   </data>
+  <data name="UnableToOpenNetworkShare" xml:space="preserve">
+    <value>Unable to open network share</value>
+  </data>
 </root>
