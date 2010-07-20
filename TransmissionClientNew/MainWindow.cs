@@ -70,6 +70,7 @@ namespace TransmissionRemoteDotnet
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
         private MenuItem openNetworkShareMenuItem;
+        private MenuItem openNetworkShareDirMenuItem;
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
@@ -148,7 +149,7 @@ namespace TransmissionRemoteDotnet
                 new ToolStripBitmap() { Name = "remove", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove, Controls = new ToolStripItem[]{removeTorrentButton, removeToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "remove_and_delete", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove_and_delete, Controls = new ToolStripItem[]{removeAndDeleteButton, removeDeleteToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "reannounce", Image = global::TransmissionRemoteDotnet.Properties.Resources.reannounce, Controls = new ToolStripItem[]{reannounceButton, reannounceToolStripMenuItem} },
-                new ToolStripBitmap() { Name = "samba", Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "samba", Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareDirToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "openterm", Image = global::TransmissionRemoteDotnet.Properties.Resources.openterm, Controls = new ToolStripItem[]{remoteCmdButton} },
                 new ToolStripBitmap() { Name = "altspeed_on", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on, Controls = new ToolStripItem[]{} },
                 new ToolStripBitmap() { Name = "altspeed_off", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off, Controls = new ToolStripItem[]{AltSpeedButton} },
@@ -289,7 +290,9 @@ namespace TransmissionRemoteDotnet
             {
                 this.torrentSelectionMenu.MenuItems.Add(OtherStrings.MoveTorrentData, this.moveTorrentDataToolStripMenuItem_Click);
             }
-            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItem = new MenuItem(OtherStrings.OpenNetworkShare, this.openNetworkShareButton_Click));
+            this.torrentSelectionMenu.MenuItems.Add("-");
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItem = new MenuItem(OtherStrings.OpenNetworkShare, this.openNetworkShare_Click));
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareDirMenuItem = new MenuItem(OtherStrings.OpenNetworkShareDir, this.openNetworkShareDir_Click));
             this.torrentSelectionMenu.MenuItems.Add("-");
             MenuItem bandwidthAllocationMenu = new MenuItem(OtherStrings.BandwidthAllocation);
             bandwidthAllocationMenu.MenuItems.Add(OtherStrings.High, this.bandwidthPriorityButton_Click).Tag = ProtocolConstants.BANDWIDTH_HIGH;
@@ -627,10 +630,11 @@ namespace TransmissionRemoteDotnet
         {
             LocalSettings settings = Program.Settings;
             remoteCmdButton.Visible = connected && settings.Current.PlinkEnable && settings.Current.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
-            //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
-            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && settings.Current.SambaShareMappings.Count > 0;
+            openNetworkShareButton.Visible = connected && settings.Current.SambaShareMappings.Count > 0;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
+            if (openNetworkShareDirMenuItem != null)
+                openNetworkShareDirMenuItem.Visible = openNetworkShareButton.Visible;
         }
 
         public void ShowTrayTip(int timeout, string tipTitle, string tipText, ToolTipIcon tipIcon)
@@ -1215,9 +1219,12 @@ namespace TransmissionRemoteDotnet
                     = filesTimer.Enabled = downloadProgressLabel.Enabled
                     = generalTorrentNameGroupBox.Enabled
                     = remoteCmdButton.Enabled = one;
-            openNetworkShareButton.Enabled = openNetworkShareToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
+            openNetworkShareButton.Enabled = openNetworkShareDirToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
+            openNetworkShareToolStripMenuItem.Enabled = openNetworkShareButton.Enabled && t.Files.Count == 1 && t.Files[0].BytesCompleted == t.Files[0].FileSize;
             if (openNetworkShareMenuItem != null)
-                openNetworkShareMenuItem.Enabled = openNetworkShareButton.Enabled;
+                openNetworkShareMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled;
+            if (openNetworkShareDirMenuItem != null)
+                openNetworkShareDirMenuItem.Enabled = openNetworkShareDirToolStripMenuItem.Enabled;
         }
 
         private void torrentListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -2226,7 +2233,7 @@ namespace TransmissionRemoteDotnet
             Reannounce(ReannounceMode.RecentlyActive);
         }
 
-        private void openNetworkShareButton_Click(object sender, EventArgs e)
+        private void openNetworkShareDir_Click(object sender, EventArgs e)
         {
             if (torrentListView.SelectedItems.Count == 1)
             {
@@ -2237,6 +2244,26 @@ namespace TransmissionRemoteDotnet
                     try
                     {
                         BackgroundProcessStart(new ProcessStartInfo(sambaPath));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, OtherStrings.UnableToOpenNetworkShare, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void openNetworkShare_Click(object sender, EventArgs e)
+        {
+            if (torrentListView.SelectedItems.Count == 1)
+            {
+                Torrent t = (Torrent)torrentListView.SelectedItems[0];
+                string sambaPath = t.SambaLocation;
+                if (sambaPath != null)
+                {
+                    try
+                    {
+                        BackgroundProcessStart(new ProcessStartInfo(sambaPath + "\\" + t.TorrentName));
                     }
                     catch (Exception ex)
                     {

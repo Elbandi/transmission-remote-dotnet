@@ -2848,7 +2848,7 @@
     <value>36, 36</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Open on network share</value>
+    <value>Open Folder on Network Share</value>
   </data>
   <data name="openNetworkShareButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3252,14 +3252,23 @@
   <data name="openNetworkShareToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="openNetworkShareToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+X</value>
-  </data>
   <data name="openNetworkShareToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 22</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Open on network share</value>
+  </data>
+  <data name="openNetworkShareDirToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openNetworkShareDirToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="openNetworkShareDirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 22</value>
+  </data>
+  <data name="openNetworkShareDirToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Folder on Network Share</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4337,6 +4346,12 @@
     <value>openNetworkShareToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;openNetworkShareToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openNetworkShareDirToolStripMenuItem.Name" xml:space="preserve">
+    <value>openNetworkShareDirToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openNetworkShareDirToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cSVInfoToClipboardToolStripMenuItem.Name" xml:space="preserve">

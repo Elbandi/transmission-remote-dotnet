@@ -763,6 +763,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open Folder on Network Share.
+        /// </summary>
+        internal static string OpenNetworkShareDir {
+            get {
+                return ResourceManager.GetString("OpenNetworkShareDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {
