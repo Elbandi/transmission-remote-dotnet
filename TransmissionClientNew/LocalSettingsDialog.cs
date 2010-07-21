@@ -62,6 +62,9 @@ namespace TransmissionRemoteDotnet
             ClearPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
             ClearProxyPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
             PlinkEnableCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            ProxyAuthEnableCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+
+            EnableProxyCombo.SelectedIndexChanged += new EventHandler(Field_ValueChanged);
 
             AddShareButton.Click += new EventHandler(Field_ValueChanged);
             RemoveShareButton.Click += new EventHandler(Field_ValueChanged);
