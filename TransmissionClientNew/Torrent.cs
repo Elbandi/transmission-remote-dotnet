@@ -174,8 +174,16 @@ namespace TransmissionRemoteDotnet
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
 
-            this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
-            this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
+            if (Program.DaemonDescriptor.Revision >= 10937)
+            {
+                this.DownloadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEDOWNLOAD]) * 1000);
+                this.UploadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEUPLOAD]) * 1000);
+            }
+            else
+            {
+                this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
+                this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
+            }
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
             this.Downloaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_DOWNLOADEDEVER]);
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
@@ -775,7 +783,12 @@ namespace TransmissionRemoteDotnet
         private void SetSpeedLimits(JsonObject info)
         {
             if (info.Contains(ProtocolConstants.FIELD_DOWNLOADLIMIT))
-                this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+            {
+                if (Program.DaemonDescriptor.Revision >= 10937)
+                    this.SpeedLimitDown = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+                else
+                    this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+            }
             else
                 this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_SPEEDLIMITDOWN]);
 
@@ -787,7 +800,12 @@ namespace TransmissionRemoteDotnet
                 this.SpeedLimitDownEnabled = Toolbox.ToBool(info[ProtocolConstants.FIELD_DOWNLOADLIMITMODE]);
 
             if (info.Contains(ProtocolConstants.FIELD_UPLOADLIMIT))
-                this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+            {
+                if (Program.DaemonDescriptor.Revision >= 10937)
+                    this.SpeedLimitUp = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+                else
+                    this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+            }
             else
                 this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_SPEEDLIMITUP]);
 
