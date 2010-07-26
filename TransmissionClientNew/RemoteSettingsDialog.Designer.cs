@@ -66,6 +66,7 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
             this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToField = new System.Windows.Forms.TextBox();
@@ -252,6 +253,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.renamePartialFilesCheckBox);
             this.tabPage1.Controls.Add(this.LpdEnabledCheckBox);
             this.tabPage1.Controls.Add(this.incompleteToCheckBox);
             this.tabPage1.Controls.Add(this.incompleteToField);
@@ -271,6 +273,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // renamePartialFilesCheckBox
+            // 
+            resources.ApplyResources(this.renamePartialFilesCheckBox, "renamePartialFilesCheckBox");
+            this.renamePartialFilesCheckBox.Name = "renamePartialFilesCheckBox";
+            this.renamePartialFilesCheckBox.UseVisualStyleBackColor = true;
             // 
             // LpdEnabledCheckBox
             // 
@@ -558,6 +566,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox encryptionCombobox;
         private System.Windows.Forms.CheckBox portForwardCheckBox;
+        private System.Windows.Forms.CheckBox renamePartialFilesCheckBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox PEXcheckBox;

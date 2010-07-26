@@ -110,6 +110,7 @@ namespace TransmissionRemoteDotnet
             FIELD_SIZEWHENDONE = "sizeWhenDone",
             FIELD_PEERLIMIT = "peer-limit",
             FIELD_PEERLIMITPERTORRENT = "peer-limit-per-torrent",
+            FIELD_RENAME_PARTIAL_FILES = "rename-partial-files",
             FIELD_LENGTH = "length",
             FIELD_BYTESCOMPLETED = "bytesCompleted",
             FIELD_DELETELOCALDATA = "delete-local-data",

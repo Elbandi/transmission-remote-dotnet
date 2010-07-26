@@ -174,6 +174,10 @@ namespace TransmissionRemoteDotnet
                 {
                     LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
                 }
+                if (renamePartialFilesCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_RENAME_PARTIAL_FILES))
+                {
+                    renamePartialFilesCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_RENAME_PARTIAL_FILES]);
+                }
                 testPortButton.Enabled = Program.DaemonDescriptor.RpcVersion >= 5;
             }
             catch (Exception ex)
@@ -269,6 +273,10 @@ namespace TransmissionRemoteDotnet
             if (LpdEnabledCheckBox.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
+            }
+            if (renamePartialFilesCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_RENAME_PARTIAL_FILES, renamePartialFilesCheckBox.Checked);
             }
             arguments.Put(ProtocolConstants.DOWNLOAD_DIR, downloadToField.Text);
             CommandFactory.RequestAsync(request).Completed += new EventHandler<ResultEventArgs>(RemoteSettingsDialog_Completed);
