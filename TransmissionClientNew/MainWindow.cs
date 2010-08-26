@@ -81,7 +81,7 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
-                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(Program.Settings.Locale);
+                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(Program.Settings.Locale, true);
             }
             catch { }
             Program.OnConnStatusChanged += new EventHandler(Program_connStatusChanged);
@@ -835,7 +835,7 @@ namespace TransmissionRemoteDotnet
         {
             ToolStripMenuItem englishItem = new ToolStripMenuItem("English");
             englishItem.Click += new EventHandler(this.ChangeUICulture);
-            englishItem.Tag = new CultureInfo("en-US");
+            englishItem.Tag = new CultureInfo("en-US", true);
             englishItem.Checked = Program.Settings.Locale.Equals("en-US");
             languageToolStripMenuItem.DropDownItems.Add(englishItem);
             languageToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
@@ -847,7 +847,7 @@ namespace TransmissionRemoteDotnet
                 {
                     try
                     {
-                        CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper());
+                        CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper(), true);
                         ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName + " / " + cInfo.EnglishName);
                         item.Tag = cInfo;
                         item.Click += new EventHandler(this.ChangeUICulture);
