@@ -174,7 +174,7 @@ namespace TransmissionRemoteDotnet
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
 
-            if (Program.DaemonDescriptor.Revision >= 10937)
+            if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
             {
                 this.DownloadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEDOWNLOAD]) * 1000);
                 this.UploadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEUPLOAD]) * 1000);
@@ -784,7 +784,7 @@ namespace TransmissionRemoteDotnet
         {
             if (info.Contains(ProtocolConstants.FIELD_DOWNLOADLIMIT))
             {
-                if (Program.DaemonDescriptor.Revision >= 10937)
+                if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
                     this.SpeedLimitDown = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
                 else
                     this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
@@ -801,7 +801,7 @@ namespace TransmissionRemoteDotnet
 
             if (info.Contains(ProtocolConstants.FIELD_UPLOADLIMIT))
             {
-                if (Program.DaemonDescriptor.Revision >= 10937)
+                if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
                     this.SpeedLimitUp = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
                 else
                     this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_UPLOADLIMIT]);

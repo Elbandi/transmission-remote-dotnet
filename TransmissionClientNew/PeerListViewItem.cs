@@ -19,7 +19,7 @@ namespace TransmissionRemoteDotnet
         {
             this.FlagStr = (string)peerObj[ProtocolConstants.FIELD_FLAGSTR];
             this.Progress = Toolbox.ToProgress(peerObj[ProtocolConstants.FIELD_PROGRESS]);
-            if (Program.DaemonDescriptor.Revision >= 10937)
+            if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
             {
                 this.RateToClient = (long)(Toolbox.ToDouble(peerObj[ProtocolConstants.FIELD_RATETOCLIENT]) * 1000);
                 this.RateToPeer = (long)(Toolbox.ToDouble(peerObj[ProtocolConstants.FIELD_RATETOPEER]) * 1000);
