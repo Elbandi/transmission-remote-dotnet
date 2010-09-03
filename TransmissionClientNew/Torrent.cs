@@ -174,10 +174,10 @@ namespace TransmissionRemoteDotnet
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
 
-            if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
+            if (info[ProtocolConstants.FIELD_RATEDOWNLOAD].ToString().Contains("."))
             {
-                this.DownloadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEDOWNLOAD]) * 1000);
-                this.UploadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEUPLOAD]) * 1000);
+                this.DownloadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEDOWNLOAD]) * 1024);
+                this.UploadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEUPLOAD]) * 1024);
             }
             else
             {
