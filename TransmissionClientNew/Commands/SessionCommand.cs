@@ -35,6 +35,7 @@ namespace TransmissionRemoteDotnet.Commmands
                     if ((str[i] < (int)'0' || str[i] > (int)'9') && str[i] != (int)'.')
                     {
                         descriptor.Version = Double.Parse(str.Substring(0, i), Toolbox.NUMBER_FORMAT);
+                        descriptor.Trunk = str[i] == (int)'+';
                         break;
                     }
                 }
