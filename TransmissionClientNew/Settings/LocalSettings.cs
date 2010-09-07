@@ -467,7 +467,7 @@ namespace TransmissionRemoteDotnet.Settings
         {
             if (!destpathhistory.Contains(path))
             {
-                while (destpathhistory.Count > 5) destpathhistory.RemoveAt(0);
+                while (destpathhistory.Count > 15) destpathhistory.RemoveAt(0);
                 destpathhistory.Add(path);
             }
         }
