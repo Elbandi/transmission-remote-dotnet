@@ -22,6 +22,7 @@ namespace TransmissionRemoteDotnet.Settings
         public bool AutoCheckupdate = false;
         public bool UpdateToBeta = false;
         public bool DeleteTorrentWhenAdding = false;
+        public bool NoGradientTorrentList = false;
         public int DefaultDoubleClickAction = 0;
         public bool StartedBalloon = true;
         private bool dontsavepasswords = false;
@@ -87,6 +88,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_AUTOCHECKUPDATE, AutoCheckupdate);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_UPDATETOBETA, UpdateToBeta);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DELETETORRENT, DeleteTorrentWhenAdding);
+            Toolbox.JsonPut(jo, SettingsKey.REGKEY_NOGRADIENTTORRENTLIST, NoGradientTorrentList);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_DEFAULTACTION, DefaultDoubleClickAction);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_LOCALE, Locale);
             Toolbox.JsonPut(jo, SettingsKey.REGKEY_PLINKPATH, PlinkPath);
@@ -127,6 +129,7 @@ namespace TransmissionRemoteDotnet.Settings
             Toolbox.JsonGet(ref AutoCheckupdate, o[SettingsKey.REGKEY_AUTOCHECKUPDATE]);
             Toolbox.JsonGet(ref UpdateToBeta, o[SettingsKey.REGKEY_UPDATETOBETA]);
             Toolbox.JsonGet(ref DeleteTorrentWhenAdding, o[SettingsKey.REGKEY_DELETETORRENT]);
+            Toolbox.JsonGet(ref NoGradientTorrentList, o[SettingsKey.REGKEY_NOGRADIENTTORRENTLIST]);
             Toolbox.JsonGet(ref DefaultDoubleClickAction, o[SettingsKey.REGKEY_DEFAULTACTION]);
             Toolbox.JsonGet(ref StateImagePath, o[SettingsKey.REGKEY_STATEIMAGE]);
             Toolbox.JsonGet(ref InfopanelImagePath, o[SettingsKey.REGKEY_TABIMAGE]);
@@ -543,6 +546,7 @@ namespace TransmissionRemoteDotnet.Settings
             REGKEY_AUTOCHECKUPDATE = "autoCheckupdate",
             REGKEY_UPDATETOBETA = "updateToBeta",
             REGKEY_DELETETORRENT = "deleteTorrentWhenAdding",
+            REGKEY_NOGRADIENTTORRENTLIST = "noGradientTorrentList",
             REGKEY_DEFAULTACTION = "defaultDoubleClickAction",
             REGKEY_RSSFEEDS = "rssFeeds",
             REGKEY_USER = "user",

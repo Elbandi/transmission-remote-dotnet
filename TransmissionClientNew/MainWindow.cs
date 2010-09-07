@@ -2453,10 +2453,14 @@ namespace TransmissionRemoteDotnet
 
             if (rect.Width > 0 && rect.Height > 0)
             {
-                Brush br = new LinearGradientBrush(rect,
-                    Color.ForestGreen,
-                    Color.LightGreen,
-                    LinearGradientMode.Horizontal);
+                Brush br;
+                if (Program.Settings.NoGradientTorrentList)
+                    br = new SolidBrush(Color.LimeGreen);
+                else
+                    br = new LinearGradientBrush(rect,
+                        Color.ForestGreen,
+                        Color.LightGreen,
+                        LinearGradientMode.Horizontal);
                 e.Graphics.FillRectangle(br, rect);
             }
             e.Graphics.DrawRectangle(LightLightGray, origrect);
