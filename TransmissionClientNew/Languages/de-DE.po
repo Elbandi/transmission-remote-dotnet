@@ -129,6 +129,7 @@ msgid "Time"
 msgstr "Zeit"
 
 #: ErrorLogWindow~columnHeader2.Text
+#: RssForm~titleColumnHeader.Text
 #, csharp-format
 msgid "Title"
 msgstr "Titel"
@@ -563,6 +564,7 @@ msgid "Filter:"
 msgstr "Filter:"
 
 #: MainWindow~RssButton.Text
+#: RssForm~$this.Text
 #, csharp-format
 msgid "Rss Downloader"
 msgstr "RSS Downloader"
@@ -583,11 +585,13 @@ msgid "Add torrent from URL"
 msgstr "Torrent von URL hinzufügen"
 
 #: MainWindow~addTorrentToolStripMenuItem.Text
+#: RssForm~addTorrentButton.Text
 #, csharp-format
 msgid "Quick add torrent"
 msgstr "Torrent hinzufügen"
 
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
+#: RssForm~addTorrentWithOptionsButton.Text
 #, csharp-format
 msgid "Add torrent with options"
 msgstr "Torrent hinzufügen (mit Optionen)"
@@ -864,6 +868,12 @@ msgid "Move torrent data"
 msgstr "Verschiebe Torrent Daten"
 
 #: MainWindow~openNetworkShareButton.Text
+#: MainWindow~openNetworkShareDirToolStripMenuItem.Text
+#: OtherStrings~OpenNetworkShareDir
+#, csharp-format
+msgid "Open Folder on Network Share"
+msgstr ""
+
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
 msgid "Open on network share"
@@ -1056,6 +1066,7 @@ msgid "Start torrent(s)"
 msgstr "Starte Torrent(s)"
 
 #: MainWindow~statusStrip.Text
+#: RssForm~statusStrip1.Text
 #: TorrentLoadDialog~statusStrip1.Text
 #: UriPromptWindow~statusStrip1.Text
 #, csharp-format
@@ -1647,6 +1658,11 @@ msgstr "Kann plink.exe nicht ausführen"
 msgid "Unable to open"
 msgstr "Konnte nicht geöffnet werden"
 
+#: OtherStrings~UnableToOpenNetworkShare
+#, csharp-format
+msgid "Unable to open network share"
+msgstr ""
+
 #: OtherStrings~UnableToParse
 #, csharp-format
 msgid "Unable to parse the server response"
@@ -1853,6 +1869,11 @@ msgstr "Limitiere Upload"
 msgid "Enable UPnP"
 msgstr "UPnP aktivieren"
 
+#: RemoteSettingsDialog~renamePartialFilesCheckBox.Text
+#, csharp-format
+msgid "Rename partial files"
+msgstr ""
+
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
 msgid "Seed Ratio Limit"
@@ -1877,6 +1898,31 @@ msgstr "Teste Port"
 #, csharp-format
 msgid "Update Blocklist"
 msgstr "Update Blockliste"
+
+#: RssForm~RefreshButton.Text
+#, csharp-format
+msgid "Refresh"
+msgstr ""
+
+#: RssForm~categoryColumnHeader.Text
+#, csharp-format
+msgid "Category"
+msgstr ""
+
+#: RssForm~descriptionColumnHeader.Text
+#, csharp-format
+msgid "Description"
+msgstr ""
+
+#: RssForm~pubdateColumnHeader.Text
+#, csharp-format
+msgid "Pub Date"
+msgstr ""
+
+#: RssForm~toolStrip1.Text
+#, csharp-format
+msgid "toolStrip1"
+msgstr ""
 
 #: StatsDialog~$this.Text
 #, csharp-format
