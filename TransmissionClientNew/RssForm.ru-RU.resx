@@ -118,7 +118,7 @@
     <value>Refresh</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>Quick add torrent</value>
+    <value>Добавить торрент</value>
   </data>
   <data name="addTorrentWithOptionsButton.Text" xml:space="preserve">
     <value>Add torrent with options</value>
@@ -127,7 +127,7 @@
     <value>toolStrip1</value>
   </data>
   <data name="titleColumnHeader.Text" xml:space="preserve">
-    <value>Title</value>
+    <value>Заголовок</value>
   </data>
   <data name="categoryColumnHeader.Text" xml:space="preserve">
     <value>Category</value>

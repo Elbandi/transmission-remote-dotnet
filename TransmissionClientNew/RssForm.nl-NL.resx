@@ -118,16 +118,16 @@
     <value>Refresh</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>Quick add torrent</value>
+    <value>Snel toevoegen</value>
   </data>
   <data name="addTorrentWithOptionsButton.Text" xml:space="preserve">
-    <value>Add torrent with options</value>
+    <value>Torrent toevoegen met opties</value>
   </data>
   <data name="toolStrip1.Text" xml:space="preserve">
     <value>toolStrip1</value>
   </data>
   <data name="titleColumnHeader.Text" xml:space="preserve">
-    <value>Title</value>
+    <value>Titel</value>
   </data>
   <data name="categoryColumnHeader.Text" xml:space="preserve">
     <value>Category</value>

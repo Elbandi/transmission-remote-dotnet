@@ -118,7 +118,7 @@
     <value>Refresh</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
-    <value>Quick add torrent</value>
+    <value>Tilføj torrent</value>
   </data>
   <data name="addTorrentWithOptionsButton.Text" xml:space="preserve">
     <value>Add torrent with options</value>
