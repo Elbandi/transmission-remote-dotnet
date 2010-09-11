@@ -69,6 +69,7 @@ namespace TransmissionRemoteDotnet
         private ContextMenu noTorrentSelectionMenu;
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
+        private MenuItem openNetworkShareMenuItemSep;
         private MenuItem openNetworkShareMenuItem;
         private MenuItem openNetworkShareDirMenuItem;
         private WebClient sessionWebClient;
@@ -290,7 +291,7 @@ namespace TransmissionRemoteDotnet
             {
                 this.torrentSelectionMenu.MenuItems.Add(OtherStrings.MoveTorrentData, this.moveTorrentDataToolStripMenuItem_Click);
             }
-            this.torrentSelectionMenu.MenuItems.Add("-");
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItemSep = new MenuItem("-"));
             this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItem = new MenuItem(OtherStrings.OpenNetworkShare, this.openNetworkShare_Click));
             this.torrentSelectionMenu.MenuItems.Add(openNetworkShareDirMenuItem = new MenuItem(OtherStrings.OpenNetworkShareDir, this.openNetworkShareDir_Click));
             this.torrentSelectionMenu.MenuItems.Add("-");
@@ -631,6 +632,8 @@ namespace TransmissionRemoteDotnet
             LocalSettings settings = Program.Settings;
             remoteCmdButton.Visible = connected && settings.Current.PlinkEnable && settings.Current.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
             openNetworkShareButton.Visible = connected && settings.Current.SambaShareMappings.Count > 0;
+            if (openNetworkShareMenuItemSep != null)
+                openNetworkShareMenuItemSep.Visible = openNetworkShareButton.Visible;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
             if (openNetworkShareDirMenuItem != null)
