@@ -277,7 +277,7 @@
     <value>Verschiebe Torrent Daten</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Über Netzwerk-Freigabe öffnen</value>
+    <value>Verzeichnis über Netzwerkfreigabe öffnen</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
     <value>Aktualisiere Tracker</value>

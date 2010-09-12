@@ -115,7 +115,7 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RefreshButton.Text" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Torrent hinzufügen</value>
@@ -130,13 +130,13 @@
     <value>Titel</value>
   </data>
   <data name="categoryColumnHeader.Text" xml:space="preserve">
-    <value>Category</value>
+    <value>Kategorie</value>
   </data>
   <data name="descriptionColumnHeader.Text" xml:space="preserve">
-    <value>Description</value>
+    <value>Beschreibung</value>
   </data>
   <data name="pubdateColumnHeader.Text" xml:space="preserve">
-    <value>Pub Date</value>
+    <value>Datum der Veröffentlichung</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>RSS Downloader</value>

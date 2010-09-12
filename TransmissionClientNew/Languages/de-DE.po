@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: transmission-remote-dotnet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-13 22:55+0100\n"
-"PO-Revision-Date: 2010-06-10 14:30+0100\n"
+"PO-Revision-Date: 2010-09-12 11:42+0100\n"
 "Last-Translator: benba <0obeanonymouso0@gmail.com>\n"
 "Language-Team: transmission-remote-dotnet <transmission-remote-dotnet@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -872,7 +872,7 @@ msgstr "Verschiebe Torrent Daten"
 #: OtherStrings~OpenNetworkShareDir
 #, csharp-format
 msgid "Open Folder on Network Share"
-msgstr ""
+msgstr "Verzeichnis über Netzwerkfreigabe öffnen"
 
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
@@ -1401,7 +1401,7 @@ msgstr "Ungültiger RPC Speicherort"
 #: OtherStrings~ItemsSelected
 #, csharp-format
 msgid "items selected"
-msgstr ""
+msgstr "Elemente ausgewählt"
 
 #: OtherStrings~Kilobyte
 #, csharp-format
@@ -1661,7 +1661,7 @@ msgstr "Konnte nicht geöffnet werden"
 #: OtherStrings~UnableToOpenNetworkShare
 #, csharp-format
 msgid "Unable to open network share"
-msgstr ""
+msgstr "Netzwerkfreigabe kann nicht geöffnet werden"
 
 #: OtherStrings~UnableToParse
 #, csharp-format
@@ -1826,7 +1826,7 @@ msgstr "Up:"
 #: RemoteSettingsDialog~label16.Text
 #, csharp-format
 msgid "Peer limit per torrent"
-msgstr ""
+msgstr "Peerlimit pro Torrent"
 
 #: RemoteSettingsDialog~label2.Text
 #, csharp-format
@@ -1872,7 +1872,7 @@ msgstr "UPnP aktivieren"
 #: RemoteSettingsDialog~renamePartialFilesCheckBox.Text
 #, csharp-format
 msgid "Rename partial files"
-msgstr ""
+msgstr "Teilgeladenen Dateien umbenennen"
 
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
@@ -1902,22 +1902,22 @@ msgstr "Update Blockliste"
 #: RssForm~RefreshButton.Text
 #, csharp-format
 msgid "Refresh"
-msgstr ""
+msgstr "Aktualisieren"
 
 #: RssForm~categoryColumnHeader.Text
 #, csharp-format
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: RssForm~descriptionColumnHeader.Text
 #, csharp-format
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: RssForm~pubdateColumnHeader.Text
 #, csharp-format
 msgid "Pub Date"
-msgstr ""
+msgstr "Datum der Veröffentlichung"
 
 #: RssForm~toolStrip1.Text
 #, csharp-format
