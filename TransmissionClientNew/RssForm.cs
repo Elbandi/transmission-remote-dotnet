@@ -176,7 +176,7 @@ namespace TransmissionRemoteDotnet
                     i.Name = ri.Title;
                     i.SubItems.Add(ri.Category != null ? ri.Category : "");
                     i.SubItems.Add(ri.Description != null ? ri.Description.Trim() : "");
-                    i.SubItems.Add(ri.PubDate.ToString());
+                    i.SubItems.Add(ri.PubDate.ToString()).Tag = ri.PubDate;
                     i.Tag = ri;
                     //                        i.Font = new Font(rssItemsListView.Font, FontStyle.Bold);
                 }
