@@ -227,6 +227,9 @@ namespace TransmissionRemoteDotnet
                 lvwColumnSorter.Order = SortOrder.Ascending;
             }
             this.rssItemsListView.Sort();
+#if !MONO
+            this.rssItemsListView.SetSortIcon(lvwColumnSorter.SortColumn, lvwColumnSorter.Order);
+#endif
             Toolbox.StripeListView(rssItemsListView);
         }
 

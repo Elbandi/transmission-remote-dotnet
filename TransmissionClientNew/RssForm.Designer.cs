@@ -41,7 +41,7 @@
             this.FeedImageList = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.rssFeedsListView = new System.Windows.Forms.ListView();
-            this.rssItemsListView = new System.Windows.Forms.ListView();
+            this.rssItemsListView = new TransmissionRemoteDotnet.ListViewNF();
             this.titleColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.categoryColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.descriptionColumnHeader = new System.Windows.Forms.ColumnHeader();
@@ -218,7 +218,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListView rssFeedsListView;
-        private System.Windows.Forms.ListView rssItemsListView;
+        private TransmissionRemoteDotnet.ListViewNF rssItemsListView;
         private System.Windows.Forms.ColumnHeader titleColumnHeader;
         private System.Windows.Forms.ColumnHeader categoryColumnHeader;
         private System.Windows.Forms.ColumnHeader descriptionColumnHeader;
