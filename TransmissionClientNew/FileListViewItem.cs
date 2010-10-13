@@ -54,8 +54,7 @@ namespace TransmissionRemoteDotnet
             {
                 base.SubItems[3].Tag = value;
                 SetText(3, Toolbox.GetFileSize(value));
-                base.SubItems[4].Tag = Toolbox.CalcPercentage(value, this.FileSize);
-                SetText(4, this.Progress + "%");
+                this.Progress = Toolbox.CalcPercentage(value, this.FileSize);
             }
         }
 

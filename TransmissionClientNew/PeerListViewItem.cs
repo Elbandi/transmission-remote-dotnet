@@ -19,8 +19,16 @@ namespace TransmissionRemoteDotnet
         {
             this.FlagStr = (string)peerObj[ProtocolConstants.FIELD_FLAGSTR];
             this.Progress = Toolbox.ToProgress(peerObj[ProtocolConstants.FIELD_PROGRESS]);
-            this.RateToClient = Toolbox.ToLong(peerObj[ProtocolConstants.FIELD_RATETOCLIENT]);
-            this.RateToPeer = Toolbox.ToLong(peerObj[ProtocolConstants.FIELD_RATETOPEER]);
+            if (Program.DaemonDescriptor.Trunk && Program.DaemonDescriptor.Revision >= 10937 && Program.DaemonDescriptor.Revision < 11194)
+            {
+                this.RateToClient = (long)(Toolbox.ToDouble(peerObj[ProtocolConstants.FIELD_RATETOCLIENT]) * 1024);
+                this.RateToPeer = (long)(Toolbox.ToDouble(peerObj[ProtocolConstants.FIELD_RATETOPEER]) * 1024);
+            }
+            else
+            {
+                this.RateToClient = Toolbox.ToLong(peerObj[ProtocolConstants.FIELD_RATETOCLIENT]);
+                this.RateToPeer = Toolbox.ToLong(peerObj[ProtocolConstants.FIELD_RATETOPEER]);
+            }
         }
 
         public PeerListViewItem(JsonObject peerObj)

@@ -326,7 +326,7 @@ namespace TransmissionRemoteDotnet
         {
             if (total > 0)
             {
-                return Math.Round((x / (decimal)total) * 100, 2);
+                return Math.Floor((x / (decimal)total) * 100 * 100) / 100;
             }
             else
             {

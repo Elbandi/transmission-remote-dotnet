@@ -32,7 +32,6 @@ namespace TransmissionRemoteDotnet
 {
     public partial class LocalSettingsDialog : CultureForm
     {
-        private static int counter = 0;
         private ListViewItem current = null;
         private bool serversettingschanged = false;
 
@@ -62,6 +61,9 @@ namespace TransmissionRemoteDotnet
             ClearPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
             ClearProxyPasswordCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
             PlinkEnableCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+            ProxyAuthEnableCheckBox.CheckedChanged += new EventHandler(Field_ValueChanged);
+
+            EnableProxyCombo.SelectedIndexChanged += new EventHandler(Field_ValueChanged);
 
             AddShareButton.Click += new EventHandler(Field_ValueChanged);
             RemoveShareButton.Click += new EventHandler(Field_ValueChanged);
@@ -418,7 +420,12 @@ namespace TransmissionRemoteDotnet
         private void addServerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TransmissionServer ts = new TransmissionServer();
-            string name = "Server " + (counter++);
+            string name;
+            int counter = 0;
+            do
+            {
+                name = "Server " + (counter++);
+            } while (listServers.Items.ContainsKey(name));
             listServers.Items.Add(CreateServerItem(name, ts));
             CurrentProfileComboBox.Items.Add(name);
             AutoConnectComboBox.Items.Add(name);

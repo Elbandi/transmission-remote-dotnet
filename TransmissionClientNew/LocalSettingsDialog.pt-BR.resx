@@ -214,7 +214,7 @@
     <value>Perfil Atual</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="PlinkPathButton.Text" xml:space="preserve">
     <value>Buscar</value>
@@ -274,7 +274,7 @@
     <value>Limite de tentativas:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Porta:</value>
+    <value>:</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Taxa de atualização:</value>

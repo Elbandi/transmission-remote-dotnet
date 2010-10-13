@@ -124,26 +124,26 @@
     <value>TB</value>
   </data>
   <data name="UnitFactors" xml:space="preserve">
-    <value>Byte|Kilobyte|Megabyte|Gigabyte|Terabyte</value>
+    <value>Bajt|Kilobajt|Megabajt|Gigabajt|Terabajt</value>
     <comment>delim with | char!!</comment>
   </data>
   <data name="TotalDoneValidSize" xml:space="preserve">
-    <value>{0} ({1} done) ({2} valid)</value>
+    <value>{0} ({1} pobrano) ({2} poprawnych)</value>
   </data>
   <data name="TotalDoneValidTotalSize" xml:space="preserve">
-    <value>{0} ({1} done) ({2} valid) ({3} total)</value>
+    <value>{0} ({1} pobrano) ({2} poprawnych) ({3} ogółem)</value>
   </data>
   <data name="UnableRunPlink" xml:space="preserve">
-    <value>Unable to run plink</value>
+    <value>Nie można uruchomić plink</value>
   </data>
   <data name="UnixPathExists" xml:space="preserve">
-    <value>Unix path exists</value>
+    <value>Ścieżka już istnieje</value>
   </data>
   <data name="InvalidRPCLocation" xml:space="preserve">
-    <value>Invalid RPC location</value>
+    <value>Błędna lokalizacja RPC</value>
   </data>
   <data name="FeedExists" xml:space="preserve">
-    <value>Feed exists</value>
+    <value>Wątek istnieje</value>
   </data>
   <data name="OpenImageFilter" xml:space="preserve">
     <value>Obraz PNG|*.png</value>
@@ -158,14 +158,14 @@
     <value>Czy chcesz sprawdzić {0}? Może to zająć trochę czasu.</value>
   </data>
   <data name="TorrentFinished" xml:space="preserve">
-    <value>This torrent has finished downloading.</value>
+    <value>Pobieranie pliku torrent ukończone.</value>
   </data>
   <data name="HttpError" xml:space="preserve">
     <value>Błędna próba pobierania, rezultat z http: {0}{1}</value>
     <comment>{0} is the newline char</comment>
   </data>
   <data name="NoHostnameSet" xml:space="preserve">
-    <value>Nie wpisano nazwy hosta.</value>
+    <value>Nie podano nazwy hosta.</value>
   </data>
   <data name="MappingSample" xml:space="preserve">
     <value>Przykładowe mapowanie:</value>
@@ -238,13 +238,13 @@
     <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?</value>
   </data>
   <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
-    <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
+    <value>Wybrałeś {0} torrentów do usunięcia. Jesteś tego pewien?{1}WSZYSTKIE DANE POWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
   </data>
   <data name="ConfirmSingleRemove" xml:space="preserve">
     <value>Czy chcesz usunąć {0}?</value>
   </data>
   <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
-    <value>Czy chcesz usunąć i skasować {0}?{1}WSZYSTKIE DANE ZWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
+    <value>Czy chcesz usunąć i skasować {0}?{1}WSZYSTKIE DANE POWIĄZANE Z TORRENTEM ZOSTANĄ USUNIĘTE!</value>
   </data>
   <data name="Connect" xml:space="preserve">
     <value>Połącz</value>
@@ -268,7 +268,7 @@
     <value>Rozłączony</value>
   </data>
   <data name="DisconnectedExceeded" xml:space="preserve">
-    <value>Rozłączony. Osiągnięto maksymalną liczbę błędnych logowań.</value>
+    <value>Rozłączony. Osiągnięto maksymalną liczbę błędnych odwołań.</value>
   </data>
   <data name="DisplayStatistics" xml:space="preserve">
     <value>Pokaż statystyki</value>
@@ -337,10 +337,10 @@
     <value>Niepołączony</value>
   </data>
   <data name="NoUpgradeAvailable" xml:space="preserve">
-    <value>Upgrade niedostępny</value>
+    <value>Uaktualnienie niedostępne</value>
   </data>
   <data name="OpenFileFilter" xml:space="preserve">
-    <value>Pliki BitTorrenta (*.torrent)|*.torrent|Wszystkie pliki (*.*)|*.*</value>
+    <value>Pliki BitTorrent (*.torrent)|*.torrent|Wszystkie pliki (*.*)|*.*</value>
   </data>
   <data name="Pause" xml:space="preserve">
     <value>Pauza</value>
@@ -461,10 +461,10 @@
     <value>Sekunda</value>
   </data>
   <data name="PortIsClosed" xml:space="preserve">
-    <value>Port nasluchu połączeń jest ZAMKNIĘTY.</value>
+    <value>Port nasłuchu połączeń jest ZAMKNIĘTY.</value>
   </data>
   <data name="PortIsOpen" xml:space="preserve">
-    <value>Port nasluchu połączeń jest OTWARTY.</value>
+    <value>Port nasłuchu połączeń jest OTWARTY.</value>
   </data>
   <data name="PortTestResult" xml:space="preserve">
     <value>Wyniki testu portów</value>

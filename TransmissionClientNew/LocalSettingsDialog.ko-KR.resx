@@ -196,7 +196,7 @@
     <value>찾아보기...</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
-    <value>plink.exe:</value>
+    <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
     <value>토런트 추가창 열기</value>
@@ -277,7 +277,7 @@
     <value>다운속도 제한 선택목록:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>포트:</value>
+    <value>:</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>새로고침 주기(초):</value>
