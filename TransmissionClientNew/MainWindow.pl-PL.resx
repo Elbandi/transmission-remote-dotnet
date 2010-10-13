@@ -139,7 +139,7 @@
     <value>Wysyłanie</value>
   </data>
   <data name="torrentEtaCol.Text" xml:space="preserve">
-    <value>ETA</value>
+    <value>PCU</value>
   </data>
   <data name="torrentUploadedCol.Text" xml:space="preserve">
     <value>Wysłano</value>
@@ -157,7 +157,7 @@
     <value>Tracker</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Total size:</value>
+    <value>Rozmiar całkowity:</value>
   </data>
   <data name="trackersTierCol.Text" xml:space="preserve">
     <value>#</value>
@@ -169,7 +169,7 @@
     <value>Status</value>
   </data>
   <data name="trackersUpdateInCol.Text" xml:space="preserve">
-    <value>Uaktualniono</value>
+    <value>Uaktualniony</value>
   </data>
   <data name="trackersSeedsCol.Text" xml:space="preserve">
     <value>Seedów</value>
@@ -226,19 +226,19 @@
     <value>Wysyłanie</value>
   </data>
   <data name="FilterTorrentLabel.Text" xml:space="preserve">
-    <value>Filter:</value>
+    <value>Filtr</value>
   </data>
   <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Import local settings...</value>
+    <value>Załaduj ustawienia</value>
   </data>
   <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Export local settings...</value>
+    <value>Zapisz ustawienia</value>
   </data>
   <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
     <value>Filtr kategorii</value>
   </data>
   <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss Downloader</value>
+    <value>Pobieranie RSS</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>Położenie:</value>
@@ -334,7 +334,7 @@
     <value>Peerów</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Odśwież co:</value>
+    <value>Podziałka wykresu:</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>Pobieranie</value>

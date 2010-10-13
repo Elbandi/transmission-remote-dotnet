@@ -205,6 +205,7 @@ namespace TransmissionRemoteDotnet
             this.reannounceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moveTorrentDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openNetworkShareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openNetworkShareDirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cSVInfoToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentMenuToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.startAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1262,7 +1263,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.openNetworkShareButton, "openNetworkShareButton");
             this.openNetworkShareButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
             this.openNetworkShareButton.Name = "openNetworkShareButton";
-            this.openNetworkShareButton.Click += new System.EventHandler(this.openNetworkShareButton_Click);
+            this.openNetworkShareButton.Click += new System.EventHandler(this.openNetworkShareDir_Click);
             // 
             // remoteCmdButton
             // 
@@ -1488,6 +1489,7 @@ namespace TransmissionRemoteDotnet
             this.reannounceToolStripMenuItem,
             this.moveTorrentDataToolStripMenuItem,
             this.openNetworkShareToolStripMenuItem,
+            this.openNetworkShareDirToolStripMenuItem,
             this.cSVInfoToClipboardToolStripMenuItem,
             this.torrentMenuToolStripSeparator2,
             this.startAllToolStripMenuItem,
@@ -1566,9 +1568,15 @@ namespace TransmissionRemoteDotnet
             // openNetworkShareToolStripMenuItem
             // 
             resources.ApplyResources(this.openNetworkShareToolStripMenuItem, "openNetworkShareToolStripMenuItem");
-            this.openNetworkShareToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
             this.openNetworkShareToolStripMenuItem.Name = "openNetworkShareToolStripMenuItem";
-            this.openNetworkShareToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShareButton_Click);
+            this.openNetworkShareToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShare_Click);
+            // 
+            // openNetworkShareDirToolStripMenuItem
+            // 
+            resources.ApplyResources(this.openNetworkShareDirToolStripMenuItem, "openNetworkShareDirToolStripMenuItem");
+            this.openNetworkShareDirToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
+            this.openNetworkShareDirToolStripMenuItem.Name = "openNetworkShareDirToolStripMenuItem";
+            this.openNetworkShareDirToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShareDir_Click);
             // 
             // cSVInfoToClipboardToolStripMenuItem
             // 
@@ -1937,6 +1945,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem showCategoriesPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reannounceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openNetworkShareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openNetworkShareDirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moveTorrentDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cSVInfoToClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTorrentWithOptionsToolStripMenuItem;

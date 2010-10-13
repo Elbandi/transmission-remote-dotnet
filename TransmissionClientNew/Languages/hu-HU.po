@@ -111,6 +111,7 @@ msgid "Time"
 msgstr "Idő"
 
 #: ErrorLogWindow~columnHeader2.Text
+#: RssForm~titleColumnHeader.Text
 #, csharp-format
 msgid "Title"
 msgstr "Cím"
@@ -424,9 +425,10 @@ msgid "Refresh rate when hidden:"
 msgstr "Frissítés gyakorisága, ha rejtett:"
 
 #: LocalSettingsDialog~label2.Text
-#: LocalSettingsDialog~label7.Text
+#: RemoteSettingsDialog~label13.Text
+#: RemoteSettingsDialog~label14.Text
 #, csharp-format
-msgid "Port:"
+msgid ":"
 msgstr ""
 
 #: LocalSettingsDialog~label3.Text
@@ -445,6 +447,11 @@ msgstr "Felhasználó:"
 #, csharp-format
 msgid "Password:"
 msgstr "Jelszó:"
+
+#: LocalSettingsDialog~label7.Text
+#, csharp-format
+msgid "Port:"
+msgstr ""
 
 #: LocalSettingsDialog~linkLabel1.Text
 #, csharp-format
@@ -539,6 +546,7 @@ msgid "Filter:"
 msgstr ""
 
 #: MainWindow~RssButton.Text
+#: RssForm~$this.Text
 #, csharp-format
 msgid "Rss Downloader"
 msgstr "Rss Letöltés"
@@ -559,11 +567,13 @@ msgid "Add torrent from URL"
 msgstr "Torrent hozzáadása URL-ből..."
 
 #: MainWindow~addTorrentToolStripMenuItem.Text
+#: RssForm~addTorrentButton.Text
 #, csharp-format
 msgid "Quick add torrent"
 msgstr "Torrent hozzáadása..."
 
 #: MainWindow~addTorrentWithOptionsToolStripMenuItem.Text
+#: RssForm~addTorrentWithOptionsButton.Text
 #, csharp-format
 msgid "Add torrent with options"
 msgstr "Torrent hozzáadása beállítással..."
@@ -840,6 +850,12 @@ msgid "Move torrent data"
 msgstr "Torrent adat áthelyezése"
 
 #: MainWindow~openNetworkShareButton.Text
+#: MainWindow~openNetworkShareDirToolStripMenuItem.Text
+#: OtherStrings~OpenNetworkShareDir
+#, csharp-format
+msgid "Open Folder on Network Share"
+msgstr ""
+
 #: MainWindow~openNetworkShareToolStripMenuItem.Text
 #, csharp-format
 msgid "Open on network share"
@@ -1032,6 +1048,7 @@ msgid "Start torrent(s)"
 msgstr "Torrent(ek) indítása"
 
 #: MainWindow~statusStrip.Text
+#: RssForm~statusStrip1.Text
 #: TorrentLoadDialog~statusStrip1.Text
 #: UriPromptWindow~statusStrip1.Text
 #, csharp-format
@@ -1363,6 +1380,11 @@ msgstr "Bemenet elfogadva"
 msgid "Invalid RPC location"
 msgstr "Érvénytelen RPC cím"
 
+#: OtherStrings~ItemsSelected
+#, csharp-format
+msgid "items selected"
+msgstr ""
+
 #: OtherStrings~Kilobyte
 #, csharp-format
 msgid "Kilobyte"
@@ -1618,6 +1640,11 @@ msgstr "Hiba a plink futtatásakor"
 msgid "Unable to open"
 msgstr "Megnyítás sikertelen"
 
+#: OtherStrings~UnableToOpenNetworkShare
+#, csharp-format
+msgid "Unable to open network share"
+msgstr ""
+
 #: OtherStrings~UnableToParse
 #, csharp-format
 msgid "Unable to parse the server response"
@@ -1778,10 +1805,9 @@ msgstr "Le:"
 msgid "Up:"
 msgstr "Fel:"
 
-#: RemoteSettingsDialog~label13.Text
-#: RemoteSettingsDialog~label14.Text
+#: RemoteSettingsDialog~label16.Text
 #, csharp-format
-msgid ":"
+msgid "Peer limit per torrent"
 msgstr ""
 
 #: RemoteSettingsDialog~label2.Text
@@ -1825,6 +1851,11 @@ msgstr "Maximum feltöltés"
 msgid "Enable UPnP"
 msgstr "UPnP használata"
 
+#: RemoteSettingsDialog~renamePartialFilesCheckBox.Text
+#, csharp-format
+msgid "Rename partial files"
+msgstr ""
+
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
 msgid "Seed Ratio Limit"
@@ -1849,6 +1880,31 @@ msgstr "Port tesztelés"
 #, csharp-format
 msgid "Update Blocklist"
 msgstr "Tiltólista frissítés"
+
+#: RssForm~RefreshButton.Text
+#, csharp-format
+msgid "Refresh"
+msgstr ""
+
+#: RssForm~categoryColumnHeader.Text
+#, csharp-format
+msgid "Category"
+msgstr ""
+
+#: RssForm~descriptionColumnHeader.Text
+#, csharp-format
+msgid "Description"
+msgstr ""
+
+#: RssForm~pubdateColumnHeader.Text
+#, csharp-format
+msgid "Pub Date"
+msgstr ""
+
+#: RssForm~toolStrip1.Text
+#, csharp-format
+msgid "toolStrip1"
+msgstr ""
 
 #: StatsDialog~$this.Text
 #, csharp-format
