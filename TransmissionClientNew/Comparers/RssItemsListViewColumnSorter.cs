@@ -72,6 +72,9 @@ namespace TransmissionRemoteDotnet
                 columnToSort = value;
                 switch (columnToSort)
                 {
+                    case 3:
+                        objectCompare = new ListViewDateTimeComparer(columnToSort);
+                        break;
                     default:
                         objectCompare = new ListViewTextComparer(columnToSort, false);
                         break;

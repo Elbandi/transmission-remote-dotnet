@@ -16,27 +16,27 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Globalization;
+using System.IO;
 using System.Net;
+using System.Reflection;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using Etier.IconHelper;
+using Jayrock.Json;
+using Jayrock.Json.Conversion;
+using MaxMind;
 using TransmissionRemoteDotnet.Commmands;
 using TransmissionRemoteDotnet.Comparers;
 using TransmissionRemoteDotnet.Settings;
-using Jayrock.Json;
-using MaxMind;
-using System.IO;
-using System.Diagnostics;
-using System.Net.Sockets;
-using System.Reflection;
-using System.Globalization;
-using System.Threading;
-using Jayrock.Json.Conversion;
-using System.Collections;
-using Etier.IconHelper;
 
 namespace TransmissionRemoteDotnet
 {
@@ -69,7 +69,9 @@ namespace TransmissionRemoteDotnet
         private ContextMenu noTorrentSelectionMenu;
         private ContextMenu fileSelectionMenu;
         private ContextMenu noFileSelectionMenu;
+        private MenuItem openNetworkShareMenuItemSep;
         private MenuItem openNetworkShareMenuItem;
+        private MenuItem openNetworkShareDirMenuItem;
         private WebClient sessionWebClient;
         private WebClient refreshWebClient = new WebClient();
         private WebClient filesWebClient = new WebClient();
@@ -80,7 +82,7 @@ namespace TransmissionRemoteDotnet
         {
             try
             {
-                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(Program.Settings.Locale);
+                Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(Program.Settings.Locale, true);
             }
             catch { }
             Program.OnConnStatusChanged += new EventHandler(Program_connStatusChanged);
@@ -148,7 +150,7 @@ namespace TransmissionRemoteDotnet
                 new ToolStripBitmap() { Name = "remove", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove, Controls = new ToolStripItem[]{removeTorrentButton, removeToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "remove_and_delete", Image = global::TransmissionRemoteDotnet.Properties.Resources.remove_and_delete, Controls = new ToolStripItem[]{removeAndDeleteButton, removeDeleteToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "reannounce", Image = global::TransmissionRemoteDotnet.Properties.Resources.reannounce, Controls = new ToolStripItem[]{reannounceButton, reannounceToolStripMenuItem} },
-                new ToolStripBitmap() { Name = "samba", Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareToolStripMenuItem} },
+                new ToolStripBitmap() { Name = "samba", Image = global::TransmissionRemoteDotnet.Properties.Resources.samba, Controls = new ToolStripItem[]{openNetworkShareButton, openNetworkShareDirToolStripMenuItem} },
                 new ToolStripBitmap() { Name = "openterm", Image = global::TransmissionRemoteDotnet.Properties.Resources.openterm, Controls = new ToolStripItem[]{remoteCmdButton} },
                 new ToolStripBitmap() { Name = "altspeed_on", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_on, Controls = new ToolStripItem[]{} },
                 new ToolStripBitmap() { Name = "altspeed_off", Image = global::TransmissionRemoteDotnet.Properties.Resources.altspeed_off, Controls = new ToolStripItem[]{AltSpeedButton} },
@@ -289,7 +291,9 @@ namespace TransmissionRemoteDotnet
             {
                 this.torrentSelectionMenu.MenuItems.Add(OtherStrings.MoveTorrentData, this.moveTorrentDataToolStripMenuItem_Click);
             }
-            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItem = new MenuItem(OtherStrings.OpenNetworkShare, this.openNetworkShareButton_Click));
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItemSep = new MenuItem("-"));
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareMenuItem = new MenuItem(OtherStrings.OpenNetworkShare, this.openNetworkShare_Click));
+            this.torrentSelectionMenu.MenuItems.Add(openNetworkShareDirMenuItem = new MenuItem(OtherStrings.OpenNetworkShareDir, this.openNetworkShareDir_Click));
             this.torrentSelectionMenu.MenuItems.Add("-");
             MenuItem bandwidthAllocationMenu = new MenuItem(OtherStrings.BandwidthAllocation);
             bandwidthAllocationMenu.MenuItems.Add(OtherStrings.High, this.bandwidthPriorityButton_Click).Tag = ProtocolConstants.BANDWIDTH_HIGH;
@@ -627,10 +631,13 @@ namespace TransmissionRemoteDotnet
         {
             LocalSettings settings = Program.Settings;
             remoteCmdButton.Visible = connected && settings.Current.PlinkEnable && settings.Current.PlinkCmd != null && settings.PlinkPath != null && File.Exists(settings.PlinkPath);
-            //openNetworkShareToolStripMenuItem.Visible = openNetworkShareButton.Visible = connected && settings.SambaShareEnabled && settings.SambaShare != null && settings.SambaShare.Length > 5;
-            openNetworkShareButton.Visible = openNetworkShareToolStripMenuItem.Enabled = connected && settings.Current.SambaShareMappings.Count > 0;
+            openNetworkShareButton.Visible = connected && settings.Current.SambaShareMappings.Count > 0;
+            if (openNetworkShareMenuItemSep != null)
+                openNetworkShareMenuItemSep.Visible = openNetworkShareButton.Visible;
             if (openNetworkShareMenuItem != null)
                 openNetworkShareMenuItem.Visible = openNetworkShareButton.Visible;
+            if (openNetworkShareDirMenuItem != null)
+                openNetworkShareDirMenuItem.Visible = openNetworkShareButton.Visible;
         }
 
         public void ShowTrayTip(int timeout, string tipTitle, string tipText, ToolTipIcon tipIcon)
@@ -831,7 +838,7 @@ namespace TransmissionRemoteDotnet
         {
             ToolStripMenuItem englishItem = new ToolStripMenuItem("English");
             englishItem.Click += new EventHandler(this.ChangeUICulture);
-            englishItem.Tag = new CultureInfo("en-US");
+            englishItem.Tag = new CultureInfo("en-US", true);
             englishItem.Checked = Program.Settings.Locale.Equals("en-US");
             languageToolStripMenuItem.DropDownItems.Add(englishItem);
             languageToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
@@ -843,7 +850,7 @@ namespace TransmissionRemoteDotnet
                 {
                     try
                     {
-                        CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper());
+                        CultureInfo cInfo = new CultureInfo(dn.Substring(0, 2).ToLower() + "-" + dn.Substring(3, 2).ToUpper(), true);
                         ToolStripMenuItem item = new ToolStripMenuItem(cInfo.NativeName + " / " + cInfo.EnglishName);
                         item.Tag = cInfo;
                         item.Click += new EventHandler(this.ChangeUICulture);
@@ -1215,9 +1222,12 @@ namespace TransmissionRemoteDotnet
                     = filesTimer.Enabled = downloadProgressLabel.Enabled
                     = generalTorrentNameGroupBox.Enabled
                     = remoteCmdButton.Enabled = one;
-            openNetworkShareButton.Enabled = openNetworkShareToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
+            openNetworkShareButton.Enabled = openNetworkShareDirToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
+            openNetworkShareToolStripMenuItem.Enabled = openNetworkShareButton.Enabled && t.Files.Count == 1 && t.Files[0].BytesCompleted == t.Files[0].FileSize;
             if (openNetworkShareMenuItem != null)
-                openNetworkShareMenuItem.Enabled = openNetworkShareButton.Enabled;
+                openNetworkShareMenuItem.Enabled = openNetworkShareToolStripMenuItem.Enabled;
+            if (openNetworkShareDirMenuItem != null)
+                openNetworkShareDirMenuItem.Enabled = openNetworkShareDirToolStripMenuItem.Enabled;
         }
 
         private void torrentListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -1233,6 +1243,7 @@ namespace TransmissionRemoteDotnet
             torrentListView.ContextMenu = oneOrMore ? this.torrentSelectionMenu : this.noTorrentSelectionMenu;
             OneOrMoreTorrentsSelected(oneOrMore);
             OneTorrentsSelected(one, t);
+            UpdateStatus(GetSummaryStatus(), true);
         }
 
         private void torrentListView_DoubleClick(object sender, EventArgs e)
@@ -1300,6 +1311,68 @@ namespace TransmissionRemoteDotnet
             speedGraph.Push(downspeed, "Download");
             speedGraph.Push(upspeed, "Upload");
             speedGraph.UpdateGraph();
+        }
+
+        public string GetSummaryStatus()
+        {
+            long totalUpload = 0;
+            long totalDownload = 0;
+            int totalTorrents = 0;
+            int totalSeeding = 0;
+            int totalDownloading = 0;
+            long totalSize = 0;
+            long totalDownloadedSize = 0;
+            long selectedSize = 0;
+            long selectedDownloadedSize = 0;
+            int selected = 0;
+
+            lock (torrentListView)
+            {
+                foreach (Torrent t in torrentListView.Items)
+                {
+                    totalTorrents++;
+                    totalUpload += t.UploadRate;
+                    totalDownload += t.DownloadRate;
+                    totalSize += t.TotalSize;
+                    totalDownloadedSize += t.HaveTotal;
+                    if (t.Selected)
+                    {
+                        selected++;
+                        selectedSize += t.TotalSize;
+                        selectedDownloadedSize += t.HaveTotal;
+                    }
+                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
+                    {
+                        totalDownloading++;
+                    }
+                    else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
+                    {
+                        totalSeeding++;
+                    }
+                }
+            }
+
+            return String.Format(
+                selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
+                      : "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {10} / {11}",
+                new object[] {
+                        Toolbox.GetSpeed(totalDownload),
+                        OtherStrings.Down.ToLower(),
+                        Toolbox.GetSpeed(totalUpload),
+                        OtherStrings.Up.ToLower(),
+                        totalTorrents,
+                        OtherStrings.Torrents.ToLower(),
+                        totalDownloading,
+                        OtherStrings.Downloading.ToLower(),
+                        totalSeeding,
+                        OtherStrings.Seeding.ToLower(),
+                        Toolbox.GetFileSize(totalDownloadedSize),
+                        Toolbox.GetFileSize(totalSize),
+                        selected, OtherStrings.ItemsSelected,
+                        Toolbox.GetFileSize(selectedDownloadedSize),
+                        Toolbox.GetFileSize(selectedSize),
+                    }
+                );
         }
 
         public void UpdateStatus(string text, bool updatenotify)
@@ -2163,7 +2236,7 @@ namespace TransmissionRemoteDotnet
             Reannounce(ReannounceMode.RecentlyActive);
         }
 
-        private void openNetworkShareButton_Click(object sender, EventArgs e)
+        private void openNetworkShareDir_Click(object sender, EventArgs e)
         {
             if (torrentListView.SelectedItems.Count == 1)
             {
@@ -2177,7 +2250,27 @@ namespace TransmissionRemoteDotnet
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Unable to open network share", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, OtherStrings.UnableToOpenNetworkShare, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void openNetworkShare_Click(object sender, EventArgs e)
+        {
+            if (torrentListView.SelectedItems.Count == 1)
+            {
+                Torrent t = (Torrent)torrentListView.SelectedItems[0];
+                string sambaPath = t.SambaLocation;
+                if (sambaPath != null)
+                {
+                    try
+                    {
+                        BackgroundProcessStart(new ProcessStartInfo(sambaPath + "\\" + t.TorrentName));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, OtherStrings.UnableToOpenNetworkShare, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -2327,6 +2420,88 @@ namespace TransmissionRemoteDotnet
                 {
                     MessageBox.Show(ee.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 };
+        }
+
+        private void torrentListView_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        private void torrentListView_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        Pen LightLightGray = new Pen(Color.FromArgb(-1447447));
+        private void DrawSubItem(DrawListViewSubItemEventArgs e, decimal Width, bool Focused)
+        {
+            Rectangle rect, origrect = e.Bounds;
+            if (Focused)
+            {
+                // Draw the background and focus rectangle for a selected item.
+                e.Graphics.FillRectangle(SystemBrushes.Highlight, origrect);
+            }
+            else
+            {
+                // Draw the background for an unselected item.
+                e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), origrect);
+            }
+            origrect.X += 1;
+            origrect.Y += 1;
+            origrect.Height -= 3;
+            origrect.Width -= 3;
+            rect = origrect;
+            e.Graphics.FillRectangle(new SolidBrush(e.Item.BackColor), rect);
+            rect.Width = (int)((double)Width / 100.0 * origrect.Width);
+
+            if (rect.Width > 0 && rect.Height > 0)
+            {
+                Brush br;
+                if (Program.Settings.NoGradientTorrentList)
+                    br = new SolidBrush(Color.LimeGreen);
+                else
+                    br = new LinearGradientBrush(rect,
+                        Color.ForestGreen,
+                        Color.LightGreen,
+                        LinearGradientMode.Horizontal);
+                e.Graphics.FillRectangle(br, rect);
+            }
+            e.Graphics.DrawRectangle(LightLightGray, origrect);
+
+            e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter);
+        }
+
+        private void torrentListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 3)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[3].Tag;
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (torrentListView.SelectedItems.Count > 0));
+            }
+        }
+
+        private void filesListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 4)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[4].Tag;
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (filesListView.SelectedItems.Count > 0));
+            }
+        }
+
+        private void peersListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            if (e.ColumnIndex != 5)
+                e.DrawDefault = true;
+            else
+            {
+                decimal width = (decimal)e.Item.SubItems[5].Tag;
+                DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (peersListView.SelectedItems.Count > 0));
+            }
         }
     }
 }

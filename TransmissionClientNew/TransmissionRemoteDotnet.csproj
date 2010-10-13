@@ -253,6 +253,9 @@
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutDialog.sv-SE.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutDialog.tr-TR.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -314,6 +317,9 @@
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ErrorLogWindow.sv-SE.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ErrorLogWindow.tr-TR.resx">
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -363,6 +369,9 @@
       <DependentUpon>FindDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindDialog.ru-RU.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDialog.sv-SE.resx">
       <DependentUpon>FindDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindDialog.tr-TR.resx">
@@ -423,6 +432,9 @@
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalSettingsDialog.sv-SE.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalSettingsDialog.tr-TR.resx">
       <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -480,6 +492,9 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.sv-SE.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.tr-TR.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -536,6 +551,9 @@
     <EmbeddedResource Include="MoveDataPrompt.ru-RU.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoveDataPrompt.sv-SE.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveDataPrompt.tr-TR.resx">
       <DependentUpon>MoveDataPrompt.cs</DependentUpon>
     </EmbeddedResource>
@@ -582,6 +600,7 @@
     <EmbeddedResource Include="OtherStrings.ru-RU.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherStrings.sv-SE.resx" />
     <EmbeddedResource Include="OtherStrings.tr-TR.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -648,6 +667,9 @@
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemoteSettingsDialog.sv-SE.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoteSettingsDialog.tr-TR.resx">
       <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -694,6 +716,9 @@
       <DependentUpon>RssForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RssForm.ru-RU.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssForm.sv-SE.resx">
       <DependentUpon>RssForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RssForm.tr-TR.resx">
@@ -754,6 +779,9 @@
       <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="StatsDialog.sv-SE.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StatsDialog.tr-TR.resx">
       <DependentUpon>StatsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -809,6 +837,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.ru-RU.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentLoadDialog.sv-SE.resx">
       <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentLoadDialog.tr-TR.resx">
@@ -870,6 +901,9 @@
     <EmbeddedResource Include="TorrentPropertiesDialog.ru-RU.resx">
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TorrentPropertiesDialog.sv-SE.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TorrentPropertiesDialog.tr-TR.resx">
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
@@ -935,6 +969,9 @@
     <EmbeddedResource Include="UriPromptWindow.ru-RU.resx">
       <DependentUpon>UriPromptWindow.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UriPromptWindow.sv-SE.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UriPromptWindow.tr-TR.resx">
       <DependentUpon>UriPromptWindow.cs</DependentUpon>

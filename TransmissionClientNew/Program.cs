@@ -108,7 +108,8 @@ namespace TransmissionRemoteDotnet
             culturechanger.ApplyLocation = culturechanger.ApplySize = false;
             settings = LocalSettings.TryLoad();
             uploadPrompt = settings.UploadPrompt;
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(settings.Locale);
+            args = Array.FindAll<string>(args, delegate(string str) { return !str.Equals("/m"); });
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(settings.Locale, true);
 #if DOTNET35
             using (NamedPipeSingleInstance singleInstance = new TCPSingleInstance(TCP_SINGLE_INSTANCE_PORT))
 #else

@@ -24,6 +24,14 @@ namespace TransmissionRemoteDotnet
 {
     class TransmissionDaemonDescriptor
     {
+        private bool trunk = false;
+
+        public bool Trunk
+        {
+            get { return trunk; }
+            set { trunk = value; }
+        }
+
         private double version = 0.0;
 
         public double Version

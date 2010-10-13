@@ -127,7 +127,7 @@
     <value>Effacer</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Vous pouvez copier le détail dune erreur dans le presse-papier en double-cliquant</value>
+    <value>Copie du détail dune erreur dans le presse-papier en double-cliquant</value>
   </data>
   <data name="closeButton.Text" xml:space="preserve">
     <value>Fermer</value>

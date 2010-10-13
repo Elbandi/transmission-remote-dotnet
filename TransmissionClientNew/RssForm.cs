@@ -151,13 +151,13 @@ namespace TransmissionRemoteDotnet
 
         private void webClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            toolStripProgressBar1.Value = e.ProgressPercentage;
+            toolStripDownloadProgressBar.Value = e.ProgressPercentage;
             toolStripStatusLabel1.Text = String.Format("{0} ({1}%)...", OtherStrings.Downloading, e.ProgressPercentage);
         }
 
         private void HandleException(Exception ex)
         {
-            toolStripProgressBar1.ProgressBar.Enabled = false;
+            toolStripDownloadProgressBar.ProgressBar.Enabled = false;
             toolStripStatusLabel1.Text = ex.Message;
             MessageBox.Show(ex.Message, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -176,7 +176,7 @@ namespace TransmissionRemoteDotnet
                     i.Name = ri.Title;
                     i.SubItems.Add(ri.Category != null ? ri.Category : "");
                     i.SubItems.Add(ri.Description != null ? ri.Description.Trim() : "");
-                    i.SubItems.Add(ri.PubDate.ToString());
+                    i.SubItems.Add(ri.PubDate.ToString()).Tag = ri.PubDate;
                     i.Tag = ri;
                     //                        i.Font = new Font(rssItemsListView.Font, FontStyle.Bold);
                 }
@@ -227,6 +227,9 @@ namespace TransmissionRemoteDotnet
                 lvwColumnSorter.Order = SortOrder.Ascending;
             }
             this.rssItemsListView.Sort();
+#if !MONO
+            this.rssItemsListView.SetSortIcon(lvwColumnSorter.SortColumn, lvwColumnSorter.Order);
+#endif
             Toolbox.StripeListView(rssItemsListView);
         }
 
@@ -257,8 +260,8 @@ namespace TransmissionRemoteDotnet
                 RssItem ri = rssItemsListView.SelectedItems[0].Tag as RssItem;
                 string target = Path.GetTempFileName();
                 toolStripStatusLabel1.Text = OtherStrings.Downloading + "...";
-                toolStripProgressBar1.Value = 0;
-                toolStripProgressBar1.Visible = true;
+                toolStripDownloadProgressBar.Value = 0;
+                toolStripDownloadProgressBar.Visible = true;
                 WebClient webClient = new TransmissionWebClient(false, false);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(webClient_DownloadProgressChanged);
                 webClient.DownloadFileCompleted += delegate(object sender, AsyncCompletedEventArgs e)

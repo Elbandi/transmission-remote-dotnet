@@ -517,4 +517,13 @@
   <data name="UnableRunPlink" xml:space="preserve">
     <value>Unable to run plink</value>
   </data>
+  <data name="ItemsSelected" xml:space="preserve">
+    <value>items selected</value>
+  </data>
+  <data name="UnableToOpenNetworkShare" xml:space="preserve">
+    <value>Unable to open network share</value>
+  </data>
+  <data name="OpenNetworkShareDir" xml:space="preserve">
+    <value>Open Folder on Network Share</value>
+  </data>
 </root>

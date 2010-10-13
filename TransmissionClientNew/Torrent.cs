@@ -71,6 +71,33 @@ namespace TransmissionRemoteDotnet
                 base.SubItems[idx].Text = str;
         }
 
+        public Color GetRatioColor()
+        {
+            double seedratio;
+            if (this.SeedRatioMode == ProtocolConstants.TR_RATIOLIMIT_UNLIMITED)
+                seedratio = -1;
+            else
+            {
+                if (this.SeedRatioMode == ProtocolConstants.TR_RATIOLIMIT_SINGLE)
+                {
+                    seedratio = this.SeedRatioLimit;
+                }
+                else
+                {
+                    JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
+                    seedratio = Toolbox.ToBool(session[ProtocolConstants.FIELD_SEEDRATIOLIMITED]) ? Toolbox.ToDouble(session[ProtocolConstants.FIELD_SEEDRATIOLIMIT]) : -1;
+                }
+            }
+            if (this.LocalRatio < 0 || seedratio < 0)
+                return SystemColors.WindowText;
+            if (this.LocalRatio > seedratio)
+                return Color.Green;
+            if (this.LocalRatio > seedratio * 0.9)
+                return Color.Gold;
+            else
+                return Color.Red;
+        }
+
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
@@ -95,6 +122,7 @@ namespace TransmissionRemoteDotnet
             base.SubItems[10].Tag = this.Uploaded;
             SetText(11, this.LocalRatio < 0 ? "∞" : this.LocalRatio.ToString());
             base.SubItems[11].Tag = this.LocalRatio;
+            this.SubItems[11].ForeColor = GetRatioColor();
             SetText(12, this.Added.ToString());
             base.SubItems[12].Tag = this.Added;
             if (this.DoneDate != null)
@@ -146,8 +174,16 @@ namespace TransmissionRemoteDotnet
             this.PeersSendingToUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSSENDINGTOUS]);
             this.PeersGettingFromUs = Toolbox.ToInt(info[ProtocolConstants.FIELD_PEERSGETTINGFROMUS]);
 
-            this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
-            this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
+            if (Program.DaemonDescriptor.Trunk && Program.DaemonDescriptor.Revision >= 10937 && Program.DaemonDescriptor.Revision < 11194)
+            {
+                this.DownloadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEDOWNLOAD]) * 1024);
+                this.UploadRate = (long)(Toolbox.ToDouble(info[ProtocolConstants.FIELD_RATEUPLOAD]) * 1024);
+            }
+            else
+            {
+                this.DownloadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEDOWNLOAD]);
+                this.UploadRate = Toolbox.ToLong(info[ProtocolConstants.FIELD_RATEUPLOAD]);
+            }
             this.BandwidthPriority = Toolbox.ToInt(info[ProtocolConstants.FIELD_BANDWIDTHPRIORITY]);
             this.Downloaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_DOWNLOADEDEVER]);
             this.Uploaded = Toolbox.ToLong(info[ProtocolConstants.FIELD_UPLOADEDEVER]);
@@ -195,7 +231,7 @@ namespace TransmissionRemoteDotnet
             }
 
             this.SeedRatioLimit = Toolbox.ToDouble(info[ProtocolConstants.FIELD_SEEDRATIOLIMIT]);
-            this.SeedRatioMode = Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDRATIOMODE]) > 0;
+            this.SeedRatioMode = Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDRATIOMODE]);
 
             this.HonorsSessionLimits = Toolbox.ToBool(info[ProtocolConstants.FIELD_HONORSSESSIONLIMITS]);
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
@@ -225,6 +261,7 @@ namespace TransmissionRemoteDotnet
             this.Id = Toolbox.ToInt(info[ProtocolConstants.FIELD_ID]);
             for (int i = 0; i < 14; i++)
                 base.SubItems.Add("");
+            this.UseItemStyleForSubItems = false;
             SeedersColumnFormat = "{0} ({1})";
             base.ToolTipText = base.Text;
             this.Created = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DATECREATED])).ToLocalTime().ToString();
@@ -370,7 +407,7 @@ namespace TransmissionRemoteDotnet
             set;
         }
 
-        public bool SeedRatioMode
+        public int SeedRatioMode
         {
             get;
             set;
@@ -721,7 +758,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public decimal LocalRatio
+        public double LocalRatio
         {
             get;
             set;
@@ -746,7 +783,12 @@ namespace TransmissionRemoteDotnet
         private void SetSpeedLimits(JsonObject info)
         {
             if (info.Contains(ProtocolConstants.FIELD_DOWNLOADLIMIT))
-                this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+            {
+                if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
+                    this.SpeedLimitDown = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+                else
+                    this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_DOWNLOADLIMIT]);
+            }
             else
                 this.SpeedLimitDown = Toolbox.ToInt(info[ProtocolConstants.FIELD_SPEEDLIMITDOWN]);
 
@@ -758,7 +800,12 @@ namespace TransmissionRemoteDotnet
                 this.SpeedLimitDownEnabled = Toolbox.ToBool(info[ProtocolConstants.FIELD_DOWNLOADLIMITMODE]);
 
             if (info.Contains(ProtocolConstants.FIELD_UPLOADLIMIT))
-                this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+            {
+                if (Program.DaemonDescriptor.RpcVersion > 9 && Program.DaemonDescriptor.Revision >= 10937)
+                    this.SpeedLimitUp = (int)Toolbox.ToDouble(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+                else
+                    this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_UPLOADLIMIT]);
+            }
             else
                 this.SpeedLimitUp = Toolbox.ToInt(info[ProtocolConstants.FIELD_SPEEDLIMITUP]);
 

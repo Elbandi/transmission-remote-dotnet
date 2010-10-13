@@ -205,6 +205,7 @@ namespace TransmissionRemoteDotnet
             this.reannounceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moveTorrentDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openNetworkShareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openNetworkShareDirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cSVInfoToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torrentMenuToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.startAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -346,14 +347,18 @@ namespace TransmissionRemoteDotnet
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.HideSelection = false;
             this.torrentListView.Name = "torrentListView";
+            this.torrentListView.OwnerDraw = true;
             this.torrentListView.ShowItemToolTips = true;
             this.torrentListView.SmallImageList = this.stateListBoxImageList;
             this.torrentListView.UseCompatibleStateImageBehavior = false;
             this.torrentListView.View = System.Windows.Forms.View.Details;
+            this.torrentListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.torrentListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.torrentListView.SelectedIndexChanged += new System.EventHandler(this.torrentListView_SelectedIndexChanged);
             this.torrentListView.DoubleClick += new System.EventHandler(this.torrentListView_DoubleClick);
             this.torrentListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.torrentListView_ColumnClick);
             this.torrentListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentListView_KeyDown);
+            this.torrentListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.torrentListView_DrawSubItem);
             // 
             // torrentNameCol
             // 
@@ -867,14 +872,18 @@ namespace TransmissionRemoteDotnet
             this.filesListView.FullRowSelect = true;
             this.filesListView.HideSelection = false;
             this.filesListView.Name = "filesListView";
+            this.filesListView.OwnerDraw = true;
             this.filesListView.ShowItemToolTips = true;
             this.filesListView.SmallImageList = this.fileIconImageList;
             this.filesListView.UseCompatibleStateImageBehavior = false;
             this.filesListView.View = System.Windows.Forms.View.Details;
+            this.filesListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.filesListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.filesListView.SelectedIndexChanged += new System.EventHandler(this.filesListView_SelectedIndexChanged);
             this.filesListView.DoubleClick += new System.EventHandler(this.filesListView_DoubleClick);
             this.filesListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.filesListView_ColumnClick);
             this.filesListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentDetailsTabListView_KeyDown);
+            this.filesListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.filesListView_DrawSubItem);
             // 
             // filesPathCol
             // 
@@ -940,11 +949,15 @@ namespace TransmissionRemoteDotnet
             this.peersListView.FullRowSelect = true;
             this.peersListView.HideSelection = false;
             this.peersListView.Name = "peersListView";
+            this.peersListView.OwnerDraw = true;
             this.peersListView.ShowItemToolTips = true;
             this.peersListView.UseCompatibleStateImageBehavior = false;
             this.peersListView.View = System.Windows.Forms.View.Details;
+            this.peersListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.torrentListView_DrawColumnHeader);
+            this.peersListView.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.torrentListView_DrawItem);
             this.peersListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.peersListView_ColumnClick);
             this.peersListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.torrentDetailsTabListView_KeyDown);
+            this.peersListView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.peersListView_DrawSubItem);
             // 
             // peersIpAddressCol
             // 
@@ -1248,7 +1261,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.openNetworkShareButton, "openNetworkShareButton");
             this.openNetworkShareButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
             this.openNetworkShareButton.Name = "openNetworkShareButton";
-            this.openNetworkShareButton.Click += new System.EventHandler(this.openNetworkShareButton_Click);
+            this.openNetworkShareButton.Click += new System.EventHandler(this.openNetworkShareDir_Click);
             // 
             // remoteCmdButton
             // 
@@ -1474,6 +1487,7 @@ namespace TransmissionRemoteDotnet
             this.reannounceToolStripMenuItem,
             this.moveTorrentDataToolStripMenuItem,
             this.openNetworkShareToolStripMenuItem,
+            this.openNetworkShareDirToolStripMenuItem,
             this.cSVInfoToClipboardToolStripMenuItem,
             this.torrentMenuToolStripSeparator2,
             this.startAllToolStripMenuItem,
@@ -1552,9 +1566,15 @@ namespace TransmissionRemoteDotnet
             // openNetworkShareToolStripMenuItem
             // 
             resources.ApplyResources(this.openNetworkShareToolStripMenuItem, "openNetworkShareToolStripMenuItem");
-            this.openNetworkShareToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
             this.openNetworkShareToolStripMenuItem.Name = "openNetworkShareToolStripMenuItem";
-            this.openNetworkShareToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShareButton_Click);
+            this.openNetworkShareToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShare_Click);
+            // 
+            // openNetworkShareDirToolStripMenuItem
+            // 
+            resources.ApplyResources(this.openNetworkShareDirToolStripMenuItem, "openNetworkShareDirToolStripMenuItem");
+            this.openNetworkShareDirToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.samba;
+            this.openNetworkShareDirToolStripMenuItem.Name = "openNetworkShareDirToolStripMenuItem";
+            this.openNetworkShareDirToolStripMenuItem.Click += new System.EventHandler(this.openNetworkShareDir_Click);
             // 
             // cSVInfoToClipboardToolStripMenuItem
             // 
@@ -1923,6 +1943,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem showCategoriesPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reannounceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openNetworkShareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openNetworkShareDirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moveTorrentDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cSVInfoToClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTorrentWithOptionsToolStripMenuItem;

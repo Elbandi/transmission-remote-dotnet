@@ -268,7 +268,7 @@
     <value>Host:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Port:</value>
+    <value>:</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Speichern</value>

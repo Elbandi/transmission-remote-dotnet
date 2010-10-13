@@ -72,7 +72,7 @@ namespace TransmissionRemoteDotnet
             if (honorsSessionLimits.Enabled)
                 arguments.Put(ProtocolConstants.FIELD_HONORSSESSIONLIMITS, honorsSessionLimits.Checked);
             if (seedRatioLimitedCheckBox.Enabled)
-                arguments.Put(ProtocolConstants.FIELD_SEEDRATIOMODE, seedRatioLimitedCheckBox.Checked ? 1 : 0);
+                arguments.Put(ProtocolConstants.FIELD_SEEDRATIOMODE, (int)(2 - seedRatioLimitedCheckBox.CheckState));
             if (bandwidthComboBox.Enabled)
             {
                 int bandwidthPriority = 0;
@@ -115,7 +115,8 @@ namespace TransmissionRemoteDotnet
             try
             {
                 seedRatioLimitValue.Value = firstTorrent.SeedRatioLimit >= 0 && (decimal)firstTorrent.SeedRatioLimit <= seedRatioLimitValue.Maximum ? (decimal)firstTorrent.SeedRatioLimit : 0;
-                seedRatioLimitValue.Enabled = seedRatioLimitedCheckBox.Checked = firstTorrent.SeedRatioMode;
+                seedRatioLimitedCheckBox.CheckState = (CheckState)(2 - firstTorrent.SeedRatioMode);
+                seedRatioLimitValue.Enabled = seedRatioLimitedCheckBox.CheckState == CheckState.Checked;
                 seedRatioLimitedCheckBox.Enabled = true;
             }
             catch
@@ -150,9 +151,9 @@ namespace TransmissionRemoteDotnet
             uploadLimitField.Enabled = uploadLimitEnableField.Checked;
         }
 
-        private void seedRatioLimitedCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void seedRatioLimitedCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
-            seedRatioLimitValue.Enabled = seedRatioLimitedCheckBox.Checked;
+            seedRatioLimitValue.Enabled = seedRatioLimitedCheckBox.CheckState == CheckState.Checked;
         }
     }
 }

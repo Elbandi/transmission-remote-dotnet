@@ -246,6 +246,11 @@ namespace TransmissionRemoteDotnet
                             window.G - STRIPE_OFFSET,
                             window.B - STRIPE_OFFSET)
                         : window;
+                    if (!item.UseItemStyleForSubItems)
+                        foreach (ListViewItem.ListViewSubItem lvs in item.SubItems)
+                        {
+                            lvs.BackColor = item.BackColor;
+                        }
                 }
                 list.EndUpdate();
             }
@@ -321,7 +326,7 @@ namespace TransmissionRemoteDotnet
         {
             if (total > 0)
             {
-                return Math.Round((x / (decimal)total) * 100, 2);
+                return Math.Floor((x / (decimal)total) * 100 * 100) / 100;
             }
             else
             {
@@ -329,7 +334,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public static decimal CalcRatio(long upload_total, long download_total)
+        public static double CalcRatio(long upload_total, long download_total)
         {
             if (download_total <= 0 || upload_total <= 0)
             {
@@ -337,7 +342,7 @@ namespace TransmissionRemoteDotnet
             }
             else
             {
-                return Math.Round((decimal)upload_total / download_total, 3);
+                return Math.Round((double)upload_total / download_total, 3);
             }
         }
 

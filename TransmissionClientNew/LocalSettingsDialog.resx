@@ -907,7 +907,7 @@
     <value>NoControl</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 74</value>
+    <value>7, 74</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 13</value>
@@ -931,7 +931,7 @@
     <value>0</value>
   </data>
   <data name="RefreshRateTrayValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 72</value>
+    <value>180, 72</value>
   </data>
   <data name="RefreshRateTrayValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -952,7 +952,7 @@
     <value>1</value>
   </data>
   <data name="SaveServerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 100</value>
+    <value>291, 105</value>
   </data>
   <data name="SaveServerButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 23</value>
@@ -982,7 +982,7 @@
     <value>NoControl</value>
   </data>
   <data name="UseSSLCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 45</value>
+    <value>309, 47</value>
   </data>
   <data name="UseSSLCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1036,7 +1036,7 @@
     <value>4</value>
   </data>
   <data name="HostField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 18</value>
+    <value>96, 18</value>
   </data>
   <data name="HostField.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 20</value>
@@ -1093,16 +1093,16 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 46</value>
+    <value>293, 20</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+    <value>10, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Port:</value>
+    <value>:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -1123,7 +1123,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 74</value>
+    <value>7, 46</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 13</value>
@@ -1147,7 +1147,7 @@
     <value>8</value>
   </data>
   <data name="RetryLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 100</value>
+    <value>180, 100</value>
   </data>
   <data name="RetryLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1168,7 +1168,7 @@
     <value>9</value>
   </data>
   <data name="PortField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 44</value>
+    <value>309, 18</value>
   </data>
   <data name="PortField.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -1189,7 +1189,7 @@
     <value>10</value>
   </data>
   <data name="RefreshRateValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 72</value>
+    <value>180, 44</value>
   </data>
   <data name="RefreshRateValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -2146,7 +2146,7 @@
     <value>MappingHelpButton</value>
   </data>
   <data name="&gt;&gt;MappingHelpButton.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.USButton, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.USButton, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MappingHelpButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -2752,7 +2752,7 @@
     <value>trayImageBrowse</value>
   </data>
   <data name="&gt;&gt;trayImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;trayImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2773,7 +2773,7 @@
     <value>toolbarImageBrowse</value>
   </data>
   <data name="&gt;&gt;toolbarImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolbarImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2794,7 +2794,7 @@
     <value>stateImageBrowse</value>
   </data>
   <data name="&gt;&gt;stateImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stateImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2815,7 +2815,7 @@
     <value>infopanelImageBrowse</value>
   </data>
   <data name="&gt;&gt;infopanelImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;infopanelImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2974,6 +2974,6 @@
     <value>LocalSettingsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.20.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

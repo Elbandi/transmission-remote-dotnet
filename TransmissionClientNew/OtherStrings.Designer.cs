@@ -511,6 +511,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to items selected.
+        /// </summary>
+        internal static string ItemsSelected {
+            get {
+                return ResourceManager.GetString("ItemsSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kilobyte.
         /// </summary>
         internal static string Kilobyte {
@@ -750,6 +759,15 @@ namespace TransmissionRemoteDotnet {
         internal static string OpenNetworkShare {
             get {
                 return ResourceManager.GetString("OpenNetworkShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Folder on Network Share.
+        /// </summary>
+        internal static string OpenNetworkShareDir {
+            get {
+                return ResourceManager.GetString("OpenNetworkShareDir", resourceCulture);
             }
         }
         
@@ -1065,6 +1083,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToOpen {
             get {
                 return ResourceManager.GetString("UnableToOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to open network share.
+        /// </summary>
+        internal static string UnableToOpenNetworkShare {
+            get {
+                return ResourceManager.GetString("UnableToOpenNetworkShare", resourceCulture);
             }
         }
         

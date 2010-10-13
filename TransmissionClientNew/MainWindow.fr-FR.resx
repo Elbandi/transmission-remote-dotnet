@@ -139,7 +139,7 @@
     <value>Emission</value>
   </data>
   <data name="torrentEtaCol.Text" xml:space="preserve">
-    <value>Estimé</value>
+    <value>ETA</value>
   </data>
   <data name="torrentUploadedCol.Text" xml:space="preserve">
     <value>Envoyé</value>
@@ -151,13 +151,13 @@
     <value>Ajouté le</value>
   </data>
   <data name="torrentCompletedAtCol.Text" xml:space="preserve">
-    <value>Finit le</value>
+    <value>Finit</value>
   </data>
   <data name="torrentTrackerCol.Text" xml:space="preserve">
     <value>Tracker</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Total size:</value>
+    <value>Taille totale:</value>
   </data>
   <data name="trackersTierCol.Text" xml:space="preserve">
     <value>Tiers</value>
@@ -211,7 +211,7 @@
     <value>Pays</value>
   </data>
   <data name="peersFlagsCol.Text" xml:space="preserve">
-    <value>Flags</value>
+    <value>Labels</value>
   </data>
   <data name="peersClientCol.Text" xml:space="preserve">
     <value>Client</value>
@@ -226,19 +226,19 @@
     <value>Emission</value>
   </data>
   <data name="FilterTorrentLabel.Text" xml:space="preserve">
-    <value>Filter:</value>
+    <value>Filtre:</value>
   </data>
   <data name="importLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Import local settings...</value>
+    <value>Importer réglages locaux...</value>
   </data>
   <data name="exportLocalSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Export local settings...</value>
+    <value>Exporter réglages locaux...</value>
   </data>
   <data name="showCategoriesPanelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Panel de filtrage des catégories</value>
+    <value>Panneau des catégories</value>
   </data>
   <data name="RssButton.Text" xml:space="preserve">
-    <value>Rss Downloader</value>
+    <value>Gestionnaire RSS</value>
   </data>
   <data name="locationLabelLabel.Text" xml:space="preserve">
     <value>Location:</value>
@@ -268,7 +268,7 @@
     <value>Définir les propriétés de(s) torrent(s)</value>
   </data>
   <data name="addTorrentWithOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ajouter torrent avec options</value>
+    <value>Ajouter Torrent avec Options</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
     <value>Infos CSV dans le presse-papier</value>
@@ -286,22 +286,22 @@
     <value>Réannoncer</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
-    <value>Ouvrir sur partage réseau</value>
+    <value>Ouvrir dans dossier distant</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
     <value>Réannoncer</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ouvrir sur partage réseau</value>
+    <value>Ouvrir dans dossier distant</value>
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Morceaux:</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
-    <value>Créé par:</value>
+    <value>Logiciel:</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>Créé le:</value>
+    <value>Créé:</value>
   </data>
   <data name="labelForErrorLabel.Text" xml:space="preserve">
     <value>Erreur:</value>
@@ -319,31 +319,31 @@
     <value>Sources:</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Limite d'envoi:</value>
+    <value>Limite envoi:</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Taux d'envoi:</value>
+    <value>Taux envoi:</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Envoyé:</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Estimé:</value>
+    <value>ETA:</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Etat:</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Limite de réception:</value>
+    <value>Limite réception:</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Taux de réception:</value>
+    <value>Taux réception:</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Reçu:</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Démarré le :</value>
+    <value>Démarré:</value>
   </data>
   <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
     <value>Temps passé:</value>
@@ -466,7 +466,7 @@
     <value>Propriétés</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Retirer</value>
+    <value>Supprimer</value>
   </data>
   <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Retirer et effacer</value>
@@ -475,7 +475,7 @@
     <value>Tout démarrer</value>
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tous en pause</value>
+    <value>Tout pauser</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>

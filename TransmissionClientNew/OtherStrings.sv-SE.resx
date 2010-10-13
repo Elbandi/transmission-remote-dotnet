@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="All" xml:space="preserve">
+    <value>Alla</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Skapare</value>
+  </data>
+  <data name="Broken" xml:space="preserve">
+    <value>Trasig</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Bygg</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Kontrollerar</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Färdig</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Godkänn</value>
+  </data>
+  <data name="ConfirmMultipleRemove" xml:space="preserve">
+    <value>Vill du verkligen radera {0} torrents?</value>
+  </data>
+  <data name="ConfirmMultipleRemoveAndDelete" xml:space="preserve">
+    <value>Du har valt att radera {0} torrents. Är du säker?{1}ALL INFORMATION FRÅN DESSA TORRENTS RADERAS.</value>
+  </data>
+  <data name="ConfirmSingleRemove" xml:space="preserve">
+    <value>Vill du ta bort {0}?</value>
+  </data>
+  <data name="ConfirmSingleRemoveAndDelete" xml:space="preserve">
+    <value>Vill du radera {0}?{1}ALL INFORMATION FRÅN DENNATORRENT RADERAS.</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Anslut</value>
+  </data>
+  <data name="ConnectedGettingInfo" xml:space="preserve">
+    <value>Ansluten. Hämtar torrent information...</value>
+  </data>
+  <data name="ConnectedTo" xml:space="preserve">
+    <value>Ansluten till</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Ansluter</value>
+  </data>
+  <data name="CopyAsCSV" xml:space="preserve">
+    <value>CSV info till urklipp</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Koppla från</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Frånkopplad</value>
+  </data>
+  <data name="DisconnectedExceeded" xml:space="preserve">
+    <value>Frånkopplad. Maximalt antal misslyckade försök har uppnåtts.</value>
+  </data>
+  <data name="DisplayStatistics" xml:space="preserve">
+    <value>Visa statistik</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Ner</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Ladda ner</value>
+  </data>
+  <data name="DownloadedValid" xml:space="preserve">
+    <value>{0} ({1} giltig)</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Laddar ner</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fel</value>
+  </data>
+  <data name="FailedRequest" xml:space="preserve">
+    <value>Misslyckad anslutning</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Hög</value>
+  </data>
+  <data name="HighPriority" xml:space="preserve">
+    <value>Hög prioritet</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Värd</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="InputAccepted" xml:space="preserve">
+    <value>Inmatning godkänd</value>
+  </data>
+  <data name="LatestVersion" xml:space="preserve">
+    <value>Du använder den senaste versionen ({0}.{1}).</value>
+  </data>
+  <data name="LatestVersionCheckFailed" xml:space="preserve">
+    <value>Kontroll av senaste version misslyckades</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Låg</value>
+  </data>
+  <data name="LowPriority" xml:space="preserve">
+    <value>Låg prioritet</value>
+  </data>
+  <data name="MustBeConnected" xml:space="preserve">
+    <value>Du måste vara ansluten för att lägga till torrents. Vill du ansluta nu?</value>
+  </data>
+  <data name="NewerVersion" xml:space="preserve">
+    <value>Det finns en nyare version ({0}.{1}). Vill du gå till nerladdningssidan?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalPriority" xml:space="preserve">
+    <value>Normal prioritet</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Inte ansluten</value>
+  </data>
+  <data name="NoUpgradeAvailable" xml:space="preserve">
+    <value>Det finns ingen uppgradering</value>
+  </data>
+  <data name="OpenFileFilter" xml:space="preserve">
+    <value>BitTorrent Metadata (*.torrent)|*.torrent|Alla filer (*.*)|*.*</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pausa</value>
+  </data>
+  <data name="PauseAll" xml:space="preserve">
+    <value>Pausa alla</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Pausad</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Egenskaper</value>
+  </data>
+  <data name="Recheck" xml:space="preserve">
+    <value>Kontrollerar på nytt</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="RemoveAndDelete" xml:space="preserve">
+    <value>Ta bort och radera</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="RpcVersion" xml:space="preserve">
+    <value>RpcVersion</value>
+  </data>
+  <data name="RpcVersionMinimum" xml:space="preserve">
+    <value>RpcVersionMinimum</value>
+  </data>
+  <data name="Seeding" xml:space="preserve">
+    <value>Delar ut</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Markera alla</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Ignorera</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Starta</value>
+  </data>
+  <data name="StartAll" xml:space="preserve">
+    <value>Starta alla</value>
+  </data>
+  <data name="TheTorrentHasFinishedDownloading" xml:space="preserve">
+    <value>Denna torrent är komplett</value>
+  </data>
+  <data name="Torrents" xml:space="preserve">
+    <value>Torrents</value>
+  </data>
+  <data name="UnableToParse" xml:space="preserve">
+    <value>Kunde inte behandla svaret från servern</value>
+  </data>
+  <data name="UnknownNegativeResult" xml:space="preserve">
+    <value>Okänt (negativt)</value>
+  </data>
+  <data name="UnsuccessfulRequest" xml:space="preserve">
+    <value>Misslyckad förfrågan</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Upp</value>
+  </data>
+  <data name="UpgradeAvailable" xml:space="preserve">
+    <value>Uppgradering finns</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="WaitingForInput" xml:space="preserve">
+    <value>Väntar på inmatning</value>
+  </data>
+  <data name="WaitingToCheck" xml:space="preserve">
+    <value>Väntar på kontroll</value>
+  </data>
+  <data name="XOfYConnected" xml:space="preserve">
+    <value>{0} av {1} anslutna</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Ofullständig</value>
+  </data>
+  <data name="Byte" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="Gigabyte" xml:space="preserve">
+    <value>Gigabyte</value>
+  </data>
+  <data name="GigabyteShort" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Timme</value>
+  </data>
+  <data name="Kilobyte" xml:space="preserve">
+    <value>Kilobyte</value>
+    <comment>b</comment>
+  </data>
+  <data name="KilobyteShort" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="Megabyte" xml:space="preserve">
+    <value>Megabyte</value>
+  </data>
+  <data name="MegabyteShort" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minut</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Sekund</value>
+  </data>
+  <data name="PortIsClosed" xml:space="preserve">
+    <value>Den inkommande porten på din dator är STÄNGD.</value>
+  </data>
+  <data name="PortIsOpen" xml:space="preserve">
+    <value>Den inkommande porten på din dator är ÖPPEN.</value>
+  </data>
+  <data name="PortTestResult" xml:space="preserve">
+    <value>Resultat av porttest</value>
+  </data>
+  <data name="DownloadLimit" xml:space="preserve">
+    <value>Nerladdningsgräns</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Obegränsad</value>
+  </data>
+  <data name="UploadLimit" xml:space="preserve">
+    <value>Uppladdningsbegränsning</value>
+  </data>
+  <data name="Querying" xml:space="preserve">
+    <value>Frågar...</value>
+  </data>
+  <data name="Updating" xml:space="preserve">
+    <value>Uppdaterar...</value>
+  </data>
+  <data name="XInBlocklist" xml:space="preserve">
+    <value>{0} i blocklista.</value>
+  </data>
+  <data name="Pieces" xml:space="preserve">
+    <value>Delar</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Resultat</value>
+  </data>
+  <data name="Reannounce" xml:space="preserve">
+    <value>Återannonserar</value>
+  </data>
+  <data name="OpenNetworkShare" xml:space="preserve">
+    <value>Öppna från nätverksplats</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Avsluta</value>
+  </data>
+  <data name="NewTorrentIs" xml:space="preserve">
+    <value>Ny torrent {0}.</value>
+  </data>
+  <data name="MoveMultipleTorrents" xml:space="preserve">
+    <value>Flytta flera torrent data</value>
+  </data>
+  <data name="MoveTorrentData" xml:space="preserve">
+    <value>Flytta torrent data</value>
+  </data>
+  <data name="MoveX" xml:space="preserve">
+    <value>Flytta {0}</value>
+  </data>
+  <data name="InfoObjectToClipboard" xml:space="preserve">
+    <value>Info till urklipp</value>
+  </data>
+  <data name="LoadingFile" xml:space="preserve">
+    <value>laddar {0}...</value>
+  </data>
+  <data name="BandwidthAllocation" xml:space="preserve">
+    <value>Allokerad bandbredd</value>
+  </data>
+  <data name="MultipleTorrentProperties" xml:space="preserve">
+    <value>Flera torrent egenskaper</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Okänt</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Kunde inte öppna</value>
+  </data>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>Tom fil</value>
+  </data>
+  <data name="GeoipInitError" xml:space="preserve">
+    <value>GeoIP init fel ({0})</value>
+  </data>
+  <data name="UnknownResponseTag" xml:space="preserve">
+    <value>Okänd svars-tag</value>
+  </data>
+  <data name="XConnected" xml:space="preserve">
+    <value>{0} ansluten</value>
+  </data>
+  <data name="PiecesInfo" xml:space="preserve">
+    <value>{0} x {1} (har {2})</value>
+  </data>
+  <data name="SpeedResolutions" xml:space="preserve">
+    <value>5 sek|10 sek|30 sek|5 min</value>
+    <comment>delim with | char!!</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lösenord</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="HttpError" xml:space="preserve">
+    <value>Daemon försökte ladda ner något men http svaret är:{0}{1}</value>
+    <comment>{0} is the newline char</comment>
+  </data>
+  <data name="NoHostnameSet" xml:space="preserve">
+    <value>Inget värdnamn har angivits.</value>
+  </data>
+  <data name="MappingSample" xml:space="preserve">
+    <value>Testmappning:</value>
+  </data>
+  <data name="SambaShare" xml:space="preserve">
+    <value>Samba utdelning:</value>
+  </data>
+  <data name="UnixPathPrefix" xml:space="preserve">
+    <value>UNIX sökväg prefix:</value>
+  </data>
+  <data name="OpenImageFilter" xml:space="preserve">
+    <value>PNG bild|*.png</value>
+  </data>
+  <data name="ConfirmSaveServer" xml:space="preserve">
+    <value>"{0}" serverinställningar har ändrats. Vill du spara dem?</value>
+  </data>
+  <data name="ConfirmMultipleRecheck" xml:space="preserve">
+    <value>Du har valt att verifiera {0} torrents på nytt. Detta kan ta lång tid. Vill du fortsätta?</value>
+  </data>
+  <data name="ConfirmSingleRecheck" xml:space="preserve">
+    <value>Vill du verifiera {0} på nytt? Detta kan ta lång tid.</value>
+  </data>
+  <data name="TorrentFinished" xml:space="preserve">
+    <value>Denna torrent har laddats ner färdigt</value>
+  </data>
+  <data name="UnixPathExists" xml:space="preserve">
+    <value>Unix-sökvägen finns</value>
+  </data>
+  <data name="InvalidRPCLocation" xml:space="preserve">
+    <value>Ogiltig RPC-plats</value>
+  </data>
+  <data name="FeedExists" xml:space="preserve">
+    <value>Feed finns</value>
+  </data>
+  <data name="TerabyteShort" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="UnitFactors" xml:space="preserve">
+    <value>Byte|Kilobyte|Megabyte|Gigabyte|Terabyte</value>
+    <comment>delim with | char!!</comment>
+  </data>
+  <data name="TotalDoneValidSize" xml:space="preserve">
+    <value>{0} ({1} klara) ({2} giltiga)</value>
+  </data>
+  <data name="TotalDoneValidTotalSize" xml:space="preserve">
+    <value>{0} ({1} klara) ({2} giltiga) ({3} totalt)</value>
+  </data>
+  <data name="UnableRunPlink" xml:space="preserve">
+    <value>Kunde inte starta plink</value>
+  </data>
+  <data name="ItemsSelected" xml:space="preserve">
+    <value>poster valda</value>
+  </data>
+</root>
