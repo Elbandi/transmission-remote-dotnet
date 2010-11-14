@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="UnableToOpenNetworkShare" xml:space="preserve">
-    <value>Unable to open network share</value>
+    <value>Netzwerkfreigabe kann nicht geöffnet werden</value>
   </data>
   <data name="OpenNetworkShareDir" xml:space="preserve">
-    <value>Open Folder on Network Share</value>
+    <value>Verzeichnis über Netzwerkfreigabe öffnen</value>
   </data>
   <data name="ItemsSelected" xml:space="preserve">
     <value>Elemente ausgewählt</value>

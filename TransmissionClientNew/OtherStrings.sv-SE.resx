@@ -121,7 +121,7 @@
     <value>Unable to open network share</value>
   </data>
   <data name="OpenNetworkShareDir" xml:space="preserve">
-    <value>Open Folder on Network Share</value>
+    <value>&amp;Öppna via nätverksutdelning</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Alla</value>
