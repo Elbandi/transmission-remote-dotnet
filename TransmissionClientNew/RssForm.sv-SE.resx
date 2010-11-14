@@ -109,4 +109,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RefreshButton.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="addTorrentButton.Text" xml:space="preserve">
+    <value>Quick add torrent</value>
+  </data>
+  <data name="addTorrentWithOptionsButton.Text" xml:space="preserve">
+    <value>Add torrent with options</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="titleColumnHeader.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="categoryColumnHeader.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="descriptionColumnHeader.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="pubdateColumnHeader.Text" xml:space="preserve">
+    <value>Pub Date</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Rss Downloader</value>
+  </data>
 </root>

@@ -17,15 +17,6 @@
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
                 
     There are any number of "resheader" rows that contain simple 
     name/value pairs.
@@ -117,6 +108,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="openNetworkShareDirToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Folder on Network Share</value>
+  </data>
   <data name="torrentNameCol.Text" xml:space="preserve">
     <value>Namn</value>
   </data>
@@ -127,7 +124,7 @@
     <value>Storlek</value>
   </data>
   <data name="torrentDoneCol.Text" xml:space="preserve">
-    <value>Färdig</value>
+    <value>Hämtat</value>
   </data>
   <data name="torrentStatusCol.Text" xml:space="preserve">
     <value>Status</value>
@@ -139,10 +136,10 @@
     <value>Hämtare</value>
   </data>
   <data name="torrentDownSpeedCol.Text" xml:space="preserve">
-    <value>Hastighet Ner</value>
+    <value>Nerladdningshastighet</value>
   </data>
   <data name="torrentUpSpeedCol.Text" xml:space="preserve">
-    <value>Hastighet Upp</value>
+    <value>Uppladdningshastighet</value>
   </data>
   <data name="torrentEtaCol.Text" xml:space="preserve">
     <value>Tid kvar</value>
@@ -223,7 +220,7 @@
     <value>Klient</value>
   </data>
   <data name="peersProgressCol.Text" xml:space="preserve">
-    <value>Hämtat</value>
+    <value>Resultat</value>
   </data>
   <data name="peersDownSpeedCol.Text" xml:space="preserve">
     <value>Nerladdningshastighet</value>
@@ -277,16 +274,16 @@
     <value>Lägg till torrent &amp;med alternativ</value>
   </data>
   <data name="cSVInfoToClipboardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kopiera &amp;CSV till urklipp</value>
+    <value>CSV info till urklipp</value>
   </data>
   <data name="moveTorrentDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Flytta torrent data</value>
+    <value>Flytta torrent data</value>
   </data>
   <data name="openNetworkShareButton.Text" xml:space="preserve">
     <value>&amp;Öppna via nätverksutdelning</value>
   </data>
   <data name="reannounceToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Återannonsera</value>
+    <value>Återannonserar</value>
   </data>
   <data name="openNetworkShareToolStripMenuItem.Text" xml:space="preserve">
     <value>Öppna via nätverksutdelning</value>
@@ -382,10 +379,10 @@
     <value>toolStripContainer1</value>
   </data>
   <data name="connectButton.Text" xml:space="preserve">
-    <value>&amp;Anslut</value>
+    <value>Anslut</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
-    <value>&amp;Koppla från</value>
+    <value>Koppla från</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>Lägg till &amp;torrent</value>
@@ -418,25 +415,25 @@
     <value>Nyligen aktiva</value>
   </data>
   <data name="reannounceButton.Text" xml:space="preserve">
-    <value>Återannonsera</value>
+    <value>Återannonserar</value>
   </data>
   <data name="localConfigureButton.Text" xml:space="preserve">
     <value>&amp;Lokala inställningar</value>
   </data>
   <data name="remoteConfigureButton.Text" xml:space="preserve">
-    <value>&amp;Serverinställningar</value>
+    <value>Serverinställningar</value>
   </data>
   <data name="sessionStatsButton.Text" xml:space="preserve">
-    <value>Visa Statistik</value>
+    <value>Visa statistik</value>
   </data>
   <data name="statsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Statistik</value>
+    <value>Visa statistik</value>
   </data>
   <data name="connectToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Anslut</value>
+    <value>Anslut</value>
   </data>
   <data name="disconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Koppla från</value>
+    <value>Koppla från</value>
   </data>
   <data name="addTorrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Lägg till &amp;torrent</value>
@@ -445,7 +442,7 @@
     <value>Lägg till torrent från &amp;URL</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Avsluta</value>
+    <value>Avsluta</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Arkiv</value>
@@ -463,28 +460,28 @@
     <value>&amp;Inställningar</value>
   </data>
   <data name="startToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Starta</value>
+    <value>Starta</value>
   </data>
   <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paus</value>
+    <value>Pausa</value>
   </data>
   <data name="recheckToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Kontrollera på nytt</value>
+    <value>Kontrollerar på nytt</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Egenskaper</value>
+    <value>Egenskaper</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Ta bort torrent</value>
+    <value>Ta bort</value>
   </data>
   <data name="removeDeleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Radera</value>
+    <value>Ta bort och radera</value>
   </data>
   <data name="startAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Starta &amp;alla</value>
+    <value>Starta alla</value>
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pausa a&amp;lla</value>
+    <value>Pausa alla</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Torrent</value>
