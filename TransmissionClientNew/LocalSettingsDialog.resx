@@ -2146,7 +2146,7 @@
     <value>MappingHelpButton</value>
   </data>
   <data name="&gt;&gt;MappingHelpButton.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.USButton, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.USButton, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MappingHelpButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -2752,7 +2752,7 @@
     <value>trayImageBrowse</value>
   </data>
   <data name="&gt;&gt;trayImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;trayImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2773,7 +2773,7 @@
     <value>toolbarImageBrowse</value>
   </data>
   <data name="&gt;&gt;toolbarImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolbarImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2794,7 +2794,7 @@
     <value>stateImageBrowse</value>
   </data>
   <data name="&gt;&gt;stateImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stateImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2815,7 +2815,7 @@
     <value>infopanelImageBrowse</value>
   </data>
   <data name="&gt;&gt;infopanelImageBrowse.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SkinImageBrowseTextBox, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;infopanelImageBrowse.Parent" xml:space="preserve">
     <value>tabSkinSettings</value>
@@ -2974,6 +2974,6 @@
     <value>LocalSettingsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
