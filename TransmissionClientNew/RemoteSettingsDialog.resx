@@ -144,7 +144,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="downloadToField.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 9</value>
@@ -165,7 +165,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;downloadToField.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>7</value>
   </data>
   <data name="limitUploadCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -267,13 +267,13 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
+    <value>9, 11</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Incoming port:</value>
@@ -285,19 +285,19 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>4</value>
   </data>
   <data name="incomingPortValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 62</value>
+    <value>173, 9</value>
   </data>
   <data name="incomingPortValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
   </data>
   <data name="incomingPortValue.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.Name" xml:space="preserve">
     <value>incomingPortValue</value>
@@ -306,10 +306,10 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>5</value>
   </data>
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 256</value>
@@ -384,13 +384,13 @@
     <value>True</value>
   </data>
   <data name="PEXcheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 164</value>
+    <value>176, 167</value>
   </data>
   <data name="PEXcheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 17</value>
   </data>
   <data name="PEXcheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>7</value>
   </data>
   <data name="PEXcheckBox.Text" xml:space="preserve">
     <value>Enable Peer Exchange</value>
@@ -402,10 +402,10 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PEXcheckBox.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;PEXcheckBox.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>3</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -438,13 +438,13 @@
     <value>True</value>
   </data>
   <data name="portForwardCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 144</value>
+    <value>12, 147</value>
   </data>
   <data name="portForwardCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 17</value>
   </data>
   <data name="portForwardCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>5</value>
   </data>
   <data name="portForwardCheckBox.Text" xml:space="preserve">
     <value>Enable UPnP</value>
@@ -456,10 +456,10 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;portForwardCheckBox.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;portForwardCheckBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>6</value>
   </data>
   <data name="encryptionCombobox.Items" xml:space="preserve">
     <value>tolerated</value>
@@ -471,13 +471,13 @@
     <value>required</value>
   </data>
   <data name="encryptionCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 90</value>
+    <value>173, 35</value>
   </data>
   <data name="encryptionCombobox.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 21</value>
   </data>
   <data name="encryptionCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.Name" xml:space="preserve">
     <value>encryptionCombobox</value>
@@ -486,22 +486,22 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 95</value>
+    <value>9, 38</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Encryption:</value>
@@ -513,10 +513,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
+    <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>8</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -586,7 +586,7 @@
     <value>118, 17</value>
   </data>
   <data name="renamePartialFilesCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>7</value>
   </data>
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Rename partial files</value>
@@ -602,36 +602,6 @@
   </data>
   <data name="&gt;&gt;renamePartialFilesCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="LpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LpdEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LpdEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 184</value>
-  </data>
-  <data name="LpdEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 17</value>
-  </data>
-  <data name="LpdEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
-    <value>Enable Local Peer Discovery</value>
-  </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Name" xml:space="preserve">
-    <value>LpdEnabledCheckBox</value>
-  </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
-  </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="incompleteToCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -661,7 +631,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="incompleteToField.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 35</value>
@@ -682,37 +652,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToField.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="dhtEnabled.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dhtEnabled.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="dhtEnabled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 144</value>
-  </data>
-  <data name="dhtEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 17</value>
-  </data>
-  <data name="dhtEnabled.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="dhtEnabled.Text" xml:space="preserve">
-    <value>Enable Distributed Hash Table (DHT)</value>
-  </data>
-  <data name="&gt;&gt;dhtEnabled.Name" xml:space="preserve">
-    <value>dhtEnabled</value>
-  </data>
-  <data name="&gt;&gt;dhtEnabled.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dhtEnabled.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
-  </data>
-  <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>282, 122</value>
@@ -721,7 +661,7 @@
     <value>104, 13</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -733,34 +673,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="testPortButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="testPortButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 61</value>
-  </data>
-  <data name="testPortButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 23</value>
-  </data>
-  <data name="testPortButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="testPortButton.Text" xml:space="preserve">
-    <value>Test Port</value>
-  </data>
-  <data name="&gt;&gt;testPortButton.Name" xml:space="preserve">
-    <value>testPortButton</value>
-  </data>
-  <data name="&gt;&gt;testPortButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;testPortButton.Parent" xml:space="preserve">
-    <value>tabGeneral</value>
-  </data>
-  <data name="&gt;&gt;testPortButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="updateBlocklistButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -772,7 +685,7 @@
     <value>102, 23</value>
   </data>
   <data name="updateBlocklistButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>5</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
     <value>Update Blocklist</value>
@@ -787,7 +700,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;updateBlocklistButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="blocklistEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -802,7 +715,7 @@
     <value>106, 17</value>
   </data>
   <data name="blocklistEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>4</value>
   </data>
   <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
     <value>Blocklist enabled</value>
@@ -817,7 +730,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;blocklistEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -845,6 +758,120 @@
   </data>
   <data name="&gt;&gt;tabGeneral.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="LpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LpdEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LpdEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 187</value>
+  </data>
+  <data name="LpdEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 17</value>
+  </data>
+  <data name="LpdEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
+    <value>Enable Local Peer Discovery</value>
+  </data>
+  <data name="&gt;&gt;LpdEnabledCheckBox.Name" xml:space="preserve">
+    <value>LpdEnabledCheckBox</value>
+  </data>
+  <data name="&gt;&gt;LpdEnabledCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LpdEnabledCheckBox.Parent" xml:space="preserve">
+    <value>tabNetwork</value>
+  </data>
+  <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dhtEnabled.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dhtEnabled.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dhtEnabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 147</value>
+  </data>
+  <data name="dhtEnabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 17</value>
+  </data>
+  <data name="dhtEnabled.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dhtEnabled.Text" xml:space="preserve">
+    <value>Enable Distributed Hash Table (DHT)</value>
+  </data>
+  <data name="&gt;&gt;dhtEnabled.Name" xml:space="preserve">
+    <value>dhtEnabled</value>
+  </data>
+  <data name="&gt;&gt;dhtEnabled.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dhtEnabled.Parent" xml:space="preserve">
+    <value>tabNetwork</value>
+  </data>
+  <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="testPortButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="testPortButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 6</value>
+  </data>
+  <data name="testPortButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 23</value>
+  </data>
+  <data name="testPortButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="testPortButton.Text" xml:space="preserve">
+    <value>Test Port</value>
+  </data>
+  <data name="&gt;&gt;testPortButton.Name" xml:space="preserve">
+    <value>testPortButton</value>
+  </data>
+  <data name="&gt;&gt;testPortButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;testPortButton.Parent" xml:space="preserve">
+    <value>tabNetwork</value>
+  </data>
+  <data name="&gt;&gt;testPortButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabNetwork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabNetwork.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabNetwork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 207</value>
+  </data>
+  <data name="tabNetwork.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabNetwork.Text" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="&gt;&gt;tabNetwork.Name" xml:space="preserve">
+    <value>tabNetwork</value>
+  </data>
+  <data name="&gt;&gt;tabNetwork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabNetwork.Parent" xml:space="preserve">
+    <value>tabSettings</value>
+  </data>
+  <data name="&gt;&gt;tabNetwork.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -961,7 +988,7 @@
     <value>403, 207</value>
   </data>
   <data name="tabLimits.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabLimits.Text" xml:space="preserve">
     <value>Limits</value>
@@ -976,7 +1003,7 @@
     <value>tabSettings</value>
   </data>
   <data name="&gt;&gt;tabLimits.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="timeConstaintEndMinutes.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1372,7 +1399,7 @@
     <value>403, 207</value>
   </data>
   <data name="tabAltLimits.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabAltLimits.Text" xml:space="preserve">
     <value>Alternate limits</value>
@@ -1387,7 +1414,7 @@
     <value>tabSettings</value>
   </data>
   <data name="&gt;&gt;tabAltLimits.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -1474,6 +1501,6 @@
     <value>RemoteSettingsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

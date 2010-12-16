@@ -67,14 +67,15 @@ namespace TransmissionRemoteDotnet
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
-            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToField = new System.Windows.Forms.TextBox();
-            this.dhtEnabled = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.testPortButton = new System.Windows.Forms.Button();
             this.updateBlocklistButton = new System.Windows.Forms.Button();
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
+            this.tabNetwork = new System.Windows.Forms.TabPage();
+            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
+            this.dhtEnabled = new System.Windows.Forms.CheckBox();
+            this.testPortButton = new System.Windows.Forms.Button();
             this.tabLimits = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.peerLimitTorrentValue = new System.Windows.Forms.NumericUpDown();
@@ -103,6 +104,7 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             this.tabSettings.SuspendLayout();
             this.tabGeneral.SuspendLayout();
+            this.tabNetwork.SuspendLayout();
             this.tabLimits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).BeginInit();
@@ -245,6 +247,7 @@ namespace TransmissionRemoteDotnet
             // tabSettings
             // 
             this.tabSettings.Controls.Add(this.tabGeneral);
+            this.tabSettings.Controls.Add(this.tabNetwork);
             this.tabSettings.Controls.Add(this.tabLimits);
             this.tabSettings.Controls.Add(this.tabAltLimits);
             resources.ApplyResources(this.tabSettings, "tabSettings");
@@ -254,22 +257,13 @@ namespace TransmissionRemoteDotnet
             // tabGeneral
             // 
             this.tabGeneral.Controls.Add(this.renamePartialFilesCheckBox);
-            this.tabGeneral.Controls.Add(this.LpdEnabledCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToField);
-            this.tabGeneral.Controls.Add(this.dhtEnabled);
             this.tabGeneral.Controls.Add(this.label15);
-            this.tabGeneral.Controls.Add(this.testPortButton);
             this.tabGeneral.Controls.Add(this.updateBlocklistButton);
             this.tabGeneral.Controls.Add(this.blocklistEnabledCheckBox);
             this.tabGeneral.Controls.Add(this.label1);
-            this.tabGeneral.Controls.Add(this.PEXcheckBox);
-            this.tabGeneral.Controls.Add(this.label2);
-            this.tabGeneral.Controls.Add(this.incomingPortValue);
-            this.tabGeneral.Controls.Add(this.portForwardCheckBox);
             this.tabGeneral.Controls.Add(this.downloadToField);
-            this.tabGeneral.Controls.Add(this.encryptionCombobox);
-            this.tabGeneral.Controls.Add(this.label3);
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
@@ -279,12 +273,6 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.renamePartialFilesCheckBox, "renamePartialFilesCheckBox");
             this.renamePartialFilesCheckBox.Name = "renamePartialFilesCheckBox";
             this.renamePartialFilesCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // LpdEnabledCheckBox
-            // 
-            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
-            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
-            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // incompleteToCheckBox
             // 
@@ -298,23 +286,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.incompleteToField, "incompleteToField");
             this.incompleteToField.Name = "incompleteToField";
             // 
-            // dhtEnabled
-            // 
-            resources.ApplyResources(this.dhtEnabled, "dhtEnabled");
-            this.dhtEnabled.Name = "dhtEnabled";
-            this.dhtEnabled.UseVisualStyleBackColor = true;
-            // 
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            // 
-            // testPortButton
-            // 
-            resources.ApplyResources(this.testPortButton, "testPortButton");
-            this.testPortButton.Name = "testPortButton";
-            this.testPortButton.UseVisualStyleBackColor = true;
-            this.testPortButton.Click += new System.EventHandler(this.testPortButton_Click);
             // 
             // updateBlocklistButton
             // 
@@ -329,6 +304,40 @@ namespace TransmissionRemoteDotnet
             this.blocklistEnabledCheckBox.Name = "blocklistEnabledCheckBox";
             this.blocklistEnabledCheckBox.UseVisualStyleBackColor = true;
             this.blocklistEnabledCheckBox.CheckedChanged += new System.EventHandler(this.blocklistEnabledCheckBox_CheckedChanged);
+            // 
+            // tabNetwork
+            // 
+            this.tabNetwork.Controls.Add(this.LpdEnabledCheckBox);
+            this.tabNetwork.Controls.Add(this.dhtEnabled);
+            this.tabNetwork.Controls.Add(this.testPortButton);
+            this.tabNetwork.Controls.Add(this.PEXcheckBox);
+            this.tabNetwork.Controls.Add(this.label2);
+            this.tabNetwork.Controls.Add(this.incomingPortValue);
+            this.tabNetwork.Controls.Add(this.portForwardCheckBox);
+            this.tabNetwork.Controls.Add(this.encryptionCombobox);
+            this.tabNetwork.Controls.Add(this.label3);
+            resources.ApplyResources(this.tabNetwork, "tabNetwork");
+            this.tabNetwork.Name = "tabNetwork";
+            this.tabNetwork.UseVisualStyleBackColor = true;
+            // 
+            // LpdEnabledCheckBox
+            // 
+            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
+            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
+            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // dhtEnabled
+            // 
+            resources.ApplyResources(this.dhtEnabled, "dhtEnabled");
+            this.dhtEnabled.Name = "dhtEnabled";
+            this.dhtEnabled.UseVisualStyleBackColor = true;
+            // 
+            // testPortButton
+            // 
+            resources.ApplyResources(this.testPortButton, "testPortButton");
+            this.testPortButton.Name = "testPortButton";
+            this.testPortButton.UseVisualStyleBackColor = true;
+            this.testPortButton.Click += new System.EventHandler(this.testPortButton_Click);
             // 
             // tabLimits
             // 
@@ -533,6 +542,8 @@ namespace TransmissionRemoteDotnet
             this.tabSettings.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
+            this.tabNetwork.ResumeLayout(false);
+            this.tabNetwork.PerformLayout();
             this.tabLimits.ResumeLayout(false);
             this.tabLimits.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).EndInit();
@@ -602,5 +613,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox dhtEnabled;
         private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
+        private System.Windows.Forms.TabPage tabNetwork;
     }
 }
