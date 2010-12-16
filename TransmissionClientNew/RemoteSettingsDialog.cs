@@ -161,6 +161,11 @@ namespace TransmissionRemoteDotnet
                     SetNumeric(seedLimitUpDown, Toolbox.ToDecimal(session[ProtocolConstants.FIELD_SEEDRATIOLIMIT]), 1);
                     seedLimitUpDown.Enabled = seedRatioEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_SEEDRATIOLIMITED]);
                 }
+                if (seedIdleEnabledCheckBox.Enabled = seedIdleLimitUpDown.Enabled = session.Contains(ProtocolConstants.FIELD_IDLESEEDLIMITENABLED))
+                {
+                    SetNumeric(seedIdleLimitUpDown, Toolbox.ToDecimal(session[ProtocolConstants.FIELD_IDLESEEDLIMIT]), 1);
+                    seedIdleLimitUpDown.Enabled = seedIdleEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_IDLESEEDLIMITENABLED]);
+                }
                 if (incompleteToCheckBox.Enabled = incompleteToField.Enabled = session.Contains(ProtocolConstants.FIELD_INCOMPLETE_DIR))
                 {
                     incompleteToField.Text = (string)session[ProtocolConstants.FIELD_INCOMPLETE_DIR];
@@ -266,6 +271,11 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMITED, seedRatioEnabledCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMIT, seedLimitUpDown.Value);
             }
+            if (seedIdleEnabledCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_IDLESEEDLIMITENABLED, seedIdleEnabledCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_IDLESEEDLIMIT, seedIdleLimitUpDown.Value);
+            }
             if (incompleteToCheckBox.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED, incompleteToCheckBox.Checked);
@@ -349,6 +359,11 @@ namespace TransmissionRemoteDotnet
         private void seedRatioEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             seedLimitUpDown.Enabled = seedRatioEnabledCheckBox.Checked;
+        }
+
+        private void seedIdleEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            seedIdleLimitUpDown.Enabled = seedIdleEnabledCheckBox.Checked;
         }
 
         private void testPortButton_Click(object sender, EventArgs e)

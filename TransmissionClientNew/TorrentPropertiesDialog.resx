@@ -118,15 +118,71 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="seedIdleLimitValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 113</value>
+  </data>
+  <data name="seedIdleLimitValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="seedIdleLimitValue.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitValue.Name" xml:space="preserve">
+    <value>seedIdleLimitValue</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitValue.Parent" xml:space="preserve">
+    <value>tabGeneral</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="seedIdleLimitedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 114</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="seedIdleLimitedCheckBox.Text" xml:space="preserve">
+    <value>Limit idle seed</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitedCheckBox.Name" xml:space="preserve">
+    <value>seedIdleLimitedCheckBox</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitedCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitedCheckBox.Parent" xml:space="preserve">
+    <value>tabGeneral</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitedCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="bandwidthComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 134</value>
+    <value>194, 139</value>
   </data>
   <data name="bandwidthComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bandwidthComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;bandwidthComboBox.Name" xml:space="preserve">
     <value>bandwidthComboBox</value>
@@ -138,7 +194,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;bandwidthComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -147,13 +203,13 @@
     <value>False</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 134</value>
+    <value>22, 142</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Bandwidth priority:</value>
@@ -168,19 +224,19 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="honorsSessionLimits.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="honorsSessionLimits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 159</value>
+    <value>6, 164</value>
   </data>
   <data name="honorsSessionLimits.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 17</value>
   </data>
   <data name="honorsSessionLimits.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
     <value>Honors session limits</value>
@@ -195,7 +251,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;honorsSessionLimits.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="seedRatioLimitedCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,7 +260,7 @@
     <value>False</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 105</value>
+    <value>6, 88</value>
   </data>
   <data name="seedRatioLimitedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -225,13 +281,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;seedRatioLimitedCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="seedRatioLimitValue.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="seedRatioLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 104</value>
+    <value>194, 87</value>
   </data>
   <data name="seedRatioLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
@@ -249,10 +305,10 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;seedRatioLimitValue.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="peerLimitValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 76</value>
+    <value>194, 61</value>
   </data>
   <data name="peerLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
@@ -270,13 +326,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;peerLimitValue.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 78</value>
+    <value>22, 63</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 13</value>
@@ -297,13 +353,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="uploadLimitEnableField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="uploadLimitEnableField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
+    <value>6, 10</value>
   </data>
   <data name="uploadLimitEnableField.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
@@ -324,10 +380,10 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;uploadLimitEnableField.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="downloadLimitField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 46</value>
+    <value>194, 35</value>
   </data>
   <data name="downloadLimitField.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
@@ -345,13 +401,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;downloadLimitField.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 19</value>
+    <value>257, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -372,10 +428,10 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="uploadLimitField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 17</value>
+    <value>194, 9</value>
   </data>
   <data name="uploadLimitField.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
@@ -393,13 +449,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;uploadLimitField.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 48</value>
+    <value>257, 37</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -420,13 +476,13 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="downloadLimitEnableField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="downloadLimitEnableField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 47</value>
+    <value>6, 36</value>
   </data>
   <data name="downloadLimitEnableField.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 17</value>
@@ -447,7 +503,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;downloadLimitEnableField.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

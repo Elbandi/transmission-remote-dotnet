@@ -232,6 +232,8 @@ namespace TransmissionRemoteDotnet
 
             this.SeedRatioLimit = Toolbox.ToDouble(info[ProtocolConstants.FIELD_SEEDRATIOLIMIT]);
             this.SeedRatioMode = Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDRATIOMODE]);
+            this.SeedIdleLimit = Toolbox.ToDouble(info[ProtocolConstants.FIELD_SEEDIDLELIMIT]);
+            this.SeedIdleMode = Toolbox.ToInt(info[ProtocolConstants.FIELD_SEEDIDLEMODE]);
 
             this.HonorsSessionLimits = Toolbox.ToBool(info[ProtocolConstants.FIELD_HONORSSESSIONLIMITS]);
             this.MaxConnectedPeers = Toolbox.ToInt(info[ProtocolConstants.FIELD_MAXCONNECTEDPEERS]);
@@ -408,6 +410,18 @@ namespace TransmissionRemoteDotnet
         }
 
         public int SeedRatioMode
+        {
+            get;
+            set;
+        }
+
+        public double SeedIdleLimit
+        {
+            get;
+            set;
+        }
+
+        public int SeedIdleMode
         {
             get;
             set;

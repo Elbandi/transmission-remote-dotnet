@@ -48,6 +48,8 @@ namespace TransmissionRemoteDotnet
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentPropertiesDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.seedIdleLimitValue = new System.Windows.Forms.NumericUpDown();
+            this.seedIdleLimitedCheckBox = new System.Windows.Forms.CheckBox();
             this.bandwidthComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.honorsSessionLimits = new System.Windows.Forms.CheckBox();
@@ -68,6 +70,7 @@ namespace TransmissionRemoteDotnet
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).BeginInit();
@@ -85,6 +88,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.seedIdleLimitValue);
+            this.tabGeneral.Controls.Add(this.seedIdleLimitedCheckBox);
             this.tabGeneral.Controls.Add(this.bandwidthComboBox);
             this.tabGeneral.Controls.Add(this.label4);
             this.tabGeneral.Controls.Add(this.honorsSessionLimits);
@@ -101,6 +106,24 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // seedIdleLimitValue
+            // 
+            resources.ApplyResources(this.seedIdleLimitValue, "seedIdleLimitValue");
+            this.seedIdleLimitValue.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.seedIdleLimitValue.Name = "seedIdleLimitValue";
+            // 
+            // seedIdleLimitedCheckBox
+            // 
+            resources.ApplyResources(this.seedIdleLimitedCheckBox, "seedIdleLimitedCheckBox");
+            this.seedIdleLimitedCheckBox.Name = "seedIdleLimitedCheckBox";
+            this.seedIdleLimitedCheckBox.ThreeState = true;
+            this.seedIdleLimitedCheckBox.UseVisualStyleBackColor = true;
+            this.seedIdleLimitedCheckBox.CheckStateChanged += new System.EventHandler(this.seedIdleLimitedCheckBox_CheckStateChanged);
             // 
             // bandwidthComboBox
             // 
@@ -250,6 +273,7 @@ namespace TransmissionRemoteDotnet
             this.tabControl1.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).EndInit();
@@ -280,6 +304,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox honorsSessionLimits;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox bandwidthComboBox;
+        private System.Windows.Forms.CheckBox seedIdleLimitedCheckBox;
+        private System.Windows.Forms.NumericUpDown seedIdleLimitValue;
         private System.Windows.Forms.TabPage tabTrackers;
         private System.Windows.Forms.TextBox trackersList;
 

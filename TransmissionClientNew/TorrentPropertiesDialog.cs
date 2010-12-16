@@ -69,10 +69,14 @@ namespace TransmissionRemoteDotnet
             arguments.Put(ProtocolConstants.FIELD_PEERLIMIT, peerLimitValue.Value);
             if (seedRatioLimitValue.Enabled)
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMIT, seedRatioLimitValue.Value);
+            if (seedIdleLimitValue.Enabled)
+                arguments.Put(ProtocolConstants.FIELD_SEEDIDLELIMIT, seedIdleLimitValue.Value);
             if (honorsSessionLimits.Enabled)
                 arguments.Put(ProtocolConstants.FIELD_HONORSSESSIONLIMITS, honorsSessionLimits.Checked);
             if (seedRatioLimitedCheckBox.Enabled)
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOMODE, (int)(2 - seedRatioLimitedCheckBox.CheckState));
+            if (seedIdleLimitedCheckBox.Enabled)
+                arguments.Put(ProtocolConstants.FIELD_SEEDIDLEMODE, (int)(2 - seedIdleLimitedCheckBox.CheckState));
             if (bandwidthComboBox.Enabled)
             {
                 int bandwidthPriority = 0;
@@ -125,6 +129,17 @@ namespace TransmissionRemoteDotnet
             }
             try
             {
+                seedIdleLimitValue.Value = firstTorrent.SeedIdleLimit >= 0 && (decimal)firstTorrent.SeedIdleLimit <= seedIdleLimitValue.Maximum ? (decimal)firstTorrent.SeedIdleLimit : 0;
+                seedIdleLimitedCheckBox.CheckState = (CheckState)(2 - firstTorrent.SeedIdleMode);
+                seedIdleLimitValue.Enabled = seedIdleLimitedCheckBox.CheckState == CheckState.Checked;
+                seedIdleLimitedCheckBox.Enabled = true;
+            }
+            catch
+            {
+                seedIdleLimitValue.Enabled = seedIdleLimitedCheckBox.Enabled = false;
+            }
+            try
+            {
                 if (firstTorrent.BandwidthPriority < 0)
                     bandwidthComboBox.SelectedIndex = 0;
                 else if (firstTorrent.BandwidthPriority > 0)
@@ -154,6 +169,11 @@ namespace TransmissionRemoteDotnet
         private void seedRatioLimitedCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             seedRatioLimitValue.Enabled = seedRatioLimitedCheckBox.CheckState == CheckState.Checked;
+        }
+
+        private void seedIdleLimitedCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            seedIdleLimitValue.Enabled = seedIdleLimitedCheckBox.CheckState == CheckState.Checked;
         }
     }
 }

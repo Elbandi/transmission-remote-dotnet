@@ -192,7 +192,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitUploadCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="limitUploadValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 10</value>
@@ -213,7 +213,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitUploadValue.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="limitDownloadCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -240,7 +240,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitDownloadCheckBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="limitDownloadValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 36</value>
@@ -261,7 +261,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitDownloadValue.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -378,7 +378,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;peerLimitValue.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="PEXcheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -432,7 +432,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="portForwardCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -543,7 +543,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -570,7 +570,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="watchdirCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -925,6 +925,60 @@
   <data name="&gt;&gt;tabNetwork.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="seedIdleLimitUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 143</value>
+  </data>
+  <data name="seedIdleLimitUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="seedIdleLimitUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitUpDown.Name" xml:space="preserve">
+    <value>seedIdleLimitUpDown</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitUpDown.Parent" xml:space="preserve">
+    <value>tabLimits</value>
+  </data>
+  <data name="&gt;&gt;seedIdleLimitUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 144</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Text" xml:space="preserve">
+    <value>Seed Idle Limit</value>
+  </data>
+  <data name="&gt;&gt;seedIdleEnabledCheckBox.Name" xml:space="preserve">
+    <value>seedIdleEnabledCheckBox</value>
+  </data>
+  <data name="&gt;&gt;seedIdleEnabledCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seedIdleEnabledCheckBox.Parent" xml:space="preserve">
+    <value>tabLimits</value>
+  </data>
+  <data name="&gt;&gt;seedIdleEnabledCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -953,7 +1007,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="peerLimitTorrentValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>170, 90</value>
@@ -974,7 +1028,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;peerLimitTorrentValue.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="seedLimitUpDown.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -998,7 +1052,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;seedLimitUpDown.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="seedRatioEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1028,7 +1082,7 @@
     <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;seedRatioEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="tabLimits.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

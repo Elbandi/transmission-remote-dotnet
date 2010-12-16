@@ -40,6 +40,11 @@ namespace TransmissionRemoteDotnet
             TR_RATIOLIMIT_SINGLE = 1, /* override the global settings, seeding until a certain ratio */
             TR_RATIOLIMIT_UNLIMITED = 2;  /* override the global settings, seeding regardless of ratio */
 
+        public const int
+            TR_IDLELIMIT_GLOBAL = 0, /* follow the global settings */
+            TR_IDLELIMIT_SINGLE = 1, /* override the global settings, seeding until certain a idle time */
+            TR_IDLELIMIT_UNLIMITED = 2;  /* override the global settings, seeding regardless of activity */
+
         public const string
             KEY_TAG = "tag",
             KEY_METHOD = "method",
@@ -126,6 +131,10 @@ namespace TransmissionRemoteDotnet
             FIELD_SEEDRATIOLIMIT = "seedRatioLimit",
             FIELD_SEEDRATIOMODE = "seedRatioMode",
             FIELD_SEEDRATIOLIMITED = "seedRatioLimited", // session-set/get
+            FIELD_SEEDIDLELIMIT = "seedIdleLimit",
+            FIELD_SEEDIDLEMODE = "seedIdleMode",
+            FIELD_IDLESEEDLIMIT = "idle-seeding-limit",
+            FIELD_IDLESEEDLIMITENABLED = "idle-seeding-limit-enabled",
             VALUE_RECENTLY_ACTIVE = "recently-active",
             /* BEGIN CONFUSION */
             FIELD_DOWNLOADLIMITMODE = "downloadLimitMode", // DEPRECATED

@@ -79,6 +79,8 @@ namespace TransmissionRemoteDotnet
             this.dhtEnabled = new System.Windows.Forms.CheckBox();
             this.testPortButton = new System.Windows.Forms.Button();
             this.tabLimits = new System.Windows.Forms.TabPage();
+            this.seedIdleLimitUpDown = new System.Windows.Forms.NumericUpDown();
+            this.seedIdleEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.peerLimitTorrentValue = new System.Windows.Forms.NumericUpDown();
             this.seedLimitUpDown = new System.Windows.Forms.NumericUpDown();
@@ -108,6 +110,7 @@ namespace TransmissionRemoteDotnet
             this.tabGeneral.SuspendLayout();
             this.tabNetwork.SuspendLayout();
             this.tabLimits.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).BeginInit();
             this.tabAltLimits.SuspendLayout();
@@ -357,6 +360,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabLimits
             // 
+            this.tabLimits.Controls.Add(this.seedIdleLimitUpDown);
+            this.tabLimits.Controls.Add(this.seedIdleEnabledCheckBox);
             this.tabLimits.Controls.Add(this.label16);
             this.tabLimits.Controls.Add(this.peerLimitTorrentValue);
             this.tabLimits.Controls.Add(this.seedLimitUpDown);
@@ -372,6 +377,23 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabLimits, "tabLimits");
             this.tabLimits.Name = "tabLimits";
             this.tabLimits.UseVisualStyleBackColor = true;
+            // 
+            // seedIdleLimitUpDown
+            // 
+            resources.ApplyResources(this.seedIdleLimitUpDown, "seedIdleLimitUpDown");
+            this.seedIdleLimitUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.seedIdleLimitUpDown.Name = "seedIdleLimitUpDown";
+            // 
+            // seedIdleEnabledCheckBox
+            // 
+            resources.ApplyResources(this.seedIdleEnabledCheckBox, "seedIdleEnabledCheckBox");
+            this.seedIdleEnabledCheckBox.Name = "seedIdleEnabledCheckBox";
+            this.seedIdleEnabledCheckBox.UseVisualStyleBackColor = true;
+            this.seedIdleEnabledCheckBox.CheckedChanged += new System.EventHandler(this.seedIdleEnabledCheckBox_CheckedChanged);
             // 
             // label16
             // 
@@ -562,6 +584,7 @@ namespace TransmissionRemoteDotnet
             this.tabNetwork.PerformLayout();
             this.tabLimits.ResumeLayout(false);
             this.tabLimits.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).EndInit();
             this.tabAltLimits.ResumeLayout(false);
@@ -623,6 +646,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button updateBlocklistButton;
         private System.Windows.Forms.NumericUpDown seedLimitUpDown;
         private System.Windows.Forms.CheckBox seedRatioEnabledCheckBox;
+        private System.Windows.Forms.CheckBox seedIdleEnabledCheckBox;
+        private System.Windows.Forms.NumericUpDown seedIdleLimitUpDown;
         private System.Windows.Forms.Button testPortButton;
         private System.Windows.Forms.NumericUpDown timeConstaintEndMinutes;
         private System.Windows.Forms.Label label14;
