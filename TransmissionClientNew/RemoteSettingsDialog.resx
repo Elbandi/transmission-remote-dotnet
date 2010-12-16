@@ -714,14 +714,11 @@
   <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 95</value>
+    <value>282, 122</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>104, 13</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
