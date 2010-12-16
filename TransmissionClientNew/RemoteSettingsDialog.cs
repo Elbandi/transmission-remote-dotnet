@@ -104,6 +104,10 @@ namespace TransmissionRemoteDotnet
                 {
                     encryptionCombobox.SelectedIndex = 0;
                 }
+                if (cacheSizeValue.Enabled = session.Contains(ProtocolConstants.FIELD_CACHESIZE))
+                {
+                    SetNumeric(cacheSizeValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_CACHESIZE]), 2);
+                }
                 // peer limit
                 if (session.Contains(ProtocolConstants.FIELD_PEERLIMIT))
                 {
@@ -234,6 +238,10 @@ namespace TransmissionRemoteDotnet
             arguments.Put((string)PEXcheckBox.Tag, PEXcheckBox.Checked);
             arguments.Put((string)peerLimitValue.Tag, peerLimitValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PEERLIMITPERTORRENT, peerLimitTorrentValue.Value);
+            if (cacheSizeValue.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_CACHESIZE, cacheSizeValue.Value);
+            }
             switch (encryptionCombobox.SelectedIndex)
             {
                 case 1:

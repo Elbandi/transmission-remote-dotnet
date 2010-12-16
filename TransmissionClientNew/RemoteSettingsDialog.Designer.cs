@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.cacheSizeLabel = new System.Windows.Forms.Label();
+            this.cacheSizeValue = new System.Windows.Forms.NumericUpDown();
             this.watchdirCheckBox = new System.Windows.Forms.CheckBox();
             this.watchdirField = new System.Windows.Forms.TextBox();
             this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
@@ -108,6 +110,7 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             this.tabSettings.SuspendLayout();
             this.tabGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cacheSizeValue)).BeginInit();
             this.tabNetwork.SuspendLayout();
             this.tabLimits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitUpDown)).BeginInit();
@@ -261,6 +264,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.cacheSizeLabel);
+            this.tabGeneral.Controls.Add(this.cacheSizeValue);
             this.tabGeneral.Controls.Add(this.watchdirCheckBox);
             this.tabGeneral.Controls.Add(this.watchdirField);
             this.tabGeneral.Controls.Add(this.renamePartialFilesCheckBox);
@@ -274,6 +279,21 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // cacheSizeLabel
+            // 
+            resources.ApplyResources(this.cacheSizeLabel, "cacheSizeLabel");
+            this.cacheSizeLabel.Name = "cacheSizeLabel";
+            // 
+            // cacheSizeValue
+            // 
+            resources.ApplyResources(this.cacheSizeValue, "cacheSizeValue");
+            this.cacheSizeValue.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.cacheSizeValue.Name = "cacheSizeValue";
             // 
             // watchdirCheckBox
             // 
@@ -580,6 +600,7 @@ namespace TransmissionRemoteDotnet
             this.tabSettings.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cacheSizeValue)).EndInit();
             this.tabNetwork.ResumeLayout(false);
             this.tabNetwork.PerformLayout();
             this.tabLimits.ResumeLayout(false);
@@ -607,6 +628,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TextBox incompleteToField;
         private System.Windows.Forms.TextBox watchdirField;
         private System.Windows.Forms.CheckBox watchdirCheckBox;
+        private System.Windows.Forms.Label cacheSizeLabel;
+        private System.Windows.Forms.NumericUpDown cacheSizeValue;
         private System.Windows.Forms.CheckBox limitUploadCheckBox;
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;

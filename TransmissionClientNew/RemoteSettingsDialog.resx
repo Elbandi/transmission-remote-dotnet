@@ -144,7 +144,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="downloadToField.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 9</value>
@@ -165,7 +165,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;downloadToField.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="limitUploadCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -572,6 +572,58 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="cacheSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cacheSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cacheSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 89</value>
+  </data>
+  <data name="cacheSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="cacheSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cacheSizeLabel.Text" xml:space="preserve">
+    <value>Disk cache size:</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeLabel.Name" xml:space="preserve">
+    <value>cacheSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeLabel.Parent" xml:space="preserve">
+    <value>tabGeneral</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cacheSizeValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 87</value>
+  </data>
+  <data name="cacheSizeValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="cacheSizeValue.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeValue.Name" xml:space="preserve">
+    <value>cacheSizeValue</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeValue.Parent" xml:space="preserve">
+    <value>tabGeneral</value>
+  </data>
+  <data name="&gt;&gt;cacheSizeValue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="watchdirCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -601,7 +653,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;watchdirCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="watchdirField.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 61</value>
@@ -622,7 +674,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;watchdirField.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="renamePartialFilesCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -638,7 +690,7 @@
     <value>118, 17</value>
   </data>
   <data name="renamePartialFilesCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Rename partial files</value>
@@ -653,7 +705,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;renamePartialFilesCheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="incompleteToCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -683,7 +735,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToCheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="incompleteToField.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 35</value>
@@ -704,7 +756,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToField.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>282, 122</value>
@@ -713,7 +765,7 @@
     <value>104, 13</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -725,7 +777,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="updateBlocklistButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -737,7 +789,7 @@
     <value>102, 23</value>
   </data>
   <data name="updateBlocklistButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
     <value>Update Blocklist</value>
@@ -752,7 +804,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;updateBlocklistButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="blocklistEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -767,7 +819,7 @@
     <value>106, 17</value>
   </data>
   <data name="blocklistEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
     <value>Blocklist enabled</value>
@@ -782,7 +834,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;blocklistEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
