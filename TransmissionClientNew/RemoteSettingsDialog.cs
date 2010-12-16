@@ -108,6 +108,10 @@ namespace TransmissionRemoteDotnet
                 {
                     SetNumeric(cacheSizeValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_CACHESIZE]), 2);
                 }
+                if (blocklistUrlField.Enabled = session.Contains(ProtocolConstants.FIELD_BLOCKLISTURL))
+                {
+                    blocklistUrlField.Text = (string)session[ProtocolConstants.FIELD_BLOCKLISTURL];
+                }
                 // peer limit
                 if (session.Contains(ProtocolConstants.FIELD_PEERLIMIT))
                 {
@@ -241,6 +245,10 @@ namespace TransmissionRemoteDotnet
             if (cacheSizeValue.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_CACHESIZE, cacheSizeValue.Value);
+            }
+            if (blocklistUrlField.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_BLOCKLISTURL, blocklistUrlField.Text);
             }
             switch (encryptionCombobox.SelectedIndex)
             {

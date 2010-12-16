@@ -123,6 +123,7 @@ namespace TransmissionRemoteDotnet
             FIELD_DELETELOCALDATA = "delete-local-data",
             FIELD_MAXCONNECTEDPEERS = "maxConnectedPeers",
             FIELD_CACHESIZE = "cache-size-mb",
+            FIELD_BLOCKLISTURL = "blocklist-url",
             FIELD_CREATOR = "creator",
             FIELD_SWARMSPEED = "swarmSpeed",
             FIELD_DATECREATED = "dateCreated",

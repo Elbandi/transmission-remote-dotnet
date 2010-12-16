@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.blocklistUrlField = new System.Windows.Forms.TextBox();
+            this.blocklistUrlLabel = new System.Windows.Forms.Label();
             this.cacheSizeLabel = new System.Windows.Forms.Label();
             this.cacheSizeValue = new System.Windows.Forms.NumericUpDown();
             this.watchdirCheckBox = new System.Windows.Forms.CheckBox();
@@ -264,6 +266,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.blocklistUrlField);
+            this.tabGeneral.Controls.Add(this.blocklistUrlLabel);
             this.tabGeneral.Controls.Add(this.cacheSizeLabel);
             this.tabGeneral.Controls.Add(this.cacheSizeValue);
             this.tabGeneral.Controls.Add(this.watchdirCheckBox);
@@ -279,6 +283,16 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // blocklistUrlField
+            // 
+            resources.ApplyResources(this.blocklistUrlField, "blocklistUrlField");
+            this.blocklistUrlField.Name = "blocklistUrlField";
+            // 
+            // blocklistUrlLabel
+            // 
+            resources.ApplyResources(this.blocklistUrlLabel, "blocklistUrlLabel");
+            this.blocklistUrlLabel.Name = "blocklistUrlLabel";
             // 
             // cacheSizeLabel
             // 
@@ -666,6 +680,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox blocklistEnabledCheckBox;
+        private System.Windows.Forms.TextBox blocklistUrlField;
+        private System.Windows.Forms.Label blocklistUrlLabel;
         private System.Windows.Forms.Button updateBlocklistButton;
         private System.Windows.Forms.NumericUpDown seedLimitUpDown;
         private System.Windows.Forms.CheckBox seedRatioEnabledCheckBox;
