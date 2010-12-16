@@ -166,6 +166,11 @@ namespace TransmissionRemoteDotnet
                     incompleteToField.Text = (string)session[ProtocolConstants.FIELD_INCOMPLETE_DIR];
                     incompleteToField.Enabled = incompleteToCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED]);
                 }
+                if (watchdirCheckBox.Enabled = watchdirField.Enabled = session.Contains(ProtocolConstants.FIELD_WATCH_DIR))
+                {
+                    watchdirField.Text = (string)session[ProtocolConstants.FIELD_WATCH_DIR];
+                    watchdirField.Enabled = watchdirCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_WATCH_DIR_ENABLED]);
+                }
                 if (dhtEnabled.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
                 {
                     dhtEnabled.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
@@ -266,6 +271,11 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED, incompleteToCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR, incompleteToField.Text);
             }
+            if (watchdirCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_WATCH_DIR_ENABLED, watchdirCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_WATCH_DIR, watchdirField.Text);
+            }
             if (dhtEnabled.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
@@ -352,6 +362,11 @@ namespace TransmissionRemoteDotnet
         private void incompleteToCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             incompleteToField.Enabled = incompleteToCheckBox.Checked;
+        }
+
+        private void watchdirCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            watchdirField.Enabled = watchdirCheckBox.Checked;
         }
     }
 }

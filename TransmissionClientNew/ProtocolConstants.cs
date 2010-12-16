@@ -73,6 +73,8 @@ namespace TransmissionRemoteDotnet
             FIELD_HONORSSESSIONLIMITS = "honorsSessionLimits",
             FIELD_INCOMPLETE_DIR = "incomplete-dir",
             FIELD_INCOMPLETE_DIR_ENABLED = "incomplete-dir-enabled",
+            FIELD_WATCH_DIR = "watch-dir",
+            FIELD_WATCH_DIR_ENABLED = "watch-dir-enabled",
             FIELD_METAINFO = "metainfo",
             FIELD_CLIENTNAME = "clientName",
             FIELD_HAVEUNCHECKED = "haveUnchecked",

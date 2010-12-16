@@ -66,6 +66,8 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.watchdirCheckBox = new System.Windows.Forms.CheckBox();
+            this.watchdirField = new System.Windows.Forms.TextBox();
             this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToField = new System.Windows.Forms.TextBox();
@@ -256,6 +258,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.watchdirCheckBox);
+            this.tabGeneral.Controls.Add(this.watchdirField);
             this.tabGeneral.Controls.Add(this.renamePartialFilesCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToField);
@@ -267,6 +271,18 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // watchdirCheckBox
+            // 
+            resources.ApplyResources(this.watchdirCheckBox, "watchdirCheckBox");
+            this.watchdirCheckBox.Name = "watchdirCheckBox";
+            this.watchdirCheckBox.UseVisualStyleBackColor = true;
+            this.watchdirCheckBox.CheckedChanged += new System.EventHandler(this.watchdirCheckBox_CheckedChanged);
+            // 
+            // watchdirField
+            // 
+            resources.ApplyResources(this.watchdirField, "watchdirField");
+            this.watchdirField.Name = "watchdirField";
             // 
             // renamePartialFilesCheckBox
             // 
@@ -566,6 +582,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TextBox downloadToField;
         private System.Windows.Forms.CheckBox incompleteToCheckBox;
         private System.Windows.Forms.TextBox incompleteToField;
+        private System.Windows.Forms.TextBox watchdirField;
+        private System.Windows.Forms.CheckBox watchdirCheckBox;
         private System.Windows.Forms.CheckBox limitUploadCheckBox;
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;
