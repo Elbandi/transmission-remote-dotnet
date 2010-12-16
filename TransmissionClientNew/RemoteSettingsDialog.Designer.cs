@@ -64,8 +64,8 @@ namespace TransmissionRemoteDotnet
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabSettings = new System.Windows.Forms.TabControl();
+            this.tabGeneral = new System.Windows.Forms.TabPage();
             this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
             this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
@@ -75,12 +75,12 @@ namespace TransmissionRemoteDotnet
             this.testPortButton = new System.Windows.Forms.Button();
             this.updateBlocklistButton = new System.Windows.Forms.Button();
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabLimits = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.peerLimitTorrentValue = new System.Windows.Forms.NumericUpDown();
             this.seedLimitUpDown = new System.Windows.Forms.NumericUpDown();
             this.seedRatioEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabAltLimits = new System.Windows.Forms.TabPage();
             this.timeConstaintEndMinutes = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -101,12 +101,12 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabSettings.SuspendLayout();
+            this.tabGeneral.SuspendLayout();
+            this.tabLimits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabAltLimits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstaintEndMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstaintBeginMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndHours)).BeginInit();
@@ -242,37 +242,37 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // tabControl1
+            // tabSettings
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.tabSettings.Controls.Add(this.tabGeneral);
+            this.tabSettings.Controls.Add(this.tabLimits);
+            this.tabSettings.Controls.Add(this.tabAltLimits);
+            resources.ApplyResources(this.tabSettings, "tabSettings");
+            this.tabSettings.Name = "tabSettings";
+            this.tabSettings.SelectedIndex = 0;
             // 
-            // tabPage1
+            // tabGeneral
             // 
-            this.tabPage1.Controls.Add(this.renamePartialFilesCheckBox);
-            this.tabPage1.Controls.Add(this.LpdEnabledCheckBox);
-            this.tabPage1.Controls.Add(this.incompleteToCheckBox);
-            this.tabPage1.Controls.Add(this.incompleteToField);
-            this.tabPage1.Controls.Add(this.dhtEnabled);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.testPortButton);
-            this.tabPage1.Controls.Add(this.updateBlocklistButton);
-            this.tabPage1.Controls.Add(this.blocklistEnabledCheckBox);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.PEXcheckBox);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.incomingPortValue);
-            this.tabPage1.Controls.Add(this.portForwardCheckBox);
-            this.tabPage1.Controls.Add(this.downloadToField);
-            this.tabPage1.Controls.Add(this.encryptionCombobox);
-            this.tabPage1.Controls.Add(this.label3);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabGeneral.Controls.Add(this.renamePartialFilesCheckBox);
+            this.tabGeneral.Controls.Add(this.LpdEnabledCheckBox);
+            this.tabGeneral.Controls.Add(this.incompleteToCheckBox);
+            this.tabGeneral.Controls.Add(this.incompleteToField);
+            this.tabGeneral.Controls.Add(this.dhtEnabled);
+            this.tabGeneral.Controls.Add(this.label15);
+            this.tabGeneral.Controls.Add(this.testPortButton);
+            this.tabGeneral.Controls.Add(this.updateBlocklistButton);
+            this.tabGeneral.Controls.Add(this.blocklistEnabledCheckBox);
+            this.tabGeneral.Controls.Add(this.label1);
+            this.tabGeneral.Controls.Add(this.PEXcheckBox);
+            this.tabGeneral.Controls.Add(this.label2);
+            this.tabGeneral.Controls.Add(this.incomingPortValue);
+            this.tabGeneral.Controls.Add(this.portForwardCheckBox);
+            this.tabGeneral.Controls.Add(this.downloadToField);
+            this.tabGeneral.Controls.Add(this.encryptionCombobox);
+            this.tabGeneral.Controls.Add(this.label3);
+            resources.ApplyResources(this.tabGeneral, "tabGeneral");
+            this.tabGeneral.Name = "tabGeneral";
+            this.tabGeneral.UseVisualStyleBackColor = true;
             // 
             // renamePartialFilesCheckBox
             // 
@@ -330,23 +330,23 @@ namespace TransmissionRemoteDotnet
             this.blocklistEnabledCheckBox.UseVisualStyleBackColor = true;
             this.blocklistEnabledCheckBox.CheckedChanged += new System.EventHandler(this.blocklistEnabledCheckBox_CheckedChanged);
             // 
-            // tabPage2
+            // tabLimits
             // 
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.peerLimitTorrentValue);
-            this.tabPage2.Controls.Add(this.seedLimitUpDown);
-            this.tabPage2.Controls.Add(this.seedRatioEnabledCheckBox);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.limitUploadCheckBox);
-            this.tabPage2.Controls.Add(this.peerLimitValue);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.limitUploadValue);
-            this.tabPage2.Controls.Add(this.limitDownloadValue);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.limitDownloadCheckBox);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabLimits.Controls.Add(this.label16);
+            this.tabLimits.Controls.Add(this.peerLimitTorrentValue);
+            this.tabLimits.Controls.Add(this.seedLimitUpDown);
+            this.tabLimits.Controls.Add(this.seedRatioEnabledCheckBox);
+            this.tabLimits.Controls.Add(this.label6);
+            this.tabLimits.Controls.Add(this.limitUploadCheckBox);
+            this.tabLimits.Controls.Add(this.peerLimitValue);
+            this.tabLimits.Controls.Add(this.label5);
+            this.tabLimits.Controls.Add(this.limitUploadValue);
+            this.tabLimits.Controls.Add(this.limitDownloadValue);
+            this.tabLimits.Controls.Add(this.label4);
+            this.tabLimits.Controls.Add(this.limitDownloadCheckBox);
+            resources.ApplyResources(this.tabLimits, "tabLimits");
+            this.tabLimits.Name = "tabLimits";
+            this.tabLimits.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -376,26 +376,26 @@ namespace TransmissionRemoteDotnet
             this.seedRatioEnabledCheckBox.UseVisualStyleBackColor = true;
             this.seedRatioEnabledCheckBox.CheckedChanged += new System.EventHandler(this.seedRatioEnabledCheckBox_CheckedChanged);
             // 
-            // tabPage3
+            // tabAltLimits
             // 
-            this.tabPage3.Controls.Add(this.timeConstaintEndMinutes);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.timeConstaintBeginMinutes);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.timeConstraintEndHours);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.timeConstraintBeginHours);
-            this.tabPage3.Controls.Add(this.altUploadLimitField);
-            this.tabPage3.Controls.Add(this.altDownloadLimitField);
-            this.tabPage3.Controls.Add(this.altTimeConstraintEnabled);
-            this.tabPage3.Controls.Add(this.altSpeedLimitEnable);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabAltLimits.Controls.Add(this.timeConstaintEndMinutes);
+            this.tabAltLimits.Controls.Add(this.label14);
+            this.tabAltLimits.Controls.Add(this.label13);
+            this.tabAltLimits.Controls.Add(this.timeConstaintBeginMinutes);
+            this.tabAltLimits.Controls.Add(this.label12);
+            this.tabAltLimits.Controls.Add(this.label11);
+            this.tabAltLimits.Controls.Add(this.label9);
+            this.tabAltLimits.Controls.Add(this.label10);
+            this.tabAltLimits.Controls.Add(this.timeConstraintEndHours);
+            this.tabAltLimits.Controls.Add(this.label8);
+            this.tabAltLimits.Controls.Add(this.timeConstraintBeginHours);
+            this.tabAltLimits.Controls.Add(this.altUploadLimitField);
+            this.tabAltLimits.Controls.Add(this.altDownloadLimitField);
+            this.tabAltLimits.Controls.Add(this.altTimeConstraintEnabled);
+            this.tabAltLimits.Controls.Add(this.altSpeedLimitEnable);
+            resources.ApplyResources(this.tabAltLimits, "tabAltLimits");
+            this.tabAltLimits.Name = "tabAltLimits";
+            this.tabAltLimits.UseVisualStyleBackColor = true;
             // 
             // timeConstaintEndMinutes
             // 
@@ -518,7 +518,7 @@ namespace TransmissionRemoteDotnet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseFormButton;
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabSettings);
             this.Controls.Add(this.CloseFormButton);
             this.Controls.Add(this.SaveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -530,15 +530,15 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabSettings.ResumeLayout(false);
+            this.tabGeneral.ResumeLayout(false);
+            this.tabGeneral.PerformLayout();
+            this.tabLimits.ResumeLayout(false);
+            this.tabLimits.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabAltLimits.ResumeLayout(false);
+            this.tabAltLimits.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstaintEndMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstaintBeginMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndHours)).EndInit();
@@ -574,11 +574,11 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown peerLimitTorrentValue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabSettings;
+        private System.Windows.Forms.TabPage tabGeneral;
+        private System.Windows.Forms.TabPage tabLimits;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabAltLimits;
         private System.Windows.Forms.CheckBox altTimeConstraintEnabled;
         private System.Windows.Forms.CheckBox altSpeedLimitEnable;
         private System.Windows.Forms.NumericUpDown timeConstraintEndHours;

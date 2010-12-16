@@ -141,7 +141,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -162,7 +162,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;downloadToField.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;downloadToField.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -189,7 +189,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;limitUploadCheckBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitUploadCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -210,7 +210,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;limitUploadValue.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitUploadValue.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -237,7 +237,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;limitDownloadCheckBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitDownloadCheckBox.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -258,7 +258,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;limitDownloadValue.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;limitDownloadValue.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -285,7 +285,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -306,7 +306,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -375,7 +375,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;peerLimitValue.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;peerLimitValue.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -402,7 +402,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PEXcheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;PEXcheckBox.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -429,7 +429,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -456,7 +456,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;portForwardCheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;portForwardCheckBox.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -486,7 +486,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -513,7 +513,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -540,7 +540,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -567,7 +567,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -598,7 +598,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;renamePartialFilesCheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;renamePartialFilesCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -628,7 +628,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LpdEnabledCheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -658,7 +658,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;incompleteToCheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -679,7 +679,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;incompleteToField.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;incompleteToField.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -709,7 +709,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dhtEnabled.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -730,7 +730,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -757,7 +757,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;testPortButton.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;testPortButton.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -784,7 +784,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;updateBlocklistButton.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;updateBlocklistButton.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -814,36 +814,36 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;blocklistEnabledCheckBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;blocklistEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabGeneral.Size" type="System.Drawing.Size, System.Drawing">
     <value>403, 207</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabGeneral.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
+  <data name="tabGeneral.Text" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;tabGeneral.Name" xml:space="preserve">
+    <value>tabGeneral</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabGeneral.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="&gt;&gt;tabGeneral.Parent" xml:space="preserve">
+    <value>tabSettings</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabGeneral.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
@@ -871,7 +871,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -892,7 +892,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;peerLimitTorrentValue.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;peerLimitTorrentValue.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -916,7 +916,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;seedLimitUpDown.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;seedLimitUpDown.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -946,36 +946,36 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;seedRatioEnabledCheckBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabLimits</value>
   </data>
   <data name="&gt;&gt;seedRatioEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabLimits.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabLimits.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabLimits.Size" type="System.Drawing.Size, System.Drawing">
     <value>403, 207</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabLimits.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
+  <data name="tabLimits.Text" xml:space="preserve">
     <value>Limits</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;tabLimits.Name" xml:space="preserve">
+    <value>tabLimits</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabLimits.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="&gt;&gt;tabLimits.Parent" xml:space="preserve">
+    <value>tabSettings</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabLimits.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="timeConstaintEndMinutes.Enabled" type="System.Boolean, mscorlib">
@@ -997,7 +997,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;timeConstaintEndMinutes.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;timeConstaintEndMinutes.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1027,7 +1027,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1054,7 +1054,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1078,7 +1078,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;timeConstaintBeginMinutes.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;timeConstaintBeginMinutes.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1108,7 +1108,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1135,7 +1135,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1165,7 +1165,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1195,7 +1195,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -1216,7 +1216,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;timeConstraintEndHours.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;timeConstraintEndHours.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1243,7 +1243,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -1264,7 +1264,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;timeConstraintBeginHours.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;timeConstraintBeginHours.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -1285,7 +1285,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;altUploadLimitField.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;altUploadLimitField.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -1306,7 +1306,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;altDownloadLimitField.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;altDownloadLimitField.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1333,7 +1333,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;altTimeConstraintEnabled.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;altTimeConstraintEnabled.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -1360,54 +1360,54 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;altSpeedLimitEnable.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabAltLimits</value>
   </data>
   <data name="&gt;&gt;altSpeedLimitEnable.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabAltLimits.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabAltLimits.Size" type="System.Drawing.Size, System.Drawing">
     <value>403, 207</value>
   </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabAltLimits.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="tabPage3.Text" xml:space="preserve">
+  <data name="tabAltLimits.Text" xml:space="preserve">
     <value>Alternate limits</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
+  <data name="&gt;&gt;tabAltLimits.Name" xml:space="preserve">
+    <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabAltLimits.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="&gt;&gt;tabAltLimits.Parent" xml:space="preserve">
+    <value>tabSettings</value>
   </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabAltLimits.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>411, 233</value>
   </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="&gt;&gt;tabSettings.Name" xml:space="preserve">
+    <value>tabSettings</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabSettings.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabSettings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
@@ -1474,6 +1474,6 @@
     <value>RemoteSettingsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
