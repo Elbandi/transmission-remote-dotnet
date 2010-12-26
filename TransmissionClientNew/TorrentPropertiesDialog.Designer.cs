@@ -64,7 +64,10 @@ namespace TransmissionRemoteDotnet
             this.label2 = new System.Windows.Forms.Label();
             this.downloadLimitEnableField = new System.Windows.Forms.CheckBox();
             this.tabTrackers = new System.Windows.Forms.TabPage();
-            this.trackersList = new System.Windows.Forms.TextBox();
+            this.trackersList = new System.Windows.Forms.RefreshingListBox();
+            this.trackersButtonPanel = new System.Windows.Forms.Panel();
+            this.removeTrackerButton = new System.Windows.Forms.Button();
+            this.addTrackerButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,6 +79,7 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).BeginInit();
             this.tabTrackers.SuspendLayout();
+            this.trackersButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -224,6 +228,7 @@ namespace TransmissionRemoteDotnet
             // tabTrackers
             // 
             this.tabTrackers.Controls.Add(this.trackersList);
+            this.tabTrackers.Controls.Add(this.trackersButtonPanel);
             resources.ApplyResources(this.tabTrackers, "tabTrackers");
             this.tabTrackers.Name = "tabTrackers";
             this.tabTrackers.UseVisualStyleBackColor = true;
@@ -232,7 +237,31 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.trackersList, "trackersList");
             this.trackersList.Name = "trackersList";
-            this.trackersList.ReadOnly = true;
+            this.trackersList.SelectedIndexChanged += new System.EventHandler(this.trackersList_SelectedIndexChanged);
+            this.trackersList.DoubleClick += new System.EventHandler(this.trackersList_DoubleClick);
+            // 
+            // trackersButtonPanel
+            // 
+            this.trackersButtonPanel.Controls.Add(this.removeTrackerButton);
+            this.trackersButtonPanel.Controls.Add(this.addTrackerButton);
+            resources.ApplyResources(this.trackersButtonPanel, "trackersButtonPanel");
+            this.trackersButtonPanel.Name = "trackersButtonPanel";
+            // 
+            // removeTrackerButton
+            // 
+            resources.ApplyResources(this.removeTrackerButton, "removeTrackerButton");
+            this.removeTrackerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
+            this.removeTrackerButton.Name = "removeTrackerButton";
+            this.removeTrackerButton.UseVisualStyleBackColor = true;
+            this.removeTrackerButton.Click += new System.EventHandler(this.removeTrackerButton_Click);
+            // 
+            // addTrackerButton
+            // 
+            resources.ApplyResources(this.addTrackerButton, "addTrackerButton");
+            this.addTrackerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
+            this.addTrackerButton.Name = "addTrackerButton";
+            this.addTrackerButton.UseVisualStyleBackColor = true;
+            this.addTrackerButton.Click += new System.EventHandler(this.addTrackerButton_Click);
             // 
             // button2
             // 
@@ -279,7 +308,7 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).EndInit();
             this.tabTrackers.ResumeLayout(false);
-            this.tabTrackers.PerformLayout();
+            this.trackersButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,8 +336,9 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox seedIdleLimitedCheckBox;
         private System.Windows.Forms.NumericUpDown seedIdleLimitValue;
         private System.Windows.Forms.TabPage tabTrackers;
-        private System.Windows.Forms.TextBox trackersList;
-
-
+        private System.Windows.Forms.RefreshingListBox trackersList;
+        private System.Windows.Forms.Panel trackersButtonPanel;
+        private System.Windows.Forms.Button removeTrackerButton;
+        private System.Windows.Forms.Button addTrackerButton;
     }
 }

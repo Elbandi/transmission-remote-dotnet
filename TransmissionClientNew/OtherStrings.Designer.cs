@@ -61,6 +61,24 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add tracker announce URL.
+        /// </summary>
+        internal static string AddTrackerUrl {
+            get {
+                return ResourceManager.GetString("AddTrackerUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add URL.
+        /// </summary>
+        internal static string AddUrl {
+            get {
+                return ResourceManager.GetString("AddUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
@@ -349,6 +367,24 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit tracker announce URL.
+        /// </summary>
+        internal static string EditTrackerUrl {
+            get {
+                return ResourceManager.GetString("EditTrackerUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit URL.
+        /// </summary>
+        internal static string EditUrl {
+            get {
+                return ResourceManager.GetString("EditUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Empty file.
         /// </summary>
         internal static string EmptyFile {
@@ -507,6 +543,15 @@ namespace TransmissionRemoteDotnet {
         internal static string InvalidRPCLocation {
             get {
                 return ResourceManager.GetString("InvalidRPCLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid url.
+        /// </summary>
+        internal static string InvalidUrl {
+            get {
+                return ResourceManager.GetString("InvalidUrl", resourceCulture);
             }
         }
         
@@ -1065,6 +1110,15 @@ namespace TransmissionRemoteDotnet {
         internal static string TotalDoneValidTotalSize {
             get {
                 return ResourceManager.GetString("TotalDoneValidTotalSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tracker already exists.
+        /// </summary>
+        internal static string TrackerExists {
+            get {
+                return ResourceManager.GetString("TrackerExists", resourceCulture);
             }
         }
         

@@ -16,6 +16,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,23 +35,6 @@ namespace TransmissionRemoteDotnet
         {
             this.selections = selections;
             InitializeComponent();
-        }
-
-        private string BuildTrackerList(JsonArray Trackers)
-        {
-            int oldtier = -1;
-            string result = string.Empty;
-            foreach (JsonObject tracker in Trackers)
-            {
-                int tier = Toolbox.ToInt(tracker[ProtocolConstants.TIER]);
-                string announceUrl = (string)tracker[ProtocolConstants.ANNOUNCE];
-                if (oldtier == -1)
-                    oldtier = tier;
-                if (oldtier != tier)
-                    result += Environment.NewLine;
-                result += announceUrl + Environment.NewLine;
-            }
-            return result;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,6 +70,34 @@ namespace TransmissionRemoteDotnet
                     bandwidthPriority = 1;
                 arguments.Put(ProtocolConstants.FIELD_BANDWIDTHPRIORITY, bandwidthPriority);
             }
+
+            Torrent firstTorrent = (Torrent)selections[0];
+            JsonArray trackerRemove = new JsonArray();
+            foreach (JsonObject tracker in firstTorrent.Trackers)
+            {
+                int id = Toolbox.ToInt(tracker[ProtocolConstants.FIELD_ID]);
+                if (!trackersList.Items.Contains(id))
+                    trackerRemove.Add(id);
+            }
+            JsonArray trackerReplace = new JsonArray();
+            foreach (TrackerListItem t in trackersList.Items)
+            {
+                if (!t.Changed) continue;
+                trackerReplace.Add(t.Id);
+                trackerReplace.Add(t.Announce);
+            }
+            JsonArray trackerAdd = new JsonArray();
+            foreach (TrackerListItem t in trackersList.Items)
+            {
+                if (t.Id == -1)
+                    trackerAdd.Add(t.Announce);
+            }
+            if (trackerRemove.Count > 0)
+                arguments.Put(ProtocolConstants.FIELD_TRACKER_REMOVE, trackerRemove);
+            if (trackerReplace.Count > 0)
+                arguments.Put(ProtocolConstants.FIELD_TRACKER_REPLACE, trackerReplace);
+            if (trackerAdd.Count > 0)
+                arguments.Put(ProtocolConstants.FIELD_TRACKER_ADD, trackerAdd);
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
             this.Close();
         }
@@ -153,7 +165,14 @@ namespace TransmissionRemoteDotnet
                 label4.Enabled = bandwidthComboBox.Enabled = false;
             }
             peerLimitValue.Value = firstTorrent.MaxConnectedPeers >= 0 && (decimal)firstTorrent.MaxConnectedPeers <= peerLimitValue.Maximum ? (decimal)firstTorrent.MaxConnectedPeers : 0;
-            trackersList.Text = BuildTrackerList(firstTorrent.Trackers);
+            // TODO: http://www.codeguru.com/cpp/controls/controls/lists,treesandcombos/article.php/c2291
+            removeTrackerButton.Enabled = false;
+            trackersList.Items.AddRange(
+                Array.ConvertAll<JsonObject, TrackerListItem>((JsonObject[])firstTorrent.Trackers.ToArray(typeof(JsonObject)), delegate(JsonObject jo)
+                    {
+                        return new TrackerListItem((string)jo[ProtocolConstants.ANNOUNCE], Toolbox.ToInt(jo[ProtocolConstants.FIELD_ID]));
+                    })
+                );
         }
 
         private void downloadLimitEnableField_CheckedChanged(object sender, EventArgs e)
@@ -174,6 +193,57 @@ namespace TransmissionRemoteDotnet
         private void seedIdleLimitedCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             seedIdleLimitValue.Enabled = seedIdleLimitedCheckBox.CheckState == CheckState.Checked;
+        }
+
+        private void trackersList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            removeTrackerButton.Enabled = trackersList.SelectedIndex != -1;
+        }
+
+        private void trackersList_DoubleClick(object sender, EventArgs e)
+        {
+            TrackerListItem current = (TrackerListItem)trackersList.SelectedItem;
+            string newannounce = InputBox.Show(OtherStrings.EditTrackerUrl, OtherStrings.EditUrl, current.ToString(), false);
+            if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
+            {
+                if (newannounce != null)
+                {
+                    int idx = trackersList.Items.IndexOf(newannounce);
+                    if (idx == -1 || idx == trackersList.SelectedIndex)
+                    {
+                        current.Announce = newannounce;
+                        trackersList.RefreshItems();
+                    }
+                    else
+                        MessageBox.Show(OtherStrings.TrackerExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void addTrackerButton_Click(object sender, EventArgs e)
+        {
+            string newannounce = InputBox.Show(OtherStrings.AddTrackerUrl, OtherStrings.AddUrl, false);
+            if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
+            {
+                if (newannounce != null)
+                {
+                    if (!trackersList.Items.Contains(newannounce))
+                    {
+                        trackersList.Items.Add(new TrackerListItem(newannounce, -1));
+                    }
+                    else
+                        MessageBox.Show(OtherStrings.TrackerExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void removeTrackerButton_Click(object sender, EventArgs e)
+        {
+            trackersList.Items.RemoveAt(trackersList.SelectedIndex);
         }
     }
 }

@@ -126,6 +126,9 @@
     <Compile Include="CustomControls\PaintDotNet\Timing.cs" />
     <Compile Include="CustomControls\PaintDotNet\Tracing.cs" />
     <Compile Include="CustomControls\PaintDotNet\UI.cs" />
+    <Compile Include="CustomControls\RefreshingListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1017,6 +1020,7 @@
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ICommand.cs" />
+    <Compile Include="TrackerListItem.cs" />
     <Compile Include="TransmissionDaemonDescriptor.cs" />
     <Compile Include="TransmissionWebClient.cs">
       <SubType>Component</SubType>

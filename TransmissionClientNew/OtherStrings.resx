@@ -526,4 +526,22 @@
   <data name="OpenNetworkShareDir" xml:space="preserve">
     <value>Open Folder on Network Share</value>
   </data>
+  <data name="AddTrackerUrl" xml:space="preserve">
+    <value>Add tracker announce URL</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>Add URL</value>
+  </data>
+  <data name="EditTrackerUrl" xml:space="preserve">
+    <value>Edit tracker announce URL</value>
+  </data>
+  <data name="EditUrl" xml:space="preserve">
+    <value>Edit URL</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>Invalid url</value>
+  </data>
+  <data name="TrackerExists" xml:space="preserve">
+    <value>Tracker already exists</value>
+  </data>
 </root>
