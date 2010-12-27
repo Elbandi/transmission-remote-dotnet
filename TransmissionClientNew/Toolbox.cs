@@ -430,6 +430,11 @@ namespace TransmissionRemoteDotnet
             return Path.GetDirectoryName(GetExecuteLocation());
         }
 
+        public static string GetApplicationData()
+        {
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AboutDialog.AssemblyTitle);
+        }
+
         public static string LocateFile(string file)
         {
             return LocateFile(file, true);
@@ -438,6 +443,11 @@ namespace TransmissionRemoteDotnet
         public static string LocateFile(string file, bool require)
         {
             return LocateFile(file, require, GetExecuteDirectory());
+        }
+
+        public static string LocateFile(string file, params string[] paths)
+        {
+            return LocateFile(file, true, paths);
         }
 
         public static string LocateFile(string file, bool require, params string[] paths)

@@ -29,8 +29,8 @@ using System.Drawing;
 
 namespace MaxMind
 {
-	public sealed class GeoIPCountry : IDisposable
-	{
+    public sealed class GeoIPCountry : IDisposable
+    {
         private static GeoIPCountry instance = null;
         private static bool disabled = false;
 
@@ -46,11 +46,11 @@ namespace MaxMind
         }
         private static readonly object padlock = new object();
 
-		Stream _geodata;
-		bool _close;
+        Stream _geodata;
+        bool _close;
 
-		// hard coded position of where country data starts in the data file.
-		const long COUNTRY_BEGIN = 16776960;
+        // hard coded position of where country data starts in the data file.
+        const long COUNTRY_BEGIN = 16776960;
 
         public static readonly string[] CountryCodes = { 
 			"--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR","AS",
@@ -72,7 +72,7 @@ namespace MaxMind
 			"ZA","ZM","ME","ZW","A1","A2","O1","AX","GG","IM","JE","BL","MF"
 		};
 
-		public static readonly string[] CountryNames = {
+        public static readonly string[] CountryNames = {
 			"N/A","Asia/Pacific Region","Europe","Andorra","United Arab Emirates","Afghanistan",
 			"Antigua and Barbuda","Anguilla","Albania","Armenia","Netherlands Antilles","Angola",
 			"Antarctica","Argentina","American Samoa","Austria","Australia","Aruba","Azerbaijan",
@@ -146,85 +146,96 @@ namespace MaxMind
             }
         }
 
+        public static void ReOpen()
+        {
+            if (instance != null)
+            {
+                instance.Dispose();
+                instance = null;
+            }
+            _flagImageList.Images.Clear();
+            disabled = false;
+        }
+
         private const string GEOIP_DATABASE_FILE = "GeoIP.dat";
-		
+
         private GeoIPCountry()
-		{
-			FileStream fs = new FileStream(Toolbox.LocateFile(GEOIP_DATABASE_FILE), FileMode.Open, FileAccess.Read);
-			_geodata = (Stream)fs;
-			_close = true;
-		}
+        {
+            FileStream fs = new FileStream(Toolbox.LocateFile(GEOIP_DATABASE_FILE, Toolbox.GetApplicationData(), Toolbox.GetExecuteDirectory()), FileMode.Open, FileAccess.Read);
+            _geodata = (Stream)fs;
+            _close = true;
+        }
 
-		public int FindIndex(IPAddress ip)
-		{
-			return (int)FindCountryCode(0, AddressToLong(ip), 31);
-		}
+        public int FindIndex(IPAddress ip)
+        {
+            return (int)FindCountryCode(0, AddressToLong(ip), 31);
+        }
 
-		// Converts an IPv4 address into a long, for reading from geo database
-		long AddressToLong(IPAddress ip)
-		{
-			if(ip.AddressFamily != System.Net.Sockets.AddressFamily.InterNetwork)
-				throw new InvalidOperationException("IP address is not IPv4");
+        // Converts an IPv4 address into a long, for reading from geo database
+        long AddressToLong(IPAddress ip)
+        {
+            if (ip.AddressFamily != System.Net.Sockets.AddressFamily.InterNetwork)
+                throw new InvalidOperationException("IP address is not IPv4");
 
-			long num = 0;
-			byte[] bytes = ip.GetAddressBytes();
-			for(int i = 0; i < 4; ++i)
-			{
-				long y = bytes[i];
-				if(y < 0)
-					y += 256;
-				num += y << ((3 - i) * 8);
-			}
+            long num = 0;
+            byte[] bytes = ip.GetAddressBytes();
+            for (int i = 0; i < 4; ++i)
+            {
+                long y = bytes[i];
+                if (y < 0)
+                    y += 256;
+                num += y << ((3 - i) * 8);
+            }
 
-			return num;
-		}
+            return num;
+        }
 
-		// Traverses the GeoIP binary data looking for a country code based
-		// on the IP address mask
-		long FindCountryCode(long offset, long ipnum, int depth)
-		{
-			byte[] buffer = new byte[6]; // 2 * MAX_RECORD_LENGTH
-			long[] x = new long[2];
-			if(depth < 0)
-				throw new IOException("Cannot seek GeoIP database");
+        // Traverses the GeoIP binary data looking for a country code based
+        // on the IP address mask
+        long FindCountryCode(long offset, long ipnum, int depth)
+        {
+            byte[] buffer = new byte[6]; // 2 * MAX_RECORD_LENGTH
+            long[] x = new long[2];
+            if (depth < 0)
+                throw new IOException("Cannot seek GeoIP database");
 
-			_geodata.Seek(6 * offset, SeekOrigin.Begin);
-			_geodata.Read(buffer, 0, 6);
+            _geodata.Seek(6 * offset, SeekOrigin.Begin);
+            _geodata.Read(buffer, 0, 6);
 
-			for(int i = 0; i < 2; i++)
-			{
-				x[i] = 0;
-				for(int j = 0; j < 3; j++)
-				{
-					int y = buffer[i * 3 + j];
-					if(y < 0)
-						y += 256;
-					x[i] += (y << (j * 8));
-				}
-			}
+            for (int i = 0; i < 2; i++)
+            {
+                x[i] = 0;
+                for (int j = 0; j < 3; j++)
+                {
+                    int y = buffer[i * 3 + j];
+                    if (y < 0)
+                        y += 256;
+                    x[i] += (y << (j * 8));
+                }
+            }
 
-			if((ipnum & (1 << depth)) > 0)
-			{
-				if(x[1] >= COUNTRY_BEGIN)
-					return x[1] - COUNTRY_BEGIN;
-				return FindCountryCode(x[1], ipnum, depth - 1);
-			}
-			else
-			{
-				if(x[0] >= COUNTRY_BEGIN)
-					return x[0] - COUNTRY_BEGIN;
-				return FindCountryCode(x[0], ipnum, depth - 1);
-			}
-		}
+            if ((ipnum & (1 << depth)) > 0)
+            {
+                if (x[1] >= COUNTRY_BEGIN)
+                    return x[1] - COUNTRY_BEGIN;
+                return FindCountryCode(x[1], ipnum, depth - 1);
+            }
+            else
+            {
+                if (x[0] >= COUNTRY_BEGIN)
+                    return x[0] - COUNTRY_BEGIN;
+                return FindCountryCode(x[0], ipnum, depth - 1);
+            }
+        }
 
-		public void Dispose()
-		{
-			if(_close && _geodata != null)
-			{
-				_geodata.Close();
-				_geodata = null;
-			}
-		}
-	}
+        public void Dispose()
+        {
+            if (_close && _geodata != null)
+            {
+                _geodata.Close();
+                _geodata = null;
+            }
+        }
+    }
 }
 
