@@ -474,7 +474,7 @@
     <value>173, 35</value>
   </data>
   <data name="encryptionCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="encryptionCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
