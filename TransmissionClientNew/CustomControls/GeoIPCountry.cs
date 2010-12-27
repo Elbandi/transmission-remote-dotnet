@@ -150,7 +150,7 @@ namespace MaxMind
 		
         private GeoIPCountry()
 		{
-			FileStream fs = new FileStream(Toolbox.SupportFilePath(GEOIP_DATABASE_FILE), FileMode.Open, FileAccess.Read);
+			FileStream fs = new FileStream(Toolbox.LocateFile(GEOIP_DATABASE_FILE), FileMode.Open, FileAccess.Read);
 			_geodata = (Stream)fs;
 			_close = true;
 		}
