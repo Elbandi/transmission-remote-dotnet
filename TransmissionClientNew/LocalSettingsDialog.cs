@@ -137,7 +137,7 @@ namespace TransmissionRemoteDotnet
             infopanelImageBrowse.FileName = sett.InfopanelImagePath;
             toolbarImageBrowse.FileName = sett.ToolbarImagePath;
             trayImageBrowse.FileName = sett.TrayImagePath;
-            StartOnSystemCheckBox.Checked = Util.IsAutoStartEnabled(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
+            StartOnSystemCheckBox.Checked = Util.IsAutoStartEnabled(AboutDialog.AssemblyTitle, Toolbox.GetExecuteLocation());
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace TransmissionRemoteDotnet
             }
             sett.Commit();
             if (StartOnSystemCheckBox.Checked)
-                Util.SetAutoStart(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
+                Util.SetAutoStart(AboutDialog.AssemblyTitle, Toolbox.GetExecuteLocation());
             else
                 Util.UnSetAutoStart(AboutDialog.AssemblyTitle);
         }

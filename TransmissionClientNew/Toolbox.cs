@@ -420,6 +420,16 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static string GetExecuteLocation()
+        {
+            return Assembly.GetExecutingAssembly().Location;
+        }
+
+        public static string GetExecuteDirectory()
+        {
+            return Path.GetDirectoryName(GetExecuteLocation());
+        }
+
         public static string LocateFile(string file)
         {
             return LocateFile(file, true);
@@ -427,7 +437,7 @@ namespace TransmissionRemoteDotnet
 
         public static string LocateFile(string file, bool require)
         {
-            return LocateFile(file, require, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            return LocateFile(file, require, GetExecuteDirectory());
         }
 
         public static string LocateFile(string file, bool require, params string[] paths)

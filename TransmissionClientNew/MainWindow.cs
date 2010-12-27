@@ -842,7 +842,7 @@ namespace TransmissionRemoteDotnet
             englishItem.Checked = Program.Settings.Locale.Equals("en-US");
             languageToolStripMenuItem.DropDownItems.Add(englishItem);
             languageToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
-            DirectoryInfo di = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            DirectoryInfo di = new DirectoryInfo(Toolbox.GetExecuteDirectory());
             foreach (DirectoryInfo subDir in di.GetDirectories())
             {
                 string dn = subDir.Name;
