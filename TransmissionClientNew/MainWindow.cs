@@ -1204,27 +1204,26 @@ namespace TransmissionRemoteDotnet
                 {
                     trackersListView.Items.Clear();
                 }
-                timeElapsedLabel.Text = downloadedLabel.Text = downloadSpeedLabel.Text
-                    = downloadLimitLabel.Text = statusLabel.Text = commentLabel.Text
-                    = remainingLabel.Text = uploadedLabel.Text = uploadRateLabel.Text
-                    = uploadLimitLabel.Text = startedAtLabel.Text = seedersLabel.Text
-                    = leechersLabel.Text = ratioLabel.Text = createdAtLabel.Text
-                    = createdByLabel.Text = errorLabel.Text = percentageLabel.Text
-                    = hashLabel.Text = piecesInfoLabel.Text = locationLabel.Text
-                    = generalTorrentNameGroupBox.Text = totalSizeLabel.Text = "";
+                generalTorrentInfo.timeElapsed = generalTorrentInfo.downloaded = generalTorrentInfo.downloadSpeed
+                    = generalTorrentInfo.downloadLimit = generalTorrentInfo.status = generalTorrentInfo.comment
+                    = generalTorrentInfo.remaining = generalTorrentInfo.uploaded = generalTorrentInfo.uploadSpeed
+                    = generalTorrentInfo.uploadLimit = generalTorrentInfo.startedAt = generalTorrentInfo.seeders
+                    = generalTorrentInfo.leechers = generalTorrentInfo.ratio = generalTorrentInfo.createdAt
+                    = generalTorrentInfo.createdBy = generalTorrentInfo.error = percentageLabel.Text
+                    = generalTorrentInfo.hash = generalTorrentInfo.piecesInfo = generalTorrentInfo.location
+                    = generalTorrentInfo.torrentName = generalTorrentInfo.totalSize = "";
                 trackersTorrentNameGroupBox.Text
                    = peersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
                    = "N/A";
                 progressBar.Value = 0;
                 piecesGraph.ClearBits();
-                labelForErrorLabel.Visible = errorLabel.Visible
+                generalTorrentInfo.errorVisible
                     = filesListView.Enabled = peersListView.Enabled
                     = trackersListView.Enabled = false;
             }
-            generalTorrentNameGroupBox.Enabled
+            generalTorrentInfo.Enabled
                     = downloadProgressLabel.Enabled = refreshElapsedTimer.Enabled
                     = filesTimer.Enabled = downloadProgressLabel.Enabled
-                    = generalTorrentNameGroupBox.Enabled
                     = remoteCmdButton.Enabled = one;
             openNetworkShareButton.Enabled = openNetworkShareDirToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
             openNetworkShareToolStripMenuItem.Enabled = openNetworkShareButton.Enabled && t.Files.Count == 1 && t.Files[0].BytesCompleted == t.Files[0].FileSize;
@@ -1783,14 +1782,14 @@ namespace TransmissionRemoteDotnet
         {
             if (first)
             {
-                generalTorrentNameGroupBox.Text = peersTorrentNameGroupBox.Text
+                generalTorrentInfo.torrentName = peersTorrentNameGroupBox.Text
                     = trackersTorrentNameGroupBox.Text = filesTorrentNameGroupBox.Text
                     = t.TorrentName;
-                startedAtLabel.Text = t.Added.ToString();
-                createdAtLabel.Text = t.Created;
-                createdByLabel.Text = t.Creator;
-                hashLabel.Text = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
-                commentLabel.Text = t.Comment;
+                generalTorrentInfo.startedAt = t.Added.ToString();
+                generalTorrentInfo.createdAt = t.Created;
+                generalTorrentInfo.createdBy = t.Creator;
+                generalTorrentInfo.hash = string.Join(" ", Toolbox.Split(t.Hash.ToUpper(), 8));
+                generalTorrentInfo.comment = t.Comment;
                 trackersListView.BeginUpdate();
                 trackersListView.Items.Clear();
                 foreach (JsonObject tracker in t.Trackers)
@@ -1838,38 +1837,38 @@ namespace TransmissionRemoteDotnet
                 }
                 trackersListView.EndUpdate();
             }
-            remainingLabel.Text = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : (t.Eta > 0 ? t.LongEta : "");
-            label4.Text = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
-            uploadedLabel.Text = t.UploadedString;
-            uploadLimitLabel.Text = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
-            uploadRateLabel.Text = t.UploadRateString;
-            seedersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
-            leechersLabel.Text = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
-            ratioLabel.Text = t.LocalRatioString;
+            generalTorrentInfo.remaining = t.IsFinished ? (t.DoneDate != null ? t.DoneDate.ToString() : "?") : (t.Eta > 0 ? t.LongEta : "");
+            generalTorrentInfo.timeLabelText = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
+            generalTorrentInfo.uploaded = t.UploadedString;
+            generalTorrentInfo.uploadLimit = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
+            generalTorrentInfo.uploadSpeed = t.UploadRateString;
+            generalTorrentInfo.seeders = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
+            generalTorrentInfo.leechers = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
+            generalTorrentInfo.ratio = t.LocalRatioString;
             progressBar.Value = (int)t.Percentage;
             if (t.Pieces != null)
             {
                 piecesGraph.ApplyBits(t.Pieces, t.PieceCount);
-                piecesInfoLabel.Text = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
+                generalTorrentInfo.piecesInfo = String.Format(OtherStrings.PiecesInfo, t.PieceCount, Toolbox.GetFileSize(t.PieceSize), t.HavePieces);
             }
             else
-                piecesInfoLabel.Text = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
-            locationLabel.Text = t.DownloadDir + "/" + t.TorrentName;
+                generalTorrentInfo.piecesInfo = String.Format("{0} x {1}", t.PieceCount, Toolbox.GetFileSize(t.PieceSize));
+            generalTorrentInfo.location = t.DownloadDir + "/" + t.TorrentName;
             percentageLabel.Text = t.Percentage.ToString() + "%";
             if (t.TotalSize == t.SizeWhenDone)
             {
-                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
+                generalTorrentInfo.totalSize = String.Format(OtherStrings.TotalDoneValidSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             }
             else
             {
-                totalSizeLabel.Text = String.Format(OtherStrings.TotalDoneValidTotalSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid), Toolbox.GetFileSize(t.TotalSize));
+                generalTorrentInfo.totalSize = String.Format(OtherStrings.TotalDoneValidTotalSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid), Toolbox.GetFileSize(t.TotalSize));
             }
             //totalSizeLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
-            downloadedLabel.Text = Toolbox.GetFileSize(t.Downloaded);
-            downloadSpeedLabel.Text = t.DownloadRateString;
-            downloadLimitLabel.Text = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
-            statusLabel.Text = t.Status;
-            labelForErrorLabel.Visible = errorLabel.Visible = !(errorLabel.Text = t.ErrorString).Equals("");
+            generalTorrentInfo.downloaded = Toolbox.GetFileSize(t.Downloaded);
+            generalTorrentInfo.downloadSpeed = t.DownloadRateString;
+            generalTorrentInfo.downloadLimit = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
+            generalTorrentInfo.status = t.Status;
+            generalTorrentInfo.errorVisible = !(generalTorrentInfo.error = t.ErrorString).Equals("");
             RefreshElapsedTimer();
             peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
             if (t.Peers != null && peersListView.Enabled)
@@ -1937,7 +1936,7 @@ namespace TransmissionRemoteDotnet
                 {
                     Torrent t = (Torrent)torrentListView.SelectedItems[0];
                     TimeSpan ts = DateTime.Now.Subtract(t.Added);
-                    timeElapsedLabel.Text = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
+                    generalTorrentInfo.timeElapsed = ts.Ticks > 0 ? Toolbox.FormatTimespanLong(ts) : OtherStrings.UnknownNegativeResult;
                 }
                 else
                 {

@@ -129,6 +129,12 @@
     <Compile Include="CustomControls\RefreshingListBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GeneralTorrentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralTorrentInfo.Designer.cs">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     <EmbeddedResource Include="AboutDialog.zh-TW.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralTorrentInfo.resx">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ErrorLogWindow.cs-CZ.resx">
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>

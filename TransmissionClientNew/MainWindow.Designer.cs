@@ -59,49 +59,7 @@ namespace TransmissionRemoteDotnet
             this.piecesGraph = new TransmissionRemoteDotnet.PiecesGraph();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.percentageLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.generalTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.totalSizeLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.locationLabelLabel = new System.Windows.Forms.Label();
-            this.locationLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.piecesInfoLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.piecesInfoLabelLabel = new System.Windows.Forms.Label();
-            this.hashLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.hashLabelLabel = new System.Windows.Forms.Label();
-            this.timeElapsedLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.startedAtLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.uploadLimitLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.uploadRateLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.uploadedLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.remainingLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.downloadedLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.downloadSpeedLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.downloadLimitLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.statusLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.commentLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.errorLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.createdByLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.createdAtLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.leechersLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.ratioLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.seedersLabel = new TransmissionRemoteDotnet.SelectableLabel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.labelForErrorLabel = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timeElapsedLabelLabel = new System.Windows.Forms.Label();
+            this.generalTorrentInfo = new TransmissionRemoteDotnet.TorrentGeneralInfo();
             this.trackersTabPage = new System.Windows.Forms.TabPage();
             this.trackersTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
             this.trackersListView = new TransmissionRemoteDotnet.ListViewNF();
@@ -245,7 +203,6 @@ namespace TransmissionRemoteDotnet
             this.generalTabPage.SuspendLayout();
             this.generalTableLayoutPanel.SuspendLayout();
             this.progressOrPiecesPanel.SuspendLayout();
-            this.generalTorrentNameGroupBox.SuspendLayout();
             this.trackersTabPage.SuspendLayout();
             this.trackersTorrentNameGroupBox.SuspendLayout();
             this.filesTabPage.SuspendLayout();
@@ -447,7 +404,7 @@ namespace TransmissionRemoteDotnet
             this.generalTableLayoutPanel.Controls.Add(this.downloadProgressLabel, 0, 0);
             this.generalTableLayoutPanel.Controls.Add(this.progressOrPiecesPanel, 1, 0);
             this.generalTableLayoutPanel.Controls.Add(this.percentageLabel, 2, 0);
-            this.generalTableLayoutPanel.Controls.Add(this.generalTorrentNameGroupBox, 0, 1);
+            this.generalTableLayoutPanel.Controls.Add(this.generalTorrentInfo, 0, 1);
             this.generalTableLayoutPanel.Name = "generalTableLayoutPanel";
             // 
             // downloadProgressLabel
@@ -481,308 +438,35 @@ namespace TransmissionRemoteDotnet
             this.percentageLabel.Name = "percentageLabel";
             this.percentageLabel.ReadOnly = true;
             // 
-            // generalTorrentNameGroupBox
-            // 
-            resources.ApplyResources(this.generalTorrentNameGroupBox, "generalTorrentNameGroupBox");
-            this.generalTableLayoutPanel.SetColumnSpan(this.generalTorrentNameGroupBox, 3);
-            this.generalTorrentNameGroupBox.Controls.Add(this.totalSizeLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label1);
-            this.generalTorrentNameGroupBox.Controls.Add(this.locationLabelLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.locationLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.piecesInfoLabelLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.hashLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.hashLabelLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.timeElapsedLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.startedAtLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.uploadLimitLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.uploadRateLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.uploadedLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.remainingLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.downloadedLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.downloadSpeedLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.downloadLimitLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.statusLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.commentLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.errorLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.createdByLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.createdAtLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.leechersLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.ratioLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.seedersLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label17);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label16);
-            this.generalTorrentNameGroupBox.Controls.Add(this.labelForErrorLabel);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label15);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label14);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label13);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label10);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label12);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label8);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label5);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label4);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label11);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label9);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label7);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label6);
-            this.generalTorrentNameGroupBox.Controls.Add(this.label3);
-            this.generalTorrentNameGroupBox.Controls.Add(this.timeElapsedLabelLabel);
-            this.generalTorrentNameGroupBox.Name = "generalTorrentNameGroupBox";
-            this.generalTorrentNameGroupBox.TabStop = false;
-            // 
-            // totalSizeLabel
-            // 
-            this.totalSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.totalSizeLabel, "totalSizeLabel");
-            this.totalSizeLabel.Name = "totalSizeLabel";
-            this.totalSizeLabel.ReadOnly = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // locationLabelLabel
-            // 
-            resources.ApplyResources(this.locationLabelLabel, "locationLabelLabel");
-            this.locationLabelLabel.Name = "locationLabelLabel";
-            // 
-            // locationLabel
-            // 
-            this.locationLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.locationLabel, "locationLabel");
-            this.locationLabel.Name = "locationLabel";
-            this.locationLabel.ReadOnly = true;
-            // 
-            // piecesInfoLabel
-            // 
-            this.piecesInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.piecesInfoLabel, "piecesInfoLabel");
-            this.piecesInfoLabel.Name = "piecesInfoLabel";
-            this.piecesInfoLabel.ReadOnly = true;
-            // 
-            // piecesInfoLabelLabel
-            // 
-            resources.ApplyResources(this.piecesInfoLabelLabel, "piecesInfoLabelLabel");
-            this.piecesInfoLabelLabel.Name = "piecesInfoLabelLabel";
-            // 
-            // hashLabel
-            // 
-            this.hashLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.hashLabel, "hashLabel");
-            this.hashLabel.Name = "hashLabel";
-            this.hashLabel.ReadOnly = true;
-            // 
-            // hashLabelLabel
-            // 
-            resources.ApplyResources(this.hashLabelLabel, "hashLabelLabel");
-            this.hashLabelLabel.Name = "hashLabelLabel";
-            // 
-            // timeElapsedLabel
-            // 
-            this.timeElapsedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.timeElapsedLabel, "timeElapsedLabel");
-            this.timeElapsedLabel.Name = "timeElapsedLabel";
-            this.timeElapsedLabel.ReadOnly = true;
-            // 
-            // startedAtLabel
-            // 
-            this.startedAtLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.startedAtLabel, "startedAtLabel");
-            this.startedAtLabel.Name = "startedAtLabel";
-            this.startedAtLabel.ReadOnly = true;
-            // 
-            // uploadLimitLabel
-            // 
-            this.uploadLimitLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.uploadLimitLabel, "uploadLimitLabel");
-            this.uploadLimitLabel.Name = "uploadLimitLabel";
-            this.uploadLimitLabel.ReadOnly = true;
-            // 
-            // uploadRateLabel
-            // 
-            this.uploadRateLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.uploadRateLabel, "uploadRateLabel");
-            this.uploadRateLabel.Name = "uploadRateLabel";
-            this.uploadRateLabel.ReadOnly = true;
-            // 
-            // uploadedLabel
-            // 
-            this.uploadedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.uploadedLabel, "uploadedLabel");
-            this.uploadedLabel.Name = "uploadedLabel";
-            this.uploadedLabel.ReadOnly = true;
-            // 
-            // remainingLabel
-            // 
-            this.remainingLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.remainingLabel, "remainingLabel");
-            this.remainingLabel.Name = "remainingLabel";
-            this.remainingLabel.ReadOnly = true;
-            // 
-            // downloadedLabel
-            // 
-            this.downloadedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.downloadedLabel, "downloadedLabel");
-            this.downloadedLabel.Name = "downloadedLabel";
-            this.downloadedLabel.ReadOnly = true;
-            // 
-            // downloadSpeedLabel
-            // 
-            this.downloadSpeedLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.downloadSpeedLabel, "downloadSpeedLabel");
-            this.downloadSpeedLabel.Name = "downloadSpeedLabel";
-            this.downloadSpeedLabel.ReadOnly = true;
-            // 
-            // downloadLimitLabel
-            // 
-            this.downloadLimitLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.downloadLimitLabel, "downloadLimitLabel");
-            this.downloadLimitLabel.Name = "downloadLimitLabel";
-            this.downloadLimitLabel.ReadOnly = true;
-            this.downloadLimitLabel.Tag = "";
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.statusLabel, "statusLabel");
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.ReadOnly = true;
-            // 
-            // commentLabel
-            // 
-            this.commentLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.commentLabel, "commentLabel");
-            this.commentLabel.Name = "commentLabel";
-            this.commentLabel.ReadOnly = true;
-            // 
-            // errorLabel
-            // 
-            this.errorLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.errorLabel, "errorLabel");
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.ReadOnly = true;
-            // 
-            // createdByLabel
-            // 
-            this.createdByLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.createdByLabel, "createdByLabel");
-            this.createdByLabel.Name = "createdByLabel";
-            this.createdByLabel.ReadOnly = true;
-            // 
-            // createdAtLabel
-            // 
-            this.createdAtLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.createdAtLabel, "createdAtLabel");
-            this.createdAtLabel.Name = "createdAtLabel";
-            this.createdAtLabel.ReadOnly = true;
-            // 
-            // leechersLabel
-            // 
-            this.leechersLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.leechersLabel, "leechersLabel");
-            this.leechersLabel.Name = "leechersLabel";
-            this.leechersLabel.ReadOnly = true;
-            // 
-            // ratioLabel
-            // 
-            this.ratioLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.ratioLabel, "ratioLabel");
-            this.ratioLabel.Name = "ratioLabel";
-            this.ratioLabel.ReadOnly = true;
-            // 
-            // seedersLabel
-            // 
-            this.seedersLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.seedersLabel, "seedersLabel");
-            this.seedersLabel.Name = "seedersLabel";
-            this.seedersLabel.ReadOnly = true;
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // labelForErrorLabel
-            // 
-            resources.ApplyResources(this.labelForErrorLabel, "labelForErrorLabel");
-            this.labelForErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.labelForErrorLabel.Name = "labelForErrorLabel";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // timeElapsedLabelLabel
-            // 
-            resources.ApplyResources(this.timeElapsedLabelLabel, "timeElapsedLabelLabel");
-            this.timeElapsedLabelLabel.Name = "timeElapsedLabelLabel";
+            // generalTorrentInfo
+            // 
+            this.generalTableLayoutPanel.SetColumnSpan(this.generalTorrentInfo, 3);
+            this.generalTorrentInfo.comment = "";
+            this.generalTorrentInfo.createdAt = "";
+            this.generalTorrentInfo.createdBy = "";
+            resources.ApplyResources(this.generalTorrentInfo, "generalTorrentInfo");
+            this.generalTorrentInfo.downloaded = "";
+            this.generalTorrentInfo.downloadLimit = "";
+            this.generalTorrentInfo.downloadSpeed = "";
+            this.generalTorrentInfo.error = "";
+            this.generalTorrentInfo.errorVisible = false;
+            this.generalTorrentInfo.hash = "";
+            this.generalTorrentInfo.leechers = "";
+            this.generalTorrentInfo.location = "";
+            this.generalTorrentInfo.Name = "generalTorrentInfo";
+            this.generalTorrentInfo.piecesInfo = "";
+            this.generalTorrentInfo.ratio = "";
+            this.generalTorrentInfo.remaining = "";
+            this.generalTorrentInfo.seeders = "";
+            this.generalTorrentInfo.startedAt = "";
+            this.generalTorrentInfo.status = "";
+            this.generalTorrentInfo.timeElapsed = "";
+            this.generalTorrentInfo.timeLabelText = "Remaining:";
+            this.generalTorrentInfo.torrentName = "";
+            this.generalTorrentInfo.totalSize = "";
+            this.generalTorrentInfo.uploaded = "";
+            this.generalTorrentInfo.uploadLimit = "";
+            this.generalTorrentInfo.uploadSpeed = "";
             // 
             // trackersTabPage
             // 
@@ -1772,8 +1456,6 @@ namespace TransmissionRemoteDotnet
             this.generalTableLayoutPanel.ResumeLayout(false);
             this.generalTableLayoutPanel.PerformLayout();
             this.progressOrPiecesPanel.ResumeLayout(false);
-            this.generalTorrentNameGroupBox.ResumeLayout(false);
-            this.generalTorrentNameGroupBox.PerformLayout();
             this.trackersTabPage.ResumeLayout(false);
             this.trackersTorrentNameGroupBox.ResumeLayout(false);
             this.filesTabPage.ResumeLayout(false);
@@ -1878,25 +1560,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ColumnHeader trackersSeedsCol;
         private System.Windows.Forms.ColumnHeader trackersLeechersCol;
         private System.Windows.Forms.ColumnHeader trackersDownloadedCol;
-        private System.Windows.Forms.Label timeElapsedLabelLabel;
         private System.Windows.Forms.Timer refreshElapsedTimer;
-        private System.Windows.Forms.GroupBox generalTorrentNameGroupBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label labelForErrorLabel;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private TransmissionRemoteDotnet.TorrentGeneralInfo generalTorrentInfo;
         private System.Windows.Forms.TabPage peersTabPage;
         private TransmissionRemoteDotnet.ListViewNF peersListView;
         private System.Windows.Forms.GroupBox peersTorrentNameGroupBox;
@@ -1970,38 +1635,13 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripTextBox FilterTorrentTextBox;
         private System.Windows.Forms.ToolStripLabel FilterTorrentLabel;
         private System.Windows.Forms.OpenFileDialog openTorrentFileDialog;
-        private SelectableLabel seedersLabel;
-        private SelectableLabel createdByLabel;
-        private SelectableLabel createdAtLabel;
-        private SelectableLabel leechersLabel;
-        private SelectableLabel ratioLabel;
-        private SelectableLabel downloadedLabel;
-        private SelectableLabel downloadSpeedLabel;
-        private SelectableLabel downloadLimitLabel;
-        private SelectableLabel statusLabel;
-        private SelectableLabel commentLabel;
-        private SelectableLabel errorLabel;
-        private SelectableLabel uploadedLabel;
-        private SelectableLabel remainingLabel;
-        private SelectableLabel startedAtLabel;
-        private SelectableLabel uploadLimitLabel;
-        private SelectableLabel uploadRateLabel;
-        private SelectableLabel timeElapsedLabel;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator torrentMenuToolStripSeparator1;
-        private SelectableLabel hashLabel;
-        private System.Windows.Forms.Label hashLabelLabel;
-        private SelectableLabel piecesInfoLabel;
-        private System.Windows.Forms.Label piecesInfoLabelLabel;
-        private SelectableLabel locationLabel;
-        private System.Windows.Forms.Label locationLabelLabel;
         private System.Windows.Forms.ToolStripButton AltSpeedButton;
         private System.Windows.Forms.ToolStripSeparator toolbarToolStripSeparator4;
         public System.Windows.Forms.ImageList fileIconImageList;
         private System.Windows.Forms.ImageList stateListBoxImageList;
         private System.Windows.Forms.ImageList toolStripImageList;
         private System.Windows.Forms.ImageList trayIconImageList;
-        private SelectableLabel totalSizeLabel;
-        private System.Windows.Forms.Label label1;
     }
 }

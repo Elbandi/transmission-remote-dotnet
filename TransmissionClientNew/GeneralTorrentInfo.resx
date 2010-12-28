@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="torrentNameGroupBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="commentField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 168</value>
+  </data>
+  <data name="commentField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="commentField.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="commentField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;commentField.Name" xml:space="preserve">
+    <value>commentField</value>
+  </data>
+  <data name="&gt;&gt;commentField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;commentField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;commentField.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="commentLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="commentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 168</value>
+  </data>
+  <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="commentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="commentLabel.Text" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Name" xml:space="preserve">
+    <value>commentLabel</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="errorField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 149</value>
+  </data>
+  <data name="errorField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="errorField.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="errorField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;errorField.Name" xml:space="preserve">
+    <value>errorField</value>
+  </data>
+  <data name="&gt;&gt;errorField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;errorField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;errorField.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="errorLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="errorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 149</value>
+  </data>
+  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="errorLabel.Text" xml:space="preserve">
+    <value>Error:</value>
+  </data>
+  <data name="errorLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Name" xml:space="preserve">
+    <value>errorLabel</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="hashField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 149</value>
+  </data>
+  <data name="hashField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="hashField.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="hashField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;hashField.Name" xml:space="preserve">
+    <value>hashField</value>
+  </data>
+  <data name="&gt;&gt;hashField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;hashField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;hashField.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="hashLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="hashLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hashLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 149</value>
+  </data>
+  <data name="hashLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="hashLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="hashLabel.Text" xml:space="preserve">
+    <value>Hash:</value>
+  </data>
+  <data name="&gt;&gt;hashLabel.Name" xml:space="preserve">
+    <value>hashLabel</value>
+  </data>
+  <data name="&gt;&gt;hashLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hashLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;hashLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="createdByField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 130</value>
+  </data>
+  <data name="createdByField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="createdByField.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="createdByField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;createdByField.Name" xml:space="preserve">
+    <value>createdByField</value>
+  </data>
+  <data name="&gt;&gt;createdByField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;createdByField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;createdByField.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="createdByLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="createdByLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 130</value>
+  </data>
+  <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="createdByLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="createdByLabel.Text" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Name" xml:space="preserve">
+    <value>createdByLabel</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="totalSizeField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 130</value>
+  </data>
+  <data name="totalSizeField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="totalSizeField.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="totalSizeField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;totalSizeField.Name" xml:space="preserve">
+    <value>totalSizeField</value>
+  </data>
+  <data name="&gt;&gt;totalSizeField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;totalSizeField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;totalSizeField.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="totalSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="totalSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="totalSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 130</value>
+  </data>
+  <data name="totalSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="totalSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="totalSizeLabel.Text" xml:space="preserve">
+    <value>Total size:</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Name" xml:space="preserve">
+    <value>totalSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;totalSizeLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="createdAtField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 111</value>
+  </data>
+  <data name="createdAtField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="createdAtField.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="createdAtField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;createdAtField.Name" xml:space="preserve">
+    <value>createdAtField</value>
+  </data>
+  <data name="&gt;&gt;createdAtField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;createdAtField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;createdAtField.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="createdAtLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="createdAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 111</value>
+  </data>
+  <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="createdAtLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="createdAtLabel.Text" xml:space="preserve">
+    <value>Created at:</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Name" xml:space="preserve">
+    <value>createdAtLabel</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="locationField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 111</value>
+  </data>
+  <data name="locationField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 13</value>
+  </data>
+  <data name="locationField.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="locationField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;locationField.Name" xml:space="preserve">
+    <value>locationField</value>
+  </data>
+  <data name="&gt;&gt;locationField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;locationField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;locationField.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="locationLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="locationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="locationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
+  <data name="locationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="locationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="locationLabel.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Name" xml:space="preserve">
+    <value>locationLabel</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;locationLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="startedAtField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 92</value>
+  </data>
+  <data name="startedAtField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="startedAtField.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="startedAtField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;startedAtField.Name" xml:space="preserve">
+    <value>startedAtField</value>
+  </data>
+  <data name="&gt;&gt;startedAtField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;startedAtField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;startedAtField.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="startedAtLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="startedAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 92</value>
+  </data>
+  <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="startedAtLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="startedAtLabel.Text" xml:space="preserve">
+    <value>Started At:</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Name" xml:space="preserve">
+    <value>startedAtLabel</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="statusField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 92</value>
+  </data>
+  <data name="statusField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="statusField.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="statusField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statusField.Name" xml:space="preserve">
+    <value>statusField</value>
+  </data>
+  <data name="&gt;&gt;statusField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;statusField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;statusField.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="statusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="statusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 92</value>
+  </data>
+  <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="statusLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="statusLabel.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Name" xml:space="preserve">
+    <value>statusLabel</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="ratioField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 73</value>
+  </data>
+  <data name="ratioField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="ratioField.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="ratioField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ratioField.Name" xml:space="preserve">
+    <value>ratioField</value>
+  </data>
+  <data name="&gt;&gt;ratioField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ratioField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ratioField.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="ratioLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="ratioLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ratioLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 73</value>
+  </data>
+  <data name="ratioLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="ratioLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="ratioLabel.Text" xml:space="preserve">
+    <value>Ratio:</value>
+  </data>
+  <data name="&gt;&gt;ratioLabel.Name" xml:space="preserve">
+    <value>ratioLabel</value>
+  </data>
+  <data name="&gt;&gt;ratioLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ratioLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ratioLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="uploadLimitField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 73</value>
+  </data>
+  <data name="uploadLimitField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="uploadLimitField.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="uploadLimitField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitField.Name" xml:space="preserve">
+    <value>uploadLimitField</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitField.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="uploadLimitLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="uploadLimitLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uploadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 73</value>
+  </data>
+  <data name="uploadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="uploadLimitLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="uploadLimitLabel.Text" xml:space="preserve">
+    <value>Upload limit:</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitLabel.Name" xml:space="preserve">
+    <value>uploadLimitLabel</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadLimitLabel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="downloadLimitField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 73</value>
+  </data>
+  <data name="downloadLimitField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="downloadLimitField.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="downloadLimitField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitField.Name" xml:space="preserve">
+    <value>downloadLimitField</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitField.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="downloadLimitLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="downloadLimitLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="downloadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 73</value>
+  </data>
+  <data name="downloadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="downloadLimitLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="downloadLimitLabel.Text" xml:space="preserve">
+    <value>Download limit:</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitLabel.Name" xml:space="preserve">
+    <value>downloadLimitLabel</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadLimitLabel.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="leechersField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 54</value>
+  </data>
+  <data name="leechersField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="leechersField.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="leechersField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;leechersField.Name" xml:space="preserve">
+    <value>leechersField</value>
+  </data>
+  <data name="&gt;&gt;leechersField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;leechersField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;leechersField.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="leechersLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="leechersLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="leechersLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 54</value>
+  </data>
+  <data name="leechersLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="leechersLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="leechersLabel.Text" xml:space="preserve">
+    <value>Leechers:</value>
+  </data>
+  <data name="&gt;&gt;leechersLabel.Name" xml:space="preserve">
+    <value>leechersLabel</value>
+  </data>
+  <data name="&gt;&gt;leechersLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leechersLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;leechersLabel.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="uploadSpeedField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 54</value>
+  </data>
+  <data name="uploadSpeedField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="uploadSpeedField.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="uploadSpeedField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedField.Name" xml:space="preserve">
+    <value>uploadSpeedField</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedField.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="uploadSpeedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="uploadSpeedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uploadSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 54</value>
+  </data>
+  <data name="uploadSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="uploadSpeedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="uploadSpeedLabel.Text" xml:space="preserve">
+    <value>Upload speed:</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedLabel.Name" xml:space="preserve">
+    <value>uploadSpeedLabel</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadSpeedLabel.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="downloadSpeedField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 54</value>
+  </data>
+  <data name="downloadSpeedField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="downloadSpeedField.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="downloadSpeedField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedField.Name" xml:space="preserve">
+    <value>downloadSpeedField</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedField.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="downloadSpeedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="downloadSpeedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="downloadSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="downloadSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="downloadSpeedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="downloadSpeedLabel.Text" xml:space="preserve">
+    <value>Download speed:</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedLabel.Name" xml:space="preserve">
+    <value>downloadSpeedLabel</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadSpeedLabel.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="seedersField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 35</value>
+  </data>
+  <data name="seedersField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="seedersField.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="seedersField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;seedersField.Name" xml:space="preserve">
+    <value>seedersField</value>
+  </data>
+  <data name="&gt;&gt;seedersField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;seedersField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;seedersField.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="seedersLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="seedersLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="seedersLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 35</value>
+  </data>
+  <data name="seedersLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="seedersLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="seedersLabel.Text" xml:space="preserve">
+    <value>Seeds:</value>
+  </data>
+  <data name="&gt;&gt;seedersLabel.Name" xml:space="preserve">
+    <value>seedersLabel</value>
+  </data>
+  <data name="&gt;&gt;seedersLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seedersLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;seedersLabel.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="uploadedField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 35</value>
+  </data>
+  <data name="uploadedField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="uploadedField.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="uploadedField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;uploadedField.Name" xml:space="preserve">
+    <value>uploadedField</value>
+  </data>
+  <data name="&gt;&gt;uploadedField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uploadedField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadedField.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="uploadedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="uploadedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uploadedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 35</value>
+  </data>
+  <data name="uploadedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="uploadedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="uploadedLabel.Text" xml:space="preserve">
+    <value>Uploaded:</value>
+  </data>
+  <data name="&gt;&gt;uploadedLabel.Name" xml:space="preserve">
+    <value>uploadedLabel</value>
+  </data>
+  <data name="&gt;&gt;uploadedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uploadedLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uploadedLabel.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="downloadedField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 35</value>
+  </data>
+  <data name="downloadedField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="downloadedField.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="downloadedField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;downloadedField.Name" xml:space="preserve">
+    <value>downloadedField</value>
+  </data>
+  <data name="&gt;&gt;downloadedField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;downloadedField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadedField.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="downloadedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="downloadedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="downloadedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="downloadedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="downloadedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="downloadedLabel.Text" xml:space="preserve">
+    <value>Downloaded:</value>
+  </data>
+  <data name="&gt;&gt;downloadedLabel.Name" xml:space="preserve">
+    <value>downloadedLabel</value>
+  </data>
+  <data name="&gt;&gt;downloadedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;downloadedLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;downloadedLabel.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="piecesInfoField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 16</value>
+  </data>
+  <data name="piecesInfoField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="piecesInfoField.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="piecesInfoField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoField.Name" xml:space="preserve">
+    <value>piecesInfoField</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoField.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="piecesInfoLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="piecesInfoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="piecesInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 16</value>
+  </data>
+  <data name="piecesInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="piecesInfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="piecesInfoLabel.Text" xml:space="preserve">
+    <value>Pieces:</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoLabel.Name" xml:space="preserve">
+    <value>piecesInfoLabel</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;piecesInfoLabel.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="remainingField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 16</value>
+  </data>
+  <data name="remainingField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="remainingField.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="remainingField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;remainingField.Name" xml:space="preserve">
+    <value>remainingField</value>
+  </data>
+  <data name="&gt;&gt;remainingField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;remainingField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;remainingField.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="remainingLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="remainingLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="remainingLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 16</value>
+  </data>
+  <data name="remainingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="remainingLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="remainingLabel.Text" xml:space="preserve">
+    <value>Remaining:</value>
+  </data>
+  <data name="&gt;&gt;remainingLabel.Name" xml:space="preserve">
+    <value>remainingLabel</value>
+  </data>
+  <data name="&gt;&gt;remainingLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;remainingLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;remainingLabel.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="timeElapsedField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="timeElapsedField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="timeElapsedField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="timeElapsedField.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="timeElapsedField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedField.Name" xml:space="preserve">
+    <value>timeElapsedField</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedField.Type" xml:space="preserve">
+    <value>TransmissionRemoteDotnet.SelectableLabel, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedField.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedField.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="timeElapsedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="timeElapsedLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="timeElapsedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="timeElapsedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="timeElapsedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="timeElapsedLabel.Text" xml:space="preserve">
+    <value>Time elapsed:</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedLabel.Name" xml:space="preserve">
+    <value>timeElapsedLabel</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedLabel.Parent" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;timeElapsedLabel.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="torrentNameGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="torrentNameGroupBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="torrentNameGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="torrentNameGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="torrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>830, 260</value>
+  </data>
+  <data name="torrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;torrentNameGroupBox.Name" xml:space="preserve">
+    <value>torrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;torrentNameGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;torrentNameGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;torrentNameGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>830, 260</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TorrentGeneralInfo</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
