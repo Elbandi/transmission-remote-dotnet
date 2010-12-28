@@ -821,6 +821,10 @@ namespace TransmissionRemoteDotnet
             {
                 DoCheckVersion(false);
             }
+            if (settings.AutoUpdateGeoip)
+            {
+                DoCheckGeoip(false);
+            }
             if (!settings.AutoConnect.Equals(""))
             {
                 Connect();
@@ -2184,6 +2188,53 @@ namespace TransmissionRemoteDotnet
             if (latestVersion.Length != 4)
                 throw new FormatException("Incorrect number format");
             e.Result = new Version(Int32.Parse(latestVersion[0]), Int32.Parse(latestVersion[1]), Int32.Parse(latestVersion[2]), Int32.Parse(latestVersion[3]));
+        }
+
+        private void updateGeoipDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoCheckGeoip(true);
+        }
+
+        private void DoCheckGeoip(bool alwaysnotify)
+        {
+            Directory.CreateDirectory(Toolbox.GetApplicationData());
+            TransmissionWebClient client = new TransmissionWebClient(false, false);
+            client.DownloadFileCompleted += delegate(object sender, AsyncCompletedEventArgs e)
+            {
+                geoip_DownloadFileCompleted(e, alwaysnotify);
+            };
+            client.DownloadFileAsync(new Uri("http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"), Toolbox.LocateFile(GeoIPCountry.GEOIP_DATABASE_FILE + ".tmp", false, Toolbox.GetApplicationData()));
+        }
+
+        void geoip_DownloadFileCompleted(AsyncCompletedEventArgs e, bool alwaysnotify)
+        {
+            if (!e.Cancelled)
+            {
+                try
+                {
+                    if (e.Error != null)
+                    {
+                        throw e.Error;
+                    }
+                    else
+                    {
+                        string dest = Toolbox.LocateFile(GeoIPCountry.GEOIP_DATABASE_FILE, false, Toolbox.GetApplicationData());
+                        if (File.Exists(dest))
+                        {
+                            File.Delete(dest);
+                        }
+                        File.Move(Toolbox.LocateFile(GeoIPCountry.GEOIP_DATABASE_FILE + ".tmp", false, Toolbox.GetApplicationData()), dest);
+                        GeoIPCountry.ReOpen();
+                        if (alwaysnotify)
+                            MessageBox.Show(OtherStrings.GeoipDatabaseUpdateCompleted, OtherStrings.GeoipDatabase, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ee)
+                {
+                    if (alwaysnotify)
+                        MessageBox.Show(ee.Message, OtherStrings.GeoipDatabaseUpdateFailed, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void showDetailsPanelToolStripMenuItem_Click(object sender, EventArgs e)

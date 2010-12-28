@@ -184,6 +184,8 @@ namespace TransmissionRemoteDotnet
             this.addTorrentWithOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addTorrentFromUrlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileMenuToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.updateGeoipDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileMenuToolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1363,6 +1365,8 @@ namespace TransmissionRemoteDotnet
             this.addTorrentWithOptionsToolStripMenuItem,
             this.addTorrentFromUrlToolStripMenuItem,
             this.fileMenuToolStripSeparator2,
+            this.updateGeoipDatabaseToolStripMenuItem,
+            this.fileMenuToolStripSeparator3,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
@@ -1412,6 +1416,18 @@ namespace TransmissionRemoteDotnet
             // 
             this.fileMenuToolStripSeparator2.Name = "fileMenuToolStripSeparator2";
             resources.ApplyResources(this.fileMenuToolStripSeparator2, "fileMenuToolStripSeparator2");
+            // 
+            // updateGeoipDatabaseToolStripMenuItem
+            // 
+            this.updateGeoipDatabaseToolStripMenuItem.Image = global::TransmissionRemoteDotnet.Properties.Resources.maxmind;
+            this.updateGeoipDatabaseToolStripMenuItem.Name = "updateGeoipDatabaseToolStripMenuItem";
+            resources.ApplyResources(this.updateGeoipDatabaseToolStripMenuItem, "updateGeoipDatabaseToolStripMenuItem");
+            this.updateGeoipDatabaseToolStripMenuItem.Click += new System.EventHandler(this.updateGeoipDatabaseToolStripMenuItem_Click);
+            // 
+            // fileMenuToolStripSeparator3
+            // 
+            this.fileMenuToolStripSeparator3.Name = "fileMenuToolStripSeparator3";
+            resources.ApplyResources(this.fileMenuToolStripSeparator3, "fileMenuToolStripSeparator3");
             // 
             // exitToolStripMenuItem
             // 
@@ -1831,6 +1847,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem addTorrentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTorrentFromUrlToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator fileMenuToolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator fileMenuToolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem updateGeoipDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.ToolStripSplitButton connectButton;
         public System.Windows.Forms.Timer refreshTimer;

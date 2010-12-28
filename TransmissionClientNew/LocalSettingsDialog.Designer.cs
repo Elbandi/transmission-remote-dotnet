@@ -61,6 +61,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.AutoUpdateGeoipCheckBox = new System.Windows.Forms.CheckBox();
             this.TrayGroupBox = new System.Windows.Forms.GroupBox();
             this.ColorTrayIconCheckBox = new System.Windows.Forms.CheckBox();
             this.notificationOnCompletionCheckBox = new System.Windows.Forms.CheckBox();
@@ -287,6 +288,7 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.AutoUpdateGeoipCheckBox);
             this.groupBehavior.Controls.Add(this.TrayGroupBox);
             this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
             this.groupBehavior.Controls.Add(this.UpdateToBetaCheckBox);
@@ -299,6 +301,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // AutoUpdateGeoipCheckBox
+            // 
+            resources.ApplyResources(this.AutoUpdateGeoipCheckBox, "AutoUpdateGeoipCheckBox");
+            this.AutoUpdateGeoipCheckBox.Name = "AutoUpdateGeoipCheckBox";
+            this.AutoUpdateGeoipCheckBox.UseVisualStyleBackColor = true;
             // 
             // TrayGroupBox
             // 
@@ -1207,6 +1215,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox StartPausedCheckBox;
         private System.Windows.Forms.CheckBox AutoCheckUpdateCheckBox;
         private System.Windows.Forms.CheckBox UpdateToBetaCheckBox;
+        private System.Windows.Forms.CheckBox AutoUpdateGeoipCheckBox;
         private System.Windows.Forms.CheckBox DeleteTorrentCheckBox;
         private System.Windows.Forms.ComboBox defaultActionComboBox;
         private System.Windows.Forms.Label defaultActionLabel;

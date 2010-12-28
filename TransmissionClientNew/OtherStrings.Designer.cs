@@ -430,6 +430,33 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Geoip database.
+        /// </summary>
+        internal static string GeoipDatabase {
+            get {
+                return ResourceManager.GetString("GeoipDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geoip database update completed.
+        /// </summary>
+        internal static string GeoipDatabaseUpdateCompleted {
+            get {
+                return ResourceManager.GetString("GeoipDatabaseUpdateCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GeoIP database update failed.
+        /// </summary>
+        internal static string GeoipDatabaseUpdateFailed {
+            get {
+                return ResourceManager.GetString("GeoipDatabaseUpdateFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GeoIP init error ({0}).
         /// </summary>
         internal static string GeoipInitError {

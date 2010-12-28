@@ -544,4 +544,13 @@
   <data name="TrackerExists" xml:space="preserve">
     <value>Tracker already exists</value>
   </data>
+  <data name="GeoipDatabaseUpdateFailed" xml:space="preserve">
+    <value>GeoIP database update failed</value>
+  </data>
+  <data name="GeoipDatabase" xml:space="preserve">
+    <value>Geoip database</value>
+  </data>
+  <data name="GeoipDatabaseUpdateCompleted" xml:space="preserve">
+    <value>Geoip database update completed</value>
+  </data>
 </root>

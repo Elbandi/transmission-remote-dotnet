@@ -157,7 +157,7 @@ namespace MaxMind
             disabled = false;
         }
 
-        private const string GEOIP_DATABASE_FILE = "GeoIP.dat";
+        public const string GEOIP_DATABASE_FILE = "GeoIP.dat";
 
         private GeoIPCountry()
         {
