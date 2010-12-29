@@ -124,12 +124,18 @@
   <data name="generalTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="errorField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="errorField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 187</value>
   </data>
+  <data name="errorField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="errorField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="errorField.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -183,11 +189,17 @@
   <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="commentField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="commentField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 187</value>
   </data>
+  <data name="commentField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="commentField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 13</value>
+    <value>439, 13</value>
   </data>
   <data name="commentField.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -237,11 +249,17 @@
   <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="createdByField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="createdByField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 169</value>
   </data>
+  <data name="createdByField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="createdByField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="createdByField.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -291,11 +309,17 @@
   <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="hashField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="hashField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 169</value>
   </data>
+  <data name="hashField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="hashField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 13</value>
+    <value>439, 13</value>
   </data>
   <data name="hashField.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -345,11 +369,17 @@
   <data name="&gt;&gt;hashLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="createdAtField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="createdAtField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 151</value>
   </data>
+  <data name="createdAtField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="createdAtField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="createdAtField.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -399,11 +429,17 @@
   <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="totalSizeField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="totalSizeField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 151</value>
   </data>
+  <data name="totalSizeField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="totalSizeField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 13</value>
+    <value>439, 13</value>
   </data>
   <data name="totalSizeField.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -453,11 +489,17 @@
   <data name="&gt;&gt;totalSizeLabel.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="startedAtField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="startedAtField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 133</value>
   </data>
+  <data name="startedAtField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="startedAtField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="startedAtField.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -507,11 +549,17 @@
   <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="locationField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="locationField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 133</value>
   </data>
+  <data name="locationField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="locationField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 13</value>
+    <value>439, 13</value>
   </data>
   <data name="locationField.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -600,11 +648,17 @@
   <data name="&gt;&gt;generalLabel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="statusField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="statusField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 95</value>
   </data>
+  <data name="statusField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="statusField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>439, 13</value>
   </data>
   <data name="statusField.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -654,11 +708,17 @@
   <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="ratioField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="ratioField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 77</value>
   </data>
+  <data name="ratioField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="ratioField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="ratioField.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -708,11 +768,17 @@
   <data name="&gt;&gt;ratioLabel.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="uploadLimitField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="uploadLimitField.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 77</value>
   </data>
+  <data name="uploadLimitField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="uploadLimitField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="uploadLimitField.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -762,11 +828,17 @@
   <data name="&gt;&gt;uploadLimitLabel.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="downloadLimitField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="downloadLimitField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 77</value>
   </data>
+  <data name="downloadLimitField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="downloadLimitField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="downloadLimitField.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -816,11 +888,17 @@
   <data name="&gt;&gt;downloadLimitLabel.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="leechersField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="leechersField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 59</value>
   </data>
+  <data name="leechersField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="leechersField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="leechersField.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -870,11 +948,17 @@
   <data name="&gt;&gt;leechersLabel.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="uploadSpeedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="uploadSpeedField.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 59</value>
   </data>
+  <data name="uploadSpeedField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="uploadSpeedField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="uploadSpeedField.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -924,11 +1008,17 @@
   <data name="&gt;&gt;uploadSpeedLabel.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
+  <data name="downloadSpeedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="downloadSpeedField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 59</value>
   </data>
+  <data name="downloadSpeedField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="downloadSpeedField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="downloadSpeedField.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -978,11 +1068,17 @@
   <data name="&gt;&gt;downloadSpeedLabel.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
+  <data name="seedersField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="seedersField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 41</value>
   </data>
+  <data name="seedersField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="seedersField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="seedersField.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1032,11 +1128,17 @@
   <data name="&gt;&gt;seedersLabel.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <data name="uploadedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="uploadedField.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 41</value>
   </data>
+  <data name="uploadedField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="uploadedField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="uploadedField.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1086,11 +1188,17 @@
   <data name="&gt;&gt;uploadedLabel.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
+  <data name="downloadedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="downloadedField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 41</value>
   </data>
+  <data name="downloadedField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="downloadedField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="downloadedField.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1140,11 +1248,17 @@
   <data name="&gt;&gt;downloadedLabel.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
+  <data name="piecesInfoField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="piecesInfoField.Location" type="System.Drawing.Point, System.Drawing">
     <value>641, 23</value>
   </data>
+  <data name="piecesInfoField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="piecesInfoField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>167, 13</value>
   </data>
   <data name="piecesInfoField.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1194,11 +1308,17 @@
   <data name="&gt;&gt;piecesInfoLabel.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
+  <data name="remainingField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="remainingField.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 23</value>
   </data>
+  <data name="remainingField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="remainingField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="remainingField.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1248,14 +1368,20 @@
   <data name="&gt;&gt;remainingLabel.ZOrder" xml:space="preserve">
     <value>40</value>
   </data>
+  <data name="timeElapsedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="timeElapsedField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="timeElapsedField.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 23</value>
   </data>
+  <data name="timeElapsedField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 16, 3</value>
+  </data>
   <data name="timeElapsedField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>165, 13</value>
   </data>
   <data name="timeElapsedField.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
