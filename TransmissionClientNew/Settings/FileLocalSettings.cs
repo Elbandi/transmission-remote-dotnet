@@ -12,7 +12,7 @@ namespace TransmissionRemoteDotnet.Settings
         private const string CONF_FILE = @"settings.json";
         public override JsonObject Load()
         {
-            return Load(Toolbox.SupportFilePath(CONF_FILE));
+            return Load(Toolbox.LocateFile(CONF_FILE));
         }
 
         public JsonObject Load(string Filename)
@@ -32,7 +32,7 @@ namespace TransmissionRemoteDotnet.Settings
 
         public override bool Save(JsonObject s)
         {
-            return Save(Toolbox.SupportFilePath(CONF_FILE), s);
+            return Save(Toolbox.LocateFile(CONF_FILE, false), s);
         }
 
         public bool Save(string Filename, JsonObject s)

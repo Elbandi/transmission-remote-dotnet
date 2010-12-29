@@ -214,6 +214,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap maxmind {
+            get {
+                object obj = ResourceManager.GetObject("maxmind", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap net_add {
             get {
                 object obj = ResourceManager.GetObject("net_add", resourceCulture);

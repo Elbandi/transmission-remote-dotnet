@@ -105,14 +105,6 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public static string AssemblyLocation
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().Location;
-            }
-        }
-
         public static Version AssemblyVersion
         {
             get

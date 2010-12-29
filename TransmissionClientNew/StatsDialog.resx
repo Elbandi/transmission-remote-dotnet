@@ -1060,6 +1060,6 @@
     <value>StatsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.23.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CultureForm, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -104,6 +104,14 @@ namespace TransmissionRemoteDotnet
                 {
                     encryptionCombobox.SelectedIndex = 0;
                 }
+                if (cacheSizeValue.Enabled = session.Contains(ProtocolConstants.FIELD_CACHESIZE))
+                {
+                    SetNumeric(cacheSizeValue, Toolbox.ToInt(session[ProtocolConstants.FIELD_CACHESIZE]), 2);
+                }
+                if (blocklistUrlField.Enabled = session.Contains(ProtocolConstants.FIELD_BLOCKLISTURL))
+                {
+                    blocklistUrlField.Text = (string)session[ProtocolConstants.FIELD_BLOCKLISTURL];
+                }
                 // peer limit
                 if (session.Contains(ProtocolConstants.FIELD_PEERLIMIT))
                 {
@@ -161,10 +169,20 @@ namespace TransmissionRemoteDotnet
                     SetNumeric(seedLimitUpDown, Toolbox.ToDecimal(session[ProtocolConstants.FIELD_SEEDRATIOLIMIT]), 1);
                     seedLimitUpDown.Enabled = seedRatioEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_SEEDRATIOLIMITED]);
                 }
+                if (seedIdleEnabledCheckBox.Enabled = seedIdleLimitUpDown.Enabled = session.Contains(ProtocolConstants.FIELD_IDLESEEDLIMITENABLED))
+                {
+                    SetNumeric(seedIdleLimitUpDown, Toolbox.ToDecimal(session[ProtocolConstants.FIELD_IDLESEEDLIMIT]), 1);
+                    seedIdleLimitUpDown.Enabled = seedIdleEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_IDLESEEDLIMITENABLED]);
+                }
                 if (incompleteToCheckBox.Enabled = incompleteToField.Enabled = session.Contains(ProtocolConstants.FIELD_INCOMPLETE_DIR))
                 {
                     incompleteToField.Text = (string)session[ProtocolConstants.FIELD_INCOMPLETE_DIR];
                     incompleteToField.Enabled = incompleteToCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED]);
+                }
+                if (watchdirCheckBox.Enabled = watchdirField.Enabled = session.Contains(ProtocolConstants.FIELD_WATCH_DIR))
+                {
+                    watchdirField.Text = (string)session[ProtocolConstants.FIELD_WATCH_DIR];
+                    watchdirField.Enabled = watchdirCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_WATCH_DIR_ENABLED]);
                 }
                 if (dhtEnabled.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
                 {
@@ -224,6 +242,14 @@ namespace TransmissionRemoteDotnet
             arguments.Put((string)PEXcheckBox.Tag, PEXcheckBox.Checked);
             arguments.Put((string)peerLimitValue.Tag, peerLimitValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PEERLIMITPERTORRENT, peerLimitTorrentValue.Value);
+            if (cacheSizeValue.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_CACHESIZE, cacheSizeValue.Value);
+            }
+            if (blocklistUrlField.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_BLOCKLISTURL, blocklistUrlField.Text);
+            }
             switch (encryptionCombobox.SelectedIndex)
             {
                 case 1:
@@ -261,10 +287,20 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMITED, seedRatioEnabledCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_SEEDRATIOLIMIT, seedLimitUpDown.Value);
             }
+            if (seedIdleEnabledCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_IDLESEEDLIMITENABLED, seedIdleEnabledCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_IDLESEEDLIMIT, seedIdleLimitUpDown.Value);
+            }
             if (incompleteToCheckBox.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR_ENABLED, incompleteToCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_INCOMPLETE_DIR, incompleteToField.Text);
+            }
+            if (watchdirCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_WATCH_DIR_ENABLED, watchdirCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_WATCH_DIR, watchdirField.Text);
             }
             if (dhtEnabled.Enabled)
             {
@@ -341,6 +377,11 @@ namespace TransmissionRemoteDotnet
             seedLimitUpDown.Enabled = seedRatioEnabledCheckBox.Checked;
         }
 
+        private void seedIdleEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            seedIdleLimitUpDown.Enabled = seedIdleEnabledCheckBox.Checked;
+        }
+
         private void testPortButton_Click(object sender, EventArgs e)
         {
             testPortButton.Enabled = false;
@@ -352,6 +393,11 @@ namespace TransmissionRemoteDotnet
         private void incompleteToCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             incompleteToField.Enabled = incompleteToCheckBox.Checked;
+        }
+
+        private void watchdirCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            watchdirField.Enabled = watchdirCheckBox.Checked;
         }
     }
 }

@@ -130,6 +130,7 @@ namespace TransmissionRemoteDotnet
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
             UpdateToBetaCheckBox.Checked = sett.UpdateToBeta;
+            AutoUpdateGeoipCheckBox.Checked = sett.AutoUpdateGeoip;
             DeleteTorrentCheckBox.Checked = sett.DeleteTorrentWhenAdding;
             DontSavePasswordsCheckBox.Checked = sett.DontSavePasswords;
             PlinkPathTextBox.Text = sett.PlinkPath;
@@ -137,7 +138,7 @@ namespace TransmissionRemoteDotnet
             infopanelImageBrowse.FileName = sett.InfopanelImagePath;
             toolbarImageBrowse.FileName = sett.ToolbarImagePath;
             trayImageBrowse.FileName = sett.TrayImagePath;
-            StartOnSystemCheckBox.Checked = Util.IsAutoStartEnabled(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
+            StartOnSystemCheckBox.Checked = Util.IsAutoStartEnabled(AboutDialog.AssemblyTitle, Toolbox.GetExecuteLocation());
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -161,6 +162,7 @@ namespace TransmissionRemoteDotnet
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
             sett.UpdateToBeta = UpdateToBetaCheckBox.Checked;
+            sett.AutoUpdateGeoip = AutoUpdateGeoipCheckBox.Checked;
             sett.DeleteTorrentWhenAdding = DeleteTorrentCheckBox.Checked;
             sett.DefaultDoubleClickAction = defaultActionComboBox.SelectedIndex;
             sett.PlinkPath = PlinkPathTextBox.Text;
@@ -190,7 +192,7 @@ namespace TransmissionRemoteDotnet
             }
             sett.Commit();
             if (StartOnSystemCheckBox.Checked)
-                Util.SetAutoStart(AboutDialog.AssemblyTitle, AboutDialog.AssemblyLocation);
+                Util.SetAutoStart(AboutDialog.AssemblyTitle, Toolbox.GetExecuteLocation());
             else
                 Util.UnSetAutoStart(AboutDialog.AssemblyTitle);
         }

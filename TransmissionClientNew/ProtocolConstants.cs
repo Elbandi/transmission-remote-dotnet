@@ -40,6 +40,11 @@ namespace TransmissionRemoteDotnet
             TR_RATIOLIMIT_SINGLE = 1, /* override the global settings, seeding until a certain ratio */
             TR_RATIOLIMIT_UNLIMITED = 2;  /* override the global settings, seeding regardless of ratio */
 
+        public const int
+            TR_IDLELIMIT_GLOBAL = 0, /* follow the global settings */
+            TR_IDLELIMIT_SINGLE = 1, /* override the global settings, seeding until certain a idle time */
+            TR_IDLELIMIT_UNLIMITED = 2;  /* override the global settings, seeding regardless of activity */
+
         public const string
             KEY_TAG = "tag",
             KEY_METHOD = "method",
@@ -73,6 +78,8 @@ namespace TransmissionRemoteDotnet
             FIELD_HONORSSESSIONLIMITS = "honorsSessionLimits",
             FIELD_INCOMPLETE_DIR = "incomplete-dir",
             FIELD_INCOMPLETE_DIR_ENABLED = "incomplete-dir-enabled",
+            FIELD_WATCH_DIR = "watch-dir",
+            FIELD_WATCH_DIR_ENABLED = "watch-dir-enabled",
             FIELD_METAINFO = "metainfo",
             FIELD_CLIENTNAME = "clientName",
             FIELD_HAVEUNCHECKED = "haveUnchecked",
@@ -105,6 +112,9 @@ namespace TransmissionRemoteDotnet
             FIELD_WANTED = "wanted",
             FIELD_TRACKERS = "trackers",
             FIELD_TRACKERSTATS = "trackerStats",
+            FIELD_TRACKER_ADD = "trackerAdd",
+            FIELD_TRACKER_REMOVE = "trackerRemove",
+            FIELD_TRACKER_REPLACE = "trackerReplace",
             FIELD_IDENTIFIER = "id",
             FIELD_PEERS = "peers",
             FIELD_SIZEWHENDONE = "sizeWhenDone",
@@ -115,6 +125,8 @@ namespace TransmissionRemoteDotnet
             FIELD_BYTESCOMPLETED = "bytesCompleted",
             FIELD_DELETELOCALDATA = "delete-local-data",
             FIELD_MAXCONNECTEDPEERS = "maxConnectedPeers",
+            FIELD_CACHESIZE = "cache-size-mb",
+            FIELD_BLOCKLISTURL = "blocklist-url",
             FIELD_CREATOR = "creator",
             FIELD_SWARMSPEED = "swarmSpeed",
             FIELD_DATECREATED = "dateCreated",
@@ -124,6 +136,10 @@ namespace TransmissionRemoteDotnet
             FIELD_SEEDRATIOLIMIT = "seedRatioLimit",
             FIELD_SEEDRATIOMODE = "seedRatioMode",
             FIELD_SEEDRATIOLIMITED = "seedRatioLimited", // session-set/get
+            FIELD_SEEDIDLELIMIT = "seedIdleLimit",
+            FIELD_SEEDIDLEMODE = "seedIdleMode",
+            FIELD_IDLESEEDLIMIT = "idle-seeding-limit",
+            FIELD_IDLESEEDLIMITENABLED = "idle-seeding-limit-enabled",
             VALUE_RECENTLY_ACTIVE = "recently-active",
             /* BEGIN CONFUSION */
             FIELD_DOWNLOADLIMITMODE = "downloadLimitMode", // DEPRECATED
