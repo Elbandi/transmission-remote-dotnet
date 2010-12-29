@@ -122,20 +122,21 @@
     <value>True</value>
   </data>
   <data name="generalTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>9</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="errorField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="errorField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 187</value>
+    <value>551, 187</value>
   </data>
   <data name="errorField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 16, 3</value>
   </data>
   <data name="errorField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 13</value>
+    <value>257, 13</value>
   </data>
   <data name="errorField.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -155,40 +156,6 @@
   <data name="&gt;&gt;errorField.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="errorLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="errorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 184</value>
-  </data>
-  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="errorLabel.Text" xml:space="preserve">
-    <value>Error:</value>
-  </data>
-  <data name="errorLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;errorLabel.Name" xml:space="preserve">
-    <value>errorLabel</value>
-  </data>
-  <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorLabel.Parent" xml:space="preserve">
-    <value>generalTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="commentField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -199,7 +166,7 @@
     <value>3, 3, 16, 3</value>
   </data>
   <data name="commentField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 13</value>
+    <value>349, 13</value>
   </data>
   <data name="commentField.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -217,7 +184,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;commentField.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="commentLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -247,19 +214,19 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="createdByField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="createdByField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 169</value>
+    <value>551, 169</value>
   </data>
   <data name="createdByField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 16, 3</value>
   </data>
   <data name="createdByField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 13</value>
+    <value>257, 13</value>
   </data>
   <data name="createdByField.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -277,37 +244,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;createdByField.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="createdByLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="createdByLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 166</value>
-  </data>
-  <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="createdByLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="createdByLabel.Text" xml:space="preserve">
-    <value>Created by:</value>
-  </data>
-  <data name="&gt;&gt;createdByLabel.Name" xml:space="preserve">
-    <value>createdByLabel</value>
-  </data>
-  <data name="&gt;&gt;createdByLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;createdByLabel.Parent" xml:space="preserve">
-    <value>generalTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="hashField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -319,7 +256,7 @@
     <value>3, 3, 16, 3</value>
   </data>
   <data name="hashField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 13</value>
+    <value>349, 13</value>
   </data>
   <data name="hashField.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -337,7 +274,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;hashField.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="hashLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -367,19 +304,19 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;hashLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="createdAtField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="createdAtField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 151</value>
+    <value>551, 151</value>
   </data>
   <data name="createdAtField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 16, 3</value>
   </data>
   <data name="createdAtField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 13</value>
+    <value>257, 13</value>
   </data>
   <data name="createdAtField.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -397,37 +334,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;createdAtField.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="createdAtLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="createdAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 148</value>
-  </data>
-  <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="createdAtLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="createdAtLabel.Text" xml:space="preserve">
-    <value>Created at:</value>
-  </data>
-  <data name="&gt;&gt;createdAtLabel.Name" xml:space="preserve">
-    <value>createdAtLabel</value>
-  </data>
-  <data name="&gt;&gt;createdAtLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;createdAtLabel.Parent" xml:space="preserve">
-    <value>generalTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="totalSizeField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -439,7 +346,7 @@
     <value>3, 3, 16, 3</value>
   </data>
   <data name="totalSizeField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 13</value>
+    <value>349, 13</value>
   </data>
   <data name="totalSizeField.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -457,7 +364,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;totalSizeField.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="totalSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -487,19 +394,19 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;totalSizeLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="startedAtField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="startedAtField.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 133</value>
+    <value>551, 133</value>
   </data>
   <data name="startedAtField.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 16, 3</value>
   </data>
   <data name="startedAtField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 13</value>
+    <value>257, 13</value>
   </data>
   <data name="startedAtField.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -517,37 +424,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;startedAtField.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="startedAtLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="startedAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 130</value>
-  </data>
-  <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="startedAtLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="startedAtLabel.Text" xml:space="preserve">
-    <value>Started At:</value>
-  </data>
-  <data name="&gt;&gt;startedAtLabel.Name" xml:space="preserve">
-    <value>startedAtLabel</value>
-  </data>
-  <data name="&gt;&gt;startedAtLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startedAtLabel.Parent" xml:space="preserve">
-    <value>generalTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>9</value>
   </data>
   <data name="locationField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -559,7 +436,7 @@
     <value>3, 3, 16, 3</value>
   </data>
   <data name="locationField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 13</value>
+    <value>349, 13</value>
   </data>
   <data name="locationField.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -577,7 +454,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;locationField.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>10</value>
   </data>
   <data name="locationLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -607,7 +484,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;locationLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>11</value>
   </data>
   <data name="generalLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -646,7 +523,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;generalLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>12</value>
   </data>
   <data name="statusField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -658,7 +535,7 @@
     <value>3, 3, 16, 3</value>
   </data>
   <data name="statusField.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 13</value>
+    <value>349, 13</value>
   </data>
   <data name="statusField.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -676,7 +553,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;statusField.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>13</value>
   </data>
   <data name="statusLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -706,7 +583,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;statusLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>14</value>
   </data>
   <data name="ratioField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -736,7 +613,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ratioField.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>15</value>
   </data>
   <data name="ratioLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -766,7 +643,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ratioLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>16</value>
   </data>
   <data name="uploadLimitField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -796,7 +673,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadLimitField.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>17</value>
   </data>
   <data name="uploadLimitLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -826,7 +703,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadLimitLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>18</value>
   </data>
   <data name="downloadLimitField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -856,7 +733,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadLimitField.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>19</value>
   </data>
   <data name="downloadLimitLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -886,7 +763,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadLimitLabel.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>20</value>
   </data>
   <data name="leechersField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -916,7 +793,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;leechersField.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>21</value>
   </data>
   <data name="leechersLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -946,7 +823,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;leechersLabel.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>22</value>
   </data>
   <data name="uploadSpeedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -976,7 +853,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadSpeedField.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>23</value>
   </data>
   <data name="uploadSpeedLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1006,7 +883,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadSpeedLabel.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>24</value>
   </data>
   <data name="downloadSpeedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1036,7 +913,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadSpeedField.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>25</value>
   </data>
   <data name="downloadSpeedLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1066,7 +943,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadSpeedLabel.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>26</value>
   </data>
   <data name="seedersField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1096,7 +973,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;seedersField.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>27</value>
   </data>
   <data name="seedersLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1126,7 +1003,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;seedersLabel.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>28</value>
   </data>
   <data name="uploadedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1156,7 +1033,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadedField.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>29</value>
   </data>
   <data name="uploadedLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1186,7 +1063,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;uploadedLabel.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>30</value>
   </data>
   <data name="downloadedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1216,7 +1093,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadedField.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>31</value>
   </data>
   <data name="downloadedLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1246,7 +1123,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;downloadedLabel.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>32</value>
   </data>
   <data name="piecesInfoField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1276,7 +1153,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;piecesInfoField.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>33</value>
   </data>
   <data name="piecesInfoLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1306,7 +1183,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;piecesInfoLabel.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>34</value>
   </data>
   <data name="remainingField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1336,7 +1213,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;remainingField.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>35</value>
   </data>
   <data name="remainingLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1366,7 +1243,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;remainingLabel.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>36</value>
   </data>
   <data name="timeElapsedField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1399,7 +1276,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;timeElapsedField.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>37</value>
   </data>
   <data name="timeElapsedLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1429,7 +1306,7 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;timeElapsedLabel.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>38</value>
   </data>
   <data name="transferLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1468,6 +1345,129 @@
     <value>generalTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;transferLabel.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="startedAtLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="startedAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="startedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 130</value>
+  </data>
+  <data name="startedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="startedAtLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="startedAtLabel.Text" xml:space="preserve">
+    <value>Started At:</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Name" xml:space="preserve">
+    <value>startedAtLabel</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.Parent" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;startedAtLabel.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="createdAtLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="createdAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createdAtLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 148</value>
+  </data>
+  <data name="createdAtLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="createdAtLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="createdAtLabel.Text" xml:space="preserve">
+    <value>Created at:</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Name" xml:space="preserve">
+    <value>createdAtLabel</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.Parent" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;createdAtLabel.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="createdByLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="createdByLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createdByLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 166</value>
+  </data>
+  <data name="createdByLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="createdByLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="createdByLabel.Text" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Name" xml:space="preserve">
+    <value>createdByLabel</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.Parent" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;createdByLabel.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="errorLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="errorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="errorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 184</value>
+  </data>
+  <data name="errorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="errorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="errorLabel.Text" xml:space="preserve">
+    <value>Error:</value>
+  </data>
+  <data name="errorLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Name" xml:space="preserve">
+    <value>errorLabel</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.Parent" xml:space="preserve">
+    <value>generalTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;errorLabel.ZOrder" xml:space="preserve">
     <value>43</value>
   </data>
   <data name="generalTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1498,7 +1498,7 @@
     <value>0</value>
   </data>
   <data name="generalTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="errorField" Row="10" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="errorLabel" Row="10" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="commentField" Row="10" RowSpan="1" Column="1" ColumnSpan="3" /&gt;&lt;Control Name="commentLabel" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdByField" Row="9" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="createdByLabel" Row="9" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="hashField" Row="9" RowSpan="1" Column="1" ColumnSpan="3" /&gt;&lt;Control Name="hashLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdAtField" Row="8" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="createdAtLabel" Row="8" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="totalSizeField" Row="8" RowSpan="1" Column="1" ColumnSpan="3" /&gt;&lt;Control Name="totalSizeLabel" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="startedAtField" Row="7" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="startedAtLabel" Row="7" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="locationField" Row="7" RowSpan="1" Column="1" ColumnSpan="3" /&gt;&lt;Control Name="locationLabel" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="generalLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="6" /&gt;&lt;Control Name="statusField" Row="5" RowSpan="1" Column="1" ColumnSpan="3" /&gt;&lt;Control Name="statusLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ratioField" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="ratioLabel" Row="4" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="uploadLimitField" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="uploadLimitLabel" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="downloadLimitField" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="downloadLimitLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="leechersField" Row="3" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="leechersLabel" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="uploadSpeedField" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="uploadSpeedLabel" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="downloadSpeedField" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="downloadSpeedLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="seedersField" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="seedersLabel" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="uploadedField" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="uploadedLabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="downloadedField" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="downloadedLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="piecesInfoField" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="piecesInfoLabel" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="remainingField" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="remainingLabel" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="timeElapsedField" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="timeElapsedLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="transferLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="6" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,90,Percent,33,33333,Absolute,90,Percent,33,33333,Absolute,90,Percent,33,33333" /&gt;&lt;Rows Styles="Absolute,20,Absolute,18,Absolute,18,Absolute,18,Absolute,18,Absolute,18,Absolute,20,Absolute,18,Absolute,18,Absolute,18,Absolute,18" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="errorField" Row="10" RowSpan="1" Column="6" ColumnSpan="3" /&gt;&lt;Control Name="commentField" Row="10" RowSpan="1" Column="1" ColumnSpan="4" /&gt;&lt;Control Name="commentLabel" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdByField" Row="9" RowSpan="1" Column="6" ColumnSpan="3" /&gt;&lt;Control Name="hashField" Row="9" RowSpan="1" Column="1" ColumnSpan="4" /&gt;&lt;Control Name="hashLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdAtField" Row="8" RowSpan="1" Column="6" ColumnSpan="3" /&gt;&lt;Control Name="totalSizeField" Row="8" RowSpan="1" Column="1" ColumnSpan="4" /&gt;&lt;Control Name="totalSizeLabel" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="startedAtField" Row="7" RowSpan="1" Column="6" ColumnSpan="3" /&gt;&lt;Control Name="locationField" Row="7" RowSpan="1" Column="1" ColumnSpan="4" /&gt;&lt;Control Name="locationLabel" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="generalLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="9" /&gt;&lt;Control Name="statusField" Row="5" RowSpan="1" Column="1" ColumnSpan="4" /&gt;&lt;Control Name="statusLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ratioField" Row="4" RowSpan="1" Column="7" ColumnSpan="2" /&gt;&lt;Control Name="ratioLabel" Row="4" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="uploadLimitField" Row="4" RowSpan="1" Column="4" ColumnSpan="2" /&gt;&lt;Control Name="uploadLimitLabel" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="downloadLimitField" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="downloadLimitLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="leechersField" Row="3" RowSpan="1" Column="7" ColumnSpan="2" /&gt;&lt;Control Name="leechersLabel" Row="3" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="uploadSpeedField" Row="3" RowSpan="1" Column="4" ColumnSpan="2" /&gt;&lt;Control Name="uploadSpeedLabel" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="downloadSpeedField" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="downloadSpeedLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="seedersField" Row="2" RowSpan="1" Column="7" ColumnSpan="2" /&gt;&lt;Control Name="seedersLabel" Row="2" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="uploadedField" Row="2" RowSpan="1" Column="4" ColumnSpan="2" /&gt;&lt;Control Name="uploadedLabel" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="downloadedField" Row="2" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="downloadedLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="piecesInfoField" Row="1" RowSpan="1" Column="7" ColumnSpan="2" /&gt;&lt;Control Name="piecesInfoLabel" Row="1" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="remainingField" Row="1" RowSpan="1" Column="4" ColumnSpan="2" /&gt;&lt;Control Name="remainingLabel" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="timeElapsedField" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="timeElapsedLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="transferLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="9" /&gt;&lt;Control Name="startedAtLabel" Row="7" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="createdAtLabel" Row="8" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="createdByLabel" Row="9" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="errorLabel" Row="10" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,90,Percent,33,33333,Absolute,90,Absolute,90,Percent,33,33333,Absolute,90,Absolute,90,Percent,33,33333,Absolute,92" /&gt;&lt;Rows Styles="Absolute,20,Absolute,18,Absolute,18,Absolute,18,Absolute,18,Absolute,18,Absolute,20,Absolute,18,Absolute,18,Absolute,18,Absolute,18" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="torrentNameGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
