@@ -301,9 +301,10 @@ namespace TransmissionRemoteDotnet
         private void AddShareButton_Click(object sender, EventArgs e)
         {
             string UnixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/").Replace(Path.DirectorySeparatorChar, '/');
+            string SambaShare = SambaShareTextBox.Text.Replace('/', Path.DirectorySeparatorChar);
             if (!listSambaShareMappings.Items.Contains(UnixPath))
             {
-                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShareTextBox.Text));
+                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShare));
                 UnixPathPrefixTextBox.Clear();
                 SambaShareTextBox.Clear();
             }
