@@ -1740,6 +1740,24 @@
   <data name="RssButton.Text" xml:space="preserve">
     <value>Rss Downloader</value>
   </data>
+  <data name="FilterTorrentClearButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FilterTorrentClearButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="FilterTorrentClearButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="FilterTorrentClearButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="FilterTorrentClearButton.ToolTipText" xml:space="preserve">
+    <value>Clear filter</value>
+  </data>
+  <data name="FilterTorrentClearButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="FilterTorrentTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>256</value>
   </data>
@@ -2960,6 +2978,12 @@
     <value>RssButton</value>
   </data>
   <data name="&gt;&gt;RssButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentClearButton.Name" xml:space="preserve">
+    <value>FilterTorrentClearButton</value>
+  </data>
+  <data name="&gt;&gt;FilterTorrentClearButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FilterTorrentTextBox.Name" xml:space="preserve">

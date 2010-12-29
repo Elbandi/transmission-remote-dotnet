@@ -131,6 +131,7 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
             this.toolbarToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.RssButton = new System.Windows.Forms.ToolStripButton();
+            this.FilterTorrentClearButton = new System.Windows.Forms.ToolStripButton();
             this.FilterTorrentTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.FilterTorrentLabel = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -822,6 +823,7 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton,
             this.toolbarToolStripSeparator5,
             this.RssButton,
+            this.FilterTorrentClearButton,
             this.FilterTorrentTextBox,
             this.FilterTorrentLabel});
             this.toolStrip.Name = "toolStrip";
@@ -1012,12 +1014,21 @@ namespace TransmissionRemoteDotnet
             this.RssButton.Name = "RssButton";
             this.RssButton.Click += new System.EventHandler(this.RssButton_Click);
             // 
+            // FilterTorrentClearButton
+            // 
+            this.FilterTorrentClearButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.FilterTorrentClearButton, "FilterTorrentClearButton");
+            this.FilterTorrentClearButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.FilterTorrentClearButton.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.FilterTorrentClearButton.Name = "FilterTorrentClearButton";
+            this.FilterTorrentClearButton.Click += new System.EventHandler(this.FilterTorrentClearButton_Click);
+            // 
             // FilterTorrentTextBox
             // 
             this.FilterTorrentTextBox.AcceptsTab = true;
             this.FilterTorrentTextBox.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.FilterTorrentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FilterTorrentTextBox.Margin = new System.Windows.Forms.Padding(1, 0, 4, 0);
+            this.FilterTorrentTextBox.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             resources.ApplyResources(this.FilterTorrentTextBox, "FilterTorrentTextBox");
             this.FilterTorrentTextBox.Name = "FilterTorrentTextBox";
             this.FilterTorrentTextBox.TextChanged += new System.EventHandler(this.FilterTorrentTextBox_TextChanged);
@@ -1634,6 +1645,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripButton RssButton;
         private System.Windows.Forms.ToolStripTextBox FilterTorrentTextBox;
         private System.Windows.Forms.ToolStripLabel FilterTorrentLabel;
+        private System.Windows.Forms.ToolStripButton FilterTorrentClearButton;
         private System.Windows.Forms.OpenFileDialog openTorrentFileDialog;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator torrentMenuToolStripSeparator1;

@@ -612,6 +612,7 @@ namespace TransmissionRemoteDotnet
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
+                = FilterTorrentClearButton.Visible
                 = connected;
             SetRemoteCmdButtonVisible(connected);
             taskbar.SetConnected(connected);
@@ -1538,6 +1539,11 @@ namespace TransmissionRemoteDotnet
         private void FilterTorrentTextBox_TextChanged(object sender, EventArgs e)
         {
             FilterByStateOrTracker();
+        }
+
+        private void FilterTorrentClearButton_Click(object sender, EventArgs e)
+        {
+            FilterTorrentTextBox.Clear();
         }
 
         static bool FilteringProcess = false;
