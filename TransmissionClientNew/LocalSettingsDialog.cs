@@ -505,5 +505,11 @@ namespace TransmissionRemoteDotnet
         {
             listRssFeeds.Items.Remove(listRssFeeds.SelectedItems[0]);
         }
+
+        private void ClearDestPathHistoryButton_Click(object sender, EventArgs e)
+        {
+            TransmissionServer ts = current.Tag as TransmissionServer;
+            ts.ClearDestPathHistory();
+        }
     }
 }

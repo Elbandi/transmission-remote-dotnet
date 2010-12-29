@@ -474,6 +474,12 @@ namespace TransmissionRemoteDotnet.Settings
                 destpathhistory.Add(path);
             }
         }
+
+        public void ClearDestPathHistory()
+        {
+            destpathhistory.Clear();
+        }
+
         public string[] DestPathHistory
         {
             get
