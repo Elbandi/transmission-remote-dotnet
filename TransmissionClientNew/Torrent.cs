@@ -462,7 +462,7 @@ namespace TransmissionRemoteDotnet
                     JsonObject tracker = (JsonObject)value[0];
                     Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
                     this.FirstTracker = announceUrl.Host;
-                    this.FirstTrackerTrimmed = Regex.Replace(Regex.Replace(Regex.Replace(announceUrl.Host, @"^tracker\.", "", RegexOptions.IgnoreCase), @"^www\.", "", RegexOptions.IgnoreCase), @"^torrent\.", "", RegexOptions.IgnoreCase);
+                    this.FirstTrackerTrimmed = Toolbox.GetDomainName(announceUrl.Host);
                 }
                 catch
                 {

@@ -526,6 +526,14 @@ namespace TransmissionRemoteDotnet
             }
         }
 
+        public static string GetDomainName(string domain)
+        {
+            string[] sectons = domain.Split(new char[] { '.' });
+            if (sectons.Length >= 3)
+                domain = string.Join(".", sectons, sectons.Length - 2, 2);
+            return domain;
+        }
+
         public static string MD5(string input)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
