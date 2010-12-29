@@ -369,7 +369,8 @@ namespace TransmissionRemoteDotnet
         {
             updateBlocklistButton.Enabled = true;
             updateBlocklistButton.Text = (string)updateBlocklistButton.Tag;
-            label15.Text = String.Format(OtherStrings.XInBlocklist, size);
+            if (size > 0)
+                label15.Text = String.Format(OtherStrings.XInBlocklist, size);
         }
 
         private void seedRatioEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
