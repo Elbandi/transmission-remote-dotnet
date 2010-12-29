@@ -628,7 +628,7 @@
     <value>3, 16</value>
   </data>
   <data name="trackersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 228</value>
+    <value>954, 248</value>
   </data>
   <data name="trackersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -652,7 +652,7 @@
     <value>3, 3</value>
   </data>
   <data name="trackersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 247</value>
+    <value>960, 267</value>
   </data>
   <data name="trackersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -676,7 +676,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="trackersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 253</value>
+    <value>966, 273</value>
   </data>
   <data name="trackersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -739,7 +739,7 @@
     <value>3, 16</value>
   </data>
   <data name="filesListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 228</value>
+    <value>954, 248</value>
   </data>
   <metadata name="fileIconImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>223, 17</value>
@@ -769,7 +769,7 @@
     <value>3, 3</value>
   </data>
   <data name="filesTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 247</value>
+    <value>960, 267</value>
   </data>
   <data name="filesTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -793,7 +793,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="filesTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 253</value>
+    <value>966, 273</value>
   </data>
   <data name="filesTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -865,7 +865,7 @@
     <value>3, 16</value>
   </data>
   <data name="peersListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 228</value>
+    <value>954, 248</value>
   </data>
   <data name="peersListView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -889,7 +889,7 @@
     <value>3, 3</value>
   </data>
   <data name="peersTorrentNameGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 247</value>
+    <value>960, 267</value>
   </data>
   <data name="peersTorrentNameGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -913,7 +913,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="peersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 253</value>
+    <value>966, 273</value>
   </data>
   <data name="peersTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1135,7 +1135,7 @@
     <value>0, 0</value>
   </data>
   <data name="speedGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 193</value>
+    <value>954, 213</value>
   </data>
   <data name="speedGraph.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1168,7 +1168,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 228</value>
+    <value>954, 248</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1195,7 +1195,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>960, 247</value>
+    <value>960, 267</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1222,7 +1222,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="speedTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 253</value>
+    <value>966, 273</value>
   </data>
   <data name="speedTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
