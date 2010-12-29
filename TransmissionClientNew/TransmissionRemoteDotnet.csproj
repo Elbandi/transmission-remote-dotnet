@@ -1012,6 +1012,7 @@
     <Compile Include="StatsDialog.Designer.cs">
       <DependentUpon>StatsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskbarHelper.cs" />
     <Compile Include="TCPSingleInstance.cs" />
     <Compile Include="Toolbox.cs" />
     <Compile Include="Torrent.cs" />
@@ -1173,6 +1174,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(SolutionDir)\GeoIP.dat" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(SolutionDir)\GeoIP.dat" "$(TargetDir)"
+copy /Y "$(ProjectDir)\WindowsAPICodePack\*.dll" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

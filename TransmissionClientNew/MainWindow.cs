@@ -77,6 +77,7 @@ namespace TransmissionRemoteDotnet
         private WebClient filesWebClient = new WebClient();
         private static FindDialog FindDialog;
         private List<Bitmap> defaulttoolbarimages, defaultstateimages, defaultinfopanelimages, defaulttrayimages;
+        private TaskbarHelper taskbar;
 
         public MainWindow()
         {
@@ -613,6 +614,7 @@ namespace TransmissionRemoteDotnet
                 = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
                 = connected;
             SetRemoteCmdButtonVisible(connected);
+            taskbar.SetConnected(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
@@ -703,9 +705,19 @@ namespace TransmissionRemoteDotnet
             Toolbox.CopyListViewToClipboard(peersListView);
         }
 
+        public void Perform_startAllMenuItem_Click()
+        {
+            startAllToolStripMenuItem.PerformClick();
+        }
+
         public void startAllMenuItem_Click(object sender, EventArgs e)
         {
             Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, null)));
+        }
+
+        public void Perform_stopAllMenuItem_Click()
+        {
+            stopAllToolStripMenuItem.PerformClick();
         }
 
         public void stopAllMenuItem_Click(object sender, EventArgs e)
@@ -805,6 +817,7 @@ namespace TransmissionRemoteDotnet
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            taskbar = new TaskbarHelper();
             LocalSettings settings = Program.Settings;
             if (notifyIcon.Visible = settings.MinToTray)
             {
@@ -904,6 +917,7 @@ namespace TransmissionRemoteDotnet
                 speedResComboBox.Items.Clear();
                 speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
                 speedResComboBox.SelectedIndex = Math.Min(oldindex, speedResComboBox.Items.Count - 1);
+                taskbar.ChangeUICulture();
                 filesListView_SelectedIndexChanged(null, null);
                 Program_onTorrentsUpdated(null, null);
                 this.Refresh();
@@ -1329,6 +1343,10 @@ namespace TransmissionRemoteDotnet
             long selectedDownloadedSize = 0;
             int selected = 0;
 
+            int totalPaused = 0;
+            int totalPausedFinished = 0;
+            decimal activePercentage = 0;
+
             lock (torrentListView)
             {
                 foreach (Torrent t in torrentListView.Items)
@@ -1347,6 +1365,17 @@ namespace TransmissionRemoteDotnet
                     if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
                     {
                         totalDownloading++;
+                        activePercentage += t.Percentage;
+                    }
+                    else if (t.StatusCode == ProtocolConstants.STATUS_PAUSED)
+                    {
+                        if (t.Percentage < 100)
+                        {
+                            totalPaused++;
+                            activePercentage += t.Percentage;
+                        }
+                        else
+                            totalPausedFinished++;
                     }
                     else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
                     {
@@ -1354,6 +1383,22 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
+            if (totalPaused + totalDownloading > 0)
+            {
+                if (totalDownloading == 0)
+                {
+                    taskbar.SetNormal(true);
+                }
+                else
+                    taskbar.SetNormal(false);
+
+                if (totalPaused + totalPausedFinished == totalTorrents)
+                    taskbar.SetPaused();
+
+                taskbar.UpdateProgress(activePercentage / (totalPaused + totalDownloading));
+            }
+            else
+                taskbar.SetNoProgress();
 
             return String.Format(
                 selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
@@ -1385,7 +1430,7 @@ namespace TransmissionRemoteDotnet
                 notifyIcon.Text = text.Length < 64 ? text : text.Substring(0, 63);
         }
 
-        private void addTorrentButton_Click(object sender, EventArgs e)
+        public void addTorrentButton_Click(object sender, EventArgs e)
         {
             if (Program.Connected)
             {
@@ -2552,6 +2597,11 @@ namespace TransmissionRemoteDotnet
                 decimal width = (decimal)e.Item.SubItems[5].Tag;
                 DrawSubItem(e, width, ((e.ItemState & ListViewItemStates.Focused) != 0) && (peersListView.SelectedItems.Count > 0));
             }
+        }
+
+        public string AddTorrentString
+        {
+            get { return addTorrentButton.Text; }
         }
     }
 }
