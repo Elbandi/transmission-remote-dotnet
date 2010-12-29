@@ -48,6 +48,8 @@ namespace TransmissionRemoteDotnet
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentPropertiesDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.seedIdleLimitValue = new System.Windows.Forms.NumericUpDown();
+            this.seedIdleLimitedCheckBox = new System.Windows.Forms.CheckBox();
             this.bandwidthComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.honorsSessionLimits = new System.Windows.Forms.CheckBox();
@@ -62,17 +64,22 @@ namespace TransmissionRemoteDotnet
             this.label2 = new System.Windows.Forms.Label();
             this.downloadLimitEnableField = new System.Windows.Forms.CheckBox();
             this.tabTrackers = new System.Windows.Forms.TabPage();
-            this.trackersList = new System.Windows.Forms.TextBox();
+            this.trackersList = new System.Windows.Forms.RefreshingListBox();
+            this.trackersButtonPanel = new System.Windows.Forms.Panel();
+            this.removeTrackerButton = new System.Windows.Forms.Button();
+            this.addTrackerButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).BeginInit();
             this.tabTrackers.SuspendLayout();
+            this.trackersButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -85,6 +92,8 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.seedIdleLimitValue);
+            this.tabGeneral.Controls.Add(this.seedIdleLimitedCheckBox);
             this.tabGeneral.Controls.Add(this.bandwidthComboBox);
             this.tabGeneral.Controls.Add(this.label4);
             this.tabGeneral.Controls.Add(this.honorsSessionLimits);
@@ -101,6 +110,24 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // seedIdleLimitValue
+            // 
+            resources.ApplyResources(this.seedIdleLimitValue, "seedIdleLimitValue");
+            this.seedIdleLimitValue.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.seedIdleLimitValue.Name = "seedIdleLimitValue";
+            // 
+            // seedIdleLimitedCheckBox
+            // 
+            resources.ApplyResources(this.seedIdleLimitedCheckBox, "seedIdleLimitedCheckBox");
+            this.seedIdleLimitedCheckBox.Name = "seedIdleLimitedCheckBox";
+            this.seedIdleLimitedCheckBox.ThreeState = true;
+            this.seedIdleLimitedCheckBox.UseVisualStyleBackColor = true;
+            this.seedIdleLimitedCheckBox.CheckStateChanged += new System.EventHandler(this.seedIdleLimitedCheckBox_CheckStateChanged);
             // 
             // bandwidthComboBox
             // 
@@ -201,6 +228,7 @@ namespace TransmissionRemoteDotnet
             // tabTrackers
             // 
             this.tabTrackers.Controls.Add(this.trackersList);
+            this.tabTrackers.Controls.Add(this.trackersButtonPanel);
             resources.ApplyResources(this.tabTrackers, "tabTrackers");
             this.tabTrackers.Name = "tabTrackers";
             this.tabTrackers.UseVisualStyleBackColor = true;
@@ -209,7 +237,31 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.trackersList, "trackersList");
             this.trackersList.Name = "trackersList";
-            this.trackersList.ReadOnly = true;
+            this.trackersList.SelectedIndexChanged += new System.EventHandler(this.trackersList_SelectedIndexChanged);
+            this.trackersList.DoubleClick += new System.EventHandler(this.trackersList_DoubleClick);
+            // 
+            // trackersButtonPanel
+            // 
+            this.trackersButtonPanel.Controls.Add(this.removeTrackerButton);
+            this.trackersButtonPanel.Controls.Add(this.addTrackerButton);
+            resources.ApplyResources(this.trackersButtonPanel, "trackersButtonPanel");
+            this.trackersButtonPanel.Name = "trackersButtonPanel";
+            // 
+            // removeTrackerButton
+            // 
+            resources.ApplyResources(this.removeTrackerButton, "removeTrackerButton");
+            this.removeTrackerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
+            this.removeTrackerButton.Name = "removeTrackerButton";
+            this.removeTrackerButton.UseVisualStyleBackColor = true;
+            this.removeTrackerButton.Click += new System.EventHandler(this.removeTrackerButton_Click);
+            // 
+            // addTrackerButton
+            // 
+            resources.ApplyResources(this.addTrackerButton, "addTrackerButton");
+            this.addTrackerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.add16;
+            this.addTrackerButton.Name = "addTrackerButton";
+            this.addTrackerButton.UseVisualStyleBackColor = true;
+            this.addTrackerButton.Click += new System.EventHandler(this.addTrackerButton_Click);
             // 
             // button2
             // 
@@ -250,12 +302,13 @@ namespace TransmissionRemoteDotnet
             this.tabControl1.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.downloadLimitField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadLimitField)).EndInit();
             this.tabTrackers.ResumeLayout(false);
-            this.tabTrackers.PerformLayout();
+            this.trackersButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,9 +333,12 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox honorsSessionLimits;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox bandwidthComboBox;
+        private System.Windows.Forms.CheckBox seedIdleLimitedCheckBox;
+        private System.Windows.Forms.NumericUpDown seedIdleLimitValue;
         private System.Windows.Forms.TabPage tabTrackers;
-        private System.Windows.Forms.TextBox trackersList;
-
-
+        private System.Windows.Forms.RefreshingListBox trackersList;
+        private System.Windows.Forms.Panel trackersButtonPanel;
+        private System.Windows.Forms.Button removeTrackerButton;
+        private System.Windows.Forms.Button addTrackerButton;
     }
 }

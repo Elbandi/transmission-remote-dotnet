@@ -264,9 +264,11 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_TRACKERSTATS,
                 ProtocolConstants.FIELD_HASHSTRING,
                 ProtocolConstants.FIELD_DOWNLOADDIR,
-                ProtocolConstants.FIELD_SEEDRATIOLIMIT,
                 ProtocolConstants.FIELD_BANDWIDTHPRIORITY,
+                ProtocolConstants.FIELD_SEEDRATIOLIMIT,
                 ProtocolConstants.FIELD_SEEDRATIOMODE,
+                ProtocolConstants.FIELD_SEEDIDLELIMIT,
+                ProtocolConstants.FIELD_SEEDIDLEMODE,
                 ProtocolConstants.FIELD_HONORSSESSIONLIMITS,
                 ProtocolConstants.FIELD_DONEDATE,
                 ProtocolConstants.FIELD_SIZEWHENDONE

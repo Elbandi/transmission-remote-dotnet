@@ -172,6 +172,15 @@ namespace TransmissionRemoteDotnet
                 }
                 (sender as TransmissionWebClient).OnCompleted(cmd);
             }
+            else
+            {
+                if (!Program.Connected)
+                {
+                    Program.Connected = false;
+                    Program.Form.UpdateStatus("", false);
+                    Program.Form.connectButton.Enabled = Program.Form.connectToolStripMenuItem.Enabled = true;
+                }
+            }
         }
     }
 

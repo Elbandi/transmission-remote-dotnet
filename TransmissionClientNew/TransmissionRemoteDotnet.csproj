@@ -126,6 +126,15 @@
     <Compile Include="CustomControls\PaintDotNet\Timing.cs" />
     <Compile Include="CustomControls\PaintDotNet\Tracing.cs" />
     <Compile Include="CustomControls\PaintDotNet\UI.cs" />
+    <Compile Include="CustomControls\RefreshingListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeneralTorrentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralTorrentInfo.Designer.cs">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\USButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -267,6 +276,9 @@
     <EmbeddedResource Include="AboutDialog.zh-TW.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralTorrentInfo.resx">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ErrorLogWindow.cs-CZ.resx">
       <DependentUpon>ErrorLogWindow.cs</DependentUpon>
@@ -1051,6 +1063,7 @@
       <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ICommand.cs" />
+    <Compile Include="TrackerListItem.cs" />
     <Compile Include="TransmissionDaemonDescriptor.cs" />
     <Compile Include="TransmissionWebClient.cs">
       <SubType>Component</SubType>
@@ -1139,11 +1152,12 @@
     <None Include="Resources\xmag.png" />
     <None Include="Resources\welcomefinish.png" />
     <None Include="Resources\help14.png" />
-    <None Include="Resources\feed-icon-28x28.png" />
+    <None Include="Resources\feed-icon.png" />
     <None Include="Resources\blue.ico" />
     <None Include="Resources\yellow.ico" />
     <None Include="Resources\red.ico" />
     <None Include="Resources\green.ico" />
+    <None Include="Resources\maxmind.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
