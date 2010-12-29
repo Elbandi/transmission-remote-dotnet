@@ -420,9 +420,46 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        public static string SupportFilePath(string file)
+        public static string GetExecuteLocation()
         {
-            return Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), file);
+            return Assembly.GetExecutingAssembly().Location;
+        }
+
+        public static string GetExecuteDirectory()
+        {
+            return Path.GetDirectoryName(GetExecuteLocation());
+        }
+
+        public static string GetApplicationData()
+        {
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AboutDialog.AssemblyTitle);
+        }
+
+        public static string LocateFile(string file)
+        {
+            return LocateFile(file, true);
+        }
+
+        public static string LocateFile(string file, bool require)
+        {
+            return LocateFile(file, require, GetExecuteDirectory());
+        }
+
+        public static string LocateFile(string file, params string[] paths)
+        {
+            return LocateFile(file, true, paths);
+        }
+
+        public static string LocateFile(string file, bool require, params string[] paths)
+        {
+            string fullpath;
+            foreach (string path in paths)
+            {
+                fullpath = Path.Combine(path, file);
+                if (!require || File.Exists(fullpath))
+                    return fullpath;
+            }
+            throw new FileNotFoundException(file);
         }
 
         public static string[] Split(string str, int chunkSize)
