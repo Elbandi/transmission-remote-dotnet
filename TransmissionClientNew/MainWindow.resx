@@ -696,6 +696,9 @@
   <data name="&gt;&gt;trackersTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="filesTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="filesPathCol.Text" xml:space="preserve">
     <value>Path</value>
   </data>
@@ -736,10 +739,10 @@
     <value>Fill</value>
   </data>
   <data name="filesListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
+    <value>3, 28</value>
   </data>
   <data name="filesListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>954, 248</value>
+    <value>948, 217</value>
   </data>
   <metadata name="fileIconImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>223, 17</value>
@@ -757,10 +760,127 @@
     <value>TransmissionRemoteDotnet.ListViewNF, Transmission Remote, Version=3.24.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesListView.Parent" xml:space="preserve">
-    <value>filesTorrentNameGroupBox</value>
+    <value>filesTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;filesListView.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="filesFilterTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="filesFilterTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 3</value>
+  </data>
+  <data name="filesFilterTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>874, 20</value>
+  </data>
+  <data name="filesFilterTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;filesFilterTextBox.Name" xml:space="preserve">
+    <value>filesFilterTextBox</value>
+  </data>
+  <data name="&gt;&gt;filesFilterTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;filesFilterTextBox.Parent" xml:space="preserve">
+    <value>filesTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;filesFilterTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="filesFilterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filesFilterLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="filesFilterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="filesFilterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 25</value>
+  </data>
+  <data name="filesFilterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="filesFilterLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="filesFilterLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;filesFilterLabel.Name" xml:space="preserve">
+    <value>filesFilterLabel</value>
+  </data>
+  <data name="&gt;&gt;filesFilterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;filesFilterLabel.Parent" xml:space="preserve">
+    <value>filesTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;filesFilterLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="filesFilterButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="filesFilterButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filesFilterButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>920, 0</value>
+  </data>
+  <data name="filesFilterButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="filesFilterButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 25</value>
+  </data>
+  <data name="filesFilterButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;filesFilterButton.Name" xml:space="preserve">
+    <value>filesFilterButton</value>
+  </data>
+  <data name="&gt;&gt;filesFilterButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;filesFilterButton.Parent" xml:space="preserve">
+    <value>filesTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;filesFilterButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="filesTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="filesTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="filesTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="filesTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>954, 248</value>
+  </data>
+  <data name="filesTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;filesTableLayoutPanel.Name" xml:space="preserve">
+    <value>filesTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;filesTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;filesTableLayoutPanel.Parent" xml:space="preserve">
+    <value>filesTorrentNameGroupBox</value>
+  </data>
+  <data name="&gt;&gt;filesTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="filesTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="filesListView" Row="1" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="filesFilterTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="filesFilterLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="filesFilterButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,40,Percent,100,Absolute,34" /&gt;&lt;Rows Styles="Absolute,25,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="filesTorrentNameGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

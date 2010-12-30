@@ -1184,14 +1184,74 @@ namespace TransmissionRemoteDotnet
                 filesListView.ListViewItemSorter = null;
                 if (!filesListView.Enabled)
                 {
+                    filesFilterLabel.Enabled = filesFilterButton.Enabled = filesFilterTextBox.Enabled =
                     filesListView.Enabled = true;
                     filesListView.Items.AddRange(t.Files.ToArray());
+                    filesFilterTextBox.Clear();
                 }
                 else
                     filesListView.Refresh();
                 filesListView.ListViewItemSorter = tmp;
                 Toolbox.StripeListView(filesListView);
                 filesListView.EndUpdate();
+            }
+        }
+
+        private void filesFilterTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilterfilesListview();
+        }
+
+        private void filesFilterButton_Click(object sender, EventArgs e)
+        {
+            filesFilterTextBox.Clear();
+        }
+
+        public void FilterfilesListview()
+        {
+            Torrent t;
+            lock (torrentListView)
+            {
+                t = (Torrent)torrentListView.SelectedItems[0];
+            }
+            lock (filesListView)
+            {
+                try
+                {
+                    filesListView.BeginUpdate();
+                    IComparer tmp = filesListView.ListViewItemSorter;
+                    filesListView.ListViewItemSorter = null;
+                    List<FileListViewItem> show = t.Files.FindAll(filesFilterTextBox.Text);
+                    if (filesFilterTextBox.Text.Length > 0)
+                    {
+                        FileListViewItem[] files = (FileListViewItem[])new ArrayList(filesListView.Items).ToArray(typeof(FileListViewItem));
+                        Array.ForEach<FileListViewItem>(files,
+                            delegate(FileListViewItem f)
+                            {
+                                if (!show.Contains(f))
+                                    filesListView.Items.Remove(f);
+                            }
+                        );
+                    }
+                    if (t.Files.Count != filesListView.Items.Count)
+                    {
+                        show.ForEach(delegate(FileListViewItem f)
+                        {
+                            if (!filesListView.Items.Contains(f))
+                                filesListView.Items.Add(f);
+                        });
+                    }
+                    filesListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(filesListView);
+                }
+                catch (Exception ee)
+                {
+                    Console.WriteLine(ee.ToString());
+                }
+                finally
+                {
+                    filesListView.EndUpdate();
+                }
             }
         }
 
@@ -1233,6 +1293,7 @@ namespace TransmissionRemoteDotnet
                 progressBar.Value = 0;
                 piecesGraph.ClearBits();
                 generalTorrentInfo.errorVisible
+                    = filesFilterLabel.Enabled = filesFilterButton.Enabled = filesFilterTextBox.Enabled
                     = filesListView.Enabled = peersListView.Enabled
                     = trackersListView.Enabled = false;
             }

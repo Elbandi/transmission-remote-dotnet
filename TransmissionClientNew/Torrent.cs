@@ -870,5 +870,9 @@ namespace TransmissionRemoteDotnet
         {
             return Find(delegate(FileListViewItem fi) { return fi.FileName.Equals(Key); });
         }
+        public List<FileListViewItem> FindAll(string filter)
+        {
+            return FindAll(delegate(FileListViewItem fi) { return fi.FileName.IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0; });
+        }
     }
 }
