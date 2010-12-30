@@ -29,6 +29,7 @@ using System.Resources;
 using System.Security.Cryptography;
 using Microsoft.Win32;
 using System.Collections.Specialized;
+using System.Xml.Serialization;
 
 namespace TransmissionRemoteDotnet
 {
@@ -43,7 +44,7 @@ namespace TransmissionRemoteDotnet
             msTera
         }
         private const int STRIPE_OFFSET = 15;
-        public static readonly IFormatProvider NUMBER_FORMAT = (new CultureInfo("en-US")).NumberFormat;
+        public static readonly NumberFormatInfo NUMBER_FORMAT;
         static byte[] trueBitCount = new byte[] {
             0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
             1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
@@ -63,6 +64,13 @@ namespace TransmissionRemoteDotnet
             3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
             4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8, 5, 6, 6, 7, 6, 7, 7, 8, 6, 7, 7, 8, 7, 8, 8, 9*/
         };
+
+        static Toolbox()
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(NumberFormatInfo));
+            MemoryStream xmldata = new MemoryStream(global::TransmissionRemoteDotnet.Properties.Resources.EngNumberFormatInfo);
+            NUMBER_FORMAT = (NumberFormatInfo)xml.Deserialize(xmldata);
+        }
 
         public static decimal ToProgress(object o)
         {

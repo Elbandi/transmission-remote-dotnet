@@ -1125,6 +1125,7 @@
     <None Include="Resources\red.ico" />
     <None Include="Resources\green.ico" />
     <None Include="Resources\maxmind.png" />
+    <None Include="Resources\EngNumberFormatInfo.xml" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
