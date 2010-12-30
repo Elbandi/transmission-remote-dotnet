@@ -1953,7 +1953,7 @@ namespace TransmissionRemoteDotnet
             generalTorrentInfo.timeLabelText = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
             generalTorrentInfo.uploaded = t.UploadedString;
             generalTorrentInfo.uploadLimit = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
-            generalTorrentInfo.uploadSpeed = t.UploadRateString;
+            generalTorrentInfo.uploadSpeed = t.SecondsDownloading >= 0 && t.SecondsSeeding >= 0 ? string.Format(OtherStrings.SpeedWithAvg, t.UploadRateString, t.UploadAvgRateString) : t.UploadRateString;
             generalTorrentInfo.seeders = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
             generalTorrentInfo.leechers = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             generalTorrentInfo.ratio = t.LocalRatioString;
@@ -1977,7 +1977,7 @@ namespace TransmissionRemoteDotnet
             }
             //totalSizeLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             generalTorrentInfo.downloaded = Toolbox.GetFileSize(t.Downloaded);
-            generalTorrentInfo.downloadSpeed = t.DownloadRateString;
+            generalTorrentInfo.downloadSpeed = t.SecondsDownloading >= 0 ? string.Format(OtherStrings.SpeedWithAvg, t.DownloadRateString, t.DownloadAvgRateString) : t.DownloadRateString;
             generalTorrentInfo.downloadLimit = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
             generalTorrentInfo.status = t.Status;
             generalTorrentInfo.errorVisible = !(generalTorrentInfo.error = t.ErrorString).Equals("");

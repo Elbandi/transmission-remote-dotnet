@@ -1069,6 +1069,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} (avg. {1}).
+        /// </summary>
+        internal static string SpeedWithAvg {
+            get {
+                return ResourceManager.GetString("SpeedWithAvg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
         internal static string Start {
