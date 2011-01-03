@@ -1727,7 +1727,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void SetFilesItemState(string datatype, int column)
+        private void SetFilesItemState(string datatype)
         {
             JsonArray array = new JsonArray();
             lock (filesListView)
@@ -1745,27 +1745,27 @@ namespace TransmissionRemoteDotnet
 
         private void SetHighPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_HIGH, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_HIGH);
         }
 
         private void SetLowPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_LOW, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_LOW);
         }
 
         private void SetNormalPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_NORMAL, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_NORMAL);
         }
 
         private void SetUnwantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.FILES_UNWANTED, 5);
+            SetFilesItemState(ProtocolConstants.FILES_UNWANTED);
         }
 
         private void SetWantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.FILES_WANTED, 5);
+            SetFilesItemState(ProtocolConstants.FILES_WANTED);
         }
 
         public void SetAllStateCounters()
@@ -1869,7 +1869,7 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             ids.Put(t.Id);
             arguments.Put(ProtocolConstants.KEY_IDS, ids);
-            if (FileList.Count == filesListView.Items.Count)
+            if (FileList.Count == t.Files.Count)
             {
                 arguments.Put(datatype, new JsonArray());
             }
