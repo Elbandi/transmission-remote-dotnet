@@ -463,7 +463,7 @@ namespace TransmissionRemoteDotnet.Settings
         {
             if (!unixPrefix.EndsWith("/")) unixPrefix += "/";
             if (SambaShareMappings.ContainsKey(unixPrefix)) return false;
-            SambaShareMappings[unixPrefix] = sambaPrefix.EndsWith(@"\") ? sambaPrefix.Substring(0, sambaPrefix.Length - 1) : sambaPrefix;
+            SambaShareMappings[unixPrefix] = sambaPrefix.TrimEnd(Path.DirectorySeparatorChar);
             return true;
         }
 
