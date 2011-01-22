@@ -152,6 +152,8 @@ namespace TransmissionRemoteDotnet
             FIELD_DOWNLOADLIMITED = "downloadLimited",
             FIELD_UPLOADLIMIT = "uploadLimit",
             FIELD_DOWNLOADLIMIT = "downloadLimit",
+            FIELD_SECONDSDOWNLOADING = "secondsDownloading",
+            FIELD_SECONDSSEEDING = "secondsSeeding",
             FIELD_PORT_IS_OPEN = "port-is-open",
             // tracker stats
             TRACKERSTAT_SEEDERCOUNT = "seederCount",

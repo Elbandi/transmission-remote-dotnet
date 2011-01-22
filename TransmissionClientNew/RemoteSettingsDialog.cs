@@ -67,6 +67,10 @@ namespace TransmissionRemoteDotnet
 
         private void SetNumeric(NumericUpDown numeric, decimal value, int def)
         {
+            if (-numeric.DecimalPlaces > Math.Log10((float)value))
+            {
+                numeric.DecimalPlaces = (int)Math.Round(-Math.Log10((float)value)) + 1;
+            }
             numeric.Value = value <= numeric.Maximum && value >= numeric.Minimum ? value : def;
         }
 
@@ -369,7 +373,8 @@ namespace TransmissionRemoteDotnet
         {
             updateBlocklistButton.Enabled = true;
             updateBlocklistButton.Text = (string)updateBlocklistButton.Tag;
-            label15.Text = String.Format(OtherStrings.XInBlocklist, size);
+            if (size > 0)
+                label15.Text = String.Format(OtherStrings.XInBlocklist, size);
         }
 
         private void seedRatioEnabledCheckBox_CheckedChanged(object sender, EventArgs e)

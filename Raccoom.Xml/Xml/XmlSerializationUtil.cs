@@ -47,7 +47,17 @@ namespace Raccoom.Xml
 				// unescaped characters <>&
 				if(propertyInfo.PropertyType.Equals(typeof(string)))
 				{
-					propertyInfo.SetValue(instance, Decode(xmlTextReader.ReadInnerXml().Trim()),null);				
+                    if (xmlTextReader.NodeType == System.Xml.XmlNodeType.Element)
+                    {
+                        xmlTextReader.ReadStartElement();
+                        propertyInfo.SetValue(instance, Decode(xmlTextReader.ReadString().Trim()), null);
+                        xmlTextReader.ReadEndElement();
+                    }
+                    else
+                    {
+                        propertyInfo.SetValue(instance, Decode(xmlTextReader.Value.Trim()), null);
+                    }
+
 				} 
 				else if(propertyInfo.PropertyType.Equals(typeof(DateTime)))
 				{

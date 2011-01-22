@@ -119,6 +119,7 @@ namespace TransmissionRemoteDotnet
             this.PlinkCmdTextBox = new System.Windows.Forms.TextBox();
             this.PlinkEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.ClearDestPathHistoryButton = new System.Windows.Forms.Button();
             this.StartPausedCheckBox = new System.Windows.Forms.CheckBox();
             this.customPathTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -757,6 +758,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.ClearDestPathHistoryButton);
             this.tabPage6.Controls.Add(this.StartPausedCheckBox);
             this.tabPage6.Controls.Add(this.customPathTextBox);
             this.tabPage6.Controls.Add(this.label12);
@@ -767,6 +769,13 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // ClearDestPathHistoryButton
+            // 
+            resources.ApplyResources(this.ClearDestPathHistoryButton, "ClearDestPathHistoryButton");
+            this.ClearDestPathHistoryButton.Name = "ClearDestPathHistoryButton";
+            this.ClearDestPathHistoryButton.UseVisualStyleBackColor = true;
+            this.ClearDestPathHistoryButton.Click += new System.EventHandler(this.ClearDestPathHistoryButton_Click);
             // 
             // StartPausedCheckBox
             // 
@@ -1243,5 +1252,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button AddFeedButton;
         private System.Windows.Forms.Button RemoveFeedButton;
         private System.Windows.Forms.CheckBox StartOnSystemCheckBox;
+        private System.Windows.Forms.Button ClearDestPathHistoryButton;
     }
 }

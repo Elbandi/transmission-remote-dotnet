@@ -246,6 +246,8 @@ namespace TransmissionRemoteDotnet
                 ProtocolConstants.FIELD_SPEEDLIMITDOWNENABLED,
                 ProtocolConstants.FIELD_SPEEDLIMITUP,
                 ProtocolConstants.FIELD_SPEEDLIMITUPENABLED,
+                ProtocolConstants.FIELD_SECONDSDOWNLOADING,
+                ProtocolConstants.FIELD_SECONDSSEEDING,
                 ProtocolConstants.FIELD_NAME,
                 ProtocolConstants.FIELD_ERRORSTRING,
                 ProtocolConstants.FIELD_PEERS,
