@@ -1013,6 +1013,7 @@
     <Compile Include="StatsDialog.Designer.cs">
       <DependentUpon>StatsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskbarHelper.cs" />
     <Compile Include="TCPSingleInstance.cs" />
     <Compile Include="Toolbox.cs" />
     <Compile Include="Torrent.cs" />
@@ -1125,6 +1126,7 @@
     <None Include="Resources\red.ico" />
     <None Include="Resources\green.ico" />
     <None Include="Resources\maxmind.png" />
+    <None Include="Resources\EngNumberFormatInfo.xml" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -1174,6 +1176,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(SolutionDir)\GeoIP.dat" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(SolutionDir)\GeoIP.dat" "$(TargetDir)"
+copy /Y "$(ProjectDir)\WindowsAPICodePack\*.dll" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -190,6 +190,15 @@ namespace TransmissionRemoteDotnet
             long downloadedForRatio = this.Downloaded > 0 ? this.Downloaded : this.HaveValid;
             this.LocalRatio = Toolbox.CalcRatio(this.Uploaded, downloadedForRatio);
 
+            if (info.Contains(ProtocolConstants.FIELD_SECONDSDOWNLOADING))
+                this.SecondsDownloading = Toolbox.ToInt(info[ProtocolConstants.FIELD_SECONDSDOWNLOADING]);
+            else
+                this.SecondsDownloading = -1;
+            if (info.Contains(ProtocolConstants.FIELD_SECONDSSEEDING))
+                this.SecondsSeeding = Toolbox.ToInt(info[ProtocolConstants.FIELD_SECONDSSEEDING]);
+            else
+                this.SecondsSeeding = -1;
+
             if (info.Contains(ProtocolConstants.FIELD_DONEDATE))
             {
                 DateTime dateTime = Toolbox.DateFromEpoch(Toolbox.ToDouble(info[ProtocolConstants.FIELD_DONEDATE]));
@@ -462,7 +471,7 @@ namespace TransmissionRemoteDotnet
                     JsonObject tracker = (JsonObject)value[0];
                     Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
                     this.FirstTracker = announceUrl.Host;
-                    this.FirstTrackerTrimmed = Regex.Replace(Regex.Replace(Regex.Replace(announceUrl.Host, @"^tracker\.", "", RegexOptions.IgnoreCase), @"^www\.", "", RegexOptions.IgnoreCase), @"^torrent\.", "", RegexOptions.IgnoreCase);
+                    this.FirstTrackerTrimmed = Toolbox.GetDomainName(announceUrl.Host);
                 }
                 catch
                 {
@@ -576,6 +585,18 @@ namespace TransmissionRemoteDotnet
             {
                 return Toolbox.FormatTimespanLong(TimeSpan.FromSeconds(this.Eta));
             }
+        }
+
+        public long SecondsDownloading
+        {
+            get;
+            set;
+        }
+
+        public long SecondsSeeding
+        {
+            get;
+            set;
         }
 
         public decimal Percentage
@@ -754,7 +775,20 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[7].Text;
+                return this.DownloadRate > 0 ? base.SubItems[7].Text : Toolbox.GetSpeed(0);
+            }
+        }
+
+        public string DownloadAvgRateString
+        {
+            get
+            {
+                if (this.SecondsDownloading >= 0)
+                {
+                    long speed = (long)Math.Round((double)this.Downloaded / this.SecondsDownloading, 0);
+                    return Toolbox.GetSpeed(speed);
+                }
+                else return "";
             }
         }
 
@@ -768,7 +802,20 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                return base.SubItems[8].Text;
+                return this.UploadRate > 0 ? base.SubItems[8].Text : Toolbox.GetSpeed(0);
+            }
+        }
+
+        public string UploadAvgRateString
+        {
+            get
+            {
+                if (this.SecondsDownloading >= 0 && this.SecondsSeeding >= 0)
+                {
+                    long speed = (long)Math.Round((double)this.Downloaded / (this.SecondsDownloading + this.SecondsSeeding), 0);
+                    return Toolbox.GetSpeed(speed);
+                }
+                else return "";
             }
         }
 
@@ -869,6 +916,10 @@ namespace TransmissionRemoteDotnet
         public FileListViewItem Find(string Key)
         {
             return Find(delegate(FileListViewItem fi) { return fi.FileName.Equals(Key); });
+        }
+        public List<FileListViewItem> FindAll(string filter)
+        {
+            return FindAll(delegate(FileListViewItem fi) { return fi.FileName.IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0; });
         }
     }
 }

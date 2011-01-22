@@ -81,6 +81,7 @@ namespace TransmissionRemoteDotnet
         private WebClient filesWebClient = new WebClient();
         private static FindDialog FindDialog;
         private List<Bitmap> defaulttoolbarimages, defaultstateimages, defaultinfopanelimages, defaulttrayimages;
+        private TaskbarHelper taskbar;
 
         public MainWindow()
         {
@@ -657,8 +658,10 @@ namespace TransmissionRemoteDotnet
                 = refreshTimer.Enabled = recheckTorrentButton.Visible
                 = speedGraph.Enabled = toolbarToolStripSeparator3.Visible
                 = FilterTorrentLabel.Visible = FilterTorrentTextBox.Visible
+                = FilterTorrentClearButton.Visible
                 = connected;
             SetRemoteCmdButtonVisible(connected);
+            taskbar.SetConnected(connected);
             TransmissionDaemonDescriptor dd = Program.DaemonDescriptor;
             reannounceButton.Visible = connected && dd.RpcVersion >= 5;
             removeAndDeleteButton.Visible = connected && dd.Version >= 1.5;
@@ -749,9 +752,19 @@ namespace TransmissionRemoteDotnet
             Toolbox.CopyListViewToClipboard(peersListView);
         }
 
+        public void Perform_startAllMenuItem_Click()
+        {
+            startAllToolStripMenuItem.PerformClick();
+        }
+
         public void startAllMenuItem_Click(object sender, EventArgs e)
         {
             Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.Generic(ProtocolConstants.METHOD_TORRENTSTART, null)));
+        }
+
+        public void Perform_stopAllMenuItem_Click()
+        {
+            stopAllToolStripMenuItem.PerformClick();
         }
 
         public void stopAllMenuItem_Click(object sender, EventArgs e)
@@ -867,6 +880,7 @@ namespace TransmissionRemoteDotnet
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            taskbar = new TaskbarHelper();
             LocalSettings settings = Program.Settings;
             if (notifyIcon.Visible = settings.MinToTray)
             {
@@ -966,6 +980,7 @@ namespace TransmissionRemoteDotnet
                 speedResComboBox.Items.Clear();
                 speedResComboBox.Items.AddRange(OtherStrings.SpeedResolutions.Split('|'));
                 speedResComboBox.SelectedIndex = Math.Min(oldindex, speedResComboBox.Items.Count - 1);
+                taskbar.ChangeUICulture();
                 filesListView_SelectedIndexChanged(null, null);
                 Program_onTorrentsUpdated(null, null);
                 this.Refresh();
@@ -1231,14 +1246,74 @@ namespace TransmissionRemoteDotnet
                 filesListView.ListViewItemSorter = null;
                 if (!filesListView.Enabled)
                 {
+                    filesFilterLabel.Enabled = filesFilterButton.Enabled = filesFilterTextBox.Enabled =
                     filesListView.Enabled = true;
                     filesListView.Items.AddRange(t.Files.ToArray());
+                    filesFilterTextBox.Clear();
                 }
                 else
                     filesListView.Refresh();
                 filesListView.ListViewItemSorter = tmp;
                 Toolbox.StripeListView(filesListView);
                 filesListView.EndUpdate();
+            }
+        }
+
+        private void filesFilterTextBox_TextChanged(object sender, EventArgs e)
+        {
+            FilterfilesListview();
+        }
+
+        private void filesFilterButton_Click(object sender, EventArgs e)
+        {
+            filesFilterTextBox.Clear();
+        }
+
+        public void FilterfilesListview()
+        {
+            Torrent t;
+            lock (torrentListView)
+            {
+                t = (Torrent)torrentListView.SelectedItems[0];
+            }
+            lock (filesListView)
+            {
+                try
+                {
+                    filesListView.BeginUpdate();
+                    IComparer tmp = filesListView.ListViewItemSorter;
+                    filesListView.ListViewItemSorter = null;
+                    List<FileListViewItem> show = t.Files.FindAll(filesFilterTextBox.Text);
+                    if (filesFilterTextBox.Text.Length > 0)
+                    {
+                        FileListViewItem[] files = (FileListViewItem[])new ArrayList(filesListView.Items).ToArray(typeof(FileListViewItem));
+                        Array.ForEach<FileListViewItem>(files,
+                            delegate(FileListViewItem f)
+                            {
+                                if (!show.Contains(f))
+                                    filesListView.Items.Remove(f);
+                            }
+                        );
+                    }
+                    if (t.Files.Count != filesListView.Items.Count)
+                    {
+                        show.ForEach(delegate(FileListViewItem f)
+                        {
+                            if (!filesListView.Items.Contains(f))
+                                filesListView.Items.Add(f);
+                        });
+                    }
+                    filesListView.ListViewItemSorter = tmp;
+                    Toolbox.StripeListView(filesListView);
+                }
+                catch (Exception ee)
+                {
+                    Console.WriteLine(ee.ToString());
+                }
+                finally
+                {
+                    filesListView.EndUpdate();
+                }
             }
         }
 
@@ -1280,6 +1355,7 @@ namespace TransmissionRemoteDotnet
                 progressBar.Value = 0;
                 piecesGraph.ClearBits();
                 generalTorrentInfo.errorVisible
+                    = filesFilterLabel.Enabled = filesFilterButton.Enabled = filesFilterTextBox.Enabled
                     = filesListView.Enabled = peersListView.Enabled
                     = trackersListView.Enabled = false;
             }
@@ -1391,6 +1467,10 @@ namespace TransmissionRemoteDotnet
             long selectedDownloadedSize = 0;
             int selected = 0;
 
+            int totalPaused = 0;
+            int totalPausedFinished = 0;
+            decimal activePercentage = 0;
+
             lock (torrentListView)
             {
                 foreach (Torrent t in torrentListView.Items)
@@ -1409,6 +1489,17 @@ namespace TransmissionRemoteDotnet
                     if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
                     {
                         totalDownloading++;
+                        activePercentage += t.Percentage;
+                    }
+                    else if (t.StatusCode == ProtocolConstants.STATUS_PAUSED)
+                    {
+                        if (t.Percentage < 100)
+                        {
+                            totalPaused++;
+                            activePercentage += t.Percentage;
+                        }
+                        else
+                            totalPausedFinished++;
                     }
                     else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
                     {
@@ -1416,6 +1507,22 @@ namespace TransmissionRemoteDotnet
                     }
                 }
             }
+            if (totalPaused + totalDownloading > 0)
+            {
+                if (totalDownloading == 0)
+                {
+                    taskbar.SetNormal(true);
+                }
+                else
+                    taskbar.SetNormal(false);
+
+                if (totalPaused + totalPausedFinished == totalTorrents)
+                    taskbar.SetPaused();
+
+                taskbar.UpdateProgress(activePercentage / (totalPaused + totalDownloading));
+            }
+            else
+                taskbar.SetNoProgress();
 
             return String.Format(
                 selected > 1 ? "{0} {1}, {2} {3} | {4} {5}: {6} {7}, {8} {9} | {12} {13}: {14} / {15}"
@@ -1447,7 +1554,7 @@ namespace TransmissionRemoteDotnet
                 notifyIcon.Text = text.Length < 64 ? text : text.Substring(0, 63);
         }
 
-        private void addTorrentButton_Click(object sender, EventArgs e)
+        public void addTorrentButton_Click(object sender, EventArgs e)
         {
             if (Program.Connected)
             {
@@ -1555,6 +1662,11 @@ namespace TransmissionRemoteDotnet
         private void FilterTorrentTextBox_TextChanged(object sender, EventArgs e)
         {
             FilterByStateOrTracker();
+        }
+
+        private void FilterTorrentClearButton_Click(object sender, EventArgs e)
+        {
+            FilterTorrentTextBox.Clear();
         }
 
         static bool FilteringProcess = false;
@@ -1677,7 +1789,7 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void SetFilesItemState(string datatype, int column)
+        private void SetFilesItemState(string datatype)
         {
             JsonArray array = new JsonArray();
             lock (filesListView)
@@ -1695,27 +1807,27 @@ namespace TransmissionRemoteDotnet
 
         private void SetHighPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_HIGH, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_HIGH);
         }
 
         private void SetLowPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_LOW, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_LOW);
         }
 
         private void SetNormalPriorityHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.PRIORITY_NORMAL, 6);
+            SetFilesItemState(ProtocolConstants.PRIORITY_NORMAL);
         }
 
         private void SetUnwantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.FILES_UNWANTED, 5);
+            SetFilesItemState(ProtocolConstants.FILES_UNWANTED);
         }
 
         private void SetWantedHandler(object sender, EventArgs e)
         {
-            SetFilesItemState(ProtocolConstants.FILES_WANTED, 5);
+            SetFilesItemState(ProtocolConstants.FILES_WANTED);
         }
 
         public void SetAllStateCounters()
@@ -1819,7 +1931,7 @@ namespace TransmissionRemoteDotnet
             JsonArray ids = new JsonArray();
             ids.Put(t.Id);
             arguments.Put(ProtocolConstants.KEY_IDS, ids);
-            if (FileList.Count == filesListView.Items.Count)
+            if (FileList.Count == t.Files.Count)
             {
                 arguments.Put(datatype, new JsonArray());
             }
@@ -1903,7 +2015,7 @@ namespace TransmissionRemoteDotnet
             generalTorrentInfo.timeLabelText = (t.IsFinished ? torrentCompletedAtCol.Text : torrentEtaCol.Text) + ":";
             generalTorrentInfo.uploaded = t.UploadedString;
             generalTorrentInfo.uploadLimit = t.SpeedLimitUpEnabled ? Toolbox.KbpsString(t.SpeedLimitUp) : "∞";
-            generalTorrentInfo.uploadSpeed = t.UploadRateString;
+            generalTorrentInfo.uploadSpeed = t.SecondsDownloading >= 0 && t.SecondsSeeding >= 0 ? string.Format(OtherStrings.SpeedWithAvg, t.UploadRateString, t.UploadAvgRateString) : t.UploadRateString;
             generalTorrentInfo.seeders = String.Format(OtherStrings.XOfYConnected, t.PeersSendingToUs, t.Seeders < 0 ? "?" : t.Seeders.ToString());
             generalTorrentInfo.leechers = String.Format(OtherStrings.XOfYConnected, t.PeersGettingFromUs, t.Leechers < 0 ? "?" : t.Leechers.ToString());
             generalTorrentInfo.ratio = t.LocalRatioString;
@@ -1927,7 +2039,7 @@ namespace TransmissionRemoteDotnet
             }
             //totalSizeLabel.Text = String.Format(OtherStrings.DownloadedValid, t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
             generalTorrentInfo.downloaded = Toolbox.GetFileSize(t.Downloaded);
-            generalTorrentInfo.downloadSpeed = t.DownloadRateString;
+            generalTorrentInfo.downloadSpeed = t.SecondsDownloading >= 0 ? string.Format(OtherStrings.SpeedWithAvg, t.DownloadRateString, t.DownloadAvgRateString) : t.DownloadRateString;
             generalTorrentInfo.downloadLimit = t.SpeedLimitDownEnabled ? Toolbox.KbpsString(t.SpeedLimitDown) : "∞";
             generalTorrentInfo.status = t.Status;
             generalTorrentInfo.errorVisible = !(generalTorrentInfo.error = t.ErrorString).Equals("");
@@ -2628,6 +2740,11 @@ namespace TransmissionRemoteDotnet
                 e.Cancel = true;
                 e.NewWidth = 1;
             }
+        }
+
+        public string AddTorrentString
+        {
+            get { return addTorrentButton.Text; }
         }
     }
 }

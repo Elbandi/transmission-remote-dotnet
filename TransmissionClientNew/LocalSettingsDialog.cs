@@ -300,10 +300,11 @@ namespace TransmissionRemoteDotnet
 
         private void AddShareButton_Click(object sender, EventArgs e)
         {
-            string UnixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/").Replace(Path.DirectorySeparatorChar, '/');
+            string UnixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/").Replace(Path.DirectorySeparatorChar, '/') + "/";
+            string SambaShare = SambaShareTextBox.Text.Replace('/', Path.DirectorySeparatorChar).TrimEnd(Path.DirectorySeparatorChar);
             if (!listSambaShareMappings.Items.Contains(UnixPath))
             {
-                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShareTextBox.Text));
+                listSambaShareMappings.Items.Add(new SambaShareMappings(UnixPath, SambaShare));
                 UnixPathPrefixTextBox.Clear();
                 SambaShareTextBox.Clear();
             }
@@ -504,6 +505,12 @@ namespace TransmissionRemoteDotnet
         private void RemoveFeedButton_Click(object sender, EventArgs e)
         {
             listRssFeeds.Items.Remove(listRssFeeds.SelectedItems[0]);
+        }
+
+        private void ClearDestPathHistoryButton_Click(object sender, EventArgs e)
+        {
+            TransmissionServer ts = current.Tag as TransmissionServer;
+            ts.ClearDestPathHistory();
         }
     }
 }

@@ -267,7 +267,7 @@ namespace TransmissionRemoteDotnet.Settings
                         JsonObject mappings = oldsettings.SambaShareMappings;
                         foreach (string key in mappings.Names)
                         {
-                            ts.SambaShareMappings.Add(key, (string)mappings[key]);
+                            ts.AddSambaMapping(key, (string)mappings[key]);
                         }
                         ts.destpathhistory.AddRange(oldsettings.DestPathHistory);
                         ProxyServer ps = new ProxyServer();
@@ -429,7 +429,7 @@ namespace TransmissionRemoteDotnet.Settings
             {
                 foreach (string n in jo.Names)
                 {
-                    SambaShareMappings.Add(n, jo[n] as string);
+                    AddSambaMapping(n, jo[n] as string);
                 }
             }
             jo = (JsonObject)o[SettingsKey.REGKEY_PROXY];
@@ -461,8 +461,9 @@ namespace TransmissionRemoteDotnet.Settings
 
         public bool AddSambaMapping(string unixPrefix, string sambaPrefix)
         {
+            if (!unixPrefix.EndsWith("/")) unixPrefix += "/";
             if (SambaShareMappings.ContainsKey(unixPrefix)) return false;
-            SambaShareMappings[unixPrefix] = sambaPrefix.EndsWith(@"\") ? sambaPrefix.Substring(0, sambaPrefix.Length - 1) : sambaPrefix;
+            SambaShareMappings[unixPrefix] = sambaPrefix.TrimEnd(Path.DirectorySeparatorChar);
             return true;
         }
 
@@ -474,6 +475,12 @@ namespace TransmissionRemoteDotnet.Settings
                 destpathhistory.Add(path);
             }
         }
+
+        public void ClearDestPathHistory()
+        {
+            destpathhistory.Clear();
+        }
+
         public string[] DestPathHistory
         {
             get

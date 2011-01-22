@@ -72,6 +72,7 @@ namespace TransmissionRemoteDotnet
             this.trackersDownloadedCol = new System.Windows.Forms.ColumnHeader();
             this.filesTabPage = new System.Windows.Forms.TabPage();
             this.filesTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
+            this.filesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.filesListView = new TransmissionRemoteDotnet.ListViewNF();
             this.filesPathCol = new System.Windows.Forms.ColumnHeader();
             this.filesTypeCol = new System.Windows.Forms.ColumnHeader();
@@ -81,6 +82,9 @@ namespace TransmissionRemoteDotnet
             this.filesSkipCol = new System.Windows.Forms.ColumnHeader();
             this.filesPriorityCol = new System.Windows.Forms.ColumnHeader();
             this.fileIconImageList = new System.Windows.Forms.ImageList(this.components);
+            this.filesFilterTextBox = new System.Windows.Forms.TextBox();
+            this.filesFilterLabel = new System.Windows.Forms.Label();
+            this.filesFilterButton = new System.Windows.Forms.Button();
             this.peersTabPage = new System.Windows.Forms.TabPage();
             this.peersTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
             this.peersListView = new TransmissionRemoteDotnet.ListViewNF();
@@ -131,6 +135,7 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton = new System.Windows.Forms.ToolStripButton();
             this.toolbarToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.RssButton = new System.Windows.Forms.ToolStripButton();
+            this.FilterTorrentClearButton = new System.Windows.Forms.ToolStripButton();
             this.FilterTorrentTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.FilterTorrentLabel = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -207,6 +212,7 @@ namespace TransmissionRemoteDotnet
             this.trackersTorrentNameGroupBox.SuspendLayout();
             this.filesTabPage.SuspendLayout();
             this.filesTorrentNameGroupBox.SuspendLayout();
+            this.filesTableLayoutPanel.SuspendLayout();
             this.peersTabPage.SuspendLayout();
             this.peersTorrentNameGroupBox.SuspendLayout();
             this.speedTabPage.SuspendLayout();
@@ -540,10 +546,19 @@ namespace TransmissionRemoteDotnet
             // 
             // filesTorrentNameGroupBox
             // 
-            this.filesTorrentNameGroupBox.Controls.Add(this.filesListView);
+            this.filesTorrentNameGroupBox.Controls.Add(this.filesTableLayoutPanel);
             resources.ApplyResources(this.filesTorrentNameGroupBox, "filesTorrentNameGroupBox");
             this.filesTorrentNameGroupBox.Name = "filesTorrentNameGroupBox";
             this.filesTorrentNameGroupBox.TabStop = false;
+            // 
+            // filesTableLayoutPanel
+            // 
+            resources.ApplyResources(this.filesTableLayoutPanel, "filesTableLayoutPanel");
+            this.filesTableLayoutPanel.Controls.Add(this.filesListView, 0, 1);
+            this.filesTableLayoutPanel.Controls.Add(this.filesFilterTextBox, 1, 0);
+            this.filesTableLayoutPanel.Controls.Add(this.filesFilterLabel, 0, 0);
+            this.filesTableLayoutPanel.Controls.Add(this.filesFilterButton, 2, 0);
+            this.filesTableLayoutPanel.Name = "filesTableLayoutPanel";
             // 
             // filesListView
             // 
@@ -556,6 +571,7 @@ namespace TransmissionRemoteDotnet
             this.filesPercentCol,
             this.filesSkipCol,
             this.filesPriorityCol});
+            this.filesTableLayoutPanel.SetColumnSpan(this.filesListView, 3);
             resources.ApplyResources(this.filesListView, "filesListView");
             this.filesListView.FullRowSelect = true;
             this.filesListView.HideSelection = false;
@@ -606,6 +622,25 @@ namespace TransmissionRemoteDotnet
             this.fileIconImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.fileIconImageList, "fileIconImageList");
             this.fileIconImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // filesFilterTextBox
+            // 
+            resources.ApplyResources(this.filesFilterTextBox, "filesFilterTextBox");
+            this.filesFilterTextBox.Name = "filesFilterTextBox";
+            this.filesFilterTextBox.TextChanged += new System.EventHandler(this.filesFilterTextBox_TextChanged);
+            // 
+            // filesFilterLabel
+            // 
+            resources.ApplyResources(this.filesFilterLabel, "filesFilterLabel");
+            this.filesFilterLabel.Name = "filesFilterLabel";
+            // 
+            // filesFilterButton
+            // 
+            resources.ApplyResources(this.filesFilterButton, "filesFilterButton");
+            this.filesFilterButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.remove16;
+            this.filesFilterButton.Name = "filesFilterButton";
+            this.filesFilterButton.UseVisualStyleBackColor = true;
+            this.filesFilterButton.Click += new System.EventHandler(this.filesFilterButton_Click);
             // 
             // peersTabPage
             // 
@@ -824,6 +859,7 @@ namespace TransmissionRemoteDotnet
             this.sessionStatsButton,
             this.toolbarToolStripSeparator5,
             this.RssButton,
+            this.FilterTorrentClearButton,
             this.FilterTorrentTextBox,
             this.FilterTorrentLabel});
             this.toolStrip.Name = "toolStrip";
@@ -1014,12 +1050,21 @@ namespace TransmissionRemoteDotnet
             this.RssButton.Name = "RssButton";
             this.RssButton.Click += new System.EventHandler(this.RssButton_Click);
             // 
+            // FilterTorrentClearButton
+            // 
+            this.FilterTorrentClearButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.FilterTorrentClearButton, "FilterTorrentClearButton");
+            this.FilterTorrentClearButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.FilterTorrentClearButton.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.FilterTorrentClearButton.Name = "FilterTorrentClearButton";
+            this.FilterTorrentClearButton.Click += new System.EventHandler(this.FilterTorrentClearButton_Click);
+            // 
             // FilterTorrentTextBox
             // 
             this.FilterTorrentTextBox.AcceptsTab = true;
             this.FilterTorrentTextBox.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.FilterTorrentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FilterTorrentTextBox.Margin = new System.Windows.Forms.Padding(1, 0, 4, 0);
+            this.FilterTorrentTextBox.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             resources.ApplyResources(this.FilterTorrentTextBox, "FilterTorrentTextBox");
             this.FilterTorrentTextBox.Name = "FilterTorrentTextBox";
             this.FilterTorrentTextBox.TextChanged += new System.EventHandler(this.FilterTorrentTextBox_TextChanged);
@@ -1462,6 +1507,8 @@ namespace TransmissionRemoteDotnet
             this.trackersTorrentNameGroupBox.ResumeLayout(false);
             this.filesTabPage.ResumeLayout(false);
             this.filesTorrentNameGroupBox.ResumeLayout(false);
+            this.filesTableLayoutPanel.ResumeLayout(false);
+            this.filesTableLayoutPanel.PerformLayout();
             this.peersTabPage.ResumeLayout(false);
             this.peersTorrentNameGroupBox.ResumeLayout(false);
             this.speedTabPage.ResumeLayout(false);
@@ -1545,6 +1592,10 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripMenuItem remoteSettingsToolStripMenuItem;
         public TransmissionRemoteDotnet.GListBox stateListBox;
         public TransmissionRemoteDotnet.ListViewNF filesListView;
+        private System.Windows.Forms.TextBox filesFilterTextBox;
+        private System.Windows.Forms.TableLayoutPanel filesTableLayoutPanel;
+        private System.Windows.Forms.Label filesFilterLabel;
+        private System.Windows.Forms.Button filesFilterButton;
         public System.Windows.Forms.Timer filesTimer;
         private System.Windows.Forms.TabPage generalTabPage;
         private System.Windows.Forms.TableLayoutPanel generalTableLayoutPanel;
@@ -1636,6 +1687,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripButton RssButton;
         private System.Windows.Forms.ToolStripTextBox FilterTorrentTextBox;
         private System.Windows.Forms.ToolStripLabel FilterTorrentLabel;
+        private System.Windows.Forms.ToolStripButton FilterTorrentClearButton;
         private System.Windows.Forms.OpenFileDialog openTorrentFileDialog;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator torrentMenuToolStripSeparator1;

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NumberFormatInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CurrencyDecimalDigits>2</CurrencyDecimalDigits>
+  <CurrencyDecimalSeparator>.</CurrencyDecimalSeparator>
+  <CurrencyGroupSizes>
+    <int>3</int>
+  </CurrencyGroupSizes>
+  <NumberGroupSizes>
+    <int>3</int>
+  </NumberGroupSizes>
+  <PercentGroupSizes>
+    <int>3</int>
+  </PercentGroupSizes>
+  <CurrencyGroupSeparator>,</CurrencyGroupSeparator>
+  <CurrencySymbol>$</CurrencySymbol>
+  <NaNSymbol>NaN</NaNSymbol>
+  <CurrencyNegativePattern>0</CurrencyNegativePattern>
+  <NumberNegativePattern>1</NumberNegativePattern>
+  <PercentPositivePattern>0</PercentPositivePattern>
+  <PercentNegativePattern>0</PercentNegativePattern>
+  <NegativeInfinitySymbol>-Infinity</NegativeInfinitySymbol>
+  <NegativeSign>-</NegativeSign>
+  <NumberDecimalDigits>2</NumberDecimalDigits>
+  <NumberDecimalSeparator>.</NumberDecimalSeparator>
+  <NumberGroupSeparator>,</NumberGroupSeparator>
+  <CurrencyPositivePattern>0</CurrencyPositivePattern>
+  <PositiveInfinitySymbol>Infinity</PositiveInfinitySymbol>
+  <PositiveSign>+</PositiveSign>
+  <PercentDecimalDigits>2</PercentDecimalDigits>
+  <PercentDecimalSeparator>.</PercentDecimalSeparator>
+  <PercentGroupSeparator>,</PercentGroupSeparator>
+  <PercentSymbol>%</PercentSymbol>
+  <PerMilleSymbol>‰</PerMilleSymbol>
+  <NativeDigits>
+    <string>0</string>
+    <string>1</string>
+    <string>2</string>
+    <string>3</string>
+    <string>4</string>
+    <string>5</string>
+    <string>6</string>
+    <string>7</string>
+    <string>8</string>
+    <string>9</string>
+  </NativeDigits>
+  <DigitSubstitution>None</DigitSubstitution>
+</NumberFormatInfo>

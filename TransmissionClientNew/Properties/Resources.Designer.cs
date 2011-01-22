@@ -130,6 +130,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static byte[] EngNumberFormatInfo {
+            get {
+                object obj = ResourceManager.GetObject("EngNumberFormatInfo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap feed_icon {
             get {
                 object obj = ResourceManager.GetObject("feed_icon", resourceCulture);

@@ -1950,6 +1950,30 @@
   <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="ClearDestPathHistoryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 88</value>
+  </data>
+  <data name="ClearDestPathHistoryButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 23</value>
+  </data>
+  <data name="ClearDestPathHistoryButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ClearDestPathHistoryButton.Text" xml:space="preserve">
+    <value>Clear path history</value>
+  </data>
+  <data name="&gt;&gt;ClearDestPathHistoryButton.Name" xml:space="preserve">
+    <value>ClearDestPathHistoryButton</value>
+  </data>
+  <data name="&gt;&gt;ClearDestPathHistoryButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearDestPathHistoryButton.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;ClearDestPathHistoryButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="StartPausedCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1963,7 +1987,7 @@
     <value>124, 17</value>
   </data>
   <data name="StartPausedCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="StartPausedCheckBox.Text" xml:space="preserve">
     <value>Start torrents paused</value>
