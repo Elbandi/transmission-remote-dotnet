@@ -414,6 +414,7 @@ namespace TransmissionRemoteDotnet
             // 
             // seedIdleLimitUpDown
             // 
+            this.seedIdleLimitUpDown.DecimalPlaces = 2;
             resources.ApplyResources(this.seedIdleLimitUpDown, "seedIdleLimitUpDown");
             this.seedIdleLimitUpDown.Maximum = new decimal(new int[] {
             1000,

@@ -116,6 +116,8 @@ namespace TransmissionRemoteDotnet
                             }
                             else
                                 cmd = new ErrorCommand(OtherStrings.UnsuccessfulRequest, response, true);
+                            if (Toolbox.ToShort(jsonResponse[ProtocolConstants.KEY_TAG]).Equals((short)ResponseTag.UpdateBlocklist))
+                                RemoteSettingsDialog.BlocklistUpdateDone(-1);
                         }
                         else
                         {

@@ -18,12 +18,14 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Windows.Forms;
-using Jayrock.Json;
 using System.Net;
-using TransmissionRemoteDotnet.Settings;
+using System.Net.NetworkInformation;
 using System.Threading;
+using System.Windows.Forms;
+using Microsoft.Win32;
+using Jayrock.Json;
 using Troschuetz;
+using TransmissionRemoteDotnet.Settings;
 
 namespace TransmissionRemoteDotnet
 {
@@ -90,14 +92,14 @@ namespace TransmissionRemoteDotnet
             get { return Program.uploadPrompt; }
             set { Program.uploadPrompt = value; }
         }
-        
+
 
         [STAThread]
         static void Main(string[] args)
         {
             startupTime = DateTime.Now;
 #if DEBUG
-             // In debug builds we'd prefer to have it dump us into the debugger
+            // In debug builds we'd prefer to have it dump us into the debugger
 #else
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.Automatic);
@@ -139,6 +141,7 @@ namespace TransmissionRemoteDotnet
                     }
                     singleInstance.ArgumentsReceived += singleInstance_ArgumentsReceived;
                     singleInstance.ListenForArgumentsFromSuccessiveInstances();
+                    SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(form = new MainWindow());
@@ -154,6 +157,35 @@ namespace TransmissionRemoteDotnet
                         MessageBox.Show(ex.Message, "Unable to communicate with first instance", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        static bool resumeconnect = false;
+        static void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
+        {
+            switch (e.Mode)
+            {
+                case PowerModes.Suspend:
+                    resumeconnect = Connected;
+                    Connected = false;
+                    Thread.Sleep(300);
+                    break;
+                case PowerModes.Resume:
+                    Ping resumepinger = new Ping();
+                    int counter = 50;
+                    resumepinger.PingCompleted += delegate(object pingsender, PingCompletedEventArgs pinge)
+                    {
+                        if (!pinge.Cancelled && pinge.Error != null)
+                        {
+                            if (pinge.Reply.Status == IPStatus.Success)
+                                Connected = resumeconnect;
+                            else if (--counter > 0)
+                                resumepinger.SendAsync("127.0.0.1", 100);
+                        }
+                    };
+                    resumepinger.SendAsync("127.0.0.1", 100);
+                    Thread.Sleep(5);
+                    break;
             }
         }
 

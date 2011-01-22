@@ -553,4 +553,7 @@
   <data name="GeoipDatabaseUpdateCompleted" xml:space="preserve">
     <value>Geoip database update completed</value>
   </data>
+  <data name="SpeedWithAvg" xml:space="preserve">
+    <value>{0} (avg. {1})</value>
+  </data>
 </root>
