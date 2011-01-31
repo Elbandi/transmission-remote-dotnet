@@ -23,12 +23,16 @@ OutFile "transmission-remote-dotnet-${REV}-installer.exe"
 ; The default installation directory
 !define ProgramFilesDir "Transmission Remote"
 
+!ifndef PORTABLE
 ; Registry key to check for directory (so if you install again, it will 
 ; overwrite the old one automatically)
 InstallDirRegKey HKLM "Software\TransmissionRemote" "Install_Dir"
 
 ; Request application privileges for Windows Vista
 RequestExecutionLevel admin
+!else
+RequestExecutionLevel user
+!endif
 
 ;--------------------------------
 
@@ -104,6 +108,7 @@ Section $(NAME_SecTransmissionRemote) SecTransmissionRemote
   File "README.txt"
   File "LICENCE.txt"
   
+!ifndef PORTABLE
   ; Write the installation path into the registry
   WriteRegStr HKLM "SOFTWARE\TransmissionRemote" "Install_Dir" "$INSTDIR"
   
@@ -115,15 +120,18 @@ Section $(NAME_SecTransmissionRemote) SecTransmissionRemote
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Transmission Remote" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Transmission Remote" "NoRepair" 1
   WriteUninstaller "uninstall.exe"
+!endif
   
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     SetShellVarContext current
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
+!ifndef PORTABLE
     SetShellVarContext all
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 ;    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Transmission Remote.lnk" "$INSTDIR\Transmission Remote.exe" "" "$INSTDIR\Transmission Remote.exe" 0 
+!endif
   !insertmacro MUI_STARTMENU_WRITE_END
 
 SectionEnd
@@ -141,6 +149,7 @@ Section "GeoIP Database" SecGeoIPDatabase
   File "GeoIP.dat"
 SectionEnd
 
+!ifndef PORTABLE
 SubSection $(NAME_SecFiletypeAssociations) SecFiletypeAssociations
 
   Section $(NAME_SecRegiterTorrent) SecRegiterTorrent
@@ -152,6 +161,7 @@ SubSection $(NAME_SecFiletypeAssociations) SecFiletypeAssociations
   SectionEnd
 
 SubSectionEnd
+!endif
 
 ; Translation
 
@@ -249,12 +259,14 @@ SectionGroupEnd
 
 Section "Uninstall"
 
+!ifndef PORTABLE
   ; Unregister File Association
   ${unregisterExtension} ".torrent" "Transmission Remote Torrent"
   ${unregisterProtocol} "magnet" "Magnet URI"
   
   ; Remove registry keys
   DeleteRegKey HKLM SOFTWARE\TransmissionRemote
+!endif
 
   ; Remove files and uninstaller
   Delete "$INSTDIR\Transmission Remote.exe"
@@ -285,9 +297,11 @@ Section "Uninstall"
   SetShellVarContext current
   Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
+!ifndef PORTABLE
   SetShellVarContext all
   Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
+!endif
 
   ; Remove directories used
   RMDir "$INSTDIR\cs-CZ"
@@ -307,7 +321,9 @@ Section "Uninstall"
   RMDir "$INSTDIR"
 
   DeleteRegKey /ifempty HKCU "Software\TransmissionRemote"
+!ifndef PORTABLE
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Transmission Remote"
+!endif
 
 SectionEnd
 
@@ -323,9 +339,13 @@ SectionEnd
 
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
+!ifdef PORTABLE
+  StrCpy $INSTDIR "\${ProgramFilesDir}"
+!else
   ${If} ${RunningX64}
       StrCpy $INSTDIR "$PROGRAMFILES64\${ProgramFilesDir}"
   ${Else}
       StrCpy $INSTDIR "$PROGRAMFILES\${ProgramFilesDir}"
   ${Endif}
+!endif
 FunctionEnd
