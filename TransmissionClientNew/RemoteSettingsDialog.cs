@@ -67,9 +67,14 @@ namespace TransmissionRemoteDotnet
 
         private void SetNumeric(NumericUpDown numeric, decimal value, int def)
         {
-            if (-numeric.DecimalPlaces > Math.Log10((float)value))
+            double log = Math.Log10(Math.Abs((float)value));
+            if (value == 0 || log >= 0)
             {
-                numeric.DecimalPlaces = (int)Math.Round(-Math.Log10((float)value)) + 1;
+                numeric.DecimalPlaces = 0;
+            }
+            else if (-numeric.DecimalPlaces > log)
+            {
+                numeric.DecimalPlaces = (int)Math.Round(-log) + 1;
             }
             numeric.Value = value <= numeric.Maximum && value >= numeric.Minimum ? value : def;
         }
