@@ -111,110 +111,116 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AutoUpdateGeoipCheckBox.Text" xml:space="preserve">
+    <value>Auto update GeoIp database</value>
+  </data>
+  <data name="ClearDestPathHistoryButton.Text" xml:space="preserve">
+    <value>Clear path history</value>
+  </data>
   <data name="StartOnSystemCheckBox.Text" xml:space="preserve">
-    <value>Start on system startup</value>
+    <value>系统启动时启动</value>
   </data>
   <data name="UpdateToBetaCheckBox.Text" xml:space="preserve">
-    <value>Update to beta versions</value>
+    <value>更新到测试版本</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
-    <value>Refresh rate when hidden:</value>
+    <value>隐藏时刷新速率：</value>
   </data>
   <data name="ColorTrayIconCheckBox.Text" xml:space="preserve">
-    <value>Color tray icon</value>
+    <value>彩色任务栏图标</value>
   </data>
   <data name="removeServerButton.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>移除服务器</value>
   </data>
   <data name="addServerButton.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>添加服务器</value>
   </data>
   <data name="columnFeedName.Text" xml:space="preserve">
     <value>名称</value>
   </data>
   <data name="columnFeedUrl.Text" xml:space="preserve">
-    <value>Url</value>
+    <value>链接</value>
   </data>
   <data name="RemoveFeedButton.Text" xml:space="preserve">
     <value>移除</value>
   </data>
   <data name="AddFeedButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>添加</value>
   </data>
   <data name="FeedUrlLabel.Text" xml:space="preserve">
-    <value>Feed url:</value>
+    <value>源链接</value>
   </data>
   <data name="FeedNameLabel.Text" xml:space="preserve">
     <value>Feed name:</value>
   </data>
   <data name="groupFeed.Text" xml:space="preserve">
-    <value>Feed</value>
+    <value>源</value>
   </data>
   <data name="tabRssSettings.Text" xml:space="preserve">
-    <value>Rss Feeds</value>
+    <value>RSS源</value>
   </data>
   <data name="tabSkinSettings.Text" xml:space="preserve">
-    <value>Skin</value>
+    <value>皮肤</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>Custom rpc path:</value>
+    <value>自定义RPC路径：</value>
   </data>
   <data name="ClearPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
+    <value>保存时清空密码</value>
   </data>
   <data name="ClearProxyPasswordCheckBox.Text" xml:space="preserve">
-    <value>Clear the password at save</value>
+    <value>保存时清空密码</value>
   </data>
   <data name="DontSavePasswordsCheckBox.Text" xml:space="preserve">
-    <value>Don't save passwords</value>
+    <value>不要保存密码</value>
   </data>
   <data name="defaultActionComboBox.Items" xml:space="preserve">
-    <value>Torrent Properties</value>
+    <value>种子属性</value>
   </data>
   <data name="defaultActionComboBox.Items1" xml:space="preserve">
-    <value>Open remote folder</value>
+    <value>打开远程文件夹</value>
   </data>
   <data name="defaultActionComboBox.Items2" xml:space="preserve">
-    <value>Start/Stop torrent</value>
+    <value>启动／停止任务</value>
   </data>
   <data name="defaultActionLabel.Text" xml:space="preserve">
-    <value>Default Action:</value>
+    <value>默认动作</value>
   </data>
   <data name="DeleteTorrentCheckBox.Text" xml:space="preserve">
-    <value>Delete torrent when adding</value>
+    <value>当种子成功添加之后删除种子</value>
   </data>
   <data name="SaveAndConnectButton.Text" xml:space="preserve">
-    <value>Save and Connect</value>
+    <value>保存然后链接</value>
   </data>
   <data name="groupAutoConnect.Text" xml:space="preserve">
-    <value>Auto connect</value>
+    <value>自动连接</value>
   </data>
   <data name="groupCurrentProfile.Text" xml:space="preserve">
-    <value>Current profile</value>
+    <value>当前配置文件</value>
   </data>
   <data name="PlinkPathButton.Text" xml:space="preserve">
-    <value>Browse</value>
+    <value>浏览</value>
   </data>
   <data name="groupPlinkPath.Text" xml:space="preserve">
     <value>plink.exe or ssh.exe:</value>
   </data>
   <data name="UploadPromptCheckBox.Text" xml:space="preserve">
-    <value>Upload prompt</value>
+    <value>上传提示</value>
   </data>
   <data name="groupBehavior.Text" xml:space="preserve">
-    <value>Behavior</value>
+    <value>行为</value>
   </data>
   <data name="tabGlobalSettings.Text" xml:space="preserve">
-    <value>Global Settings</value>
+    <value>全局设置</value>
   </data>
   <data name="SaveServerButton.Text" xml:space="preserve">
-    <value>Save Server</value>
+    <value>保存服务器</value>
   </data>
   <data name="PlinkEnableCheckBox.Text" xml:space="preserve">
-    <value>Display remote command button</value>
+    <value>显示远程命令按钮</value>
   </data>
   <data name="AddShareButton.Text" xml:space="preserve">
-    <value>Add</value>
+    <value>添加</value>
   </data>
   <data name="RemoveShareButton.Text" xml:space="preserve">
     <value>移除</value>
@@ -226,19 +232,19 @@
     <value>主机</value>
   </data>
   <data name="columnPort.Text" xml:space="preserve">
-    <value>Port</value>
+    <value>端口</value>
   </data>
   <data name="addServerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Server</value>
+    <value>添加服务器</value>
   </data>
   <data name="removeServerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove Server</value>
+    <value>移除服务器</value>
   </data>
   <data name="tabServersSettings.Text" xml:space="preserve">
-    <value>Servers Settings</value>
+    <value>服务器选项</value>
   </data>
   <data name="AutoCheckUpdateCheckBox.Text" xml:space="preserve">
-    <value>Check for update at startup</value>
+    <value>启动时检查更新</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>UNIX path prefix:</value>
@@ -247,7 +253,7 @@
     <value>Samba share:</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>New mapping:</value>
+    <value>新映射</value>
   </data>
   <data name="tabPage7.Text" xml:space="preserve">
     <value>Samba</value>
@@ -256,7 +262,7 @@
     <value>自动</value>
   </data>
   <data name="tabPage6.Text" xml:space="preserve">
-    <value>Misc</value>
+    <value>杂项</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>主机:</value>

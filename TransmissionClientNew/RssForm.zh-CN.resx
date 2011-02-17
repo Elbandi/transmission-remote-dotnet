@@ -115,7 +115,7 @@
     <value>statusStrip1</value>
   </data>
   <data name="RefreshButton.Text" xml:space="preserve">
-    <value>Refresh</value>
+    <value>刷新</value>
   </data>
   <data name="addTorrentButton.Text" xml:space="preserve">
     <value>添加任务</value>
@@ -130,15 +130,15 @@
     <value>标题</value>
   </data>
   <data name="categoryColumnHeader.Text" xml:space="preserve">
-    <value>Category</value>
+    <value>目录</value>
   </data>
   <data name="descriptionColumnHeader.Text" xml:space="preserve">
-    <value>Description</value>
+    <value>描述</value>
   </data>
   <data name="pubdateColumnHeader.Text" xml:space="preserve">
-    <value>Pub Date</value>
+    <value>发布日期</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Rss Downloader</value>
+    <value>RSS下载器</value>
   </data>
 </root>
