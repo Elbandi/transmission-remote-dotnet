@@ -118,7 +118,7 @@
     <value>确定</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
-    <value>Start torrent</value>
+    <value>启动任务</value>
   </data>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>toolStripStatusLabel1</value>
@@ -127,31 +127,31 @@
     <value>statusStrip1</value>
   </data>
   <data name="DateLabelLabel.Text" xml:space="preserve">
-    <value>Date:</value>
+    <value>日期</value>
   </data>
   <data name="SizelabelLabel.Text" xml:space="preserve">
-    <value>Size:</value>
+    <value>体积</value>
   </data>
   <data name="CommentLabelLabel.Text" xml:space="preserve">
     <value>注释:</value>
   </data>
   <data name="NameLabelLabel.Text" xml:space="preserve">
-    <value>Name:</value>
+    <value>名称</value>
   </data>
   <data name="SelectNoneButton.Text" xml:space="preserve">
-    <value>Select None</value>
+    <value>全不选择</value>
   </data>
   <data name="SelectInvertButton.Text" xml:space="preserve">
-    <value>Select Invert</value>
+    <value>反向选择</value>
   </data>
   <data name="SelectAllButton.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>选择全部</value>
   </data>
   <data name="TorrentContentsGroupBox.Text" xml:space="preserve">
-    <value>Torrent Contents</value>
+    <value>种子内容</value>
   </data>
   <data name="PropertiesGroupBox.Text" xml:space="preserve">
-    <value>Torrent properties</value>
+    <value>种子属性</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentLoadDialog</value>

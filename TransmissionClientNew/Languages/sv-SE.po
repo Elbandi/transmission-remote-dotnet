@@ -1,7 +1,7 @@
 # Swedish translation of transmission-remote-dotnet
 # Copyright (C) 2009 Alan F
 # This file is distributed under the same license as the transmission-remote-dotnet package.
-#
+# 
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 msgid ""
 msgstr ""
@@ -145,6 +145,125 @@ msgstr "Sök"
 msgid "Find what:"
 msgstr "Sök vad:"
 
+#: GeneralTorrentInfo~commentLabel.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
+#, csharp-format
+msgid "Comment:"
+msgstr "Kommentar:"
+
+#: GeneralTorrentInfo~createdAtLabel.Text
+#, csharp-format
+msgid "Created at:"
+msgstr "Skapad den:"
+
+#: GeneralTorrentInfo~createdByLabel.Text
+#, csharp-format
+msgid "Created by:"
+msgstr "Skapad av:"
+
+#: GeneralTorrentInfo~downloadLimitLabel.Text
+#, csharp-format
+msgid "Download limit:"
+msgstr "Begränsning Ner:"
+
+#: GeneralTorrentInfo~downloadSpeedLabel.Text
+#, csharp-format
+msgid "Download speed:"
+msgstr "Hastighet Ner:"
+
+#: GeneralTorrentInfo~downloadedLabel.Text
+#, csharp-format
+msgid "Downloaded:"
+msgstr "Nerladdat:"
+
+#: GeneralTorrentInfo~errorLabel.Text
+#, csharp-format
+msgid "Error:"
+msgstr "Fel:"
+
+#: GeneralTorrentInfo~generalLabel.Text
+#: MainWindow~generalTabPage.Text
+#: RemoteSettingsDialog~tabGeneral.Text
+#: TorrentPropertiesDialog~tabGeneral.Text
+#, csharp-format
+msgid "General"
+msgstr "Allmänt"
+
+#: GeneralTorrentInfo~hashLabel.Text
+#, csharp-format
+msgid "Hash:"
+msgstr ""
+
+#: GeneralTorrentInfo~leechersLabel.Text
+#, csharp-format
+msgid "Leechers:"
+msgstr "Hämtare:"
+
+#: GeneralTorrentInfo~locationLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "Plats:"
+
+#: GeneralTorrentInfo~piecesInfoLabel.Text
+#, csharp-format
+msgid "Pieces:"
+msgstr "Delar:"
+
+#: GeneralTorrentInfo~ratioLabel.Text
+#, csharp-format
+msgid "Ratio:"
+msgstr "Förhållande:"
+
+#: GeneralTorrentInfo~remainingLabel.Text
+#, csharp-format
+msgid "Remaining:"
+msgstr "Kvarvarande:"
+
+#: GeneralTorrentInfo~seedersLabel.Text
+#, csharp-format
+msgid "Seeds:"
+msgstr "Utdelare:"
+
+#: GeneralTorrentInfo~startedAtLabel.Text
+#, csharp-format
+msgid "Started At:"
+msgstr "Startad:"
+
+#: GeneralTorrentInfo~statusLabel.Text
+#, csharp-format
+msgid "Status:"
+msgstr ""
+
+#: GeneralTorrentInfo~timeElapsedLabel.Text
+#, csharp-format
+msgid "Time elapsed:"
+msgstr "Tidsåtgång:"
+
+#: GeneralTorrentInfo~totalSizeLabel.Text
+#, csharp-format
+msgid "Total size:"
+msgstr "Total storlek:"
+
+#: GeneralTorrentInfo~transferLabel.Text
+#, csharp-format
+msgid "Transfer"
+msgstr ""
+
+#: GeneralTorrentInfo~uploadLimitLabel.Text
+#, csharp-format
+msgid "Upload limit:"
+msgstr "Begränsning Upp:"
+
+#: GeneralTorrentInfo~uploadSpeedLabel.Text
+#, csharp-format
+msgid "Upload speed:"
+msgstr "Hastighet Upp:"
+
+#: GeneralTorrentInfo~uploadedLabel.Text
+#, csharp-format
+msgid "Uploaded:"
+msgstr "Uppladdat:"
+
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
 #, csharp-format
@@ -161,6 +280,16 @@ msgstr "Lägg till"
 #, csharp-format
 msgid "Check for update at startup"
 msgstr "Sök efter uppdateringar vid start"
+
+#: LocalSettingsDialog~AutoUpdateGeoipCheckBox.Text
+#, csharp-format
+msgid "Auto update GeoIp database"
+msgstr ""
+
+#: LocalSettingsDialog~ClearDestPathHistoryButton.Text
+#, csharp-format
+msgid "Clear path history"
+msgstr ""
 
 #: LocalSettingsDialog~ClearPasswordCheckBox.Text
 #: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
@@ -539,7 +668,18 @@ msgstr ""
 msgid "Alt Speed"
 msgstr "Alt Hastighet"
 
+#: MainWindow~FilterTorrentClearButton.Text
+#, csharp-format
+msgid "X"
+msgstr ""
+
+#: MainWindow~FilterTorrentClearButton.ToolTipText
+#, csharp-format
+msgid "Clear filter"
+msgstr ""
+
 #: MainWindow~FilterTorrentLabel.Text
+#: MainWindow~filesFilterLabel.Text
 #, csharp-format
 msgid "Filter:"
 msgstr ""
@@ -692,22 +832,10 @@ msgstr "Filtyp"
 msgid "Find..."
 msgstr "&Sök..."
 
-#: MainWindow~generalTabPage.Text
-#: RemoteSettingsDialog~tabPage1.Text
-#: TorrentPropertiesDialog~tabGeneral.Text
-#, csharp-format
-msgid "General"
-msgstr "Allmänt"
-
 #: MainWindow~groupBox1.Text
 #, csharp-format
 msgid "Overall bandwidth utilisation"
 msgstr "Totalt utnyttjad bandbredd"
-
-#: MainWindow~hashLabelLabel.Text
-#, csharp-format
-msgid "Hash:"
-msgstr ""
 
 #: MainWindow~helpToolStripMenuItem.Text
 #, csharp-format
@@ -718,52 +846,6 @@ msgstr "&Hjälp"
 #, csharp-format
 msgid "Import local settings..."
 msgstr "&Importera lokala inställningar..."
-
-#: MainWindow~label1.Text
-#, csharp-format
-msgid "Total size:"
-msgstr "Total storlek:"
-
-#: MainWindow~label10.Text
-#, csharp-format
-msgid "Seeds:"
-msgstr "Utdelare:"
-
-#: MainWindow~label11.Text
-#, csharp-format
-msgid "Status:"
-msgstr ""
-
-#: MainWindow~label12.Text
-#, csharp-format
-msgid "Upload limit:"
-msgstr "Begränsning Upp:"
-
-#: MainWindow~label13.Text
-#, csharp-format
-msgid "Leechers:"
-msgstr "Hämtare:"
-
-#: MainWindow~label14.Text
-#, csharp-format
-msgid "Ratio:"
-msgstr "Förhållande:"
-
-#: MainWindow~label15.Text
-#: TorrentLoadDialog~CommentLabelLabel.Text
-#, csharp-format
-msgid "Comment:"
-msgstr "Kommentar:"
-
-#: MainWindow~label16.Text
-#, csharp-format
-msgid "Created at:"
-msgstr "Skapad den:"
-
-#: MainWindow~label17.Text
-#, csharp-format
-msgid "Created by:"
-msgstr "Skapad av:"
 
 #: MainWindow~label18.Text
 #, csharp-format
@@ -782,46 +864,6 @@ msgstr "Upp"
 msgid "Down"
 msgstr "Ner"
 
-#: MainWindow~label3.Text
-#, csharp-format
-msgid "Started At:"
-msgstr "Startad:"
-
-#: MainWindow~label4.Text
-#, csharp-format
-msgid "Remaining:"
-msgstr "Kvarvarande:"
-
-#: MainWindow~label5.Text
-#, csharp-format
-msgid "Uploaded:"
-msgstr "Uppladdat:"
-
-#: MainWindow~label6.Text
-#, csharp-format
-msgid "Downloaded:"
-msgstr "Nerladdat:"
-
-#: MainWindow~label7.Text
-#, csharp-format
-msgid "Download speed:"
-msgstr "Hastighet Ner:"
-
-#: MainWindow~label8.Text
-#, csharp-format
-msgid "Upload speed:"
-msgstr "Hastighet Upp:"
-
-#: MainWindow~label9.Text
-#, csharp-format
-msgid "Download limit:"
-msgstr "Begränsning Ner:"
-
-#: MainWindow~labelForErrorLabel.Text
-#, csharp-format
-msgid "Error:"
-msgstr "Fel:"
-
 #: MainWindow~languageToolStripMenuItem.Text
 #, csharp-format
 msgid "Language"
@@ -831,11 +873,6 @@ msgstr "S&pråk"
 #, csharp-format
 msgid "Local settings"
 msgstr "Inställningar &Lokalt"
-
-#: MainWindow~locationLabelLabel.Text
-#, csharp-format
-msgid "Location:"
-msgstr "Plats:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -928,11 +965,6 @@ msgstr "Uppladdningshastighet"
 #, csharp-format
 msgid "_"
 msgstr "This is selectable text"
-
-#: MainWindow~piecesInfoLabelLabel.Text
-#, csharp-format
-msgid "Pieces:"
-msgstr "Delar:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
@@ -1060,11 +1092,6 @@ msgstr ""
 msgid "Pause all"
 msgstr "Pausa alla"
 
-#: MainWindow~timeElapsedLabelLabel.Text
-#, csharp-format
-msgid "Time elapsed:"
-msgstr "Tidsåtgång:"
-
 #: MainWindow~toolStripContainer1.Text
 #, csharp-format
 msgid "toolStripContainer1"
@@ -1154,6 +1181,11 @@ msgstr "Nivå"
 msgid "Update In"
 msgstr "Uppdatera om"
 
+#: MainWindow~updateGeoipDatabaseToolStripMenuItem.Text
+#, csharp-format
+msgid "Update GeoIP database"
+msgstr ""
+
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
 msgid "View"
@@ -1173,6 +1205,16 @@ msgstr "Flytta"
 #, csharp-format
 msgid "Destination directory: "
 msgstr "Målkatalog: "
+
+#: OtherStrings~AddTrackerUrl
+#, csharp-format
+msgid "Add tracker announce URL"
+msgstr ""
+
+#: OtherStrings~AddUrl
+#, csharp-format
+msgid "Add URL"
+msgstr ""
 
 #: OtherStrings~Author
 #, csharp-format
@@ -1299,6 +1341,16 @@ msgstr "{0} ({1} giltig)"
 msgid "Downloading"
 msgstr "Laddar ner"
 
+#: OtherStrings~EditTrackerUrl
+#, csharp-format
+msgid "Edit tracker announce URL"
+msgstr ""
+
+#: OtherStrings~EditUrl
+#, csharp-format
+msgid "Edit URL"
+msgstr ""
+
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
@@ -1318,6 +1370,21 @@ msgstr "Misslyckad anslutning"
 #, csharp-format
 msgid "Feed exists"
 msgstr "Feed finns"
+
+#: OtherStrings~GeoipDatabase
+#, csharp-format
+msgid "Geoip database"
+msgstr ""
+
+#: OtherStrings~GeoipDatabaseUpdateCompleted
+#, csharp-format
+msgid "Geoip database update completed"
+msgstr ""
+
+#: OtherStrings~GeoipDatabaseUpdateFailed
+#, csharp-format
+msgid "GeoIP database update failed"
+msgstr ""
 
 #: OtherStrings~GeoipInitError
 #, csharp-format
@@ -1378,6 +1445,11 @@ msgstr "Inmatning godkänd"
 #, csharp-format
 msgid "Invalid RPC location"
 msgstr "Ogiltig RPC-plats"
+
+#: OtherStrings~InvalidUrl
+#, csharp-format
+msgid "Invalid url"
+msgstr ""
 
 #: OtherStrings~ItemsSelected
 #, csharp-format
@@ -1599,6 +1671,11 @@ msgstr "Markera alla"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr "5 sek|10 sek|30 sek|5 min"
 
+#: OtherStrings~SpeedWithAvg
+#, csharp-format
+msgid "{0} (avg. {1})"
+msgstr ""
+
 #: OtherStrings~TerabyteShort
 #, csharp-format
 msgid "TB"
@@ -1628,6 +1705,11 @@ msgstr "{0} ({1} klara) ({2} giltiga)"
 #, csharp-format
 msgid "{0} ({1} done) ({2} valid) ({3} total)"
 msgstr "{0} ({1} klara) ({2} giltiga) ({3} totalt)"
+
+#: OtherStrings~TrackerExists
+#, csharp-format
+msgid "Tracker already exists"
+msgstr ""
 
 #: OtherStrings~UnableRunPlink
 #, csharp-format
@@ -1754,6 +1836,16 @@ msgstr "Tidsbegränsning"
 msgid "Blocklist enabled"
 msgstr "Använd blockeringslista"
 
+#: RemoteSettingsDialog~blocklistUrlLabel.Text
+#, csharp-format
+msgid "Blocklist url:"
+msgstr ""
+
+#: RemoteSettingsDialog~cacheSizeLabel.Text
+#, csharp-format
+msgid "Disk cache size:"
+msgstr ""
+
 #: RemoteSettingsDialog~dhtEnabled.Text
 #, csharp-format
 msgid "Enable Distributed Hash Table (DHT)"
@@ -1855,20 +1947,30 @@ msgstr "Använd UPnP"
 msgid "Rename partial files"
 msgstr ""
 
+#: RemoteSettingsDialog~seedIdleEnabledCheckBox.Text
+#, csharp-format
+msgid "Seed Idle Limit"
+msgstr ""
+
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
 msgid "Seed Ratio Limit"
 msgstr "Gräns för utdelning"
 
-#: RemoteSettingsDialog~tabPage2.Text
+#: RemoteSettingsDialog~tabAltLimits.Text
+#, csharp-format
+msgid "Alternate limits"
+msgstr "Alternativa gränser"
+
+#: RemoteSettingsDialog~tabLimits.Text
 #, csharp-format
 msgid "Limits"
 msgstr "Gränser"
 
-#: RemoteSettingsDialog~tabPage3.Text
+#: RemoteSettingsDialog~tabNetwork.Text
 #, csharp-format
-msgid "Alternate limits"
-msgstr "Alternativa gränser"
+msgid "Network"
+msgstr ""
 
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
@@ -1879,6 +1981,11 @@ msgstr "Testa port"
 #, csharp-format
 msgid "Update Blocklist"
 msgstr "Uppdatera blockeringslistan"
+
+#: RemoteSettingsDialog~watchdirCheckBox.Text
+#, csharp-format
+msgid "Directory watching:"
+msgstr ""
 
 #: RssForm~RefreshButton.Text
 #, csharp-format
@@ -2032,6 +2139,11 @@ msgstr ""
 msgid "TorrentPropertiesDialog"
 msgstr ""
 
+#: TorrentPropertiesDialog~addTrackerButton.Text
+#, csharp-format
+msgid "Add Tracker"
+msgstr ""
+
 #: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
 msgid "Limit download rate"
@@ -2051,6 +2163,16 @@ msgstr "Maximalt antal anslutningar"
 #, csharp-format
 msgid "Bandwidth priority:"
 msgstr "Bandbreddsprioritet:"
+
+#: TorrentPropertiesDialog~removeTrackerButton.Text
+#, csharp-format
+msgid "Remove Tracker"
+msgstr ""
+
+#: TorrentPropertiesDialog~seedIdleLimitedCheckBox.Text
+#, csharp-format
+msgid "Limit idle seed"
+msgstr ""
 
 #: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
 #, csharp-format

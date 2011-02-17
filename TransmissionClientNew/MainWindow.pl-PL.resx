@@ -111,6 +111,18 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="filesFilterLabel.Text" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="FilterTorrentClearButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="FilterTorrentClearButton.ToolTipText" xml:space="preserve">
+    <value>Clear filter</value>
+  </data>
+  <data name="updateGeoipDatabaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update GeoIP database</value>
+  </data>
   <data name="openNetworkShareDirToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Folder on Network Share</value>
   </data>
@@ -158,9 +170,6 @@
   </data>
   <data name="torrentTrackerCol.Text" xml:space="preserve">
     <value>Tracker</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Rozmiar całkowity:</value>
   </data>
   <data name="trackersTierCol.Text" xml:space="preserve">
     <value>#</value>
@@ -243,17 +252,8 @@
   <data name="RssButton.Text" xml:space="preserve">
     <value>Pobieranie RSS</value>
   </data>
-  <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>Położenie:</value>
-  </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
     <value>Alternatywna prędkość</value>
-  </data>
-  <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>Części:</value>
-  </data>
-  <data name="hashLabelLabel.Text" xml:space="preserve">
-    <value>Hash:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
     <value>Znajdź...</value>
@@ -272,57 +272,6 @@
   </data>
   <data name="downloadProgressLabel.Text" xml:space="preserve">
     <value>Części:</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>Utworzony w:</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Utworzono:</value>
-  </data>
-  <data name="labelForErrorLabel.Text" xml:space="preserve">
-    <value>Błąd:</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>Komentarz:</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Ratio:</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Pobierających:</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Seedów:</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Limit wysyłania:</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Wysyłanie:</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Wysłano:</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Pozostało:</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>Status:</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Limit pobierania:</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Pobieranie:</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Pobrano:</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Rozpoczęto:</value>
-  </data>
-  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
-    <value>Upłynęło:</value>
   </data>
   <data name="generalTabPage.Text" xml:space="preserve">
     <value>Ogólne</value>

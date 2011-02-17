@@ -145,6 +145,125 @@ msgstr "검색"
 msgid "Find what:"
 msgstr "검색어 입력:"
 
+#: GeneralTorrentInfo~commentLabel.Text
+#: TorrentLoadDialog~CommentLabelLabel.Text
+#, csharp-format
+msgid "Comment:"
+msgstr "설명:"
+
+#: GeneralTorrentInfo~createdAtLabel.Text
+#, csharp-format
+msgid "Created at:"
+msgstr "생성 시간:"
+
+#: GeneralTorrentInfo~createdByLabel.Text
+#, csharp-format
+msgid "Created by:"
+msgstr "생성 프로그램:"
+
+#: GeneralTorrentInfo~downloadLimitLabel.Text
+#, csharp-format
+msgid "Download limit:"
+msgstr "다운속도 제한:"
+
+#: GeneralTorrentInfo~downloadSpeedLabel.Text
+#, csharp-format
+msgid "Download speed:"
+msgstr "다운속도:"
+
+#: GeneralTorrentInfo~downloadedLabel.Text
+#, csharp-format
+msgid "Downloaded:"
+msgstr "다운로드:"
+
+#: GeneralTorrentInfo~errorLabel.Text
+#, csharp-format
+msgid "Error:"
+msgstr "오류:"
+
+#: GeneralTorrentInfo~generalLabel.Text
+#: MainWindow~generalTabPage.Text
+#: RemoteSettingsDialog~tabGeneral.Text
+#: TorrentPropertiesDialog~tabGeneral.Text
+#, csharp-format
+msgid "General"
+msgstr "일반"
+
+#: GeneralTorrentInfo~hashLabel.Text
+#, csharp-format
+msgid "Hash:"
+msgstr "해쉬:"
+
+#: GeneralTorrentInfo~leechersLabel.Text
+#, csharp-format
+msgid "Leechers:"
+msgstr "리쳐:"
+
+#: GeneralTorrentInfo~locationLabel.Text
+#, csharp-format
+msgid "Location:"
+msgstr "위치:"
+
+#: GeneralTorrentInfo~piecesInfoLabel.Text
+#, csharp-format
+msgid "Pieces:"
+msgstr "조각:"
+
+#: GeneralTorrentInfo~ratioLabel.Text
+#, csharp-format
+msgid "Ratio:"
+msgstr "비율:"
+
+#: GeneralTorrentInfo~remainingLabel.Text
+#, csharp-format
+msgid "Remaining:"
+msgstr "남은 시간:"
+
+#: GeneralTorrentInfo~seedersLabel.Text
+#, csharp-format
+msgid "Seeds:"
+msgstr "배포:"
+
+#: GeneralTorrentInfo~startedAtLabel.Text
+#, csharp-format
+msgid "Started At:"
+msgstr "시작 시간:"
+
+#: GeneralTorrentInfo~statusLabel.Text
+#, csharp-format
+msgid "Status:"
+msgstr "상태:"
+
+#: GeneralTorrentInfo~timeElapsedLabel.Text
+#, csharp-format
+msgid "Time elapsed:"
+msgstr "경과 시간:"
+
+#: GeneralTorrentInfo~totalSizeLabel.Text
+#, csharp-format
+msgid "Total size:"
+msgstr ""
+
+#: GeneralTorrentInfo~transferLabel.Text
+#, csharp-format
+msgid "Transfer"
+msgstr ""
+
+#: GeneralTorrentInfo~uploadLimitLabel.Text
+#, csharp-format
+msgid "Upload limit:"
+msgstr "업속도 제한:"
+
+#: GeneralTorrentInfo~uploadSpeedLabel.Text
+#, csharp-format
+msgid "Upload speed:"
+msgstr "업속도:"
+
+#: GeneralTorrentInfo~uploadedLabel.Text
+#, csharp-format
+msgid "Uploaded:"
+msgstr "업로드:"
+
 #: LocalSettingsDialog~$this.Text
 #: MainWindow~localConfigureButton.Text
 #, csharp-format
@@ -161,6 +280,16 @@ msgstr "추가"
 #, csharp-format
 msgid "Check for update at startup"
 msgstr "프로그램 시작시 업데이트 검색"
+
+#: LocalSettingsDialog~AutoUpdateGeoipCheckBox.Text
+#, csharp-format
+msgid "Auto update GeoIp database"
+msgstr ""
+
+#: LocalSettingsDialog~ClearDestPathHistoryButton.Text
+#, csharp-format
+msgid "Clear path history"
+msgstr ""
 
 #: LocalSettingsDialog~ClearPasswordCheckBox.Text
 #: LocalSettingsDialog~ClearProxyPasswordCheckBox.Text
@@ -539,7 +668,18 @@ msgstr "트랜스미션 리모트"
 msgid "Alt Speed"
 msgstr "선택적 속도 제한"
 
+#: MainWindow~FilterTorrentClearButton.Text
+#, csharp-format
+msgid "X"
+msgstr ""
+
+#: MainWindow~FilterTorrentClearButton.ToolTipText
+#, csharp-format
+msgid "Clear filter"
+msgstr ""
+
 #: MainWindow~FilterTorrentLabel.Text
+#: MainWindow~filesFilterLabel.Text
 #, csharp-format
 msgid "Filter:"
 msgstr ""
@@ -692,22 +832,10 @@ msgstr "종류"
 msgid "Find..."
 msgstr ""
 
-#: MainWindow~generalTabPage.Text
-#: RemoteSettingsDialog~tabPage1.Text
-#: TorrentPropertiesDialog~tabGeneral.Text
-#, csharp-format
-msgid "General"
-msgstr "일반"
-
 #: MainWindow~groupBox1.Text
 #, csharp-format
 msgid "Overall bandwidth utilisation"
 msgstr "대역폭 사용 내역"
-
-#: MainWindow~hashLabelLabel.Text
-#, csharp-format
-msgid "Hash:"
-msgstr "해쉬:"
 
 #: MainWindow~helpToolStripMenuItem.Text
 #, csharp-format
@@ -718,52 +846,6 @@ msgstr "도움말"
 #, csharp-format
 msgid "Import local settings..."
 msgstr ""
-
-#: MainWindow~label1.Text
-#, csharp-format
-msgid "Total size:"
-msgstr ""
-
-#: MainWindow~label10.Text
-#, csharp-format
-msgid "Seeds:"
-msgstr "배포:"
-
-#: MainWindow~label11.Text
-#, csharp-format
-msgid "Status:"
-msgstr "상태:"
-
-#: MainWindow~label12.Text
-#, csharp-format
-msgid "Upload limit:"
-msgstr "업속도 제한:"
-
-#: MainWindow~label13.Text
-#, csharp-format
-msgid "Leechers:"
-msgstr "리쳐:"
-
-#: MainWindow~label14.Text
-#, csharp-format
-msgid "Ratio:"
-msgstr "비율:"
-
-#: MainWindow~label15.Text
-#: TorrentLoadDialog~CommentLabelLabel.Text
-#, csharp-format
-msgid "Comment:"
-msgstr "설명:"
-
-#: MainWindow~label16.Text
-#, csharp-format
-msgid "Created at:"
-msgstr "생성 시간:"
-
-#: MainWindow~label17.Text
-#, csharp-format
-msgid "Created by:"
-msgstr "생성 프로그램:"
 
 #: MainWindow~label18.Text
 #, csharp-format
@@ -782,46 +864,6 @@ msgstr "업로드"
 msgid "Down"
 msgstr "다운로드"
 
-#: MainWindow~label3.Text
-#, csharp-format
-msgid "Started At:"
-msgstr "시작 시간:"
-
-#: MainWindow~label4.Text
-#, csharp-format
-msgid "Remaining:"
-msgstr "남은 시간:"
-
-#: MainWindow~label5.Text
-#, csharp-format
-msgid "Uploaded:"
-msgstr "업로드:"
-
-#: MainWindow~label6.Text
-#, csharp-format
-msgid "Downloaded:"
-msgstr "다운로드:"
-
-#: MainWindow~label7.Text
-#, csharp-format
-msgid "Download speed:"
-msgstr "다운속도:"
-
-#: MainWindow~label8.Text
-#, csharp-format
-msgid "Upload speed:"
-msgstr "업속도:"
-
-#: MainWindow~label9.Text
-#, csharp-format
-msgid "Download limit:"
-msgstr "다운속도 제한:"
-
-#: MainWindow~labelForErrorLabel.Text
-#, csharp-format
-msgid "Error:"
-msgstr "오류:"
-
 #: MainWindow~languageToolStripMenuItem.Text
 #, csharp-format
 msgid "Language"
@@ -831,11 +873,6 @@ msgstr "언어"
 #, csharp-format
 msgid "Local settings"
 msgstr "트랜스미션 리모트 설정..."
-
-#: MainWindow~locationLabelLabel.Text
-#, csharp-format
-msgid "Location:"
-msgstr "위치:"
 
 #: MainWindow~menuStrip.Text
 #, csharp-format
@@ -928,11 +965,6 @@ msgstr "업속도"
 #, csharp-format
 msgid "_"
 msgstr "This is selectable text"
-
-#: MainWindow~piecesInfoLabelLabel.Text
-#, csharp-format
-msgid "Pieces:"
-msgstr "조각:"
 
 #: MainWindow~projectSiteToolStripMenuItem.Text
 #, csharp-format
@@ -1060,11 +1092,6 @@ msgstr ""
 msgid "Pause all"
 msgstr "모두 일시정지"
 
-#: MainWindow~timeElapsedLabelLabel.Text
-#, csharp-format
-msgid "Time elapsed:"
-msgstr "경과 시간:"
-
 #: MainWindow~toolStripContainer1.Text
 #, csharp-format
 msgid "toolStripContainer1"
@@ -1154,6 +1181,11 @@ msgstr "순서"
 msgid "Update In"
 msgstr ""
 
+#: MainWindow~updateGeoipDatabaseToolStripMenuItem.Text
+#, csharp-format
+msgid "Update GeoIP database"
+msgstr ""
+
 #: MainWindow~viewToolStripMenuItem.Text
 #, csharp-format
 msgid "View"
@@ -1173,6 +1205,16 @@ msgstr "이동"
 #, csharp-format
 msgid "Destination directory: "
 msgstr "이동할 위치:"
+
+#: OtherStrings~AddTrackerUrl
+#, csharp-format
+msgid "Add tracker announce URL"
+msgstr ""
+
+#: OtherStrings~AddUrl
+#, csharp-format
+msgid "Add URL"
+msgstr ""
 
 #: OtherStrings~Author
 #, csharp-format
@@ -1299,6 +1341,16 @@ msgstr "{0} ({1} 유효)"
 msgid "Downloading"
 msgstr "다운로드 중"
 
+#: OtherStrings~EditTrackerUrl
+#, csharp-format
+msgid "Edit tracker announce URL"
+msgstr ""
+
+#: OtherStrings~EditUrl
+#, csharp-format
+msgid "Edit URL"
+msgstr ""
+
 #: OtherStrings~EmptyFile
 #, csharp-format
 msgid "Empty file"
@@ -1317,6 +1369,21 @@ msgstr "요청 실패"
 #: OtherStrings~FeedExists
 #, csharp-format
 msgid "Feed exists"
+msgstr ""
+
+#: OtherStrings~GeoipDatabase
+#, csharp-format
+msgid "Geoip database"
+msgstr ""
+
+#: OtherStrings~GeoipDatabaseUpdateCompleted
+#, csharp-format
+msgid "Geoip database update completed"
+msgstr ""
+
+#: OtherStrings~GeoipDatabaseUpdateFailed
+#, csharp-format
+msgid "GeoIP database update failed"
 msgstr ""
 
 #: OtherStrings~GeoipInitError
@@ -1377,6 +1444,11 @@ msgstr "입력 됨"
 #: OtherStrings~InvalidRPCLocation
 #, csharp-format
 msgid "Invalid RPC location"
+msgstr ""
+
+#: OtherStrings~InvalidUrl
+#, csharp-format
+msgid "Invalid url"
 msgstr ""
 
 #: OtherStrings~ItemsSelected
@@ -1599,6 +1671,11 @@ msgstr "모두 선택"
 msgid "5 sec|10 sec|30 sec|5 min"
 msgstr "5 초|10 초|30 초|5 분"
 
+#: OtherStrings~SpeedWithAvg
+#, csharp-format
+msgid "{0} (avg. {1})"
+msgstr ""
+
 #: OtherStrings~TerabyteShort
 #, csharp-format
 msgid "TB"
@@ -1627,6 +1704,11 @@ msgstr ""
 #: OtherStrings~TotalDoneValidTotalSize
 #, csharp-format
 msgid "{0} ({1} done) ({2} valid) ({3} total)"
+msgstr ""
+
+#: OtherStrings~TrackerExists
+#, csharp-format
+msgid "Tracker already exists"
 msgstr ""
 
 #: OtherStrings~UnableRunPlink
@@ -1754,6 +1836,16 @@ msgstr "시간 제한"
 msgid "Blocklist enabled"
 msgstr "차단목록 사용"
 
+#: RemoteSettingsDialog~blocklistUrlLabel.Text
+#, csharp-format
+msgid "Blocklist url:"
+msgstr ""
+
+#: RemoteSettingsDialog~cacheSizeLabel.Text
+#, csharp-format
+msgid "Disk cache size:"
+msgstr ""
+
 #: RemoteSettingsDialog~dhtEnabled.Text
 #, csharp-format
 msgid "Enable Distributed Hash Table (DHT)"
@@ -1855,20 +1947,30 @@ msgstr "UPnP 사용"
 msgid "Rename partial files"
 msgstr ""
 
+#: RemoteSettingsDialog~seedIdleEnabledCheckBox.Text
+#, csharp-format
+msgid "Seed Idle Limit"
+msgstr ""
+
 #: RemoteSettingsDialog~seedRatioEnabledCheckBox.Text
 #, csharp-format
 msgid "Seed Ratio Limit"
 msgstr "배포 비율로 제한:"
 
-#: RemoteSettingsDialog~tabPage2.Text
+#: RemoteSettingsDialog~tabAltLimits.Text
+#, csharp-format
+msgid "Alternate limits"
+msgstr "선택적 제한"
+
+#: RemoteSettingsDialog~tabLimits.Text
 #, csharp-format
 msgid "Limits"
 msgstr "제한"
 
-#: RemoteSettingsDialog~tabPage3.Text
+#: RemoteSettingsDialog~tabNetwork.Text
 #, csharp-format
-msgid "Alternate limits"
-msgstr "선택적 제한"
+msgid "Network"
+msgstr ""
 
 #: RemoteSettingsDialog~testPortButton.Text
 #, csharp-format
@@ -1879,6 +1981,11 @@ msgstr "포트 검사"
 #, csharp-format
 msgid "Update Blocklist"
 msgstr "차단목록 갱신"
+
+#: RemoteSettingsDialog~watchdirCheckBox.Text
+#, csharp-format
+msgid "Directory watching:"
+msgstr ""
 
 #: RssForm~RefreshButton.Text
 #, csharp-format
@@ -2032,6 +2139,11 @@ msgstr ""
 msgid "TorrentPropertiesDialog"
 msgstr ""
 
+#: TorrentPropertiesDialog~addTrackerButton.Text
+#, csharp-format
+msgid "Add Tracker"
+msgstr ""
+
 #: TorrentPropertiesDialog~downloadLimitEnableField.Text
 #, csharp-format
 msgid "Limit download rate"
@@ -2051,6 +2163,16 @@ msgstr "최대 연결 제한:"
 #, csharp-format
 msgid "Bandwidth priority:"
 msgstr "대역폭 우선순위:"
+
+#: TorrentPropertiesDialog~removeTrackerButton.Text
+#, csharp-format
+msgid "Remove Tracker"
+msgstr ""
+
+#: TorrentPropertiesDialog~seedIdleLimitedCheckBox.Text
+#, csharp-format
+msgid "Limit idle seed"
+msgstr ""
 
 #: TorrentPropertiesDialog~seedRatioLimitedCheckBox.Text
 #, csharp-format
