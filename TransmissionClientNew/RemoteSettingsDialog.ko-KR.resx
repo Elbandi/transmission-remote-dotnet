@@ -111,6 +111,30 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="blocklistUrlLabel.Text" xml:space="preserve">
+    <value>Blocklist url:</value>
+  </data>
+  <data name="cacheSizeLabel.Text" xml:space="preserve">
+    <value>Disk cache size:</value>
+  </data>
+  <data name="watchdirCheckBox.Text" xml:space="preserve">
+    <value>Directory watching:</value>
+  </data>
+  <data name="tabGeneral.Text" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="tabNetwork.Text" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Text" xml:space="preserve">
+    <value>Seed Idle Limit</value>
+  </data>
+  <data name="tabLimits.Text" xml:space="preserve">
+    <value>제한</value>
+  </data>
+  <data name="tabAltLimits.Text" xml:space="preserve">
+    <value>선택적 제한</value>
+  </data>
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Rename partial files</value>
   </data>
@@ -209,15 +233,6 @@
   </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
     <value>배포 비율로 제한:</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>일반</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>제한</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>선택적 제한</value>
   </data>
   <data name="testPortButton.Text" xml:space="preserve">
     <value>포트 검사</value>

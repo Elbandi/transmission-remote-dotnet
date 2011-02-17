@@ -66,6 +66,7 @@ namespace TransmissionRemoteDotnet
             this.label5 = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.cacheSizeUnitLabel = new System.Windows.Forms.Label();
             this.blocklistUrlField = new System.Windows.Forms.TextBox();
             this.blocklistUrlLabel = new System.Windows.Forms.Label();
             this.cacheSizeLabel = new System.Windows.Forms.Label();
@@ -266,6 +267,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.cacheSizeUnitLabel);
             this.tabGeneral.Controls.Add(this.blocklistUrlField);
             this.tabGeneral.Controls.Add(this.blocklistUrlLabel);
             this.tabGeneral.Controls.Add(this.cacheSizeLabel);
@@ -283,6 +285,11 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // cacheSizeUnitLabel
+            // 
+            resources.ApplyResources(this.cacheSizeUnitLabel, "cacheSizeUnitLabel");
+            this.cacheSizeUnitLabel.Name = "cacheSizeUnitLabel";
             // 
             // blocklistUrlField
             // 
@@ -645,6 +652,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox watchdirCheckBox;
         private System.Windows.Forms.Label cacheSizeLabel;
         private System.Windows.Forms.NumericUpDown cacheSizeValue;
+        private System.Windows.Forms.Label cacheSizeUnitLabel;
         private System.Windows.Forms.CheckBox limitUploadCheckBox;
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;
