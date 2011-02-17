@@ -111,6 +111,18 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="filesFilterLabel.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="FilterTorrentClearButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="FilterTorrentClearButton.ToolTipText" xml:space="preserve">
+    <value>Clear filter</value>
+  </data>
+  <data name="updateGeoipDatabaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update GeoIP database</value>
+  </data>
   <data name="openNetworkShareDirToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Folder on Network Share</value>
   </data>
@@ -158,9 +170,6 @@
   </data>
   <data name="torrentTrackerCol.Text" xml:space="preserve">
     <value>트랙커</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Total size:</value>
   </data>
   <data name="trackersTierCol.Text" xml:space="preserve">
     <value>순서</value>
@@ -243,17 +252,8 @@
   <data name="RssButton.Text" xml:space="preserve">
     <value>Rss Downloader</value>
   </data>
-  <data name="locationLabelLabel.Text" xml:space="preserve">
-    <value>위치:</value>
-  </data>
   <data name="AltSpeedButton.Text" xml:space="preserve">
     <value>선택적 속도 제한</value>
-  </data>
-  <data name="piecesInfoLabelLabel.Text" xml:space="preserve">
-    <value>조각:</value>
-  </data>
-  <data name="hashLabelLabel.Text" xml:space="preserve">
-    <value>해쉬:</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
     <value>Find...</value>
@@ -330,30 +330,6 @@
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>도움말</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>배포:</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>상태:</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>업속도 제한:</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>리쳐:</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>비율:</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>설명:</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>생성 시간:</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>생성 프로그램:</value>
-  </data>
   <data name="label18.Text" xml:space="preserve">
     <value>해상도:</value>
   </data>
@@ -362,30 +338,6 @@
   </data>
   <data name="label20.Text" xml:space="preserve">
     <value>다운로드</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>시작 시간:</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>남은 시간:</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>업로드:</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>다운로드:</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>다운속도:</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>업속도:</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>다운속도 제한:</value>
-  </data>
-  <data name="labelForErrorLabel.Text" xml:space="preserve">
-    <value>오류:</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>언어</value>
@@ -500,9 +452,6 @@
   </data>
   <data name="stopAllToolStripMenuItem.Text" xml:space="preserve">
     <value>모두 일시정지</value>
-  </data>
-  <data name="timeElapsedLabelLabel.Text" xml:space="preserve">
-    <value>경과 시간:</value>
   </data>
   <data name="toolStripContainer1.Text" xml:space="preserve">
     <value>toolStripContainer1</value>

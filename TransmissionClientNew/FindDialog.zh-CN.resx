@@ -112,15 +112,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="findButton.Text" xml:space="preserve">
-    <value>Find</value>
+    <value>查找</value>
   </data>
   <data name="CaseSensitiveCheckBox.Text" xml:space="preserve">
-    <value>Case insensitiv</value>
+    <value>不区分大小写</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Find Torrent...</value>
+    <value>查找种子...</value>
   </data>
   <data name="findLabel.Text" xml:space="preserve">
-    <value>Find what:</value>
+    <value>找到</value>
   </data>
 </root>

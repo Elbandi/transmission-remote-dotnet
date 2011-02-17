@@ -111,6 +111,30 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="blocklistUrlLabel.Text" xml:space="preserve">
+    <value>Blocklist url:</value>
+  </data>
+  <data name="cacheSizeLabel.Text" xml:space="preserve">
+    <value>Disk cache size:</value>
+  </data>
+  <data name="watchdirCheckBox.Text" xml:space="preserve">
+    <value>Directory watching:</value>
+  </data>
+  <data name="tabGeneral.Text" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="tabNetwork.Text" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="seedIdleEnabledCheckBox.Text" xml:space="preserve">
+    <value>Seed Idle Limit</value>
+  </data>
+  <data name="tabLimits.Text" xml:space="preserve">
+    <value>Limites</value>
+  </data>
+  <data name="tabAltLimits.Text" xml:space="preserve">
+    <value>Alterner limites</value>
+  </data>
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Rename partial files</value>
   </data>
@@ -153,14 +177,8 @@
   <data name="blocklistEnabledCheckBox.Text" xml:space="preserve">
     <value>Blocklist activée</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Général</value>
-  </data>
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
     <value>Limite du ratio d'envoi</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Limites</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>:</value>
@@ -188,9 +206,6 @@
   </data>
   <data name="altSpeedLimitEnable.Text" xml:space="preserve">
     <value>Activer vitesse limite alternative</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Alterner limites</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>NOTE: Certaines options peuvent nécessiter une MAJ du daemon Transmission.</value>

@@ -117,6 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddTrackerUrl" xml:space="preserve">
+    <value>Add tracker announce URL</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>Add URL</value>
+  </data>
+  <data name="EditTrackerUrl" xml:space="preserve">
+    <value>Edit tracker announce URL</value>
+  </data>
+  <data name="EditUrl" xml:space="preserve">
+    <value>Edit URL</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>Invalid url</value>
+  </data>
+  <data name="TrackerExists" xml:space="preserve">
+    <value>Tracker already exists</value>
+  </data>
+  <data name="GeoipDatabaseUpdateFailed" xml:space="preserve">
+    <value>GeoIP database update failed</value>
+  </data>
+  <data name="GeoipDatabase" xml:space="preserve">
+    <value>Geoip database</value>
+  </data>
+  <data name="GeoipDatabaseUpdateCompleted" xml:space="preserve">
+    <value>Geoip database update completed</value>
+  </data>
+  <data name="SpeedWithAvg" xml:space="preserve">
+    <value>{0} (avg. {1})</value>
+  </data>
   <data name="UnableToOpenNetworkShare" xml:space="preserve">
     <value>Netzwerkfreigabe kann nicht geöffnet werden</value>
   </data>
