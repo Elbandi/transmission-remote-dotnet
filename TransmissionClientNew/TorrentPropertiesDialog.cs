@@ -204,9 +204,9 @@ namespace TransmissionRemoteDotnet
         {
             TrackerListItem current = (TrackerListItem)trackersList.SelectedItem;
             string newannounce = InputBox.Show(OtherStrings.EditTrackerUrl, OtherStrings.EditUrl, current.ToString(), false);
-            if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
+            if (newannounce != null)
             {
-                if (newannounce != null)
+                if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
                 {
                     int idx = trackersList.Items.IndexOf(newannounce);
                     if (idx == -1 || idx == trackersList.SelectedIndex)
@@ -217,17 +217,17 @@ namespace TransmissionRemoteDotnet
                     else
                         MessageBox.Show(OtherStrings.TrackerExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                    MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void addTrackerButton_Click(object sender, EventArgs e)
         {
             string newannounce = InputBox.Show(OtherStrings.AddTrackerUrl, OtherStrings.AddUrl, false);
-            if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
+            if (newannounce != null)
             {
-                if (newannounce != null)
+                if (Uri.IsWellFormedUriString(newannounce, UriKind.Absolute))
                 {
                     if (!trackersList.Items.Contains(newannounce))
                     {
@@ -236,9 +236,9 @@ namespace TransmissionRemoteDotnet
                     else
                         MessageBox.Show(OtherStrings.TrackerExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                    MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show(OtherStrings.InvalidUrl, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void removeTrackerButton_Click(object sender, EventArgs e)
