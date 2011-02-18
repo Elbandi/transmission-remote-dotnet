@@ -57,7 +57,7 @@ namespace TransmissionRemoteDotnet
             this.SaveButton = new System.Windows.Forms.Button();
             this.CloseFormButton = new System.Windows.Forms.Button();
             this.peerLimitValue = new System.Windows.Forms.NumericUpDown();
-            this.PEXcheckBox = new System.Windows.Forms.CheckBox();
+            this.pexEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.portForwardCheckBox = new System.Windows.Forms.CheckBox();
             this.encryptionCombobox = new System.Windows.Forms.ComboBox();
@@ -213,11 +213,11 @@ namespace TransmissionRemoteDotnet
             0});
             this.peerLimitValue.Name = "peerLimitValue";
             // 
-            // PEXcheckBox
+            // pexEnabledCheckBox
             // 
-            resources.ApplyResources(this.PEXcheckBox, "PEXcheckBox");
-            this.PEXcheckBox.Name = "PEXcheckBox";
-            this.PEXcheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.pexEnabledCheckBox, "pexEnabledCheckBox");
+            this.pexEnabledCheckBox.Name = "pexEnabledCheckBox";
+            this.pexEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -372,7 +372,7 @@ namespace TransmissionRemoteDotnet
             this.tabNetwork.Controls.Add(this.LpdEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.dhtEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.testPortButton);
-            this.tabNetwork.Controls.Add(this.PEXcheckBox);
+            this.tabNetwork.Controls.Add(this.pexEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.label2);
             this.tabNetwork.Controls.Add(this.incomingPortValue);
             this.tabNetwork.Controls.Add(this.portForwardCheckBox);
@@ -675,7 +675,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox renamePartialFilesCheckBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox PEXcheckBox;
+        private System.Windows.Forms.CheckBox pexEnabledCheckBox;
         private System.Windows.Forms.NumericUpDown peerLimitValue;
         private System.Windows.Forms.NumericUpDown peerLimitTorrentValue;
         private System.Windows.Forms.Label label6;

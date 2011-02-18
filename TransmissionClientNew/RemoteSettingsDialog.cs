@@ -139,13 +139,13 @@ namespace TransmissionRemoteDotnet
                 // pex
                 if (session.Contains(ProtocolConstants.FIELD_PEXALLOWED))
                 {
-                    PEXcheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXALLOWED]);
-                    PEXcheckBox.Tag = ProtocolConstants.FIELD_PEXALLOWED;
+                    pexEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXALLOWED]);
+                    pexEnabledCheckBox.Tag = ProtocolConstants.FIELD_PEXALLOWED;
                 }
                 else if (session.Contains(ProtocolConstants.FIELD_PEXENABLED))
                 {
-                    PEXcheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXENABLED]);
-                    PEXcheckBox.Tag = ProtocolConstants.FIELD_PEXENABLED;
+                    pexEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXENABLED]);
+                    pexEnabledCheckBox.Tag = ProtocolConstants.FIELD_PEXENABLED;
                 }
                 // blocklist
                 if (blocklistEnabledCheckBox.Enabled = updateBlocklistButton.Enabled = blocklistEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_BLOCKLISTENABLED))
@@ -252,7 +252,7 @@ namespace TransmissionRemoteDotnet
             JsonObject arguments = Requests.GetArgObject(request);
             arguments.Put((string)incomingPortValue.Tag, incomingPortValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PORTFORWARDINGENABLED, portForwardCheckBox.Checked);
-            arguments.Put((string)PEXcheckBox.Tag, PEXcheckBox.Checked);
+            arguments.Put((string)pexEnabledCheckBox.Tag, pexEnabledCheckBox.Checked);
             arguments.Put((string)peerLimitValue.Tag, peerLimitValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PEERLIMITPERTORRENT, peerLimitTorrentValue.Value);
             if (cacheSizeValue.Enabled)
