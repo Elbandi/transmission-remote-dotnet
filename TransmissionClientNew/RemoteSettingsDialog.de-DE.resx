@@ -138,7 +138,7 @@
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Teilgeladenen Dateien umbenennen</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
+  <data name="peerLimitTorrentLabel.Text" xml:space="preserve">
     <value>Peerlimit pro Torrent</value>
   </data>
   <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
@@ -165,7 +165,7 @@
   <data name="encryptionCombobox.Items2" xml:space="preserve">
     <value>benötigt</value>
   </data>
-  <data name="dhtEnabled.Text" xml:space="preserve">
+  <data name="dhtEnabledCheckBox.Text" xml:space="preserve">
     <value>DHT aktivieren (Distributed Hash Table)</value>
   </data>
   <data name="CloseFormButton.Text" xml:space="preserve">
@@ -183,49 +183,49 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Remote Einstellungen</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="downloadToLabel.Text" xml:space="preserve">
     <value>Herunterladen nach:</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
+  <data name="altDownloadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
+  <data name="altDownloadLimitLabel.Text" xml:space="preserve">
     <value>Down:</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="altUploadLimitLabel.Text" xml:space="preserve">
     <value>Up:</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
+  <data name="timeConstraintBeginDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
+  <data name="timeConstraintEndDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="incomingPortLabel.Text" xml:space="preserve">
     <value>Eingehender Port:</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="encryptionLabel.Text" xml:space="preserve">
     <value>Verschlüsselung:</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="peerLimitLabel.Text" xml:space="preserve">
     <value>Peer Limit</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="limitUploadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
+  <data name="limitDownloadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>BEACHTE: Einige Optionen benötigen ein Upgrade des Transmission-Daemons.</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
+  <data name="timeConstraintDelimLabel.Text" xml:space="preserve">
     <value>zu</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="altUploadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="PEXcheckBox.Text" xml:space="preserve">
+  <data name="pexEnabledCheckBox.Text" xml:space="preserve">
     <value>Peer Exchange aktivieren</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">

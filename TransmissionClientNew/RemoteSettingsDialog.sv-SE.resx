@@ -138,7 +138,7 @@
   <data name="renamePartialFilesCheckBox.Text" xml:space="preserve">
     <value>Rename partial files</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
+  <data name="peerLimitTorrentLabel.Text" xml:space="preserve">
     <value>Anslutningar per torrent:</value>
   </data>
   <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
@@ -165,22 +165,22 @@
   <data name="encryptionCombobox.Items2" xml:space="preserve">
     <value>krävs</value>
   </data>
-  <data name="dhtEnabled.Text" xml:space="preserve">
+  <data name="dhtEnabledCheckBox.Text" xml:space="preserve">
     <value>Använd Distribuerad Hashtabell (DHT)</value>
   </data>
   <data name="testPortButton.Text" xml:space="preserve">
     <value>Testa port</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
+  <data name="timeConstraintEndDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
+  <data name="timeConstraintBeginDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="downloadToLabel.Text" xml:space="preserve">
     <value>Ladda ner till:</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="incomingPortLabel.Text" xml:space="preserve">
     <value>Inkommande port:</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
@@ -189,19 +189,19 @@
   <data name="CloseFormButton.Text" xml:space="preserve">
     <value>Stäng</value>
   </data>
-  <data name="PEXcheckBox.Text" xml:space="preserve">
+  <data name="pexEnabledCheckBox.Text" xml:space="preserve">
     <value>Använd kontaktutväxling</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="peerLimitLabel.Text" xml:space="preserve">
     <value>Anslutningsbegränsning</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="encryptionLabel.Text" xml:space="preserve">
     <value>Kryptering:</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
+  <data name="limitDownloadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="limitUploadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
   <data name="updateBlocklistButton.Text" xml:space="preserve">
@@ -213,19 +213,19 @@
   <data name="seedRatioEnabledCheckBox.Text" xml:space="preserve">
     <value>Gräns för utdelning</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="altUploadLimitLabel.Text" xml:space="preserve">
     <value>Upp:</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
+  <data name="altDownloadLimitLabel.Text" xml:space="preserve">
     <value>Ner:</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="altUploadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
+  <data name="altDownloadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
+  <data name="timeConstraintDelimLabel.Text" xml:space="preserve">
     <value>till</value>
   </data>
   <data name="altTimeConstraintEnabled.Text" xml:space="preserve">
@@ -234,7 +234,7 @@
   <data name="altSpeedLimitEnable.Text" xml:space="preserve">
     <value>Använd alternativ nerladdningshastiget</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>OBS: Vissa inställningar kan kräva en uppdatering av transmission-daemon.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
