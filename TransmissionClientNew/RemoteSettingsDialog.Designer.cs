@@ -92,16 +92,16 @@ namespace TransmissionRemoteDotnet
             this.seedLimitUpDown = new System.Windows.Forms.NumericUpDown();
             this.seedRatioEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabAltLimits = new System.Windows.Forms.TabPage();
-            this.timeConstaintEndMinutes = new System.Windows.Forms.NumericUpDown();
-            this.altTimeToDelimLabel = new System.Windows.Forms.Label();
-            this.altTimeFromDelimLabel = new System.Windows.Forms.Label();
-            this.timeConstaintBeginMinutes = new System.Windows.Forms.NumericUpDown();
+            this.timeConstraintEndMinutes = new System.Windows.Forms.NumericUpDown();
+            this.timeConstraintEndDelimLabel = new System.Windows.Forms.Label();
+            this.timeConstraintBeginDelimLabel = new System.Windows.Forms.Label();
+            this.timeConstraintBeginMinutes = new System.Windows.Forms.NumericUpDown();
             this.altUploadLimitLabel = new System.Windows.Forms.Label();
             this.altDownloadLimitLabel = new System.Windows.Forms.Label();
-            this.altUploadLimitUnitField = new System.Windows.Forms.Label();
+            this.altUploadLimitUnitLabel = new System.Windows.Forms.Label();
             this.altDownloadLimitUnitLabel = new System.Windows.Forms.Label();
             this.timeConstraintEndHours = new System.Windows.Forms.NumericUpDown();
-            this.altTimeDelimLabel = new System.Windows.Forms.Label();
+            this.timeConstraintDelimLabel = new System.Windows.Forms.Label();
             this.timeConstraintBeginHours = new System.Windows.Forms.NumericUpDown();
             this.altUploadLimitField = new System.Windows.Forms.NumericUpDown();
             this.altDownloadLimitField = new System.Windows.Forms.NumericUpDown();
@@ -121,8 +121,8 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.peerLimitTorrentValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).BeginInit();
             this.tabAltLimits.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeConstaintEndMinutes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeConstaintBeginMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeConstraintBeginMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintBeginHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.altUploadLimitField)).BeginInit();
@@ -475,16 +475,16 @@ namespace TransmissionRemoteDotnet
             // 
             // tabAltLimits
             // 
-            this.tabAltLimits.Controls.Add(this.timeConstaintEndMinutes);
-            this.tabAltLimits.Controls.Add(this.altTimeToDelimLabel);
-            this.tabAltLimits.Controls.Add(this.altTimeFromDelimLabel);
-            this.tabAltLimits.Controls.Add(this.timeConstaintBeginMinutes);
+            this.tabAltLimits.Controls.Add(this.timeConstraintEndMinutes);
+            this.tabAltLimits.Controls.Add(this.timeConstraintEndDelimLabel);
+            this.tabAltLimits.Controls.Add(this.timeConstraintBeginDelimLabel);
+            this.tabAltLimits.Controls.Add(this.timeConstraintBeginMinutes);
             this.tabAltLimits.Controls.Add(this.altUploadLimitLabel);
             this.tabAltLimits.Controls.Add(this.altDownloadLimitLabel);
-            this.tabAltLimits.Controls.Add(this.altUploadLimitUnitField);
+            this.tabAltLimits.Controls.Add(this.altUploadLimitUnitLabel);
             this.tabAltLimits.Controls.Add(this.altDownloadLimitUnitLabel);
             this.tabAltLimits.Controls.Add(this.timeConstraintEndHours);
-            this.tabAltLimits.Controls.Add(this.altTimeDelimLabel);
+            this.tabAltLimits.Controls.Add(this.timeConstraintDelimLabel);
             this.tabAltLimits.Controls.Add(this.timeConstraintBeginHours);
             this.tabAltLimits.Controls.Add(this.altUploadLimitField);
             this.tabAltLimits.Controls.Add(this.altDownloadLimitField);
@@ -494,35 +494,35 @@ namespace TransmissionRemoteDotnet
             this.tabAltLimits.Name = "tabAltLimits";
             this.tabAltLimits.UseVisualStyleBackColor = true;
             // 
-            // timeConstaintEndMinutes
+            // timeConstraintEndMinutes
             // 
-            resources.ApplyResources(this.timeConstaintEndMinutes, "timeConstaintEndMinutes");
-            this.timeConstaintEndMinutes.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.timeConstraintEndMinutes, "timeConstraintEndMinutes");
+            this.timeConstraintEndMinutes.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.timeConstaintEndMinutes.Name = "timeConstaintEndMinutes";
+            this.timeConstraintEndMinutes.Name = "timeConstraintEndMinutes";
             // 
-            // altTimeToDelimLabel
+            // timeConstraintEndDelimLabel
             // 
-            resources.ApplyResources(this.altTimeToDelimLabel, "altTimeToDelimLabel");
-            this.altTimeToDelimLabel.Name = "altTimeToDelimLabel";
+            resources.ApplyResources(this.timeConstraintEndDelimLabel, "timeConstraintEndDelimLabel");
+            this.timeConstraintEndDelimLabel.Name = "timeConstraintEndDelimLabel";
             // 
-            // altTimeFromDelimLabel
+            // timeConstraintBeginDelimLabel
             // 
-            resources.ApplyResources(this.altTimeFromDelimLabel, "altTimeFromDelimLabel");
-            this.altTimeFromDelimLabel.Name = "altTimeFromDelimLabel";
+            resources.ApplyResources(this.timeConstraintBeginDelimLabel, "timeConstraintBeginDelimLabel");
+            this.timeConstraintBeginDelimLabel.Name = "timeConstraintBeginDelimLabel";
             // 
-            // timeConstaintBeginMinutes
+            // timeConstraintBeginMinutes
             // 
-            resources.ApplyResources(this.timeConstaintBeginMinutes, "timeConstaintBeginMinutes");
-            this.timeConstaintBeginMinutes.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.timeConstraintBeginMinutes, "timeConstraintBeginMinutes");
+            this.timeConstraintBeginMinutes.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.timeConstaintBeginMinutes.Name = "timeConstaintBeginMinutes";
+            this.timeConstraintBeginMinutes.Name = "timeConstraintBeginMinutes";
             // 
             // altUploadLimitLabel
             // 
@@ -534,10 +534,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.altDownloadLimitLabel, "altDownloadLimitLabel");
             this.altDownloadLimitLabel.Name = "altDownloadLimitLabel";
             // 
-            // altUploadLimitUnitField
+            // altUploadLimitUnitLabel
             // 
-            resources.ApplyResources(this.altUploadLimitUnitField, "altUploadLimitUnitField");
-            this.altUploadLimitUnitField.Name = "altUploadLimitUnitField";
+            resources.ApplyResources(this.altUploadLimitUnitLabel, "altUploadLimitUnitLabel");
+            this.altUploadLimitUnitLabel.Name = "altUploadLimitUnitLabel";
             // 
             // altDownloadLimitUnitLabel
             // 
@@ -554,10 +554,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.timeConstraintEndHours.Name = "timeConstraintEndHours";
             // 
-            // altTimeDelimLabel
+            // timeConstraintDelimLabel
             // 
-            resources.ApplyResources(this.altTimeDelimLabel, "altTimeDelimLabel");
-            this.altTimeDelimLabel.Name = "altTimeDelimLabel";
+            resources.ApplyResources(this.timeConstraintDelimLabel, "timeConstraintDelimLabel");
+            this.timeConstraintDelimLabel.Name = "timeConstraintDelimLabel";
             // 
             // timeConstraintBeginHours
             // 
@@ -640,8 +640,8 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.seedLimitUpDown)).EndInit();
             this.tabAltLimits.ResumeLayout(false);
             this.tabAltLimits.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeConstaintEndMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeConstaintBeginMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeConstraintBeginMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintEndHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeConstraintBeginHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.altUploadLimitField)).EndInit();
@@ -688,11 +688,11 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox altTimeConstraintEnabled;
         private System.Windows.Forms.CheckBox altSpeedLimitEnable;
         private System.Windows.Forms.NumericUpDown timeConstraintEndHours;
-        private System.Windows.Forms.Label altTimeDelimLabel;
+        private System.Windows.Forms.Label timeConstraintDelimLabel;
         private System.Windows.Forms.NumericUpDown timeConstraintBeginHours;
         private System.Windows.Forms.NumericUpDown altUploadLimitField;
         private System.Windows.Forms.NumericUpDown altDownloadLimitField;
-        private System.Windows.Forms.Label altUploadLimitUnitField;
+        private System.Windows.Forms.Label altUploadLimitUnitLabel;
         private System.Windows.Forms.Label altDownloadLimitUnitLabel;
         private System.Windows.Forms.Label altUploadLimitLabel;
         private System.Windows.Forms.Label altDownloadLimitLabel;
@@ -705,10 +705,10 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox seedIdleEnabledCheckBox;
         private System.Windows.Forms.NumericUpDown seedIdleLimitUpDown;
         private System.Windows.Forms.Button testPortButton;
-        private System.Windows.Forms.NumericUpDown timeConstaintEndMinutes;
-        private System.Windows.Forms.Label altTimeToDelimLabel;
-        private System.Windows.Forms.Label altTimeFromDelimLabel;
-        private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
+        private System.Windows.Forms.NumericUpDown timeConstraintEndMinutes;
+        private System.Windows.Forms.Label timeConstraintEndDelimLabel;
+        private System.Windows.Forms.Label timeConstraintBeginDelimLabel;
+        private System.Windows.Forms.NumericUpDown timeConstraintBeginMinutes;
         private System.Windows.Forms.Label updateBlocklistLabel;
         private System.Windows.Forms.CheckBox dhtEnabledCheckBox;
         private System.Windows.Forms.CheckBox lpdEnabledCheckBox;

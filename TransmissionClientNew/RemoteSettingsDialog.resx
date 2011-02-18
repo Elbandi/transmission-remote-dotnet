@@ -1269,109 +1269,109 @@
   <data name="&gt;&gt;tabLimits.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="timeConstaintEndMinutes.Enabled" type="System.Boolean, mscorlib">
+  <data name="timeConstraintEndMinutes.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="timeConstaintEndMinutes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="timeConstraintEndMinutes.Location" type="System.Drawing.Point, System.Drawing">
     <value>257, 126</value>
   </data>
-  <data name="timeConstaintEndMinutes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeConstraintEndMinutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
-  <data name="timeConstaintEndMinutes.TabIndex" type="System.Int32, mscorlib">
+  <data name="timeConstraintEndMinutes.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;timeConstaintEndMinutes.Name" xml:space="preserve">
-    <value>timeConstaintEndMinutes</value>
+  <data name="&gt;&gt;timeConstraintEndMinutes.Name" xml:space="preserve">
+    <value>timeConstraintEndMinutes</value>
   </data>
-  <data name="&gt;&gt;timeConstaintEndMinutes.Type" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndMinutes.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timeConstaintEndMinutes.Parent" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndMinutes.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;timeConstaintEndMinutes.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndMinutes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="altTimeToDelimLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="timeConstraintEndDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="altTimeToDelimLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="timeConstraintEndDelimLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="altTimeToDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="timeConstraintEndDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 130</value>
   </data>
-  <data name="altTimeToDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeConstraintEndDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 13</value>
   </data>
-  <data name="altTimeToDelimLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="timeConstraintEndDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="altTimeToDelimLabel.Text" xml:space="preserve">
+  <data name="timeConstraintEndDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="&gt;&gt;altTimeToDelimLabel.Name" xml:space="preserve">
-    <value>altTimeToDelimLabel</value>
+  <data name="&gt;&gt;timeConstraintEndDelimLabel.Name" xml:space="preserve">
+    <value>timeConstraintEndDelimLabel</value>
   </data>
-  <data name="&gt;&gt;altTimeToDelimLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;altTimeToDelimLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;altTimeToDelimLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintEndDelimLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="altTimeFromDelimLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="timeConstraintBeginDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="altTimeFromDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="timeConstraintBeginDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 130</value>
   </data>
-  <data name="altTimeFromDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeConstraintBeginDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 13</value>
   </data>
-  <data name="altTimeFromDelimLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="timeConstraintBeginDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="altTimeFromDelimLabel.Text" xml:space="preserve">
+  <data name="timeConstraintBeginDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="&gt;&gt;altTimeFromDelimLabel.Name" xml:space="preserve">
-    <value>altTimeFromDelimLabel</value>
+  <data name="&gt;&gt;timeConstraintBeginDelimLabel.Name" xml:space="preserve">
+    <value>timeConstraintBeginDelimLabel</value>
   </data>
-  <data name="&gt;&gt;altTimeFromDelimLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;altTimeFromDelimLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;altTimeFromDelimLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginDelimLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="timeConstaintBeginMinutes.Enabled" type="System.Boolean, mscorlib">
+  <data name="timeConstraintBeginMinutes.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="timeConstaintBeginMinutes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="timeConstraintBeginMinutes.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 126</value>
   </data>
-  <data name="timeConstaintBeginMinutes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeConstraintBeginMinutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 20</value>
   </data>
-  <data name="timeConstaintBeginMinutes.TabIndex" type="System.Int32, mscorlib">
+  <data name="timeConstraintBeginMinutes.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;timeConstaintBeginMinutes.Name" xml:space="preserve">
-    <value>timeConstaintBeginMinutes</value>
+  <data name="&gt;&gt;timeConstraintBeginMinutes.Name" xml:space="preserve">
+    <value>timeConstraintBeginMinutes</value>
   </data>
-  <data name="&gt;&gt;timeConstaintBeginMinutes.Type" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginMinutes.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timeConstaintBeginMinutes.Parent" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginMinutes.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;timeConstaintBeginMinutes.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintBeginMinutes.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="altUploadLimitLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -1431,34 +1431,34 @@
   <data name="&gt;&gt;altDownloadLimitLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="altUploadLimitUnitField.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altUploadLimitUnitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="altUploadLimitUnitField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="altUploadLimitUnitLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="altUploadLimitUnitField.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altUploadLimitUnitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 71</value>
   </data>
-  <data name="altUploadLimitUnitField.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altUploadLimitUnitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
-  <data name="altUploadLimitUnitField.TabIndex" type="System.Int32, mscorlib">
+  <data name="altUploadLimitUnitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="altUploadLimitUnitField.Text" xml:space="preserve">
+  <data name="altUploadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="&gt;&gt;altUploadLimitUnitField.Name" xml:space="preserve">
-    <value>altUploadLimitUnitField</value>
+  <data name="&gt;&gt;altUploadLimitUnitLabel.Name" xml:space="preserve">
+    <value>altUploadLimitUnitLabel</value>
   </data>
-  <data name="&gt;&gt;altUploadLimitUnitField.Type" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;altUploadLimitUnitField.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;altUploadLimitUnitField.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="altDownloadLimitUnitLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -1512,31 +1512,31 @@
   <data name="&gt;&gt;timeConstraintEndHours.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="altTimeDelimLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="timeConstraintDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="altTimeDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="timeConstraintDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 130</value>
   </data>
-  <data name="altTimeDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="timeConstraintDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 13</value>
   </data>
-  <data name="altTimeDelimLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="timeConstraintDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="altTimeDelimLabel.Text" xml:space="preserve">
+  <data name="timeConstraintDelimLabel.Text" xml:space="preserve">
     <value>to</value>
   </data>
-  <data name="&gt;&gt;altTimeDelimLabel.Name" xml:space="preserve">
-    <value>altTimeDelimLabel</value>
+  <data name="&gt;&gt;timeConstraintDelimLabel.Name" xml:space="preserve">
+    <value>timeConstraintDelimLabel</value>
   </data>
-  <data name="&gt;&gt;altTimeDelimLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;altTimeDelimLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;altTimeDelimLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;timeConstraintDelimLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="timeConstraintBeginHours.Location" type="System.Drawing.Point, System.Drawing">

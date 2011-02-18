@@ -158,20 +158,20 @@ namespace TransmissionRemoteDotnet
                     altTimeConstraintEnabled.Enabled =
                     timeConstraintEndHours.Enabled =
                     timeConstraintBeginHours.Enabled =
-                    timeConstaintEndMinutes.Enabled =
-                    timeConstaintBeginMinutes.Enabled =
+                    timeConstraintEndMinutes.Enabled =
+                    timeConstraintBeginMinutes.Enabled =
                     session.Contains(ProtocolConstants.FIELD_ALTSPEEDENABLED))
                 {
                     SetNumeric(altDownloadLimitField, Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDDOWN]), 0);
                     SetNumeric(altUploadLimitField, Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDUP]), 0);
                     altDownloadLimitField.Enabled = altUploadLimitField.Enabled = altSpeedLimitEnable.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_ALTSPEEDENABLED]);
-                    timeConstaintBeginMinutes.Enabled = timeConstaintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked = Toolbox.ToBool(session["alt-speed-time-enabled"]);
+                    timeConstraintBeginMinutes.Enabled = timeConstraintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked = Toolbox.ToBool(session["alt-speed-time-enabled"]);
                     int altSpeedTimeBegin = Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN]);
                     int altSpeedTimeEnd = Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDTIMEEND]);
                     SetNumeric(timeConstraintBeginHours, Math.Floor((decimal)altSpeedTimeBegin / 60), 0);
                     SetNumeric(timeConstraintEndHours, Math.Floor((decimal)altSpeedTimeEnd / 60), 0);
-                    timeConstaintBeginMinutes.Value = altSpeedTimeBegin % 60;
-                    timeConstaintEndMinutes.Value = altSpeedTimeEnd % 60;
+                    timeConstraintBeginMinutes.Value = altSpeedTimeBegin % 60;
+                    timeConstraintEndMinutes.Value = altSpeedTimeEnd % 60;
                 }
                 if (seedRatioEnabledCheckBox.Enabled = seedLimitUpDown.Enabled = session.Contains(ProtocolConstants.FIELD_SEEDRATIOLIMITED))
                 {
@@ -288,8 +288,8 @@ namespace TransmissionRemoteDotnet
             if (altTimeConstraintEnabled.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEENABLED, altTimeConstraintEnabled.Checked);
-                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN, timeConstraintBeginHours.Value*60+timeConstaintBeginMinutes.Value);
-                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEEND, timeConstraintEndHours.Value*60+timeConstaintEndMinutes.Value);
+                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN, timeConstraintBeginHours.Value*60+timeConstraintBeginMinutes.Value);
+                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEEND, timeConstraintEndHours.Value*60+timeConstraintEndMinutes.Value);
             }
             if (blocklistEnabledCheckBox.Enabled)
             {
@@ -358,7 +358,7 @@ namespace TransmissionRemoteDotnet
 
         private void altTimeConstraintEnabled_CheckedChanged(object sender, EventArgs e)
         { 
-            timeConstaintBeginMinutes.Enabled = timeConstaintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked;
+            timeConstraintBeginMinutes.Enabled = timeConstraintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked;
         }
 
         private void blocklistEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
