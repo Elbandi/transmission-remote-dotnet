@@ -201,6 +201,10 @@ namespace TransmissionRemoteDotnet
                 {
                     LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
                 }
+                if (utpEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_UTPENABLED))
+                {
+                    utpEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_UTPENABLED]);
+                }
                 if (renamePartialFilesCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_RENAME_PARTIAL_FILES))
                 {
                     renamePartialFilesCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_RENAME_PARTIAL_FILES]);
@@ -318,6 +322,10 @@ namespace TransmissionRemoteDotnet
             if (LpdEnabledCheckBox.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
+            }
+            if (utpEnabledCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_UTPENABLED, utpEnabledCheckBox.Checked);
             }
             if (renamePartialFilesCheckBox.Enabled)
             {

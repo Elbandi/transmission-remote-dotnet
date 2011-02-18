@@ -80,6 +80,7 @@ namespace TransmissionRemoteDotnet
             this.updateBlocklistButton = new System.Windows.Forms.Button();
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabNetwork = new System.Windows.Forms.TabPage();
+            this.utpEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.dhtEnabled = new System.Windows.Forms.CheckBox();
             this.testPortButton = new System.Windows.Forms.Button();
@@ -367,6 +368,7 @@ namespace TransmissionRemoteDotnet
             // 
             // tabNetwork
             // 
+            this.tabNetwork.Controls.Add(this.utpEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.LpdEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.dhtEnabled);
             this.tabNetwork.Controls.Add(this.testPortButton);
@@ -379,6 +381,12 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.tabNetwork, "tabNetwork");
             this.tabNetwork.Name = "tabNetwork";
             this.tabNetwork.UseVisualStyleBackColor = true;
+            // 
+            // utpEnabledCheckBox
+            // 
+            resources.ApplyResources(this.utpEnabledCheckBox, "utpEnabledCheckBox");
+            this.utpEnabledCheckBox.Name = "utpEnabledCheckBox";
+            this.utpEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // LpdEnabledCheckBox
             // 
@@ -704,6 +712,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox dhtEnabled;
         private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
+        private System.Windows.Forms.CheckBox utpEnabledCheckBox;
         private System.Windows.Forms.TabPage tabNetwork;
     }
 }

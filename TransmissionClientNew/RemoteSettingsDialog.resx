@@ -288,7 +288,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="incomingPortValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 9</value>
@@ -309,7 +309,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;incomingPortValue.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 256</value>
@@ -390,7 +390,7 @@
     <value>135, 17</value>
   </data>
   <data name="PEXcheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="PEXcheckBox.Text" xml:space="preserve">
     <value>Enable Peer Exchange</value>
@@ -405,7 +405,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;PEXcheckBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -459,7 +459,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;portForwardCheckBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="encryptionCombobox.Items" xml:space="preserve">
     <value>tolerated</value>
@@ -489,7 +489,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;encryptionCombobox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -516,7 +516,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -939,6 +939,36 @@
   <data name="&gt;&gt;tabGeneral.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="utpEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="utpEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="utpEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 167</value>
+  </data>
+  <data name="utpEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="utpEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="utpEnabledCheckBox.Text" xml:space="preserve">
+    <value>Enable uTP</value>
+  </data>
+  <data name="&gt;&gt;utpEnabledCheckBox.Name" xml:space="preserve">
+    <value>utpEnabledCheckBox</value>
+  </data>
+  <data name="&gt;&gt;utpEnabledCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;utpEnabledCheckBox.Parent" xml:space="preserve">
+    <value>tabNetwork</value>
+  </data>
+  <data name="&gt;&gt;utpEnabledCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="LpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -952,7 +982,7 @@
     <value>163, 17</value>
   </data>
   <data name="LpdEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
     <value>Enable Local Peer Discovery</value>
@@ -967,7 +997,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="dhtEnabled.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -982,7 +1012,7 @@
     <value>202, 17</value>
   </data>
   <data name="dhtEnabled.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="dhtEnabled.Text" xml:space="preserve">
     <value>Enable Distributed Hash Table (DHT)</value>
@@ -997,7 +1027,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="testPortButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1024,7 +1054,7 @@
     <value>tabNetwork</value>
   </data>
   <data name="&gt;&gt;testPortButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabNetwork.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

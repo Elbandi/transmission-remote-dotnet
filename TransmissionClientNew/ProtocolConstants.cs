@@ -173,6 +173,7 @@ namespace TransmissionRemoteDotnet
             FIELD_PEERLIMITGLOBAL = "peer-limit-global",
             FIELD_PEXENABLED = "pex-enabled",
             FIELD_PEXALLOWED = "pex-allowed",
+            FIELD_UTPENABLED = "utp-enabled",
             VALUE_PREFERRED = "preferred",
             VALUE_TOLERATED = "tolerated",
             VALUE_REQUIRED = "required",
