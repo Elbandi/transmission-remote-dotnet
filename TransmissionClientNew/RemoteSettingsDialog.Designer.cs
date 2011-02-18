@@ -81,7 +81,7 @@ namespace TransmissionRemoteDotnet
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabNetwork = new System.Windows.Forms.TabPage();
             this.utpEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
+            this.lpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.dhtEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.testPortButton = new System.Windows.Forms.Button();
             this.tabLimits = new System.Windows.Forms.TabPage();
@@ -369,7 +369,7 @@ namespace TransmissionRemoteDotnet
             // tabNetwork
             // 
             this.tabNetwork.Controls.Add(this.utpEnabledCheckBox);
-            this.tabNetwork.Controls.Add(this.LpdEnabledCheckBox);
+            this.tabNetwork.Controls.Add(this.lpdEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.dhtEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.testPortButton);
             this.tabNetwork.Controls.Add(this.pexEnabledCheckBox);
@@ -388,11 +388,11 @@ namespace TransmissionRemoteDotnet
             this.utpEnabledCheckBox.Name = "utpEnabledCheckBox";
             this.utpEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
-            // LpdEnabledCheckBox
+            // lpdEnabledCheckBox
             // 
-            resources.ApplyResources(this.LpdEnabledCheckBox, "LpdEnabledCheckBox");
-            this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
-            this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.lpdEnabledCheckBox, "lpdEnabledCheckBox");
+            this.lpdEnabledCheckBox.Name = "lpdEnabledCheckBox";
+            this.lpdEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // dhtEnabledCheckBox
             // 
@@ -711,7 +711,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox dhtEnabledCheckBox;
-        private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
+        private System.Windows.Forms.CheckBox lpdEnabledCheckBox;
         private System.Windows.Forms.CheckBox utpEnabledCheckBox;
         private System.Windows.Forms.TabPage tabNetwork;
     }

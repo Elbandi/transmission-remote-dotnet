@@ -197,9 +197,9 @@ namespace TransmissionRemoteDotnet
                 {
                     dhtEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
                 }
-                if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
+                if (lpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
                 {
-                    LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
+                    lpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
                 }
                 if (utpEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_UTPENABLED))
                 {
@@ -319,9 +319,9 @@ namespace TransmissionRemoteDotnet
             {
                 arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabledCheckBox.Checked);
             }
-            if (LpdEnabledCheckBox.Enabled)
+            if (lpdEnabledCheckBox.Enabled)
             {
-                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, lpdEnabledCheckBox.Checked);
             }
             if (utpEnabledCheckBox.Enabled)
             {

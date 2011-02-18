@@ -969,34 +969,34 @@
   <data name="&gt;&gt;utpEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lpdEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LpdEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lpdEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LpdEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lpdEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 187</value>
   </data>
-  <data name="LpdEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lpdEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 17</value>
   </data>
-  <data name="LpdEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="lpdEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="LpdEnabledCheckBox.Text" xml:space="preserve">
+  <data name="lpdEnabledCheckBox.Text" xml:space="preserve">
     <value>Enable Local Peer Discovery</value>
   </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Name" xml:space="preserve">
-    <value>LpdEnabledCheckBox</value>
+  <data name="&gt;&gt;lpdEnabledCheckBox.Name" xml:space="preserve">
+    <value>lpdEnabledCheckBox</value>
   </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;lpdEnabledCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lpdEnabledCheckBox.Parent" xml:space="preserve">
     <value>tabNetwork</value>
   </data>
-  <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lpdEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="dhtEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
