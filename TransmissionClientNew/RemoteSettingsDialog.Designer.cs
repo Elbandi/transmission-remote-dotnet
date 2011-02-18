@@ -46,24 +46,24 @@ namespace TransmissionRemoteDotnet
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoteSettingsDialog));
-            this.label1 = new System.Windows.Forms.Label();
+            this.downloadToLabel = new System.Windows.Forms.Label();
             this.downloadToField = new System.Windows.Forms.TextBox();
             this.limitUploadCheckBox = new System.Windows.Forms.CheckBox();
             this.limitUploadValue = new System.Windows.Forms.NumericUpDown();
             this.limitDownloadCheckBox = new System.Windows.Forms.CheckBox();
             this.limitDownloadValue = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.incomingPortLabel = new System.Windows.Forms.Label();
             this.incomingPortValue = new System.Windows.Forms.NumericUpDown();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CloseFormButton = new System.Windows.Forms.Button();
             this.peerLimitValue = new System.Windows.Forms.NumericUpDown();
             this.pexEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.peerLimitLabel = new System.Windows.Forms.Label();
             this.portForwardCheckBox = new System.Windows.Forms.CheckBox();
             this.encryptionCombobox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.encryptionLabel = new System.Windows.Forms.Label();
+            this.limitDownloadUnitLabel = new System.Windows.Forms.Label();
+            this.limitUploadUnitLabel = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.cacheSizeUnitLabel = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@ namespace TransmissionRemoteDotnet
             this.renamePartialFilesCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToCheckBox = new System.Windows.Forms.CheckBox();
             this.incompleteToField = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.updateBlocklistLabel = new System.Windows.Forms.Label();
             this.updateBlocklistButton = new System.Windows.Forms.Button();
             this.blocklistEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabNetwork = new System.Windows.Forms.TabPage();
@@ -87,27 +87,27 @@ namespace TransmissionRemoteDotnet
             this.tabLimits = new System.Windows.Forms.TabPage();
             this.seedIdleLimitUpDown = new System.Windows.Forms.NumericUpDown();
             this.seedIdleEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.peerLimitTorrentLabel = new System.Windows.Forms.Label();
             this.peerLimitTorrentValue = new System.Windows.Forms.NumericUpDown();
             this.seedLimitUpDown = new System.Windows.Forms.NumericUpDown();
             this.seedRatioEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.tabAltLimits = new System.Windows.Forms.TabPage();
             this.timeConstaintEndMinutes = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.altTimeToDelimLabel = new System.Windows.Forms.Label();
+            this.altTimeFromDelimLabel = new System.Windows.Forms.Label();
             this.timeConstaintBeginMinutes = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.altUploadLimitLabel = new System.Windows.Forms.Label();
+            this.altDownloadLimitLabel = new System.Windows.Forms.Label();
+            this.altUploadLimitUnitField = new System.Windows.Forms.Label();
+            this.altDownloadLimitUnitLabel = new System.Windows.Forms.Label();
             this.timeConstraintEndHours = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
+            this.altTimeDelimLabel = new System.Windows.Forms.Label();
             this.timeConstraintBeginHours = new System.Windows.Forms.NumericUpDown();
             this.altUploadLimitField = new System.Windows.Forms.NumericUpDown();
             this.altDownloadLimitField = new System.Windows.Forms.NumericUpDown();
             this.altTimeConstraintEnabled = new System.Windows.Forms.CheckBox();
             this.altSpeedLimitEnable = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.noteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.limitUploadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limitDownloadValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomingPortValue)).BeginInit();
@@ -129,10 +129,10 @@ namespace TransmissionRemoteDotnet
             ((System.ComponentModel.ISupportInitialize)(this.altDownloadLimitField)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // downloadToLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.downloadToLabel, "downloadToLabel");
+            this.downloadToLabel.Name = "downloadToLabel";
             // 
             // downloadToField
             // 
@@ -173,10 +173,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.limitDownloadValue.Name = "limitDownloadValue";
             // 
-            // label2
+            // incomingPortLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.incomingPortLabel, "incomingPortLabel");
+            this.incomingPortLabel.Name = "incomingPortLabel";
             // 
             // incomingPortValue
             // 
@@ -219,10 +219,10 @@ namespace TransmissionRemoteDotnet
             this.pexEnabledCheckBox.Name = "pexEnabledCheckBox";
             this.pexEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // peerLimitLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.peerLimitLabel, "peerLimitLabel");
+            this.peerLimitLabel.Name = "peerLimitLabel";
             // 
             // portForwardCheckBox
             // 
@@ -241,20 +241,20 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.encryptionCombobox, "encryptionCombobox");
             this.encryptionCombobox.Name = "encryptionCombobox";
             // 
-            // label3
+            // encryptionLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.encryptionLabel, "encryptionLabel");
+            this.encryptionLabel.Name = "encryptionLabel";
             // 
-            // label6
+            // limitDownloadUnitLabel
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.limitDownloadUnitLabel, "limitDownloadUnitLabel");
+            this.limitDownloadUnitLabel.Name = "limitDownloadUnitLabel";
             // 
-            // label5
+            // limitUploadUnitLabel
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.limitUploadUnitLabel, "limitUploadUnitLabel");
+            this.limitUploadUnitLabel.Name = "limitUploadUnitLabel";
             // 
             // tabSettings
             // 
@@ -278,10 +278,10 @@ namespace TransmissionRemoteDotnet
             this.tabGeneral.Controls.Add(this.renamePartialFilesCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToCheckBox);
             this.tabGeneral.Controls.Add(this.incompleteToField);
-            this.tabGeneral.Controls.Add(this.label15);
+            this.tabGeneral.Controls.Add(this.updateBlocklistLabel);
             this.tabGeneral.Controls.Add(this.updateBlocklistButton);
             this.tabGeneral.Controls.Add(this.blocklistEnabledCheckBox);
-            this.tabGeneral.Controls.Add(this.label1);
+            this.tabGeneral.Controls.Add(this.downloadToLabel);
             this.tabGeneral.Controls.Add(this.downloadToField);
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
@@ -347,10 +347,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.incompleteToField, "incompleteToField");
             this.incompleteToField.Name = "incompleteToField";
             // 
-            // label15
+            // updateBlocklistLabel
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.updateBlocklistLabel, "updateBlocklistLabel");
+            this.updateBlocklistLabel.Name = "updateBlocklistLabel";
             // 
             // updateBlocklistButton
             // 
@@ -373,11 +373,11 @@ namespace TransmissionRemoteDotnet
             this.tabNetwork.Controls.Add(this.dhtEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.testPortButton);
             this.tabNetwork.Controls.Add(this.pexEnabledCheckBox);
-            this.tabNetwork.Controls.Add(this.label2);
+            this.tabNetwork.Controls.Add(this.incomingPortLabel);
             this.tabNetwork.Controls.Add(this.incomingPortValue);
             this.tabNetwork.Controls.Add(this.portForwardCheckBox);
             this.tabNetwork.Controls.Add(this.encryptionCombobox);
-            this.tabNetwork.Controls.Add(this.label3);
+            this.tabNetwork.Controls.Add(this.encryptionLabel);
             resources.ApplyResources(this.tabNetwork, "tabNetwork");
             this.tabNetwork.Name = "tabNetwork";
             this.tabNetwork.UseVisualStyleBackColor = true;
@@ -411,17 +411,17 @@ namespace TransmissionRemoteDotnet
             // 
             this.tabLimits.Controls.Add(this.seedIdleLimitUpDown);
             this.tabLimits.Controls.Add(this.seedIdleEnabledCheckBox);
-            this.tabLimits.Controls.Add(this.label16);
+            this.tabLimits.Controls.Add(this.peerLimitTorrentLabel);
             this.tabLimits.Controls.Add(this.peerLimitTorrentValue);
             this.tabLimits.Controls.Add(this.seedLimitUpDown);
             this.tabLimits.Controls.Add(this.seedRatioEnabledCheckBox);
-            this.tabLimits.Controls.Add(this.label6);
+            this.tabLimits.Controls.Add(this.limitDownloadUnitLabel);
             this.tabLimits.Controls.Add(this.limitUploadCheckBox);
             this.tabLimits.Controls.Add(this.peerLimitValue);
-            this.tabLimits.Controls.Add(this.label5);
+            this.tabLimits.Controls.Add(this.limitUploadUnitLabel);
             this.tabLimits.Controls.Add(this.limitUploadValue);
             this.tabLimits.Controls.Add(this.limitDownloadValue);
-            this.tabLimits.Controls.Add(this.label4);
+            this.tabLimits.Controls.Add(this.peerLimitLabel);
             this.tabLimits.Controls.Add(this.limitDownloadCheckBox);
             resources.ApplyResources(this.tabLimits, "tabLimits");
             this.tabLimits.Name = "tabLimits";
@@ -445,10 +445,10 @@ namespace TransmissionRemoteDotnet
             this.seedIdleEnabledCheckBox.UseVisualStyleBackColor = true;
             this.seedIdleEnabledCheckBox.CheckedChanged += new System.EventHandler(this.seedIdleEnabledCheckBox_CheckedChanged);
             // 
-            // label16
+            // peerLimitTorrentLabel
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.peerLimitTorrentLabel, "peerLimitTorrentLabel");
+            this.peerLimitTorrentLabel.Name = "peerLimitTorrentLabel";
             // 
             // peerLimitTorrentValue
             // 
@@ -476,15 +476,15 @@ namespace TransmissionRemoteDotnet
             // tabAltLimits
             // 
             this.tabAltLimits.Controls.Add(this.timeConstaintEndMinutes);
-            this.tabAltLimits.Controls.Add(this.label14);
-            this.tabAltLimits.Controls.Add(this.label13);
+            this.tabAltLimits.Controls.Add(this.altTimeToDelimLabel);
+            this.tabAltLimits.Controls.Add(this.altTimeFromDelimLabel);
             this.tabAltLimits.Controls.Add(this.timeConstaintBeginMinutes);
-            this.tabAltLimits.Controls.Add(this.label12);
-            this.tabAltLimits.Controls.Add(this.label11);
-            this.tabAltLimits.Controls.Add(this.label9);
-            this.tabAltLimits.Controls.Add(this.label10);
+            this.tabAltLimits.Controls.Add(this.altUploadLimitLabel);
+            this.tabAltLimits.Controls.Add(this.altDownloadLimitLabel);
+            this.tabAltLimits.Controls.Add(this.altUploadLimitUnitField);
+            this.tabAltLimits.Controls.Add(this.altDownloadLimitUnitLabel);
             this.tabAltLimits.Controls.Add(this.timeConstraintEndHours);
-            this.tabAltLimits.Controls.Add(this.label8);
+            this.tabAltLimits.Controls.Add(this.altTimeDelimLabel);
             this.tabAltLimits.Controls.Add(this.timeConstraintBeginHours);
             this.tabAltLimits.Controls.Add(this.altUploadLimitField);
             this.tabAltLimits.Controls.Add(this.altDownloadLimitField);
@@ -504,15 +504,15 @@ namespace TransmissionRemoteDotnet
             0});
             this.timeConstaintEndMinutes.Name = "timeConstaintEndMinutes";
             // 
-            // label14
+            // altTimeToDelimLabel
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            resources.ApplyResources(this.altTimeToDelimLabel, "altTimeToDelimLabel");
+            this.altTimeToDelimLabel.Name = "altTimeToDelimLabel";
             // 
-            // label13
+            // altTimeFromDelimLabel
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.altTimeFromDelimLabel, "altTimeFromDelimLabel");
+            this.altTimeFromDelimLabel.Name = "altTimeFromDelimLabel";
             // 
             // timeConstaintBeginMinutes
             // 
@@ -524,25 +524,25 @@ namespace TransmissionRemoteDotnet
             0});
             this.timeConstaintBeginMinutes.Name = "timeConstaintBeginMinutes";
             // 
-            // label12
+            // altUploadLimitLabel
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.altUploadLimitLabel, "altUploadLimitLabel");
+            this.altUploadLimitLabel.Name = "altUploadLimitLabel";
             // 
-            // label11
+            // altDownloadLimitLabel
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.altDownloadLimitLabel, "altDownloadLimitLabel");
+            this.altDownloadLimitLabel.Name = "altDownloadLimitLabel";
             // 
-            // label9
+            // altUploadLimitUnitField
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.altUploadLimitUnitField, "altUploadLimitUnitField");
+            this.altUploadLimitUnitField.Name = "altUploadLimitUnitField";
             // 
-            // label10
+            // altDownloadLimitUnitLabel
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.altDownloadLimitUnitLabel, "altDownloadLimitUnitLabel");
+            this.altDownloadLimitUnitLabel.Name = "altDownloadLimitUnitLabel";
             // 
             // timeConstraintEndHours
             // 
@@ -554,10 +554,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.timeConstraintEndHours.Name = "timeConstraintEndHours";
             // 
-            // label8
+            // altTimeDelimLabel
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.altTimeDelimLabel, "altTimeDelimLabel");
+            this.altTimeDelimLabel.Name = "altTimeDelimLabel";
             // 
             // timeConstraintBeginHours
             // 
@@ -603,10 +603,10 @@ namespace TransmissionRemoteDotnet
             this.altSpeedLimitEnable.UseVisualStyleBackColor = true;
             this.altSpeedLimitEnable.CheckedChanged += new System.EventHandler(this.altSpeedLimitEnable_CheckedChanged);
             // 
-            // label7
+            // noteLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.noteLabel, "noteLabel");
+            this.noteLabel.Name = "noteLabel";
             // 
             // RemoteSettingsDialog
             // 
@@ -614,7 +614,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseFormButton;
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.noteLabel);
             this.Controls.Add(this.tabSettings);
             this.Controls.Add(this.CloseFormButton);
             this.Controls.Add(this.SaveButton);
@@ -652,7 +652,7 @@ namespace TransmissionRemoteDotnet
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label downloadToLabel;
         private System.Windows.Forms.TextBox downloadToField;
         private System.Windows.Forms.CheckBox incompleteToCheckBox;
         private System.Windows.Forms.TextBox incompleteToField;
@@ -665,37 +665,37 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown limitUploadValue;
         private System.Windows.Forms.CheckBox limitDownloadCheckBox;
         private System.Windows.Forms.NumericUpDown limitDownloadValue;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label incomingPortLabel;
         private System.Windows.Forms.NumericUpDown incomingPortValue;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button CloseFormButton;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label encryptionLabel;
         private System.Windows.Forms.ComboBox encryptionCombobox;
         private System.Windows.Forms.CheckBox portForwardCheckBox;
         private System.Windows.Forms.CheckBox renamePartialFilesCheckBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label peerLimitLabel;
+        private System.Windows.Forms.Label peerLimitTorrentLabel;
         private System.Windows.Forms.CheckBox pexEnabledCheckBox;
         private System.Windows.Forms.NumericUpDown peerLimitValue;
         private System.Windows.Forms.NumericUpDown peerLimitTorrentValue;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label limitDownloadUnitLabel;
+        private System.Windows.Forms.Label limitUploadUnitLabel;
         private System.Windows.Forms.TabControl tabSettings;
         private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.TabPage tabLimits;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label noteLabel;
         private System.Windows.Forms.TabPage tabAltLimits;
         private System.Windows.Forms.CheckBox altTimeConstraintEnabled;
         private System.Windows.Forms.CheckBox altSpeedLimitEnable;
         private System.Windows.Forms.NumericUpDown timeConstraintEndHours;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label altTimeDelimLabel;
         private System.Windows.Forms.NumericUpDown timeConstraintBeginHours;
         private System.Windows.Forms.NumericUpDown altUploadLimitField;
         private System.Windows.Forms.NumericUpDown altDownloadLimitField;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label altUploadLimitUnitField;
+        private System.Windows.Forms.Label altDownloadLimitUnitLabel;
+        private System.Windows.Forms.Label altUploadLimitLabel;
+        private System.Windows.Forms.Label altDownloadLimitLabel;
         private System.Windows.Forms.CheckBox blocklistEnabledCheckBox;
         private System.Windows.Forms.TextBox blocklistUrlField;
         private System.Windows.Forms.Label blocklistUrlLabel;
@@ -706,10 +706,10 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.NumericUpDown seedIdleLimitUpDown;
         private System.Windows.Forms.Button testPortButton;
         private System.Windows.Forms.NumericUpDown timeConstaintEndMinutes;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label altTimeToDelimLabel;
+        private System.Windows.Forms.Label altTimeFromDelimLabel;
         private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label updateBlocklistLabel;
         private System.Windows.Forms.CheckBox dhtEnabledCheckBox;
         private System.Windows.Forms.CheckBox lpdEnabledCheckBox;
         private System.Windows.Forms.CheckBox utpEnabledCheckBox;

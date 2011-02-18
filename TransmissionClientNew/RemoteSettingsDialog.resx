@@ -118,32 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="downloadToLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="downloadToLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 12</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="downloadToLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="downloadToLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="downloadToLabel.Text" xml:space="preserve">
     <value>Download To:</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;downloadToLabel.Name" xml:space="preserve">
+    <value>downloadToLabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;downloadToLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;downloadToLabel.Parent" xml:space="preserve">
     <value>tabGeneral</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;downloadToLabel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="downloadToField.Location" type="System.Drawing.Point, System.Drawing">
@@ -263,31 +263,31 @@
   <data name="&gt;&gt;limitDownloadValue.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="incomingPortLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="incomingPortLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 11</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="incomingPortLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="incomingPortLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="incomingPortLabel.Text" xml:space="preserve">
     <value>Incoming port:</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;incomingPortLabel.Name" xml:space="preserve">
+    <value>incomingPortLabel</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;incomingPortLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;incomingPortLabel.Parent" xml:space="preserve">
     <value>tabNetwork</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;incomingPortLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="incomingPortValue.Location" type="System.Drawing.Point, System.Drawing">
@@ -407,31 +407,31 @@
   <data name="&gt;&gt;pexEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="peerLimitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="peerLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 65</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="peerLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="peerLimitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="peerLimitLabel.Text" xml:space="preserve">
     <value>Peer Limit</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;peerLimitLabel.Name" xml:space="preserve">
+    <value>peerLimitLabel</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitLabel.Parent" xml:space="preserve">
     <value>tabLimits</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitLabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="portForwardCheckBox.AutoSize" type="System.Boolean, mscorlib">
@@ -491,85 +491,85 @@
   <data name="&gt;&gt;encryptionCombobox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="encryptionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="encryptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 38</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="encryptionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+  <data name="encryptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="encryptionLabel.Text" xml:space="preserve">
     <value>Encryption:</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;encryptionLabel.Name" xml:space="preserve">
+    <value>encryptionLabel</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;encryptionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;encryptionLabel.Parent" xml:space="preserve">
     <value>tabNetwork</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;encryptionLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+  <data name="limitDownloadUnitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="limitDownloadUnitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 41</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="limitDownloadUnitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+  <data name="limitDownloadUnitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
+  <data name="limitDownloadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;limitDownloadUnitLabel.Name" xml:space="preserve">
+    <value>limitDownloadUnitLabel</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;limitDownloadUnitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;limitDownloadUnitLabel.Parent" xml:space="preserve">
     <value>tabLimits</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;limitDownloadUnitLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="limitUploadUnitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="limitUploadUnitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 15</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="limitUploadUnitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="limitUploadUnitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="limitUploadUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;limitUploadUnitLabel.Name" xml:space="preserve">
+    <value>limitUploadUnitLabel</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;limitUploadUnitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;limitUploadUnitLabel.Parent" xml:space="preserve">
     <value>tabLimits</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;limitUploadUnitLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="cacheSizeUnitLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -834,25 +834,25 @@
   <data name="&gt;&gt;incompleteToField.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="updateBlocklistLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>282, 118</value>
   </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="updateBlocklistLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 13</value>
   </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+  <data name="updateBlocklistLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
+  <data name="&gt;&gt;updateBlocklistLabel.Name" xml:space="preserve">
+    <value>updateBlocklistLabel</value>
   </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+  <data name="&gt;&gt;updateBlocklistLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+  <data name="&gt;&gt;updateBlocklistLabel.Parent" xml:space="preserve">
     <value>tabGeneral</value>
   </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;updateBlocklistLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="updateBlocklistButton.Enabled" type="System.Boolean, mscorlib">
@@ -1137,34 +1137,34 @@
   <data name="&gt;&gt;seedIdleEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+  <data name="peerLimitTorrentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="peerLimitTorrentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="peerLimitTorrentLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 90</value>
   </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="peerLimitTorrentLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
   </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+  <data name="peerLimitTorrentLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
+  <data name="peerLimitTorrentLabel.Text" xml:space="preserve">
     <value>Peer limit per torrent</value>
   </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
+  <data name="&gt;&gt;peerLimitTorrentLabel.Name" xml:space="preserve">
+    <value>peerLimitTorrentLabel</value>
   </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitTorrentLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitTorrentLabel.Parent" xml:space="preserve">
     <value>tabLimits</value>
   </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitTorrentLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="peerLimitTorrentValue.Location" type="System.Drawing.Point, System.Drawing">
@@ -1293,61 +1293,61 @@
   <data name="&gt;&gt;timeConstaintEndMinutes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altTimeToDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="altTimeToDelimLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altTimeToDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 130</value>
   </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altTimeToDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 13</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+  <data name="altTimeToDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
+  <data name="altTimeToDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
+  <data name="&gt;&gt;altTimeToDelimLabel.Name" xml:space="preserve">
+    <value>altTimeToDelimLabel</value>
   </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+  <data name="&gt;&gt;altTimeToDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altTimeToDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altTimeToDelimLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altTimeFromDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altTimeFromDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 130</value>
   </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altTimeFromDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 13</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+  <data name="altTimeFromDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
+  <data name="altTimeFromDelimLabel.Text" xml:space="preserve">
     <value>:</value>
   </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
+  <data name="&gt;&gt;altTimeFromDelimLabel.Name" xml:space="preserve">
+    <value>altTimeFromDelimLabel</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+  <data name="&gt;&gt;altTimeFromDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altTimeFromDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altTimeFromDelimLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="timeConstaintBeginMinutes.Enabled" type="System.Boolean, mscorlib">
@@ -1374,121 +1374,121 @@
   <data name="&gt;&gt;timeConstaintBeginMinutes.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altUploadLimitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="altUploadLimitLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altUploadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 68</value>
   </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altUploadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 13</value>
   </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+  <data name="altUploadLimitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="altUploadLimitLabel.Text" xml:space="preserve">
     <value>Up:</value>
   </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
+  <data name="&gt;&gt;altUploadLimitLabel.Name" xml:space="preserve">
+    <value>altUploadLimitLabel</value>
   </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altDownloadLimitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altDownloadLimitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 44</value>
   </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altDownloadLimitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
   </data>
-  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+  <data name="altDownloadLimitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
+  <data name="altDownloadLimitLabel.Text" xml:space="preserve">
     <value>Down:</value>
   </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
+  <data name="&gt;&gt;altDownloadLimitLabel.Name" xml:space="preserve">
+    <value>altDownloadLimitLabel</value>
   </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altUploadLimitUnitField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="altUploadLimitUnitField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altUploadLimitUnitField.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 71</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altUploadLimitUnitField.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+  <data name="altUploadLimitUnitField.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="altUploadLimitUnitField.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="&gt;&gt;altUploadLimitUnitField.Name" xml:space="preserve">
+    <value>altUploadLimitUnitField</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitField.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitField.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altUploadLimitUnitField.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altDownloadLimitUnitLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="altDownloadLimitUnitLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altDownloadLimitUnitLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 45</value>
   </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altDownloadLimitUnitLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+  <data name="altDownloadLimitUnitLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
+  <data name="altDownloadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
+  <data name="&gt;&gt;altDownloadLimitUnitLabel.Name" xml:space="preserve">
+    <value>altDownloadLimitUnitLabel</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitUnitLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitUnitLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altDownloadLimitUnitLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="timeConstraintEndHours.Location" type="System.Drawing.Point, System.Drawing">
@@ -1512,31 +1512,31 @@
   <data name="&gt;&gt;timeConstraintEndHours.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altTimeDelimLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altTimeDelimLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 130</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altTimeDelimLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 13</value>
   </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+  <data name="altTimeDelimLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
+  <data name="altTimeDelimLabel.Text" xml:space="preserve">
     <value>to</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
+  <data name="&gt;&gt;altTimeDelimLabel.Name" xml:space="preserve">
+    <value>altTimeDelimLabel</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;altTimeDelimLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altTimeDelimLabel.Parent" xml:space="preserve">
     <value>tabAltLimits</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altTimeDelimLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="timeConstraintBeginHours.Location" type="System.Drawing.Point, System.Drawing">
@@ -1701,28 +1701,28 @@
   <data name="&gt;&gt;tabSettings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="noteLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 256</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="noteLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 33</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+  <data name="noteLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>NOTE: Availability of some options may require a transmission-daemon upgrade.</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="&gt;&gt;noteLabel.Name" xml:space="preserve">
+    <value>noteLabel</value>
   </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+  <data name="&gt;&gt;noteLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;noteLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;noteLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
