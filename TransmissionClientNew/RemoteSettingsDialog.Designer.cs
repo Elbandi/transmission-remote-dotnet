@@ -82,7 +82,7 @@ namespace TransmissionRemoteDotnet
             this.tabNetwork = new System.Windows.Forms.TabPage();
             this.utpEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.LpdEnabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.dhtEnabled = new System.Windows.Forms.CheckBox();
+            this.dhtEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.testPortButton = new System.Windows.Forms.Button();
             this.tabLimits = new System.Windows.Forms.TabPage();
             this.seedIdleLimitUpDown = new System.Windows.Forms.NumericUpDown();
@@ -370,7 +370,7 @@ namespace TransmissionRemoteDotnet
             // 
             this.tabNetwork.Controls.Add(this.utpEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.LpdEnabledCheckBox);
-            this.tabNetwork.Controls.Add(this.dhtEnabled);
+            this.tabNetwork.Controls.Add(this.dhtEnabledCheckBox);
             this.tabNetwork.Controls.Add(this.testPortButton);
             this.tabNetwork.Controls.Add(this.PEXcheckBox);
             this.tabNetwork.Controls.Add(this.label2);
@@ -394,11 +394,11 @@ namespace TransmissionRemoteDotnet
             this.LpdEnabledCheckBox.Name = "LpdEnabledCheckBox";
             this.LpdEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
-            // dhtEnabled
+            // dhtEnabledCheckBox
             // 
-            resources.ApplyResources(this.dhtEnabled, "dhtEnabled");
-            this.dhtEnabled.Name = "dhtEnabled";
-            this.dhtEnabled.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.dhtEnabledCheckBox, "dhtEnabledCheckBox");
+            this.dhtEnabledCheckBox.Name = "dhtEnabledCheckBox";
+            this.dhtEnabledCheckBox.UseVisualStyleBackColor = true;
             // 
             // testPortButton
             // 
@@ -710,7 +710,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown timeConstaintBeginMinutes;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox dhtEnabled;
+        private System.Windows.Forms.CheckBox dhtEnabledCheckBox;
         private System.Windows.Forms.CheckBox LpdEnabledCheckBox;
         private System.Windows.Forms.CheckBox utpEnabledCheckBox;
         private System.Windows.Forms.TabPage tabNetwork;

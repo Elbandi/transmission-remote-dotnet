@@ -999,34 +999,34 @@
   <data name="&gt;&gt;LpdEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dhtEnabled.AutoSize" type="System.Boolean, mscorlib">
+  <data name="dhtEnabledCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dhtEnabled.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="dhtEnabledCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="dhtEnabled.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dhtEnabledCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 147</value>
   </data>
-  <data name="dhtEnabled.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dhtEnabledCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 17</value>
   </data>
-  <data name="dhtEnabled.TabIndex" type="System.Int32, mscorlib">
+  <data name="dhtEnabledCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="dhtEnabled.Text" xml:space="preserve">
+  <data name="dhtEnabledCheckBox.Text" xml:space="preserve">
     <value>Enable Distributed Hash Table (DHT)</value>
   </data>
-  <data name="&gt;&gt;dhtEnabled.Name" xml:space="preserve">
-    <value>dhtEnabled</value>
+  <data name="&gt;&gt;dhtEnabledCheckBox.Name" xml:space="preserve">
+    <value>dhtEnabledCheckBox</value>
   </data>
-  <data name="&gt;&gt;dhtEnabled.Type" xml:space="preserve">
+  <data name="&gt;&gt;dhtEnabledCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dhtEnabled.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dhtEnabledCheckBox.Parent" xml:space="preserve">
     <value>tabNetwork</value>
   </data>
-  <data name="&gt;&gt;dhtEnabled.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dhtEnabledCheckBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="testPortButton.Enabled" type="System.Boolean, mscorlib">

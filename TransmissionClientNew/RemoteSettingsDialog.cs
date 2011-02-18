@@ -193,9 +193,9 @@ namespace TransmissionRemoteDotnet
                     watchdirField.Text = (string)session[ProtocolConstants.FIELD_WATCH_DIR];
                     watchdirField.Enabled = watchdirCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_WATCH_DIR_ENABLED]);
                 }
-                if (dhtEnabled.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
+                if (dhtEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
                 {
-                    dhtEnabled.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
+                    dhtEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
                 }
                 if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
                 {
@@ -315,9 +315,9 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_WATCH_DIR_ENABLED, watchdirCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_WATCH_DIR, watchdirField.Text);
             }
-            if (dhtEnabled.Enabled)
+            if (dhtEnabledCheckBox.Enabled)
             {
-                arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
+                arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabledCheckBox.Checked);
             }
             if (LpdEnabledCheckBox.Enabled)
             {
