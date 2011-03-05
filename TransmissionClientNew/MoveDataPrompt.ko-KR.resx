@@ -113,13 +113,13 @@
   <data name="$this.Text" xml:space="preserve">
     <value>MoveDataPrompt</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="moveButton.Text" xml:space="preserve">
     <value>이동</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="closeButton.Text" xml:space="preserve">
     <value>닫기</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="destinationLabel.Text" xml:space="preserve">
     <value>이동할 위치:</value>
   </data>
 </root>
