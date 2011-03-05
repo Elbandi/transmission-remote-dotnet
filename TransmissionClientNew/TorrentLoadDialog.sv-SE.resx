@@ -111,16 +111,16 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="columnHeader1.Text" xml:space="preserve">
+  <data name="filesPathCol.Text" xml:space="preserve">
     <value>Sökväg</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
+  <data name="filesTypeCol.Text" xml:space="preserve">
     <value>Filtyp</value>
   </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
+  <data name="filesSizeCol.Text" xml:space="preserve">
     <value>Storlek</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
+  <data name="filesPriorityCol.Text" xml:space="preserve">
     <value>Prioritet</value>
   </data>
   <data name="CancelBtn.Text" xml:space="preserve">
@@ -129,19 +129,19 @@
   <data name="OkButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="checkBox3.Text" xml:space="preserve">
+  <data name="startTorrentCheckBox.Text" xml:space="preserve">
     <value>Starta torrent</value>
   </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
+  <data name="altPeerLimitCheckBox.Text" xml:space="preserve">
     <value>Alternativt antal anslutningar:</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="altDestDirCheckBox.Text" xml:space="preserve">
     <value>Alternativ målkatalog:</value>
   </data>
   <data name="DateLabelLabel.Text" xml:space="preserve">

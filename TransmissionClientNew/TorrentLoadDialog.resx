@@ -117,58 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="columnHeader1.Text" xml:space="preserve">
+  <data name="filesPathCol.Text" xml:space="preserve">
     <value>Path</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+  <data name="filesPathCol.Width" type="System.Int32, mscorlib">
     <value>416</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
+  <data name="filesTypeCol.Text" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+  <data name="filesTypeCol.Width" type="System.Int32, mscorlib">
     <value>140</value>
   </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
+  <data name="filesSizeCol.Text" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+  <data name="filesSizeCol.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
+  <data name="filesPriorityCol.Text" xml:space="preserve">
     <value>Priority</value>
   </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+  <data name="filesPriorityCol.Width" type="System.Int32, mscorlib">
     <value>68</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="filesListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="listView1.Enabled" type="System.Boolean, mscorlib">
+  <data name="filesListView.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="filesListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 113</value>
   </data>
-  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="filesListView.Size" type="System.Drawing.Size, System.Drawing">
     <value>726, 172</value>
   </data>
-  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="filesListView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
+  <data name="&gt;&gt;filesListView.Name" xml:space="preserve">
+    <value>filesListView</value>
   </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesListView.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;filesListView.Parent" xml:space="preserve">
     <value>TorrentContentsGroupBox</value>
   </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;filesListView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="CancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -231,181 +231,181 @@
   <data name="&gt;&gt;OkButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="startTorrentCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox3.Enabled" type="System.Boolean, mscorlib">
+  <data name="startTorrentCheckBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="startTorrentCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="startTorrentCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 43</value>
   </data>
-  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="startTorrentCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
   </data>
-  <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="startTorrentCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="checkBox3.Text" xml:space="preserve">
+  <data name="startTorrentCheckBox.Text" xml:space="preserve">
     <value>Start torrent</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
-    <value>checkBox3</value>
+  <data name="&gt;&gt;startTorrentCheckBox.Name" xml:space="preserve">
+    <value>startTorrentCheckBox</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;startTorrentCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;startTorrentCheckBox.Parent" xml:space="preserve">
     <value>PropertiesGroupBox</value>
   </data>
-  <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;startTorrentCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="comboBox1.Enabled" type="System.Boolean, mscorlib">
+  <data name="destinationComboBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="destinationComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 17</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="destinationComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 21</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="destinationComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
+  <data name="&gt;&gt;destinationComboBox.Name" xml:space="preserve">
+    <value>destinationComboBox</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;destinationComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;destinationComboBox.Parent" xml:space="preserve">
     <value>PropertiesGroupBox</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;destinationComboBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>181, 17</value>
   </metadata>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 17</value>
   </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
   </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 417</value>
   </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>760, 22</value>
   </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="numericUpDown1.Enabled" type="System.Boolean, mscorlib">
+  <data name="peerLimitValue.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="peerLimitValue.Location" type="System.Drawing.Point, System.Drawing">
     <value>443, 40</value>
   </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="peerLimitValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
   </data>
-  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
+  <data name="peerLimitValue.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
-    <value>numericUpDown1</value>
+  <data name="&gt;&gt;peerLimitValue.Name" xml:space="preserve">
+    <value>peerLimitValue</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitValue.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitValue.Parent" xml:space="preserve">
     <value>PropertiesGroupBox</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;peerLimitValue.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altPeerLimitCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox2.Enabled" type="System.Boolean, mscorlib">
+  <data name="altPeerLimitCheckBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altPeerLimitCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 43</value>
   </data>
-  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altPeerLimitCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 17</value>
   </data>
-  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="altPeerLimitCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
+  <data name="altPeerLimitCheckBox.Text" xml:space="preserve">
     <value>Alternate peer limit: </value>
   </data>
-  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
-    <value>checkBox2</value>
+  <data name="&gt;&gt;altPeerLimitCheckBox.Name" xml:space="preserve">
+    <value>altPeerLimitCheckBox</value>
   </data>
-  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;altPeerLimitCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altPeerLimitCheckBox.Parent" xml:space="preserve">
     <value>PropertiesGroupBox</value>
   </data>
-  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altPeerLimitCheckBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="altDestDirCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox1.Enabled" type="System.Boolean, mscorlib">
+  <data name="altDestDirCheckBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="altDestDirCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 19</value>
   </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="altDestDirCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 17</value>
   </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="altDestDirCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="altDestDirCheckBox.Text" xml:space="preserve">
     <value>Alternate destination directory: </value>
   </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
+  <data name="&gt;&gt;altDestDirCheckBox.Name" xml:space="preserve">
+    <value>altDestDirCheckBox</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;altDestDirCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;altDestDirCheckBox.Parent" xml:space="preserve">
     <value>PropertiesGroupBox</value>
   </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;altDestDirCheckBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="TorrentLoadBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
@@ -994,40 +994,40 @@
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentLoadDialog</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
-    <value>columnHeader1</value>
+  <data name="&gt;&gt;filesPathCol.Name" xml:space="preserve">
+    <value>filesPathCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPathCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
+  <data name="&gt;&gt;filesTypeCol.Name" xml:space="preserve">
+    <value>filesTypeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesTypeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
-    <value>columnHeader5</value>
+  <data name="&gt;&gt;filesSizeCol.Name" xml:space="preserve">
+    <value>filesSizeCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSizeCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
+  <data name="&gt;&gt;filesPriorityCol.Name" xml:space="preserve">
+    <value>filesPriorityCol</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesPriorityCol.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+  <data name="&gt;&gt;toolStripStatusLabel.Name" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
   </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
-    <value>backgroundWorker1</value>
+  <data name="&gt;&gt;TorrentLoadBackgroundWorker.Name" xml:space="preserve">
+    <value>TorrentLoadBackgroundWorker</value>
   </data>
-  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;TorrentLoadBackgroundWorker.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
