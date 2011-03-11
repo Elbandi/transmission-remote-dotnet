@@ -467,11 +467,16 @@ namespace TransmissionRemoteDotnet
                 try
                 {
                     if (value.Length == 0)
+                    {
                         this.FirstTracker = this.FirstTrackerTrimmed = "";
-                    JsonObject tracker = (JsonObject)value[0];
-                    Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
-                    this.FirstTracker = announceUrl.Host;
-                    this.FirstTrackerTrimmed = Toolbox.GetDomainName(announceUrl.Host);
+                    }
+                    else
+                    {
+                        JsonObject tracker = (JsonObject)value[0];
+                        Uri announceUrl = new Uri((string)tracker[ProtocolConstants.ANNOUNCE]);
+                        this.FirstTracker = announceUrl.Host;
+                        this.FirstTrackerTrimmed = Toolbox.GetDomainName(announceUrl.Host);
+                    }
                 }
                 catch
                 {
