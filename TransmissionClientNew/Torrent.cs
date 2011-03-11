@@ -98,9 +98,15 @@ namespace TransmissionRemoteDotnet
                 return Color.Red;
         }
 
+        private delegate void UpdateUIDelegate(bool first);
         public void UpdateUi(bool first)
         {
             MainWindow form = Program.Form;
+            if (form.InvokeRequired)
+            {
+                form.Invoke(new UpdateUIDelegate(UpdateUi), new object[] { first });
+                return;
+            }
             SetText(1, this.Id.ToString());
             base.SubItems[1].Tag = this.Id;
             SetText(2, Toolbox.GetFileSize(this.SizeWhenDone));

@@ -87,12 +87,17 @@ namespace TransmissionRemoteDotnet.Commmands
             }
         }
 
+        public delegate void ExecuteDelegate();
         public void Execute()
         {
             MainWindow form = Program.Form;
-            Torrent t = null;
-            form.Invoke(new MethodInvoker(delegate()
+            if (form.InvokeRequired)
             {
+                form.Invoke(new ExecuteDelegate(Execute));
+            }
+            else
+            {
+                Torrent t = null;
                 ListView torrentListView = form.torrentListView;
                 lock (torrentListView)
                 {
@@ -101,11 +106,11 @@ namespace TransmissionRemoteDotnet.Commmands
                         t = (Torrent)torrentListView.SelectedItems[0];
                     }
                 }
-            }));
-            if (t == null)
-                return;
-            form.FillfilesListView(t);
-            form.filesTimer.Enabled = true;
+                if (t == null)
+                    return;
+                form.FillfilesListView(t);
+                form.filesTimer.Enabled = true;
+            }
         }
     }
 }

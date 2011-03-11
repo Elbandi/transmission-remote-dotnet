@@ -542,8 +542,15 @@ namespace TransmissionRemoteDotnet
             this.notifyIcon.ContextMenu = trayMenu;
         }
 
+        //this event can be raised by syetem events thread when power events occur
+        //need to make UI accesses thread safe ..marshal to ui thread
         private void Program_connStatusChanged(object sender, EventArgs e)
         {
+            if (InvokeRequired)
+            {
+                Invoke(new EventHandler(this.Program_connStatusChanged), new object[] { sender, e });
+                return;
+            }
             bool connected = Program.Connected;
             CreateTrayContextMenu();
             if (connected)
@@ -569,10 +576,10 @@ namespace TransmissionRemoteDotnet
             {
                 StatsDialog.CloseIfOpen();
                 RemoteSettingsDialog.CloseIfOpen();
-                torrentListView.Enabled = false;
-                torrentListView.ContextMenu = this.torrentSelectionMenu = null;
                 lock (this.torrentListView)
                 {
+                    torrentListView.Enabled = false;
+                    torrentListView.ContextMenu = this.torrentSelectionMenu = null;
                     this.torrentListView.Items.Clear();
                 }
                 OneOrMoreTorrentsSelected(false);
