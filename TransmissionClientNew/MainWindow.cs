@@ -434,7 +434,11 @@ namespace TransmissionRemoteDotnet
                         t = (Torrent)torrentListView.SelectedItems[0];
                 }
                 if (t != null)
+                {
+                    generalTorrentInfo.BeginUpdate();
                     UpdateInfoPanel(false, t);
+                    generalTorrentInfo.EndUpdate();
+                }
                 refreshTimer.Enabled = torrentListView.Enabled = true;
                 if (showCategoriesPanelToolStripMenuItem.Checked)
                     mainVerticalSplitContainer.Panel1Collapsed = false;
@@ -1264,6 +1268,7 @@ namespace TransmissionRemoteDotnet
 
         private void OneTorrentsSelected(bool one, Torrent t)
         {
+            generalTorrentInfo.BeginUpdate();
             if (one)
             {
                 UpdateInfoPanel(true, t);
@@ -1308,6 +1313,7 @@ namespace TransmissionRemoteDotnet
                     = downloadProgressLabel.Enabled = refreshElapsedTimer.Enabled
                     = filesTimer.Enabled = downloadProgressLabel.Enabled
                     = remoteCmdButton.Enabled = one;
+            generalTorrentInfo.EndUpdate();
             openNetworkShareButton.Enabled = openNetworkShareDirToolStripMenuItem.Enabled = one && t.HaveTotal > 0 && t.SambaLocation != null;
             openNetworkShareToolStripMenuItem.Enabled = openNetworkShareButton.Enabled && t.Files.Count == 1 && t.Files[0].BytesCompleted == t.Files[0].FileSize;
             if (openNetworkShareMenuItem != null)
