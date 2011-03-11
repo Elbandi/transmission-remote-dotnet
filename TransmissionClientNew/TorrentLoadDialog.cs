@@ -6,8 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+#if !MONO
 using Etier.IconHelper;
+#endif
 using Jayrock.Json;
+using TransmissionRemoteDotnet.Comparers;
 
 namespace TransmissionRemoteDotnet
 {
@@ -15,6 +18,7 @@ namespace TransmissionRemoteDotnet
     {
         private string path;
         private MonoTorrent.Common.Torrent torrent;
+        private TorrentFilesListViewItemSorter filesLvwColumnSorter;
         private ContextMenu torrentSelectionMenu, noTorrentSelectionMenu;
 
         private void SelectAllHandler(object sender, EventArgs e)
@@ -89,6 +93,7 @@ namespace TransmissionRemoteDotnet
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.LowPriority, new EventHandler(this.LowPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem("-"));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
+            filesListView.ListViewItemSorter = filesLvwColumnSorter = new TorrentFilesListViewItemSorter();
             this.path = path;
             this.toolStripStatusLabel.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
             startTorrentCheckBox.Checked = !Program.Settings.Current.StartPaused;
@@ -141,7 +146,7 @@ namespace TransmissionRemoteDotnet
 #else
                     item.SubItems.Add("");
 #endif
-                    item.SubItems.Add(Toolbox.GetFileSize(file.Length));
+                    item.SubItems.Add(Toolbox.GetFileSize(file.Length)).Tag = file.Length;
                     item.SubItems.Add(OtherStrings.Normal);
                     item.Checked = true;
                     items.Add(item);
@@ -256,6 +261,24 @@ namespace TransmissionRemoteDotnet
         private void altPeerLimitCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             peerLimitValue.Enabled = altPeerLimitCheckBox.Checked;
+        }
+
+        private void filesListView_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (e.Column == filesLvwColumnSorter.SortColumn)
+            {
+                filesLvwColumnSorter.Order = (filesLvwColumnSorter.Order == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending);
+            }
+            else
+            {
+                filesLvwColumnSorter.SortColumn = e.Column;
+                filesLvwColumnSorter.Order = SortOrder.Ascending;
+            }
+            this.filesListView.Sort();
+#if !MONO
+            this.filesListView.SetSortIcon(filesLvwColumnSorter.SortColumn, filesLvwColumnSorter.Order);
+#endif
+            Toolbox.StripeListView(filesListView);
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentLoadDialog));
-            this.filesListView = new System.Windows.Forms.ListView();
+            this.filesListView = new TransmissionRemoteDotnet.ListViewNF();
             this.filesPathCol = new System.Windows.Forms.ColumnHeader();
             this.filesTypeCol = new System.Windows.Forms.ColumnHeader();
             this.filesSizeCol = new System.Windows.Forms.ColumnHeader();
@@ -82,6 +82,7 @@
             this.filesListView.UseCompatibleStateImageBehavior = false;
             this.filesListView.View = System.Windows.Forms.View.Details;
             this.filesListView.SelectedIndexChanged += new System.EventHandler(this.filesListView_SelectedIndexChanged);
+            this.filesListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.filesListView_ColumnClick);
             // 
             // filesPathCol
             // 
@@ -337,7 +338,7 @@
         private System.Windows.Forms.Button SelectInvertButton;
         private System.Windows.Forms.Button SelectNoneButton;
         private System.Windows.Forms.Button SelectAllButton;
-        private System.Windows.Forms.ListView filesListView;
+        private TransmissionRemoteDotnet.ListViewNF filesListView;
         private System.Windows.Forms.ColumnHeader filesPathCol;
         private System.Windows.Forms.ColumnHeader filesPriorityCol;
         private System.Windows.Forms.ColumnHeader filesTypeCol;
