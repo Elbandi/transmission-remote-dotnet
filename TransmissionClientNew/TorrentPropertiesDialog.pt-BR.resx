@@ -120,7 +120,7 @@
   <data name="addTrackerButton.Text" xml:space="preserve">
     <value>Add Tracker</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="bandwidthLabel.Text" xml:space="preserve">
     <value>Prioridade de Banda:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
@@ -129,16 +129,16 @@
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
     <value>Limite de ratio para sements</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="peerLimitLabel.Text" xml:space="preserve">
     <value>Máximo de peers</value>
   </data>
   <data name="uploadLimitEnableField.Text" xml:space="preserve">
     <value>Limite de ratio de envio</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="uploadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="downloadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
   <data name="downloadLimitEnableField.Text" xml:space="preserve">
@@ -150,13 +150,13 @@
   <data name="tabTrackers.Text" xml:space="preserve">
     <value>Rastreadores</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="CancelButton.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="OkButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>NOTA: A disponibilidade de algumas opções pode requerer uma atualização do transmission-daemon.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

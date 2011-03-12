@@ -37,7 +37,7 @@ namespace TransmissionRemoteDotnet
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
             JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_TORRENTSET);
             JsonObject arguments = Requests.GetArgObject(request);
@@ -102,7 +102,7 @@ namespace TransmissionRemoteDotnet
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -158,11 +158,11 @@ namespace TransmissionRemoteDotnet
                     bandwidthComboBox.SelectedIndex = 2;
                 else
                     bandwidthComboBox.SelectedIndex = 1;
-                label4.Enabled = bandwidthComboBox.Enabled = true;
+                bandwidthLabel.Enabled = bandwidthComboBox.Enabled = true;
             }
             catch
             {
-                label4.Enabled = bandwidthComboBox.Enabled = false;
+                bandwidthLabel.Enabled = bandwidthComboBox.Enabled = false;
             }
             peerLimitValue.Value = firstTorrent.MaxConnectedPeers >= 0 && (decimal)firstTorrent.MaxConnectedPeers <= peerLimitValue.Maximum ? (decimal)firstTorrent.MaxConnectedPeers : 0;
             // TODO: http://www.codeguru.com/cpp/controls/controls/lists,treesandcombos/article.php/c2291

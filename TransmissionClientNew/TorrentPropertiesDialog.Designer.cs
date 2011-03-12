@@ -46,22 +46,22 @@ namespace TransmissionRemoteDotnet
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TorrentPropertiesDialog));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabProperties = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.seedIdleLimitValue = new System.Windows.Forms.NumericUpDown();
             this.seedIdleLimitedCheckBox = new System.Windows.Forms.CheckBox();
             this.bandwidthComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.bandwidthLabel = new System.Windows.Forms.Label();
             this.honorsSessionLimits = new System.Windows.Forms.CheckBox();
             this.seedRatioLimitedCheckBox = new System.Windows.Forms.CheckBox();
             this.seedRatioLimitValue = new System.Windows.Forms.NumericUpDown();
             this.peerLimitValue = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.peerLimitLabel = new System.Windows.Forms.Label();
             this.uploadLimitEnableField = new System.Windows.Forms.CheckBox();
             this.downloadLimitField = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.uploadLimitUnitLabel = new System.Windows.Forms.Label();
             this.uploadLimitField = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.downloadLimitUnitLabel = new System.Windows.Forms.Label();
             this.downloadLimitEnableField = new System.Windows.Forms.CheckBox();
             this.tabTrackers = new System.Windows.Forms.TabPage();
             this.trackersList = new System.Windows.Forms.RefreshingListBox();
@@ -69,10 +69,10 @@ namespace TransmissionRemoteDotnet
             this.removeTrackerButton = new System.Windows.Forms.Button();
             this.editTrackerButton = new System.Windows.Forms.Button();
             this.addTrackerButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.noteLabel = new System.Windows.Forms.Label();
+            this.tabProperties.SuspendLayout();
             this.tabGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seedRatioLimitValue)).BeginInit();
@@ -83,30 +83,30 @@ namespace TransmissionRemoteDotnet
             this.trackersButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabProperties
             // 
-            this.tabControl1.Controls.Add(this.tabGeneral);
-            this.tabControl1.Controls.Add(this.tabTrackers);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.tabProperties.Controls.Add(this.tabGeneral);
+            this.tabProperties.Controls.Add(this.tabTrackers);
+            resources.ApplyResources(this.tabProperties, "tabProperties");
+            this.tabProperties.Name = "tabProperties";
+            this.tabProperties.SelectedIndex = 0;
             // 
             // tabGeneral
             // 
             this.tabGeneral.Controls.Add(this.seedIdleLimitValue);
             this.tabGeneral.Controls.Add(this.seedIdleLimitedCheckBox);
             this.tabGeneral.Controls.Add(this.bandwidthComboBox);
-            this.tabGeneral.Controls.Add(this.label4);
+            this.tabGeneral.Controls.Add(this.bandwidthLabel);
             this.tabGeneral.Controls.Add(this.honorsSessionLimits);
             this.tabGeneral.Controls.Add(this.seedRatioLimitedCheckBox);
             this.tabGeneral.Controls.Add(this.seedRatioLimitValue);
             this.tabGeneral.Controls.Add(this.peerLimitValue);
-            this.tabGeneral.Controls.Add(this.label3);
+            this.tabGeneral.Controls.Add(this.peerLimitLabel);
             this.tabGeneral.Controls.Add(this.uploadLimitEnableField);
             this.tabGeneral.Controls.Add(this.downloadLimitField);
-            this.tabGeneral.Controls.Add(this.label1);
+            this.tabGeneral.Controls.Add(this.uploadLimitUnitLabel);
             this.tabGeneral.Controls.Add(this.uploadLimitField);
-            this.tabGeneral.Controls.Add(this.label2);
+            this.tabGeneral.Controls.Add(this.downloadLimitUnitLabel);
             this.tabGeneral.Controls.Add(this.downloadLimitEnableField);
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
@@ -137,10 +137,10 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.bandwidthComboBox, "bandwidthComboBox");
             this.bandwidthComboBox.Name = "bandwidthComboBox";
             // 
-            // label4
+            // bandwidthLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.bandwidthLabel, "bandwidthLabel");
+            this.bandwidthLabel.Name = "bandwidthLabel";
             // 
             // honorsSessionLimits
             // 
@@ -177,10 +177,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.peerLimitValue.Name = "peerLimitValue";
             // 
-            // label3
+            // peerLimitLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.peerLimitLabel, "peerLimitLabel");
+            this.peerLimitLabel.Name = "peerLimitLabel";
             // 
             // uploadLimitEnableField
             // 
@@ -199,10 +199,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.downloadLimitField.Name = "downloadLimitField";
             // 
-            // label1
+            // uploadLimitUnitLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.uploadLimitUnitLabel, "uploadLimitUnitLabel");
+            this.uploadLimitUnitLabel.Name = "uploadLimitUnitLabel";
             // 
             // uploadLimitField
             // 
@@ -214,10 +214,10 @@ namespace TransmissionRemoteDotnet
             0});
             this.uploadLimitField.Name = "uploadLimitField";
             // 
-            // label2
+            // downloadLimitUnitLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.downloadLimitUnitLabel, "downloadLimitUnitLabel");
+            this.downloadLimitUnitLabel.Name = "downloadLimitUnitLabel";
             // 
             // downloadLimitEnableField
             // 
@@ -273,43 +273,43 @@ namespace TransmissionRemoteDotnet
             this.addTrackerButton.UseVisualStyleBackColor = true;
             this.addTrackerButton.Click += new System.EventHandler(this.addTrackerButton_Click);
             // 
-            // button2
+            // CancelButton
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.CancelButton, "CancelButton");
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // button1
+            // OkButton
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.OkButton, "OkButton");
+            this.OkButton.Name = "OkButton";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // label7
+            // noteLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.noteLabel, "noteLabel");
+            this.noteLabel.Name = "noteLabel";
             // 
             // TorrentPropertiesDialog
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.OkButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button2;
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button1);
+            this.CancelButton = this.CancelButton;
+            this.Controls.Add(this.noteLabel);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.tabProperties);
+            this.Controls.Add(this.OkButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TorrentPropertiesDialog";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.TorrentPropertiesDialog_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabProperties.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seedIdleLimitValue)).EndInit();
@@ -325,23 +325,23 @@ namespace TransmissionRemoteDotnet
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabProperties;
         private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.NumericUpDown downloadLimitField;
         private System.Windows.Forms.NumericUpDown uploadLimitField;
         private System.Windows.Forms.CheckBox downloadLimitEnableField;
         private System.Windows.Forms.CheckBox uploadLimitEnableField;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label downloadLimitUnitLabel;
+        private System.Windows.Forms.Label uploadLimitUnitLabel;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.NumericUpDown peerLimitValue;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label peerLimitLabel;
+        private System.Windows.Forms.Label noteLabel;
         private System.Windows.Forms.NumericUpDown seedRatioLimitValue;
         private System.Windows.Forms.CheckBox seedRatioLimitedCheckBox;
         private System.Windows.Forms.CheckBox honorsSessionLimits;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label bandwidthLabel;
         private System.Windows.Forms.ComboBox bandwidthComboBox;
         private System.Windows.Forms.CheckBox seedIdleLimitedCheckBox;
         private System.Windows.Forms.NumericUpDown seedIdleLimitValue;

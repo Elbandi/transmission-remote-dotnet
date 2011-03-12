@@ -123,7 +123,7 @@
   <data name="tabTrackers.Text" xml:space="preserve">
     <value>Trackers</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="bandwidthLabel.Text" xml:space="preserve">
     <value>Bandbreddsprioritet:</value>
   </data>
   <data name="honorsSessionLimits.Text" xml:space="preserve">
@@ -132,16 +132,16 @@
   <data name="seedRatioLimitedCheckBox.Text" xml:space="preserve">
     <value>Begränsa utdelningsration</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="peerLimitLabel.Text" xml:space="preserve">
     <value>Maximalt antal anslutningar</value>
   </data>
   <data name="uploadLimitEnableField.Text" xml:space="preserve">
     <value>Begränsa uppladdningshastighet</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="uploadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="downloadLimitUnitLabel.Text" xml:space="preserve">
     <value>KB/s</value>
   </data>
   <data name="downloadLimitEnableField.Text" xml:space="preserve">
@@ -150,13 +150,13 @@
   <data name="tabGeneral.Text" xml:space="preserve">
     <value>Allmänt</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="CancelButton.Text" xml:space="preserve">
     <value>Avbryt</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="OkButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="noteLabel.Text" xml:space="preserve">
     <value>OBS: Vissa inställningar kan kräva en uppdatering av transmission-daemon.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
