@@ -67,6 +67,7 @@ namespace TransmissionRemoteDotnet
             this.trackersList = new System.Windows.Forms.RefreshingListBox();
             this.trackersButtonPanel = new System.Windows.Forms.Panel();
             this.removeTrackerButton = new System.Windows.Forms.Button();
+            this.editTrackerButton = new System.Windows.Forms.Button();
             this.addTrackerButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -243,6 +244,7 @@ namespace TransmissionRemoteDotnet
             // trackersButtonPanel
             // 
             this.trackersButtonPanel.Controls.Add(this.removeTrackerButton);
+            this.trackersButtonPanel.Controls.Add(this.editTrackerButton);
             this.trackersButtonPanel.Controls.Add(this.addTrackerButton);
             resources.ApplyResources(this.trackersButtonPanel, "trackersButtonPanel");
             this.trackersButtonPanel.Name = "trackersButtonPanel";
@@ -254,6 +256,14 @@ namespace TransmissionRemoteDotnet
             this.removeTrackerButton.Name = "removeTrackerButton";
             this.removeTrackerButton.UseVisualStyleBackColor = true;
             this.removeTrackerButton.Click += new System.EventHandler(this.removeTrackerButton_Click);
+            // 
+            // editTrackerButton
+            // 
+            resources.ApplyResources(this.editTrackerButton, "editTrackerButton");
+            this.editTrackerButton.Image = global::TransmissionRemoteDotnet.Properties.Resources.edit16;
+            this.editTrackerButton.Name = "editTrackerButton";
+            this.editTrackerButton.UseVisualStyleBackColor = true;
+            this.editTrackerButton.Click += new System.EventHandler(this.editTrackerButton_Click);
             // 
             // addTrackerButton
             // 
@@ -338,7 +348,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.TabPage tabTrackers;
         private System.Windows.Forms.RefreshingListBox trackersList;
         private System.Windows.Forms.Panel trackersButtonPanel;
-        private System.Windows.Forms.Button removeTrackerButton;
         private System.Windows.Forms.Button addTrackerButton;
+        private System.Windows.Forms.Button editTrackerButton;
+        private System.Windows.Forms.Button removeTrackerButton;
     }
 }

@@ -197,10 +197,15 @@ namespace TransmissionRemoteDotnet
 
         private void trackersList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            removeTrackerButton.Enabled = trackersList.SelectedIndex != -1;
+            editTrackerButton.Enabled = removeTrackerButton.Enabled = trackersList.SelectedIndex != -1;
         }
 
         private void trackersList_DoubleClick(object sender, EventArgs e)
+        {
+            editTrackerButton.PerformClick();
+        }
+
+        private void editTrackerButton_Click(object sender, EventArgs e)
         {
             TrackerListItem current = (TrackerListItem)trackersList.SelectedItem;
             string newannounce = InputBox.Show(OtherStrings.EditTrackerUrl, OtherStrings.EditUrl, current.ToString(), false);
