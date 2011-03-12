@@ -1054,30 +1054,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\button_cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\player_stop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\player_play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\disconnect.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\connect.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\details.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Resources\ledgreen.png" />
     <None Include="Resources\ledred.png" />
