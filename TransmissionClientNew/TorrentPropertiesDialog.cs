@@ -35,6 +35,7 @@ namespace TransmissionRemoteDotnet
         {
             this.selections = selections;
             InitializeComponent();
+            trackersButtonPanel.Visible = Program.DaemonDescriptor.RpcVersion >= 10;
         }
 
         private void OkDialogButton_Click(object sender, EventArgs e)
