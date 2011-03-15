@@ -153,10 +153,10 @@
   <data name="tabGeneral.Text" xml:space="preserve">
     <value>Général</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

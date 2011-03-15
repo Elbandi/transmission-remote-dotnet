@@ -126,10 +126,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>TorrentPropertiesDialog</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>확인</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>취소</value>
   </data>
   <data name="downloadLimitEnableField.Text" xml:space="preserve">

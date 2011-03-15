@@ -738,52 +738,52 @@
   <data name="&gt;&gt;tabProperties.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="CancelButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CancelDialogButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>307, 231</value>
   </data>
-  <data name="CancelButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CancelDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 33</value>
   </data>
-  <data name="CancelButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="CancelDialogButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="&gt;&gt;CancelButton.Name" xml:space="preserve">
-    <value>CancelButton</value>
+  <data name="&gt;&gt;CancelDialogButton.Name" xml:space="preserve">
+    <value>CancelDialogButton</value>
   </data>
-  <data name="&gt;&gt;CancelButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;CancelDialogButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CancelButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CancelDialogButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CancelButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CancelDialogButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="OkButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="OkDialogButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 231</value>
   </data>
-  <data name="OkButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="OkDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 33</value>
   </data>
-  <data name="OkButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="OkDialogButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;OkButton.Name" xml:space="preserve">
-    <value>OkButton</value>
+  <data name="&gt;&gt;OkDialogButton.Name" xml:space="preserve">
+    <value>OkDialogButton</value>
   </data>
-  <data name="&gt;&gt;OkButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;OkDialogButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OkButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OkDialogButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;OkButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OkDialogButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="noteLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">

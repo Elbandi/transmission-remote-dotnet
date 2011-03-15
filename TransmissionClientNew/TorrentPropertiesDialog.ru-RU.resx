@@ -123,10 +123,10 @@
   <data name="tabTrackers.Text" xml:space="preserve">
     <value>Трекеры</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="bandwidthLabel.Text" xml:space="preserve">

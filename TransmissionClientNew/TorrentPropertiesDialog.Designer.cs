@@ -69,8 +69,8 @@ namespace TransmissionRemoteDotnet
             this.removeTrackerButton = new System.Windows.Forms.Button();
             this.editTrackerButton = new System.Windows.Forms.Button();
             this.addTrackerButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.OkButton = new System.Windows.Forms.Button();
+            this.CancelDialogButton = new System.Windows.Forms.Button();
+            this.OkDialogButton = new System.Windows.Forms.Button();
             this.noteLabel = new System.Windows.Forms.Label();
             this.tabProperties.SuspendLayout();
             this.tabGeneral.SuspendLayout();
@@ -273,20 +273,20 @@ namespace TransmissionRemoteDotnet
             this.addTrackerButton.UseVisualStyleBackColor = true;
             this.addTrackerButton.Click += new System.EventHandler(this.addTrackerButton_Click);
             // 
-            // CancelButton
+            // CancelDialogButton
             // 
-            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.CancelButton, "CancelButton");
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.CancelDialogButton, "CancelDialogButton");
+            this.CancelDialogButton.Name = "CancelDialogButton";
+            this.CancelDialogButton.UseVisualStyleBackColor = true;
+            this.CancelDialogButton.Click += new System.EventHandler(this.CancelDialogButton_Click);
             // 
-            // OkButton
+            // OkDialogButton
             // 
-            resources.ApplyResources(this.OkButton, "OkButton");
-            this.OkButton.Name = "OkButton";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            resources.ApplyResources(this.OkDialogButton, "OkDialogButton");
+            this.OkDialogButton.Name = "OkDialogButton";
+            this.OkDialogButton.UseVisualStyleBackColor = true;
+            this.OkDialogButton.Click += new System.EventHandler(this.OkDialogButton_Click);
             // 
             // noteLabel
             // 
@@ -295,14 +295,14 @@ namespace TransmissionRemoteDotnet
             // 
             // TorrentPropertiesDialog
             // 
-            this.AcceptButton = this.OkButton;
+            this.AcceptButton = this.OkDialogButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
+            this.CancelButton = this.CancelDialogButton;
             this.Controls.Add(this.noteLabel);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancelDialogButton);
             this.Controls.Add(this.tabProperties);
-            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.OkDialogButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -333,8 +333,8 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.CheckBox uploadLimitEnableField;
         private System.Windows.Forms.Label downloadLimitUnitLabel;
         private System.Windows.Forms.Label uploadLimitUnitLabel;
-        private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Button CancelDialogButton;
+        private System.Windows.Forms.Button OkDialogButton;
         private System.Windows.Forms.NumericUpDown peerLimitValue;
         private System.Windows.Forms.Label peerLimitLabel;
         private System.Windows.Forms.Label noteLabel;

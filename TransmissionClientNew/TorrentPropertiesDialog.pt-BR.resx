@@ -150,10 +150,10 @@
   <data name="tabTrackers.Text" xml:space="preserve">
     <value>Rastreadores</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="noteLabel.Text" xml:space="preserve">

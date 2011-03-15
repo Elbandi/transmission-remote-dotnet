@@ -37,7 +37,7 @@ namespace TransmissionRemoteDotnet
             InitializeComponent();
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void OkDialogButton_Click(object sender, EventArgs e)
         {
             JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_TORRENTSET);
             JsonObject arguments = Requests.GetArgObject(request);
@@ -102,7 +102,7 @@ namespace TransmissionRemoteDotnet
             this.Close();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CancelDialogButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

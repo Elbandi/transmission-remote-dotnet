@@ -150,10 +150,10 @@
   <data name="tabGeneral.Text" xml:space="preserve">
     <value>Genel</value>
   </data>
-  <data name="CancelButton.Text" xml:space="preserve">
+  <data name="CancelDialogButton.Text" xml:space="preserve">
     <value>İptal</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="OkDialogButton.Text" xml:space="preserve">
     <value>Tamam</value>
   </data>
   <data name="noteLabel.Text" xml:space="preserve">
