@@ -1294,6 +1294,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Availability of this option may require a transmission-daemon upgrade..
+        /// </summary>
+        internal static string UpgradeNote {
+            get {
+                return ResourceManager.GetString("UpgradeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Upload Limit.
         /// </summary>
         internal static string UploadLimit {

@@ -556,4 +556,7 @@
   <data name="SpeedWithAvg" xml:space="preserve">
     <value>{0} (avg. {1})</value>
   </data>
+  <data name="UpgradeNote" xml:space="preserve">
+    <value>Availability of this option may require a transmission-daemon upgrade.</value>
+  </data>
 </root>
