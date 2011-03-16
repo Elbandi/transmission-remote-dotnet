@@ -46,72 +46,72 @@ namespace TransmissionRemoteDotnet
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UriPromptWindow));
-            this.UrlTextBox = new System.Windows.Forms.TextBox();
-            this.OkButton = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.urlTextBox = new System.Windows.Forms.TextBox();
+            this.okDialogButton = new System.Windows.Forms.Button();
+            this.cancelDialogButton = new System.Windows.Forms.Button();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.DownloadProgressBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.UseTorrentLoadDialogCheckBox = new System.Windows.Forms.CheckBox();
-            this.statusStrip1.SuspendLayout();
+            this.downloadProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.useTorrentLoadDialogCheckBox = new System.Windows.Forms.CheckBox();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // UrlTextBox
+            // urlTextBox
             // 
-            resources.ApplyResources(this.UrlTextBox, "UrlTextBox");
-            this.UrlTextBox.Name = "UrlTextBox";
-            this.UrlTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            resources.ApplyResources(this.urlTextBox, "urlTextBox");
+            this.urlTextBox.Name = "urlTextBox";
+            this.urlTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // OkButton
+            // okDialogButton
             // 
-            resources.ApplyResources(this.OkButton, "OkButton");
-            this.OkButton.Name = "OkButton";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.okDialogButton, "okDialogButton");
+            this.okDialogButton.Name = "okDialogButton";
+            this.okDialogButton.UseVisualStyleBackColor = true;
+            this.okDialogButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CancelBtn
+            // cancelDialogButton
             // 
-            this.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.CancelBtn, "CancelBtn");
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.UseVisualStyleBackColor = true;
-            this.CancelBtn.Click += new System.EventHandler(this.button2_Click);
+            this.cancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.cancelDialogButton, "cancelDialogButton");
+            this.cancelDialogButton.Name = "cancelDialogButton";
+            this.cancelDialogButton.UseVisualStyleBackColor = true;
+            this.cancelDialogButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel,
-            this.DownloadProgressBar});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
+            this.downloadProgressBar});
+            resources.ApplyResources(this.statusStrip, "statusStrip");
+            this.statusStrip.Name = "statusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             resources.ApplyResources(this.toolStripStatusLabel, "toolStripStatusLabel");
             // 
-            // DownloadProgressBar
+            // downloadProgressBar
             // 
-            this.DownloadProgressBar.Name = "DownloadProgressBar";
-            resources.ApplyResources(this.DownloadProgressBar, "DownloadProgressBar");
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
             // 
-            // UseTorrentLoadDialogCheckBox
+            // useTorrentLoadDialogCheckBox
             // 
-            resources.ApplyResources(this.UseTorrentLoadDialogCheckBox, "UseTorrentLoadDialogCheckBox");
-            this.UseTorrentLoadDialogCheckBox.Name = "UseTorrentLoadDialogCheckBox";
-            this.UseTorrentLoadDialogCheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.useTorrentLoadDialogCheckBox, "useTorrentLoadDialogCheckBox");
+            this.useTorrentLoadDialogCheckBox.Name = "useTorrentLoadDialogCheckBox";
+            this.useTorrentLoadDialogCheckBox.UseVisualStyleBackColor = true;
             // 
             // UriPromptWindow
             // 
-            this.AcceptButton = this.OkButton;
+            this.AcceptButton = this.okDialogButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelBtn;
-            this.Controls.Add(this.UseTorrentLoadDialogCheckBox);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.CancelBtn);
-            this.Controls.Add(this.OkButton);
-            this.Controls.Add(this.UrlTextBox);
+            this.CancelButton = this.cancelDialogButton;
+            this.Controls.Add(this.useTorrentLoadDialogCheckBox);
+            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.cancelDialogButton);
+            this.Controls.Add(this.okDialogButton);
+            this.Controls.Add(this.urlTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -119,8 +119,8 @@ namespace TransmissionRemoteDotnet
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.UriPromptWindow_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,12 +128,12 @@ namespace TransmissionRemoteDotnet
 
         #endregion
 
-        private System.Windows.Forms.TextBox UrlTextBox;
-        private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelBtn;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar DownloadProgressBar;
+        private System.Windows.Forms.TextBox urlTextBox;
+        private System.Windows.Forms.Button okDialogButton;
+        private System.Windows.Forms.Button cancelDialogButton;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripProgressBar downloadProgressBar;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        private System.Windows.Forms.CheckBox UseTorrentLoadDialogCheckBox;
+        private System.Windows.Forms.CheckBox useTorrentLoadDialogCheckBox;
     }
 }

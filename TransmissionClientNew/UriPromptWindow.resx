@@ -118,80 +118,80 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="UrlTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="urlTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="UrlTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="urlTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="UrlTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="urlTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;UrlTextBox.Name" xml:space="preserve">
-    <value>UrlTextBox</value>
+  <data name="&gt;&gt;urlTextBox.Name" xml:space="preserve">
+    <value>urlTextBox</value>
   </data>
-  <data name="&gt;&gt;UrlTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;urlTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UrlTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;urlTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UrlTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;urlTextBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="OkButton.Enabled" type="System.Boolean, mscorlib">
+  <data name="okDialogButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="OkButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="okDialogButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 41</value>
   </data>
-  <data name="OkButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="okDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 30</value>
   </data>
-  <data name="OkButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="okDialogButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="OkButton.Text" xml:space="preserve">
+  <data name="okDialogButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;OkButton.Name" xml:space="preserve">
-    <value>OkButton</value>
+  <data name="&gt;&gt;okDialogButton.Name" xml:space="preserve">
+    <value>okDialogButton</value>
   </data>
-  <data name="&gt;&gt;OkButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;okDialogButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OkButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;okDialogButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;OkButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;okDialogButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="CancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cancelDialogButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 41</value>
   </data>
-  <data name="CancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cancelDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 30</value>
   </data>
-  <data name="CancelBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="cancelDialogButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="CancelBtn.Text" xml:space="preserve">
+  <data name="cancelDialogButton.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="&gt;&gt;CancelBtn.Name" xml:space="preserve">
-    <value>CancelBtn</value>
+  <data name="&gt;&gt;cancelDialogButton.Name" xml:space="preserve">
+    <value>cancelDialogButton</value>
   </data>
-  <data name="&gt;&gt;CancelBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;cancelDialogButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CancelBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cancelDialogButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CancelBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cancelDialogButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 82</value>
   </metadata>
   <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
@@ -200,61 +200,61 @@
   <data name="toolStripStatusLabel.Text" xml:space="preserve">
     <value>Waiting for URL...</value>
   </data>
-  <data name="DownloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="downloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
-  <data name="DownloadProgressBar.Visible" type="System.Boolean, mscorlib">
+  <data name="downloadProgressBar.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 82</value>
   </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>427, 22</value>
   </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="UseTorrentLoadDialogCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="useTorrentLoadDialogCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="UseTorrentLoadDialogCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="useTorrentLoadDialogCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 49</value>
   </data>
-  <data name="UseTorrentLoadDialogCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="useTorrentLoadDialogCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 17</value>
   </data>
-  <data name="UseTorrentLoadDialogCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="useTorrentLoadDialogCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="UseTorrentLoadDialogCheckBox.Text" xml:space="preserve">
+  <data name="useTorrentLoadDialogCheckBox.Text" xml:space="preserve">
     <value>Set torrent options before upload</value>
   </data>
-  <data name="&gt;&gt;UseTorrentLoadDialogCheckBox.Name" xml:space="preserve">
-    <value>UseTorrentLoadDialogCheckBox</value>
+  <data name="&gt;&gt;useTorrentLoadDialogCheckBox.Name" xml:space="preserve">
+    <value>useTorrentLoadDialogCheckBox</value>
   </data>
-  <data name="&gt;&gt;UseTorrentLoadDialogCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;useTorrentLoadDialogCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UseTorrentLoadDialogCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;useTorrentLoadDialogCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UseTorrentLoadDialogCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;useTorrentLoadDialogCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -299,10 +299,10 @@
   <data name="&gt;&gt;toolStripStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DownloadProgressBar.Name" xml:space="preserve">
-    <value>DownloadProgressBar</value>
+  <data name="&gt;&gt;downloadProgressBar.Name" xml:space="preserve">
+    <value>downloadProgressBar</value>
   </data>
-  <data name="&gt;&gt;DownloadProgressBar.Type" xml:space="preserve">
+  <data name="&gt;&gt;downloadProgressBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
