@@ -174,6 +174,7 @@ namespace TransmissionRemoteDotnet
             FIELD_PEXENABLED = "pex-enabled",
             FIELD_PEXALLOWED = "pex-allowed",
             FIELD_UTPENABLED = "utp-enabled",
+            FIELD_COOKIES = "cookies",
             VALUE_PREFERRED = "preferred",
             VALUE_TOLERATED = "tolerated",
             VALUE_REQUIRED = "required",

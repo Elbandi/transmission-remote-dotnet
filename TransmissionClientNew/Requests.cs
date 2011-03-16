@@ -176,6 +176,8 @@ namespace TransmissionRemoteDotnet
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTADD);
             JsonObject arguments = GetArgObject(request);
             Uri uri = new Uri(url);
+            if (!uri.Scheme.Equals("magnet") && Program.Settings.UseLocalCookies)
+                arguments.Put(ProtocolConstants.FIELD_COOKIES, PersistentCookies.RetrieveIECookiesForUrl(url));
             arguments.Put(ProtocolConstants.FIELD_FILENAME, uri.AbsoluteUri);
             arguments.Put(ProtocolConstants.FIELD_PAUSED, Program.Settings.Current.StartPaused);
             return request;
