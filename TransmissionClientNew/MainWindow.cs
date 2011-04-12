@@ -2604,7 +2604,7 @@ namespace TransmissionRemoteDotnet
 
         private void torrentListView_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            e.DrawDefault = true;
+            e.DrawDefault = false;
         }
 
         Pen LightLightGray = new Pen(Color.FromArgb(-1447447));
