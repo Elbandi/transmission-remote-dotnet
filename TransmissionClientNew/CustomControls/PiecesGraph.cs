@@ -30,8 +30,11 @@ namespace TransmissionRemoteDotnet
     {
         private byte[] bits;
         private int len;
+        private bool valid = false;
+        private Bitmap bmp;
         public PiecesGraph()
         {
+            bmp = new Bitmap(this.Width, this.Height);
             len = 0;
             // Set Optimized Double Buffer to reduce flickering
             this.SetStyle(ControlStyles.UserPaint, true);
@@ -40,27 +43,42 @@ namespace TransmissionRemoteDotnet
 
             // Redraw when resized
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.Invalidated += new InvalidateEventHandler(PiecesGraph_Invalidated);
+        }
+
+        void PiecesGraph_Invalidated(object sender, InvalidateEventArgs e)
+        {
+            if (valid) return;
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.Clear(BackColor);
+                if (len > 0)
+                {
+                    decimal arany = (decimal)len / Width;
+                    for (int n = 0; n < Width; n++)
+                    {
+                        if (BitGet(bits, len, (int)(n * arany)))
+                        {
+                            g.DrawLine(new Pen(ForeColor), n, 0, n, Height);
+                        }
+                    }
+                }
+            }
+            valid = true;
         }
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
+            bmp.Dispose();
+            bmp = new Bitmap(this.Width, this.Height);
+            valid = false;
             Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (len > 0)
-            {
-                decimal arany = (decimal)len / Width;
-                for (int n = 0; n < Width; n++)
-                {
-                    if (BitGet(bits, len, (int)(n * arany)))
-                    {
-                        e.Graphics.DrawLine(new Pen(ForeColor), n, 0, n, Height);
-                    }
-                }
-            }
+            e.Graphics.DrawImage(bmp, 0, 0);
         }
 
         private bool BitGet(byte[] array, int len, int index)
@@ -74,6 +92,7 @@ namespace TransmissionRemoteDotnet
         {
             this.len = len;
             this.bits = b;
+            valid = false;
             Invalidate();
         }
 
@@ -81,6 +100,7 @@ namespace TransmissionRemoteDotnet
         {
             this.len = 0;
             this.bits = new byte[0];
+            valid = false;
             Invalidate();
         }
     }
