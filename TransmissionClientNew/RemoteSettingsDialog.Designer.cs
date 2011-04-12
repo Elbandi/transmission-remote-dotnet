@@ -207,7 +207,7 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.peerLimitValue, "peerLimitValue");
             this.peerLimitValue.Maximum = new decimal(new int[] {
-            1000,
+            65535,
             0,
             0,
             0});
@@ -454,7 +454,7 @@ namespace TransmissionRemoteDotnet
             // 
             resources.ApplyResources(this.peerLimitTorrentValue, "peerLimitTorrentValue");
             this.peerLimitTorrentValue.Maximum = new decimal(new int[] {
-            1000,
+            65535,
             0,
             0,
             0});
