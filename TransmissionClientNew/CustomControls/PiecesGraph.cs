@@ -52,15 +52,31 @@ namespace TransmissionRemoteDotnet
             using (Graphics g = Graphics.FromImage(bmp))
             {
                 g.Clear(BackColor);
-                if (len > 0)
+                int c_bit = 0, num_bits, bits_got;
+                float bitsperrow = (bmp.Width > 0 ? (float)len / (float)bmp.Width : 0), chunk_done;
+
+                if (bitsperrow > 0)
                 {
-                    decimal arany = (decimal)len / Width;
-                    for (int n = 0; n < Width; n++)
+                    for (int n = 0; n < bmp.Width; n++)
                     {
-                        if (BitGet(bits, len, (int)(n * arany)))
+                        num_bits = (int)(bitsperrow * (n + 1)) - c_bit;
+                        bits_got = 0;
+                        for (int i = 0; i < num_bits; i++)
                         {
-                            g.DrawLine(new Pen(ForeColor), n, 0, n, Height);
+                            if (BitGet(bits, len, c_bit + i))
+                                bits_got++;
                         }
+                        if (num_bits > 0)
+                            chunk_done = (float)bits_got / (float)num_bits;
+                        else if (BitGet(bits, len, c_bit))
+                            chunk_done = 1;
+                        else
+                            chunk_done = 0;
+                        Color fill = Color.FromArgb((int)(BackColor.R * (1 - chunk_done) + (ForeColor.R) * chunk_done), (int)(BackColor.G * (1 - chunk_done) + (ForeColor.G) * chunk_done), (int)(BackColor.B * (1 - chunk_done) + (ForeColor.B) * chunk_done));
+
+                        g.DrawLine(new Pen(fill), n, 0, n, bmp.Height);
+
+                        c_bit += num_bits;
                     }
                 }
             }
