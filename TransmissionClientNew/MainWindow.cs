@@ -2686,5 +2686,15 @@ namespace TransmissionRemoteDotnet
         {
             get { return addTorrentButton.Text; }
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (filesFilterTextBox.Focused && keyData == (Keys.Control | Keys.V))
+            {
+                filesFilterTextBox.Paste();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
