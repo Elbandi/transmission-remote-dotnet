@@ -228,7 +228,6 @@ namespace TransmissionRemoteDotnet
             {
                 connectButton.DropDownItems.Add(CreateProfileMenuItem(s.Key));
                 ToolStripMenuItem profile = CreateProfileMenuItem(s.Key);
-                profile.Click += delegate(object sender, EventArgs e) { connectToolStripMenuItem.PerformClick(); };
                 connectToolStripMenuItem.DropDownItems.Add(profile);
             }
         }
@@ -610,8 +609,6 @@ namespace TransmissionRemoteDotnet
                 }
                 UpdateNotifyIcon("transmission");
             }
-            connectButton.Visible = connectButton.Enabled = connectToolStripMenuItem.Enabled
-                = !connected;
             disconnectButton.Visible = addTorrentToolStripMenuItem.Enabled
                 = addTorrentButton.Visible = addWebTorrentButton.Visible
                 = remoteConfigureButton.Visible = pauseTorrentButton.Visible
@@ -954,6 +951,7 @@ namespace TransmissionRemoteDotnet
             {
                 settings.CurrentProfile = selectedProfile;
             }
+            ConnectClick();
         }
 
         private void SelectAllFilesHandler(object sender, EventArgs e)
@@ -1124,7 +1122,6 @@ namespace TransmissionRemoteDotnet
                 }
                 if (Program.Connected)
                     Program.Connected = false;
-                connectButton.Enabled = connectToolStripMenuItem.Enabled = false;
                 toolStripStatusLabel.Text = OtherStrings.Connecting + "...";
                 sessionWebClient = CommandFactory.RequestAsync(Requests.SessionGet());
             }
@@ -1591,9 +1588,15 @@ namespace TransmissionRemoteDotnet
 
         public void connectButton_Click(object sender, EventArgs e)
         {
+            if (Program.Connected) return;
+            ConnectClick();
+        }
+
+        private void ConnectClick()
+        {
+            disconnectButton.PerformClick();
             fileToolStripMenuItem.DropDown.Close();
-            if (!Program.Connected)
-                Connect();
+            Connect();
         }
 
         private void addWebTorrentButton_Click(object sender, EventArgs e)
