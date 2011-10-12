@@ -568,4 +568,22 @@
   <data name="Queued" xml:space="preserve">
     <value>Queued</value>
   </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="NotFoundError" xml:space="preserve">
+    <value>You have enter wrong transmission rpc path</value>
+  </data>
+  <data name="UnauthorizedIP" xml:space="preserve">
+    <value>Unauthorized IP Address</value>
+  </data>
+  <data name="UnauthorizedIPError" xml:space="preserve">
+    <value>Either disable the IP address whitelist or add your address to it.\n\nSee the transmission-daemon manpage for details.</value>
+  </data>
+  <data name="UnauthorizedUser" xml:space="preserve">
+    <value>Unauthorized User</value>
+  </data>
+  <data name="UnauthorizedUserError" xml:space="preserve">
+    <value>Incorrect password or user name has been entered.</value>
+  </data>
 </root>

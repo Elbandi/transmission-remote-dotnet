@@ -808,6 +808,24 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Found.
+        /// </summary>
+        internal static string NotFound {
+            get {
+                return ResourceManager.GetString("NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have enter wrong transmission rpc path.
+        /// </summary>
+        internal static string NotFoundError {
+            get {
+                return ResourceManager.GetString("NotFoundError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No upgrade available.
         /// </summary>
         internal static string NoUpgradeAvailable {
@@ -1218,6 +1236,42 @@ namespace TransmissionRemoteDotnet {
         internal static string UnableToParse {
             get {
                 return ResourceManager.GetString("UnableToParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorized IP Address.
+        /// </summary>
+        internal static string UnauthorizedIP {
+            get {
+                return ResourceManager.GetString("UnauthorizedIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Either disable the IP address whitelist or add your address to it.\n\nSee the transmission-daemon manpage for details..
+        /// </summary>
+        internal static string UnauthorizedIPError {
+            get {
+                return ResourceManager.GetString("UnauthorizedIPError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorized User.
+        /// </summary>
+        internal static string UnauthorizedUser {
+            get {
+                return ResourceManager.GetString("UnauthorizedUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect password or user name has been entered..
+        /// </summary>
+        internal static string UnauthorizedUserError {
+            get {
+                return ResourceManager.GetString("UnauthorizedUserError", resourceCulture);
             }
         }
         
