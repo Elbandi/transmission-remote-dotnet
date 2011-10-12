@@ -1544,7 +1544,7 @@ namespace TransmissionRemoteDotnet
                 }
                 else
                 {
-                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(s)));
+                    Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(s, Program.Settings.UseLocalCookies)));
                 }
             }
         }

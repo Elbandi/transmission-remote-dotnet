@@ -166,17 +166,20 @@ namespace TransmissionRemoteDotnet
                 {
                     File.Delete(file);
                 }
-                catch { }
+                catch (Exception e)
+                {
+                    Program.LogDebug("Could not delete torrent: " + file, e.ToString());
+                }
             }
             return request;
         }
 
-        public static JsonObject TorrentAddByUrl(string url)
+        public static JsonObject TorrentAddByUrl(string url, bool addcookies)
         {
             JsonObject request = CreateBasicObject(ProtocolConstants.METHOD_TORRENTADD);
             JsonObject arguments = GetArgObject(request);
             Uri uri = new Uri(url);
-            if (!uri.Scheme.Equals("magnet") && Program.Settings.UseLocalCookies)
+            if (!uri.Scheme.Equals("magnet") && addcookies && Program.DaemonDescriptor.RpcVersion >= 13)
                 arguments.Put(ProtocolConstants.FIELD_COOKIES, PersistentCookies.RetrieveIECookiesForUrl(url));
             arguments.Put(ProtocolConstants.FIELD_FILENAME, uri.AbsoluteUri);
             arguments.Put(ProtocolConstants.FIELD_PAUSED, Program.Settings.Current.StartPaused);

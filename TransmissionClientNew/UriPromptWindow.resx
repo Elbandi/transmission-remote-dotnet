@@ -122,7 +122,7 @@
     <value>15, 15</value>
   </data>
   <data name="urlTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 20</value>
+    <value>600, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="urlTextBox.TabIndex" type="System.Int32, mscorlib">
@@ -138,19 +138,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;urlTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="okDialogButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="okDialogButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 41</value>
+    <value>429, 41</value>
   </data>
   <data name="okDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 30</value>
   </data>
   <data name="okDialogButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="okDialogButton.Text" xml:space="preserve">
     <value>OK</value>
@@ -165,16 +165,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;okDialogButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="cancelDialogButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 41</value>
+    <value>525, 41</value>
   </data>
   <data name="cancelDialogButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 30</value>
   </data>
   <data name="cancelDialogButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="cancelDialogButton.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -189,13 +189,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cancelDialogButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 82</value>
   </metadata>
   <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 17</value>
+    <value>99, 17</value>
   </data>
   <data name="toolStripStatusLabel.Text" xml:space="preserve">
     <value>Waiting for URL...</value>
@@ -210,10 +210,10 @@
     <value>0, 82</value>
   </data>
   <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 22</value>
+    <value>627, 22</value>
   </data>
   <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="statusStrip.Text" xml:space="preserve">
     <value>statusStrip</value>
@@ -228,7 +228,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="useTorrentLoadDialogCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -255,6 +255,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;useTorrentLoadDialogCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="addOurCookiesCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="addOurCookiesCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addOurCookiesCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 49</value>
+  </data>
+  <data name="addOurCookiesCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 17</value>
+  </data>
+  <data name="addOurCookiesCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="addOurCookiesCheckBox.Text" xml:space="preserve">
+    <value>Add our cookies</value>
+  </data>
+  <data name="&gt;&gt;addOurCookiesCheckBox.Name" xml:space="preserve">
+    <value>addOurCookiesCheckBox</value>
+  </data>
+  <data name="&gt;&gt;addOurCookiesCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addOurCookiesCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addOurCookiesCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -264,7 +295,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>427, 104</value>
+    <value>627, 104</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

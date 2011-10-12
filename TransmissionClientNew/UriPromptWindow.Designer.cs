@@ -53,6 +53,7 @@ namespace TransmissionRemoteDotnet
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.downloadProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.useTorrentLoadDialogCheckBox = new System.Windows.Forms.CheckBox();
+            this.addOurCookiesCheckBox = new System.Windows.Forms.CheckBox();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +101,13 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.useTorrentLoadDialogCheckBox, "useTorrentLoadDialogCheckBox");
             this.useTorrentLoadDialogCheckBox.Name = "useTorrentLoadDialogCheckBox";
             this.useTorrentLoadDialogCheckBox.UseVisualStyleBackColor = true;
+            this.useTorrentLoadDialogCheckBox.CheckedChanged += new System.EventHandler(this.UseTorrentLoadDialogCheckBox_CheckedChanged);
+            // 
+            // addOurCookiesCheckBox
+            // 
+            resources.ApplyResources(this.addOurCookiesCheckBox, "addOurCookiesCheckBox");
+            this.addOurCookiesCheckBox.Name = "addOurCookiesCheckBox";
+            this.addOurCookiesCheckBox.UseVisualStyleBackColor = true;
             // 
             // UriPromptWindow
             // 
@@ -107,6 +115,7 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelDialogButton;
+            this.Controls.Add(this.addOurCookiesCheckBox);
             this.Controls.Add(this.useTorrentLoadDialogCheckBox);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.cancelDialogButton);
@@ -135,5 +144,6 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.ToolStripProgressBar downloadProgressBar;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.CheckBox useTorrentLoadDialogCheckBox;
+        private System.Windows.Forms.CheckBox addOurCookiesCheckBox;
     }
 }

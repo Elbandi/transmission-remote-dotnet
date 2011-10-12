@@ -35,6 +35,7 @@ namespace TransmissionRemoteDotnet
         public UriPromptWindow()
         {
             InitializeComponent();
+            addOurCookiesCheckBox.Visible = Program.DaemonDescriptor.RpcVersion >= 13;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace TransmissionRemoteDotnet
             bool withoption = useTorrentLoadDialogCheckBox.Enabled ? useTorrentLoadDialogCheckBox.Checked : false;
             if (Program.DaemonDescriptor.Version >= 1.50 && !withoption)
             {
-                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(urlTextBox.Text)));
+                Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentAddByUrl(urlTextBox.Text, addOurCookiesCheckBox.Checked)));
                 this.Close();
             }
             else
@@ -138,6 +139,11 @@ namespace TransmissionRemoteDotnet
             }
             catch
             { }
+        }
+
+        private void UseTorrentLoadDialogCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            addOurCookiesCheckBox.Enabled = !useTorrentLoadDialogCheckBox.Checked && !(new Uri(urlTextBox.Text)).Scheme.Equals("magnet");
         }
     }
 }
