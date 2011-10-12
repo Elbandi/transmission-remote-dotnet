@@ -148,7 +148,7 @@ namespace TransmissionRemoteDotnet
                 {
                     if (this.FirstTrackerTrimmed.Length > 0 && form.stateListBox.FindItem(this.FirstTrackerTrimmed) == null)
                     {
-                        form.stateListBox.Items.Add(new GListBoxItem(this.FirstTrackerTrimmed, 8));
+                        form.stateListBox.Items.Add(new GListBoxItem(this.FirstTrackerTrimmed, 9));
                     }
                 }
                 if (Program.Settings.MinToTray && Program.Settings.StartedBalloon && this.updateSerial > 2)
