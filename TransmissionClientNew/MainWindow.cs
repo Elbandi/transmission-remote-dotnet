@@ -675,9 +675,9 @@ namespace TransmissionRemoteDotnet
             {
                 foreach (KeyValuePair<string, Torrent> pair in Program.TorrentIndex)
                 {
-                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_DOWNLOADING))
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_DOWNLOAD))
                         downloadcount++;
-                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_SEEDING))
+                    if (IfTorrentStatus(pair.Value, ProtocolConstants.STATUS_SEED))
                         seedcount++;
                 }
             }
@@ -1348,7 +1348,7 @@ namespace TransmissionRemoteDotnet
                     break;
                 case 2:
                     t = (Torrent)torrentListView.SelectedItems[0];
-                    if (IfTorrentStatus(t, ProtocolConstants.STATUS_PAUSED))
+                    if (IfTorrentStatus(t, ProtocolConstants.STATUS_STOPPED))
                         startTorrentButton.PerformClick();
                     else
                         pauseTorrentButton.PerformClick();
@@ -1434,12 +1434,12 @@ namespace TransmissionRemoteDotnet
                         selectedSize += t.TotalSize;
                         selectedDownloadedSize += t.HaveTotal;
                     }
-                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
+                    if (t.StatusCode == ProtocolConstants.STATUS_DOWNLOAD)
                     {
                         totalDownloading++;
                         activePercentage += t.Percentage;
                     }
-                    else if (t.StatusCode == ProtocolConstants.STATUS_PAUSED)
+                    else if (t.StatusCode == ProtocolConstants.STATUS_STOPPED)
                     {
                         if (t.Percentage < 100)
                         {
@@ -1449,7 +1449,7 @@ namespace TransmissionRemoteDotnet
                         else
                             totalPausedFinished++;
                     }
-                    else if (t.StatusCode == ProtocolConstants.STATUS_SEEDING)
+                    else if (t.StatusCode == ProtocolConstants.STATUS_SEED)
                     {
                         totalSeeding++;
                     }
@@ -1638,15 +1638,15 @@ namespace TransmissionRemoteDotnet
                     torrentListView.ListViewItemSorter = null;
                     if (stateListBox.SelectedIndex == 1)
                     {
-                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOADING);
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_DOWNLOAD);
                     }
                     else if (stateListBox.SelectedIndex == 2)
                     {
-                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_PAUSED);
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_STOPPED);
                     }
                     else if (stateListBox.SelectedIndex == 3)
                     {
-                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECKING | ProtocolConstants.STATUS_WAITING_TO_CHECK));
+                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_CHECK | ProtocolConstants.STATUS_CHECK_WAIT));
                     }
                     else if (stateListBox.SelectedIndex == 4)
                     {
@@ -1658,7 +1658,7 @@ namespace TransmissionRemoteDotnet
                     }
                     else if (stateListBox.SelectedIndex == 6)
                     {
-                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEEDING);
+                        FilterTorrent(IfTorrentStatus, ProtocolConstants.STATUS_SEED);
                     }
                     else if (stateListBox.SelectedIndex == 7)
                     {
@@ -1812,19 +1812,19 @@ namespace TransmissionRemoteDotnet
                     {
                         broken++;
                     }
-                    if (statusCode == ProtocolConstants.STATUS_DOWNLOADING)
+                    if (statusCode == ProtocolConstants.STATUS_DOWNLOAD)
                     {
                         downloading++;
                     }
-                    else if (statusCode == ProtocolConstants.STATUS_PAUSED)
+                    else if (statusCode == ProtocolConstants.STATUS_STOPPED)
                     {
                         paused++;
                     }
-                    else if (statusCode == ProtocolConstants.STATUS_SEEDING)
+                    else if (statusCode == ProtocolConstants.STATUS_SEED)
                     {
                         seeding++;
                     }
-                    else if (statusCode == ProtocolConstants.STATUS_WAITING_TO_CHECK || statusCode == ProtocolConstants.STATUS_CHECKING)
+                    else if (statusCode == ProtocolConstants.STATUS_CHECK_WAIT || statusCode == ProtocolConstants.STATUS_CHECK)
                     {
                         checking++;
                     }
@@ -1998,7 +1998,7 @@ namespace TransmissionRemoteDotnet
             generalTorrentInfo.status = t.Status;
             generalTorrentInfo.errorVisible = !(generalTorrentInfo.error = t.ErrorString).Equals("");
             RefreshElapsedTimer();
-            peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_PAUSED;
+            peersListView.Enabled = t.StatusCode != ProtocolConstants.STATUS_STOPPED;
             if (t.Peers != null && peersListView.Enabled)
             {
                 PeerListViewItem.CurrentUpdateSerial++;

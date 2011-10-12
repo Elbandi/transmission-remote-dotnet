@@ -24,11 +24,11 @@ namespace TransmissionRemoteDotnet
     public class ProtocolConstants
     {
         public const short
-            STATUS_WAITING_TO_CHECK = 1,
-            STATUS_CHECKING = 2,
-            STATUS_DOWNLOADING = 4,
-            STATUS_SEEDING = 8,
-            STATUS_PAUSED = 16;
+            STATUS_CHECK_WAIT = 1,
+            STATUS_CHECK = 2,
+            STATUS_DOWNLOAD = 4,
+            STATUS_SEED = 8,
+            STATUS_STOPPED = 16;
 
         public const int
             BANDWIDTH_LOW = -1,

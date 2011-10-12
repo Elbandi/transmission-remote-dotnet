@@ -43,19 +43,19 @@ namespace TransmissionRemoteDotnet
             {
                 base.ImageIndex = 6;
             }
-            else if (this.StatusCode == ProtocolConstants.STATUS_CHECKING || this.StatusCode == ProtocolConstants.STATUS_WAITING_TO_CHECK)
+            else if (this.StatusCode == ProtocolConstants.STATUS_CHECK || this.StatusCode == ProtocolConstants.STATUS_CHECK_WAIT)
             {
                 base.ImageIndex = 5;
             }
-            else if (this.StatusCode == ProtocolConstants.STATUS_SEEDING)
+            else if (this.StatusCode == ProtocolConstants.STATUS_SEED)
             {
                 base.ImageIndex = 4;
             }
-            else if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING)
+            else if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOAD)
             {
                 base.ImageIndex = 1;
             }
-            else if (this.StatusCode == ProtocolConstants.STATUS_PAUSED)
+            else if (this.StatusCode == ProtocolConstants.STATUS_STOPPED)
             {
                 base.ImageIndex = 2;
             }
@@ -220,7 +220,7 @@ namespace TransmissionRemoteDotnet
 
             bool statusChange = (this.StatusCode != statusCode) || (this.HasError != IsErrorString(errorString));
 
-            if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOADING
+            if (this.StatusCode == ProtocolConstants.STATUS_DOWNLOAD
                 && this.LeftUntilDone > 0 && (leftUntilDone == 0))
             {
                 this.CompletionPopupPending = !first && Program.Settings.CompletedBaloon;
@@ -230,7 +230,7 @@ namespace TransmissionRemoteDotnet
             this.StatusCode = statusCode;
             this.ErrorString = errorString;
 
-            if (this.StatusCode == ProtocolConstants.STATUS_CHECKING)
+            if (this.StatusCode == ProtocolConstants.STATUS_CHECK)
                 this.Percentage = Toolbox.ToProgress(info[ProtocolConstants.FIELD_RECHECKPROGRESS]);
             else
                 this.Percentage = Toolbox.CalcPercentage(this.HaveTotal, this.SizeWhenDone);
@@ -509,15 +509,15 @@ namespace TransmissionRemoteDotnet
             {
                 switch (this.StatusCode)
                 {
-                    case ProtocolConstants.STATUS_WAITING_TO_CHECK:
+                    case ProtocolConstants.STATUS_CHECK_WAIT:
                         return OtherStrings.WaitingToCheck;
-                    case ProtocolConstants.STATUS_CHECKING:
+                    case ProtocolConstants.STATUS_CHECK:
                         return OtherStrings.Checking;
-                    case ProtocolConstants.STATUS_DOWNLOADING:
+                    case ProtocolConstants.STATUS_DOWNLOAD:
                         return OtherStrings.Downloading;
-                    case ProtocolConstants.STATUS_SEEDING:
+                    case ProtocolConstants.STATUS_SEED:
                         return OtherStrings.Seeding;
-                    case ProtocolConstants.STATUS_PAUSED:
+                    case ProtocolConstants.STATUS_STOPPED:
                         return OtherStrings.Paused;
                     default:
                         return OtherStrings.Unknown;
