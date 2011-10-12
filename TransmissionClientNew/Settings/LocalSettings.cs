@@ -470,13 +470,15 @@ namespace TransmissionRemoteDotnet.Settings
             return true;
         }
 
+        /// The most recently used paths are always at the top of the list, oldest paths drop 
+        /// off the bottom of the list when it reaches its maximum size
         public void AddDestinationPath(string path)
         {
-            if (!destpathhistory.Contains(path))
-            {
-                while (destpathhistory.Count > 15) destpathhistory.RemoveAt(0);
-                destpathhistory.Add(path);
-            }
+            const int maximum_history = 15;
+            destpathhistory.Remove(path);
+            destpathhistory.Insert(0, path);
+            if (destpathhistory.Count > maximum_history) 
+                destpathhistory.RemoveRange(maximum_history, destpathhistory.Count - maximum_history);
         }
 
         public void ClearDestPathHistory()
