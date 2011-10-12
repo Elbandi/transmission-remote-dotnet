@@ -326,6 +326,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap queue16 {
+            get {
+                object obj = ResourceManager.GetObject("queue16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap reannounce {
             get {
                 object obj = ResourceManager.GetObject("reannounce", resourceCulture);

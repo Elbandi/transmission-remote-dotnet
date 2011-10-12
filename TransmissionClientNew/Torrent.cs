@@ -59,6 +59,10 @@ namespace TransmissionRemoteDotnet
             {
                 base.ImageIndex = 2;
             }
+            else if (this.StatusCode == ProtocolConstants.STATUS_SEED_WAIT || this.StatusCode == ProtocolConstants.STATUS_DOWNLOAD_WAIT)
+            {
+                base.ImageIndex = 9;
+            }
             else
             {
                 base.ImageIndex = -1;
@@ -507,21 +511,14 @@ namespace TransmissionRemoteDotnet
         {
             get
             {
-                switch (this.StatusCode)
-                {
-                    case ProtocolConstants.STATUS_CHECK_WAIT:
-                        return OtherStrings.WaitingToCheck;
-                    case ProtocolConstants.STATUS_CHECK:
-                        return OtherStrings.Checking;
-                    case ProtocolConstants.STATUS_DOWNLOAD:
-                        return OtherStrings.Downloading;
-                    case ProtocolConstants.STATUS_SEED:
-                        return OtherStrings.Seeding;
-                    case ProtocolConstants.STATUS_STOPPED:
-                        return OtherStrings.Paused;
-                    default:
-                        return OtherStrings.Unknown;
-                }
+                if (this.StatusCode.Equals(ProtocolConstants.STATUS_CHECK_WAIT)) return OtherStrings.WaitingToCheck;
+                else if (this.StatusCode.Equals(ProtocolConstants.STATUS_CHECK)) return OtherStrings.Checking;
+                else if (this.StatusCode.Equals(ProtocolConstants.STATUS_DOWNLOAD)) return OtherStrings.Downloading;
+                else if (ProtocolConstants.STATUS_DOWNLOAD_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_DOWNLOAD_WAIT)) return OtherStrings.SeedWait;
+                else if (this.StatusCode.Equals(ProtocolConstants.STATUS_SEED)) return OtherStrings.Seeding;
+                else if (ProtocolConstants.STATUS_SEED_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_SEED_WAIT)) return OtherStrings.DownloadWait;
+                else if (this.StatusCode.Equals(ProtocolConstants.STATUS_STOPPED)) return OtherStrings.Paused;
+                else return OtherStrings.Unknown;
             }
         }
 

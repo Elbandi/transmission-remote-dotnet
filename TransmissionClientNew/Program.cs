@@ -259,7 +259,11 @@ namespace TransmissionRemoteDotnet
                 if (value.Equals(connected))
                     return;
                 connected = value;
-                if (!connected)
+                if (connected)
+                {
+                    ProtocolConstants.SetupStatusValues(Program.DaemonDescriptor.RpcVersion >= 14);
+                }
+                else
                 {
                     if (form.InvokeRequired)
                         form.Invoke((MethodInvoker)delegate { form.torrentListView.Items.Clear(); });

@@ -24,11 +24,53 @@ namespace TransmissionRemoteDotnet
     public class ProtocolConstants
     {
         public const short
-            STATUS_CHECK_WAIT = 1,
-            STATUS_CHECK = 2,
-            STATUS_DOWNLOAD = 4,
-            STATUS_SEED = 8,
-            STATUS_STOPPED = 16;
+            STATUS_NEW_STOPPED = 0,
+            STATUS_NEW_CHECK_WAIT = 1,
+            STATUS_NEW_CHECK = 2,
+            STATUS_NEW_DOWNLOAD_WAIT = 3,
+            STATUS_NEW_DOWNLOAD = 4,
+            STATUS_NEW_SEED_WAIT = 5,
+            STATUS_NEW_SEED = 6;
+
+        public const short
+            STATUS_OLD_CHECK_WAIT = 1,
+            STATUS_OLD_CHECK = 2,
+            STATUS_OLD_DOWNLOAD = 4,
+            STATUS_OLD_SEED = 8,
+            STATUS_OLD_STOPPED = 16;
+
+        public static short
+            STATUS_CHECK_WAIT = -1,
+            STATUS_CHECK = -1,
+            STATUS_DOWNLOAD_WAIT = -1,
+            STATUS_DOWNLOAD = -1,
+            STATUS_SEED_WAIT = -1,
+            STATUS_SEED = -1,
+            STATUS_STOPPED = -1;
+
+        public static void SetupStatusValues(bool newstatus)
+        {
+            if (newstatus)
+            {
+                STATUS_CHECK_WAIT = STATUS_NEW_CHECK_WAIT;
+                STATUS_CHECK = STATUS_NEW_CHECK;
+                STATUS_DOWNLOAD_WAIT = STATUS_NEW_DOWNLOAD_WAIT;
+                STATUS_DOWNLOAD = STATUS_NEW_DOWNLOAD;
+                STATUS_SEED_WAIT = STATUS_NEW_SEED_WAIT;
+                STATUS_SEED = STATUS_NEW_SEED;
+                STATUS_STOPPED = STATUS_NEW_STOPPED;
+            }
+            else
+            {
+                STATUS_CHECK_WAIT = STATUS_OLD_CHECK_WAIT;
+                STATUS_CHECK = STATUS_OLD_CHECK;
+                STATUS_DOWNLOAD_WAIT = -1;
+                STATUS_DOWNLOAD = STATUS_OLD_DOWNLOAD;
+                STATUS_SEED_WAIT = -1;
+                STATUS_SEED = STATUS_OLD_SEED;
+                STATUS_STOPPED = STATUS_OLD_STOPPED;
+            }
+        }
 
         public const int
             BANDWIDTH_LOW = -1,

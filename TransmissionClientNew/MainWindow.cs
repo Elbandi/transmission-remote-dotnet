@@ -111,6 +111,7 @@ namespace TransmissionRemoteDotnet
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.player_reload16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.warning16);
             defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.incomplete16);
+            defaultstateimages.Add(global::TransmissionRemoteDotnet.Properties.Resources.queue16);
             stateListBoxImageList.Images.AddRange(defaultstateimages.ToArray());
             stateListBoxImageList.Images.Add(tabControlImageList.Images[1]);
             List<ToolStripBitmap> initialtrayicons = new List<ToolStripBitmap>()
@@ -243,6 +244,7 @@ namespace TransmissionRemoteDotnet
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Incomplete, 7));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Seeding, 4));
             stateListBox.Items.Add(new GListBoxItem(OtherStrings.Broken, 6));
+            stateListBox.Items.Add(new GListBoxItem(OtherStrings.Queued, 8));
             stateListBox.Items.Add(new GListBoxItem(""));
             stateListBox.EndUpdate();
         }
@@ -595,13 +597,13 @@ namespace TransmissionRemoteDotnet
                 speedGraph.RemoveLine("Upload");
                 lock (this.stateListBox)
                 {
-                    for (int i = 0; i < 8; i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         ((GListBoxItem)stateListBox.Items[i]).Counter = 0;
                     }
-                    if (this.stateListBox.Items.Count > 8)
+                    if (this.stateListBox.Items.Count > 9)
                     {
-                        for (int i = this.stateListBox.Items.Count - 1; i > 8; i--)
+                        for (int i = this.stateListBox.Items.Count - 1; i > 9; i--)
                         {
                             stateListBox.Items.RemoveAt(i);
                         }
@@ -1664,9 +1666,13 @@ namespace TransmissionRemoteDotnet
                     {
                         FilterTorrent(TorrentHasError, null);
                     }
-                    else if (stateListBox.SelectedIndex > 8)
+                    else if (stateListBox.SelectedIndex == 8)
                     {
                         FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+                    }
+                    else if (stateListBox.SelectedIndex > 9)
+                    {
+                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_DOWNLOAD_WAIT | ProtocolConstants.STATUS_SEED_WAIT));
                     }
                     else
                     {
@@ -1794,6 +1800,7 @@ namespace TransmissionRemoteDotnet
             int incomplete = 0;
             int seeding = 0;
             int broken = 0;
+            int queued = 0;
             Dictionary<string, int> trackers = new Dictionary<string, int>();
             lock (Program.TorrentIndex)
             {
@@ -1819,6 +1826,10 @@ namespace TransmissionRemoteDotnet
                     else if (statusCode == ProtocolConstants.STATUS_STOPPED)
                     {
                         paused++;
+                    }
+                    else if (statusCode == ProtocolConstants.STATUS_DOWNLOAD_WAIT || statusCode == ProtocolConstants.STATUS_SEED_WAIT)
+                    {
+                        queued++;
                     }
                     else if (statusCode == ProtocolConstants.STATUS_SEED)
                     {
@@ -1847,6 +1858,7 @@ namespace TransmissionRemoteDotnet
             SetStateCounter(5, incomplete);
             SetStateCounter(6, seeding);
             SetStateCounter(7, broken);
+            SetStateCounter(8, queued);
             foreach (KeyValuePair<string, int> pair in trackers)
             {
                 GListBoxItem item = stateListBox.FindItem(pair.Key);

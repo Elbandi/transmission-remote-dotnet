@@ -1104,6 +1104,7 @@
     <None Include="Resources\maxmind.png" />
     <None Include="Resources\EngNumberFormatInfo.xml" />
     <Content Include="Resources\edit16.png" />
+    <None Include="Resources\queue16.png" />
     <Content Include="transmission_large.ico" />
   </ItemGroup>
   <ItemGroup>

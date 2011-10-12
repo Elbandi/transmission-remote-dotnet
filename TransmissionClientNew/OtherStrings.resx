@@ -559,4 +559,13 @@
   <data name="UpgradeNote" xml:space="preserve">
     <value>Availability of this option may require a transmission-daemon upgrade.</value>
   </data>
+  <data name="DownloadWait" xml:space="preserve">
+    <value>Queued to download</value>
+  </data>
+  <data name="SeedWait" xml:space="preserve">
+    <value>Queued to seed</value>
+  </data>
+  <data name="Queued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
 </root>
