@@ -66,7 +66,7 @@ namespace TransmissionRemoteDotnet.Commmands
             }
             else
             {
-                Program.UploadArgs = null;
+                Program.UploadQueue.Clear();
                 if (!Program.Connected)
                 {
                     form.UpdateStatus(this.StatusBarMessage, false);

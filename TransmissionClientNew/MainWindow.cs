@@ -853,11 +853,24 @@ namespace TransmissionRemoteDotnet
             {
                 Connect();
             }
+        }
+
+        private delegate void AddQueueDelegate(string[] files,bool uploadprompt);
+        public void AddQueue(string[] files, bool uploadprompt)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new AddQueueDelegate(this.AddQueue), files, uploadprompt);
+            }
             else
             {
-                if (Program.UploadArgs != null && Program.UploadArgs.Length > 0)
+                if (Program.Connected)
                 {
-                    ShowMustBeConnectedDialog(Program.UploadArgs, Program.Settings.UploadPrompt);
+                    Upload(files, uploadprompt);
+                }
+                else
+                {
+                    ShowMustBeConnectedDialog(files, uploadprompt);
                 }
             }
         }
@@ -993,15 +1006,19 @@ namespace TransmissionRemoteDotnet
 
         public void ShowMustBeConnectedDialog(string[] args, bool uploadPrompt)
         {
-            if (MessageBox.Show(OtherStrings.MustBeConnected, OtherStrings.NotConnected, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            Program.UploadQueue.AddRange(args);
+            if ((sessionWebClient == null || !sessionWebClient.IsBusy) && Monitor.TryEnter(this))
             {
-                Program.UploadArgs = args;
-                Program.UploadPrompt = uploadPrompt;
-                Connect();
-            }
-            else
-            {
-                Program.UploadArgs = null;
+                if (MessageBox.Show(OtherStrings.MustBeConnected, OtherStrings.NotConnected, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Program.UploadPrompt = uploadPrompt;
+                    Connect();
+                }
+                else
+                {
+                    Program.UploadQueue.Clear();
+                }
+                Monitor.Exit(this);
             }
         }
 

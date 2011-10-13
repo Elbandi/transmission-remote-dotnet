@@ -79,11 +79,10 @@ namespace TransmissionRemoteDotnet
             get { return Program.logItems; }
         }
 
-        private static string[] uploadArgs;
-        public static string[] UploadArgs
+        private static List<string> uploadQueue = new List<string>();
+        public static List<string> UploadQueue
         {
-            get { return Program.uploadArgs; }
-            set { Program.uploadArgs = value; }
+            get { return Program.uploadQueue; }
         }
 
         private static bool uploadPrompt;
@@ -137,14 +136,18 @@ namespace TransmissionRemoteDotnet
                     /* Store a list of torrents to upload after connect? */
                     if (args.Length > 0)
                     {
-                        Program.uploadArgs = args;
+                        singleInstance.PassArgumentsToFirstInstance(args);
                     }
                     singleInstance.ArgumentsReceived += singleInstance_ArgumentsReceived;
-                    singleInstance.ListenForArgumentsFromSuccessiveInstances();
                     SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(form = new MainWindow());
+                    form = new MainWindow();
+                    form.Load += new EventHandler(delegate(object sender, EventArgs e)
+                    {
+                        singleInstance.ListenForArgumentsFromSuccessiveInstances();
+                    });
+                    Application.Run(form);
                 }
                 else
                 {
@@ -228,14 +231,7 @@ namespace TransmissionRemoteDotnet
             {
                 if (e.Args.Length > 0)
                 {
-                    if (connected)
-                    {
-                        form.Upload(e.Args, UploadPrompt);
-                    }
-                    else
-                    {
-                        form.ShowMustBeConnectedDialog(uploadArgs = e.Args, UploadPrompt);
-                    }
+                    form.AddQueue(e.Args, uploadPrompt);
                 }
                 else
                 {
