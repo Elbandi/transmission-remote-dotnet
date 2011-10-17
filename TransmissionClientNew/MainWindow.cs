@@ -1727,7 +1727,7 @@ namespace TransmissionRemoteDotnet
         }
         private bool IfTorrentStatus(Torrent t, object statusCode)
         {
-            return (t.StatusCode & (short)statusCode) > 0;
+            return t.StatusCode.Equals((short)statusCode);
         }
         private bool IsFinished(Torrent t, object dummy)
         {
