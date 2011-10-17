@@ -514,9 +514,9 @@ namespace TransmissionRemoteDotnet
                 if (this.StatusCode.Equals(ProtocolConstants.STATUS_CHECK_WAIT)) return OtherStrings.WaitingToCheck;
                 else if (this.StatusCode.Equals(ProtocolConstants.STATUS_CHECK)) return OtherStrings.Checking;
                 else if (this.StatusCode.Equals(ProtocolConstants.STATUS_DOWNLOAD)) return OtherStrings.Downloading;
-                else if (ProtocolConstants.STATUS_DOWNLOAD_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_DOWNLOAD_WAIT)) return OtherStrings.SeedWait;
+                else if (ProtocolConstants.STATUS_DOWNLOAD_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_DOWNLOAD_WAIT)) return OtherStrings.DownloadWait;
                 else if (this.StatusCode.Equals(ProtocolConstants.STATUS_SEED)) return OtherStrings.Seeding;
-                else if (ProtocolConstants.STATUS_SEED_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_SEED_WAIT)) return OtherStrings.DownloadWait;
+                else if (ProtocolConstants.STATUS_SEED_WAIT != -1 && this.StatusCode.Equals(ProtocolConstants.STATUS_SEED_WAIT)) return OtherStrings.SeedWait;
                 else if (this.StatusCode.Equals(ProtocolConstants.STATUS_STOPPED)) return OtherStrings.Paused;
                 else return OtherStrings.Unknown;
             }
