@@ -1685,11 +1685,11 @@ namespace TransmissionRemoteDotnet
                     }
                     else if (stateListBox.SelectedIndex == 8)
                     {
-                        FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
+                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_DOWNLOAD_WAIT | ProtocolConstants.STATUS_SEED_WAIT));
                     }
                     else if (stateListBox.SelectedIndex > 9)
                     {
-                        FilterTorrent(IfTorrentStatus, (short)(ProtocolConstants.STATUS_DOWNLOAD_WAIT | ProtocolConstants.STATUS_SEED_WAIT));
+                        FilterTorrent(UsingTracker, stateListBox.SelectedItem.ToString());
                     }
                     else
                     {
