@@ -24,7 +24,7 @@ namespace TranslationConverter
             {
                 foreach (DictionaryEntry de in resx)
                 {
-                    trd_template[file + "~" + de.Key] = (string)de.Value;
+                    trd_template[file + "~" + de.Key] = (de.Value as string).Trim();
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace TranslationConverter
                     try
                     {
 
-                        string lang = subDir.FullName.Split(".".ToCharArray())[1];
+                        string lang = Path.GetFileName(subDir.FullName).Split(".".ToCharArray())[1];
                         Console.Write("Found " + subDir.ToString() + ", processing...");
                         if (!trd_language.ContainsKey(lang))
                         {
@@ -170,8 +170,10 @@ namespace TranslationConverter
                 foreach (FileInfo subDir in di.GetFiles("*.*-*.resx"))
                     try
                     {
-                        string lang = subDir.FullName.Split(".".ToCharArray())[1];
-                        string cat = Path.GetFileName(subDir.FullName).Split(".".ToCharArray())[0];
+                        string[] filename = Path.GetFileName(subDir.FullName).Split(".".ToCharArray());
+                        if (filename.Length != 3) throw new Exception("Invalid filename: " + Path.GetFileName(subDir.FullName));
+                        string lang = filename[1];
+                        string cat = filename[0];
                         if (lang.Equals("en-US") || !trd_language.ContainsKey(lang))
                             continue;
                         Console.Write("Found " + subDir.ToString() + ", translating...");
