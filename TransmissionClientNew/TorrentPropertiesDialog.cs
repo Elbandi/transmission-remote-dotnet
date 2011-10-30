@@ -35,9 +35,10 @@ namespace TransmissionRemoteDotnet
         {
             this.selections = selections;
             InitializeComponent();
+            trackersButtonPanel.Visible = Program.DaemonDescriptor.RpcVersion >= 10;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OkDialogButton_Click(object sender, EventArgs e)
         {
             JsonObject request = Requests.CreateBasicObject(ProtocolConstants.METHOD_TORRENTSET);
             JsonObject arguments = Requests.GetArgObject(request);
@@ -102,7 +103,7 @@ namespace TransmissionRemoteDotnet
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CancelDialogButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -158,11 +159,11 @@ namespace TransmissionRemoteDotnet
                     bandwidthComboBox.SelectedIndex = 2;
                 else
                     bandwidthComboBox.SelectedIndex = 1;
-                label4.Enabled = bandwidthComboBox.Enabled = true;
+                bandwidthLabel.Enabled = bandwidthComboBox.Enabled = true;
             }
             catch
             {
-                label4.Enabled = bandwidthComboBox.Enabled = false;
+                bandwidthLabel.Enabled = bandwidthComboBox.Enabled = false;
             }
             peerLimitValue.Value = firstTorrent.MaxConnectedPeers >= 0 && (decimal)firstTorrent.MaxConnectedPeers <= peerLimitValue.Maximum ? (decimal)firstTorrent.MaxConnectedPeers : 0;
             // TODO: http://www.codeguru.com/cpp/controls/controls/lists,treesandcombos/article.php/c2291
@@ -197,10 +198,15 @@ namespace TransmissionRemoteDotnet
 
         private void trackersList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            removeTrackerButton.Enabled = trackersList.SelectedIndex != -1;
+            editTrackerButton.Enabled = removeTrackerButton.Enabled = trackersList.SelectedIndex != -1;
         }
 
         private void trackersList_DoubleClick(object sender, EventArgs e)
+        {
+            editTrackerButton.PerformClick();
+        }
+
+        private void editTrackerButton_Click(object sender, EventArgs e)
         {
             TrackerListItem current = (TrackerListItem)trackersList.SelectedItem;
             string newannounce = InputBox.Show(OtherStrings.EditTrackerUrl, OtherStrings.EditUrl, current.ToString(), false);

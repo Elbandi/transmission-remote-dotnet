@@ -103,10 +103,10 @@ namespace TransmissionRemoteDotnet.Commmands
                             }));
                     Program.Connected = true;
                     form.RefreshIfNotRefreshing();
-                    if (Program.UploadArgs != null)
+                    if (Program.UploadQueue.Count > 0)
                     {
-                        form.Upload(Program.UploadArgs, Program.UploadPrompt);
-                        Program.UploadArgs = null;
+                        form.Upload(Program.UploadQueue.ToArray(), Program.UploadPrompt);
+                        Program.UploadQueue.Clear();
                     }
                 }
                 else

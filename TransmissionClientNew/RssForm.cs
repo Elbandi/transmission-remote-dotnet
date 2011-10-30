@@ -91,7 +91,9 @@ namespace TransmissionRemoteDotnet
                         toolStripStatusLabel1.Text = "";
                         RssListViewItem r = e.UserState as RssListViewItem;
                         r.channel = new RssChannel(new MemoryStream(e.Result));
-                        if (r.channel.Image.Url != null && !FeedImageList.Images.ContainsKey(r.Name))
+                        if (r.channel.Image.Url != null &&
+                            Uri.IsWellFormedUriString(r.channel.Image.Url, UriKind.Absolute) &&
+                            !FeedImageList.Images.ContainsKey(r.Name))
                         {
                             imageWebClient.CancelAsync();
                             imageWebClient.DownloadDataAsync(new Uri(r.channel.Image.Url), r);

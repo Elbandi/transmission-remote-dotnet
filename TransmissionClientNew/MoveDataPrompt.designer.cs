@@ -29,50 +29,50 @@ namespace TransmissionRemoteDotnet
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoveDataPrompt));
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.destinationLabel = new System.Windows.Forms.Label();
+            this.moveButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.destinationComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label1
+            // destinationLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.destinationLabel, "destinationLabel");
+            this.destinationLabel.Name = "destinationLabel";
             // 
-            // button1
+            // moveButton
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.moveButton, "moveButton");
+            this.moveButton.Name = "moveButton";
+            this.moveButton.UseVisualStyleBackColor = true;
+            this.moveButton.Click += new System.EventHandler(this.moveButton_Click);
             // 
-            // button2
+            // closeButton
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.closeButton, "closeButton");
+            this.closeButton.Name = "closeButton";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // comboBox1
+            // destinationComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.destinationComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.destinationComboBox, "destinationComboBox");
+            this.destinationComboBox.Name = "destinationComboBox";
+            this.destinationComboBox.SelectedIndexChanged += new System.EventHandler(this.destinationComboBox_SelectedIndexChanged);
+            this.destinationComboBox.TextChanged += new System.EventHandler(this.destinationComboBox_SelectedIndexChanged);
             // 
             // MoveDataPrompt
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.moveButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button2;
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.CancelButton = this.closeButton;
+            this.Controls.Add(this.destinationComboBox);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.moveButton);
+            this.Controls.Add(this.destinationLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -86,9 +86,9 @@ namespace TransmissionRemoteDotnet
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label destinationLabel;
+        private System.Windows.Forms.Button moveButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.ComboBox destinationComboBox;
     }
 }

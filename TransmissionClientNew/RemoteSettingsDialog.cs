@@ -139,13 +139,13 @@ namespace TransmissionRemoteDotnet
                 // pex
                 if (session.Contains(ProtocolConstants.FIELD_PEXALLOWED))
                 {
-                    PEXcheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXALLOWED]);
-                    PEXcheckBox.Tag = ProtocolConstants.FIELD_PEXALLOWED;
+                    pexEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXALLOWED]);
+                    pexEnabledCheckBox.Tag = ProtocolConstants.FIELD_PEXALLOWED;
                 }
                 else if (session.Contains(ProtocolConstants.FIELD_PEXENABLED))
                 {
-                    PEXcheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXENABLED]);
-                    PEXcheckBox.Tag = ProtocolConstants.FIELD_PEXENABLED;
+                    pexEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_PEXENABLED]);
+                    pexEnabledCheckBox.Tag = ProtocolConstants.FIELD_PEXENABLED;
                 }
                 // blocklist
                 if (blocklistEnabledCheckBox.Enabled = updateBlocklistButton.Enabled = blocklistEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_BLOCKLISTENABLED))
@@ -158,20 +158,20 @@ namespace TransmissionRemoteDotnet
                     altTimeConstraintEnabled.Enabled =
                     timeConstraintEndHours.Enabled =
                     timeConstraintBeginHours.Enabled =
-                    timeConstaintEndMinutes.Enabled =
-                    timeConstaintBeginMinutes.Enabled =
+                    timeConstraintEndMinutes.Enabled =
+                    timeConstraintBeginMinutes.Enabled =
                     session.Contains(ProtocolConstants.FIELD_ALTSPEEDENABLED))
                 {
                     SetNumeric(altDownloadLimitField, Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDDOWN]), 0);
                     SetNumeric(altUploadLimitField, Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDUP]), 0);
                     altDownloadLimitField.Enabled = altUploadLimitField.Enabled = altSpeedLimitEnable.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_ALTSPEEDENABLED]);
-                    timeConstaintBeginMinutes.Enabled = timeConstaintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked = Toolbox.ToBool(session["alt-speed-time-enabled"]);
+                    timeConstraintBeginMinutes.Enabled = timeConstraintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked = Toolbox.ToBool(session["alt-speed-time-enabled"]);
                     int altSpeedTimeBegin = Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN]);
                     int altSpeedTimeEnd = Toolbox.ToInt(session[ProtocolConstants.FIELD_ALTSPEEDTIMEEND]);
                     SetNumeric(timeConstraintBeginHours, Math.Floor((decimal)altSpeedTimeBegin / 60), 0);
                     SetNumeric(timeConstraintEndHours, Math.Floor((decimal)altSpeedTimeEnd / 60), 0);
-                    timeConstaintBeginMinutes.Value = altSpeedTimeBegin % 60;
-                    timeConstaintEndMinutes.Value = altSpeedTimeEnd % 60;
+                    timeConstraintBeginMinutes.Value = altSpeedTimeBegin % 60;
+                    timeConstraintEndMinutes.Value = altSpeedTimeEnd % 60;
                 }
                 if (seedRatioEnabledCheckBox.Enabled = seedLimitUpDown.Enabled = session.Contains(ProtocolConstants.FIELD_SEEDRATIOLIMITED))
                 {
@@ -193,13 +193,17 @@ namespace TransmissionRemoteDotnet
                     watchdirField.Text = (string)session[ProtocolConstants.FIELD_WATCH_DIR];
                     watchdirField.Enabled = watchdirCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_WATCH_DIR_ENABLED]);
                 }
-                if (dhtEnabled.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
+                if (dhtEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_DHTENABLED))
                 {
-                    dhtEnabled.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
+                    dhtEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_DHTENABLED]);
                 }
-                if (LpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
+                if (lpdEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_LPDENABLED))
                 {
-                    LpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
+                    lpdEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_LPDENABLED]);
+                }
+                if (utpEnabledCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_UTPENABLED))
+                {
+                    utpEnabledCheckBox.Checked = Toolbox.ToBool(session[ProtocolConstants.FIELD_UTPENABLED]);
                 }
                 if (renamePartialFilesCheckBox.Enabled = session.Contains(ProtocolConstants.FIELD_RENAME_PARTIAL_FILES))
                 {
@@ -248,7 +252,7 @@ namespace TransmissionRemoteDotnet
             JsonObject arguments = Requests.GetArgObject(request);
             arguments.Put((string)incomingPortValue.Tag, incomingPortValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PORTFORWARDINGENABLED, portForwardCheckBox.Checked);
-            arguments.Put((string)PEXcheckBox.Tag, PEXcheckBox.Checked);
+            arguments.Put((string)pexEnabledCheckBox.Tag, pexEnabledCheckBox.Checked);
             arguments.Put((string)peerLimitValue.Tag, peerLimitValue.Value);
             arguments.Put(ProtocolConstants.FIELD_PEERLIMITPERTORRENT, peerLimitTorrentValue.Value);
             if (cacheSizeValue.Enabled)
@@ -284,8 +288,8 @@ namespace TransmissionRemoteDotnet
             if (altTimeConstraintEnabled.Enabled)
             {
                 arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEENABLED, altTimeConstraintEnabled.Checked);
-                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN, timeConstraintBeginHours.Value*60+timeConstaintBeginMinutes.Value);
-                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEEND, timeConstraintEndHours.Value*60+timeConstaintEndMinutes.Value);
+                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEBEGIN, timeConstraintBeginHours.Value*60+timeConstraintBeginMinutes.Value);
+                arguments.Put(ProtocolConstants.FIELD_ALTSPEEDTIMEEND, timeConstraintEndHours.Value*60+timeConstraintEndMinutes.Value);
             }
             if (blocklistEnabledCheckBox.Enabled)
             {
@@ -311,13 +315,17 @@ namespace TransmissionRemoteDotnet
                 arguments.Put(ProtocolConstants.FIELD_WATCH_DIR_ENABLED, watchdirCheckBox.Checked);
                 arguments.Put(ProtocolConstants.FIELD_WATCH_DIR, watchdirField.Text);
             }
-            if (dhtEnabled.Enabled)
+            if (dhtEnabledCheckBox.Enabled)
             {
-                arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabled.Checked);
+                arguments.Put(ProtocolConstants.FIELD_DHTENABLED, dhtEnabledCheckBox.Checked);
             }
-            if (LpdEnabledCheckBox.Enabled)
+            if (lpdEnabledCheckBox.Enabled)
             {
-                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, LpdEnabledCheckBox.Checked);
+                arguments.Put(ProtocolConstants.FIELD_LPDENABLED, lpdEnabledCheckBox.Checked);
+            }
+            if (utpEnabledCheckBox.Enabled)
+            {
+                arguments.Put(ProtocolConstants.FIELD_UTPENABLED, utpEnabledCheckBox.Checked);
             }
             if (renamePartialFilesCheckBox.Enabled)
             {
@@ -350,7 +358,7 @@ namespace TransmissionRemoteDotnet
 
         private void altTimeConstraintEnabled_CheckedChanged(object sender, EventArgs e)
         { 
-            timeConstaintBeginMinutes.Enabled = timeConstaintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked;
+            timeConstraintBeginMinutes.Enabled = timeConstraintEndMinutes.Enabled = timeConstraintBeginHours.Enabled = timeConstraintEndHours.Enabled = altTimeConstraintEnabled.Checked;
         }
 
         private void blocklistEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -379,7 +387,7 @@ namespace TransmissionRemoteDotnet
             updateBlocklistButton.Enabled = true;
             updateBlocklistButton.Text = (string)updateBlocklistButton.Tag;
             if (size > 0)
-                label15.Text = String.Format(OtherStrings.XInBlocklist, size);
+                updateBlocklistLabel.Text = String.Format(OtherStrings.XInBlocklist, size);
         }
 
         private void seedRatioEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
