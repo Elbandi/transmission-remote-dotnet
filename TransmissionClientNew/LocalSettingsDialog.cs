@@ -128,6 +128,7 @@ namespace TransmissionRemoteDotnet
             ColorTrayIconCheckBox.Checked = sett.ColorTray;
             minimizeOnCloseCheckBox.Checked = sett.MinOnClose;
             UploadPromptCheckBox.Checked = sett.UploadPrompt;
+            useLocalCookiesCheckBox.Checked = sett.UseLocalCookies;
             AutoCheckUpdateCheckBox.Checked = sett.AutoCheckupdate;
             UpdateToBetaCheckBox.Checked = sett.UpdateToBeta;
             AutoUpdateGeoipCheckBox.Checked = sett.AutoUpdateGeoip;
@@ -160,6 +161,7 @@ namespace TransmissionRemoteDotnet
             sett.ColorTray = ColorTrayIconCheckBox.Checked;
             sett.MinOnClose = minimizeOnCloseCheckBox.Checked;
             sett.UploadPrompt = UploadPromptCheckBox.Checked;
+            sett.UseLocalCookies = useLocalCookiesCheckBox.Checked;
             sett.AutoCheckupdate = AutoCheckUpdateCheckBox.Checked;
             sett.UpdateToBeta = UpdateToBetaCheckBox.Checked;
             sett.AutoUpdateGeoip = AutoUpdateGeoipCheckBox.Checked;
@@ -511,6 +513,16 @@ namespace TransmissionRemoteDotnet
         {
             TransmissionServer ts = current.Tag as TransmissionServer;
             ts.ClearDestPathHistory();
+        }
+
+        private void useLocalCookiesCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            useLocalCookiesWarningButton.Visible = (sender as CheckBox).Checked;
+        }
+
+        private void useLocalCookiesWarningButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(OtherStrings.UpgradeNote, OtherStrings.Info, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

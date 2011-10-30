@@ -61,6 +61,8 @@ namespace TransmissionRemoteDotnet
             this.PlinkPathButton = new System.Windows.Forms.Button();
             this.PlinkPathTextBox = new System.Windows.Forms.TextBox();
             this.groupBehavior = new System.Windows.Forms.GroupBox();
+            this.useLocalCookiesWarningButton = new TransmissionRemoteDotnet.CustomControls.USButton();
+            this.useLocalCookiesCheckBox = new System.Windows.Forms.CheckBox();
             this.AutoUpdateGeoipCheckBox = new System.Windows.Forms.CheckBox();
             this.TrayGroupBox = new System.Windows.Forms.GroupBox();
             this.ColorTrayIconCheckBox = new System.Windows.Forms.CheckBox();
@@ -289,6 +291,8 @@ namespace TransmissionRemoteDotnet
             // 
             // groupBehavior
             // 
+            this.groupBehavior.Controls.Add(this.useLocalCookiesWarningButton);
+            this.groupBehavior.Controls.Add(this.useLocalCookiesCheckBox);
             this.groupBehavior.Controls.Add(this.AutoUpdateGeoipCheckBox);
             this.groupBehavior.Controls.Add(this.TrayGroupBox);
             this.groupBehavior.Controls.Add(this.StartOnSystemCheckBox);
@@ -302,6 +306,23 @@ namespace TransmissionRemoteDotnet
             resources.ApplyResources(this.groupBehavior, "groupBehavior");
             this.groupBehavior.Name = "groupBehavior";
             this.groupBehavior.TabStop = false;
+            // 
+            // useLocalCookiesWarningButton
+            // 
+            this.useLocalCookiesWarningButton.BackgroundImage = global::TransmissionRemoteDotnet.Properties.Resources.warning16;
+            resources.ApplyResources(this.useLocalCookiesWarningButton, "useLocalCookiesWarningButton");
+            this.useLocalCookiesWarningButton.Name = "useLocalCookiesWarningButton";
+            this.useLocalCookiesWarningButton.TabStop = false;
+            this.useLocalCookiesWarningButton.UseMnemonic = false;
+            this.useLocalCookiesWarningButton.UseVisualStyleBackColor = false;
+            this.useLocalCookiesWarningButton.Click += new System.EventHandler(this.useLocalCookiesWarningButton_Click);
+            // 
+            // useLocalCookiesCheckBox
+            // 
+            resources.ApplyResources(this.useLocalCookiesCheckBox, "useLocalCookiesCheckBox");
+            this.useLocalCookiesCheckBox.Name = "useLocalCookiesCheckBox";
+            this.useLocalCookiesCheckBox.UseVisualStyleBackColor = true;
+            this.useLocalCookiesCheckBox.CheckedChanged += new System.EventHandler(this.useLocalCookiesCheckBox_CheckedChanged);
             // 
             // AutoUpdateGeoipCheckBox
             // 
@@ -1253,5 +1274,7 @@ namespace TransmissionRemoteDotnet
         private System.Windows.Forms.Button RemoveFeedButton;
         private System.Windows.Forms.CheckBox StartOnSystemCheckBox;
         private System.Windows.Forms.Button ClearDestPathHistoryButton;
+        private System.Windows.Forms.CheckBox useLocalCookiesCheckBox;
+        private TransmissionRemoteDotnet.CustomControls.USButton useLocalCookiesWarningButton;
     }
 }

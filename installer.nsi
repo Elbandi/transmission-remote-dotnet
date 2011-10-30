@@ -334,14 +334,24 @@ SectionEnd
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SecTransmissionRemote} $(DESC_SecTransmissionRemote)
   !insertmacro MUI_DESCRIPTION_TEXT ${SecDesktopIcon} $(DESC_SecDesktopIcon)
+!ifndef PORTABLE
   !insertmacro MUI_DESCRIPTION_TEXT ${SecFiletypeAssociations} $(DESC_SecFiletypeAssociations)
+!endif
   !insertmacro MUI_DESCRIPTION_TEXT ${SecGeoIPDatabase} $(DESC_SecGeoIPDatabase)
   !insertmacro MUI_DESCRIPTION_TEXT ${SecLanguages} $(DESC_SecLanguages)
+!ifndef PORTABLE
   !insertmacro MUI_DESCRIPTION_TEXT ${SecRegiterTorrent} $(DESC_SecRegiterTorrent)
   !insertmacro MUI_DESCRIPTION_TEXT ${SecRegiterMagnet} $(DESC_SecRegiterMagnet)
+!endif
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 Function .onInit
+  System::Call 'kernel32::CreateMutexA(i 0, i 0, t "Transmission Remote") ?e'
+  Pop $R0
+  StrCmp $R0 0 +3
+    MessageBox MB_OK|MB_ICONEXCLAMATION "The installer is already running."
+    Abort
+
   !insertmacro MUI_LANGDLL_DISPLAY
 !ifdef PORTABLE
   StrCpy $INSTDIR "\${ProgramFilesDir}"

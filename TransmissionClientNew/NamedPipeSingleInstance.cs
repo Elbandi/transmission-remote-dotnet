@@ -39,8 +39,6 @@ namespace TransmissionRemoteDotnet
         /// <returns>Return true if the operation succeded, false otherwise.</returns>
         public Boolean PassArgumentsToFirstInstance(string[] arguments)
         {
-            if (IsFirstInstance)
-                throw new InvalidOperationException("This is the first instance.");
             try
             {
                 using (NamedPipeClientStream client = new NamedPipeClientStream(identifier.ToString()))

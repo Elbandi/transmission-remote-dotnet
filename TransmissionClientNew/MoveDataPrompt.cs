@@ -31,30 +31,30 @@ namespace TransmissionRemoteDotnet
             }
             foreach (string s in Program.Settings.Current.DestPathHistory)
             {
-                comboBox1.Items.Add(s);
+                destinationComboBox.Items.Add(s);
             }
-            if (comboBox1.Items.Count > 0)
-                comboBox1.SelectedIndex = 0;
+            if (destinationComboBox.Items.Count > 0)
+                destinationComboBox.SelectedIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void moveButton_Click(object sender, EventArgs e)
         {
-            Program.Settings.Current.AddDestinationPath(comboBox1.Text);
-            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), comboBox1.Text, true)));
+            Program.Settings.Current.AddDestinationPath(destinationComboBox.Text);
+            Program.Form.SetupAction(CommandFactory.RequestAsync(Requests.TorrentSetLocation(Toolbox.ListViewSelectionToIdArray(selections), destinationComboBox.Text, true)));
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void ValidateInput()
         {
-            button1.Enabled = comboBox1.Text.IndexOf('/') >= 0;
+            moveButton.Enabled = destinationComboBox.Text.IndexOf('/') >= 0;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void destinationComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValidateInput();
         }

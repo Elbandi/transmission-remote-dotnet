@@ -367,6 +367,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Queued to download.
+        /// </summary>
+        internal static string DownloadWait {
+            get {
+                return ResourceManager.GetString("DownloadWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit tracker announce URL.
         /// </summary>
         internal static string EditTrackerUrl {
@@ -799,6 +808,24 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Found.
+        /// </summary>
+        internal static string NotFound {
+            get {
+                return ResourceManager.GetString("NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have enter wrong transmission rpc path.
+        /// </summary>
+        internal static string NotFoundError {
+            get {
+                return ResourceManager.GetString("NotFoundError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No upgrade available.
         /// </summary>
         internal static string NoUpgradeAvailable {
@@ -952,6 +979,15 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Queued.
+        /// </summary>
+        internal static string Queued {
+            get {
+                return ResourceManager.GetString("Queued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reannounce.
         /// </summary>
         internal static string Reannounce {
@@ -1047,6 +1083,15 @@ namespace TransmissionRemoteDotnet {
         internal static string Seeding {
             get {
                 return ResourceManager.GetString("Seeding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued to seed.
+        /// </summary>
+        internal static string SeedWait {
+            get {
+                return ResourceManager.GetString("SeedWait", resourceCulture);
             }
         }
         
@@ -1204,6 +1249,42 @@ namespace TransmissionRemoteDotnet {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unauthorized IP Address.
+        /// </summary>
+        internal static string UnauthorizedIP {
+            get {
+                return ResourceManager.GetString("UnauthorizedIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Either disable the IP address whitelist or add your address to it.\n\nSee the transmission-daemon manpage for details..
+        /// </summary>
+        internal static string UnauthorizedIPError {
+            get {
+                return ResourceManager.GetString("UnauthorizedIPError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorized User.
+        /// </summary>
+        internal static string UnauthorizedUser {
+            get {
+                return ResourceManager.GetString("UnauthorizedUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect password or user name has been entered..
+        /// </summary>
+        internal static string UnauthorizedUserError {
+            get {
+                return ResourceManager.GetString("UnauthorizedUserError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Byte|Kilobyte|Megabyte|Gigabyte|Terabyte.
         /// </summary>
         internal static string UnitFactors {
@@ -1299,6 +1380,15 @@ namespace TransmissionRemoteDotnet {
         internal static string UpgradeAvailable {
             get {
                 return ResourceManager.GetString("UpgradeAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Availability of this option may require a transmission-daemon upgrade..
+        /// </summary>
+        internal static string UpgradeNote {
+            get {
+                return ResourceManager.GetString("UpgradeNote", resourceCulture);
             }
         }
         

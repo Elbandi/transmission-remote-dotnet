@@ -344,7 +344,7 @@ namespace TransmissionRemoteDotnet
 
         public static double CalcRatio(long upload_total, long download_total)
         {
-            if (download_total <= 0 || upload_total <= 0)
+            if (download_total <= 0 || upload_total < 0)
             {
                 return -1;
             }

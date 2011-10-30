@@ -40,6 +40,7 @@ namespace TransmissionRemoteDotnet
             {
                 this.listener = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
                 listener.Start();
+                this.port = (listener.LocalEndpoint as IPEndPoint).Port;
                 this.isFirstInstance = true;
             }
             catch
@@ -101,8 +102,6 @@ namespace TransmissionRemoteDotnet
 
         public bool PassArgumentsToFirstInstance(string[] arguments)
         {
-            if (isFirstInstance)
-                throw new InvalidOperationException("This is the first instance.");
             TcpClient client = new TcpClient();
             client.Connect("127.0.0.1", this.port);
             StreamWriter writer = new StreamWriter(client.GetStream());

@@ -6,8 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+#if !MONO
 using Etier.IconHelper;
+#endif
 using Jayrock.Json;
+using TransmissionRemoteDotnet.Comparers;
 
 namespace TransmissionRemoteDotnet
 {
@@ -15,26 +18,27 @@ namespace TransmissionRemoteDotnet
     {
         private string path;
         private MonoTorrent.Common.Torrent torrent;
+        private TorrentFilesListViewItemSorter filesLvwColumnSorter;
         private ContextMenu torrentSelectionMenu, noTorrentSelectionMenu;
 
         private void SelectAllHandler(object sender, EventArgs e)
         {
-            Toolbox.SelectAll(listView1);
+            Toolbox.SelectAll(filesListView);
         }
 
         private void SelectNoneHandler(object sender, EventArgs e)
         {
-            Toolbox.SelectNone(listView1);
+            Toolbox.SelectNone(filesListView);
         }
 
         private void SelectInvertHandler(object sender, EventArgs e)
         {
-            Toolbox.SelectInvert(listView1);
+            Toolbox.SelectInvert(filesListView);
         }
 
         private void HighPriorityHandler(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
+            foreach (ListViewItem item in filesListView.SelectedItems)
             {
                 item.SubItems[3].Text = OtherStrings.High;
             }
@@ -42,7 +46,7 @@ namespace TransmissionRemoteDotnet
 
         private void LowPriorityHandler(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
+            foreach (ListViewItem item in filesListView.SelectedItems)
             {
                 item.SubItems[3].Text = OtherStrings.Low;
             }
@@ -50,7 +54,7 @@ namespace TransmissionRemoteDotnet
 
         private void NormalPriorityHandler(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
+            foreach (ListViewItem item in filesListView.SelectedItems)
             {
                 item.SubItems[3].Text = OtherStrings.Normal;
             }
@@ -58,7 +62,7 @@ namespace TransmissionRemoteDotnet
 
         private void DownloadHandler(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
+            foreach (ListViewItem item in filesListView.SelectedItems)
             {
                 item.Checked = true;
             }
@@ -66,7 +70,7 @@ namespace TransmissionRemoteDotnet
 
         private void SkipHandler(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems)
+            foreach (ListViewItem item in filesListView.SelectedItems)
             {
                 item.Checked = false;
             }
@@ -76,11 +80,11 @@ namespace TransmissionRemoteDotnet
         {
             InitializeComponent();
 #if !MONO
-            listView1.SmallImageList = new ImageList();
+            filesListView.SmallImageList = new ImageList();
 #endif
             this.noTorrentSelectionMenu = new ContextMenu();
             noTorrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
-            this.torrentSelectionMenu = this.listView1.ContextMenu = new ContextMenu();
+            this.torrentSelectionMenu = this.filesListView.ContextMenu = new ContextMenu();
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Download, new EventHandler(this.DownloadHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.Skip, new EventHandler(this.SkipHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem("-"));
@@ -89,28 +93,29 @@ namespace TransmissionRemoteDotnet
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.LowPriority, new EventHandler(this.LowPriorityHandler)));
             torrentSelectionMenu.MenuItems.Add(new MenuItem("-"));
             torrentSelectionMenu.MenuItems.Add(new MenuItem(OtherStrings.SelectAll, new EventHandler(this.SelectAllHandler)));
+            filesListView.ListViewItemSorter = filesLvwColumnSorter = new TorrentFilesListViewItemSorter();
             this.path = path;
-            this.toolStripStatusLabel1.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
-            checkBox3.Checked = !Program.Settings.Current.StartPaused;
+            this.toolStripStatusLabel.Text = this.Text = String.Format(OtherStrings.LoadingFile, path);
+            startTorrentCheckBox.Checked = !Program.Settings.Current.StartPaused;
             foreach (string s in Program.Settings.Current.DestPathHistory)
             {
-                comboBox1.Items.Add(s);
+                destinationComboBox.Items.Add(s);
             }
             JsonObject session = (JsonObject)Program.DaemonDescriptor.SessionData;
             string ddir = (string)session[ProtocolConstants.DOWNLOAD_DIR];
-            if (!comboBox1.Items.Contains(ddir))
-                comboBox1.Items.Insert(0, ddir);
-            if (comboBox1.Items.Count > 0)
-                comboBox1.SelectedIndex = 0;
+            if (!destinationComboBox.Items.Contains(ddir))
+                destinationComboBox.Items.Insert(0, ddir);
+            if (destinationComboBox.Items.Count > 0)
+                destinationComboBox.SelectedIndex = 0;
         }
 
         private void TorrentLoadDialog_Load(object sender, EventArgs e)
         {
-            backgroundWorker1.RunWorkerAsync();
+            TorrentLoadBackgroundWorker.RunWorkerAsync();
             this.OkButton.Select();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void TorrentLoadBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             try
             {
@@ -124,7 +129,7 @@ namespace TransmissionRemoteDotnet
                     if (split.Length > 1)
                     {
                         string extension = split[split.Length - 1].ToLower();
-                        if (listView1.SmallImageList.Images.ContainsKey(extension) || IconReader.AddToImgList(extension, listView1.SmallImageList))
+                        if (filesListView.SmallImageList.Images.ContainsKey(extension) || IconReader.AddToImgList(extension, filesListView.SmallImageList))
                         {
                             item.ImageKey = extension;
                             item.SubItems.Add(IconReader.GetTypeName(extension));
@@ -141,7 +146,7 @@ namespace TransmissionRemoteDotnet
 #else
                     item.SubItems.Add("");
 #endif
-                    item.SubItems.Add(Toolbox.GetFileSize(file.Length));
+                    item.SubItems.Add(Toolbox.GetFileSize(file.Length)).Tag = file.Length;
                     item.SubItems.Add(OtherStrings.Normal);
                     item.Checked = true;
                     items.Add(item);
@@ -154,24 +159,24 @@ namespace TransmissionRemoteDotnet
             }
         }
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void TorrentLoadBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Result.GetType().Equals(typeof(List<ListViewItem>)))
             {
-                listView1.BeginUpdate();
+                filesListView.BeginUpdate();
                 foreach (ListViewItem item in (List<ListViewItem>)e.Result)
                 {
-                    listView1.Items.Add(item);
+                    filesListView.Items.Add(item);
                 }
-                Toolbox.StripeListView(listView1);
-                listView1.Enabled = OkButton.Enabled = checkBox1.Enabled = checkBox2.Enabled = checkBox3.Enabled = true;
-                listView1.EndUpdate();
+                Toolbox.StripeListView(filesListView);
+                filesListView.Enabled = OkButton.Enabled = altDestDirCheckBox.Enabled = altPeerLimitCheckBox.Enabled = startTorrentCheckBox.Enabled = true;
+                filesListView.EndUpdate();
                 NameLabel.Text = torrent.Name;
                 CommentLabel.Text = torrent.Comment;
                 SizeLabel.Text = string.Format("{0} ({1} x {2})", Toolbox.GetFileSize(torrent.Size), torrent.Pieces.Count, Toolbox.GetFileSize(torrent.PieceLength));
                 DateLabel.Text = torrent.CreationDate.ToString();
                 this.Text = torrent.Name;
-                this.toolStripStatusLabel1.Text = "";
+                this.toolStripStatusLabel.Text = "";
             }
             else
             {
@@ -185,25 +190,25 @@ namespace TransmissionRemoteDotnet
             this.Close();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void altDestDirCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            comboBox1.Enabled = checkBox1.Checked;
+            destinationComboBox.Enabled = altDestDirCheckBox.Checked;
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void peerLimitValue_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown1.Enabled = checkBox2.Checked;
+            peerLimitValue.Enabled = altPeerLimitCheckBox.Checked;
         }
 
         private void TorrentLoadDialog_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A && e.Control)
-                Toolbox.SelectAll(listView1);
+                Toolbox.SelectAll(filesListView);
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void filesListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView1.ContextMenu = listView1.SelectedItems.Count > 0 ? torrentSelectionMenu : noTorrentSelectionMenu;
+            filesListView.ContextMenu = filesListView.SelectedItems.Count > 0 ? torrentSelectionMenu : noTorrentSelectionMenu;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -213,7 +218,7 @@ namespace TransmissionRemoteDotnet
             JsonArray high = new JsonArray();
             JsonArray normal = new JsonArray();
             JsonArray low = new JsonArray();
-            foreach (ListViewItem item in listView1.Items)
+            foreach (ListViewItem item in filesListView.Items)
             {
                 if (!item.Checked)
                 {
@@ -244,18 +249,36 @@ namespace TransmissionRemoteDotnet
                 low.Count > 0 ? low : null,
                 wanted.Count > 0 ? wanted : null,
                 unwanted.Count > 0 ? unwanted : null,
-                checkBox1.Checked ? comboBox1.Text : null,
-                checkBox2.Checked ? (int)numericUpDown1.Value : -1,
-                checkBox3.Checked
+                altDestDirCheckBox.Checked ? destinationComboBox.Text : null,
+                altPeerLimitCheckBox.Checked ? (int)peerLimitValue.Value : -1,
+                startTorrentCheckBox.Checked
             );
-            Program.Settings.Current.AddDestinationPath(comboBox1.Text);
+            Program.Settings.Current.AddDestinationPath(destinationComboBox.Text);
             Program.Form.SetupAction(CommandFactory.RequestAsync(request));
             this.Close();
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void altPeerLimitCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            numericUpDown1.Enabled = checkBox2.Checked;
+            peerLimitValue.Enabled = altPeerLimitCheckBox.Checked;
+        }
+
+        private void filesListView_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (e.Column == filesLvwColumnSorter.SortColumn)
+            {
+                filesLvwColumnSorter.Order = (filesLvwColumnSorter.Order == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending);
+            }
+            else
+            {
+                filesLvwColumnSorter.SortColumn = e.Column;
+                filesLvwColumnSorter.Order = SortOrder.Ascending;
+            }
+            this.filesListView.Sort();
+#if !MONO
+            this.filesListView.SetSortIcon(filesLvwColumnSorter.SortColumn, filesLvwColumnSorter.Order);
+#endif
+            Toolbox.StripeListView(filesListView);
         }
     }
 }

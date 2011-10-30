@@ -117,7 +117,7 @@
   <data name="OkButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="checkBox3.Text" xml:space="preserve">
+  <data name="startTorrentCheckBox.Text" xml:space="preserve">
     <value>Start torrent</value>
   </data>
   <data name="DateLabelLabel.Text" xml:space="preserve">
@@ -147,28 +147,28 @@
   <data name="PropertiesGroupBox.Text" xml:space="preserve">
     <value>Torrent properties</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
+  <data name="filesPathCol.Text" xml:space="preserve">
     <value>Ruta</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
+  <data name="filesTypeCol.Text" xml:space="preserve">
     <value>Tipo</value>
   </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
+  <data name="filesSizeCol.Text" xml:space="preserve">
     <value>Tamaño</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
+  <data name="filesPriorityCol.Text" xml:space="preserve">
     <value>Prioridad</value>
   </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
+  <data name="altPeerLimitCheckBox.Text" xml:space="preserve">
     <value>Límite de pares alternativo: </value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="altDestDirCheckBox.Text" xml:space="preserve">
     <value>Directorio de destino alternativo: </value>
   </data>
   <data name="$this.Text" xml:space="preserve">

@@ -74,6 +74,7 @@ namespace TransmissionRemoteDotnet
                 if (e.Error != null)
                 {
                     WebException ex = e.Error as WebException;
+                    string title = OtherStrings.Error;
                     if (ex.Response != null)
                     {
                         HttpWebResponse response = (HttpWebResponse)ex.Response;
@@ -91,8 +92,30 @@ namespace TransmissionRemoteDotnet
                             }
                             catch { }
                         }
+                        else if (response.StatusCode == HttpStatusCode.NotFound)
+                        {
+                            title = OtherStrings.NotFound;
+                            ex = new WebException(OtherStrings.NotFoundError);
+                        }
+                        else if (response.StatusCode == HttpStatusCode.Forbidden || response.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            using (StreamReader sr = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(response.CharacterSet)))
+                            {
+                                String s = sr.ReadToEnd();
+                                if (s.Contains("Unauthorized IP Address."))
+                                {
+                                    title = OtherStrings.UnauthorizedIP;
+                                    ex = new WebException(OtherStrings.UnauthorizedIPError);
+                                }
+                                else if (s.Contains("Unauthorized User"))
+                                {
+                                    title = OtherStrings.UnauthorizedUser;
+                                    ex = new WebException(OtherStrings.UnauthorizedUserError);
+                                }
+                            }
+                        }
                     }
-                    cmd = new ErrorCommand(ex, false);
+                    cmd = new ErrorCommand(title, ex.Message, false);
                 }
                 else
                 {
