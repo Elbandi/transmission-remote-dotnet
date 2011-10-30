@@ -130,6 +130,13 @@ namespace TransmissionRemoteDotnet.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap edit16 {
+            get {
+                object obj = ResourceManager.GetObject("edit16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static byte[] EngNumberFormatInfo {
             get {
                 object obj = ResourceManager.GetObject("EngNumberFormatInfo", resourceCulture);
@@ -315,6 +322,13 @@ namespace TransmissionRemoteDotnet.Properties {
         internal static System.Drawing.Bitmap properties {
             get {
                 object obj = ResourceManager.GetObject("properties", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap queue16 {
+            get {
+                object obj = ResourceManager.GetObject("queue16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

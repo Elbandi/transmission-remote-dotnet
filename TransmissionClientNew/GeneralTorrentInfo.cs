@@ -13,6 +13,7 @@ namespace TransmissionRemoteDotnet
         public TorrentGeneralInfo()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
         }
 
         public string torrentName
@@ -157,6 +158,25 @@ namespace TransmissionRemoteDotnet
         {
             get { return commentField.Text; }
             set { commentField.Text = value; }
+        }
+
+        public void BeginUpdate()
+        {
+            SetRedraw(0);
+        }
+
+        public void EndUpdate()
+        {
+            SetRedraw(1);
+            Refresh();
+        }
+
+        private const Int32 WM_SETREDRAW = 0xB;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+        private void SetRedraw(int Param)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, new IntPtr(Param), IntPtr.Zero);
         }
     }
 }

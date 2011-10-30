@@ -12,7 +12,7 @@ namespace TransmissionRemoteDotnet
         [DllImport("wininet.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool InternetGetCookie(string url, string name, StringBuilder data, ref int dataSize);
 
-        private static string RetrieveIECookiesForUrl(string url)
+        public static string RetrieveIECookiesForUrl(string url)
         {
             StringBuilder cookieHeader = new StringBuilder(new String(' ', 256), 256);
             int datasize = cookieHeader.Length;
@@ -24,7 +24,7 @@ namespace TransmissionRemoteDotnet
                 InternetGetCookie(url, null, cookieHeader, ref datasize);
             }
             // result is like this: "KEY=Value; KEY2=what ever"
-            return cookieHeader.ToString().Replace(";", ",");
+            return cookieHeader.ToString();
         }
 
         public static CookieContainer GetCookieContainerForUrl(string url)
@@ -40,7 +40,7 @@ namespace TransmissionRemoteDotnet
             {
                 try
                 {
-                    container.SetCookies(url, cookieHeaders);
+                    container.SetCookies(url, cookieHeaders.Replace(";", ","));
                 }
                 catch (CookieException) { }
             }

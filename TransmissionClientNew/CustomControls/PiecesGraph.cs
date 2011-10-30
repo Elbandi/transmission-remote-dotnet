@@ -30,8 +30,11 @@ namespace TransmissionRemoteDotnet
     {
         private byte[] bits;
         private int len;
+        private bool valid = false;
+        private Bitmap bmp;
         public PiecesGraph()
         {
+            bmp = new Bitmap(this.Width, this.Height);
             len = 0;
             // Set Optimized Double Buffer to reduce flickering
             this.SetStyle(ControlStyles.UserPaint, true);
@@ -40,27 +43,58 @@ namespace TransmissionRemoteDotnet
 
             // Redraw when resized
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.Invalidated += new InvalidateEventHandler(PiecesGraph_Invalidated);
+        }
+
+        void PiecesGraph_Invalidated(object sender, InvalidateEventArgs e)
+        {
+            if (valid) return;
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.Clear(BackColor);
+                int c_bit = 0, num_bits, bits_got;
+                float bitsperrow = (bmp.Width > 0 ? (float)len / (float)bmp.Width : 0), chunk_done;
+
+                if (bitsperrow > 0)
+                {
+                    for (int n = 0; n < bmp.Width; n++)
+                    {
+                        num_bits = (int)(bitsperrow * (n + 1)) - c_bit;
+                        bits_got = 0;
+                        for (int i = 0; i < num_bits; i++)
+                        {
+                            if (BitGet(bits, len, c_bit + i))
+                                bits_got++;
+                        }
+                        if (num_bits > 0)
+                            chunk_done = (float)bits_got / (float)num_bits;
+                        else if (BitGet(bits, len, c_bit))
+                            chunk_done = 1;
+                        else
+                            chunk_done = 0;
+                        Color fill = Color.FromArgb((int)(BackColor.R * (1 - chunk_done) + (ForeColor.R) * chunk_done), (int)(BackColor.G * (1 - chunk_done) + (ForeColor.G) * chunk_done), (int)(BackColor.B * (1 - chunk_done) + (ForeColor.B) * chunk_done));
+
+                        g.DrawLine(new Pen(fill), n, 0, n, bmp.Height);
+
+                        c_bit += num_bits;
+                    }
+                }
+            }
+            valid = true;
         }
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
+            bmp.Dispose();
+            bmp = new Bitmap(this.Width, this.Height);
+            valid = false;
             Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (len > 0)
-            {
-                decimal arany = (decimal)len / Width;
-                for (int n = 0; n < Width; n++)
-                {
-                    if (BitGet(bits, len, (int)(n * arany)))
-                    {
-                        e.Graphics.DrawLine(new Pen(ForeColor), n, 0, n, Height);
-                    }
-                }
-            }
+            e.Graphics.DrawImage(bmp, 0, 0);
         }
 
         private bool BitGet(byte[] array, int len, int index)
@@ -74,6 +108,7 @@ namespace TransmissionRemoteDotnet
         {
             this.len = len;
             this.bits = b;
+            valid = false;
             Invalidate();
         }
 
@@ -81,6 +116,7 @@ namespace TransmissionRemoteDotnet
         {
             this.len = 0;
             this.bits = new byte[0];
+            valid = false;
             Invalidate();
         }
     }
